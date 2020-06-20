@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>plugin - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package plugin</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/plugin"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CreateOpt">type CreateOpt</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#WithSwarmService">func WithSwarmService(id string) CreateOpt</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Event">type Event</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventCreate">type EventCreate</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventDisable">type EventDisable</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventEnable">type EventEnable</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventRemove">type EventRemove</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Executor">type Executor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExecutorCreator">type ExecutorCreator</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Manager">type Manager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewManager">func NewManager(config ManagerConfig) (*Manager, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.CreateFromContext">func (pm *Manager) CreateFromContext(ctx context.Context, tarCtx io.ReadCloser, options *types.PluginCreateOptions) (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Disable">func (pm *Manager) Disable(refOrID string, config *types.PluginDisableConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Enable">func (pm *Manager) Enable(refOrID string, config *types.PluginEnableConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.GC">func (pm *Manager) GC()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Get">func (pm *Manager) Get(idOrName string) (*v2.Plugin, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.HandleExitEvent">func (pm *Manager) HandleExitEvent(id string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Inspect">func (pm *Manager) Inspect(refOrID string) (tp *types.Plugin, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.List">func (pm *Manager) List(pluginFilters filters.Args) ([]types.Plugin, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Privileges">func (pm *Manager) Privileges(ctx context.Context, ref reference.Named, metaHeader http.Header, authConfig *types.AuthConfig) (types.PluginPrivileges, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Pull">func (pm *Manager) Pull(ctx context.Context, ref reference.Named, name string, metaHeader http.Header, authConfig *types.AuthConfig, privileges types.PluginPrivileges, outStream io.Writer, opts ...CreateOpt) (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Push">func (pm *Manager) Push(ctx context.Context, name string, metaHeader http.Header, authConfig *types.AuthConfig, outStream io.Writer) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Remove">func (pm *Manager) Remove(name string, config *types.PluginRmConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Set">func (pm *Manager) Set(name string, args []string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Shutdown">func (pm *Manager) Shutdown()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.SubscribeEvents">func (pm *Manager) SubscribeEvents(buffer int, watchEvents ...Event) (eventCh &lt;-chan interface{}, cancel func())</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Manager.Upgrade">func (pm *Manager) Upgrade(ctx context.Context, ref reference.Named, name string, metaHeader http.Header, authConfig *types.AuthConfig, privileges types.PluginPrivileges, outStream io.Writer) (err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ManagerConfig">type ManagerConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SpecOpt">type SpecOpt</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#WithSpecMounts">func WithSpecMounts(mounts []specs.Mount) SpecOpt</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Store">type Store</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewStore">func NewStore() *Store</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Add">func (ps *Store) Add(p *v2.Plugin) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.CallHandler">func (ps *Store) CallHandler(p *v2.Plugin)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Get">func (ps *Store) Get(name, capability string, mode int) (plugingetter.CompatPlugin, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.GetAll">func (ps *Store) GetAll() map[string]*v2.Plugin</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.GetAllByCap">func (ps *Store) GetAllByCap(capability string) ([]plugingetter.CompatPlugin, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.GetAllManagedPluginsByCap">func (ps *Store) GetAllManagedPluginsByCap(capability string) []plugingetter.CompatPlugin</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.GetV2Plugin">func (ps *Store) GetV2Plugin(refOrID string) (*v2.Plugin, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Handle">func (ps *Store) Handle(capability string, callback func(string, *plugins.Client))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.RegisterRuntimeOpt">func (ps *Store) RegisterRuntimeOpt(cap string, opts ...SpecOpt)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Remove">func (ps *Store) Remove(p *v2.Plugin)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.SetAll">func (ps *Store) SetAll(plugins map[string]*v2.Plugin)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.SetState">func (ps *Store) SetState(p *v2.Plugin, state bool)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WriteCommitCloser">type WriteCommitCloser</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go">backend_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/blobstore.go">blobstore.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/defs.go">defs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/errors.go">errors.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/events.go">events.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go">manager.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager_linux.go">manager_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go">store.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="CreateOpt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/defs.go?s=989:1022#L25">CreateOpt</a>
+				<a class="permalink" href="index.html#CreateOpt">&#xb6;</a>
+			</h2>
+			<p>
+CreateOpt is used to configure specific plugin details when created
+</p>
+
+			<pre>type CreateOpt func(p *<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="WithSwarmService">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/defs.go?s=1125:1167#L29">WithSwarmService</a>
+					<a class="permalink" href="index.html#WithSwarmService">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#WithSwarmService">WithSwarmService</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#CreateOpt">CreateOpt</a></pre>
+				<p>
+WithSwarmService is a CreateOpt that flags the passed in a plugin as a plugin
+managed by swarm
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Event">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/events.go?s=193:238#L1">Event</a>
+				<a class="permalink" href="index.html#Event">&#xb6;</a>
+			</h2>
+			<p>
+Event is emitted for actions performed on the plugin manager
+</p>
+
+			<pre>type Event interface {
+    <span class="comment">// contains filtered or unexported methods</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventCreate">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/events.go?s=550:630#L12">EventCreate</a>
+				<a class="permalink" href="index.html#EventCreate">&#xb6;</a>
+			</h2>
+			<p>
+EventCreate is an event which is emitted when a plugin is created
+This is either by pull or create from context.
+</p>
+<p>
+Use the `Interfaces` field to match only plugins that implement a specific
+interface.
+These are matched against using &#34;or&#34; logic.
+If no interfaces are listed, all are matched.
+</p>
+
+			<pre>type EventCreate struct {
+<span id="EventCreate.Interfaces"></span>    Interfaces map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="EventCreate.Plugin"></span>    Plugin     <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Plugin">Plugin</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventDisable">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/events.go?s=1401:1450#L52">EventDisable</a>
+				<a class="permalink" href="index.html#EventDisable">&#xb6;</a>
+			</h2>
+			<p>
+EventDisable is an event that is emitted when a plugin is disabled
+It maches on the passed in plugin&#39;s ID only.
+</p>
+
+			<pre>type EventDisable struct {
+<span id="EventDisable.Plugin"></span>    Plugin <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Plugin">Plugin</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventEnable">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/events.go?s=1724:1772#L66">EventEnable</a>
+				<a class="permalink" href="index.html#EventEnable">&#xb6;</a>
+			</h2>
+			<p>
+EventEnable is an event that is emitted when a plugin is disabled
+It maches on the passed in plugin&#39;s ID only.
+</p>
+
+			<pre>type EventEnable struct {
+<span id="EventEnable.Plugin"></span>    Plugin <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Plugin">Plugin</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventRemove">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/events.go?s=1080:1128#L38">EventRemove</a>
+				<a class="permalink" href="index.html#EventRemove">&#xb6;</a>
+			</h2>
+			<p>
+EventRemove is an event which is emitted when a plugin is removed
+It maches on the passed in plugin&#39;s ID only.
+</p>
+
+			<pre>type EventRemove struct {
+<span id="EventRemove.Plugin"></span>    Plugin <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Plugin">Plugin</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Executor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=985:1233#L28">Executor</a>
+				<a class="permalink" href="index.html#Executor">&#xb6;</a>
+			</h2>
+			<p>
+Executor is the interface that the plugin manager uses to interact with for starting/stopping plugins
+</p>
+
+			<pre>type Executor interface {
+    Create(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, spec specs.<a href="index.html#Spec">Spec</a>, stdout, stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    IsRunning(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Restore(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, stdout, stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a>) (alive <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Signal(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, signal <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ExecutorCreator">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=1873:1926#L57">ExecutorCreator</a>
+				<a class="permalink" href="index.html#ExecutorCreator">&#xb6;</a>
+			</h2>
+			<p>
+ExecutorCreator is used in the manager config to pass in an `Executor`
+</p>
+
+			<pre>type ExecutorCreator func(*<a href="index.html#Manager">Manager</a>) (<a href="index.html#Executor">Executor</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Manager">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=1970:2229#L60">Manager</a>
+				<a class="permalink" href="index.html#Manager">&#xb6;</a>
+			</h2>
+			<p>
+Manager controls the plugin subsystem.
+</p>
+
+			<pre>type Manager struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewManager">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=2811:2866#L92">NewManager</a>
+					<a class="permalink" href="index.html#NewManager">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewManager">NewManager</a>(config <a href="index.html#ManagerConfig">ManagerConfig</a>) (*<a href="index.html#Manager">Manager</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewManager returns a new plugin manager.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Manager.CreateFromContext">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=18013:18140#L667">CreateFromContext</a>
+					<a class="permalink" href="index.html#Manager.CreateFromContext">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#CreateFromContext">CreateFromContext</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, tarCtx <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, options *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#PluginCreateOptions">PluginCreateOptions</a>) (err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateFromContext creates a plugin from the given pluginDir which contains
+both the rootfs and the config.json and a repoName with optional tag.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Disable">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=1357:1440#L38">Disable</a>
+					<a class="permalink" href="index.html#Manager.Disable">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Disable">Disable</a>(refOrID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#PluginDisableConfig">PluginDisableConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Disable deactivates a plugin. This means resources (volumes, networks) cant use them.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Enable">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=2107:2188#L66">Enable</a>
+					<a class="permalink" href="index.html#Manager.Enable">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Enable">Enable</a>(refOrID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#PluginEnableConfig">PluginEnableConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Enable activates a plugin, which implies that they are ready to be used by containers.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.GC">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=8932:8955#L286">GC</a>
+					<a class="permalink" href="index.html#Manager.GC">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#GC">GC</a>()</pre>
+				<p>
+GC cleans up unreferenced blobs. This is recommended to run in a goroutine
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Get">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=7988:8047#L257">Get</a>
+					<a class="permalink" href="index.html#Manager.Get">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Get">Get</a>(idOrName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get looks up the requested plugin in the store.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.HandleExitEvent">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=3962:4013#L130">HandleExitEvent</a>
+					<a class="permalink" href="index.html#Manager.HandleExitEvent">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#HandleExitEvent">HandleExitEvent</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+HandleExitEvent is called when the executor receives the exit event
+In the future we may change this, but for now all we care about is the exit event.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Inspect">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=2549:2621#L82">Inspect</a>
+					<a class="permalink" href="index.html#Manager.Inspect">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Inspect">Inspect</a>(refOrID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (tp *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Plugin">Plugin</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Inspect examines a plugin config
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.List">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=10647:10722#L357">List</a>
+					<a class="permalink" href="index.html#Manager.List">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#List">List</a>(pluginFilters <a href="../api/types/filters/index.html">filters</a>.<a href="../api/types/filters/index.html#Args">Args</a>) ([]<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Plugin">Plugin</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+List displays the list of plugins and associated metadata.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Privileges">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=6077:6234#L209">Privileges</a>
+					<a class="permalink" href="index.html#Manager.Privileges">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Privileges">Privileges</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, metaHeader <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>) (<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#PluginPrivileges">PluginPrivileges</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Privileges pulls a plugin config and computes the privileges required to install it.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Pull">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=8753:8972#L296">Pull</a>
+					<a class="permalink" href="index.html#Manager.Pull">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Pull">Pull</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, metaHeader <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, privileges <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#PluginPrivileges">PluginPrivileges</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, opts ...<a href="index.html#CreateOpt">CreateOpt</a>) (err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Pull pulls a plugin, check if the correct privileges are provided and install the plugin.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Push">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=11653:11791#L398">Push</a>
+					<a class="permalink" href="index.html#Manager.Push">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Push">Push</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, metaHeader <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Push pushes a plugin to the store.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Remove">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=16695:16769#L607">Remove</a>
+					<a class="permalink" href="index.html#Manager.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Remove">Remove</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#PluginRmConfig">PluginRmConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Remove deletes plugin&#39;s root directory.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Set">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=17650:17706#L654">Set</a>
+					<a class="permalink" href="index.html#Manager.Set">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Set">Set</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, args []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set sets plugin args
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Shutdown">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager_linux.go?s=5079:5108#L176">Shutdown</a>
+					<a class="permalink" href="index.html#Manager.Shutdown">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Shutdown">Shutdown</a>()</pre>
+				<p>
+Shutdown stops all plugins and called during daemon shutdown.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.SubscribeEvents">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/events.go?s=2173:2285#L82">SubscribeEvents</a>
+					<a class="permalink" href="index.html#Manager.SubscribeEvents">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#SubscribeEvents">SubscribeEvents</a>(buffer <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, watchEvents ...<a href="index.html#Event">Event</a>) (eventCh &lt;-chan interface{}, cancel func())</pre>
+				<p>
+SubscribeEvents provides an event channel to listen for structured events from
+the plugin manager actions, CRUD operations.
+The caller must call the returned `cancel()` function once done with the channel
+or this will leak resources.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Manager.Upgrade">func (*Manager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/backend_linux.go?s=7057:7260#L241">Upgrade</a>
+					<a class="permalink" href="index.html#Manager.Upgrade">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#Manager">Manager</a>) <a href="index.html#Upgrade">Upgrade</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, metaHeader <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, privileges <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#PluginPrivileges">PluginPrivileges</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) (err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Upgrade upgrades a plugin
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ManagerConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/manager.go?s=1485:1797#L45">ManagerConfig</a>
+				<a class="permalink" href="index.html#ManagerConfig">&#xb6;</a>
+			</h2>
+			<p>
+ManagerConfig defines configuration needed to start new manager.
+</p>
+
+			<pre>type ManagerConfig struct {
+<span id="ManagerConfig.Store"></span>    Store              *<a href="index.html#Store">Store</a> <span class="comment">// remove</span>
+<span id="ManagerConfig.RegistryService"></span>    RegistryService    <a href="../registry/index.html">registry</a>.<a href="../registry/index.html#Service">Service</a>
+<span id="ManagerConfig.LiveRestoreEnabled"></span>    LiveRestoreEnabled <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> <span class="comment">// TODO: remove</span>
+<span id="ManagerConfig.LogPluginEvent"></span>    LogPluginEvent     eventLogger
+<span id="ManagerConfig.Root"></span>    Root               <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ManagerConfig.ExecRoot"></span>    ExecRoot           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ManagerConfig.CreateExecutor"></span>    CreateExecutor     <a href="index.html#ExecutorCreator">ExecutorCreator</a>
+<span id="ManagerConfig.AuthzMiddleware"></span>    AuthzMiddleware    *<a href="../pkg/authorization/index.html">authorization</a>.<a href="../pkg/authorization/index.html#Middleware">Middleware</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SpecOpt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/defs.go?s=886:916#L22">SpecOpt</a>
+				<a class="permalink" href="index.html#SpecOpt">&#xb6;</a>
+			</h2>
+			<p>
+SpecOpt is used for subsystems that need to modify the runtime spec of a plugin
+</p>
+
+			<pre>type SpecOpt func(*specs.<a href="index.html#Spec">Spec</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="WithSpecMounts">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/defs.go?s=1314:1363#L36">WithSpecMounts</a>
+					<a class="permalink" href="index.html#WithSpecMounts">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#WithSpecMounts">WithSpecMounts</a>(mounts []specs.<a href="index.html#Mount">Mount</a>) <a href="index.html#SpecOpt">SpecOpt</a></pre>
+				<p>
+WithSpecMounts is a SpecOpt which appends the provided mounts to the runtime spec
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Store">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/defs.go?s=270:582#L2">Store</a>
+				<a class="permalink" href="index.html#Store">&#xb6;</a>
+			</h2>
+			<p>
+Store manages the plugin inventory in memory and on-disk
+</p>
+
+			<pre>type Store struct {
+    <a href="http://127.0.0.1:8080/pkg/sync/">sync</a>.<a href="http://127.0.0.1:8080/pkg/sync/#RWMutex">RWMutex</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/defs.go?s=613:635#L13">NewStore</a>
+					<a class="permalink" href="index.html#NewStore">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewStore">NewStore</a>() *<a href="index.html#Store">Store</a></pre>
+				<p>
+NewStore creates a Store.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Store.Add">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=2749:2789#L106">Add</a>
+					<a class="permalink" href="index.html#Store.Add">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#Add">Add</a>(p *<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Add adds a plugin to memory and plugindb.
+An error will be returned if there is a collision.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.CallHandler">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=6506:6548#L235">CallHandler</a>
+					<a class="permalink" href="index.html#Store.CallHandler">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#CallHandler">CallHandler</a>(p *<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>)</pre>
+				<p>
+CallHandler calls the registered callback. It is invoked during plugin enable.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.Get">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=3249:3339#L128">Get</a>
+					<a class="permalink" href="index.html#Store.Get">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#Get">Get</a>(name, capability <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, mode <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) (<a href="../pkg/plugingetter/index.html">plugingetter</a>.<a href="../pkg/plugingetter/index.html#CompatPlugin">CompatPlugin</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get returns an enabled plugin matching the given name and capability.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.GetAll">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=1512:1559#L48">GetAll</a>
+					<a class="permalink" href="index.html#Store.GetAll">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#GetAll">GetAll</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a></pre>
+				<p>
+GetAll retrieves all plugins.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.GetAllByCap">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=4437:4521#L171">GetAllByCap</a>
+					<a class="permalink" href="index.html#Store.GetAllByCap">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#GetAllByCap">GetAllByCap</a>(capability <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../pkg/plugingetter/index.html">plugingetter</a>.<a href="../pkg/plugingetter/index.html#CompatPlugin">CompatPlugin</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetAllByCap returns a list of enabled plugins matching the given capability.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.GetAllManagedPluginsByCap">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=4227:4316#L166">GetAllManagedPluginsByCap</a>
+					<a class="permalink" href="index.html#Store.GetAllManagedPluginsByCap">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#GetAllManagedPluginsByCap">GetAllManagedPluginsByCap</a>(capability <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="../pkg/plugingetter/index.html">plugingetter</a>.<a href="../pkg/plugingetter/index.html#CompatPlugin">CompatPlugin</a></pre>
+				<p>
+GetAllManagedPluginsByCap returns a list of managed plugins matching the given capability.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.GetV2Plugin">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=932:996#L20">GetV2Plugin</a>
+					<a class="permalink" href="index.html#Store.GetV2Plugin">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#GetV2Plugin">GetV2Plugin</a>(refOrID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetV2Plugin retrieves a plugin by name, id or partial ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.Handle">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=5592:5674#L206">Handle</a>
+					<a class="permalink" href="index.html#Store.Handle">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#Handle">Handle</a>(capability <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, callback func(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, *<a href="../pkg/plugins/index.html">plugins</a>.<a href="../pkg/plugins/index.html#Client">Client</a>))</pre>
+				<p>
+Handle sets a callback for a given capability. It is only used by network
+and ipam drivers during plugin registration. The callback registers the
+driver with the subsystem (network, ipam).
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.RegisterRuntimeOpt">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=6246:6310#L227">RegisterRuntimeOpt</a>
+					<a class="permalink" href="index.html#Store.RegisterRuntimeOpt">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#RegisterRuntimeOpt">RegisterRuntimeOpt</a>(cap <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts ...<a href="index.html#SpecOpt">SpecOpt</a>)</pre>
+				<p>
+RegisterRuntimeOpt stores a list of SpecOpts for the provided capability.
+These options are applied to the runtime spec before a plugin is started for the specified capability.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.Remove">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=3078:3115#L121">Remove</a>
+					<a class="permalink" href="index.html#Store.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#Remove">Remove</a>(p *<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>)</pre>
+				<p>
+Remove removes a plugin from memory and plugindb.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.SetAll">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=1669:1723#L55">SetAll</a>
+					<a class="permalink" href="index.html#Store.SetAll">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#SetAll">SetAll</a>(plugins map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>)</pre>
+				<p>
+SetAll initialized plugins during daemon restore.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.SetState">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/store.go?s=2236:2287#L81">SetState</a>
+					<a class="permalink" href="index.html#Store.SetState">&#xb6;</a>
+				</h3>
+				<pre>func (ps *<a href="index.html#Store">Store</a>) <a href="index.html#SetState">SetState</a>(p *<a href="v2/index.html">v2</a>.<a href="v2/index.html#Plugin">Plugin</a>, state <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+SetState sets the active state of the plugin and updates plugindb.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WriteCommitCloser">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/blobstore.go?s=2130:2215#L70">WriteCommitCloser</a>
+				<a class="permalink" href="index.html#WriteCommitCloser">&#xb6;</a>
+			</h2>
+			<p>
+WriteCommitCloser defines object that can be committed to blobstore.
+</p>
+
+			<pre>type WriteCommitCloser interface {
+    <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a>
+    Commit() (digest.<a href="index.html#Digest">Digest</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="executor/index.html">executor</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="executor/containerd/index.html">containerd</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="v2/index.html">v2</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

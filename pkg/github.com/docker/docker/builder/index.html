@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>builder - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package builder</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/builder"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package builder defines interfaces for any Docker builder to implement.
+</p>
+<p>
+Historically, only server-side Dockerfile interpreters existed.
+This package allows for other implementations of Docker builders.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Backend">type Backend</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExecBackend">type ExecBackend</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Image">type Image</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ImageBackend">type ImageBackend</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ImageCache">type ImageCache</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ImageCacheBuilder">type ImageCacheBuilder</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ROLayer">type ROLayer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RWLayer">type RWLayer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Result">type Result</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Source">type Source</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go">builder.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultDockerfileName is the Default filename with Docker commands, read by docker build</span>
+    <span id="DefaultDockerfileName">DefaultDockerfileName</span> = &#34;Dockerfile&#34;
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="Backend">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=1297:1678#L29">Backend</a>
+				<a class="permalink" href="index.html#Backend">&#xb6;</a>
+			</h2>
+			<p>
+Backend abstracts calls to a Docker Daemon.
+</p>
+
+			<pre>type Backend interface {
+    <a href="index.html#ImageBackend">ImageBackend</a>
+    <a href="index.html#ExecBackend">ExecBackend</a>
+
+    <span class="comment">// CommitBuildStep creates a new Docker image from the config generated by</span>
+    <span class="comment">// a build step.</span>
+    CommitBuildStep(<a href="../api/types/backend/index.html">backend</a>.<a href="../api/types/backend/index.html#CommitConfig">CommitConfig</a>) (<a href="../image/index.html">image</a>.<a href="../image/index.html#ID">ID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// ContainerCreateWorkdir creates the workdir</span>
+    ContainerCreateWorkdir(containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+
+    CreateImage(config []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#Image">Image</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <a href="index.html#ImageCacheBuilder">ImageCacheBuilder</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ExecBackend">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=1995:3011#L50">ExecBackend</a>
+				<a class="permalink" href="index.html#ExecBackend">&#xb6;</a>
+			</h2>
+			<p>
+ExecBackend contains the interface methods required for executing containers
+</p>
+
+			<pre>type ExecBackend interface {
+    <span class="comment">// ContainerAttachRaw attaches to container.</span>
+    ContainerAttachRaw(cID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, stdin <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, stdout, stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, stream <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, attached chan struct{}) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// ContainerCreateIgnoreImagesArgsEscaped creates a new Docker container and returns potential warnings</span>
+    ContainerCreateIgnoreImagesArgsEscaped(config <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerCreateConfig">ContainerCreateConfig</a>) (<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#ContainerCreateCreatedBody">ContainerCreateCreatedBody</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// ContainerRm removes a container specified by `id`.</span>
+    ContainerRm(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerRmConfig">ContainerRmConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// ContainerKill stops the container execution abruptly.</span>
+    ContainerKill(containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, sig <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// ContainerStart starts a new container</span>
+    ContainerStart(containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, hostConfig *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#HostConfig">HostConfig</a>, checkpoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, checkpointDir <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// ContainerWait stops processing until the given container is stopped.</span>
+    ContainerWait(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, condition <a href="../container/index.html">containerpkg</a>.<a href="../container/index.html#WaitCondition">WaitCondition</a>) (&lt;-chan <a href="../container/index.html">containerpkg</a>.<a href="../container/index.html#StateStatus">StateStatus</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Image">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=3755:3885#L86">Image</a>
+				<a class="permalink" href="index.html#Image">&#xb6;</a>
+			</h2>
+			<p>
+Image represents a Docker image used by the builder.
+</p>
+
+			<pre>type Image interface {
+    ImageID() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    RunConfig() *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#Config">Config</a>
+    MarshalJSON() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    OperatingSystem() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ImageBackend">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=1755:1913#L45">ImageBackend</a>
+				<a class="permalink" href="index.html#ImageBackend">&#xb6;</a>
+			</h2>
+			<p>
+ImageBackend are the interface methods required from an image component
+</p>
+
+			<pre>type ImageBackend interface {
+    GetImageAndReleasableLayer(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, refOrID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts <a href="../api/types/backend/index.html">backend</a>.<a href="../api/types/backend/index.html#GetImageAndLayerOptions">GetImageAndLayerOptions</a>) (<a href="index.html#Image">Image</a>, <a href="index.html#ROLayer">ROLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ImageCache">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=3414:3697#L79">ImageCache</a>
+				<a class="permalink" href="index.html#ImageCache">&#xb6;</a>
+			</h2>
+			<p>
+ImageCache abstracts an image cache.
+(parent image, child runconfig) -&gt; child image
+</p>
+
+			<pre>type ImageCache interface {
+    <span class="comment">// GetCache returns a reference to a cached image whose parent equals `parent`</span>
+    <span class="comment">// and runconfig equals `cfg`. A cache miss is expected to return an empty ID and a nil error.</span>
+    GetCache(parentID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, cfg *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#Config">Config</a>) (imageID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ImageCacheBuilder">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=3188:3322#L72">ImageCacheBuilder</a>
+				<a class="permalink" href="index.html#ImageCacheBuilder">&#xb6;</a>
+			</h2>
+			<p>
+ImageCacheBuilder represents a generator for stateful image cache.
+</p>
+
+			<pre>type ImageCacheBuilder interface {
+    <span class="comment">// MakeImageCache creates a stateful image cache.</span>
+    MakeImageCache(cacheFrom []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#ImageCache">ImageCache</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ROLayer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=3935:4032#L94">ROLayer</a>
+				<a class="permalink" href="index.html#ROLayer">&#xb6;</a>
+			</h2>
+			<p>
+ROLayer is a reference to image rootfs layer
+</p>
+
+			<pre>type ROLayer interface {
+    Release() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    NewRWLayer() (<a href="index.html#RWLayer">RWLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    DiffID() <a href="../layer/index.html">layer</a>.<a href="../layer/index.html#DiffID">DiffID</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RWLayer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=4087:4189#L101">RWLayer</a>
+				<a class="permalink" href="index.html#RWLayer">&#xb6;</a>
+			</h2>
+			<p>
+RWLayer is active layer that can be read/modified
+</p>
+
+			<pre>type RWLayer interface {
+    Release() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Root() <a href="../pkg/containerfs/index.html">containerfs</a>.<a href="../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>
+    Commit() (<a href="index.html#ROLayer">ROLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Result">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=3059:3116#L66">Result</a>
+				<a class="permalink" href="index.html#Result">&#xb6;</a>
+			</h2>
+			<p>
+Result is the output produced by a Builder
+</p>
+
+			<pre>type Result struct {
+<span id="Result.ImageID"></span>    ImageID   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Result.FromImage"></span>    FromImage <a href="index.html#Image">Image</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Source">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder.go?s=850:1248#L17">Source</a>
+				<a class="permalink" href="index.html#Source">&#xb6;</a>
+			</h2>
+			<p>
+Source defines a location that can be used as a source for the ADD/COPY
+instructions in the builder.
+</p>
+
+			<pre>type Source interface {
+    <span class="comment">// Root returns root path for accessing source</span>
+    Root() <a href="../pkg/containerfs/index.html">containerfs</a>.<a href="../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>
+    <span class="comment">// Close allows to signal that the filesystem tree won&#39;t be used anymore.</span>
+    <span class="comment">// For Context implementations using a temporary directory, it is recommended to</span>
+    <span class="comment">// delete the temporary directory in Close().</span>
+    Close() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// Hash returns a checksum for a file</span>
+    Hash(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="builder-next/index.html">builder-next</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="builder-next/adapters/index.html">adapters</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 40px;">
+							<a href="builder-next/adapters/containerimage/index.html">containerimage</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 40px;">
+							<a href="builder-next/adapters/localinlinecache/index.html">localinlinecache</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 40px;">
+							<a href="builder-next/adapters/snapshot/index.html">snapshot</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="builder-next/exporter/index.html">exporter</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="builder-next/imagerefchecker/index.html">imagerefchecker</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="builder-next/worker/index.html">worker</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="dockerfile/index.html">dockerfile</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package dockerfile is the evaluation step in the Dockerfile parse/evaluate pipeline.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="dockerignore/index.html">dockerignore</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="fscache/index.html">fscache</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="remotecontext/index.html">remotecontext</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package remotecontext is a generated protocol buffer package.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="remotecontext/git/index.html">git</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

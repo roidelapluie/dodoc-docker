@@ -1,0 +1,3490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>swarm - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package swarm</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/swarm"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Annotations">type Annotations</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CAConfig">type CAConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterInfo">type ClusterInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigReference">type ConfigReference</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigReferenceFileTarget">type ConfigReferenceFileTarget</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigReferenceRuntimeTarget">type ConfigReferenceRuntimeTarget</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigSpec">type ConfigSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerSpec">type ContainerSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerStatus">type ContainerStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CredentialSpec">type CredentialSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DNSConfig">type DNSConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DiscreteGenericResource">type DiscreteGenericResource</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DispatcherConfig">type DispatcherConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Driver">type Driver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EncryptionConfig">type EncryptionConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Endpoint">type Endpoint</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EndpointSpec">type EndpointSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EndpointVirtualIP">type EndpointVirtualIP</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EngineDescription">type EngineDescription</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExternalCA">type ExternalCA</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExternalCAProtocol">type ExternalCAProtocol</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#GenericResource">type GenericResource</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#GlobalService">type GlobalService</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IPAMConfig">type IPAMConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IPAMOptions">type IPAMOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Info">type Info</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#InitRequest">type InitRequest</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#JoinRequest">type JoinRequest</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#JoinTokens">type JoinTokens</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LocalNodeState">type LocalNodeState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ManagerStatus">type ManagerStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Meta">type Meta</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NamedGenericResource">type NamedGenericResource</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Network">type Network</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkAttachment">type NetworkAttachment</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkAttachmentConfig">type NetworkAttachmentConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkAttachmentSpec">type NetworkAttachmentSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkSpec">type NetworkSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Node">type Node</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeAvailability">type NodeAvailability</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeDescription">type NodeDescription</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeRole">type NodeRole</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeSpec">type NodeSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeState">type NodeState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NodeStatus">type NodeStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#OrchestrationConfig">type OrchestrationConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Peer">type Peer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Placement">type Placement</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PlacementPreference">type PlacementPreference</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Platform">type Platform</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PluginDescription">type PluginDescription</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PortConfig">type PortConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PortConfigProtocol">type PortConfigProtocol</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PortConfigPublishMode">type PortConfigPublishMode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PortStatus">type PortStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Privileges">type Privileges</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RaftConfig">type RaftConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Reachability">type Reachability</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ReplicatedService">type ReplicatedService</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ResolutionMode">type ResolutionMode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ResourceRequirements">type ResourceRequirements</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Resources">type Resources</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RestartPolicy">type RestartPolicy</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RestartPolicyCondition">type RestartPolicyCondition</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RuntimeType">type RuntimeType</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RuntimeURL">type RuntimeURL</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SELinuxContext">type SELinuxContext</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Secret">type Secret</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SecretReference">type SecretReference</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SecretReferenceFileTarget">type SecretReferenceFileTarget</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SecretSpec">type SecretSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Service">type Service</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceMode">type ServiceMode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceSpec">type ServiceSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Spec">type Spec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SpreadOver">type SpreadOver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Swarm">type Swarm</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TLSInfo">type TLSInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Task">type Task</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TaskDefaults">type TaskDefaults</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TaskSpec">type TaskSpec</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TaskState">type TaskState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TaskStatus">type TaskStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UnlockRequest">type UnlockRequest</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UpdateConfig">type UpdateConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UpdateFlags">type UpdateFlags</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UpdateState">type UpdateState</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UpdateStatus">type UpdateStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Version">type Version</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/common.go">common.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/config.go">config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/container.go">container.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go">network.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go">node.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime.go">runtime.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/secret.go">secret.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go">service.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go">swarm.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go">task.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// RuntimeContainer is the container based runtime</span>
+    <span id="RuntimeContainer">RuntimeContainer</span> <a href="index.html#RuntimeType">RuntimeType</a> = &#34;container&#34;
+    <span class="comment">// RuntimePlugin is the plugin based runtime</span>
+    <span id="RuntimePlugin">RuntimePlugin</span> <a href="index.html#RuntimeType">RuntimeType</a> = &#34;plugin&#34;
+    <span class="comment">// RuntimeNetworkAttachment is the network attachment runtime</span>
+    <span id="RuntimeNetworkAttachment">RuntimeNetworkAttachment</span> <a href="index.html#RuntimeType">RuntimeType</a> = &#34;attachment&#34;
+
+    <span class="comment">// RuntimeURLContainer is the proto url for the container type</span>
+    <span id="RuntimeURLContainer">RuntimeURLContainer</span> <a href="index.html#RuntimeURL">RuntimeURL</a> = &#34;types.docker.com/RuntimeContainer&#34;
+    <span class="comment">// RuntimeURLPlugin is the proto url for the plugin type</span>
+    <span id="RuntimeURLPlugin">RuntimeURLPlugin</span> <a href="index.html#RuntimeURL">RuntimeURL</a> = &#34;types.docker.com/RuntimePlugin&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// UpdateFailureActionPause PAUSE</span>
+    <span id="UpdateFailureActionPause">UpdateFailureActionPause</span> = &#34;pause&#34;
+    <span class="comment">// UpdateFailureActionContinue CONTINUE</span>
+    <span id="UpdateFailureActionContinue">UpdateFailureActionContinue</span> = &#34;continue&#34;
+    <span class="comment">// UpdateFailureActionRollback ROLLBACK</span>
+    <span id="UpdateFailureActionRollback">UpdateFailureActionRollback</span> = &#34;rollback&#34;
+
+    <span class="comment">// UpdateOrderStopFirst STOP_FIRST</span>
+    <span id="UpdateOrderStopFirst">UpdateOrderStopFirst</span> = &#34;stop-first&#34;
+    <span class="comment">// UpdateOrderStartFirst START_FIRST</span>
+    <span id="UpdateOrderStartFirst">UpdateOrderStartFirst</span> = &#34;start-first&#34;
+)</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="Annotations">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/common.go?s=453:568#L8">Annotations</a>
+				<a class="permalink" href="index.html#Annotations">&#xb6;</a>
+			</h2>
+			<p>
+Annotations represents how to describe an object.
+</p>
+
+			<pre>type Annotations struct {
+<span id="Annotations.Name"></span>    Name   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="Annotations.Labels"></span>    Labels map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Labels&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CAConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=3729:4483#L100">CAConfig</a>
+				<a class="permalink" href="index.html#CAConfig">&#xb6;</a>
+			</h2>
+			<p>
+CAConfig represents CA configuration.
+</p>
+
+			<pre>type CAConfig struct {
+<span id="CAConfig.NodeCertExpiry"></span>    <span class="comment">// NodeCertExpiry is the duration certificates should be issued for</span>
+    NodeCertExpiry <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a> `json:&#34;,omitempty&#34;`
+
+<span id="CAConfig.ExternalCAs"></span>    <span class="comment">// ExternalCAs is a list of CAs to which a manager node will make</span>
+    <span class="comment">// certificate signing requests for node certificates.</span>
+    ExternalCAs []*<a href="index.html#ExternalCA">ExternalCA</a> `json:&#34;,omitempty&#34;`
+
+<span id="CAConfig.SigningCACert"></span>    <span class="comment">// SigningCACert and SigningCAKey specify the desired signing root CA and</span>
+    <span class="comment">// root CA key for the swarm.  When inspecting the cluster, the key will</span>
+    <span class="comment">// be redacted.</span>
+    SigningCACert <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="CAConfig.SigningCAKey"></span>    SigningCAKey  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+
+    <span class="comment">// If this value changes, and there is no specified signing cert and key,</span>
+    <span class="comment">// then the swarm is forced to generate a new root certificate ane key.</span>
+<span id="CAConfig.ForceRotate"></span>    ForceRotate <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterInfo">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=237:466#L1">ClusterInfo</a>
+				<a class="permalink" href="index.html#ClusterInfo">&#xb6;</a>
+			</h2>
+			<p>
+ClusterInfo represents info about the cluster for outputting in &#34;info&#34;
+it contains the same information as &#34;Swarm&#34;, but without the JoinTokens
+</p>
+
+			<pre>type ClusterInfo struct {
+<span id="ClusterInfo.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <a href="index.html#Meta">Meta</a>
+<span id="ClusterInfo.Spec"></span>    Spec                   <a href="index.html#Spec">Spec</a>
+<span id="ClusterInfo.TLSInfo"></span>    TLSInfo                <a href="index.html#TLSInfo">TLSInfo</a>
+<span id="ClusterInfo.RootRotationInProgress"></span>    RootRotationInProgress <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ClusterInfo.DefaultAddrPool"></span>    DefaultAddrPool        []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ClusterInfo.SubnetSize"></span>    SubnetSize             <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="ClusterInfo.DataPathPort"></span>    DataPathPort           <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Config">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/config.go?s=112:168#L1">Config</a>
+				<a class="permalink" href="index.html#Config">&#xb6;</a>
+			</h2>
+			<p>
+Config represents a config.
+</p>
+
+			<pre>type Config struct {
+<span id="Config.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <a href="index.html#Meta">Meta</a>
+<span id="Config.Spec"></span>    Spec <a href="index.html#ConfigSpec">ConfigSpec</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigReference">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/config.go?s=902:1095#L25">ConfigReference</a>
+				<a class="permalink" href="index.html#ConfigReference">&#xb6;</a>
+			</h2>
+			<p>
+ConfigReference is a reference to a config in swarm
+</p>
+
+			<pre>type ConfigReference struct {
+<span id="ConfigReference.File"></span>    File       *<a href="index.html#ConfigReferenceFileTarget">ConfigReferenceFileTarget</a>    `json:&#34;,omitempty&#34;`
+<span id="ConfigReference.Runtime"></span>    Runtime    *<a href="index.html#ConfigReferenceRuntimeTarget">ConfigReferenceRuntimeTarget</a> `json:&#34;,omitempty&#34;`
+<span id="ConfigReference.ConfigID"></span>    ConfigID   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ConfigReference.ConfigName"></span>    ConfigName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigReferenceFileTarget">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/config.go?s=555:653#L13">ConfigReferenceFileTarget</a>
+				<a class="permalink" href="index.html#ConfigReferenceFileTarget">&#xb6;</a>
+			</h2>
+			<p>
+ConfigReferenceFileTarget is a file target in a config reference
+</p>
+
+			<pre>type ConfigReferenceFileTarget struct {
+<span id="ConfigReferenceFileTarget.Name"></span>    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ConfigReferenceFileTarget.UID"></span>    UID  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ConfigReferenceFileTarget.GID"></span>    GID  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ConfigReferenceFileTarget.Mode"></span>    Mode <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigReferenceRuntimeTarget">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/config.go?s=803:845#L22">ConfigReferenceRuntimeTarget</a>
+				<a class="permalink" href="index.html#ConfigReferenceRuntimeTarget">&#xb6;</a>
+			</h2>
+			<p>
+ConfigReferenceRuntimeTarget is a target for a config specifying that it
+isn&#39;t mounted into the container but instead has some other purpose.
+</p>
+
+			<pre>type ConfigReferenceRuntimeTarget struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/config.go?s=241:485#L3">ConfigSpec</a>
+				<a class="permalink" href="index.html#ConfigSpec">&#xb6;</a>
+			</h2>
+			<p>
+ConfigSpec represents a config specification from a config in swarm
+</p>
+
+			<pre>type ConfigSpec struct {
+    <a href="index.html#Annotations">Annotations</a>
+<span id="ConfigSpec.Data"></span>    Data []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a> `json:&#34;,omitempty&#34;`
+
+<span id="ConfigSpec.Templating"></span>    <span class="comment">// Templating controls whether and how to evaluate the config payload as</span>
+    <span class="comment">// a template. If it is not set, no templating is used.</span>
+    Templating *<a href="index.html#Driver">Driver</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/container.go?s=1329:2925#L38">ContainerSpec</a>
+				<a class="permalink" href="index.html#ContainerSpec">&#xb6;</a>
+			</h2>
+			<p>
+ContainerSpec represents the spec of a container.
+</p>
+
+			<pre>type ContainerSpec struct {
+<span id="ContainerSpec.Image"></span>    Image           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Labels"></span>    Labels          map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>       `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Command"></span>    Command         []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Args"></span>    Args            []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Hostname"></span>    Hostname        <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Env"></span>    Env             []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Dir"></span>    Dir             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.User"></span>    User            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Groups"></span>    Groups          []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Privileges"></span>    Privileges      *<a href="index.html#Privileges">Privileges</a>             `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Init"></span>    Init            *<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                   `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.StopSignal"></span>    StopSignal      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.TTY"></span>    TTY             <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                    `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.OpenStdin"></span>    OpenStdin       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                    `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.ReadOnly"></span>    ReadOnly        <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                    `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Mounts"></span>    Mounts          []<a href="../mount/index.html">mount</a>.<a href="../mount/index.html#Mount">Mount</a>           `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.StopGracePeriod"></span>    StopGracePeriod *<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>          `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Healthcheck"></span>    Healthcheck     *<a href="../container/index.html">container</a>.<a href="../container/index.html#HealthConfig">HealthConfig</a> `json:&#34;,omitempty&#34;`
+    <span class="comment">// The format of extra hosts on swarmkit is specified in:</span>
+    <span class="comment">// http://man7.org/linux/man-pages/man5/hosts.5.html</span>
+    <span class="comment">//    IP_address canonical_hostname [aliases...]</span>
+<span id="ContainerSpec.Hosts"></span>    Hosts     []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.DNSConfig"></span>    DNSConfig *<a href="index.html#DNSConfig">DNSConfig</a>          `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Secrets"></span>    Secrets   []*<a href="index.html#SecretReference">SecretReference</a>  `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Configs"></span>    Configs   []*<a href="index.html#ConfigReference">ConfigReference</a>  `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Isolation"></span>    Isolation <a href="../container/index.html">container</a>.<a href="../container/index.html#Isolation">Isolation</a> `json:&#34;,omitempty&#34;`
+<span id="ContainerSpec.Sysctls"></span>    Sysctls   map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=6526:6611#L172">ContainerStatus</a>
+				<a class="permalink" href="index.html#ContainerStatus">&#xb6;</a>
+			</h2>
+			<p>
+ContainerStatus represents the status of a container.
+</p>
+
+			<pre>type ContainerStatus struct {
+<span id="ContainerStatus.ContainerID"></span>    ContainerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ContainerStatus.PID"></span>    PID         <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="ContainerStatus.ExitCode"></span>    ExitCode    <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CredentialSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/container.go?s=1039:1120#L25">CredentialSpec</a>
+				<a class="permalink" href="index.html#CredentialSpec">&#xb6;</a>
+			</h2>
+			<p>
+CredentialSpec for managed service account (Windows only)
+</p>
+
+			<pre>type CredentialSpec struct {
+<span id="CredentialSpec.Config"></span>    Config   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CredentialSpec.File"></span>    File     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CredentialSpec.Registry"></span>    Registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DNSConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/container.go?s=476:809#L5">DNSConfig</a>
+				<a class="permalink" href="index.html#DNSConfig">&#xb6;</a>
+			</h2>
+			<p>
+DNSConfig specifies DNS related configurations in resolver configuration file (resolv.conf)
+Detailed documentation is available in:
+<a href="http://man7.org/linux/man-pages/man5/resolv.conf.5.html">http://man7.org/linux/man-pages/man5/resolv.conf.5.html</a>
+`nameserver`, `search`, `options` have been supported.
+TODO: `domain` is not supported yet.
+</p>
+
+			<pre>type DNSConfig struct {
+<span id="DNSConfig.Nameservers"></span>    <span class="comment">// Nameservers specifies the IP addresses of the name servers</span>
+    Nameservers []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="DNSConfig.Search"></span>    <span class="comment">// Search specifies the search list for host-name lookup</span>
+    Search []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="DNSConfig.Options"></span>    <span class="comment">// Options allows certain internal resolver variables to be modified</span>
+    Options []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DiscreteGenericResource">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=4164:4271#L105">DiscreteGenericResource</a>
+				<a class="permalink" href="index.html#DiscreteGenericResource">&#xb6;</a>
+			</h2>
+			<p>
+DiscreteGenericResource represents a &#34;user defined&#34; resource which is defined
+as an integer
+&#34;Kind&#34; is used to describe the Kind of a resource (e.g: &#34;GPU&#34;, &#34;FPGA&#34;, &#34;SSD&#34;, ...)
+Value is used to count the resource (SSD=5, HDD=3, ...)
+</p>
+
+			<pre>type DiscreteGenericResource struct {
+<span id="DiscreteGenericResource.Kind"></span>    Kind  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="DiscreteGenericResource.Value"></span>    Value <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>  `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DispatcherConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=3517:3686#L93">DispatcherConfig</a>
+				<a class="permalink" href="index.html#DispatcherConfig">&#xb6;</a>
+			</h2>
+			<p>
+DispatcherConfig represents dispatcher configuration.
+</p>
+
+			<pre>type DispatcherConfig struct {
+<span id="DispatcherConfig.HeartbeatPeriod"></span>    <span class="comment">// HeartbeatPeriod defines how often agent should send heartbeats to</span>
+    <span class="comment">// dispatcher.</span>
+    HeartbeatPeriod <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Driver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/common.go?s=637:753#L14">Driver</a>
+				<a class="permalink" href="index.html#Driver">&#xb6;</a>
+			</h2>
+			<p>
+Driver represents a driver (network, logging, secrets backend).
+</p>
+
+			<pre>type Driver struct {
+<span id="Driver.Name"></span>    Name    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="Driver.Options"></span>    Options map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EncryptionConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=2039:2290#L55">EncryptionConfig</a>
+				<a class="permalink" href="index.html#EncryptionConfig">&#xb6;</a>
+			</h2>
+			<p>
+EncryptionConfig controls at-rest encryption of data and keys.
+</p>
+
+			<pre>type EncryptionConfig struct {
+<span id="EncryptionConfig.AutoLockManagers"></span>    <span class="comment">// AutoLockManagers specifies whether or not managers TLS keys and raft data</span>
+    <span class="comment">// should be encrypted at rest in such a way that they must be unlocked</span>
+    <span class="comment">// before the manager node starts up again.</span>
+    AutoLockManagers <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Endpoint">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=162:342#L1">Endpoint</a>
+				<a class="permalink" href="index.html#Endpoint">&#xb6;</a>
+			</h2>
+			<p>
+Endpoint represents an endpoint.
+</p>
+
+			<pre>type Endpoint struct {
+<span id="Endpoint.Spec"></span>    Spec       <a href="index.html#EndpointSpec">EndpointSpec</a>        `json:&#34;,omitempty&#34;`
+<span id="Endpoint.Ports"></span>    Ports      []<a href="index.html#PortConfig">PortConfig</a>        `json:&#34;,omitempty&#34;`
+<span id="Endpoint.VirtualIPs"></span>    VirtualIPs []<a href="index.html#EndpointVirtualIP">EndpointVirtualIP</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EndpointSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=396:508#L5">EndpointSpec</a>
+				<a class="permalink" href="index.html#EndpointSpec">&#xb6;</a>
+			</h2>
+			<p>
+EndpointSpec represents the spec of an endpoint.
+</p>
+
+			<pre>type EndpointSpec struct {
+<span id="EndpointSpec.Mode"></span>    Mode  <a href="index.html#ResolutionMode">ResolutionMode</a> `json:&#34;,omitempty&#34;`
+<span id="EndpointSpec.Ports"></span>    Ports []<a href="index.html#PortConfig">PortConfig</a>   `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EndpointVirtualIP">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=2178:2287#L60">EndpointVirtualIP</a>
+				<a class="permalink" href="index.html#EndpointVirtualIP">&#xb6;</a>
+			</h2>
+			<p>
+EndpointVirtualIP represents the virtual ip of a port.
+</p>
+
+			<pre>type EndpointVirtualIP struct {
+<span id="EndpointVirtualIP.NetworkID"></span>    NetworkID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="EndpointVirtualIP.Addr"></span>    Addr      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EngineDescription">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=2000:2198#L55">EngineDescription</a>
+				<a class="permalink" href="index.html#EngineDescription">&#xb6;</a>
+			</h2>
+			<p>
+EngineDescription represents the description of an engine.
+</p>
+
+			<pre>type EngineDescription struct {
+<span id="EngineDescription.EngineVersion"></span>    EngineVersion <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              `json:&#34;,omitempty&#34;`
+<span id="EngineDescription.Labels"></span>    Labels        map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;,omitempty&#34;`
+<span id="EngineDescription.Plugins"></span>    Plugins       []<a href="index.html#PluginDescription">PluginDescription</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ExternalCA">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=4725:5188#L126">ExternalCA</a>
+				<a class="permalink" href="index.html#ExternalCA">&#xb6;</a>
+			</h2>
+			<p>
+ExternalCA defines external CA to be used by the cluster.
+</p>
+
+			<pre>type ExternalCA struct {
+<span id="ExternalCA.Protocol"></span>    <span class="comment">// Protocol is the protocol used by this external CA.</span>
+    Protocol <a href="index.html#ExternalCAProtocol">ExternalCAProtocol</a>
+
+<span id="ExternalCA.URL"></span>    <span class="comment">// URL is the URL where the external CA can be reached.</span>
+    URL <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="ExternalCA.Options"></span>    <span class="comment">// Options is a set of additional key/value pairs whose interpretation</span>
+    <span class="comment">// depends on the specified CA type.</span>
+    Options map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+
+<span id="ExternalCA.CACert"></span>    <span class="comment">// CACert specifies which root CA is used by this external CA.  This certificate must</span>
+    <span class="comment">// be in PEM format.</span>
+    CACert <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ExternalCAProtocol">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=4539:4569#L120">ExternalCAProtocol</a>
+				<a class="permalink" href="index.html#ExternalCAProtocol">&#xb6;</a>
+			</h2>
+			<p>
+ExternalCAProtocol represents type of external CA.
+</p>
+
+			<pre>type ExternalCAProtocol <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				<p>
+ExternalCAProtocolCFSSL CFSSL
+</p>
+
+				<pre>const <span id="ExternalCAProtocolCFSSL">ExternalCAProtocolCFSSL</span> <a href="index.html#ExternalCAProtocol">ExternalCAProtocol</a> = &#34;cfssl&#34;</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="GenericResource">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=3388:3553#L87">GenericResource</a>
+				<a class="permalink" href="index.html#GenericResource">&#xb6;</a>
+			</h2>
+			<p>
+GenericResource represents a &#34;user defined&#34; resource which can
+be either an integer (e.g: SSD=3) or a string (e.g: SSD=sda1)
+</p>
+
+			<pre>type GenericResource struct {
+<span id="GenericResource.NamedResourceSpec"></span>    NamedResourceSpec    *<a href="index.html#NamedGenericResource">NamedGenericResource</a>    `json:&#34;,omitempty&#34;`
+<span id="GenericResource.DiscreteResourceSpec"></span>    DiscreteResourceSpec *<a href="index.html#DiscreteGenericResource">DiscreteGenericResource</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="GlobalService">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=2398:2425#L61">GlobalService</a>
+				<a class="permalink" href="index.html#GlobalService">&#xb6;</a>
+			</h2>
+			<p>
+GlobalService is a kind of ServiceMode.
+</p>
+
+			<pre>type GlobalService struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IPAMConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=3760:3894#L107">IPAMConfig</a>
+				<a class="permalink" href="index.html#IPAMConfig">&#xb6;</a>
+			</h2>
+			<p>
+IPAMConfig represents ipam configuration.
+</p>
+
+			<pre>type IPAMConfig struct {
+<span id="IPAMConfig.Subnet"></span>    Subnet  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="IPAMConfig.Range"></span>    Range   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="IPAMConfig.Gateway"></span>    Gateway <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IPAMOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=3602:3713#L101">IPAMOptions</a>
+				<a class="permalink" href="index.html#IPAMOptions">&#xb6;</a>
+			</h2>
+			<p>
+IPAMOptions represents ipam options.
+</p>
+
+			<pre>type IPAMOptions struct {
+<span id="IPAMOptions.Driver"></span>    Driver  <a href="index.html#Driver">Driver</a>       `json:&#34;,omitempty&#34;`
+<span id="IPAMOptions.Configs"></span>    Configs []<a href="index.html#IPAMConfig">IPAMConfig</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Info">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=6491:6814#L189">Info</a>
+				<a class="permalink" href="index.html#Info">&#xb6;</a>
+			</h2>
+			<p>
+Info represents generic information about swarm.
+</p>
+
+			<pre>type Info struct {
+<span id="Info.NodeID"></span>    NodeID   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.NodeAddr"></span>    NodeAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.LocalNodeState"></span>    LocalNodeState   <a href="index.html#LocalNodeState">LocalNodeState</a>
+<span id="Info.ControlAvailable"></span>    ControlAvailable <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Info.Error"></span>    Error            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.RemoteManagers"></span>    RemoteManagers []<a href="index.html#Peer">Peer</a>
+<span id="Info.Nodes"></span>    Nodes          <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;,omitempty&#34;`
+<span id="Info.Managers"></span>    Managers       <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;,omitempty&#34;`
+
+<span id="Info.Cluster"></span>    Cluster *<a href="index.html#ClusterInfo">ClusterInfo</a> `json:&#34;,omitempty&#34;`
+
+<span id="Info.Warnings"></span>    Warnings []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="InitRequest">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=5242:5525#L143">InitRequest</a>
+				<a class="permalink" href="index.html#InitRequest">&#xb6;</a>
+			</h2>
+			<p>
+InitRequest is the request used to init a swarm.
+</p>
+
+			<pre>type InitRequest struct {
+<span id="InitRequest.ListenAddr"></span>    ListenAddr       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="InitRequest.AdvertiseAddr"></span>    AdvertiseAddr    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="InitRequest.DataPathAddr"></span>    DataPathAddr     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="InitRequest.DataPathPort"></span>    DataPathPort     <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="InitRequest.ForceNewCluster"></span>    ForceNewCluster  <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="InitRequest.Spec"></span>    Spec             <a href="index.html#Spec">Spec</a>
+<span id="InitRequest.AutoLockManagers"></span>    AutoLockManagers <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="InitRequest.Availability"></span>    Availability     <a href="index.html#NodeAvailability">NodeAvailability</a>
+<span id="InitRequest.DefaultAddrPool"></span>    DefaultAddrPool  []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="InitRequest.SubnetSize"></span>    SubnetSize       <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="JoinRequest">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=5579:5770#L157">JoinRequest</a>
+				<a class="permalink" href="index.html#JoinRequest">&#xb6;</a>
+			</h2>
+			<p>
+JoinRequest is the request used to join a swarm.
+</p>
+
+			<pre>type JoinRequest struct {
+<span id="JoinRequest.ListenAddr"></span>    ListenAddr    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="JoinRequest.AdvertiseAddr"></span>    AdvertiseAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="JoinRequest.DataPathAddr"></span>    DataPathAddr  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="JoinRequest.RemoteAddrs"></span>    RemoteAddrs   []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="JoinRequest.JoinToken"></span>    JoinToken     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">// accept by secret</span>
+<span id="JoinRequest.Availability"></span>    Availability  <a href="index.html#NodeAvailability">NodeAvailability</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="JoinTokens">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=635:822#L17">JoinTokens</a>
+				<a class="permalink" href="index.html#JoinTokens">&#xb6;</a>
+			</h2>
+			<p>
+JoinTokens contains the tokens workers and managers need to join the swarm.
+</p>
+
+			<pre>type JoinTokens struct {
+<span id="JoinTokens.Worker"></span>    <span class="comment">// Worker is the join token workers may use to join the swarm.</span>
+    Worker <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="JoinTokens.Manager"></span>    <span class="comment">// Manager is the join token managers may use to join the swarm.</span>
+    Manager <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LocalNodeState">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=5992:6018#L173">LocalNodeState</a>
+				<a class="permalink" href="index.html#LocalNodeState">&#xb6;</a>
+			</h2>
+			<p>
+LocalNodeState represents the state of the local node.
+</p>
+
+			<pre>type LocalNodeState <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// LocalNodeStateInactive INACTIVE</span>
+    <span id="LocalNodeStateInactive">LocalNodeStateInactive</span> <a href="index.html#LocalNodeState">LocalNodeState</a> = &#34;inactive&#34;
+    <span class="comment">// LocalNodeStatePending PENDING</span>
+    <span id="LocalNodeStatePending">LocalNodeStatePending</span> <a href="index.html#LocalNodeState">LocalNodeState</a> = &#34;pending&#34;
+    <span class="comment">// LocalNodeStateActive ACTIVE</span>
+    <span id="LocalNodeStateActive">LocalNodeStateActive</span> <a href="index.html#LocalNodeState">LocalNodeState</a> = &#34;active&#34;
+    <span class="comment">// LocalNodeStateError ERROR</span>
+    <span id="LocalNodeStateError">LocalNodeStateError</span> <a href="index.html#LocalNodeState">LocalNodeState</a> = &#34;error&#34;
+    <span class="comment">// LocalNodeStateLocked LOCKED</span>
+    <span id="LocalNodeStateLocked">LocalNodeStateLocked</span> <a href="index.html#LocalNodeState">LocalNodeState</a> = &#34;locked&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ManagerStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=2965:3135#L87">ManagerStatus</a>
+				<a class="permalink" href="index.html#ManagerStatus">&#xb6;</a>
+			</h2>
+			<p>
+ManagerStatus represents the status of a manager.
+</p>
+
+			<pre>type ManagerStatus struct {
+<span id="ManagerStatus.Leader"></span>    Leader       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>         `json:&#34;,omitempty&#34;`
+<span id="ManagerStatus.Reachability"></span>    Reachability <a href="index.html#Reachability">Reachability</a> `json:&#34;,omitempty&#34;`
+<span id="ManagerStatus.Addr"></span>    Addr         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>       `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Meta">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/common.go?s=255:398#L1">Meta</a>
+				<a class="permalink" href="index.html#Meta">&#xb6;</a>
+			</h2>
+			<p>
+Meta is a base object inherited by most of the other once.
+</p>
+
+			<pre>type Meta struct {
+<span id="Meta.Version"></span>    Version   <a href="index.html#Version">Version</a>   `json:&#34;,omitempty&#34;`
+<span id="Meta.CreatedAt"></span>    CreatedAt <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a> `json:&#34;,omitempty&#34;`
+<span id="Meta.UpdatedAt"></span>    UpdatedAt <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NamedGenericResource">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=3815:3919#L96">NamedGenericResource</a>
+				<a class="permalink" href="index.html#NamedGenericResource">&#xb6;</a>
+			</h2>
+			<p>
+NamedGenericResource represents a &#34;user defined&#34; resource which is defined
+as a string.
+&#34;Kind&#34; is used to describe the Kind of a resource (e.g: &#34;GPU&#34;, &#34;FPGA&#34;, &#34;SSD&#34;, ...)
+Value is used to identify the resource (GPU=&#34;UUID-1&#34;, FPGA=&#34;/dev/sdb5&#34;, ...)
+</p>
+
+			<pre>type NamedGenericResource struct {
+<span id="NamedGenericResource.Kind"></span>    Kind  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="NamedGenericResource.Value"></span>    Value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Network">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=2322:2500#L66">Network</a>
+				<a class="permalink" href="index.html#Network">&#xb6;</a>
+			</h2>
+			<p>
+Network represents a network.
+</p>
+
+			<pre>type Network struct {
+<span id="Network.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <a href="index.html#Meta">Meta</a>
+<span id="Network.Spec"></span>    Spec        <a href="index.html#NetworkSpec">NetworkSpec</a>  `json:&#34;,omitempty&#34;`
+<span id="Network.DriverState"></span>    DriverState <a href="index.html#Driver">Driver</a>       `json:&#34;,omitempty&#34;`
+<span id="Network.IPAMOptions"></span>    IPAMOptions *<a href="index.html#IPAMOptions">IPAMOptions</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkAttachment">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=3447:3560#L95">NetworkAttachment</a>
+				<a class="permalink" href="index.html#NetworkAttachment">&#xb6;</a>
+			</h2>
+			<p>
+NetworkAttachment represents a network attachment.
+</p>
+
+			<pre>type NetworkAttachment struct {
+<span id="NetworkAttachment.Network"></span>    Network   <a href="index.html#Network">Network</a>  `json:&#34;,omitempty&#34;`
+<span id="NetworkAttachment.Addresses"></span>    Addresses []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkAttachmentConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=3202:3391#L88">NetworkAttachmentConfig</a>
+				<a class="permalink" href="index.html#NetworkAttachmentConfig">&#xb6;</a>
+			</h2>
+			<p>
+NetworkAttachmentConfig represents the configuration of a network attachment.
+</p>
+
+			<pre>type NetworkAttachmentConfig struct {
+<span id="NetworkAttachmentConfig.Target"></span>    Target     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="NetworkAttachmentConfig.Aliases"></span>    Aliases    []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          `json:&#34;,omitempty&#34;`
+<span id="NetworkAttachmentConfig.DriverOpts"></span>    DriverOpts map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkAttachmentSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime.go?s=867:924#L15">NetworkAttachmentSpec</a>
+				<a class="permalink" href="index.html#NetworkAttachmentSpec">&#xb6;</a>
+			</h2>
+			<p>
+NetworkAttachmentSpec represents the runtime spec type for network
+attachment tasks
+</p>
+
+			<pre>type NetworkAttachmentSpec struct {
+<span id="NetworkAttachmentSpec.ContainerID"></span>    ContainerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=2551:3119#L75">NetworkSpec</a>
+				<a class="permalink" href="index.html#NetworkSpec">&#xb6;</a>
+			</h2>
+			<p>
+NetworkSpec represents the spec of a network.
+</p>
+
+			<pre>type NetworkSpec struct {
+    <a href="index.html#Annotations">Annotations</a>
+<span id="NetworkSpec.DriverConfiguration"></span>    DriverConfiguration *<a href="index.html#Driver">Driver</a>                  `json:&#34;,omitempty&#34;`
+<span id="NetworkSpec.IPv6Enabled"></span>    IPv6Enabled         <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `json:&#34;,omitempty&#34;`
+<span id="NetworkSpec.Internal"></span>    Internal            <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `json:&#34;,omitempty&#34;`
+<span id="NetworkSpec.Attachable"></span>    Attachable          <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `json:&#34;,omitempty&#34;`
+<span id="NetworkSpec.Ingress"></span>    Ingress             <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `json:&#34;,omitempty&#34;`
+<span id="NetworkSpec.IPAMOptions"></span>    IPAMOptions         *<a href="index.html#IPAMOptions">IPAMOptions</a>             `json:&#34;,omitempty&#34;`
+<span id="NetworkSpec.ConfigFrom"></span>    ConfigFrom          *<a href="../network/index.html">network</a>.<a href="../network/index.html#ConfigReference">ConfigReference</a> `json:&#34;,omitempty&#34;`
+<span id="NetworkSpec.Scope"></span>    Scope               <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Node">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=95:708#L1">Node</a>
+				<a class="permalink" href="index.html#Node">&#xb6;</a>
+			</h2>
+			<p>
+Node represents a node.
+</p>
+
+			<pre>type Node struct {
+<span id="Node.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <a href="index.html#Meta">Meta</a>
+<span id="Node.Spec"></span>    <span class="comment">// Spec defines the desired state of the node as specified by the user.</span>
+    <span class="comment">// The system will honor this and will *never* modify it.</span>
+    Spec <a href="index.html#NodeSpec">NodeSpec</a> `json:&#34;,omitempty&#34;`
+<span id="Node.Description"></span>    <span class="comment">// Description encapsulates the properties of the Node as reported by the</span>
+    <span class="comment">// agent.</span>
+    Description <a href="index.html#NodeDescription">NodeDescription</a> `json:&#34;,omitempty&#34;`
+<span id="Node.Status"></span>    <span class="comment">// Status provides the current status of the node, as seen by the manager.</span>
+    Status <a href="index.html#NodeStatus">NodeStatus</a> `json:&#34;,omitempty&#34;`
+<span id="Node.ManagerStatus"></span>    <span class="comment">// ManagerStatus provides the current status of the node&#39;s manager</span>
+    <span class="comment">// component, if the node is a manager.</span>
+    ManagerStatus *<a href="index.html#ManagerStatus">ManagerStatus</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodeAvailability">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=1157:1185#L28">NodeAvailability</a>
+				<a class="permalink" href="index.html#NodeAvailability">&#xb6;</a>
+			</h2>
+			<p>
+NodeAvailability represents the availability of a node.
+</p>
+
+			<pre>type NodeAvailability <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// NodeAvailabilityActive ACTIVE</span>
+    <span id="NodeAvailabilityActive">NodeAvailabilityActive</span> <a href="index.html#NodeAvailability">NodeAvailability</a> = &#34;active&#34;
+    <span class="comment">// NodeAvailabilityPause PAUSE</span>
+    <span id="NodeAvailabilityPause">NodeAvailabilityPause</span> <a href="index.html#NodeAvailability">NodeAvailability</a> = &#34;pause&#34;
+    <span class="comment">// NodeAvailabilityDrain DRAIN</span>
+    <span id="NodeAvailabilityDrain">NodeAvailabilityDrain</span> <a href="index.html#NodeAvailability">NodeAvailability</a> = &#34;drain&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodeDescription">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=1505:1781#L40">NodeDescription</a>
+				<a class="permalink" href="index.html#NodeDescription">&#xb6;</a>
+			</h2>
+			<p>
+NodeDescription represents the description of a node.
+</p>
+
+			<pre>type NodeDescription struct {
+<span id="NodeDescription.Hostname"></span>    Hostname  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="NodeDescription.Platform"></span>    Platform  <a href="index.html#Platform">Platform</a>          `json:&#34;,omitempty&#34;`
+<span id="NodeDescription.Resources"></span>    Resources <a href="index.html#Resources">Resources</a>         `json:&#34;,omitempty&#34;`
+<span id="NodeDescription.Engine"></span>    Engine    <a href="index.html#EngineDescription">EngineDescription</a> `json:&#34;,omitempty&#34;`
+<span id="NodeDescription.TLSInfo"></span>    TLSInfo   <a href="index.html#TLSInfo">TLSInfo</a>           `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodeRole">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=937:957#L18">NodeRole</a>
+				<a class="permalink" href="index.html#NodeRole">&#xb6;</a>
+			</h2>
+			<p>
+NodeRole represents the role of a node.
+</p>
+
+			<pre>type NodeRole <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// NodeRoleWorker WORKER</span>
+    <span id="NodeRoleWorker">NodeRoleWorker</span> <a href="index.html#NodeRole">NodeRole</a> = &#34;worker&#34;
+    <span class="comment">// NodeRoleManager MANAGER</span>
+    <span id="NodeRoleManager">NodeRoleManager</span> <a href="index.html#NodeRole">NodeRole</a> = &#34;manager&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodeSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=753:892#L11">NodeSpec</a>
+				<a class="permalink" href="index.html#NodeSpec">&#xb6;</a>
+			</h2>
+			<p>
+NodeSpec represents the spec of a node.
+</p>
+
+			<pre>type NodeSpec struct {
+    <a href="index.html#Annotations">Annotations</a>
+<span id="NodeSpec.Role"></span>    Role         <a href="index.html#NodeRole">NodeRole</a>         `json:&#34;,omitempty&#34;`
+<span id="NodeSpec.Availability"></span>    Availability <a href="index.html#NodeAvailability">NodeAvailability</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodeState">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=3182:3203#L94">NodeState</a>
+				<a class="permalink" href="index.html#NodeState">&#xb6;</a>
+			</h2>
+			<p>
+NodeState represents the state of a node.
+</p>
+
+			<pre>type NodeState <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// NodeStateUnknown UNKNOWN</span>
+    <span id="NodeStateUnknown">NodeStateUnknown</span> <a href="index.html#NodeState">NodeState</a> = &#34;unknown&#34;
+    <span class="comment">// NodeStateDown DOWN</span>
+    <span id="NodeStateDown">NodeStateDown</span> <a href="index.html#NodeState">NodeState</a> = &#34;down&#34;
+    <span class="comment">// NodeStateReady READY</span>
+    <span id="NodeStateReady">NodeStateReady</span> <a href="index.html#NodeState">NodeState</a> = &#34;ready&#34;
+    <span class="comment">// NodeStateDisconnected DISCONNECTED</span>
+    <span id="NodeStateDisconnected">NodeStateDisconnected</span> <a href="index.html#NodeState">NodeState</a> = &#34;disconnected&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NodeStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=2417:2560#L68">NodeStatus</a>
+				<a class="permalink" href="index.html#NodeStatus">&#xb6;</a>
+			</h2>
+			<p>
+NodeStatus represents the status of a node.
+</p>
+
+			<pre>type NodeStatus struct {
+<span id="NodeStatus.State"></span>    State   <a href="index.html#NodeState">NodeState</a> `json:&#34;,omitempty&#34;`
+<span id="NodeStatus.Message"></span>    Message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>    `json:&#34;,omitempty&#34;`
+<span id="NodeStatus.Addr"></span>    Addr    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>    `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="OrchestrationConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=1311:1549#L37">OrchestrationConfig</a>
+				<a class="permalink" href="index.html#OrchestrationConfig">&#xb6;</a>
+			</h2>
+			<p>
+OrchestrationConfig represents orchestration configuration.
+</p>
+
+			<pre>type OrchestrationConfig struct {
+<span id="OrchestrationConfig.TaskHistoryRetentionLimit"></span>    <span class="comment">// TaskHistoryRetentionLimit is the number of historic tasks to keep per instance or</span>
+    <span class="comment">// node. If negative, never remove completed or failed tasks.</span>
+    TaskHistoryRetentionLimit *<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Peer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=6843:6893#L207">Peer</a>
+				<a class="permalink" href="index.html#Peer">&#xb6;</a>
+			</h2>
+			<p>
+Peer represents a peer.
+</p>
+
+			<pre>type Peer struct {
+<span id="Peer.NodeID"></span>    NodeID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Peer.Addr"></span>    Addr   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Placement">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=4510:4964#L117">Placement</a>
+				<a class="permalink" href="index.html#Placement">&#xb6;</a>
+			</h2>
+			<p>
+Placement represents orchestration parameters.
+</p>
+
+			<pre>type Placement struct {
+<span id="Placement.Constraints"></span>    Constraints []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              `json:&#34;,omitempty&#34;`
+<span id="Placement.Preferences"></span>    Preferences []<a href="index.html#PlacementPreference">PlacementPreference</a> `json:&#34;,omitempty&#34;`
+<span id="Placement.MaxReplicas"></span>    MaxReplicas <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>                `json:&#34;,omitempty&#34;`
+
+<span id="Placement.Platforms"></span>    <span class="comment">// Platforms stores all the platforms that the image can run on.</span>
+    <span class="comment">// This field is used in the platform filter for scheduling. If empty,</span>
+    <span class="comment">// then the platform filter is off, meaning there are no scheduling restrictions.</span>
+    Platforms []<a href="index.html#Platform">Platform</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PlacementPreference">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=5064:5119#L130">PlacementPreference</a>
+				<a class="permalink" href="index.html#PlacementPreference">&#xb6;</a>
+			</h2>
+			<p>
+PlacementPreference provides a way to make the scheduler aware of factors
+such as topology.
+</p>
+
+			<pre>type PlacementPreference struct {
+<span id="PlacementPreference.Spread"></span>    Spread *<a href="index.html#SpreadOver">SpreadOver</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Platform">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=1830:1936#L49">Platform</a>
+				<a class="permalink" href="index.html#Platform">&#xb6;</a>
+			</h2>
+			<p>
+Platform represents the platform (Arch/OS).
+</p>
+
+			<pre>type Platform struct {
+<span id="Platform.Architecture"></span>    Architecture <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="Platform.OS"></span>    OS           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PluginDescription">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=2269:2368#L62">PluginDescription</a>
+				<a class="permalink" href="index.html#PluginDescription">&#xb6;</a>
+			</h2>
+			<p>
+PluginDescription represents the description of an engine plugin.
+</p>
+
+			<pre>type PluginDescription struct {
+<span id="PluginDescription.Type"></span>    Type <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="PluginDescription.Name"></span>    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PortConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=788:1200#L21">PortConfig</a>
+				<a class="permalink" href="index.html#PortConfig">&#xb6;</a>
+			</h2>
+			<p>
+PortConfig represents the config of a port.
+</p>
+
+			<pre>type PortConfig struct {
+<span id="PortConfig.Name"></span>    Name     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>             `json:&#34;,omitempty&#34;`
+<span id="PortConfig.Protocol"></span>    Protocol <a href="index.html#PortConfigProtocol">PortConfigProtocol</a> `json:&#34;,omitempty&#34;`
+<span id="PortConfig.TargetPort"></span>    <span class="comment">// TargetPort is the port inside the container</span>
+    TargetPort <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;,omitempty&#34;`
+<span id="PortConfig.PublishedPort"></span>    <span class="comment">// PublishedPort is the port on the swarm hosts</span>
+    PublishedPort <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;,omitempty&#34;`
+<span id="PortConfig.PublishMode"></span>    <span class="comment">// PublishMode is the mode in which port is published</span>
+    PublishMode <a href="index.html#PortConfigPublishMode">PortConfigPublishMode</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PortConfigProtocol">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=1755:1785#L46">PortConfigProtocol</a>
+				<a class="permalink" href="index.html#PortConfigProtocol">&#xb6;</a>
+			</h2>
+			<p>
+PortConfigProtocol represents the protocol of a port.
+</p>
+
+			<pre>type PortConfigProtocol <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+
+    <span class="comment">// PortConfigProtocolTCP TCP</span>
+    <span id="PortConfigProtocolTCP">PortConfigProtocolTCP</span> <a href="index.html#PortConfigProtocol">PortConfigProtocol</a> = &#34;tcp&#34;
+    <span class="comment">// PortConfigProtocolUDP UDP</span>
+    <span id="PortConfigProtocolUDP">PortConfigProtocolUDP</span> <a href="index.html#PortConfigProtocol">PortConfigProtocol</a> = &#34;udp&#34;
+    <span class="comment">// PortConfigProtocolSCTP SCTP</span>
+    <span id="PortConfigProtocolSCTP">PortConfigProtocolSCTP</span> <a href="index.html#PortConfigProtocol">PortConfigProtocol</a> = &#34;sctp&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PortConfigPublishMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=1288:1321#L34">PortConfigPublishMode</a>
+				<a class="permalink" href="index.html#PortConfigPublishMode">&#xb6;</a>
+			</h2>
+			<p>
+PortConfigPublishMode represents the mode in which the port is to
+be published.
+</p>
+
+			<pre>type PortConfigPublishMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// PortConfigPublishModeIngress is used for ports published</span>
+    <span class="comment">// for ingress load balancing using routing mesh.</span>
+    <span id="PortConfigPublishModeIngress">PortConfigPublishModeIngress</span> <a href="index.html#PortConfigPublishMode">PortConfigPublishMode</a> = &#34;ingress&#34;
+    <span class="comment">// PortConfigPublishModeHost is used for ports published</span>
+    <span class="comment">// for direct host level access on the host where the task is running.</span>
+    <span id="PortConfigPublishModeHost">PortConfigPublishModeHost</span> <a href="index.html#PortConfigPublishMode">PortConfigPublishMode</a> = &#34;host&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PortStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=6719:6785#L180">PortStatus</a>
+				<a class="permalink" href="index.html#PortStatus">&#xb6;</a>
+			</h2>
+			<p>
+PortStatus represents the port status of a task&#39;s host ports whose
+service has published host ports
+</p>
+
+			<pre>type PortStatus struct {
+<span id="PortStatus.Ports"></span>    Ports []<a href="index.html#PortConfig">PortConfig</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Privileges">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/container.go?s=1184:1274#L32">Privileges</a>
+				<a class="permalink" href="index.html#Privileges">&#xb6;</a>
+			</h2>
+			<p>
+Privileges defines the security options for the container.
+</p>
+
+			<pre>type Privileges struct {
+<span id="Privileges.CredentialSpec"></span>    CredentialSpec *<a href="index.html#CredentialSpec">CredentialSpec</a>
+<span id="Privileges.SELinuxContext"></span>    SELinuxContext *<a href="index.html#SELinuxContext">SELinuxContext</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RaftConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=2337:3458#L63">RaftConfig</a>
+				<a class="permalink" href="index.html#RaftConfig">&#xb6;</a>
+			</h2>
+			<p>
+RaftConfig represents raft configuration.
+</p>
+
+			<pre>type RaftConfig struct {
+<span id="RaftConfig.SnapshotInterval"></span>    <span class="comment">// SnapshotInterval is the number of log entries between snapshots.</span>
+    SnapshotInterval <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> `json:&#34;,omitempty&#34;`
+
+<span id="RaftConfig.KeepOldSnapshots"></span>    <span class="comment">// KeepOldSnapshots is the number of snapshots to keep beyond the</span>
+    <span class="comment">// current snapshot.</span>
+    KeepOldSnapshots *<a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> `json:&#34;,omitempty&#34;`
+
+<span id="RaftConfig.LogEntriesForSlowFollowers"></span>    <span class="comment">// LogEntriesForSlowFollowers is the number of log entries to keep</span>
+    <span class="comment">// around to sync up slow followers after a snapshot is created.</span>
+    LogEntriesForSlowFollowers <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> `json:&#34;,omitempty&#34;`
+
+<span id="RaftConfig.ElectionTick"></span>    <span class="comment">// ElectionTick is the number of ticks that a follower will wait for a message</span>
+    <span class="comment">// from the leader before becoming a candidate and starting an election.</span>
+    <span class="comment">// ElectionTick must be greater than HeartbeatTick.</span>
+    <span class="comment">//</span>
+    <span class="comment">// A tick currently defaults to one second, so these translate directly to</span>
+    <span class="comment">// seconds currently, but this is NOT guaranteed.</span>
+    ElectionTick <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+
+<span id="RaftConfig.HeartbeatTick"></span>    <span class="comment">// HeartbeatTick is the number of ticks between heartbeats. Every</span>
+    <span class="comment">// HeartbeatTick ticks, the leader will send a heartbeat to the</span>
+    <span class="comment">// followers.</span>
+    <span class="comment">//</span>
+    <span class="comment">// A tick currently defaults to one second, so these translate directly to</span>
+    <span class="comment">// seconds currently, but this is NOT guaranteed.</span>
+    HeartbeatTick <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Reachability">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/node.go?s=2617:2641#L75">Reachability</a>
+				<a class="permalink" href="index.html#Reachability">&#xb6;</a>
+			</h2>
+			<p>
+Reachability represents the reachability of a node.
+</p>
+
+			<pre>type Reachability <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// ReachabilityUnknown UNKNOWN</span>
+    <span id="ReachabilityUnknown">ReachabilityUnknown</span> <a href="index.html#Reachability">Reachability</a> = &#34;unknown&#34;
+    <span class="comment">// ReachabilityUnreachable UNREACHABLE</span>
+    <span id="ReachabilityUnreachable">ReachabilityUnreachable</span> <a href="index.html#Reachability">Reachability</a> = &#34;unreachable&#34;
+    <span class="comment">// ReachabilityReachable REACHABLE</span>
+    <span id="ReachabilityReachable">ReachabilityReachable</span> <a href="index.html#Reachability">Reachability</a> = &#34;reachable&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ReplicatedService">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=2282:2353#L56">ReplicatedService</a>
+				<a class="permalink" href="index.html#ReplicatedService">&#xb6;</a>
+			</h2>
+			<p>
+ReplicatedService is a kind of ServiceMode.
+</p>
+
+			<pre>type ReplicatedService struct {
+<span id="ReplicatedService.Replicas"></span>    Replicas *<a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ResolutionMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/network.go?s=558:584#L11">ResolutionMode</a>
+				<a class="permalink" href="index.html#ResolutionMode">&#xb6;</a>
+			</h2>
+			<p>
+ResolutionMode represents a resolution mode.
+</p>
+
+			<pre>type ResolutionMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// ResolutionModeVIP VIP</span>
+    <span id="ResolutionModeVIP">ResolutionModeVIP</span> <a href="index.html#ResolutionMode">ResolutionMode</a> = &#34;vip&#34;
+    <span class="comment">// ResolutionModeDNSRR DNSRR</span>
+    <span id="ResolutionModeDNSRR">ResolutionModeDNSRR</span> <a href="index.html#ResolutionMode">ResolutionMode</a> = &#34;dnsrr&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ResourceRequirements">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=4332:4458#L111">ResourceRequirements</a>
+				<a class="permalink" href="index.html#ResourceRequirements">&#xb6;</a>
+			</h2>
+			<p>
+ResourceRequirements represents resources requirements.
+</p>
+
+			<pre>type ResourceRequirements struct {
+<span id="ResourceRequirements.Limits"></span>    Limits       *<a href="index.html#Resources">Resources</a> `json:&#34;,omitempty&#34;`
+<span id="ResourceRequirements.Reservations"></span>    Reservations *<a href="index.html#Resources">Resources</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Resources">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=3062:3255#L79">Resources</a>
+				<a class="permalink" href="index.html#Resources">&#xb6;</a>
+			</h2>
+			<p>
+Resources represents resources (CPU/Memory).
+</p>
+
+			<pre>type Resources struct {
+<span id="Resources.NanoCPUs"></span>    NanoCPUs         <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>             `json:&#34;,omitempty&#34;`
+<span id="Resources.MemoryBytes"></span>    MemoryBytes      <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>             `json:&#34;,omitempty&#34;`
+<span id="Resources.GenericResources"></span>    GenericResources []<a href="index.html#GenericResource">GenericResource</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RestartPolicy">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=5408:5661#L142">RestartPolicy</a>
+				<a class="permalink" href="index.html#RestartPolicy">&#xb6;</a>
+			</h2>
+			<p>
+RestartPolicy represents the restart policy.
+</p>
+
+			<pre>type RestartPolicy struct {
+<span id="RestartPolicy.Condition"></span>    Condition   <a href="index.html#RestartPolicyCondition">RestartPolicyCondition</a> `json:&#34;,omitempty&#34;`
+<span id="RestartPolicy.Delay"></span>    Delay       *<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>         `json:&#34;,omitempty&#34;`
+<span id="RestartPolicy.MaxAttempts"></span>    MaxAttempts *<a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>                `json:&#34;,omitempty&#34;`
+<span id="RestartPolicy.Window"></span>    Window      *<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>         `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RestartPolicyCondition">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=5717:5751#L150">RestartPolicyCondition</a>
+				<a class="permalink" href="index.html#RestartPolicyCondition">&#xb6;</a>
+			</h2>
+			<p>
+RestartPolicyCondition represents when to restart.
+</p>
+
+			<pre>type RestartPolicyCondition <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// RestartPolicyConditionNone NONE</span>
+    <span id="RestartPolicyConditionNone">RestartPolicyConditionNone</span> <a href="index.html#RestartPolicyCondition">RestartPolicyCondition</a> = &#34;none&#34;
+    <span class="comment">// RestartPolicyConditionOnFailure ON_FAILURE</span>
+    <span id="RestartPolicyConditionOnFailure">RestartPolicyConditionOnFailure</span> <a href="index.html#RestartPolicyCondition">RestartPolicyCondition</a> = &#34;on-failure&#34;
+    <span class="comment">// RestartPolicyConditionAny ANY</span>
+    <span id="RestartPolicyConditionAny">RestartPolicyConditionAny</span> <a href="index.html#RestartPolicyCondition">RestartPolicyCondition</a> = &#34;any&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RuntimeType">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime.go?s=128:151#L1">RuntimeType</a>
+				<a class="permalink" href="index.html#RuntimeType">&#xb6;</a>
+			</h2>
+			<p>
+RuntimeType is the type of runtime used for the TaskSpec
+</p>
+
+			<pre>type RuntimeType <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RuntimeURL">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime.go?s=189:211#L1">RuntimeURL</a>
+				<a class="permalink" href="index.html#RuntimeURL">&#xb6;</a>
+			</h2>
+			<p>
+RuntimeURL is the proto type url
+</p>
+
+			<pre>type RuntimeURL <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SELinuxContext">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/container.go?s=875:976#L15">SELinuxContext</a>
+				<a class="permalink" href="index.html#SELinuxContext">&#xb6;</a>
+			</h2>
+			<p>
+SELinuxContext contains the SELinux labels of the container.
+</p>
+
+			<pre>type SELinuxContext struct {
+<span id="SELinuxContext.Disable"></span>    Disable <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+
+<span id="SELinuxContext.User"></span>    User  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="SELinuxContext.Role"></span>    Role  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="SELinuxContext.Type"></span>    Type  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="SELinuxContext.Level"></span>    Level <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Secret">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/secret.go?s=112:168#L1">Secret</a>
+				<a class="permalink" href="index.html#Secret">&#xb6;</a>
+			</h2>
+			<p>
+Secret represents a secret.
+</p>
+
+			<pre>type Secret struct {
+<span id="Secret.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <a href="index.html#Meta">Meta</a>
+<span id="Secret.Spec"></span>    Spec <a href="index.html#SecretSpec">SecretSpec</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SecretReference">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/secret.go?s=842:950#L22">SecretReference</a>
+				<a class="permalink" href="index.html#SecretReference">&#xb6;</a>
+			</h2>
+			<p>
+SecretReference is a reference to a secret in swarm
+</p>
+
+			<pre>type SecretReference struct {
+<span id="SecretReference.File"></span>    File       *<a href="index.html#SecretReferenceFileTarget">SecretReferenceFileTarget</a>
+<span id="SecretReference.SecretID"></span>    SecretID   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="SecretReference.SecretName"></span>    SecretName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SecretReferenceFileTarget">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/secret.go?s=687:785#L14">SecretReferenceFileTarget</a>
+				<a class="permalink" href="index.html#SecretReferenceFileTarget">&#xb6;</a>
+			</h2>
+			<p>
+SecretReferenceFileTarget is a file target in a secret reference
+</p>
+
+			<pre>type SecretReferenceFileTarget struct {
+<span id="SecretReferenceFileTarget.Name"></span>    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="SecretReferenceFileTarget.UID"></span>    UID  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="SecretReferenceFileTarget.GID"></span>    GID  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="SecretReferenceFileTarget.Mode"></span>    Mode <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SecretSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/secret.go?s=241:617#L3">SecretSpec</a>
+				<a class="permalink" href="index.html#SecretSpec">&#xb6;</a>
+			</h2>
+			<p>
+SecretSpec represents a secret specification from a secret in swarm
+</p>
+
+			<pre>type SecretSpec struct {
+    <a href="index.html#Annotations">Annotations</a>
+<span id="SecretSpec.Data"></span>    Data   []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>  `json:&#34;,omitempty&#34;`
+<span id="SecretSpec.Driver"></span>    Driver *<a href="index.html#Driver">Driver</a> `json:&#34;,omitempty&#34;` <span class="comment">// name of the secrets driver used to fetch the secret&#39;s value from an external secret store</span>
+
+<span id="SecretSpec.Templating"></span>    <span class="comment">// Templating controls whether and how to evaluate the secret payload as</span>
+    <span class="comment">// a template. If it is not set, no templating is used.</span>
+    Templating *<a href="index.html#Driver">Driver</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Service">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=116:348#L1">Service</a>
+				<a class="permalink" href="index.html#Service">&#xb6;</a>
+			</h2>
+			<p>
+Service represents a service.
+</p>
+
+			<pre>type Service struct {
+<span id="Service.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <a href="index.html#Meta">Meta</a>
+<span id="Service.Spec"></span>    Spec         <a href="index.html#ServiceSpec">ServiceSpec</a>   `json:&#34;,omitempty&#34;`
+<span id="Service.PreviousSpec"></span>    PreviousSpec *<a href="index.html#ServiceSpec">ServiceSpec</a>  `json:&#34;,omitempty&#34;`
+<span id="Service.Endpoint"></span>    Endpoint     <a href="index.html#Endpoint">Endpoint</a>      `json:&#34;,omitempty&#34;`
+<span id="Service.UpdateStatus"></span>    UpdateStatus *<a href="index.html#UpdateStatus">UpdateStatus</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=1073:1202#L24">ServiceMode</a>
+				<a class="permalink" href="index.html#ServiceMode">&#xb6;</a>
+			</h2>
+			<p>
+ServiceMode represents the mode of a service.
+</p>
+
+			<pre>type ServiceMode struct {
+<span id="ServiceMode.Replicated"></span>    Replicated *<a href="index.html#ReplicatedService">ReplicatedService</a> `json:&#34;,omitempty&#34;`
+<span id="ServiceMode.Global"></span>    Global     *<a href="index.html#GlobalService">GlobalService</a>     `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=399:1022#L6">ServiceSpec</a>
+				<a class="permalink" href="index.html#ServiceSpec">&#xb6;</a>
+			</h2>
+			<p>
+ServiceSpec represents the spec of a service.
+</p>
+
+			<pre>type ServiceSpec struct {
+    <a href="index.html#Annotations">Annotations</a>
+
+<span id="ServiceSpec.TaskTemplate"></span>    <span class="comment">// TaskTemplate defines how the service should construct new tasks when</span>
+    <span class="comment">// orchestrating this service.</span>
+    TaskTemplate   <a href="index.html#TaskSpec">TaskSpec</a>      `json:&#34;,omitempty&#34;`
+<span id="ServiceSpec.Mode"></span>    Mode           <a href="index.html#ServiceMode">ServiceMode</a>   `json:&#34;,omitempty&#34;`
+<span id="ServiceSpec.UpdateConfig"></span>    UpdateConfig   *<a href="index.html#UpdateConfig">UpdateConfig</a> `json:&#34;,omitempty&#34;`
+<span id="ServiceSpec.RollbackConfig"></span>    RollbackConfig *<a href="index.html#UpdateConfig">UpdateConfig</a> `json:&#34;,omitempty&#34;`
+
+<span id="ServiceSpec.Networks"></span>    <span class="comment">// Networks field in ServiceSpec is deprecated. The</span>
+    <span class="comment">// same field in TaskSpec should be used instead.</span>
+    <span class="comment">// This field will be removed in a future release.</span>
+    Networks     []<a href="index.html#NetworkAttachmentConfig">NetworkAttachmentConfig</a> `json:&#34;,omitempty&#34;`
+<span id="ServiceSpec.EndpointSpec"></span>    EndpointSpec *<a href="index.html#EndpointSpec">EndpointSpec</a>             `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Spec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=864:1246#L25">Spec</a>
+				<a class="permalink" href="index.html#Spec">&#xb6;</a>
+			</h2>
+			<p>
+Spec represents the spec of a swarm.
+</p>
+
+			<pre>type Spec struct {
+    <a href="index.html#Annotations">Annotations</a>
+
+<span id="Spec.Orchestration"></span>    Orchestration    <a href="index.html#OrchestrationConfig">OrchestrationConfig</a> `json:&#34;,omitempty&#34;`
+<span id="Spec.Raft"></span>    Raft             <a href="index.html#RaftConfig">RaftConfig</a>          `json:&#34;,omitempty&#34;`
+<span id="Spec.Dispatcher"></span>    Dispatcher       <a href="index.html#DispatcherConfig">DispatcherConfig</a>    `json:&#34;,omitempty&#34;`
+<span id="Spec.CAConfig"></span>    CAConfig         <a href="index.html#CAConfig">CAConfig</a>            `json:&#34;,omitempty&#34;`
+<span id="Spec.TaskDefaults"></span>    TaskDefaults     <a href="index.html#TaskDefaults">TaskDefaults</a>        `json:&#34;,omitempty&#34;`
+<span id="Spec.EncryptionConfig"></span>    EncryptionConfig <a href="index.html#EncryptionConfig">EncryptionConfig</a>    `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SpreadOver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=5260:5358#L136">SpreadOver</a>
+				<a class="permalink" href="index.html#SpreadOver">&#xb6;</a>
+			</h2>
+			<p>
+SpreadOver is a scheduling preference that instructs the scheduler to spread
+tasks evenly over groups of nodes identified by labels.
+</p>
+
+			<pre>type SpreadOver struct {
+    <span class="comment">// label descriptor, such as engine.labels.az</span>
+<span id="SpreadOver.SpreadDescriptor"></span>    SpreadDescriptor <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Swarm">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=497:554#L11">Swarm</a>
+				<a class="permalink" href="index.html#Swarm">&#xb6;</a>
+			</h2>
+			<p>
+Swarm represents a swarm.
+</p>
+
+			<pre>type Swarm struct {
+    <a href="index.html#ClusterInfo">ClusterInfo</a>
+<span id="Swarm.JoinTokens"></span>    JoinTokens <a href="index.html#JoinTokens">JoinTokens</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TLSInfo">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/common.go?s=882:1222#L21">TLSInfo</a>
+				<a class="permalink" href="index.html#TLSInfo">&#xb6;</a>
+			</h2>
+			<p>
+TLSInfo represents the TLS information about what CA certificate is trusted,
+and who the issuer for a TLS certificate is
+</p>
+
+			<pre>type TLSInfo struct {
+<span id="TLSInfo.TrustRoot"></span>    <span class="comment">// TrustRoot is the trusted CA root certificate in PEM format</span>
+    TrustRoot <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+
+    <span class="comment">// CertIssuer is the raw subject bytes of the issuer</span>
+<span id="TLSInfo.CertIssuerSubject"></span>    CertIssuerSubject []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a> `json:&#34;,omitempty&#34;`
+
+<span id="TLSInfo.CertIssuerPublicKey"></span>    <span class="comment">// CertIssuerPublicKey is the raw public key bytes of the issuer</span>
+    CertIssuerPublicKey []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Task">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=1294:1833#L36">Task</a>
+				<a class="permalink" href="index.html#Task">&#xb6;</a>
+			</h2>
+			<p>
+Task represents a task.
+</p>
+
+			<pre>type Task struct {
+<span id="Task.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <a href="index.html#Meta">Meta</a>
+    <a href="index.html#Annotations">Annotations</a>
+
+<span id="Task.Spec"></span>    Spec                <a href="index.html#TaskSpec">TaskSpec</a>            `json:&#34;,omitempty&#34;`
+<span id="Task.ServiceID"></span>    ServiceID           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              `json:&#34;,omitempty&#34;`
+<span id="Task.Slot"></span>    Slot                <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>                 `json:&#34;,omitempty&#34;`
+<span id="Task.NodeID"></span>    NodeID              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              `json:&#34;,omitempty&#34;`
+<span id="Task.Status"></span>    Status              <a href="index.html#TaskStatus">TaskStatus</a>          `json:&#34;,omitempty&#34;`
+<span id="Task.DesiredState"></span>    DesiredState        <a href="index.html#TaskState">TaskState</a>           `json:&#34;,omitempty&#34;`
+<span id="Task.NetworksAttachments"></span>    NetworksAttachments []<a href="index.html#NetworkAttachment">NetworkAttachment</a> `json:&#34;,omitempty&#34;`
+<span id="Task.GenericResources"></span>    GenericResources    []<a href="index.html#GenericResource">GenericResource</a>   `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TaskDefaults">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=1630:1971#L44">TaskDefaults</a>
+				<a class="permalink" href="index.html#TaskDefaults">&#xb6;</a>
+			</h2>
+			<p>
+TaskDefaults parameterizes cluster-level task creation with default values.
+</p>
+
+			<pre>type TaskDefaults struct {
+<span id="TaskDefaults.LogDriver"></span>    <span class="comment">// LogDriver selects the log driver to use for tasks created in the</span>
+    <span class="comment">// orchestrator if unspecified by a service.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Updating this value will only have an affect on new tasks. Old tasks</span>
+    <span class="comment">// will continue use their previously configured log driver until</span>
+    <span class="comment">// recreated.</span>
+    LogDriver *<a href="index.html#Driver">Driver</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TaskSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=1878:3012#L52">TaskSpec</a>
+				<a class="permalink" href="index.html#TaskSpec">&#xb6;</a>
+			</h2>
+			<p>
+TaskSpec represents the spec of a task.
+</p>
+
+			<pre>type TaskSpec struct {
+<span id="TaskSpec.ContainerSpec"></span>    <span class="comment">// ContainerSpec, NetworkAttachmentSpec, and PluginSpec are mutually exclusive.</span>
+<span id="TaskSpec.PluginSpec"></span>    <span class="comment">// PluginSpec is only used when the `Runtime` field is set to `plugin`</span>
+<span id="TaskSpec.NetworkAttachmentSpec"></span>    <span class="comment">// NetworkAttachmentSpec is used if the `Runtime` field is set to</span>
+    <span class="comment">// `attachment`.</span>
+    ContainerSpec         *<a href="index.html#ContainerSpec">ContainerSpec</a>         `json:&#34;,omitempty&#34;`
+    PluginSpec            *<a href="runtime/index.html">runtime</a>.<a href="runtime/index.html#PluginSpec">PluginSpec</a>    `json:&#34;,omitempty&#34;`
+    NetworkAttachmentSpec *<a href="index.html#NetworkAttachmentSpec">NetworkAttachmentSpec</a> `json:&#34;,omitempty&#34;`
+
+<span id="TaskSpec.Resources"></span>    Resources     *<a href="index.html#ResourceRequirements">ResourceRequirements</a>     `json:&#34;,omitempty&#34;`
+<span id="TaskSpec.RestartPolicy"></span>    RestartPolicy *<a href="index.html#RestartPolicy">RestartPolicy</a>            `json:&#34;,omitempty&#34;`
+<span id="TaskSpec.Placement"></span>    Placement     *<a href="index.html#Placement">Placement</a>                `json:&#34;,omitempty&#34;`
+<span id="TaskSpec.Networks"></span>    Networks      []<a href="index.html#NetworkAttachmentConfig">NetworkAttachmentConfig</a> `json:&#34;,omitempty&#34;`
+
+<span id="TaskSpec.LogDriver"></span>    <span class="comment">// LogDriver specifies the LogDriver to use for tasks created from this</span>
+    <span class="comment">// spec. If not present, the one on cluster default on swarm.Spec will be</span>
+    <span class="comment">// used, finally falling back to the engine default if not specified.</span>
+    LogDriver *<a href="index.html#Driver">Driver</a> `json:&#34;,omitempty&#34;`
+
+<span id="TaskSpec.ForceUpdate"></span>    <span class="comment">// ForceUpdate is a counter that triggers an update even if no relevant</span>
+    <span class="comment">// parameters have been changed.</span>
+    ForceUpdate <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+
+<span id="TaskSpec.Runtime"></span>    Runtime <a href="index.html#RuntimeType">RuntimeType</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TaskState">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=186:207#L1">TaskState</a>
+				<a class="permalink" href="index.html#TaskState">&#xb6;</a>
+			</h2>
+			<p>
+TaskState represents the state of a task.
+</p>
+
+			<pre>type TaskState <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// TaskStateNew NEW</span>
+    <span id="TaskStateNew">TaskStateNew</span> <a href="index.html#TaskState">TaskState</a> = &#34;new&#34;
+    <span class="comment">// TaskStateAllocated ALLOCATED</span>
+    <span id="TaskStateAllocated">TaskStateAllocated</span> <a href="index.html#TaskState">TaskState</a> = &#34;allocated&#34;
+    <span class="comment">// TaskStatePending PENDING</span>
+    <span id="TaskStatePending">TaskStatePending</span> <a href="index.html#TaskState">TaskState</a> = &#34;pending&#34;
+    <span class="comment">// TaskStateAssigned ASSIGNED</span>
+    <span id="TaskStateAssigned">TaskStateAssigned</span> <a href="index.html#TaskState">TaskState</a> = &#34;assigned&#34;
+    <span class="comment">// TaskStateAccepted ACCEPTED</span>
+    <span id="TaskStateAccepted">TaskStateAccepted</span> <a href="index.html#TaskState">TaskState</a> = &#34;accepted&#34;
+    <span class="comment">// TaskStatePreparing PREPARING</span>
+    <span id="TaskStatePreparing">TaskStatePreparing</span> <a href="index.html#TaskState">TaskState</a> = &#34;preparing&#34;
+    <span class="comment">// TaskStateReady READY</span>
+    <span id="TaskStateReady">TaskStateReady</span> <a href="index.html#TaskState">TaskState</a> = &#34;ready&#34;
+    <span class="comment">// TaskStateStarting STARTING</span>
+    <span id="TaskStateStarting">TaskStateStarting</span> <a href="index.html#TaskState">TaskState</a> = &#34;starting&#34;
+    <span class="comment">// TaskStateRunning RUNNING</span>
+    <span id="TaskStateRunning">TaskStateRunning</span> <a href="index.html#TaskState">TaskState</a> = &#34;running&#34;
+    <span class="comment">// TaskStateComplete COMPLETE</span>
+    <span id="TaskStateComplete">TaskStateComplete</span> <a href="index.html#TaskState">TaskState</a> = &#34;complete&#34;
+    <span class="comment">// TaskStateShutdown SHUTDOWN</span>
+    <span id="TaskStateShutdown">TaskStateShutdown</span> <a href="index.html#TaskState">TaskState</a> = &#34;shutdown&#34;
+    <span class="comment">// TaskStateFailed FAILED</span>
+    <span id="TaskStateFailed">TaskStateFailed</span> <a href="index.html#TaskState">TaskState</a> = &#34;failed&#34;
+    <span class="comment">// TaskStateRejected REJECTED</span>
+    <span id="TaskStateRejected">TaskStateRejected</span> <a href="index.html#TaskState">TaskState</a> = &#34;rejected&#34;
+    <span class="comment">// TaskStateRemove REMOVE</span>
+    <span id="TaskStateRemove">TaskStateRemove</span> <a href="index.html#TaskState">TaskState</a> = &#34;remove&#34;
+    <span class="comment">// TaskStateOrphaned ORPHANED</span>
+    <span id="TaskStateOrphaned">TaskStateOrphaned</span> <a href="index.html#TaskState">TaskState</a> = &#34;orphaned&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TaskStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/task.go?s=6117:6467#L162">TaskStatus</a>
+				<a class="permalink" href="index.html#TaskStatus">&#xb6;</a>
+			</h2>
+			<p>
+TaskStatus represents the status of a task.
+</p>
+
+			<pre>type TaskStatus struct {
+<span id="TaskStatus.Timestamp"></span>    Timestamp       <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>        `json:&#34;,omitempty&#34;`
+<span id="TaskStatus.State"></span>    State           <a href="index.html#TaskState">TaskState</a>        `json:&#34;,omitempty&#34;`
+<span id="TaskStatus.Message"></span>    Message         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>           `json:&#34;,omitempty&#34;`
+<span id="TaskStatus.Err"></span>    Err             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>           `json:&#34;,omitempty&#34;`
+<span id="TaskStatus.ContainerStatus"></span>    ContainerStatus *<a href="index.html#ContainerStatus">ContainerStatus</a> `json:&#34;,omitempty&#34;`
+<span id="TaskStatus.PortStatus"></span>    PortStatus      <a href="index.html#PortStatus">PortStatus</a>       `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UnlockRequest">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=5828:5932#L167">UnlockRequest</a>
+				<a class="permalink" href="index.html#UnlockRequest">&#xb6;</a>
+			</h2>
+			<p>
+UnlockRequest is the request used to unlock a swarm.
+</p>
+
+			<pre>type UnlockRequest struct {
+<span id="UnlockRequest.UnlockKey"></span>    <span class="comment">// UnlockKey is the unlock key in ASCII-armored format.</span>
+    UnlockKey <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UpdateConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=2879:4486#L78">UpdateConfig</a>
+				<a class="permalink" href="index.html#UpdateConfig">&#xb6;</a>
+			</h2>
+			<p>
+UpdateConfig represents the update configuration.
+</p>
+
+			<pre>type UpdateConfig struct {
+    <span class="comment">// Maximum number of tasks to be updated in one iteration.</span>
+    <span class="comment">// 0 means unlimited parallelism.</span>
+<span id="UpdateConfig.Parallelism"></span>    Parallelism <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+
+    <span class="comment">// Amount of time between updates.</span>
+<span id="UpdateConfig.Delay"></span>    Delay <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a> `json:&#34;,omitempty&#34;`
+
+<span id="UpdateConfig.FailureAction"></span>    <span class="comment">// FailureAction is the action to take when an update failures.</span>
+    FailureAction <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+
+<span id="UpdateConfig.Monitor"></span>    <span class="comment">// Monitor indicates how long to monitor a task for failure after it is</span>
+    <span class="comment">// created. If the task fails by ending up in one of the states</span>
+    <span class="comment">// REJECTED, COMPLETED, or FAILED, within Monitor from its creation,</span>
+    <span class="comment">// this counts as a failure. If it fails after Monitor, it does not</span>
+    <span class="comment">// count as a failure. If Monitor is unspecified, a default value will</span>
+    <span class="comment">// be used.</span>
+    Monitor <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a> `json:&#34;,omitempty&#34;`
+
+<span id="UpdateConfig.MaxFailureRatio"></span>    <span class="comment">// MaxFailureRatio is the fraction of tasks that may fail during</span>
+    <span class="comment">// an update before the failure action is invoked. Any task created by</span>
+    <span class="comment">// the current update which ends up in one of the states REJECTED,</span>
+    <span class="comment">// COMPLETED or FAILED within Monitor from its creation counts as a</span>
+    <span class="comment">// failure. The number of failures is divided by the number of tasks</span>
+    <span class="comment">// being updated, and if this fraction is greater than</span>
+    <span class="comment">// MaxFailureRatio, the failure action is invoked.</span>
+    <span class="comment">//</span>
+    <span class="comment">// If the failure action is CONTINUE, there is no effect.</span>
+    <span class="comment">// If the failure action is PAUSE, no more tasks will be updated until</span>
+    <span class="comment">// another update is started.</span>
+    MaxFailureRatio <a href="http://127.0.0.1:8080/pkg/builtin/#float32">float32</a>
+
+<span id="UpdateConfig.Order"></span>    <span class="comment">// Order indicates the order of operations when rolling out an updated</span>
+    <span class="comment">// task. Either the old task is shut down before the new task is</span>
+    <span class="comment">// started, or the new task is started before the old task is shut down.</span>
+    Order <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UpdateFlags">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/swarm.go?s=6942:7056#L213">UpdateFlags</a>
+				<a class="permalink" href="index.html#UpdateFlags">&#xb6;</a>
+			</h2>
+			<p>
+UpdateFlags contains flags for SwarmUpdate.
+</p>
+
+			<pre>type UpdateFlags struct {
+<span id="UpdateFlags.RotateWorkerToken"></span>    RotateWorkerToken      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="UpdateFlags.RotateManagerToken"></span>    RotateManagerToken     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="UpdateFlags.RotateManagerUnlockKey"></span>    RotateManagerUnlockKey <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UpdateState">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=1253:1276#L30">UpdateState</a>
+				<a class="permalink" href="index.html#UpdateState">&#xb6;</a>
+			</h2>
+			<p>
+UpdateState is the state of a service update.
+</p>
+
+			<pre>type UpdateState <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// UpdateStateUpdating is the updating state.</span>
+    <span id="UpdateStateUpdating">UpdateStateUpdating</span> <a href="index.html#UpdateState">UpdateState</a> = &#34;updating&#34;
+    <span class="comment">// UpdateStatePaused is the paused state.</span>
+    <span id="UpdateStatePaused">UpdateStatePaused</span> <a href="index.html#UpdateState">UpdateState</a> = &#34;paused&#34;
+    <span class="comment">// UpdateStateCompleted is the completed state.</span>
+    <span id="UpdateStateCompleted">UpdateStateCompleted</span> <a href="index.html#UpdateState">UpdateState</a> = &#34;completed&#34;
+    <span class="comment">// UpdateStateRollbackStarted is the state with a rollback in progress.</span>
+    <span id="UpdateStateRollbackStarted">UpdateStateRollbackStarted</span> <a href="index.html#UpdateState">UpdateState</a> = &#34;rollback_started&#34;
+    <span class="comment">// UpdateStateRollbackPaused is the state with a rollback in progress.</span>
+    <span id="UpdateStateRollbackPaused">UpdateStateRollbackPaused</span> <a href="index.html#UpdateState">UpdateState</a> = &#34;rollback_paused&#34;
+    <span class="comment">// UpdateStateRollbackCompleted is the state with a rollback in progress.</span>
+    <span id="UpdateStateRollbackCompleted">UpdateStateRollbackCompleted</span> <a href="index.html#UpdateState">UpdateState</a> = &#34;rollback_completed&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UpdateStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/service.go?s=2025:2233#L48">UpdateStatus</a>
+				<a class="permalink" href="index.html#UpdateStatus">&#xb6;</a>
+			</h2>
+			<p>
+UpdateStatus reports the status of a service update.
+</p>
+
+			<pre>type UpdateStatus struct {
+<span id="UpdateStatus.State"></span>    State       <a href="index.html#UpdateState">UpdateState</a> `json:&#34;,omitempty&#34;`
+<span id="UpdateStatus.StartedAt"></span>    StartedAt   *<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>  `json:&#34;,omitempty&#34;`
+<span id="UpdateStatus.CompletedAt"></span>    CompletedAt *<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>  `json:&#34;,omitempty&#34;`
+<span id="UpdateStatus.Message"></span>    Message     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>      `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Version">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/common.go?s=134:191#L1">Version</a>
+				<a class="permalink" href="index.html#Version">&#xb6;</a>
+			</h2>
+			<p>
+Version represents the internal object version.
+</p>
+
+			<pre>type Version struct {
+<span id="Version.Index"></span>    Index <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="runtime/index.html">runtime</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package runtime is a generated protocol buffer package.
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>dockerfile - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package dockerfile</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/builder/dockerfile"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package dockerfile is the evaluation step in the Dockerfile parse/evaluate pipeline.
+</p>
+<p>
+It incorporates a dispatch table based on the parser.Node values (see the
+parser package for more information) that are yielded from the parser itself.
+Calling newBuilder with the BuildOpts struct can be used to customize the
+experience for execution purposes only. Parsing is controlled in the parser
+package, and this division of responsibility should be respected.
+</p>
+<p>
+Please see the jump table targets for the actual invocations, most of which
+will call out to the functions in internals.go to deal with their tasks.
+</p>
+<p>
+ONBUILD is a special case, which is covered in the onbuild() func in
+dispatchers.go.
+</p>
+<p>
+The evaluator uses the concept of &#34;steps&#34;, which are usually each processable
+line in the Dockerfile. Each step is numbered and certain actions are taken
+before and after each step, such as creating an image ID and removing temporary
+containers and images. Note that ONBUILD creates a kinda-sorta &#34;sub run&#34; which
+includes its own set of steps (usually only one of them).
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#BuildFromConfig">func BuildFromConfig(config *container.Config, changes []string, os string) (*container.Config, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Archiver">type Archiver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BuildArgs">type BuildArgs</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewBuildArgs">func NewBuildArgs(argsFromOptions map[string]*string) *BuildArgs</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.AddArg">func (b *BuildArgs) AddArg(key string, value *string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.AddMetaArg">func (b *BuildArgs) AddMetaArg(key string, value *string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.Clone">func (b *BuildArgs) Clone() *BuildArgs</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.FilterAllowed">func (b *BuildArgs) FilterAllowed(filter []string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.GetAllAllowed">func (b *BuildArgs) GetAllAllowed() map[string]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.GetAllMeta">func (b *BuildArgs) GetAllMeta() map[string]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.IsReferencedOrNotBuiltin">func (b *BuildArgs) IsReferencedOrNotBuiltin(key string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.MergeReferencedArgs">func (b *BuildArgs) MergeReferencedArgs(other *BuildArgs)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.ResetAllowed">func (b *BuildArgs) ResetAllowed()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildArgs.WarnOnUnusedBuildArgs">func (b *BuildArgs) WarnOnUnusedBuildArgs(out io.Writer)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BuildManager">type BuildManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewBuildManager">func NewBuildManager(b builder.Backend, sg SessionGetter, fsCache *fscache.FSCache, identityMapping *idtools.IdentityMapping) (*BuildManager, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuildManager.Build">func (bm *BuildManager) Build(ctx context.Context, config backend.BuildConfig) (*builder.Result, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Builder">type Builder</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClientSessionSourceIdentifier">type ClientSessionSourceIdentifier</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewClientSessionSourceIdentifier">func NewClientSessionSourceIdentifier(ctx context.Context, sg SessionGetter, uuid string) (*ClientSessionSourceIdentifier, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClientSessionSourceIdentifier.Key">func (csi *ClientSessionSourceIdentifier) Key() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClientSessionSourceIdentifier.SharedKey">func (csi *ClientSessionSourceIdentifier) SharedKey() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClientSessionSourceIdentifier.Transport">func (csi *ClientSessionSourceIdentifier) Transport() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ClientSessionTransport">type ClientSessionTransport</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewClientSessionTransport">func NewClientSessionTransport() *ClientSessionTransport</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ClientSessionTransport.Copy">func (cst *ClientSessionTransport) Copy(ctx context.Context, id fscache.RemoteIdentifier, dest string, cu filesync.CacheUpdater) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImageProber">type ImageProber</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SessionGetter">type SessionGetter</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go">buildargs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder.go">builder.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder_unix.go">builder_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go">clientsession.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/containerbackend.go">containerbackend.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/copy.go">copy.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/copy_unix.go">copy_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/dispatchers.go">dispatchers.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/dispatchers_unix.go">dispatchers_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/evaluator.go">evaluator.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/imagecontext.go">imagecontext.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/imageprobe.go">imageprobe.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/internals.go">internals.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/internals_linux.go">internals_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/metrics.go">metrics.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="BuildFromConfig">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder.go?s=11615:11717#L365">BuildFromConfig</a>
+				<a class="permalink" href="index.html#BuildFromConfig">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#BuildFromConfig">BuildFromConfig</a>(config *<a href="../../api/types/container/index.html">container</a>.<a href="../../api/types/container/index.html#Config">Config</a>, changes []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../../api/types/container/index.html">container</a>.<a href="../../api/types/container/index.html#Config">Config</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+BuildFromConfig builds directly from `changes`, treating it as if it were the contents of a Dockerfile
+It will:
+- Call parse.Parse() to get an AST root for the concatenated Dockerfile entries.
+- Do build by calling builder.dispatch() to call all entries&#39; handling routines
+</p>
+<p>
+BuildFromConfig is used by the /commit endpoint, with the changes
+coming from the query parameter of the same name.
+</p>
+<p>
+TODO: Remove?
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Archiver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/internals.go?s=965:1179#L25">Archiver</a>
+				<a class="permalink" href="index.html#Archiver">&#xb6;</a>
+			</h2>
+			<p>
+Archiver defines an interface for copying files from one destination to
+another using Tar/Untar.
+</p>
+
+			<pre>type Archiver interface {
+    TarUntar(src, dst <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    UntarPath(src, dst <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    CopyWithTar(src, dst <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    CopyFileWithTar(src, dst <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    IdentityMapping() *<a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#IdentityMapping">IdentityMapping</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BuildArgs">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=629:1031#L15">BuildArgs</a>
+				<a class="permalink" href="index.html#BuildArgs">&#xb6;</a>
+			</h2>
+			<p>
+BuildArgs manages arguments used by the builder
+</p>
+
+			<pre>type BuildArgs struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBuildArgs">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=1078:1142#L27">NewBuildArgs</a>
+					<a class="permalink" href="index.html#NewBuildArgs">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewBuildArgs">NewBuildArgs</a>(argsFromOptions map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#BuildArgs">BuildArgs</a></pre>
+				<p>
+NewBuildArgs creates a new BuildArgs type
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="BuildArgs.AddArg">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=2938:2991#L87">AddArg</a>
+					<a class="permalink" href="index.html#BuildArgs.AddArg">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#AddArg">AddArg</a>(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, value *<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+AddArg adds a new arg that can be used by directives
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.AddMetaArg">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=2787:2844#L82">AddMetaArg</a>
+					<a class="permalink" href="index.html#BuildArgs.AddMetaArg">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#AddMetaArg">AddMetaArg</a>(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, value *<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+AddMetaArg adds a new meta arg that can be used by FROM directives
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.Clone">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=1393:1431#L37">Clone</a>
+					<a class="permalink" href="index.html#BuildArgs.Clone">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#Clone">Clone</a>() *<a href="index.html#BuildArgs">BuildArgs</a></pre>
+				<p>
+Clone returns a copy of the BuildArgs type
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.FilterAllowed">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=4144:4203#L125">FilterAllowed</a>
+					<a class="permalink" href="index.html#BuildArgs.FilterAllowed">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#FilterAllowed">FilterAllowed</a>(filter []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+FilterAllowed returns all allowed args without the filtered args
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.GetAllAllowed">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=3530:3583#L102">GetAllAllowed</a>
+					<a class="permalink" href="index.html#BuildArgs.GetAllAllowed">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#GetAllAllowed">GetAllAllowed</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetAllAllowed returns a mapping with all the allowed args
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.GetAllMeta">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=3692:3742#L107">GetAllMeta</a>
+					<a class="permalink" href="index.html#BuildArgs.GetAllMeta">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#GetAllMeta">GetAllMeta</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetAllMeta returns a mapping with all the meta args
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.IsReferencedOrNotBuiltin">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=3283:3344#L95">IsReferencedOrNotBuiltin</a>
+					<a class="permalink" href="index.html#BuildArgs.IsReferencedOrNotBuiltin">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#IsReferencedOrNotBuiltin">IsReferencedOrNotBuiltin</a>(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsReferencedOrNotBuiltin checks if the key is a built-in arg, or if it has been
+referenced by the Dockerfile. Returns true if the arg is not a builtin or
+if the builtin has been referenced in the Dockerfile.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.MergeReferencedArgs">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=1823:1880#L53">MergeReferencedArgs</a>
+					<a class="permalink" href="index.html#BuildArgs.MergeReferencedArgs">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#MergeReferencedArgs">MergeReferencedArgs</a>(other *<a href="index.html#BuildArgs">BuildArgs</a>)</pre>
+				<p>
+MergeReferencedArgs merges referenced args from another BuildArgs
+object into the current one
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.ResetAllowed">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=2630:2664#L77">ResetAllowed</a>
+					<a class="permalink" href="index.html#BuildArgs.ResetAllowed">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#ResetAllowed">ResetAllowed</a>()</pre>
+				<p>
+ResetAllowed clears the list of args that are allowed to be used by a
+directive
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuildArgs.WarnOnUnusedBuildArgs">func (*BuildArgs) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/buildargs.go?s=2118:2174#L61">WarnOnUnusedBuildArgs</a>
+					<a class="permalink" href="index.html#BuildArgs.WarnOnUnusedBuildArgs">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#BuildArgs">BuildArgs</a>) <a href="index.html#WarnOnUnusedBuildArgs">WarnOnUnusedBuildArgs</a>(out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>)</pre>
+				<p>
+WarnOnUnusedBuildArgs checks if there are any leftover build-args that were
+passed but not consumed during build. Print a warning, if there are any.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BuildManager">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder.go?s=1548:1743#L48">BuildManager</a>
+				<a class="permalink" href="index.html#BuildManager">&#xb6;</a>
+			</h2>
+			<p>
+BuildManager is shared across all Builder objects
+</p>
+
+			<pre>type BuildManager struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBuildManager">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder.go?s=1787:1935#L57">NewBuildManager</a>
+					<a class="permalink" href="index.html#NewBuildManager">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewBuildManager">NewBuildManager</a>(b <a href="../index.html">builder</a>.<a href="../index.html#Backend">Backend</a>, sg <a href="index.html#SessionGetter">SessionGetter</a>, fsCache *<a href="../fscache/index.html">fscache</a>.<a href="../fscache/index.html#FSCache">FSCache</a>, identityMapping *<a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#IdentityMapping">IdentityMapping</a>) (*<a href="index.html#BuildManager">BuildManager</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewBuildManager creates a BuildManager
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="BuildManager.Build">func (*BuildManager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder.go?s=2279:2382#L72">Build</a>
+					<a class="permalink" href="index.html#BuildManager.Build">&#xb6;</a>
+				</h3>
+				<pre>func (bm *<a href="index.html#BuildManager">BuildManager</a>) <a href="index.html#Build">Build</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, config <a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#BuildConfig">BuildConfig</a>) (*<a href="../index.html">builder</a>.<a href="../index.html#Result">Result</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Build starts a new build from a BuildConfig
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Builder">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder.go?s=4531:4963#L157">Builder</a>
+				<a class="permalink" href="index.html#Builder">&#xb6;</a>
+			</h2>
+			<p>
+Builder is a Dockerfile builder
+It implements the builder.Backend interface.
+</p>
+
+			<pre>type Builder struct {
+<span id="Builder.Stdout"></span>    Stdout <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+<span id="Builder.Stderr"></span>    Stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+<span id="Builder.Aux"></span>    Aux    *<a href="../../pkg/streamformatter/index.html">streamformatter</a>.<a href="../../pkg/streamformatter/index.html#AuxFormatter">AuxFormatter</a>
+<span id="Builder.Output"></span>    Output <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClientSessionSourceIdentifier">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=1246:1373#L31">ClientSessionSourceIdentifier</a>
+				<a class="permalink" href="index.html#ClientSessionSourceIdentifier">&#xb6;</a>
+			</h2>
+			<p>
+ClientSessionSourceIdentifier is an identifier that can be used for requesting
+files from remote client
+</p>
+
+			<pre>type ClientSessionSourceIdentifier struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewClientSessionSourceIdentifier">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=1462:1591#L38">NewClientSessionSourceIdentifier</a>
+					<a class="permalink" href="index.html#NewClientSessionSourceIdentifier">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewClientSessionSourceIdentifier">NewClientSessionSourceIdentifier</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, sg <a href="index.html#SessionGetter">SessionGetter</a>, uuid <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#ClientSessionSourceIdentifier">ClientSessionSourceIdentifier</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewClientSessionSourceIdentifier returns new ClientSessionSourceIdentifier instance
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ClientSessionSourceIdentifier.Key">func (*ClientSessionSourceIdentifier) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=2302:2356#L64">Key</a>
+					<a class="permalink" href="index.html#ClientSessionSourceIdentifier.Key">&#xb6;</a>
+				</h3>
+				<pre>func (csi *<a href="index.html#ClientSessionSourceIdentifier">ClientSessionSourceIdentifier</a>) <a href="index.html#Key">Key</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Key returns unique key for remote identifier. Requests with same key return
+same data.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ClientSessionSourceIdentifier.SharedKey">func (*ClientSessionSourceIdentifier) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=2112:2172#L58">SharedKey</a>
+					<a class="permalink" href="index.html#ClientSessionSourceIdentifier.SharedKey">&#xb6;</a>
+				</h3>
+				<pre>func (csi *<a href="index.html#ClientSessionSourceIdentifier">ClientSessionSourceIdentifier</a>) <a href="index.html#SharedKey">SharedKey</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+SharedKey returns shared key for remote identifier. Shared key is used
+for finding the base for a repeated transfer.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ClientSessionSourceIdentifier.Transport">func (*ClientSessionSourceIdentifier) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=1881:1941#L52">Transport</a>
+					<a class="permalink" href="index.html#ClientSessionSourceIdentifier.Transport">&#xb6;</a>
+				</h3>
+				<pre>func (csi *<a href="index.html#ClientSessionSourceIdentifier">ClientSessionSourceIdentifier</a>) <a href="index.html#Transport">Transport</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Transport returns transport identifier for remote identifier
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ClientSessionTransport">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=451:487#L8">ClientSessionTransport</a>
+				<a class="permalink" href="index.html#ClientSessionTransport">&#xb6;</a>
+			</h2>
+			<p>
+ClientSessionTransport is a transport for copying files from docker client
+to the daemon.
+</p>
+
+			<pre>type ClientSessionTransport struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewClientSessionTransport">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=562:618#L11">NewClientSessionTransport</a>
+					<a class="permalink" href="index.html#NewClientSessionTransport">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewClientSessionTransport">NewClientSessionTransport</a>() *<a href="index.html#ClientSessionTransport">ClientSessionTransport</a></pre>
+				<p>
+NewClientSessionTransport returns new ClientSessionTransport instance
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ClientSessionTransport.Copy">func (*ClientSessionTransport) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/clientsession.go?s=713:847#L16">Copy</a>
+					<a class="permalink" href="index.html#ClientSessionTransport.Copy">&#xb6;</a>
+				</h3>
+				<pre>func (cst *<a href="index.html#ClientSessionTransport">ClientSessionTransport</a>) <a href="index.html#Copy">Copy</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, id <a href="../fscache/index.html">fscache</a>.<a href="../fscache/index.html#RemoteIdentifier">RemoteIdentifier</a>, dest <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, cu <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/filesync/">filesync</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/filesync/#CacheUpdater">CacheUpdater</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Copy data from a remote to a destination directory.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImageProber">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/imageprobe.go?s=290:398#L1">ImageProber</a>
+				<a class="permalink" href="index.html#ImageProber">&#xb6;</a>
+			</h2>
+			<p>
+ImageProber exposes an Image cache to the Builder. It supports resetting a
+cache.
+</p>
+
+			<pre>type ImageProber interface {
+    Reset()
+    Probe(parentID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, runConfig *<a href="../../api/types/container/index.html">container</a>.<a href="../../api/types/container/index.html#Config">Config</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SessionGetter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/dockerfile/builder.go?s=1398:1493#L43">SessionGetter</a>
+				<a class="permalink" href="index.html#SessionGetter">&#xb6;</a>
+			</h2>
+			<p>
+SessionGetter is object used to get access to a session by uuid
+</p>
+
+			<pre>type SessionGetter interface {
+    Get(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, uuid <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/">session</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/#Caller">Caller</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

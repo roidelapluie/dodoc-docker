@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>tarsum - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package tarsum</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/tarsum"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package tarsum provides algorithms to perform checksum calculation on
+filesystem layers.
+</p>
+<p>
+The transportation of filesystems, regarding Docker, is done with tar(1)
+archives. There are a variety of tar serialization formats [2], and a key
+concern here is ensuring a repeatable checksum given a set of inputs from a
+generic tar archive. Types of transportation include distribution to and from a
+registry endpoint, saving and loading through commands or Docker daemon APIs,
+transferring the build context from client to Docker daemon, and committing the
+filesystem of a container to become an image.
+</p>
+<p>
+As tar archives are used for transit, but not preserved in many situations, the
+focus of the algorithm is to ensure the integrity of the preserved filesystem,
+while maintaining a deterministic accountability. This includes neither
+constraining the ordering or manipulation of the files during the creation or
+unpacking of the archive, nor include additional metadata state about the file
+system attributes.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#GetVersions">func GetVersions() []Version</a></dd>
+			
+				
+				<dd><a href="index.html#VersionLabelForChecksum">func VersionLabelForChecksum(checksum string) string</a></dd>
+			
+				
+				<dd><a href="index.html#WriteV1Header">func WriteV1Header(h *tar.Header, w io.Writer)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BuilderContext">type BuilderContext</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#FileInfoSumInterface">type FileInfoSumInterface</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#FileInfoSums">type FileInfoSums</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.GetAllFile">func (fis FileInfoSums) GetAllFile(name string) FileInfoSums</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.GetDuplicatePaths">func (fis FileInfoSums) GetDuplicatePaths() (dups FileInfoSums)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.GetFile">func (fis FileInfoSums) GetFile(name string) FileInfoSumInterface</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.Len">func (fis FileInfoSums) Len() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.SortByNames">func (fis FileInfoSums) SortByNames()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.SortByPos">func (fis FileInfoSums) SortByPos()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.SortBySums">func (fis FileInfoSums) SortBySums()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FileInfoSums.Swap">func (fis FileInfoSums) Swap(i, j int)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#THash">type THash</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewTHash">func NewTHash(name string, h func() hash.Hash) THash</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TarSum">type TarSum</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewTarSum">func NewTarSum(r io.Reader, dc bool, v Version) (TarSum, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewTarSumForLabel">func NewTarSumForLabel(r io.Reader, disableCompression bool, label string) (TarSum, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewTarSumHash">func NewTarSumHash(r io.Reader, dc bool, v Version, tHash THash) (TarSum, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Version">type Version</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetVersionFromTarsum">func GetVersionFromTarsum(tarsum string) (Version, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Version.String">func (tsv Version) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/builder_context.go">builder_context.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go">fileinfosums.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/tarsum.go">tarsum.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/versioning.go">versioning.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/writercloser.go">writercloser.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+Errors that may be returned by functions in this package
+</p>
+
+				<pre>var (
+    <span id="ErrNotVersion">ErrNotVersion</span>            = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;string does not include a TarSum Version&#34;)
+    <span id="ErrVersionNotImplemented">ErrVersionNotImplemented</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;TarSum Version is not yet implemented&#34;)
+)</pre>
+			
+				<p>
+DefaultTHash is default TarSum hashing algorithm - &#34;sha256&#34;.
+</p>
+
+				<pre>var <span id="DefaultTHash">DefaultTHash</span> = <a href="index.html#NewTHash">NewTHash</a>(&#34;sha256&#34;, <a href="http://127.0.0.1:8080/pkg/crypto/sha256/">sha256</a>.<a href="http://127.0.0.1:8080/pkg/crypto/sha256/#New">New</a>)</pre>
+			
+		
+		
+			
+			
+			<h2 id="GetVersions">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/versioning.go?s=1214:1242#L35">GetVersions</a>
+				<a class="permalink" href="index.html#GetVersions">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetVersions">GetVersions</a>() []<a href="index.html#Version">Version</a></pre>
+			<p>
+GetVersions gets a list of all known tarsum versions.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="VersionLabelForChecksum">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/versioning.go?s=934:986#L25">VersionLabelForChecksum</a>
+				<a class="permalink" href="index.html#VersionLabelForChecksum">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#VersionLabelForChecksum">VersionLabelForChecksum</a>(checksum <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+VersionLabelForChecksum returns the label for the given tarsum
+checksum, i.e., everything before the first `+` character in
+the string or an empty string if no label separator is found.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WriteV1Header">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/versioning.go?s=602:648#L16">WriteV1Header</a>
+				<a class="permalink" href="index.html#WriteV1Header">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WriteV1Header">WriteV1Header</a>(h *<a href="http://127.0.0.1:8080/pkg/archive/tar/">tar</a>.<a href="http://127.0.0.1:8080/pkg/archive/tar/#Header">Header</a>, w <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>)</pre>
+			<p>
+WriteV1Header writes a tar header to a writer in V1 tarsum format.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="BuilderContext">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/builder_context.go?s=378:435#L1">BuilderContext</a>
+				<a class="permalink" href="index.html#BuilderContext">&#xb6;</a>
+			</h2>
+			<p>
+BuilderContext is an interface extending TarSum by adding the Remove method.
+In general there was concern about adding this method to TarSum itself
+so instead it is being added just to &#34;BuilderContext&#34; which will then
+only be used during the .dockerignore file processing
+- see builder/evaluator.go
+</p>
+
+			<pre>type BuilderContext interface {
+    <a href="index.html#TarSum">TarSum</a>
+    Remove(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="FileInfoSumInterface">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=307:487#L2">FileInfoSumInterface</a>
+				<a class="permalink" href="index.html#FileInfoSumInterface">&#xb6;</a>
+			</h2>
+			<p>
+FileInfoSumInterface provides an interface for accessing file checksum
+information within a tar file. This info is accessed through interface
+so the actual name and sum cannot be melded with.
+</p>
+
+			<pre>type FileInfoSumInterface interface {
+    <span class="comment">// File name</span>
+    Name() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// Checksum of this particular file and its headers</span>
+    Sum() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// Position of file in the tar</span>
+    Pos() <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="FileInfoSums">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=784:824#L28">FileInfoSums</a>
+				<a class="permalink" href="index.html#FileInfoSums">&#xb6;</a>
+			</h2>
+			<p>
+FileInfoSums provides a list of FileInfoSumInterfaces.
+</p>
+
+			<pre>type FileInfoSums []<a href="index.html#FileInfoSumInterface">FileInfoSumInterface</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FileInfoSums.GetAllFile">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=1329:1389#L44">GetAllFile</a>
+					<a class="permalink" href="index.html#FileInfoSums.GetAllFile">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#GetAllFile">GetAllFile</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#FileInfoSums">FileInfoSums</a></pre>
+				<p>
+GetAllFile returns a FileInfoSums with all matching names.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FileInfoSums.GetDuplicatePaths">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=1580:1643#L55">GetDuplicatePaths</a>
+					<a class="permalink" href="index.html#FileInfoSums.GetDuplicatePaths">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#GetDuplicatePaths">GetDuplicatePaths</a>() (dups <a href="index.html#FileInfoSums">FileInfoSums</a>)</pre>
+				<p>
+GetDuplicatePaths returns a FileInfoSums with all duplicated paths.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FileInfoSums.GetFile">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=898:963#L31">GetFile</a>
+					<a class="permalink" href="index.html#FileInfoSums.GetFile">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#GetFile">GetFile</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#FileInfoSumInterface">FileInfoSumInterface</a></pre>
+				<p>
+GetFile returns the first FileInfoSumInterface with a matching name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FileInfoSums.Len">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=1928:1961#L69">Len</a>
+					<a class="permalink" href="index.html#FileInfoSums.Len">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#Len">Len</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+Len returns the size of the FileInfoSums.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FileInfoSums.SortByNames">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=2288:2325#L80">SortByNames</a>
+					<a class="permalink" href="index.html#FileInfoSums.SortByNames">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#SortByNames">SortByNames</a>()</pre>
+				<p>
+SortByNames sorts FileInfoSums content by name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FileInfoSums.SortByPos">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=2173:2208#L75">SortByPos</a>
+					<a class="permalink" href="index.html#FileInfoSums.SortByPos">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#SortByPos">SortByPos</a>()</pre>
+				<p>
+SortByPos sorts FileInfoSums content by position.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FileInfoSums.SortBySums">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=2405:2441#L85">SortBySums</a>
+					<a class="permalink" href="index.html#FileInfoSums.SortBySums">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#SortBySums">SortBySums</a>()</pre>
+				<p>
+SortBySums sorts FileInfoSums content by sums.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FileInfoSums.Swap">func (FileInfoSums) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/fileinfosums.go?s=2044:2082#L72">Swap</a>
+					<a class="permalink" href="index.html#FileInfoSums.Swap">&#xb6;</a>
+				</h3>
+				<pre>func (fis <a href="index.html#FileInfoSums">FileInfoSums</a>) <a href="index.html#Swap">Swap</a>(i, j <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+Swap swaps two FileInfoSum values if a FileInfoSums list.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="THash">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/tarsum.go?s=4139:4196#L117">THash</a>
+				<a class="permalink" href="index.html#THash">&#xb6;</a>
+			</h2>
+			<p>
+THash provides a hash.Hash type generator and its name.
+</p>
+
+			<pre>type THash interface {
+    Hash() <a href="http://127.0.0.1:8080/pkg/hash/">hash</a>.<a href="http://127.0.0.1:8080/pkg/hash/#Hash">Hash</a>
+    Name() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewTHash">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/tarsum.go?s=4256:4308#L123">NewTHash</a>
+					<a class="permalink" href="index.html#NewTHash">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewTHash">NewTHash</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, h func() <a href="http://127.0.0.1:8080/pkg/hash/">hash</a>.<a href="http://127.0.0.1:8080/pkg/hash/#Hash">Hash</a>) <a href="index.html#THash">THash</a></pre>
+				<p>
+NewTHash is a convenience method for creating a THash.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="TarSum">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/tarsum.go?s=3045:3158#L79">TarSum</a>
+				<a class="permalink" href="index.html#TarSum">&#xb6;</a>
+			</h2>
+			<p>
+TarSum is the generic interface for calculating fixed time
+checksums of a tar archive.
+</p>
+
+			<pre>type TarSum interface {
+    <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>
+    GetSums() <a href="index.html#FileInfoSums">FileInfoSums</a>
+    Sum([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    Version() <a href="index.html#Version">Version</a>
+    Hash() <a href="index.html#THash">THash</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewTarSum">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/tarsum.go?s=1633:1696#L37">NewTarSum</a>
+					<a class="permalink" href="index.html#NewTarSum">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewTarSum">NewTarSum</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, dc <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, v <a href="index.html#Version">Version</a>) (<a href="index.html#TarSum">TarSum</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewTarSum creates a new interface for calculating a fixed time checksum of a
+tar archive.
+</p>
+<p>
+This is used for calculating checksums of layers of an image, in some cases
+including the byte payload of the image&#39;s json metadata as well, and for
+calculating the checksums for buildcache.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewTarSumForLabel">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/tarsum.go?s=2258:2348#L54">NewTarSumForLabel</a>
+					<a class="permalink" href="index.html#NewTarSumForLabel">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewTarSumForLabel">NewTarSumForLabel</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, disableCompression <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, label <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#TarSum">TarSum</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewTarSumForLabel creates a new TarSum using the provided TarSum version+hash label.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewTarSumHash">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/tarsum.go?s=1845:1925#L43">NewTarSumHash</a>
+					<a class="permalink" href="index.html#NewTarSumHash">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewTarSumHash">NewTarSumHash</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, dc <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, v <a href="index.html#Version">Version</a>, tHash <a href="index.html#THash">THash</a>) (<a href="index.html#TarSum">TarSum</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewTarSumHash creates a new TarSum, providing a THash to use rather than
+the DefaultTHash.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Version">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/versioning.go?s=324:340#L5">Version</a>
+				<a class="permalink" href="index.html#Version">&#xb6;</a>
+			</h2>
+			<p>
+Version is used for versioning of the TarSum algorithm
+based on the prefix of the hash used
+i.e. &#34;tarsum+sha256:e58fcf7418d4390dec8e8fb69d88c06ec07039d651fedd3aa72af9972e7d046b&#34;
+</p>
+
+			<pre>type Version <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+
+			
+				<p>
+Prefix of &#34;tarsum&#34;
+</p>
+
+				<pre>const (
+    <span id="Version0">Version0</span> <a href="index.html#Version">Version</a> = <a href="http://127.0.0.1:8080/pkg/builtin/#iota">iota</a>
+    <span id="Version1">Version1</span>
+    <span class="comment">// VersionDev this constant will be either the latest or an unsettled next-version of the TarSum calculation</span>
+    <span id="VersionDev">VersionDev</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetVersionFromTarsum">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/versioning.go?s=1725:1782#L61">GetVersionFromTarsum</a>
+					<a class="permalink" href="index.html#GetVersionFromTarsum">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetVersionFromTarsum">GetVersionFromTarsum</a>(tarsum <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#Version">Version</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetVersionFromTarsum returns the Version from the provided string.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Version.String">func (Version) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/tarsum/versioning.go?s=1587:1621#L56">String</a>
+					<a class="permalink" href="index.html#Version.String">&#xb6;</a>
+				</h3>
+				<pre>func (tsv <a href="index.html#Version">Version</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

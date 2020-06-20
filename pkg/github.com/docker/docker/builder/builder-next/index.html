@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>buildkit - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package buildkit</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/builder/builder-next"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Builder">type Builder</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(opt Opt) (*Builder, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Builder.Build">func (b *Builder) Build(ctx context.Context, opt backend.BuildConfig) (*builder.Result, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Builder.Cancel">func (b *Builder) Cancel(ctx context.Context, id string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Builder.DiskUsage">func (b *Builder) DiskUsage(ctx context.Context) ([]*types.BuildCache, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Builder.Prune">func (b *Builder) Prune(ctx context.Context, opts types.BuildCachePruneOptions) (int64, []string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Builder.RegisterGRPC">func (b *Builder) RegisterGRPC(s *grpc.Server)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Opt">type Opt</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go">builder.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/controller.go">controller.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/executor_unix.go">executor_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/reqbodyhandler.go">reqbodyhandler.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Builder">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=2202:2338#L72">Builder</a>
+				<a class="permalink" href="index.html#Builder">&#xb6;</a>
+			</h2>
+			<p>
+Builder can build using BuildKit backend
+</p>
+
+			<pre>type Builder struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=2369:2404#L81">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>(opt <a href="index.html#Opt">Opt</a>) (*<a href="index.html#Builder">Builder</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+New creates a new builder
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Builder.Build">func (*Builder) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=5093:5187#L194">Build</a>
+					<a class="permalink" href="index.html#Builder.Build">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Builder">Builder</a>) <a href="index.html#Build">Build</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, opt <a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#BuildConfig">BuildConfig</a>) (*<a href="../index.html">builder</a>.<a href="../index.html#Result">Result</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Build executes a build request
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Builder.Cancel">func (*Builder) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=2943:3005#L106">Cancel</a>
+					<a class="permalink" href="index.html#Builder.Cancel">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Builder">Builder</a>) <a href="index.html#Cancel">Cancel</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Cancel cancels a build using ID
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Builder.DiskUsage">func (*Builder) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=3178:3255#L116">DiskUsage</a>
+					<a class="permalink" href="index.html#Builder.DiskUsage">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Builder">Builder</a>) <a href="index.html#DiskUsage">DiskUsage</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) ([]*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#BuildCache">BuildCache</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+DiskUsage returns a report about space used by build cache
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Builder.Prune">func (*Builder) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=3835:3939#L141">Prune</a>
+					<a class="permalink" href="index.html#Builder.Prune">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Builder">Builder</a>) <a href="index.html#Prune">Prune</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, opts <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#BuildCachePruneOptions">BuildCachePruneOptions</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Prune clears all reclaimable build cache
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Builder.RegisterGRPC">func (*Builder) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=2830:2876#L101">RegisterGRPC</a>
+					<a class="permalink" href="index.html#Builder.RegisterGRPC">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Builder">Builder</a>) <a href="index.html#RegisterGRPC">RegisterGRPC</a>(s *<a href="http://127.0.0.1:8080/pkg/google.golang.org/grpc/">grpc</a>.<a href="http://127.0.0.1:8080/pkg/google.golang.org/grpc/#Server">Server</a>)</pre>
+				<p>
+RegisterGRPC registers controller to the grpc server.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Opt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/builder.go?s=1743:2156#L58">Opt</a>
+				<a class="permalink" href="index.html#Opt">&#xb6;</a>
+			</h2>
+			<p>
+Opt is option struct required for creating the builder
+</p>
+
+			<pre>type Opt struct {
+<span id="Opt.SessionManager"></span>    SessionManager      *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/">session</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/#Manager">Manager</a>
+<span id="Opt.Root"></span>    Root                <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Opt.Dist"></span>    Dist                <a href="../../daemon/images/index.html">images</a>.<a href="../../daemon/images/index.html#DistributionServices">DistributionServices</a>
+<span id="Opt.NetworkController"></span>    NetworkController   <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#NetworkController">NetworkController</a>
+<span id="Opt.DefaultCgroupParent"></span>    DefaultCgroupParent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Opt.ResolverOpt"></span>    ResolverOpt         <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/util/resolver/">resolver</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/util/resolver/#ResolveOptionsFunc">ResolveOptionsFunc</a>
+<span id="Opt.BuilderConfig"></span>    BuilderConfig       <a href="../../daemon/config/index.html">config</a>.<a href="../../daemon/config/index.html#BuilderConfig">BuilderConfig</a>
+<span id="Opt.Rootless"></span>    Rootless            <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Opt.IdentityMapping"></span>    IdentityMapping     *<a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#IdentityMapping">IdentityMapping</a>
+<span id="Opt.DNSConfig"></span>    DNSConfig           <a href="../../daemon/config/index.html">config</a>.<a href="../../daemon/config/index.html#DNSConfig">DNSConfig</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="adapters/index.html">adapters</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="adapters/containerimage/index.html">containerimage</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="adapters/localinlinecache/index.html">localinlinecache</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="adapters/snapshot/index.html">snapshot</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="exporter/index.html">exporter</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="imagerefchecker/index.html">imagerefchecker</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="worker/index.html">worker</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>devmapper - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package devmapper</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/graphdriver/devmapper"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#Init">func Init(home string, options []string, uidMaps, gidMaps []idtools.IDMap) (graphdriver.Driver, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ProbeFsType">func ProbeFsType(device string) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#DevStatus">type DevStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DeviceSet">type DeviceSet</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDeviceSet">func NewDeviceSet(root string, doInit bool, options []string, uidMaps, gidMaps []idtools.IDMap) (*DeviceSet, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.AddDevice">func (devices *DeviceSet) AddDevice(hash, baseHash string, storageOpt map[string]string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.DataDevicePath">func (devices *DeviceSet) DataDevicePath() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.DeleteDevice">func (devices *DeviceSet) DeleteDevice(hash string, syncDelete bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.GetDeviceStatus">func (devices *DeviceSet) GetDeviceStatus(hash string) (*DevStatus, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.HasDevice">func (devices *DeviceSet) HasDevice(hash string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.List">func (devices *DeviceSet) List() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.MetadataDevicePath">func (devices *DeviceSet) MetadataDevicePath() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.MountDevice">func (devices *DeviceSet) MountDevice(hash, path, mountLabel string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.ResizePool">func (devices *DeviceSet) ResizePool(size int64) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.Shutdown">func (devices *DeviceSet) Shutdown(home string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.Status">func (devices *DeviceSet) Status() *Status</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DeviceSet.UnmountDevice">func (devices *DeviceSet) UnmountDevice(hash, mountPath string) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DiskUsage">type DiskUsage</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Driver">type Driver</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Cleanup">func (d *Driver) Cleanup() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Create">func (d *Driver) Create(id, parent string, opts *graphdriver.CreateOpts) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.CreateReadWrite">func (d *Driver) CreateReadWrite(id, parent string, opts *graphdriver.CreateOpts) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Exists">func (d *Driver) Exists(id string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Get">func (d *Driver) Get(id, mountLabel string) (containerfs.ContainerFS, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.GetMetadata">func (d *Driver) GetMetadata(id string) (map[string]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Put">func (d *Driver) Put(id string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Remove">func (d *Driver) Remove(id string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Status">func (d *Driver) Status() [][2]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.String">func (d *Driver) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Status">type Status</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/device_setup.go">device_setup.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go">deviceset.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/devmapper_doc.go">devmapper_doc.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go">driver.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/mount.go">mount.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="Init">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=852:954#L28">Init</a>
+				<a class="permalink" href="index.html#Init">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Init">Init</a>(home <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, uidMaps, gidMaps []<a href="../../../pkg/idtools/index.html">idtools</a>.<a href="../../../pkg/idtools/index.html#IDMap">IDMap</a>) (<a href="../index.html">graphdriver</a>.<a href="../index.html#Driver">Driver</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Init creates a driver with the given home and the set of options.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ProbeFsType">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/mount.go?s=276:323#L8">ProbeFsType</a>
+				<a class="permalink" href="index.html#ProbeFsType">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ProbeFsType">ProbeFsType</a>(device <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ProbeFsType returns the filesystem name for the given device id.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="DevStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=6114:6655#L171">DevStatus</a>
+				<a class="permalink" href="index.html#DevStatus">&#xb6;</a>
+			</h2>
+			<p>
+DevStatus returns information about device mounted containing its id, size and sector information.
+</p>
+
+			<pre>type DevStatus struct {
+<span id="DevStatus.DeviceID"></span>    <span class="comment">// DeviceID is the id of the device.</span>
+    DeviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="DevStatus.Size"></span>    <span class="comment">// Size is the size of the filesystem.</span>
+    Size <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="DevStatus.TransactionID"></span>    <span class="comment">// TransactionID is a unique integer per device set used to identify an operation on the file system, this number is incremental.</span>
+    TransactionID <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="DevStatus.SizeInSectors"></span>    <span class="comment">// SizeInSectors indicates the size of the sectors allocated.</span>
+    SizeInSectors <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="DevStatus.MappedSectors"></span>    <span class="comment">// MappedSectors indicates number of mapped sectors.</span>
+    MappedSectors <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="DevStatus.HighestMappedSector"></span>    <span class="comment">// HighestMappedSector is the pointer to the highest mapped sector.</span>
+    HighestMappedSector <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DeviceSet">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=2772:4209#L79">DeviceSet</a>
+				<a class="permalink" href="index.html#DeviceSet">&#xb6;</a>
+			</h2>
+			<p>
+DeviceSet holds information about list of devices
+</p>
+
+			<pre>type DeviceSet struct {
+    <a href="http://127.0.0.1:8080/pkg/sync/">sync</a>.<a href="http://127.0.0.1:8080/pkg/sync/#Mutex">Mutex</a> `json:&#34;-&#34;` <span class="comment">// Protects all fields of DeviceSet and serializes calls into libdevmapper</span>
+
+<span id="DeviceSet.TransactionID"></span>    TransactionID <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> `json:&#34;-&#34;`
+<span id="DeviceSet.NextDeviceID"></span>    NextDeviceID  <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>    `json:&#34;next_device_id&#34;`
+
+<span id="DeviceSet.BaseDeviceUUID"></span>    BaseDeviceUUID       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">// save UUID of base device</span>
+<span id="DeviceSet.BaseDeviceFilesystem"></span>    BaseDeviceFilesystem <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">// save filesystem of base device</span>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDeviceSet">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=80194:80309#L2615">NewDeviceSet</a>
+					<a class="permalink" href="index.html#NewDeviceSet">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewDeviceSet">NewDeviceSet</a>(root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, doInit <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, options []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, uidMaps, gidMaps []<a href="../../../pkg/idtools/index.html">idtools</a>.<a href="../../../pkg/idtools/index.html#IDMap">IDMap</a>) (*<a href="index.html#DeviceSet">DeviceSet</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewDeviceSet creates the device set based on the options provided.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="DeviceSet.AddDevice">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=57714:57808#L1889">AddDevice</a>
+					<a class="permalink" href="index.html#DeviceSet.AddDevice">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#AddDevice">AddDevice</a>(hash, baseHash <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, storageOpt map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+AddDevice adds a device and registers in the hash.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.DataDevicePath">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=76716:76765#L2513">DataDevicePath</a>
+					<a class="permalink" href="index.html#DeviceSet.DataDevicePath">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#DataDevicePath">DataDevicePath</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+DataDevicePath returns the path to the data storage for this deviceset,
+regardless of loopback or block device
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.DeleteDevice">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=63568:63642#L2084">DeleteDevice</a>
+					<a class="permalink" href="index.html#DeviceSet.DeleteDevice">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#DeleteDevice">DeleteDevice</a>(hash <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, syncDelete <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DeleteDevice will return success if device has been marked for deferred
+removal. If one wants to override that and want DeleteDevice() to fail if
+device was busy and could not be deleted, set syncDelete=true.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.GetDeviceStatus">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=75368:75442#L2468">GetDeviceStatus</a>
+					<a class="permalink" href="index.html#DeviceSet.GetDeviceStatus">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#GetDeviceStatus">GetDeviceStatus</a>(hash <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#DevStatus">DevStatus</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetDeviceStatus provides size, mapped sectors
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.HasDevice">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=74587:74640#L2436">HasDevice</a>
+					<a class="permalink" href="index.html#DeviceSet.HasDevice">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#HasDevice">HasDevice</a>(hash <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+HasDevice returns true if the device metadata exists.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.List">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=74751:74792#L2442">List</a>
+					<a class="permalink" href="index.html#DeviceSet.List">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#List">List</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+List returns a list of device ids.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.MetadataDevicePath">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=76923:76976#L2519">MetadataDevicePath</a>
+					<a class="permalink" href="index.html#DeviceSet.MetadataDevicePath">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#MetadataDevicePath">MetadataDevicePath</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+MetadataDevicePath returns the path to the metadata storage for this deviceset,
+regardless of loopback or block device
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.MountDevice">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=71856:71930#L2346">MountDevice</a>
+					<a class="permalink" href="index.html#DeviceSet.MountDevice">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#MountDevice">MountDevice</a>(hash, path, mountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+MountDevice mounts the device if not already mounted.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.ResizePool">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=38436:38490#L1277">ResizePool</a>
+					<a class="permalink" href="index.html#DeviceSet.ResizePool">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#ResizePool">ResizePool</a>(size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ResizePool increases the size of the pool.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.Shutdown">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=68909:68962#L2270">Shutdown</a>
+					<a class="permalink" href="index.html#DeviceSet.Shutdown">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#Shutdown">Shutdown</a>(home <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Shutdown shuts down the device by unmounting the root.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.Status">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=77753:77795#L2545">Status</a>
+					<a class="permalink" href="index.html#DeviceSet.Status">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#Status">Status</a>() *<a href="index.html#Status">Status</a></pre>
+				<p>
+Status returns the current status of this deviceset
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DeviceSet.UnmountDevice">func (*DeviceSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=73229:73298#L2397">UnmountDevice</a>
+					<a class="permalink" href="index.html#DeviceSet.UnmountDevice">&#xb6;</a>
+				</h3>
+				<pre>func (devices *<a href="index.html#DeviceSet">DeviceSet</a>) <a href="index.html#UnmountDevice">UnmountDevice</a>(hash, mountPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmountDevice unmounts the device and removes it from hash.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DiskUsage">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=4309:4469#L118">DiskUsage</a>
+				<a class="permalink" href="index.html#DiskUsage">&#xb6;</a>
+			</h2>
+			<p>
+DiskUsage contains information about disk usage and is used when reporting Status of a device.
+</p>
+
+			<pre>type DiskUsage struct {
+<span id="DiskUsage.Used"></span>    <span class="comment">// Used bytes on the disk.</span>
+    Used <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="DiskUsage.Total"></span>    <span class="comment">// Total bytes on the disk.</span>
+    Total <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="DiskUsage.Available"></span>    <span class="comment">// Available bytes on the disk.</span>
+    Available <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Driver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=624:781#L18">Driver</a>
+				<a class="permalink" href="index.html#Driver">&#xb6;</a>
+			</h2>
+			<p>
+Driver contains the device set mounted and the home directory
+</p>
+
+			<pre>type Driver struct {
+    *<a href="index.html#DeviceSet">DeviceSet</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Driver.Cleanup">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=3757:3789#L112">Cleanup</a>
+					<a class="permalink" href="index.html#Driver.Cleanup">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Cleanup">Cleanup</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Cleanup unmounts a device.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Create">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=4268:4346#L131">Create</a>
+					<a class="permalink" href="index.html#Driver.Create">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Create">Create</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts *<a href="../index.html">graphdriver</a>.<a href="../index.html#CreateOpts">CreateOpts</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Create adds a device with a given id and the parent.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.CreateReadWrite">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=4084:4171#L126">CreateReadWrite</a>
+					<a class="permalink" href="index.html#Driver.CreateReadWrite">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#CreateReadWrite">CreateReadWrite</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts *<a href="../index.html">graphdriver</a>.<a href="../index.html#CreateOpts">CreateOpts</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CreateReadWrite creates a layer that is writable for use as a container
+file system.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Exists">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=7819:7858#L241">Exists</a>
+					<a class="permalink" href="index.html#Driver.Exists">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Exists">Exists</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Exists checks to see if the device exists.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Get">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=5827:5903#L172">Get</a>
+					<a class="permalink" href="index.html#Driver.Get">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Get">Get</a>(id, mountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../../pkg/containerfs/index.html">containerfs</a>.<a href="../../../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get mounts a device with given id into the root filesystem
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.GetMetadata">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=3357:3423#L97">GetMetadata</a>
+					<a class="permalink" href="index.html#Driver.GetMetadata">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#GetMetadata">GetMetadata</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetMetadata returns a map of information about the device.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Put">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=7407:7444#L224">Put</a>
+					<a class="permalink" href="index.html#Driver.Put">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Put">Put</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Put unmounts a device and removes it.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Remove">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=4590:4630#L140">Remove</a>
+					<a class="permalink" href="index.html#Driver.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Remove">Remove</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Remove removes a device with a given id, unmounts the filesystem, and removes the mount point.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Status">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=1586:1623#L53">Status</a>
+					<a class="permalink" href="index.html#Driver.Status">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Status">Status</a>() [][2]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Status returns the status about the driver in a printable format.
+Information returned contains Pool Name, Data File, Metadata file, disk usage by
+the data and metadata, etc.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.String">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/driver.go?s=1341:1373#L46">String</a>
+					<a class="permalink" href="index.html#Driver.String">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Status">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/devmapper/deviceset.go?s=4523:5794#L128">Status</a>
+				<a class="permalink" href="index.html#Status">&#xb6;</a>
+			</h2>
+			<p>
+Status returns the information about the device.
+</p>
+
+			<pre>type Status struct {
+<span id="Status.PoolName"></span>    <span class="comment">// PoolName is the name of the data pool.</span>
+    PoolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Status.DataFile"></span>    <span class="comment">// DataFile is the actual block device for data.</span>
+    DataFile <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Status.DataLoopback"></span>    <span class="comment">// DataLoopback loopback file, if used.</span>
+    DataLoopback <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Status.MetadataFile"></span>    <span class="comment">// MetadataFile is the actual block device for metadata.</span>
+    MetadataFile <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Status.MetadataLoopback"></span>    <span class="comment">// MetadataLoopback is the loopback file, if used.</span>
+    MetadataLoopback <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Status.Data"></span>    <span class="comment">// Data is the disk used for data.</span>
+    Data <a href="index.html#DiskUsage">DiskUsage</a>
+<span id="Status.Metadata"></span>    <span class="comment">// Metadata is the disk used for meta data.</span>
+    Metadata <a href="index.html#DiskUsage">DiskUsage</a>
+<span id="Status.BaseDeviceSize"></span>    <span class="comment">// BaseDeviceSize is base size of container and image</span>
+    BaseDeviceSize <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="Status.BaseDeviceFS"></span>    <span class="comment">// BaseDeviceFS is backing filesystem.</span>
+    BaseDeviceFS <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Status.SectorSize"></span>    <span class="comment">// SectorSize size of the vector.</span>
+    SectorSize <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+<span id="Status.UdevSyncSupported"></span>    <span class="comment">// UdevSyncSupported is true if sync is supported.</span>
+    UdevSyncSupported <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Status.DeferredRemoveEnabled"></span>    <span class="comment">// DeferredRemoveEnabled is true then the device is not unmounted.</span>
+    DeferredRemoveEnabled <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    <span class="comment">// True if deferred deletion is enabled. This is different from</span>
+    <span class="comment">// deferred removal. &#34;removal&#34; means that device mapper device is</span>
+    <span class="comment">// deactivated. Thin device is still in thin pool and can be activated</span>
+    <span class="comment">// again. But &#34;deletion&#34; means that thin device will be deleted from</span>
+    <span class="comment">// thin pool and it can&#39;t be activated again.</span>
+<span id="Status.DeferredDeleteEnabled"></span>    DeferredDeleteEnabled      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Status.DeferredDeletedDeviceCount"></span>    DeferredDeletedDeviceCount <a href="http://127.0.0.1:8080/pkg/builtin/#uint">uint</a>
+<span id="Status.MinFreeSpace"></span>    MinFreeSpace               <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>runtime - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package runtime</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/swarm/runtime"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package runtime is a generated protocol buffer package.
+</p>
+<p>
+It is generated from these files:
+</p>
+<pre>plugin.proto
+</pre>
+<p>
+It has these top-level messages:
+</p>
+<pre>PluginSpec
+PluginPrivilege
+</pre>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#PluginPrivilege">type PluginPrivilege</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.Descriptor">func (*PluginPrivilege) Descriptor() ([]byte, []int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.GetDescription">func (m *PluginPrivilege) GetDescription() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.GetName">func (m *PluginPrivilege) GetName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.GetValue">func (m *PluginPrivilege) GetValue() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.Marshal">func (m *PluginPrivilege) Marshal() (dAtA []byte, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.MarshalTo">func (m *PluginPrivilege) MarshalTo(dAtA []byte) (int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.ProtoMessage">func (*PluginPrivilege) ProtoMessage()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.Reset">func (m *PluginPrivilege) Reset()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.Size">func (m *PluginPrivilege) Size() (n int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.String">func (m *PluginPrivilege) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginPrivilege.Unmarshal">func (m *PluginPrivilege) Unmarshal(dAtA []byte) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PluginSpec">type PluginSpec</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.Descriptor">func (*PluginSpec) Descriptor() ([]byte, []int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.GetDisabled">func (m *PluginSpec) GetDisabled() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.GetName">func (m *PluginSpec) GetName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.GetPrivileges">func (m *PluginSpec) GetPrivileges() []*PluginPrivilege</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.GetRemote">func (m *PluginSpec) GetRemote() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.Marshal">func (m *PluginSpec) Marshal() (dAtA []byte, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.MarshalTo">func (m *PluginSpec) MarshalTo(dAtA []byte) (int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.ProtoMessage">func (*PluginSpec) ProtoMessage()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.Reset">func (m *PluginSpec) Reset()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.Size">func (m *PluginSpec) Size() (n int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.String">func (m *PluginSpec) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PluginSpec.Unmarshal">func (m *PluginSpec) Unmarshal(dAtA []byte) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/gen.go">gen.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go">plugin.pb.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span id="ErrInvalidLengthPlugin">ErrInvalidLengthPlugin</span> = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Errorf">Errorf</a>(&#34;proto: negative length found during unmarshaling&#34;)
+    <span id="ErrIntOverflowPlugin">ErrIntOverflowPlugin</span>   = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Errorf">Errorf</a>(&#34;proto: integer overflow&#34;)
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="PluginPrivilege">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2155:2453#L68">PluginPrivilege</a>
+				<a class="permalink" href="index.html#PluginPrivilege">&#xb6;</a>
+			</h2>
+			<p>
+PluginPrivilege describes a permission the user has to accept
+upon installing a plugin.
+</p>
+
+			<pre>type PluginPrivilege struct {
+<span id="PluginPrivilege.Name"></span>    Name        <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `protobuf:&#34;bytes,1,opt,name=name,proto3&#34; json:&#34;name,omitempty&#34;`
+<span id="PluginPrivilege.Description"></span>    Description <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `protobuf:&#34;bytes,2,opt,name=description,proto3&#34; json:&#34;description,omitempty&#34;`
+<span id="PluginPrivilege.Value"></span>    Value       []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `protobuf:&#34;bytes,3,rep,name=value&#34; json:&#34;value,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PluginPrivilege.Descriptor">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2682:2734#L77">Descriptor</a>
+					<a class="permalink" href="index.html#PluginPrivilege.Descriptor">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#Descriptor">Descriptor</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, []<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.GetDescription">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2871:2920#L86">GetDescription</a>
+					<a class="permalink" href="index.html#PluginPrivilege.GetDescription">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#GetDescription">GetDescription</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.GetName">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2778:2820#L79">GetName</a>
+					<a class="permalink" href="index.html#PluginPrivilege.GetName">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#GetName">GetName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.GetValue">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2978:3023#L93">GetValue</a>
+					<a class="permalink" href="index.html#PluginPrivilege.GetValue">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#GetValue">GetValue</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.Marshal">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=4142:4202#L156">Marshal</a>
+					<a class="permalink" href="index.html#PluginPrivilege.Marshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#Marshal">Marshal</a>() (dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.MarshalTo">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=4342:4403#L166">MarshalTo</a>
+					<a class="permalink" href="index.html#PluginPrivilege.MarshalTo">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#MarshalTo">MarshalTo</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.ProtoMessage">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2626:2664#L76">ProtoMessage</a>
+					<a class="permalink" href="index.html#PluginPrivilege.ProtoMessage">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#ProtoMessage">ProtoMessage</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.Reset">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2455:2488#L74">Reset</a>
+					<a class="permalink" href="index.html#PluginPrivilege.Reset">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#Reset">Reset</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.Size">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=6088:6128#L251">Size</a>
+					<a class="permalink" href="index.html#PluginPrivilege.Size">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#Size">Size</a>() (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.String">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=2535:2576#L75">String</a>
+					<a class="permalink" href="index.html#PluginPrivilege.String">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginPrivilege.Unmarshal">func (*PluginPrivilege) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=10147:10201#L443">Unmarshal</a>
+					<a class="permalink" href="index.html#PluginPrivilege.Unmarshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginPrivilege">PluginPrivilege</a>) <a href="index.html#Unmarshal">Unmarshal</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PluginSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=947:1371#L26">PluginSpec</a>
+				<a class="permalink" href="index.html#PluginSpec">&#xb6;</a>
+			</h2>
+			<p>
+PluginSpec defines the base payload which clients can specify for creating
+a service with the plugin runtime.
+</p>
+
+			<pre>type PluginSpec struct {
+<span id="PluginSpec.Name"></span>    Name       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>             `protobuf:&#34;bytes,1,opt,name=name,proto3&#34; json:&#34;name,omitempty&#34;`
+<span id="PluginSpec.Remote"></span>    Remote     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>             `protobuf:&#34;bytes,2,opt,name=remote,proto3&#34; json:&#34;remote,omitempty&#34;`
+<span id="PluginSpec.Privileges"></span>    Privileges []*<a href="index.html#PluginPrivilege">PluginPrivilege</a> `protobuf:&#34;bytes,3,rep,name=privileges&#34; json:&#34;privileges,omitempty&#34;`
+<span id="PluginSpec.Disabled"></span>    Disabled   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>               `protobuf:&#34;varint,4,opt,name=disabled,proto3&#34; json:&#34;disabled,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PluginSpec.Descriptor">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1580:1627#L36">Descriptor</a>
+					<a class="permalink" href="index.html#PluginSpec.Descriptor">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#Descriptor">Descriptor</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, []<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.GetDisabled">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1964:2003#L59">GetDisabled</a>
+					<a class="permalink" href="index.html#PluginSpec.GetDisabled">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#GetDisabled">GetDisabled</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.GetName">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1671:1708#L38">GetName</a>
+					<a class="permalink" href="index.html#PluginSpec.GetName">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#GetName">GetName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.GetPrivileges">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1851:1906#L52">GetPrivileges</a>
+					<a class="permalink" href="index.html#PluginSpec.GetPrivileges">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#GetPrivileges">GetPrivileges</a>() []*<a href="index.html#PluginPrivilege">PluginPrivilege</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.GetRemote">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1759:1798#L45">GetRemote</a>
+					<a class="permalink" href="index.html#PluginSpec.GetRemote">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#GetRemote">GetRemote</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.Marshal">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=3210:3265#L104">Marshal</a>
+					<a class="permalink" href="index.html#PluginSpec.Marshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#Marshal">Marshal</a>() (dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.MarshalTo">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=3405:3461#L114">MarshalTo</a>
+					<a class="permalink" href="index.html#PluginSpec.MarshalTo">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#MarshalTo">MarshalTo</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.ProtoMessage">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1529:1562#L35">ProtoMessage</a>
+					<a class="permalink" href="index.html#PluginSpec.ProtoMessage">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#ProtoMessage">ProtoMessage</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.Reset">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1373:1401#L33">Reset</a>
+					<a class="permalink" href="index.html#PluginSpec.Reset">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#Reset">Reset</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.Size">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=5729:5764#L228">Size</a>
+					<a class="permalink" href="index.html#PluginSpec.Size">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#Size">Size</a>() (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.String">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=1443:1479#L34">String</a>
+					<a class="permalink" href="index.html#PluginSpec.String">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PluginSpec.Unmarshal">func (*PluginSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/swarm/runtime/plugin.pb.go?s=6616:6665#L284">Unmarshal</a>
+					<a class="permalink" href="index.html#PluginSpec.Unmarshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PluginSpec">PluginSpec</a>) <a href="index.html#Unmarshal">Unmarshal</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

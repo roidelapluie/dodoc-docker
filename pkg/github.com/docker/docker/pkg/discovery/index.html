@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>discovery - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package discovery</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/discovery"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Generate">func Generate(pattern string) []string</a></dd>
+			
+				
+				<dd><a href="index.html#ParseAdvertise">func ParseAdvertise(advertise string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Register">func Register(scheme string, d Backend) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Backend">type Backend</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(rawurl string, heartbeat time.Duration, ttl time.Duration, clusterOpts map[string]string) (Backend, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Entries">type Entries</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CreateEntries">func CreateEntries(addrs []string) (Entries, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Entries.Contains">func (e Entries) Contains(entry *Entry) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Entries.Diff">func (e Entries) Diff(cmp Entries) (Entries, Entries)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Entries.Equals">func (e Entries) Equals(cmp Entries) bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Entry">type Entry</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewEntry">func NewEntry(url string) (*Entry, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Entry.Equals">func (e *Entry) Equals(cmp *Entry) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Entry.String">func (e *Entry) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Watcher">type Watcher</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/backends.go">backends.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/discovery.go">discovery.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go">entry.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/generator.go">generator.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrNotSupported is returned when a discovery service is not supported.</span>
+    <span id="ErrNotSupported">ErrNotSupported</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;discovery service not supported&#34;)
+
+    <span class="comment">// ErrNotImplemented is returned when discovery feature is not implemented</span>
+    <span class="comment">// by discovery backend.</span>
+    <span id="ErrNotImplemented">ErrNotImplemented</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;not implemented in this discovery service&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="Generate">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/generator.go?s=150:188#L1">Generate</a>
+				<a class="permalink" href="index.html#Generate">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Generate">Generate</a>(pattern <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+Generate takes care of IP generation
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseAdvertise">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/backends.go?s=1052:1105#L31">ParseAdvertise</a>
+				<a class="permalink" href="index.html#ParseAdvertise">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseAdvertise">ParseAdvertise</a>(advertise <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseAdvertise parses the --cluster-advertise daemon config which accepts
+&lt;ip-address&gt;:&lt;port&gt; or &lt;interface-name&gt;:&lt;port&gt;
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Register">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/backends.go?s=429:474#L10">Register</a>
+				<a class="permalink" href="index.html#Register">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Register">Register</a>(scheme <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, d <a href="index.html#Backend">Backend</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Register makes a discovery backend available by the provided scheme.
+If Register is called twice with the same scheme an error is returned.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Backend">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/discovery.go?s=837:1133#L16">Backend</a>
+				<a class="permalink" href="index.html#Backend">&#xb6;</a>
+			</h2>
+			<p>
+Backend is implemented by discovery backends which manage cluster entries.
+</p>
+
+			<pre>type Backend interface {
+    <span class="comment">// Watcher must be provided by every backend.</span>
+    <a href="index.html#Watcher">Watcher</a>
+
+    <span class="comment">// Initialize the discovery with URIs, a heartbeat, a ttl and optional settings.</span>
+    Initialize(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Register to the discovery.</span>
+    Register(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/backends.go?s=2600:2715#L88">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>(rawurl <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, heartbeat <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, ttl <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, clusterOpts map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#Backend">Backend</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+New returns a new Discovery given a URL, heartbeat and ttl settings.
+Returns an error if the URL scheme is not supported.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Entries">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=680:701#L21">Entries</a>
+				<a class="permalink" href="index.html#Entries">&#xb6;</a>
+			</h2>
+			<p>
+Entries is a list of *Entry with some helpers.
+</p>
+
+			<pre>type Entries []*<a href="index.html#Entry">Entry</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CreateEntries">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=1639:1690#L67">CreateEntries</a>
+					<a class="permalink" href="index.html#CreateEntries">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#CreateEntries">CreateEntries</a>(addrs []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#Entries">Entries</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateEntries returns an array of entries based on the given addresses.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Entries.Contains">func (Entries) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=1036:1080#L38">Contains</a>
+					<a class="permalink" href="index.html#Entries.Contains">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#Entries">Entries</a>) <a href="index.html#Contains">Contains</a>(entry *<a href="index.html#Entry">Entry</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Contains returns true if the Entries contain a given Entry.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entries.Diff">func (Entries) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=1246:1299#L48">Diff</a>
+					<a class="permalink" href="index.html#Entries.Diff">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#Entries">Entries</a>) <a href="index.html#Diff">Diff</a>(cmp <a href="index.html#Entries">Entries</a>) (<a href="index.html#Entries">Entries</a>, <a href="index.html#Entries">Entries</a>)</pre>
+				<p>
+Diff compares two entries and returns the added and removed entries.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entries.Equals">func (Entries) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=757:798#L24">Equals</a>
+					<a class="permalink" href="index.html#Entries.Equals">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#Entries">Entries</a>) <a href="index.html#Equals">Equals</a>(cmp <a href="index.html#Entries">Entries</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Equals returns true if cmp contains the same data.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Entry">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=308:355#L5">Entry</a>
+				<a class="permalink" href="index.html#Entry">&#xb6;</a>
+			</h2>
+			<p>
+An Entry represents a host.
+</p>
+
+			<pre>type Entry struct {
+<span id="Entry.Host"></span>    Host <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Entry.Port"></span>    Port <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEntry">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=117:158#L1">NewEntry</a>
+					<a class="permalink" href="index.html#NewEntry">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewEntry">NewEntry</a>(url <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Entry">Entry</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewEntry creates a new entry.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Entry.Equals">func (*Entry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=411:450#L11">Equals</a>
+					<a class="permalink" href="index.html#Entry.Equals">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Entry">Entry</a>) <a href="index.html#Equals">Equals</a>(cmp *<a href="index.html#Entry">Entry</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Equals returns true if cmp contains the same data.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Entry.String">func (*Entry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/entry.go?s=552:583#L16">String</a>
+					<a class="permalink" href="index.html#Entry.String">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Entry">Entry</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns the string form of an entry.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Watcher">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/discovery/discovery.go?s=504:757#L8">Watcher</a>
+				<a class="permalink" href="index.html#Watcher">&#xb6;</a>
+			</h2>
+			<p>
+Watcher provides watching over a cluster for nodes joining and leaving.
+</p>
+
+			<pre>type Watcher interface {
+    <span class="comment">// Watch the discovery for entry changes.</span>
+    <span class="comment">// Returns a channel that will receive changes or an error.</span>
+    <span class="comment">// Providing a non-nil stopCh can be used to stop watching.</span>
+    Watch(stopCh &lt;-chan struct{}) (&lt;-chan <a href="index.html#Entries">Entries</a>, &lt;-chan <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="file/index.html">file</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="kv/index.html">kv</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="memory/index.html">memory</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="nodes/index.html">nodes</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

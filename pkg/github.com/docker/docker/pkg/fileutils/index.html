@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>fileutils - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package fileutils</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/fileutils"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#CopyFile">func CopyFile(src, dst string) (int64, error)</a></dd>
+			
+				
+				<dd><a href="index.html#CreateIfNotExists">func CreateIfNotExists(path string, isDir bool) error</a></dd>
+			
+				
+				<dd><a href="index.html#GetTotalUsedFds">func GetTotalUsedFds() int</a></dd>
+			
+				
+				<dd><a href="index.html#Matches">func Matches(file string, patterns []string) (bool, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ReadSymlinkedDirectory">func ReadSymlinkedDirectory(path string) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Pattern">type Pattern</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Pattern.Exclusion">func (p *Pattern) Exclusion() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Pattern.String">func (p *Pattern) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PatternMatcher">type PatternMatcher</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewPatternMatcher">func NewPatternMatcher(patterns []string) (*PatternMatcher, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PatternMatcher.Exclusions">func (pm *PatternMatcher) Exclusions() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PatternMatcher.Matches">func (pm *PatternMatcher) Matches(file string) (bool, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PatternMatcher.Patterns">func (pm *PatternMatcher) Patterns() []*Pattern</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go">fileutils.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils_unix.go">fileutils_unix.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="CopyFile">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=5756:5801#L227">CopyFile</a>
+				<a class="permalink" href="index.html#CopyFile">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CopyFile">CopyFile</a>(src, dst <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+CopyFile copies from src to dst until either EOF is reached
+on src or an error occurs. It verifies src exists and removes
+the dst if it exists.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateIfNotExists">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=7067:7120#L271">CreateIfNotExists</a>
+				<a class="permalink" href="index.html#CreateIfNotExists">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CreateIfNotExists">CreateIfNotExists</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, isDir <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CreateIfNotExists creates a file or a directory only if it does not already exist.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetTotalUsedFds">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils_unix.go?s=266:292#L5">GetTotalUsedFds</a>
+				<a class="permalink" href="index.html#GetTotalUsedFds">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetTotalUsedFds">GetTotalUsedFds</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+			<p>
+GetTotalUsedFds Returns the number of used File Descriptors by
+reading it via /proc filesystem.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Matches">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=5307:5365#L209">Matches</a>
+				<a class="permalink" href="index.html#Matches">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Matches">Matches</a>(file <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, patterns []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Matches returns true if file matches any of the patterns
+and isn&#39;t excluded by any of the subsequent patterns.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReadSymlinkedDirectory">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=6323:6379#L251">ReadSymlinkedDirectory</a>
+				<a class="permalink" href="index.html#ReadSymlinkedDirectory">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ReadSymlinkedDirectory">ReadSymlinkedDirectory</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ReadSymlinkedDirectory returns the target directory of a symlink.
+The target of the symbolic link may not be a file.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Pattern">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=2823:2946#L100">Pattern</a>
+				<a class="permalink" href="index.html#Pattern">&#xb6;</a>
+			</h2>
+			<p>
+Pattern defines a single regexp used to filter file paths.
+</p>
+
+			<pre>type Pattern struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Pattern.Exclusion">func (*Pattern) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=3072:3106#L112">Exclusion</a>
+					<a class="permalink" href="index.html#Pattern.Exclusion">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Pattern">Pattern</a>) <a href="index.html#Exclusion">Exclusion</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Exclusion returns true if this pattern defines exclusion
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Pattern.String">func (*Pattern) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=2948:2981#L107">String</a>
+					<a class="permalink" href="index.html#Pattern.String">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Pattern">Pattern</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PatternMatcher">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=263:333#L7">PatternMatcher</a>
+				<a class="permalink" href="index.html#PatternMatcher">&#xb6;</a>
+			</h2>
+			<p>
+PatternMatcher allows checking paths against a list of patterns
+</p>
+
+			<pre>type PatternMatcher struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewPatternMatcher">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=473:539#L14">NewPatternMatcher</a>
+					<a class="permalink" href="index.html#NewPatternMatcher">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewPatternMatcher">NewPatternMatcher</a>(patterns []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#PatternMatcher">PatternMatcher</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewPatternMatcher creates a new matcher object for specific patterns that can
+be used later to match against patterns against paths
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="PatternMatcher.Exclusions">func (*PatternMatcher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=2572:2615#L90">Exclusions</a>
+					<a class="permalink" href="index.html#PatternMatcher.Exclusions">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#PatternMatcher">PatternMatcher</a>) <a href="index.html#Exclusions">Exclusions</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Exclusions returns true if any of the patterns define exclusions
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PatternMatcher.Matches">func (*PatternMatcher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=1692:1752#L52">Matches</a>
+					<a class="permalink" href="index.html#PatternMatcher.Matches">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#PatternMatcher">PatternMatcher</a>) <a href="index.html#Matches">Matches</a>(file <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Matches matches path against all the patterns. Matches is not safe to be
+called concurrently
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PatternMatcher.Patterns">func (*PatternMatcher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/fileutils/fileutils.go?s=2688:2735#L95">Patterns</a>
+					<a class="permalink" href="index.html#PatternMatcher.Patterns">&#xb6;</a>
+				</h3>
+				<pre>func (pm *<a href="index.html#PatternMatcher">PatternMatcher</a>) <a href="index.html#Patterns">Patterns</a>() []*<a href="index.html#Pattern">Pattern</a></pre>
+				<p>
+Patterns returns array of active patterns
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

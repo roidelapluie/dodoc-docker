@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>daemon - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package daemon</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/internal/test/daemon"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#SignalDaemonDump">func SignalDaemonDump(pid int)</a></dd>
+			
+				
+				<dd><a href="index.html#WithDockerdBinary">func WithDockerdBinary(dockerdBinary string) func(*Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithEnvironment">func WithEnvironment(e environment.Execution) func(*Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithExperimental">func WithExperimental(d *Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithInit">func WithInit(d *Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithSwarmDataPathPort">func WithSwarmDataPathPort(datapathPort uint32) func(*Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithSwarmDefaultAddrPool">func WithSwarmDefaultAddrPool(defaultAddrPool []string) func(*Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithSwarmDefaultAddrPoolSubnetSize">func WithSwarmDefaultAddrPoolSubnetSize(subnetSize uint32) func(*Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithSwarmListenAddr">func WithSwarmListenAddr(listenAddr string) func(*Daemon)</a></dd>
+			
+				
+				<dd><a href="index.html#WithSwarmPort">func WithSwarmPort(port int) func(*Daemon)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ConfigConstructor">type ConfigConstructor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Daemon">type Daemon</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(t testingT, ops ...func(*Daemon)) *Daemon</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ActiveContainers">func (d *Daemon) ActiveContainers(t assert.TestingT) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Cleanup">func (d *Daemon) Cleanup(t testingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainersNamespace">func (d *Daemon) ContainersNamespace() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CreateConfig">func (d *Daemon) CreateConfig(t assert.TestingT, configSpec swarm.ConfigSpec) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CreateSecret">func (d *Daemon) CreateSecret(t assert.TestingT, secretSpec swarm.SecretSpec) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CreateService">func (d *Daemon) CreateService(t assert.TestingT, f ...ServiceConstructor) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DeleteConfig">func (d *Daemon) DeleteConfig(t assert.TestingT, id string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DeleteSecret">func (d *Daemon) DeleteSecret(t assert.TestingT, id string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DumpStackAndQuit">func (d *Daemon) DumpStackAndQuit()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.FindContainerIP">func (d *Daemon) FindContainerIP(t assert.TestingT, id string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetConfig">func (d *Daemon) GetConfig(t assert.TestingT, id string) *swarm.Config</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetNode">func (d *Daemon) GetNode(t assert.TestingT, id string, errCheck ...func(error) bool) *swarm.Node</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetSecret">func (d *Daemon) GetSecret(t assert.TestingT, id string) *swarm.Secret</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetService">func (d *Daemon) GetService(t assert.TestingT, id string) *swarm.Service</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetServiceTasks">func (d *Daemon) GetServiceTasks(t assert.TestingT, service string) []swarm.Task</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetSwarm">func (d *Daemon) GetSwarm(t assert.TestingT) swarm.Swarm</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetTask">func (d *Daemon) GetTask(t assert.TestingT, id string) swarm.Task</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ID">func (d *Daemon) ID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Info">func (d *Daemon) Info(t assert.TestingT) types.Info</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Interrupt">func (d *Daemon) Interrupt() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.JoinTokens">func (d *Daemon) JoinTokens(t assert.TestingT) swarm.JoinTokens</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Kill">func (d *Daemon) Kill() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ListConfigs">func (d *Daemon) ListConfigs(t assert.TestingT) []swarm.Config</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ListNodes">func (d *Daemon) ListNodes(t assert.TestingT) []swarm.Node</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ListSecrets">func (d *Daemon) ListSecrets(t assert.TestingT) []swarm.Secret</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ListServices">func (d *Daemon) ListServices(t assert.TestingT) []swarm.Service</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LoadBusybox">func (d *Daemon) LoadBusybox(t assert.TestingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogFileName">func (d *Daemon) LogFileName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.NewClientT">func (d *Daemon) NewClientT(t assert.TestingT) *client.Client</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.NodeID">func (d *Daemon) NodeID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Pid">func (d *Daemon) Pid() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.PluginIsNotPresent">func (d *Daemon) PluginIsNotPresent(t assert.TestingT, name string) func(poll.LogT) poll.Result</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.PluginIsNotRunning">func (d *Daemon) PluginIsNotRunning(t assert.TestingT, name string) func(poll.LogT) poll.Result</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.PluginIsRunning">func (d *Daemon) PluginIsRunning(t assert.TestingT, name string) func(poll.LogT) poll.Result</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.PluginReferenceIs">func (d *Daemon) PluginReferenceIs(t assert.TestingT, name, expectedRef string) func(poll.LogT) poll.Result</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ReadLogFile">func (d *Daemon) ReadLogFile() ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ReloadConfig">func (d *Daemon) ReloadConfig() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.RemoveNode">func (d *Daemon) RemoveNode(t assert.TestingT, id string, force bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.RemoveService">func (d *Daemon) RemoveService(t assert.TestingT, id string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Restart">func (d *Daemon) Restart(t testingT, args ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.RestartNode">func (d *Daemon) RestartNode(t testingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.RestartWithError">func (d *Daemon) RestartWithError(arg ...string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.RootDir">func (d *Daemon) RootDir() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.RotateTokens">func (d *Daemon) RotateTokens(t assert.TestingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Signal">func (d *Daemon) Signal(signal os.Signal) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Sock">func (d *Daemon) Sock() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Start">func (d *Daemon) Start(t testingT, args ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StartAndSwarmInit">func (d *Daemon) StartAndSwarmInit(t testingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StartAndSwarmJoin">func (d *Daemon) StartAndSwarmJoin(t testingT, leader *Daemon, manager bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StartNode">func (d *Daemon) StartNode(t testingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StartNodeWithBusybox">func (d *Daemon) StartNodeWithBusybox(t testingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StartWithBusybox">func (d *Daemon) StartWithBusybox(t testingT, arg ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StartWithError">func (d *Daemon) StartWithError(args ...string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StartWithLogFile">func (d *Daemon) StartWithLogFile(out *os.File, providedArgs ...string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Stop">func (d *Daemon) Stop(t testingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StopWithError">func (d *Daemon) StopWithError() (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StorageDriver">func (d *Daemon) StorageDriver() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SwarmInfo">func (d *Daemon) SwarmInfo(t assert.TestingT) swarm.Info</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SwarmInit">func (d *Daemon) SwarmInit(t assert.TestingT, req swarm.InitRequest)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SwarmJoin">func (d *Daemon) SwarmJoin(t assert.TestingT, req swarm.JoinRequest)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SwarmLeave">func (d *Daemon) SwarmLeave(t assert.TestingT, force bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SwarmListenAddr">func (d *Daemon) SwarmListenAddr() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SwarmUnlock">func (d *Daemon) SwarmUnlock(t assert.TestingT, req swarm.UnlockRequest) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UpdateConfig">func (d *Daemon) UpdateConfig(t assert.TestingT, id string, f ...ConfigConstructor)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UpdateNode">func (d *Daemon) UpdateNode(t assert.TestingT, id string, f ...NodeConstructor)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UpdateSecret">func (d *Daemon) UpdateSecret(t assert.TestingT, id string, f ...SecretConstructor)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UpdateService">func (d *Daemon) UpdateService(t assert.TestingT, service *swarm.Service, f ...ServiceConstructor)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UpdateSwarm">func (d *Daemon) UpdateSwarm(t assert.TestingT, f ...SpecConstructor)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NodeConstructor">type NodeConstructor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SecretConstructor">type SecretConstructor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceConstructor">type ServiceConstructor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SpecConstructor">type SpecConstructor</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/config.go">config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/container.go">container.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go">daemon.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon_unix.go">daemon_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/node.go">node.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go">ops.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/plugin.go">plugin.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/secret.go">secret.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go">service.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go">swarm.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultSwarmPort is the default port use for swarm in the tests</span>
+    <span id="DefaultSwarmPort">DefaultSwarmPort</span> = 2477
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+SockRoot holds the path of the default docker integration daemon socket
+</p>
+
+				<pre>var <span id="SockRoot">SockRoot</span> = <a href="http://127.0.0.1:8080/pkg/path/filepath/">filepath</a>.<a href="http://127.0.0.1:8080/pkg/path/filepath/#Join">Join</a>(<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#TempDir">TempDir</a>(), &#34;docker-integration&#34;)</pre>
+			
+		
+		
+			
+			
+			<h2 id="SignalDaemonDump">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon_unix.go?s=940:970#L23">SignalDaemonDump</a>
+				<a class="permalink" href="index.html#SignalDaemonDump">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SignalDaemonDump">SignalDaemonDump</a>(pid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+			<p>
+SignalDaemonDump sends a signal to the daemon to write a dump file
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithDockerdBinary">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=354:412#L7">WithDockerdBinary</a>
+				<a class="permalink" href="index.html#WithDockerdBinary">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithDockerdBinary">WithDockerdBinary</a>(dockerdBinary <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithDockerdBinary sets the dockerd binary to the specified one
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithEnvironment">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=1601:1660#L49">WithEnvironment</a>
+				<a class="permalink" href="index.html#WithEnvironment">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithEnvironment">WithEnvironment</a>(e <a href="../environment/index.html">environment</a>.<a href="../environment/index.html#Execution">Execution</a>) func(*<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithEnvironment sets options from internal/test/environment.Execution struct
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithExperimental">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=134:166#L1">WithExperimental</a>
+				<a class="permalink" href="index.html#WithExperimental">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithExperimental">WithExperimental</a>(d *<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithExperimental sets the daemon in experimental mode
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithInit">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=243:267#L2">WithInit</a>
+				<a class="permalink" href="index.html#WithInit">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithInit">WithInit</a>(d *<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithInit sets the daemon init
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSwarmDataPathPort">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=1393:1454#L42">WithSwarmDataPathPort</a>
+				<a class="permalink" href="index.html#WithSwarmDataPathPort">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSwarmDataPathPort">WithSwarmDataPathPort</a>(datapathPort <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>) func(*<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithSwarmDataPathPort sets the  swarm datapath port to use for swarm mode
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSwarmDefaultAddrPool">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=921:990#L28">WithSwarmDefaultAddrPool</a>
+				<a class="permalink" href="index.html#WithSwarmDefaultAddrPool">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSwarmDefaultAddrPool">WithSwarmDefaultAddrPool</a>(defaultAddrPool []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithSwarmDefaultAddrPool sets the swarm default address pool to use for swarm mode
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSwarmDefaultAddrPoolSubnetSize">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=1181:1253#L35">WithSwarmDefaultAddrPoolSubnetSize</a>
+				<a class="permalink" href="index.html#WithSwarmDefaultAddrPoolSubnetSize">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSwarmDefaultAddrPoolSubnetSize">WithSwarmDefaultAddrPoolSubnetSize</a>(subnetSize <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>) func(*<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithSwarmDefaultAddrPoolSubnetSize sets the subnet length mask of swarm default address pool to use for swarm mode
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSwarmListenAddr">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=710:767#L21">WithSwarmListenAddr</a>
+				<a class="permalink" href="index.html#WithSwarmListenAddr">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSwarmListenAddr">WithSwarmListenAddr</a>(listenAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithSwarmListenAddr sets the swarm listen addr to use for swarm mode
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSwarmPort">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/ops.go?s=540:582#L14">WithSwarmPort</a>
+				<a class="permalink" href="index.html#WithSwarmPort">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSwarmPort">WithSwarmPort</a>(port <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) func(*<a href="index.html#Daemon">Daemon</a>)</pre>
+			<p>
+WithSwarmPort sets the swarm port to use for swarm mode
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ConfigConstructor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/config.go?s=243:285#L3">ConfigConstructor</a>
+				<a class="permalink" href="index.html#ConfigConstructor">&#xb6;</a>
+			</h2>
+			<p>
+ConfigConstructor defines a swarm config constructor
+</p>
+
+			<pre>type ConfigConstructor func(*<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Config">Config</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Daemon">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=1368:2009#L52">Daemon</a>
+				<a class="permalink" href="index.html#Daemon">&#xb6;</a>
+			</h2>
+			<p>
+Daemon represents a Docker daemon for the testing framework
+</p>
+
+			<pre>type Daemon struct {
+<span id="Daemon.GlobalFlags"></span>    GlobalFlags       []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Daemon.Root"></span>    Root              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Daemon.Folder"></span>    Folder            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Daemon.Wait"></span>    Wait              chan <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+<span id="Daemon.UseDefaultHost"></span>    UseDefaultHost    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Daemon.UseDefaultTLSHost"></span>    UseDefaultTLSHost <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+
+<span id="Daemon.SwarmPort"></span>    SwarmPort       <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> <span class="comment">// FIXME(vdemeester) should probably not be exported</span>
+<span id="Daemon.DefaultAddrPool"></span>    DefaultAddrPool []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Daemon.SubnetSize"></span>    SubnetSize      <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="Daemon.DataPathPort"></span>    DataPathPort    <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+    <span class="comment">// cached information</span>
+<span id="Daemon.CachedInfo"></span>    CachedInfo <a href="../../../api/types/index.html">types</a>.<a href="../../../api/types/index.html#Info">Info</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=2232:2282#L84">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>(t testingT, ops ...func(*<a href="index.html#Daemon">Daemon</a>)) *<a href="index.html#Daemon">Daemon</a></pre>
+				<p>
+New returns a Daemon instance to be used for testing.
+This will create a directory such as d123456789 in the folder specified by $DOCKER_INTEGRATION_DAEMON_DEST or $DEST.
+The daemon will not automatically start.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Daemon.ActiveContainers">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/container.go?s=223:284#L2">ActiveContainers</a>
+					<a class="permalink" href="index.html#Daemon.ActiveContainers">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ActiveContainers">ActiveContainers</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ActiveContainers returns the list of ids of the currently running containers
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Cleanup">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=5299:5335#L192">Cleanup</a>
+					<a class="permalink" href="index.html#Daemon.Cleanup">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Cleanup">Cleanup</a>(t testingT)</pre>
+				<p>
+Cleanup cleans the daemon files : exec root (network namespaces, ...), swarmkit files
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainersNamespace">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=3987:4032#L141">ContainersNamespace</a>
+					<a class="permalink" href="index.html#Daemon.ContainersNamespace">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainersNamespace">ContainersNamespace</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ContainersNamespace returns the containerd namespace used for containers.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CreateConfig">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/config.go?s=345:429#L6">CreateConfig</a>
+					<a class="permalink" href="index.html#Daemon.CreateConfig">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CreateConfig">CreateConfig</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, configSpec <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#ConfigSpec">ConfigSpec</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+CreateConfig creates a config given the specified spec
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CreateSecret">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/secret.go?s=345:429#L6">CreateSecret</a>
+					<a class="permalink" href="index.html#Daemon.CreateSecret">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CreateSecret">CreateSecret</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, secretSpec <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#SecretSpec">SecretSpec</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+CreateSecret creates a secret given the specified spec
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CreateService">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=921:1002#L28">CreateService</a>
+					<a class="permalink" href="index.html#Daemon.CreateService">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CreateService">CreateService</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, f ...<a href="index.html#ServiceConstructor">ServiceConstructor</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+CreateService creates a swarm service given the specified service constructor
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DeleteConfig">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/config.go?s=1410:1469#L45">DeleteConfig</a>
+					<a class="permalink" href="index.html#Daemon.DeleteConfig">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DeleteConfig">DeleteConfig</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+DeleteConfig removes the swarm config identified by the specified id
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DeleteSecret">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/secret.go?s=1411:1470#L46">DeleteSecret</a>
+					<a class="permalink" href="index.html#Daemon.DeleteSecret">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DeleteSecret">DeleteSecret</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+DeleteSecret removes the swarm secret identified by the specified id
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DumpStackAndQuit">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=11279:11314#L402">DumpStackAndQuit</a>
+					<a class="permalink" href="index.html#Daemon.DumpStackAndQuit">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DumpStackAndQuit">DumpStackAndQuit</a>()</pre>
+				<p>
+DumpStackAndQuit sends SIGQUIT to the daemon, which triggers it to dump its
+stack to its log file and exit
+This is used primarily for gathering debug information on test timeout
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.FindContainerIP">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/container.go?s=668:737#L20">FindContainerIP</a>
+					<a class="permalink" href="index.html#Daemon.FindContainerIP">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#FindContainerIP">FindContainerIP</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+FindContainerIP returns the ip of the specified container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetConfig">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/config.go?s=1053:1123#L32">GetConfig</a>
+					<a class="permalink" href="index.html#Daemon.GetConfig">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetConfig">GetConfig</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Config">Config</a></pre>
+				<p>
+GetConfig returns a swarm config identified by the specified id
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetNode">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/node.go?s=361:457#L8">GetNode</a>
+					<a class="permalink" href="index.html#Daemon.GetNode">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetNode">GetNode</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, errCheck ...func(<a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) *<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Node">Node</a></pre>
+				<p>
+GetNode returns a swarm node identified by the specified id
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetSecret">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/secret.go?s=1054:1124#L33">GetSecret</a>
+					<a class="permalink" href="index.html#Daemon.GetSecret">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetSecret">GetSecret</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Secret">Secret</a></pre>
+				<p>
+GetSecret returns a swarm secret identified by the specified id
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetService">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=1210:1282#L36">GetService</a>
+					<a class="permalink" href="index.html#Daemon.GetService">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetService">GetService</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Service">Service</a></pre>
+				<p>
+GetService returns the swarm service corresponding to the specified id
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetServiceTasks">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=1600:1680#L49">GetServiceTasks</a>
+					<a class="permalink" href="index.html#Daemon.GetServiceTasks">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetServiceTasks">GetServiceTasks</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, service <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Task">Task</a></pre>
+				<p>
+GetServiceTasks returns the swarm tasks for the specified service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetSwarm">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=4563:4619#L153">GetSwarm</a>
+					<a class="permalink" href="index.html#Daemon.GetSwarm">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetSwarm">GetSwarm</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Swarm">Swarm</a></pre>
+				<p>
+GetSwarm returns the current swarm object
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetTask">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=3241:3306#L111">GetTask</a>
+					<a class="permalink" href="index.html#Daemon.GetTask">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetTask">GetTask</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Task">Task</a></pre>
+				<p>
+GetTask returns the swarm task identified by the specified id
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ID">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=4203:4231#L151">ID</a>
+					<a class="permalink" href="index.html#Daemon.ID">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ID">ID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ID returns the generated id of the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Info">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=18638:18689#L692">Info</a>
+					<a class="permalink" href="index.html#Daemon.Info">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Info">Info</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) <a href="../../../api/types/index.html">types</a>.<a href="../../../api/types/index.html#Info">Info</a></pre>
+				<p>
+Info returns the info struct for this daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Interrupt">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=10801:10835#L387">Interrupt</a>
+					<a class="permalink" href="index.html#Daemon.Interrupt">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Interrupt">Interrupt</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Interrupt stops the daemon by sending it an Interrupt signal
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.JoinTokens">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=5763:5826#L203">JoinTokens</a>
+					<a class="permalink" href="index.html#Daemon.JoinTokens">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#JoinTokens">JoinTokens</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#JoinTokens">JoinTokens</a></pre>
+				<p>
+JoinTokens returns the current swarm join tokens
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Kill">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=10361:10390#L364">Kill</a>
+					<a class="permalink" href="index.html#Daemon.Kill">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Kill">Kill</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Kill will send a SIGKILL to the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ListConfigs">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/config.go?s=698:760#L19">ListConfigs</a>
+					<a class="permalink" href="index.html#Daemon.ListConfigs">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ListConfigs">ListConfigs</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) []<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Config">Config</a></pre>
+				<p>
+ListConfigs returns the list of the current swarm configs
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ListNodes">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/node.go?s=1868:1926#L68">ListNodes</a>
+					<a class="permalink" href="index.html#Daemon.ListNodes">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ListNodes">ListNodes</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) []<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Node">Node</a></pre>
+				<p>
+ListNodes returns the list of the current swarm nodes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ListSecrets">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/secret.go?s=699:761#L20">ListSecrets</a>
+					<a class="permalink" href="index.html#Daemon.ListSecrets">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ListSecrets">ListSecrets</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) []<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Secret">Secret</a></pre>
+				<p>
+ListSecrets returns the list of the current swarm secrets
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ListServices">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=2882:2946#L98">ListServices</a>
+					<a class="permalink" href="index.html#Daemon.ListServices">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ListServices">ListServices</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) []<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Service">Service</a></pre>
+				<p>
+ListServices returns the list of the current swarm services
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LoadBusybox">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=15898:15945#L578">LoadBusybox</a>
+					<a class="permalink" href="index.html#Daemon.LoadBusybox">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LoadBusybox">LoadBusybox</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>)</pre>
+				<p>
+LoadBusybox image into the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogFileName">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=4656:4693#L170">LogFileName</a>
+					<a class="permalink" href="index.html#Daemon.LogFileName">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogFileName">LogFileName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+LogFileName returns the path the daemon&#39;s log file
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.NewClientT">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=4939:5000#L180">NewClientT</a>
+					<a class="permalink" href="index.html#Daemon.NewClientT">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#NewClientT">NewClientT</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) *<a href="../../../client/index.html">client</a>.<a href="../../../client/index.html#Client">Client</a></pre>
+				<p>
+NewClientT creates new client based on daemon&#39;s socket path
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.NodeID">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=2145:2177#L73">NodeID</a>
+					<a class="permalink" href="index.html#Daemon.NodeID">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#NodeID">NodeID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+NodeID returns the swarm mode node ID
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Pid">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=10679:10705#L382">Pid</a>
+					<a class="permalink" href="index.html#Daemon.Pid">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Pid">Pid</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+Pid returns the pid of the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.PluginIsNotPresent">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/plugin.go?s=1042:1137#L23">PluginIsNotPresent</a>
+					<a class="permalink" href="index.html#Daemon.PluginIsNotPresent">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#PluginIsNotPresent">PluginIsNotPresent</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#LogT">LogT</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#Result">Result</a></pre>
+				<p>
+PluginIsNotPresent provides a poller to check if the specified plugin is not present
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.PluginIsNotRunning">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/plugin.go?s=640:735#L13">PluginIsNotRunning</a>
+					<a class="permalink" href="index.html#Daemon.PluginIsNotRunning">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#PluginIsNotRunning">PluginIsNotRunning</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#LogT">LogT</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#Result">Result</a></pre>
+				<p>
+PluginIsNotRunning provides a poller to check if the specified plugin is not running
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.PluginIsRunning">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/plugin.go?s=238:330#L3">PluginIsRunning</a>
+					<a class="permalink" href="index.html#Daemon.PluginIsRunning">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#PluginIsRunning">PluginIsRunning</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#LogT">LogT</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#Result">Result</a></pre>
+				<p>
+PluginIsRunning provides a poller to check if the specified plugin is running
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.PluginReferenceIs">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/plugin.go?s=1549:1656#L37">PluginReferenceIs</a>
+					<a class="permalink" href="index.html#Daemon.PluginReferenceIs">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#PluginReferenceIs">PluginReferenceIs</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, name, expectedRef <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#LogT">LogT</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/">poll</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/poll/#Result">Result</a></pre>
+				<p>
+PluginReferenceIs provides a poller to check if the specified plugin has the specified reference
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ReadLogFile">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=4782:4828#L175">ReadLogFile</a>
+					<a class="permalink" href="index.html#Daemon.ReadLogFile">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ReadLogFile">ReadLogFile</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ReadLogFile returns the content of the daemon log file
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ReloadConfig">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=14820:14857#L530">ReloadConfig</a>
+					<a class="permalink" href="index.html#Daemon.ReloadConfig">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ReloadConfig">ReloadConfig</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ReloadConfig asks the daemon to reload its configuration
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.RemoveNode">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/node.go?s=896:965#L29">RemoveNode</a>
+					<a class="permalink" href="index.html#Daemon.RemoveNode">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#RemoveNode">RemoveNode</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, force <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+RemoveNode removes the specified node
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.RemoveService">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=2578:2638#L86">RemoveService</a>
+					<a class="permalink" href="index.html#Daemon.RemoveService">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#RemoveService">RemoveService</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+RemoveService removes the specified service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Restart">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=13887:13939#L502">Restart</a>
+					<a class="permalink" href="index.html#Daemon.Restart">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Restart">Restart</a>(t testingT, args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+Restart will restart the daemon by first stopping it and the starting it.
+If an error occurs while starting the daemon, the test will fail.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.RestartNode">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=874:914#L30">RestartNode</a>
+					<a class="permalink" href="index.html#Daemon.RestartNode">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#RestartNode">RestartNode</a>(t testingT)</pre>
+				<p>
+RestartNode restarts a daemon to be used as a swarm node
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.RestartWithError">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=14118:14172#L511">RestartWithError</a>
+					<a class="permalink" href="index.html#Daemon.RestartWithError">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#RestartWithError">RestartWithError</a>(arg ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+RestartWithError will restart the daemon by first stopping it and then starting it.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.RootDir">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=4104:4137#L146">RootDir</a>
+					<a class="permalink" href="index.html#Daemon.RootDir">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#RootDir">RootDir</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+RootDir returns the root directory of the daemon.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.RotateTokens">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=5295:5343#L183">RotateTokens</a>
+					<a class="permalink" href="index.html#Daemon.RotateTokens">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#RotateTokens">RotateTokens</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>)</pre>
+				<p>
+RotateTokens update the swarm to rotate tokens
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Signal">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=10934:10981#L392">Signal</a>
+					<a class="permalink" href="index.html#Daemon.Signal">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Signal">Signal</a>(signal <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#Signal">Signal</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Signal sends the specified signal to the daemon if running
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Sock">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=4434:4464#L161">Sock</a>
+					<a class="permalink" href="index.html#Daemon.Sock">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Sock">Sock</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Sock returns the socket path of the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Start">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=5580:5630#L202">Start</a>
+					<a class="permalink" href="index.html#Daemon.Start">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Start">Start</a>(t testingT, args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+Start starts the daemon and return once it is ready to receive requests.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StartAndSwarmInit">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=1115:1161#L40">StartAndSwarmInit</a>
+					<a class="permalink" href="index.html#Daemon.StartAndSwarmInit">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StartAndSwarmInit">StartAndSwarmInit</a>(t testingT)</pre>
+				<p>
+StartAndSwarmInit starts the daemon (with busybox) and init the swarm
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StartAndSwarmJoin">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=1335:1411#L46">StartAndSwarmJoin</a>
+					<a class="permalink" href="index.html#Daemon.StartAndSwarmJoin">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StartAndSwarmJoin">StartAndSwarmJoin</a>(t testingT, leader *<a href="index.html#Daemon">Daemon</a>, manager <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+StartAndSwarmJoin starts the daemon (with busybox) and join the specified swarm as worker or manager
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StartNode">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=450:488#L14">StartNode</a>
+					<a class="permalink" href="index.html#Daemon.StartNode">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StartNode">StartNode</a>(t testingT)</pre>
+				<p>
+StartNode (re)starts the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StartNodeWithBusybox">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=668:717#L22">StartNodeWithBusybox</a>
+					<a class="permalink" href="index.html#Daemon.StartNodeWithBusybox">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StartNodeWithBusybox">StartNodeWithBusybox</a>(t testingT)</pre>
+				<p>
+StartNodeWithBusybox starts daemon to be used as a swarm node, and loads the busybox image
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StartWithBusybox">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=10161:10221#L355">StartWithBusybox</a>
+					<a class="permalink" href="index.html#Daemon.StartWithBusybox">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StartWithBusybox">StartWithBusybox</a>(t testingT, arg ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+StartWithBusybox will first start the daemon with Daemon.Start()
+then save the busybox image from the main daemon and load it into this Daemon instance.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StartWithError">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=5950:6003#L213">StartWithError</a>
+					<a class="permalink" href="index.html#Daemon.StartWithError">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StartWithError">StartWithError</a>(args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+StartWithError starts the daemon and return once it is ready to receive requests.
+It returns an error in case it couldn&#39;t start.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StartWithLogFile">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=6348:6425#L223">StartWithLogFile</a>
+					<a class="permalink" href="index.html#Daemon.StartWithLogFile">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StartWithLogFile">StartWithLogFile</a>(out *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a>, providedArgs ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+StartWithLogFile will start the daemon and attach its streams to a given file.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Stop">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=11710:11743#L414">Stop</a>
+					<a class="permalink" href="index.html#Daemon.Stop">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Stop">Stop</a>(t testingT)</pre>
+				<p>
+Stop will send a SIGINT every second and wait for the daemon to stop.
+If it times out, a SIGKILL is sent.
+Stop will not delete the daemon directory. If a purged daemon is needed,
+instantiate a new one with NewDaemon.
+If an error occurs while starting the daemon, the test will fail.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StopWithError">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=12245:12289#L432">StopWithError</a>
+					<a class="permalink" href="index.html#Daemon.StopWithError">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StopWithError">StopWithError</a>() (err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+StopWithError will send a SIGINT every second and wait for the daemon to stop.
+If it timeouts, a SIGKILL is sent.
+Stop will not delete the daemon directory. If a purged daemon is needed,
+instantiate a new one with NewDaemon.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StorageDriver">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/daemon.go?s=4319:4358#L156">StorageDriver</a>
+					<a class="permalink" href="index.html#Daemon.StorageDriver">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StorageDriver">StorageDriver</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+StorageDriver returns the configured storage driver of the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SwarmInfo">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=3767:3823#L126">SwarmInfo</a>
+					<a class="permalink" href="index.html#Daemon.SwarmInfo">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SwarmInfo">SwarmInfo</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>) <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Info">Info</a></pre>
+				<p>
+SwarmInfo returns the swarm information of the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SwarmInit">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=2263:2331#L78">SwarmInit</a>
+					<a class="permalink" href="index.html#Daemon.SwarmInit">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SwarmInit">SwarmInit</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, req <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#InitRequest">InitRequest</a>)</pre>
+				<p>
+SwarmInit initializes a new swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SwarmJoin">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=2887:2955#L100">SwarmJoin</a>
+					<a class="permalink" href="index.html#Daemon.SwarmJoin">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SwarmJoin">SwarmJoin</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, req <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#JoinRequest">JoinRequest</a>)</pre>
+				<p>
+SwarmJoin joins a daemon to an existing cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SwarmLeave">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=3545:3609#L119">SwarmLeave</a>
+					<a class="permalink" href="index.html#Daemon.SwarmLeave">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SwarmLeave">SwarmLeave</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, force <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+SwarmLeave forces daemon to leave current cluster.
+</p>
+<p>
+The passed in TestingT is only used to validate that the client was successfully created
+Some tests rely on error checking the result of the actual unlock, so allow
+the error to be returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SwarmListenAddr">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=1996:2037#L68">SwarmListenAddr</a>
+					<a class="permalink" href="index.html#Daemon.SwarmListenAddr">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SwarmListenAddr">SwarmListenAddr</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+SwarmListenAddr returns the listen-addr used for the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SwarmUnlock">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=4263:4341#L141">SwarmUnlock</a>
+					<a class="permalink" href="index.html#Daemon.SwarmUnlock">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SwarmUnlock">SwarmUnlock</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, req <a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#UnlockRequest">UnlockRequest</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+SwarmUnlock tries to unlock a locked swarm
+</p>
+<p>
+The passed in TestingT is only used to validate that the client was successfully created
+Some tests rely on error checking the result of the actual unlock, so allow
+the error to be returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UpdateConfig">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/config.go?s=1767:1850#L58">UpdateConfig</a>
+					<a class="permalink" href="index.html#Daemon.UpdateConfig">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UpdateConfig">UpdateConfig</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, f ...<a href="index.html#ConfigConstructor">ConfigConstructor</a>)</pre>
+				<p>
+UpdateConfig updates the swarm config identified by the specified id
+Currently, only label update is supported.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UpdateNode">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/node.go?s=1279:1358#L44">UpdateNode</a>
+					<a class="permalink" href="index.html#Daemon.UpdateNode">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UpdateNode">UpdateNode</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, f ...<a href="index.html#NodeConstructor">NodeConstructor</a>)</pre>
+				<p>
+UpdateNode updates a swarm node with the specified node constructor
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UpdateSecret">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/secret.go?s=1768:1851#L59">UpdateSecret</a>
+					<a class="permalink" href="index.html#Daemon.UpdateSecret">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UpdateSecret">UpdateSecret</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, f ...<a href="index.html#SecretConstructor">SecretConstructor</a>)</pre>
+				<p>
+UpdateSecret updates the swarm secret identified by the specified id
+Currently, only label update is supported.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UpdateService">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=2138:2236#L70">UpdateService</a>
+					<a class="permalink" href="index.html#Daemon.UpdateService">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UpdateService">UpdateService</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, service *<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Service">Service</a>, f ...<a href="index.html#ServiceConstructor">ServiceConstructor</a>)</pre>
+				<p>
+UpdateService updates a swarm service with the specified service constructor
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UpdateSwarm">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=4895:4964#L166">UpdateSwarm</a>
+					<a class="permalink" href="index.html#Daemon.UpdateSwarm">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UpdateSwarm">UpdateSwarm</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, f ...<a href="index.html#SpecConstructor">SpecConstructor</a>)</pre>
+				<p>
+UpdateSwarm updates the current swarm object with the specified spec constructors
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NodeConstructor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/node.go?s=258:296#L5">NodeConstructor</a>
+				<a class="permalink" href="index.html#NodeConstructor">&#xb6;</a>
+			</h2>
+			<p>
+NodeConstructor defines a swarm node constructor
+</p>
+
+			<pre>type NodeConstructor func(*<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Node">Node</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SecretConstructor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/secret.go?s=243:285#L3">SecretConstructor</a>
+				<a class="permalink" href="index.html#SecretConstructor">&#xb6;</a>
+			</h2>
+			<p>
+SecretConstructor defines a swarm secret constructor
+</p>
+
+			<pre>type SecretConstructor func(*<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Secret">Secret</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceConstructor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/service.go?s=308:352#L5">ServiceConstructor</a>
+				<a class="permalink" href="index.html#ServiceConstructor">&#xb6;</a>
+			</h2>
+			<p>
+ServiceConstructor defines a swarm service constructor function
+</p>
+
+			<pre>type ServiceConstructor func(*<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Service">Service</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SpecConstructor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/daemon/swarm.go?s=1893:1931#L65">SpecConstructor</a>
+				<a class="permalink" href="index.html#SpecConstructor">&#xb6;</a>
+			</h2>
+			<p>
+SpecConstructor defines a swarm spec constructor
+</p>
+
+			<pre>type SpecConstructor func(*<a href="../../../api/types/swarm/index.html">swarm</a>.<a href="../../../api/types/swarm/index.html#Spec">Spec</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

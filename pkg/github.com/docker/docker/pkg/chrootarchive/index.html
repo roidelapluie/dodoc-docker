@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>chrootarchive - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package chrootarchive</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/chrootarchive"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#ApplyLayer">func ApplyLayer(dest string, layer io.Reader) (size int64, err error)</a></dd>
+			
+				
+				<dd><a href="index.html#ApplyUncompressedLayer">func ApplyUncompressedLayer(dest string, layer io.Reader, options *archive.TarOptions) (int64, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewArchiver">func NewArchiver(idMapping *idtools.IdentityMapping) *archive.Archiver</a></dd>
+			
+				
+				<dd><a href="index.html#Tar">func Tar(srcPath string, options *archive.TarOptions, root string) (io.ReadCloser, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Untar">func Untar(tarArchive io.Reader, dest string, options *archive.TarOptions) error</a></dd>
+			
+				
+				<dd><a href="index.html#UntarUncompressed">func UntarUncompressed(tarArchive io.Reader, dest string, options *archive.TarOptions) error</a></dd>
+			
+				
+				<dd><a href="index.html#UntarWithRoot">func UntarWithRoot(tarArchive io.Reader, dest string, options *archive.TarOptions, root string) error</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/archive.go">archive.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/archive_unix.go">archive_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/chroot_linux.go">chroot_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/diff.go">diff.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/diff_unix.go">diff_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/init_unix.go">init_unix.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="ApplyLayer">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/diff.go?s=358:427#L3">ApplyLayer</a>
+				<a class="permalink" href="index.html#ApplyLayer">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ApplyLayer">ApplyLayer</a>(dest <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, layer <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ApplyLayer parses a diff in the standard layer format from `layer`,
+and applies it to the directory `dest`. The stream `layer` can only be
+uncompressed.
+Returns the size in bytes of the contents of the layer.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ApplyUncompressedLayer">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/diff.go?s=734:835#L11">ApplyUncompressedLayer</a>
+				<a class="permalink" href="index.html#ApplyUncompressedLayer">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ApplyUncompressedLayer">ApplyUncompressedLayer</a>(dest <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, layer <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, options *<a href="../archive/index.html">archive</a>.<a href="../archive/index.html#TarOptions">TarOptions</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ApplyUncompressedLayer parses a diff in the standard layer format from
+`layer`, and applies it to the directory `dest`. The stream `layer`
+can only be uncompressed.
+Returns the size in bytes of the contents of the layer.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewArchiver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/archive.go?s=537:607#L14">NewArchiver</a>
+				<a class="permalink" href="index.html#NewArchiver">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewArchiver">NewArchiver</a>(idMapping *<a href="../idtools/index.html">idtools</a>.<a href="../idtools/index.html#IdentityMapping">IdentityMapping</a>) *<a href="../archive/index.html">archive</a>.<a href="../archive/index.html#Archiver">Archiver</a></pre>
+			<p>
+NewArchiver returns a new Archiver which uses chrootarchive.Untar
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Tar">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/archive.go?s=3312:3401#L91">Tar</a>
+				<a class="permalink" href="index.html#Tar">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Tar">Tar</a>(srcPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options *<a href="../archive/index.html">archive</a>.<a href="../archive/index.html#TarOptions">TarOptions</a>, root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Tar tars the requested path while chrooted to the specified root.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Untar">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/archive.go?s=996:1076#L28">Untar</a>
+				<a class="permalink" href="index.html#Untar">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Untar">Untar</a>(tarArchive <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, dest <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options *<a href="../archive/index.html">archive</a>.<a href="../archive/index.html#TarOptions">TarOptions</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Untar reads a stream of bytes from `archive`, parses it as a tar archive,
+and unpacks it into the directory at `dest`.
+The archive may be compressed with one of the following algorithms:
+</p>
+<pre>identity (uncompressed), gzip, bzip2, xz.
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UntarUncompressed">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/archive.go?s=2150:2242#L51">UntarUncompressed</a>
+				<a class="permalink" href="index.html#UntarUncompressed">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#UntarUncompressed">UntarUncompressed</a>(tarArchive <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, dest <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options *<a href="../archive/index.html">archive</a>.<a href="../archive/index.html#TarOptions">TarOptions</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+UntarUncompressed reads a stream of bytes from `archive`, parses it as a tar archive,
+and unpacks it into the directory at `dest`.
+The archive must be an uncompressed stream.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UntarWithRoot">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/chrootarchive/archive.go?s=1799:1900#L44">UntarWithRoot</a>
+				<a class="permalink" href="index.html#UntarWithRoot">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#UntarWithRoot">UntarWithRoot</a>(tarArchive <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, dest <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options *<a href="../archive/index.html">archive</a>.<a href="../archive/index.html#TarOptions">TarOptions</a>, root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+UntarWithRoot is the same as `Untar`, but allows you to pass in a root directory
+The root directory is the directory that will be chrooted to.
+`dest` must be a path within `root`, if it is not an error will be returned.
+</p>
+<p>
+`root` should set to a directory which is not controlled by any potentially
+malicious process.
+</p>
+<p>
+This should be used to prevent a potential attacker from manipulating `dest`
+such that it would provide access to files outside of `dest` through things
+like symlinks. Normally `ResolveSymlinksInScope` would handle this, however
+sanitizing symlinks in this manner is inherrently racey:
+ref: CVE-2018-15664
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

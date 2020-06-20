@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>authorization - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package authorization</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/authorization"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#GetPluginGetter">func GetPluginGetter() plugingetter.PluginGetter</a></dd>
+			
+				
+				<dd><a href="index.html#SetPluginGetter">func SetPluginGetter(pg plugingetter.PluginGetter)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Ctx">type Ctx</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewCtx">func NewCtx(authZPlugins []Plugin, user, userAuthNMethod, requestMethod, requestURI string) *Ctx</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Ctx.AuthZRequest">func (ctx *Ctx) AuthZRequest(w http.ResponseWriter, r *http.Request) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Ctx.AuthZResponse">func (ctx *Ctx) AuthZResponse(rm ResponseModifier, r *http.Request) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Middleware">type Middleware</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMiddleware">func NewMiddleware(names []string, pg plugingetter.PluginGetter) *Middleware</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Middleware.RemovePlugin">func (m *Middleware) RemovePlugin(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Middleware.SetPlugins">func (m *Middleware) SetPlugins(names []string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Middleware.WrapHandler">func (m *Middleware) WrapHandler(handler func(ctx context.Context, w http.ResponseWriter, r *http.Request, vars map[string]string) error) func(ctx context.Context, w http.ResponseWriter, r *http.Request, vars map[string]string) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PeerCertificate">type PeerCertificate</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PeerCertificate.MarshalJSON">func (pc *PeerCertificate) MarshalJSON() ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PeerCertificate.UnmarshalJSON">func (pc *PeerCertificate) UnmarshalJSON(b []byte) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Plugin">type Plugin</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Request">type Request</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Response">type Response</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ResponseModifier">type ResponseModifier</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewResponseModifier">func NewResponseModifier(rw http.ResponseWriter) ResponseModifier</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/api.go">api.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/authz.go">authz.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/middleware.go">middleware.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/plugin.go">plugin.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/response.go">response.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// AuthZApiRequest is the url for daemon request authorization</span>
+    <span id="AuthZApiRequest">AuthZApiRequest</span> = &#34;AuthZPlugin.AuthZReq&#34;
+
+    <span class="comment">// AuthZApiResponse is the url for daemon response authorization</span>
+    <span id="AuthZApiResponse">AuthZApiResponse</span> = &#34;AuthZPlugin.AuthZRes&#34;
+
+    <span class="comment">// AuthZApiImplements is the name of the interface all AuthZ plugins implement</span>
+    <span id="AuthZApiImplements">AuthZApiImplements</span> = &#34;authz&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="GetPluginGetter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/plugin.go?s=1186:1234#L35">GetPluginGetter</a>
+				<a class="permalink" href="index.html#GetPluginGetter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetPluginGetter">GetPluginGetter</a>() <a href="../plugingetter/index.html">plugingetter</a>.<a href="../plugingetter/index.html#PluginGetter">PluginGetter</a></pre>
+			<p>
+GetPluginGetter gets the plugingetter
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetPluginGetter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/plugin.go?s=1076:1126#L30">SetPluginGetter</a>
+				<a class="permalink" href="index.html#SetPluginGetter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SetPluginGetter">SetPluginGetter</a>(pg <a href="../plugingetter/index.html">plugingetter</a>.<a href="../plugingetter/index.html#PluginGetter">PluginGetter</a>)</pre>
+			<p>
+SetPluginGetter sets the plugingetter
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Ctx">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/authz.go?s=1509:1741#L35">Ctx</a>
+				<a class="permalink" href="index.html#Ctx">&#xb6;</a>
+			</h2>
+			<p>
+Ctx stores a single request-response interaction context
+</p>
+
+			<pre>type Ctx struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCtx">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/authz.go?s=1171:1267#L24">NewCtx</a>
+					<a class="permalink" href="index.html#NewCtx">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewCtx">NewCtx</a>(authZPlugins []<a href="index.html#Plugin">Plugin</a>, user, userAuthNMethod, requestMethod, requestURI <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#Ctx">Ctx</a></pre>
+				<p>
+NewCtx creates new authZ context, it is used to store authorization information related to a specific docker
+REST http session
+A context provides two method:
+Authenticate Request:
+Call authZ plugins with current REST request and AuthN response
+Request contains full HTTP packet sent to the docker daemon
+<a href="https://docs.docker.com/engine/reference/api/">https://docs.docker.com/engine/reference/api/</a>
+</p>
+<p>
+Authenticate Response:
+Call authZ plugins with full info about current REST request, REST response and AuthN response
+The response from this method may contains content that overrides the daemon response
+This allows authZ plugins to filter privileged content
+</p>
+<p>
+If multiple authZ plugins are specified, the block/allow decision is based on ANDing all plugin results
+For response manipulation, the response from each plugin is piped between plugins. Plugin execution order
+is determined according to daemon parameters
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Ctx.AuthZRequest">func (*Ctx) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/authz.go?s=1823:1897#L46">AuthZRequest</a>
+					<a class="permalink" href="index.html#Ctx.AuthZRequest">&#xb6;</a>
+				</h3>
+				<pre>func (ctx *<a href="index.html#Ctx">Ctx</a>) <a href="index.html#AuthZRequest">AuthZRequest</a>(w <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+AuthZRequest authorized the request to the docker daemon using authZ plugins
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Ctx.AuthZResponse">func (*Ctx) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/authz.go?s=3070:3143#L94">AuthZResponse</a>
+					<a class="permalink" href="index.html#Ctx.AuthZResponse">&#xb6;</a>
+				</h3>
+				<pre>func (ctx *<a href="index.html#Ctx">Ctx</a>) <a href="index.html#AuthZResponse">AuthZResponse</a>(rm <a href="index.html#ResponseModifier">ResponseModifier</a>, r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+AuthZResponse authorized and manipulates the response from docker daemon using authZ plugins
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Middleware">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/middleware.go?s=282:346#L4">Middleware</a>
+				<a class="permalink" href="index.html#Middleware">&#xb6;</a>
+			</h2>
+			<p>
+Middleware uses a list of plugins to
+handle authorization in the API requests.
+</p>
+
+			<pre>type Middleware struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMiddleware">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/middleware.go?s=424:500#L11">NewMiddleware</a>
+					<a class="permalink" href="index.html#NewMiddleware">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewMiddleware">NewMiddleware</a>(names []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, pg <a href="../plugingetter/index.html">plugingetter</a>.<a href="../plugingetter/index.html#PluginGetter">PluginGetter</a>) *<a href="index.html#Middleware">Middleware</a></pre>
+				<p>
+NewMiddleware creates a new Middleware
+with a slice of plugins names.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Middleware.RemovePlugin">func (*Middleware) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/middleware.go?s=924:970#L32">RemovePlugin</a>
+					<a class="permalink" href="index.html#Middleware.RemovePlugin">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#Middleware">Middleware</a>) <a href="index.html#RemovePlugin">RemovePlugin</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+RemovePlugin removes a single plugin from this authz middleware chain
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Middleware.SetPlugins">func (*Middleware) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/middleware.go?s=739:786#L25">SetPlugins</a>
+					<a class="permalink" href="index.html#Middleware.SetPlugins">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#Middleware">Middleware</a>) <a href="index.html#SetPlugins">SetPlugins</a>(names []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+SetPlugins sets the plugin used for authorization
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Middleware.WrapHandler">func (*Middleware) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/middleware.go?s=1272:1505#L45">WrapHandler</a>
+					<a class="permalink" href="index.html#Middleware.WrapHandler">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#Middleware">Middleware</a>) <a href="index.html#WrapHandler">WrapHandler</a>(handler func(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, w <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, vars map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) func(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, w <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, vars map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+WrapHandler returns a new handler function wrapping the previous one in the request chain.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PeerCertificate">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/api.go?s=604:641#L12">PeerCertificate</a>
+				<a class="permalink" href="index.html#PeerCertificate">&#xb6;</a>
+			</h2>
+			<p>
+PeerCertificate is a wrapper around x509.Certificate which provides a sane
+encoding/decoding to/from PEM format and JSON.
+</p>
+
+			<pre>type PeerCertificate <a href="http://127.0.0.1:8080/pkg/crypto/x509/">x509</a>.<a href="http://127.0.0.1:8080/pkg/crypto/x509/#Certificate">Certificate</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PeerCertificate.MarshalJSON">func (*PeerCertificate) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/api.go?s=715:771#L15">MarshalJSON</a>
+					<a class="permalink" href="index.html#PeerCertificate.MarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (pc *<a href="index.html#PeerCertificate">PeerCertificate</a>) <a href="index.html#MarshalJSON">MarshalJSON</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MarshalJSON returns the JSON encoded pem bytes of a PeerCertificate.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PeerCertificate.UnmarshalJSON">func (*PeerCertificate) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/api.go?s=946:1002#L21">UnmarshalJSON</a>
+					<a class="permalink" href="index.html#PeerCertificate.UnmarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (pc *<a href="index.html#PeerCertificate">PeerCertificate</a>) <a href="index.html#UnmarshalJSON">UnmarshalJSON</a>(b []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmarshalJSON populates a new PeerCertificate struct from JSON data.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Plugin">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/plugin.go?s=289:604#L2">Plugin</a>
+				<a class="permalink" href="index.html#Plugin">&#xb6;</a>
+			</h2>
+			<p>
+Plugin allows third party plugins to authorize requests and responses
+in the context of docker API
+</p>
+
+			<pre>type Plugin interface {
+    <span class="comment">// Name returns the registered plugin name</span>
+    Name() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// AuthZRequest authorizes the request from the client to the daemon</span>
+    AuthZRequest(*<a href="index.html#Request">Request</a>) (*<a href="index.html#Response">Response</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// AuthZResponse authorizes the response from the daemon to the client</span>
+    AuthZResponse(*<a href="index.html#Request">Request</a>) (*<a href="index.html#Response">Response</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Request">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/api.go?s=1291:2614#L36">Request</a>
+				<a class="permalink" href="index.html#Request">&#xb6;</a>
+			</h2>
+			<p>
+Request holds data required for authZ plugins
+</p>
+
+			<pre>type Request struct {
+<span id="Request.User"></span>    <span class="comment">// User holds the user extracted by AuthN mechanism</span>
+    User <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;User,omitempty&#34;`
+
+<span id="Request.UserAuthNMethod"></span>    <span class="comment">// UserAuthNMethod holds the mechanism used to extract user details (e.g., krb)</span>
+    UserAuthNMethod <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;UserAuthNMethod,omitempty&#34;`
+
+<span id="Request.RequestMethod"></span>    <span class="comment">// RequestMethod holds the HTTP method (GET/POST/PUT)</span>
+    RequestMethod <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;RequestMethod,omitempty&#34;`
+
+    <span class="comment">// RequestUri holds the full HTTP uri (e.g., /v1.21/version)</span>
+<span id="Request.RequestURI"></span>    RequestURI <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;RequestUri,omitempty&#34;`
+
+<span id="Request.RequestBody"></span>    <span class="comment">// RequestBody stores the raw request body sent to the docker daemon</span>
+    RequestBody []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a> `json:&#34;RequestBody,omitempty&#34;`
+
+<span id="Request.RequestHeaders"></span>    <span class="comment">// RequestHeaders stores the raw request headers sent to the docker daemon</span>
+    RequestHeaders map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;RequestHeaders,omitempty&#34;`
+
+<span id="Request.RequestPeerCertificates"></span>    <span class="comment">// RequestPeerCertificates stores the request&#39;s TLS peer certificates in PEM format</span>
+    RequestPeerCertificates []*<a href="index.html#PeerCertificate">PeerCertificate</a> `json:&#34;RequestPeerCertificates,omitempty&#34;`
+
+<span id="Request.ResponseStatusCode"></span>    <span class="comment">// ResponseStatusCode stores the status code returned from docker daemon</span>
+    ResponseStatusCode <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;ResponseStatusCode,omitempty&#34;`
+
+<span id="Request.ResponseBody"></span>    <span class="comment">// ResponseBody stores the raw response body sent from docker daemon</span>
+    ResponseBody []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a> `json:&#34;ResponseBody,omitempty&#34;`
+
+<span id="Request.ResponseHeaders"></span>    <span class="comment">// ResponseHeaders stores the response headers sent to the docker daemon</span>
+    ResponseHeaders map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;ResponseHeaders,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Response">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/api.go?s=2661:2931#L69">Response</a>
+				<a class="permalink" href="index.html#Response">&#xb6;</a>
+			</h2>
+			<p>
+Response represents authZ plugin response
+</p>
+
+			<pre>type Response struct {
+<span id="Response.Allow"></span>    <span class="comment">// Allow indicating whether the user is allowed or not</span>
+    Allow <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;Allow&#34;`
+
+<span id="Response.Msg"></span>    <span class="comment">// Msg stores the authorization message</span>
+    Msg <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Msg,omitempty&#34;`
+
+<span id="Response.Err"></span>    <span class="comment">// Err stores a message in case there&#39;s an error</span>
+    Err <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Err,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ResponseModifier">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/response.go?s=283:1032#L5">ResponseModifier</a>
+				<a class="permalink" href="index.html#ResponseModifier">&#xb6;</a>
+			</h2>
+			<p>
+ResponseModifier allows authorization plugins to read and modify the content of the http.response
+</p>
+
+			<pre>type ResponseModifier interface {
+    <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>
+    <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Flusher">Flusher</a>
+    <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#CloseNotifier">CloseNotifier</a>
+
+    <span class="comment">// RawBody returns the current http content</span>
+    RawBody() []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>
+
+    <span class="comment">// RawHeaders returns the current content of the http headers</span>
+    RawHeaders() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// StatusCode returns the current status code</span>
+    StatusCode() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// OverrideBody replaces the body of the HTTP reply</span>
+    OverrideBody(b []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>)
+
+    <span class="comment">// OverrideHeader replaces the headers of the HTTP reply</span>
+    OverrideHeader(b []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// OverrideStatusCode replaces the status code of the HTTP reply</span>
+    OverrideStatusCode(statusCode <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)
+
+    <span class="comment">// FlushAll flushes all data to the HTTP response</span>
+    FlushAll() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Hijacked indicates the response has been hijacked by the Docker daemon</span>
+    Hijacked() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewResponseModifier">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/authorization/response.go?s=1147:1212#L36">NewResponseModifier</a>
+					<a class="permalink" href="index.html#NewResponseModifier">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewResponseModifier">NewResponseModifier</a>(rw <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>) <a href="index.html#ResponseModifier">ResponseModifier</a></pre>
+				<p>
+NewResponseModifier creates a wrapper to an http.ResponseWriter to allow inspecting and modifying the content
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

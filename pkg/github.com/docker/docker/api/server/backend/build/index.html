@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>build - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package build</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/server/backend/build"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Backend">type Backend</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewBackend">func NewBackend(components ImageComponent, builder Builder, fsCache *fscache.FSCache, buildkit *buildkit.Builder) (*Backend, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Backend.Build">func (b *Backend) Build(ctx context.Context, config backend.BuildConfig) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Backend.Cancel">func (b *Backend) Cancel(ctx context.Context, id string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Backend.PruneCache">func (b *Backend) PruneCache(ctx context.Context, opts types.BuildCachePruneOptions) (*types.BuildCachePruneReport, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Backend.RegisterGRPC">func (b *Backend) RegisterGRPC(s *grpc.Server)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Builder">type Builder</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ImageComponent">type ImageComponent</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Tagger">type Tagger</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewTagger">func NewTagger(backend ImageComponent, stdout io.Writer, names []string) (*Tagger, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Tagger.TagImages">func (bt *Tagger) TagImages(imageID image.ID) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go">backend.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/tag.go">tag.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Backend">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=943:1088#L22">Backend</a>
+				<a class="permalink" href="index.html#Backend">&#xb6;</a>
+			</h2>
+			<p>
+Backend provides build functionality to the API router
+</p>
+
+			<pre>type Backend struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBackend">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=1148:1279#L30">NewBackend</a>
+					<a class="permalink" href="index.html#NewBackend">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewBackend">NewBackend</a>(components <a href="index.html#ImageComponent">ImageComponent</a>, builder <a href="index.html#Builder">Builder</a>, fsCache *<a href="../../../../builder/fscache/index.html">fscache</a>.<a href="../../../../builder/fscache/index.html#FSCache">FSCache</a>, buildkit *<a href="../../../../builder/builder-next/index.html">buildkit</a>.<a href="../../../../builder/builder-next/index.html#Builder">Builder</a>) (*<a href="index.html#Backend">Backend</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewBackend creates a new build backend from components
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Backend.Build">func (*Backend) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=1604:1692#L42">Build</a>
+					<a class="permalink" href="index.html#Backend.Build">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Backend">Backend</a>) <a href="index.html#Build">Build</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, config <a href="../../../types/backend/index.html">backend</a>.<a href="../../../types/backend/index.html#BuildConfig">BuildConfig</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Build builds an image from a Source
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Backend.Cancel">func (*Backend) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=3635:3697#L123">Cancel</a>
+					<a class="permalink" href="index.html#Backend.Cancel">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Backend">Backend</a>) <a href="index.html#Cancel">Cancel</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Cancel cancels the build by ID
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Backend.PruneCache">func (*Backend) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=2811:2933#L91">PruneCache</a>
+					<a class="permalink" href="index.html#Backend.PruneCache">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Backend">Backend</a>) <a href="index.html#PruneCache">PruneCache</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, opts <a href="../../../types/index.html">types</a>.<a href="../../../types/index.html#BuildCachePruneOptions">BuildCachePruneOptions</a>) (*<a href="../../../types/index.html">types</a>.<a href="../../../types/index.html#BuildCachePruneReport">BuildCachePruneReport</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+PruneCache removes all cached build sources
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Backend.RegisterGRPC">func (*Backend) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=1457:1503#L35">RegisterGRPC</a>
+					<a class="permalink" href="index.html#Backend.RegisterGRPC">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="index.html#Backend">Backend</a>) <a href="index.html#RegisterGRPC">RegisterGRPC</a>(s *<a href="http://127.0.0.1:8080/pkg/google.golang.org/grpc/">grpc</a>.<a href="http://127.0.0.1:8080/pkg/google.golang.org/grpc/#Server">Server</a>)</pre>
+				<p>
+RegisterGRPC registers buildkit controller to the grpc server.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Builder">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=787:883#L17">Builder</a>
+				<a class="permalink" href="index.html#Builder">&#xb6;</a>
+			</h2>
+			<p>
+Builder defines interface for running a build
+</p>
+
+			<pre>type Builder interface {
+    Build(<a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, <a href="../../../types/backend/index.html">backend</a>.<a href="../../../types/backend/index.html#BuildConfig">BuildConfig</a>) (*<a href="../../../../builder/index.html">builder</a>.<a href="../../../../builder/index.html#Result">Result</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ImageComponent">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/backend.go?s=594:736#L11">ImageComponent</a>
+				<a class="permalink" href="index.html#ImageComponent">&#xb6;</a>
+			</h2>
+			<p>
+ImageComponent provides an interface for working with images
+</p>
+
+			<pre>type ImageComponent interface {
+    SquashImage(from <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, to <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    TagImageWithReference(<a href="../../../../image/index.html">image</a>.<a href="../../../../image/index.html#ID">ID</a>, <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Tagger">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/tag.go?s=273:386#L3">Tagger</a>
+				<a class="permalink" href="index.html#Tagger">&#xb6;</a>
+			</h2>
+			<p>
+Tagger is responsible for tagging an image created by a builder
+</p>
+
+			<pre>type Tagger struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewTagger">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/tag.go?s=519:608#L11">NewTagger</a>
+					<a class="permalink" href="index.html#NewTagger">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewTagger">NewTagger</a>(backend <a href="index.html#ImageComponent">ImageComponent</a>, stdout <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, names []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Tagger">Tagger</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewTagger returns a new Tagger for tagging the images of a build.
+If any of the names are invalid tags an error is returned.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Tagger.TagImages">func (*Tagger) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/backend/build/tag.go?s=859:910#L24">TagImages</a>
+					<a class="permalink" href="index.html#Tagger.TagImages">&#xb6;</a>
+				</h3>
+				<pre>func (bt *<a href="index.html#Tagger">Tagger</a>) <a href="index.html#TagImages">TagImages</a>(imageID <a href="../../../../image/index.html">image</a>.<a href="../../../../image/index.html#ID">ID</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+TagImages creates image tags for the imageID
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

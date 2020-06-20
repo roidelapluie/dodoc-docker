@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>router - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package router</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/server/router"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ExperimentalRoute">type ExperimentalRoute</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Route">type Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Experimental">func Experimental(r Route) Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDeleteRoute">func NewDeleteRoute(path string, handler httputils.APIFunc, opts ...RouteWrapper) Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewGetRoute">func NewGetRoute(path string, handler httputils.APIFunc, opts ...RouteWrapper) Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewHeadRoute">func NewHeadRoute(path string, handler httputils.APIFunc, opts ...RouteWrapper) Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewOptionsRoute">func NewOptionsRoute(path string, handler httputils.APIFunc, opts ...RouteWrapper) Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewPostRoute">func NewPostRoute(path string, handler httputils.APIFunc, opts ...RouteWrapper) Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewPutRoute">func NewPutRoute(path string, handler httputils.APIFunc, opts ...RouteWrapper) Route</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewRoute">func NewRoute(method, path string, handler httputils.APIFunc, opts ...RouteWrapper) Route</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RouteWrapper">type RouteWrapper</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Router">type Router</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/experimental.go">experimental.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go">local.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/router.go">router.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ExperimentalRoute">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/experimental.go?s=244:309#L1">ExperimentalRoute</a>
+				<a class="permalink" href="index.html#ExperimentalRoute">&#xb6;</a>
+			</h2>
+			<p>
+ExperimentalRoute defines an experimental API route that can be enabled or disabled.
+</p>
+
+			<pre>type ExperimentalRoute interface {
+    <a href="index.html#Route">Route</a>
+
+    Enable()
+    Disable()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Route">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/router.go?s=391:662#L2">Route</a>
+				<a class="permalink" href="index.html#Route">&#xb6;</a>
+			</h2>
+			<p>
+Route defines an individual API route in the docker server.
+</p>
+
+			<pre>type Route interface {
+    <span class="comment">// Handler returns the raw function to create the http handler.</span>
+    Handler() <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>
+    <span class="comment">// Method returns the http method that the route responds to.</span>
+    Method() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// Path returns the subpath where the route responds to.</span>
+    Path() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="Experimental">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/experimental.go?s=1620:1652#L53">Experimental</a>
+					<a class="permalink" href="index.html#Experimental">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#Experimental">Experimental</a>(r <a href="index.html#Route">Route</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+Experimental will mark a route as experimental.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewDeleteRoute">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=1776:1863#L49">NewDeleteRoute</a>
+					<a class="permalink" href="index.html#NewDeleteRoute">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewDeleteRoute">NewDeleteRoute</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, handler <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>, opts ...<a href="index.html#RouteWrapper">RouteWrapper</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+NewDeleteRoute initializes a new route with the http method DELETE.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewGetRoute">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=1157:1241#L34">NewGetRoute</a>
+					<a class="permalink" href="index.html#NewGetRoute">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewGetRoute">NewGetRoute</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, handler <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>, opts ...<a href="index.html#RouteWrapper">RouteWrapper</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+NewGetRoute initializes a new route with the http method GET.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewHeadRoute">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=2206:2291#L59">NewHeadRoute</a>
+					<a class="permalink" href="index.html#NewHeadRoute">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewHeadRoute">NewHeadRoute</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, handler <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>, opts ...<a href="index.html#RouteWrapper">RouteWrapper</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+NewHeadRoute initializes a new route with the http method HEAD.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewOptionsRoute">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=1993:2081#L54">NewOptionsRoute</a>
+					<a class="permalink" href="index.html#NewOptionsRoute">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewOptionsRoute">NewOptionsRoute</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, handler <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>, opts ...<a href="index.html#RouteWrapper">RouteWrapper</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+NewOptionsRoute initializes a new route with the http method OPTIONS.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewPostRoute">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=1362:1447#L39">NewPostRoute</a>
+					<a class="permalink" href="index.html#NewPostRoute">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewPostRoute">NewPostRoute</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, handler <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>, opts ...<a href="index.html#RouteWrapper">RouteWrapper</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+NewPostRoute initializes a new route with the http method POST.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewPutRoute">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=1567:1651#L44">NewPutRoute</a>
+					<a class="permalink" href="index.html#NewPutRoute">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewPutRoute">NewPutRoute</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, handler <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>, opts ...<a href="index.html#RouteWrapper">RouteWrapper</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+NewPutRoute initializes a new route with the http method PUT.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewRoute">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=898:987#L25">NewRoute</a>
+					<a class="permalink" href="index.html#NewRoute">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewRoute">NewRoute</a>(method, path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, handler <a href="../httputils/index.html">httputils</a>.<a href="../httputils/index.html#APIFunc">APIFunc</a>, opts ...<a href="index.html#RouteWrapper">RouteWrapper</a>) <a href="index.html#Route">Route</a></pre>
+				<p>
+NewRoute initializes a new local route for the router.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="RouteWrapper">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/local.go?s=234:271#L1">RouteWrapper</a>
+				<a class="permalink" href="index.html#RouteWrapper">&#xb6;</a>
+			</h2>
+			<p>
+RouteWrapper wraps a route with extra functionality.
+It is passed in when creating a new route.
+</p>
+
+			<pre>type RouteWrapper func(r <a href="index.html#Route">Route</a>) <a href="index.html#Route">Route</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Router">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/router/router.go?s=216:326#L1">Router</a>
+				<a class="permalink" href="index.html#Router">&#xb6;</a>
+			</h2>
+			<p>
+Router defines an interface to specify a group of routes to add to the docker server.
+</p>
+
+			<pre>type Router interface {
+    <span class="comment">// Routes returns the list of routes to add to the docker server.</span>
+    Routes() []<a href="index.html#Route">Route</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="build/index.html">build</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="checkpoint/index.html">checkpoint</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="container/index.html">container</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="debug/index.html">debug</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="distribution/index.html">distribution</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="grpc/index.html">grpc</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="image/index.html">image</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="network/index.html">network</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="plugin/index.html">plugin</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="session/index.html">session</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="swarm/index.html">swarm</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="system/index.html">system</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="volume/index.html">volume</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

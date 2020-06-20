@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>errdefs - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package errdefs</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/errdefs"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package errdefs defines a set of error interfaces that packages should use for communicating classes of errors.
+Errors that cross the package boundary should implement one (and only one) of these interfaces.
+</p>
+<p>
+Packages should not reference these interfaces directly, only implement them.
+To check if a particular error implements one of these interfaces, there are helper
+functions provided (e.g. `Is&lt;SomeError&gt;`) which can be used rather than asserting the interfaces directly.
+If you must assert on these interfaces, be sure to check the causal chain (`err.Cause()`).
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#Cancelled">func Cancelled(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#Conflict">func Conflict(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#DataLoss">func DataLoss(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#Deadline">func Deadline(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#Forbidden">func Forbidden(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#FromContext">func FromContext(ctx context.Context) error</a></dd>
+			
+				
+				<dd><a href="index.html#FromStatusCode">func FromStatusCode(err error, statusCode int) error</a></dd>
+			
+				
+				<dd><a href="index.html#GetHTTPErrorStatusCode">func GetHTTPErrorStatusCode(err error) int</a></dd>
+			
+				
+				<dd><a href="index.html#InvalidParameter">func InvalidParameter(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#IsCancelled">func IsCancelled(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsConflict">func IsConflict(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsDataLoss">func IsDataLoss(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsDeadline">func IsDeadline(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsForbidden">func IsForbidden(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsInvalidParameter">func IsInvalidParameter(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsNotFound">func IsNotFound(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsNotImplemented">func IsNotImplemented(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsNotModified">func IsNotModified(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsSystem">func IsSystem(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsUnauthorized">func IsUnauthorized(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsUnavailable">func IsUnavailable(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsUnknown">func IsUnknown(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#NotFound">func NotFound(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#NotImplemented">func NotImplemented(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#NotModified">func NotModified(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#System">func System(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#Unauthorized">func Unauthorized(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#Unavailable">func Unavailable(err error) error</a></dd>
+			
+				
+				<dd><a href="index.html#Unknown">func Unknown(err error) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ErrCancelled">type ErrCancelled</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrConflict">type ErrConflict</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrDataLoss">type ErrDataLoss</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrDeadline">type ErrDeadline</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrForbidden">type ErrForbidden</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrInvalidParameter">type ErrInvalidParameter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrNotFound">type ErrNotFound</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrNotImplemented">type ErrNotImplemented</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrNotModified">type ErrNotModified</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrSystem">type ErrSystem</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrUnauthorized">type ErrUnauthorized</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrUnavailable">type ErrUnavailable</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrUnknown">type ErrUnknown</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go">defs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/doc.go">doc.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go">helpers.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/http_helpers.go">http_helpers.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go">is.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="Cancelled">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=3800:3831#L164">Cancelled</a>
+				<a class="permalink" href="index.html#Cancelled">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Cancelled">Cancelled</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Cancelled is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Conflict">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=1027:1057#L36">Conflict</a>
+				<a class="permalink" href="index.html#Conflict">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Conflict">Conflict</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Conflict is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DataLoss">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=4475:4505#L196">DataLoss</a>
+				<a class="permalink" href="index.html#DataLoss">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DataLoss">DataLoss</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+DataLoss is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Deadline">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=4143:4173#L180">Deadline</a>
+				<a class="permalink" href="index.html#Deadline">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Deadline">Deadline</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Deadline is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Forbidden">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=2084:2115#L84">Forbidden</a>
+				<a class="permalink" href="index.html#Forbidden">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Forbidden">Forbidden</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Forbidden is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="FromContext">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=4654:4697#L204">FromContext</a>
+				<a class="permalink" href="index.html#FromContext">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FromContext">FromContext</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+FromContext returns the error class from the passed in context
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="FromStatusCode">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/http_helpers.go?s=2310:2362#L67">FromStatusCode</a>
+				<a class="permalink" href="index.html#FromStatusCode">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FromStatusCode">FromStatusCode</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>, statusCode <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+FromStatusCode creates an errdef error, based on the provided HTTP status-code
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetHTTPErrorStatusCode">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/http_helpers.go?s=373:415#L5">GetHTTPErrorStatusCode</a>
+				<a class="permalink" href="index.html#GetHTTPErrorStatusCode">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetHTTPErrorStatusCode">GetHTTPErrorStatusCode</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+			<p>
+GetHTTPErrorStatusCode retrieves status code from error message.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="InvalidParameter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=671:709#L20">InvalidParameter</a>
+				<a class="permalink" href="index.html#InvalidParameter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#InvalidParameter">InvalidParameter</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+InvalidParameter is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsCancelled">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=2189:2221#L82">IsCancelled</a>
+				<a class="permalink" href="index.html#IsCancelled">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsCancelled">IsCancelled</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsCancelled returns if the passed in error is an ErrCancelled
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsConflict">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=889:920#L34">IsConflict</a>
+				<a class="permalink" href="index.html#IsConflict">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsConflict">IsConflict</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsConflict returns if the passed in error is an ErrConflict
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsDataLoss">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=2501:2532#L94">IsDataLoss</a>
+				<a class="permalink" href="index.html#IsDataLoss">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsDataLoss">IsDataLoss</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsDataLoss returns if the passed in error is an ErrDataLoss
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsDeadline">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=2346:2377#L88">IsDeadline</a>
+				<a class="permalink" href="index.html#IsDeadline">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsDeadline">IsDeadline</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsDeadline returns if the passed in error is an ErrDeadline
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsForbidden">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=1384:1416#L52">IsForbidden</a>
+				<a class="permalink" href="index.html#IsForbidden">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsForbidden">IsForbidden</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsForbidden returns if the passed in error is an ErrForbidden
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsInvalidParameter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=718:757#L28">IsInvalidParameter</a>
+				<a class="permalink" href="index.html#IsInvalidParameter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsInvalidParameter">IsInvalidParameter</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsInvalidParameter returns if the passed in error is an ErrInvalidParameter
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsNotFound">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=547:578#L22">IsNotFound</a>
+				<a class="permalink" href="index.html#IsNotFound">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsNotFound">IsNotFound</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsNotFound returns if the passed in error is an ErrNotFound
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsNotImplemented">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=1869:1906#L70">IsNotImplemented</a>
+				<a class="permalink" href="index.html#IsNotImplemented">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsNotImplemented">IsNotImplemented</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsNotImplemented returns if the passed in error is an ErrNotImplemented
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsNotModified">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=1696:1730#L64">IsNotModified</a>
+				<a class="permalink" href="index.html#IsNotModified">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsNotModified">IsNotModified</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsNotModified returns if the passed in error is a NotModified error
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsSystem">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=1537:1566#L58">IsSystem</a>
+				<a class="permalink" href="index.html#IsSystem">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsSystem">IsSystem</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsSystem returns if the passed in error is an ErrSystem
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsUnauthorized">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=1052:1087#L40">IsUnauthorized</a>
+				<a class="permalink" href="index.html#IsUnauthorized">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsUnauthorized">IsUnauthorized</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsUnauthorized returns if the passed in error is an ErrUnauthorized
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsUnavailable">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=1221:1255#L46">IsUnavailable</a>
+				<a class="permalink" href="index.html#IsUnavailable">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsUnavailable">IsUnavailable</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsUnavailable returns if the passed in error is an ErrUnavailable
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsUnknown">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/is.go?s=2034:2064#L76">IsUnknown</a>
+				<a class="permalink" href="index.html#IsUnknown">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsUnknown">IsUnknown</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsUnknown returns if the passed in error is an ErrUnknown
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NotFound">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=299:329#L4">NotFound</a>
+				<a class="permalink" href="index.html#NotFound">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NotFound">NotFound</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+NotFound is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NotImplemented">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=3121:3157#L132">NotImplemented</a>
+				<a class="permalink" href="index.html#NotImplemented">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NotImplemented">NotImplemented</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+NotImplemented is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NotModified">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=2750:2783#L116">NotModified</a>
+				<a class="permalink" href="index.html#NotModified">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NotModified">NotModified</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+NotModified is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="System">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=2409:2437#L100">System</a>
+				<a class="permalink" href="index.html#System">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#System">System</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+System is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Unauthorized">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=1379:1413#L52">Unauthorized</a>
+				<a class="permalink" href="index.html#Unauthorized">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Unauthorized">Unauthorized</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Unauthorized is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Unavailable">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=1738:1771#L68">Unavailable</a>
+				<a class="permalink" href="index.html#Unavailable">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Unavailable">Unavailable</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Unavailable is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Unknown">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/helpers.go?s=3466:3495#L148">Unknown</a>
+				<a class="permalink" href="index.html#Unknown">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Unknown">Unknown</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Unknown is a helper to create an error of the class with the same name from any error type
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ErrCancelled">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=1640:1684#L47">ErrCancelled</a>
+				<a class="permalink" href="index.html#ErrCancelled">&#xb6;</a>
+			</h2>
+			<p>
+ErrCancelled signals that the action was cancelled.
+</p>
+
+			<pre>type ErrCancelled interface {
+    Cancelled()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrConflict">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=456:498#L5">ErrConflict</a>
+				<a class="permalink" href="index.html#ErrConflict">&#xb6;</a>
+			</h2>
+			<p>
+ErrConflict signals that some internal state conflicts with the requested action and can&#39;t be performed.
+A change in state should be able to clear this error.
+</p>
+
+			<pre>type ErrConflict interface {
+    Conflict()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrDataLoss">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=1893:1935#L57">ErrDataLoss</a>
+				<a class="permalink" href="index.html#ErrDataLoss">&#xb6;</a>
+			</h2>
+			<p>
+ErrDataLoss indicates that data was lost or there is data corruption.
+</p>
+
+			<pre>type ErrDataLoss interface {
+    DataLoss()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrDeadline">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=1768:1818#L52">ErrDeadline</a>
+				<a class="permalink" href="index.html#ErrDeadline">&#xb6;</a>
+			</h2>
+			<p>
+ErrDeadline signals that the deadline was reached before the action completed.
+</p>
+
+			<pre>type ErrDeadline interface {
+    DeadlineExceeded()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrForbidden">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=954:998#L21">ErrForbidden</a>
+				<a class="permalink" href="index.html#ErrForbidden">&#xb6;</a>
+			</h2>
+			<p>
+ErrForbidden signals that the requested action cannot be performed under any circumstances.
+When a ErrForbidden is returned, the caller should never retry the action.
+</p>
+
+			<pre>type ErrForbidden interface {
+    Forbidden()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrInvalidParameter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=231:289#L1">ErrInvalidParameter</a>
+				<a class="permalink" href="index.html#ErrInvalidParameter">&#xb6;</a>
+			</h2>
+			<p>
+ErrInvalidParameter signals that the user input is invalid
+</p>
+
+			<pre>type ErrInvalidParameter interface {
+    InvalidParameter()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrNotFound">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=125:167#L1">ErrNotFound</a>
+				<a class="permalink" href="index.html#ErrNotFound">&#xb6;</a>
+			</h2>
+			<p>
+ErrNotFound signals that the requested object doesn&#39;t exist
+</p>
+
+			<pre>type ErrNotFound interface {
+    NotFound()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrNotImplemented">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=1414:1468#L37">ErrNotImplemented</a>
+				<a class="permalink" href="index.html#ErrNotImplemented">&#xb6;</a>
+			</h2>
+			<p>
+ErrNotImplemented signals that the requested action/feature is not implemented on the system as configured.
+</p>
+
+			<pre>type ErrNotImplemented interface {
+    NotImplemented()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrNotModified">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=1253:1301#L32">ErrNotModified</a>
+				<a class="permalink" href="index.html#ErrNotModified">&#xb6;</a>
+			</h2>
+			<p>
+ErrNotModified signals that an action can&#39;t be performed because it&#39;s already in the desired state
+</p>
+
+			<pre>type ErrNotModified interface {
+    NotModified()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrSystem">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=1111:1149#L27">ErrSystem</a>
+				<a class="permalink" href="index.html#ErrSystem">&#xb6;</a>
+			</h2>
+			<p>
+ErrSystem signals that some internal error occurred.
+An example of this would be a failed mount request.
+</p>
+
+			<pre>type ErrSystem interface {
+    System()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrUnauthorized">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=599:649#L10">ErrUnauthorized</a>
+				<a class="permalink" href="index.html#ErrUnauthorized">&#xb6;</a>
+			</h2>
+			<p>
+ErrUnauthorized is used to signify that the user is not authorized to perform a specific action
+</p>
+
+			<pre>type ErrUnauthorized interface {
+    Unauthorized()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrUnavailable">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=731:779#L15">ErrUnavailable</a>
+				<a class="permalink" href="index.html#ErrUnavailable">&#xb6;</a>
+			</h2>
+			<p>
+ErrUnavailable signals that the requested action/subsystem is not available.
+</p>
+
+			<pre>type ErrUnavailable interface {
+    Unavailable()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrUnknown">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/errdefs/defs.go?s=1543:1583#L42">ErrUnknown</a>
+				<a class="permalink" href="index.html#ErrUnknown">&#xb6;</a>
+			</h2>
+			<p>
+ErrUnknown signals that the kind of error that occurred is not known.
+</p>
+
+			<pre>type ErrUnknown interface {
+    Unknown()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

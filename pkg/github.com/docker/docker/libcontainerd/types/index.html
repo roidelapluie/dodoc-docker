@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>types - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package types</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/libcontainerd/types"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Backend">type Backend</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Checkpoints">type Checkpoints</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Client">type Client</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventInfo">type EventInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventType">type EventType</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Process">type Process</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Resources">type Resources</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Stats">type Stats</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#InterfaceToStats">func InterfaceToStats(read time.Time, v interface{}) *Stats</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StdioCallback">type StdioCallback</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Summary">type Summary</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types.go">types.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types_linux.go">types_linux.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+InitProcessName is the name given to the first process of a container
+</p>
+
+				<pre>const <span id="InitProcessName">InitProcessName</span> = &#34;init&#34;</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="Backend">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types.go?s=1012:1109#L30">Backend</a>
+				<a class="permalink" href="index.html#Backend">&#xb6;</a>
+			</h2>
+			<p>
+Backend defines callbacks that the client of the library needs to implement.
+</p>
+
+			<pre>type Backend interface {
+    ProcessEvent(containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, event <a href="index.html#EventType">EventType</a>, ei <a href="index.html#EventInfo">EventInfo</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Checkpoints">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types_linux.go?s=789:814#L21">Checkpoints</a>
+				<a class="permalink" href="index.html#Checkpoints">&#xb6;</a>
+			</h2>
+			<p>
+Checkpoints contains the details of a checkpoint
+</p>
+
+			<pre>type Checkpoints struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Client">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types.go?s=1267:2791#L40">Client</a>
+				<a class="permalink" href="index.html#Client">&#xb6;</a>
+			</h2>
+			<p>
+Client provides access to containerd features.
+</p>
+
+			<pre>type Client interface {
+    Version(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/">containerd</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/#Version">Version</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    Restore(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attachStdio <a href="index.html#StdioCallback">StdioCallback</a>) (alive <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, pid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, p <a href="index.html#Process">Process</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    Create(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, spec *specs.<a href="index.html#Spec">Spec</a>, runtimeOptions interface{}) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Start(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID, checkpointDir <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, withStdin <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, attachStdio <a href="index.html#StdioCallback">StdioCallback</a>) (pid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    SignalProcess(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID, processID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, signal <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Exec(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID, processID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, spec *specs.<a href="index.html#Process">Process</a>, withStdin <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, attachStdio <a href="index.html#StdioCallback">StdioCallback</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    ResizeTerminal(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID, processID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, width, height <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    CloseStdin(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID, processID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Pause(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Resume(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Stats(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Stats">Stats</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    ListPids(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Summary(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="index.html#Summary">Summary</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    DeleteTask(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>, <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Delete(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Status(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/">containerd</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/#ProcessStatus">ProcessStatus</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    UpdateResources(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, resources *<a href="index.html#Resources">Resources</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    CreateCheckpoint(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerID, checkpointDir <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, exit <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventInfo">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types.go?s=765:930#L19">EventInfo</a>
+				<a class="permalink" href="index.html#EventInfo">&#xb6;</a>
+			</h2>
+			<p>
+EventInfo contains the event info
+</p>
+
+			<pre>type EventInfo struct {
+<span id="EventInfo.ContainerID"></span>    ContainerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EventInfo.ProcessID"></span>    ProcessID   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EventInfo.Pid"></span>    Pid         <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="EventInfo.ExitCode"></span>    ExitCode    <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="EventInfo.ExitedAt"></span>    ExitedAt    <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="EventInfo.OOMKilled"></span>    OOMKilled   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="EventInfo.Error"></span>    Error       <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventType">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types.go?s=291:312#L3">EventType</a>
+				<a class="permalink" href="index.html#EventType">&#xb6;</a>
+			</h2>
+			<p>
+EventType represents a possible event from libcontainerd
+</p>
+
+			<pre>type EventType <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				<p>
+Event constants used when reporting events
+</p>
+
+				<pre>const (
+    <span id="EventUnknown">EventUnknown</span>     <a href="index.html#EventType">EventType</a> = &#34;unknown&#34;
+    <span id="EventExit">EventExit</span>        <a href="index.html#EventType">EventType</a> = &#34;exit&#34;
+    <span id="EventOOM">EventOOM</span>         <a href="index.html#EventType">EventType</a> = &#34;oom&#34;
+    <span id="EventCreate">EventCreate</span>      <a href="index.html#EventType">EventType</a> = &#34;create&#34;
+    <span id="EventStart">EventStart</span>       <a href="index.html#EventType">EventType</a> = &#34;start&#34;
+    <span id="EventExecAdded">EventExecAdded</span>   <a href="index.html#EventType">EventType</a> = &#34;exec-added&#34;
+    <span id="EventExecStarted">EventExecStarted</span> <a href="index.html#EventType">EventType</a> = &#34;exec-started&#34;
+    <span id="EventPaused">EventPaused</span>      <a href="index.html#EventType">EventType</a> = &#34;paused&#34;
+    <span id="EventResumed">EventResumed</span>     <a href="index.html#EventType">EventType</a> = &#34;resumed&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Process">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types.go?s=1137:1215#L35">Process</a>
+				<a class="permalink" href="index.html#Process">&#xb6;</a>
+			</h2>
+			<p>
+Process of a container
+</p>
+
+			<pre>type Process interface {
+    Delete(<a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>, <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Resources">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types_linux.go?s=700:735#L18">Resources</a>
+				<a class="permalink" href="index.html#Resources">&#xb6;</a>
+			</h2>
+			<p>
+Resources defines updatable container resource values. TODO: it must match containerd upcoming API
+</p>
+
+			<pre>type Resources <a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/#LinuxResources">LinuxResources</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Stats">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types_linux.go?s=315:381#L4">Stats</a>
+				<a class="permalink" href="index.html#Stats">&#xb6;</a>
+			</h2>
+			<p>
+Stats holds metrics properties as returned by containerd
+</p>
+
+			<pre>type Stats struct {
+<span id="Stats.Read"></span>    Read    <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="Stats.Metrics"></span>    Metrics *<a href="http://127.0.0.1:8080/pkg/github.com/containerd/cgroups/stats/v1/">statsV1</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/cgroups/stats/v1/#Metrics">Metrics</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="InterfaceToStats">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types_linux.go?s=464:523#L10">InterfaceToStats</a>
+					<a class="permalink" href="index.html#InterfaceToStats">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#InterfaceToStats">InterfaceToStats</a>(read <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>, v interface{}) *<a href="index.html#Stats">Stats</a></pre>
+				<p>
+InterfaceToStats returns a stats object from the platform-specific interface.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="StdioCallback">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types.go?s=2861:2918#L65">StdioCallback</a>
+				<a class="permalink" href="index.html#StdioCallback">&#xb6;</a>
+			</h2>
+			<p>
+StdioCallback is called to connect a container or process stdio.
+</p>
+
+			<pre>type StdioCallback func(io *<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/">cio</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/#DirectIO">DirectIO</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/">cio</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/#IO">IO</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Summary">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/libcontainerd/types/types_linux.go?s=232:253#L1">Summary</a>
+				<a class="permalink" href="index.html#Summary">&#xb6;</a>
+			</h2>
+			<p>
+Summary is not used on linux
+</p>
+
+			<pre>type Summary struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

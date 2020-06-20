@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>mount - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package mount</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/mount"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ForceMount">func ForceMount(device, target, mType, options string) error</a></dd>
+			
+				
+				<dd><a href="index.html#GetMounts">func GetMounts(f FilterFunc) ([]*Info, error)</a></dd>
+			
+				
+				<dd><a href="index.html#MakeMount">func MakeMount(mnt string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakePrivate">func MakePrivate(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakeRPrivate">func MakeRPrivate(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakeRShared">func MakeRShared(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakeRSlave">func MakeRSlave(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakeRUnbindable">func MakeRUnbindable(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakeShared">func MakeShared(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakeSlave">func MakeSlave(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MakeUnbindable">func MakeUnbindable(mountPoint string) error</a></dd>
+			
+				
+				<dd><a href="index.html#MergeTmpfsOptions">func MergeTmpfsOptions(options []string) ([]string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Mount">func Mount(device, target, mType, options string) error</a></dd>
+			
+				
+				<dd><a href="index.html#Mounted">func Mounted(mountpoint string) (bool, error)</a></dd>
+			
+				
+				<dd><a href="index.html#PidMountInfo">func PidMountInfo(pid int) ([]*Info, error)</a></dd>
+			
+				
+				<dd><a href="index.html#RecursiveUnmount">func RecursiveUnmount(target string) error</a></dd>
+			
+				
+				<dd><a href="index.html#Unmount">func Unmount(target string) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#FilterFunc">type FilterFunc</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ParentsFilter">func ParentsFilter(path string) FilterFunc</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PrefixFilter">func PrefixFilter(prefix string) FilterFunc</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SingleEntryFilter">func SingleEntryFilter(mp string) FilterFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Info">type Info</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/flags.go">flags.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/flags_linux.go">flags_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go">mount.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mounter_linux.go">mounter_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mountinfo.go">mountinfo.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mountinfo_linux.go">mountinfo_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go">sharedsubtree_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/unmount_unix.go">unmount_unix.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// RDONLY will mount the file system read-only.</span>
+    <span id="RDONLY">RDONLY</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_RDONLY">MS_RDONLY</a>
+
+    <span class="comment">// NOSUID will not allow set-user-identifier or set-group-identifier bits to</span>
+    <span class="comment">// take effect.</span>
+    <span id="NOSUID">NOSUID</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_NOSUID">MS_NOSUID</a>
+
+    <span class="comment">// NODEV will not interpret character or block special devices on the file</span>
+    <span class="comment">// system.</span>
+    <span id="NODEV">NODEV</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_NODEV">MS_NODEV</a>
+
+    <span class="comment">// NOEXEC will not allow execution of any binaries on the mounted file system.</span>
+    <span id="NOEXEC">NOEXEC</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_NOEXEC">MS_NOEXEC</a>
+
+    <span class="comment">// SYNCHRONOUS will allow I/O to the file system to be done synchronously.</span>
+    <span id="SYNCHRONOUS">SYNCHRONOUS</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_SYNCHRONOUS">MS_SYNCHRONOUS</a>
+
+    <span class="comment">// DIRSYNC will force all directory updates within the file system to be done</span>
+    <span class="comment">// synchronously. This affects the following system calls: create, link,</span>
+    <span class="comment">// unlink, symlink, mkdir, rmdir, mknod and rename.</span>
+    <span id="DIRSYNC">DIRSYNC</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_DIRSYNC">MS_DIRSYNC</a>
+
+    <span class="comment">// REMOUNT will attempt to remount an already-mounted file system. This is</span>
+    <span class="comment">// commonly used to change the mount flags for a file system, especially to</span>
+    <span class="comment">// make a readonly file system writeable. It does not change device or mount</span>
+    <span class="comment">// point.</span>
+    <span id="REMOUNT">REMOUNT</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_REMOUNT">MS_REMOUNT</a>
+
+    <span class="comment">// MANDLOCK will force mandatory locks on a filesystem.</span>
+    <span id="MANDLOCK">MANDLOCK</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_MANDLOCK">MS_MANDLOCK</a>
+
+    <span class="comment">// NOATIME will not update the file access time when reading from a file.</span>
+    <span id="NOATIME">NOATIME</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_NOATIME">MS_NOATIME</a>
+
+    <span class="comment">// NODIRATIME will not update the directory access time.</span>
+    <span id="NODIRATIME">NODIRATIME</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_NODIRATIME">MS_NODIRATIME</a>
+
+    <span class="comment">// BIND remounts a subtree somewhere else.</span>
+    <span id="BIND">BIND</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_BIND">MS_BIND</a>
+
+    <span class="comment">// RBIND remounts a subtree and all possible submounts somewhere else.</span>
+    <span id="RBIND">RBIND</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_BIND">MS_BIND</a> | <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_REC">MS_REC</a>
+
+    <span class="comment">// UNBINDABLE creates a mount which cannot be cloned through a bind operation.</span>
+    <span id="UNBINDABLE">UNBINDABLE</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_UNBINDABLE">MS_UNBINDABLE</a>
+
+    <span class="comment">// RUNBINDABLE marks the entire mount tree as UNBINDABLE.</span>
+    <span id="RUNBINDABLE">RUNBINDABLE</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_UNBINDABLE">MS_UNBINDABLE</a> | <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_REC">MS_REC</a>
+
+    <span class="comment">// PRIVATE creates a mount which carries no propagation abilities.</span>
+    <span id="PRIVATE">PRIVATE</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_PRIVATE">MS_PRIVATE</a>
+
+    <span class="comment">// RPRIVATE marks the entire mount tree as PRIVATE.</span>
+    <span id="RPRIVATE">RPRIVATE</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_PRIVATE">MS_PRIVATE</a> | <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_REC">MS_REC</a>
+
+    <span class="comment">// SLAVE creates a mount which receives propagation from its master, but not</span>
+    <span class="comment">// vice versa.</span>
+    <span id="SLAVE">SLAVE</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_SLAVE">MS_SLAVE</a>
+
+    <span class="comment">// RSLAVE marks the entire mount tree as SLAVE.</span>
+    <span id="RSLAVE">RSLAVE</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_SLAVE">MS_SLAVE</a> | <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_REC">MS_REC</a>
+
+    <span class="comment">// SHARED creates a mount which provides the ability to create mirrors of</span>
+    <span class="comment">// that mount such that mounts and unmounts within any of the mirrors</span>
+    <span class="comment">// propagate to the other mirrors.</span>
+    <span id="SHARED">SHARED</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_SHARED">MS_SHARED</a>
+
+    <span class="comment">// RSHARED marks the entire mount tree as SHARED.</span>
+    <span id="RSHARED">RSHARED</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_SHARED">MS_SHARED</a> | <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_REC">MS_REC</a>
+
+    <span class="comment">// RELATIME updates inode access times relative to modify or change time.</span>
+    <span id="RELATIME">RELATIME</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_RELATIME">MS_RELATIME</a>
+
+    <span class="comment">// STRICTATIME allows to explicitly request full atime updates.  This makes</span>
+    <span class="comment">// it possible for the kernel to default to relatime or noatime but still</span>
+    <span class="comment">// allow userspace to override it.</span>
+    <span id="STRICTATIME">STRICTATIME</span> = <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#MS_STRICTATIME">MS_STRICTATIME</a>
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ForceMount">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=3381:3441#L108">ForceMount</a>
+				<a class="permalink" href="index.html#ForceMount">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ForceMount">ForceMount</a>(device, target, mType, options <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ForceMount will mount a filesystem according to the specified configuration,
+*regardless* if the target path is not already mounted. Options must be
+specified like the mount or fstab unix commands: &#34;opt1=val1,opt2=val2&#34;. See
+flags.go for supported option flags.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetMounts">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=2193:2238#L75">GetMounts</a>
+				<a class="permalink" href="index.html#GetMounts">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetMounts">GetMounts</a>(f <a href="index.html#FilterFunc">FilterFunc</a>) ([]*<a href="index.html#Info">Info</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetMounts retrieves a list of mounts for the current running process,
+with an optional filter applied (use nil for no filter).
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeMount">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=2103:2135#L43">MakeMount</a>
+				<a class="permalink" href="index.html#MakeMount">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeMount">MakeMount</a>(mnt <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeMount ensures that the file or directory given is a mount point,
+bind mounting it to itself it case it is not.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakePrivate">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=680:721#L7">MakePrivate</a>
+				<a class="permalink" href="index.html#MakePrivate">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakePrivate">MakePrivate</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakePrivate ensures a mounted filesystem has the PRIVATE mount option enabled.
+See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeRPrivate">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=920:962#L13">MakeRPrivate</a>
+				<a class="permalink" href="index.html#MakeRPrivate">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeRPrivate">MakeRPrivate</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeRPrivate ensures a mounted filesystem has the RPRIVATE mount option
+enabled. See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeRShared">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=442:483#L1">MakeRShared</a>
+				<a class="permalink" href="index.html#MakeRShared">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeRShared">MakeRShared</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeRShared ensures a mounted filesystem has the RSHARED mount option enabled.
+See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeRSlave">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=1388:1428#L25">MakeRSlave</a>
+				<a class="permalink" href="index.html#MakeRSlave">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeRSlave">MakeRSlave</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeRSlave ensures a mounted filesystem has the RSLAVE mount option enabled.
+See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeRUnbindable">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=1882:1927#L37">MakeRUnbindable</a>
+				<a class="permalink" href="index.html#MakeRUnbindable">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeRUnbindable">MakeRUnbindable</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeRUnbindable ensures a mounted filesystem has the RUNBINDABLE mount
+option enabled. See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeShared">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=206:246#L1">MakeShared</a>
+				<a class="permalink" href="index.html#MakeShared">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeShared">MakeShared</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeShared ensures a mounted filesystem has the SHARED mount option enabled.
+See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeSlave">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=1156:1195#L19">MakeSlave</a>
+				<a class="permalink" href="index.html#MakeSlave">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeSlave">MakeSlave</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeSlave ensures a mounted filesystem has the SLAVE mount option enabled.
+See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeUnbindable">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/sharedsubtree_linux.go?s=1630:1674#L31">MakeUnbindable</a>
+				<a class="permalink" href="index.html#MakeUnbindable">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeUnbindable">MakeUnbindable</a>(mountPoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MakeUnbindable ensures a mounted filesystem has the UNBINDABLE mount option
+enabled. See the supported options in flags.go for further reference.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MergeTmpfsOptions">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/flags.go?s=1877:1935#L62">MergeTmpfsOptions</a>
+				<a class="permalink" href="index.html#MergeTmpfsOptions">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MergeTmpfsOptions">MergeTmpfsOptions</a>(options []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+MergeTmpfsOptions merge mount options to make sure there is no duplicate.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Mount">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=2838:2893#L94">Mount</a>
+				<a class="permalink" href="index.html#Mount">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Mount">Mount</a>(device, target, mType, options <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Mount will mount filesystem according to the specified configuration, on the
+condition that the target path is *not* already mounted. Options must be
+specified like the mount or fstab unix commands: &#34;opt1=val1,opt2=val2&#34;. See
+flags.go for supported option flags.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Mounted">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=2383:2428#L81">Mounted</a>
+				<a class="permalink" href="index.html#Mounted">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Mounted">Mounted</a>(mountpoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Mounted determines if a specified mountpoint has been mounted.
+On Linux it looks at /proc/self/mountinfo.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="PidMountInfo">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mountinfo_linux.go?s=4202:4245#L126">PidMountInfo</a>
+				<a class="permalink" href="index.html#PidMountInfo">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#PidMountInfo">PidMountInfo</a>(pid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) ([]*<a href="index.html#Info">Info</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+PidMountInfo collects the mounts for a specific process ID. If the process
+ID is unknown, it is better to use `GetMounts` which will inspect
+&#34;/proc/self/mountinfo&#34; instead.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RecursiveUnmount">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=3826:3868#L121">RecursiveUnmount</a>
+				<a class="permalink" href="index.html#RecursiveUnmount">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RecursiveUnmount">RecursiveUnmount</a>(target <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+RecursiveUnmount unmounts the target and all mounts underneath, starting with
+the deepsest mount first.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Unmount">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=3642:3675#L115">Unmount</a>
+				<a class="permalink" href="index.html#Unmount">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Unmount">Unmount</a>(target <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Unmount lazily unmounts a filesystem on supported platforms, otherwise
+does a normal unmount.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="FilterFunc">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=1114:1159#L41">FilterFunc</a>
+				<a class="permalink" href="index.html#FilterFunc">&#xb6;</a>
+			</h2>
+			<p>
+FilterFunc is a type defining a callback function
+to filter out unwanted entries. It takes a pointer
+to an Info struct (not fully populated, currently
+only Mountpoint is filled in), and returns two booleans:
+</p>
+<pre>- skip: true if the entry should be skipped
+- stop: true if parsing should be stopped after the entry
+</pre>
+
+			<pre>type FilterFunc func(*<a href="index.html#Info">Info</a>) (skip, stop <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="ParentsFilter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=1902:1944#L66">ParentsFilter</a>
+					<a class="permalink" href="index.html#ParentsFilter">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#ParentsFilter">ParentsFilter</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#FilterFunc">FilterFunc</a></pre>
+				<p>
+ParentsFilter returns all entries whose mount points
+can be parents of a path specified, discarding others.
+For example, given `/var/lib/docker/something`, entries
+like `/var/lib/docker`, `/var` and `/` are returned.
+</p>
+
+				
+				
+			
+				
+				<h3 id="PrefixFilter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=1257:1300#L45">PrefixFilter</a>
+					<a class="permalink" href="index.html#PrefixFilter">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#PrefixFilter">PrefixFilter</a>(prefix <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#FilterFunc">FilterFunc</a></pre>
+				<p>
+PrefixFilter discards all entries whose mount points
+do not start with a prefix specified
+</p>
+
+				
+				
+			
+				
+				<h3 id="SingleEntryFilter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mount.go?s=1466:1510#L53">SingleEntryFilter</a>
+					<a class="permalink" href="index.html#SingleEntryFilter">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#SingleEntryFilter">SingleEntryFilter</a>(mp <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#FilterFunc">FilterFunc</a></pre>
+				<p>
+SingleEntryFilter looks for a specific entry
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Info">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/mount/mountinfo.go?s=209:1111#L1">Info</a>
+				<a class="permalink" href="index.html#Info">&#xb6;</a>
+			</h2>
+			<p>
+Info reveals information about a particular mounted filesystem. This
+struct is populated from the content in the /proc/&lt;pid&gt;/mountinfo file.
+</p>
+
+			<pre>type Info struct {
+<span id="Info.ID"></span>    <span class="comment">// ID is a unique identifier of the mount (may be reused after umount).</span>
+    ID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+
+<span id="Info.Parent"></span>    <span class="comment">// Parent indicates the ID of the mount parent (or of self for the top of the</span>
+    <span class="comment">// mount tree).</span>
+    Parent <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+
+<span id="Info.Major"></span>    <span class="comment">// Major indicates one half of the device ID which identifies the device class.</span>
+    Major <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+
+<span id="Info.Minor"></span>    <span class="comment">// Minor indicates one half of the device ID which identifies a specific</span>
+    <span class="comment">// instance of device.</span>
+    Minor <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+
+<span id="Info.Root"></span>    <span class="comment">// Root of the mount within the filesystem.</span>
+    Root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.Mountpoint"></span>    <span class="comment">// Mountpoint indicates the mount point relative to the process&#39;s root.</span>
+    Mountpoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.Opts"></span>    <span class="comment">// Opts represents mount-specific options.</span>
+    Opts <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.Optional"></span>    <span class="comment">// Optional represents optional fields.</span>
+    Optional <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.Fstype"></span>    <span class="comment">// Fstype indicates the type of filesystem, such as EXT3.</span>
+    Fstype <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.Source"></span>    <span class="comment">// Source indicates filesystem specific information or &#34;none&#34;.</span>
+    Source <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Info.VfsOpts"></span>    <span class="comment">// VfsOpts represents per super block options.</span>
+    VfsOpts <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

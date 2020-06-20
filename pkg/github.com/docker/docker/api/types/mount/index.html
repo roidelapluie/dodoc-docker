@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>mount - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package mount</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/mount"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#BindOptions">type BindOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Consistency">type Consistency</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Driver">type Driver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Mount">type Mount</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Propagation">type Propagation</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TmpfsOptions">type TmpfsOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Type">type Type</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#VolumeOptions">type VolumeOptions</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go">mount.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+Propagations is the list of all valid mount propagations
+</p>
+
+				<pre>var <span id="Propagations">Propagations</span> = []<a href="index.html#Propagation">Propagation</a>{
+    <a href="index.html#PropagationRPrivate">PropagationRPrivate</a>,
+    <a href="index.html#PropagationPrivate">PropagationPrivate</a>,
+    <a href="index.html#PropagationRShared">PropagationRShared</a>,
+    <a href="index.html#PropagationShared">PropagationShared</a>,
+    <a href="index.html#PropagationRSlave">PropagationRSlave</a>,
+    <a href="index.html#PropagationSlave">PropagationSlave</a>,
+}</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="BindOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=2478:2597#L71">BindOptions</a>
+				<a class="permalink" href="index.html#BindOptions">&#xb6;</a>
+			</h2>
+			<p>
+BindOptions defines options specific to mounts of type &#34;bind&#34;.
+</p>
+
+			<pre>type BindOptions struct {
+<span id="BindOptions.Propagation"></span>    Propagation  <a href="index.html#Propagation">Propagation</a> `json:&#34;,omitempty&#34;`
+<span id="BindOptions.NonRecursive"></span>    NonRecursive <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>        `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Consistency">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=1923:1946#L57">Consistency</a>
+				<a class="permalink" href="index.html#Consistency">&#xb6;</a>
+			</h2>
+			<p>
+Consistency represents the consistency requirements of a mount.
+</p>
+
+			<pre>type Consistency <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// ConsistencyFull guarantees bind mount-like consistency</span>
+    <span id="ConsistencyFull">ConsistencyFull</span> <a href="index.html#Consistency">Consistency</a> = &#34;consistent&#34;
+    <span class="comment">// ConsistencyCached mounts can cache read data and FS structure</span>
+    <span id="ConsistencyCached">ConsistencyCached</span> <a href="index.html#Consistency">Consistency</a> = &#34;cached&#34;
+    <span class="comment">// ConsistencyDelegated mounts can cache read and written data and structure</span>
+    <span id="ConsistencyDelegated">ConsistencyDelegated</span> <a href="index.html#Consistency">Consistency</a> = &#34;delegated&#34;
+    <span class="comment">// ConsistencyDefault provides &#34;consistent&#34; behavior unless overridden</span>
+    <span id="ConsistencyDefault">ConsistencyDefault</span> <a href="index.html#Consistency">Consistency</a> = &#34;default&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Driver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=2892:3008#L84">Driver</a>
+				<a class="permalink" href="index.html#Driver">&#xb6;</a>
+			</h2>
+			<p>
+Driver represents a volume driver.
+</p>
+
+			<pre>type Driver struct {
+<span id="Driver.Name"></span>    Name    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="Driver.Options"></span>    Options map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Mount">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=528:1106#L13">Mount</a>
+				<a class="permalink" href="index.html#Mount">&#xb6;</a>
+			</h2>
+			<p>
+Mount represents a mount (volume).
+</p>
+
+			<pre>type Mount struct {
+<span id="Mount.Type"></span>    Type <a href="index.html#Type">Type</a> `json:&#34;,omitempty&#34;`
+<span id="Mount.Source"></span>    <span class="comment">// Source specifies the name of the mount. Depending on mount type, this</span>
+    <span class="comment">// may be a volume name or a host path, or even ignored.</span>
+    <span class="comment">// Source is not supported for tmpfs (must be an empty value)</span>
+    Source      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>      `json:&#34;,omitempty&#34;`
+<span id="Mount.Target"></span>    Target      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>      `json:&#34;,omitempty&#34;`
+<span id="Mount.ReadOnly"></span>    ReadOnly    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>        `json:&#34;,omitempty&#34;`
+<span id="Mount.Consistency"></span>    Consistency <a href="index.html#Consistency">Consistency</a> `json:&#34;,omitempty&#34;`
+
+<span id="Mount.BindOptions"></span>    BindOptions   *<a href="index.html#BindOptions">BindOptions</a>   `json:&#34;,omitempty&#34;`
+<span id="Mount.VolumeOptions"></span>    VolumeOptions *<a href="index.html#VolumeOptions">VolumeOptions</a> `json:&#34;,omitempty&#34;`
+<span id="Mount.TmpfsOptions"></span>    TmpfsOptions  *<a href="index.html#TmpfsOptions">TmpfsOptions</a>  `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Propagation">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=1162:1185#L29">Propagation</a>
+				<a class="permalink" href="index.html#Propagation">&#xb6;</a>
+			</h2>
+			<p>
+Propagation represents the propagation of a mount.
+</p>
+
+			<pre>type Propagation <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// PropagationRPrivate RPRIVATE</span>
+    <span id="PropagationRPrivate">PropagationRPrivate</span> <a href="index.html#Propagation">Propagation</a> = &#34;rprivate&#34;
+    <span class="comment">// PropagationPrivate PRIVATE</span>
+    <span id="PropagationPrivate">PropagationPrivate</span> <a href="index.html#Propagation">Propagation</a> = &#34;private&#34;
+    <span class="comment">// PropagationRShared RSHARED</span>
+    <span id="PropagationRShared">PropagationRShared</span> <a href="index.html#Propagation">Propagation</a> = &#34;rshared&#34;
+    <span class="comment">// PropagationShared SHARED</span>
+    <span id="PropagationShared">PropagationShared</span> <a href="index.html#Propagation">Propagation</a> = &#34;shared&#34;
+    <span class="comment">// PropagationRSlave RSLAVE</span>
+    <span id="PropagationRSlave">PropagationRSlave</span> <a href="index.html#Propagation">Propagation</a> = &#34;rslave&#34;
+    <span class="comment">// PropagationSlave SLAVE</span>
+    <span id="PropagationSlave">PropagationSlave</span> <a href="index.html#Propagation">Propagation</a> = &#34;slave&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TmpfsOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=3078:4119#L90">TmpfsOptions</a>
+				<a class="permalink" href="index.html#TmpfsOptions">&#xb6;</a>
+			</h2>
+			<p>
+TmpfsOptions defines options specific to mounts of type &#34;tmpfs&#34;.
+</p>
+
+			<pre>type TmpfsOptions struct {
+    <span class="comment">// Size sets the size of the tmpfs, in bytes.</span>
+    <span class="comment">//</span>
+    <span class="comment">// This will be converted to an operating system specific value</span>
+    <span class="comment">// depending on the host. For example, on linux, it will be converted to</span>
+    <span class="comment">// use a &#39;k&#39;, &#39;m&#39; or &#39;g&#39; syntax. BSD, though not widely supported with</span>
+    <span class="comment">// docker, uses a straight byte value.</span>
+    <span class="comment">//</span>
+    <span class="comment">// Percentages are not supported.</span>
+<span id="TmpfsOptions.SizeBytes"></span>    SizeBytes <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;,omitempty&#34;`
+<span id="TmpfsOptions.Mode"></span>    <span class="comment">// Mode of the tmpfs upon creation</span>
+    Mode <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Type">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=126:142#L1">Type</a>
+				<a class="permalink" href="index.html#Type">&#xb6;</a>
+			</h2>
+			<p>
+Type represents the type of a mount.
+</p>
+
+			<pre>type Type <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				<p>
+Type constants
+</p>
+
+				<pre>const (
+    <span class="comment">// TypeBind is the type for mounting host dir</span>
+    <span id="TypeBind">TypeBind</span> <a href="index.html#Type">Type</a> = &#34;bind&#34;
+    <span class="comment">// TypeVolume is the type for remote storage volumes</span>
+    <span id="TypeVolume">TypeVolume</span> <a href="index.html#Type">Type</a> = &#34;volume&#34;
+    <span class="comment">// TypeTmpfs is the type for mounting tmpfs</span>
+    <span id="TypeTmpfs">TypeTmpfs</span> <a href="index.html#Type">Type</a> = &#34;tmpfs&#34;
+    <span class="comment">// TypeNamedPipe is the type for mounting Windows named pipes</span>
+    <span id="TypeNamedPipe">TypeNamedPipe</span> <a href="index.html#Type">Type</a> = &#34;npipe&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="VolumeOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/mount/mount.go?s=2667:2852#L77">VolumeOptions</a>
+				<a class="permalink" href="index.html#VolumeOptions">&#xb6;</a>
+			</h2>
+			<p>
+VolumeOptions represents the options for a mount of type volume.
+</p>
+
+			<pre>type VolumeOptions struct {
+<span id="VolumeOptions.NoCopy"></span>    NoCopy       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>              `json:&#34;,omitempty&#34;`
+<span id="VolumeOptions.Labels"></span>    Labels       map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+<span id="VolumeOptions.DriverConfig"></span>    DriverConfig *<a href="index.html#Driver">Driver</a>           `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

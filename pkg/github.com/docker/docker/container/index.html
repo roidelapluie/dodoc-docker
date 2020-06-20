@@ -1,0 +1,2451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>container - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package container</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/container"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#IsValidHealthString">func IsValidHealthString(s string) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsValidStateString">func IsValidStateString(s string) bool</a></dd>
+			
+				
+				<dd><a href="index.html#ReplaceOrAppendEnvValues">func ReplaceOrAppendEnvValues(defaults, overrides []string) []string</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Container">type Container</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewBaseContainer">func NewBaseContainer(id, root string) *Container</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.AddMountPointWithVolume">func (container *Container) AddMountPointWithVolume(destination string, vol volume.Volume, rw bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.BuildHostnameFile">func (container *Container) BuildHostnameFile() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.CancelAttachContext">func (container *Container) CancelAttachContext()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.CheckpointDir">func (container *Container) CheckpointDir() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.CheckpointTo">func (container *Container) CheckpointTo(store ViewDB) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.CloseStreams">func (container *Container) CloseStreams() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.ConfigFilePath">func (container *Container) ConfigFilePath(configRef swarmtypes.ConfigReference) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.ConfigPath">func (container *Container) ConfigPath() (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.CopyImagePathContent">func (container *Container) CopyImagePathContent(v volume.Volume, destination string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.CreateDaemonEnvironment">func (container *Container) CreateDaemonEnvironment(tty bool, linkedEnv []string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.DetachAndUnmount">func (container *Container) DetachAndUnmount(volumeEventLog func(name, action string, attributes map[string]string)) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.ExitOnNext">func (container *Container) ExitOnNext()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.FromDisk">func (container *Container) FromDisk() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.FullHostname">func (container *Container) FullHostname() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.GetExecIDs">func (container *Container) GetExecIDs() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.GetMountLabel">func (container *Container) GetMountLabel() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.GetMountPoints">func (container *Container) GetMountPoints() []types.MountPoint</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.GetProcessLabel">func (container *Container) GetProcessLabel() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.GetResourcePath">func (container *Container) GetResourcePath(path string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.GetRootResourcePath">func (container *Container) GetRootResourcePath(path string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.HasMountFor">func (container *Container) HasMountFor(path string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.HostConfigPath">func (container *Container) HostConfigPath() (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.InitAttachContext">func (container *Container) InitAttachContext() context.Context</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.InitDNSHostConfig">func (container *Container) InitDNSHostConfig()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.InitializeStdio">func (container *Container) InitializeStdio(iop *cio.DirectIO) (cio.IO, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.IpcMounts">func (container *Container) IpcMounts() []Mount</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.IsDestinationMounted">func (container *Container) IsDestinationMounted(destination string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.MountsResourcePath">func (container *Container) MountsResourcePath(mount string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.NetworkMounts">func (container *Container) NetworkMounts() []Mount</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.Reset">func (container *Container) Reset(lock bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.ResetRestartManager">func (container *Container) ResetRestartManager(resetCount bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.ResolvePath">func (container *Container) ResolvePath(path string) (resolvedPath, absPath string, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.RestartManager">func (container *Container) RestartManager() restartmanager.RestartManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.SecretFilePath">func (container *Container) SecretFilePath(secretRef swarmtypes.SecretReference) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.SecretMountPath">func (container *Container) SecretMountPath() (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.SecretMounts">func (container *Container) SecretMounts() ([]Mount, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.SetupWorkingDirectory">func (container *Container) SetupWorkingDirectory(rootIdentity idtools.Identity) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.ShmResourcePath">func (container *Container) ShmResourcePath() (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.ShouldRestart">func (container *Container) ShouldRestart() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.StartLogger">func (container *Container) StartLogger() (logger.Logger, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.StatPath">func (container *Container) StatPath(resolvedPath, absPath string) (stat *types.ContainerPathStat, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.StderrPipe">func (container *Container) StderrPipe() io.ReadCloser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.StdinPipe">func (container *Container) StdinPipe() io.WriteCloser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.StdoutPipe">func (container *Container) StdoutPipe() io.ReadCloser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.StopSignal">func (container *Container) StopSignal() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.StopTimeout">func (container *Container) StopTimeout() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.TmpfsMounts">func (container *Container) TmpfsMounts() ([]Mount, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.TrySetNetworkMount">func (container *Container) TrySetNetworkMount(destination string, path string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.UnmountIpcMount">func (container *Container) UnmountIpcMount() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.UnmountSecrets">func (container *Container) UnmountSecrets() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.UnmountVolumes">func (container *Container) UnmountVolumes(volumeEventLog func(name, action string, attributes map[string]string)) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.UpdateContainer">func (container *Container) UpdateContainer(hostConfig *containertypes.HostConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.UpdateMonitor">func (container *Container) UpdateMonitor(restartPolicy containertypes.RestartPolicy)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Container.WriteHostConfig">func (container *Container) WriteHostConfig() (*containertypes.HostConfig, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ExitStatus">type ExitStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Health">type Health</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Health.CloseMonitorChannel">func (s *Health) CloseMonitorChannel()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Health.OpenMonitorChannel">func (s *Health) OpenMonitorChannel() chan struct{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Health.SetStatus">func (s *Health) SetStatus(new string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Health.Status">func (s *Health) Status() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Health.String">func (s *Health) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#History">type History</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#History.Len">func (history *History) Len() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#History.Less">func (history *History) Less(i, j int) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#History.Swap">func (history *History) Swap(i, j int)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Mount">type Mount</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NoSuchContainerError">type NoSuchContainerError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoSuchContainerError.Error">func (e NoSuchContainerError) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Snapshot">type Snapshot</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#State">type State</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewState">func NewState() *State</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.Err">func (s *State) Err() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.ExitCode">func (s *State) ExitCode() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.GetPID">func (s *State) GetPID() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.IsDead">func (s *State) IsDead() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.IsPaused">func (s *State) IsPaused() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.IsRemovalInProgress">func (s *State) IsRemovalInProgress() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.IsRestarting">func (s *State) IsRestarting() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.IsRunning">func (s *State) IsRunning() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.ResetRemovalInProgress">func (s *State) ResetRemovalInProgress()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetDead">func (s *State) SetDead()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetError">func (s *State) SetError(err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetExitCode">func (s *State) SetExitCode(ec int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetRemovalError">func (s *State) SetRemovalError(err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetRemovalInProgress">func (s *State) SetRemovalInProgress() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetRemoved">func (s *State) SetRemoved()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetRestarting">func (s *State) SetRestarting(exitStatus *ExitStatus)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetRunning">func (s *State) SetRunning(pid int, initial bool)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.SetStopped">func (s *State) SetStopped(exitStatus *ExitStatus)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.StateString">func (s *State) StateString() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.String">func (s *State) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#State.Wait">func (s *State) Wait(ctx context.Context, condition WaitCondition) &lt;-chan StateStatus</a></dd>
+				
+			
+				
+				<dd><a href="index.html#StateStatus">type StateStatus</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StateStatus.Err">func (s StateStatus) Err() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#StateStatus.ExitCode">func (s StateStatus) ExitCode() int</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Store">type Store</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMemoryStore">func NewMemoryStore() Store</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StoreFilter">type StoreFilter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StoreReducer">type StoreReducer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#View">type View</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ViewDB">type ViewDB</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewViewDB">func NewViewDB() (ViewDB, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#WaitCondition">type WaitCondition</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/archive.go">archive.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go">container.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go">container_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/env.go">env.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/health.go">health.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/history.go">history.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/memory_store.go">memory_store.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/monitor.go">monitor.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/mounts_unix.go">mounts_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go">state.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/store.go">store.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/view.go">view.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultStopTimeout sets the default time, in seconds, to wait</span>
+    <span class="comment">// for the graceful container stop before forcefully terminating it.</span>
+    <span id="DefaultStopTimeout">DefaultStopTimeout</span> = 10
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrNameReserved is an error which is returned when a name is requested to be reserved that already is reserved</span>
+    <span id="ErrNameReserved">ErrNameReserved</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;name is reserved&#34;)
+    <span class="comment">// ErrNameNotReserved is an error which is returned when trying to find a name that is not reserved</span>
+    <span id="ErrNameNotReserved">ErrNameNotReserved</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;name is not reserved&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="IsValidHealthString">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=2953:2992#L95">IsValidHealthString</a>
+				<a class="permalink" href="index.html#IsValidHealthString">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsValidHealthString">IsValidHealthString</a>(s <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsValidHealthString checks if the provided string is a valid container health status or not.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsValidStateString">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=3567:3605#L130">IsValidStateString</a>
+				<a class="permalink" href="index.html#IsValidStateString">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsValidStateString">IsValidStateString</a>(s <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsValidStateString checks if the provided string is a valid container state or not.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReplaceOrAppendEnvValues">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/env.go?s=211:279#L1">ReplaceOrAppendEnvValues</a>
+				<a class="permalink" href="index.html#ReplaceOrAppendEnvValues">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ReplaceOrAppendEnvValues">ReplaceOrAppendEnvValues</a>(defaults, overrides []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+ReplaceOrAppendEnvValues returns the defaults with the overrides either
+replaced by env key or appended to the list
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Container">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=1671:3685#L50">Container</a>
+				<a class="permalink" href="index.html#Container">&#xb6;</a>
+			</h2>
+			<p>
+Container holds the structure defining a container object.
+</p>
+
+			<pre>type Container struct {
+<span id="Container.StreamConfig"></span>    StreamConfig *<a href="stream/index.html">stream</a>.<a href="stream/index.html#Config">Config</a>
+    <span class="comment">// embed for Container to support states directly.</span>
+    *<a href="index.html#State">State</a>          `json:&#34;State&#34;`          <span class="comment">// Needed for Engine API version &lt;= 1.11</span>
+<span id="Container.Root"></span>    Root            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;-&#34;` <span class="comment">// Path to the &#34;home&#34; of the container, including metadata.</span>
+<span id="Container.BaseFS"></span>    BaseFS          <a href="../pkg/containerfs/index.html">containerfs</a>.<a href="../pkg/containerfs/index.html#ContainerFS">ContainerFS</a> `json:&#34;-&#34;` <span class="comment">// interface containing graphdriver mount</span>
+<span id="Container.RWLayer"></span>    RWLayer         <a href="../layer/index.html">layer</a>.<a href="../layer/index.html#RWLayer">RWLayer</a>           `json:&#34;-&#34;`
+<span id="Container.ID"></span>    ID              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.Created"></span>    Created         <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="Container.Managed"></span>    Managed         <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Container.Path"></span>    Path            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.Args"></span>    Args            []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.Config"></span>    Config          *<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#Config">Config</a>
+<span id="Container.ImageID"></span>    ImageID         <a href="../image/index.html">image</a>.<a href="../image/index.html#ID">ID</a> `json:&#34;Image&#34;`
+<span id="Container.NetworkSettings"></span>    NetworkSettings *<a href="../daemon/network/index.html">network</a>.<a href="../daemon/network/index.html#Settings">Settings</a>
+<span id="Container.LogPath"></span>    LogPath         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.Name"></span>    Name            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.Driver"></span>    Driver          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.OS"></span>    OS              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.MountLabel"></span>    <span class="comment">// MountLabel contains the options for the &#39;mount&#39; command</span>
+    MountLabel             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.ProcessLabel"></span>    ProcessLabel           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.RestartCount"></span>    RestartCount           <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Container.HasBeenStartedBefore"></span>    HasBeenStartedBefore   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Container.HasBeenManuallyStopped"></span>    HasBeenManuallyStopped <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> <span class="comment">// used for unless-stopped restart policy</span>
+<span id="Container.MountPoints"></span>    MountPoints            map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="../volume/mounts/index.html">volumemounts</a>.<a href="../volume/mounts/index.html#MountPoint">MountPoint</a>
+<span id="Container.HostConfig"></span>    HostConfig             *<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#HostConfig">HostConfig</a> `json:&#34;-&#34;` <span class="comment">// do not serialize the host config in the json, otherwise we&#39;ll make the container unportable</span>
+<span id="Container.ExecCommands"></span>    ExecCommands           *<a href="../daemon/exec/index.html">exec</a>.<a href="../daemon/exec/index.html#Store">Store</a>                `json:&#34;-&#34;`
+<span id="Container.DependencyStore"></span>    DependencyStore        <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/agent/exec/">agentexec</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/agent/exec/#DependencyGetter">DependencyGetter</a> `json:&#34;-&#34;`
+<span id="Container.SecretReferences"></span>    SecretReferences       []*<a href="../api/types/swarm/index.html">swarmtypes</a>.<a href="../api/types/swarm/index.html#SecretReference">SecretReference</a>
+<span id="Container.ConfigReferences"></span>    ConfigReferences       []*<a href="../api/types/swarm/index.html">swarmtypes</a>.<a href="../api/types/swarm/index.html#ConfigReference">ConfigReference</a>
+    <span class="comment">// logDriver for closing</span>
+<span id="Container.LogDriver"></span>    LogDriver <a href="../daemon/logger/index.html">logger</a>.<a href="../daemon/logger/index.html#Logger">Logger</a>  `json:&#34;-&#34;`
+<span id="Container.LogCopier"></span>    LogCopier *<a href="../daemon/logger/index.html">logger</a>.<a href="../daemon/logger/index.html#Copier">Copier</a> `json:&#34;-&#34;`
+
+    <span class="comment">// Fields here are specific to Unix platforms</span>
+<span id="Container.AppArmorProfile"></span>    AppArmorProfile <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.HostnamePath"></span>    HostnamePath    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.HostsPath"></span>    HostsPath       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.ShmPath"></span>    ShmPath         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.ResolvConfPath"></span>    ResolvConfPath  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.SeccompProfile"></span>    SeccompProfile  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Container.NoNewPrivileges"></span>    NoNewPrivileges <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// Fields here are specific to Windows</span>
+<span id="Container.NetworkSharedContainerID"></span>    NetworkSharedContainerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;-&#34;`
+<span id="Container.SharedEndpointList"></span>    SharedEndpointList       []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;-&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBaseContainer">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=3764:3813#L103">NewBaseContainer</a>
+					<a class="permalink" href="index.html#NewBaseContainer">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewBaseContainer">NewBaseContainer</a>(id, root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#Container">Container</a></pre>
+				<p>
+NewBaseContainer creates a new container with its
+basic configuration.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Container.AddMountPointWithVolume">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=14688:14787#L440">AddMountPointWithVolume</a>
+					<a class="permalink" href="index.html#Container.AddMountPointWithVolume">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#AddMountPointWithVolume">AddMountPointWithVolume</a>(destination <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, vol <a href="../volume/index.html">volume</a>.<a href="../volume/index.html#Volume">Volume</a>, rw <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+AddMountPointWithVolume adds a new mount point configured with a volume to the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.BuildHostnameFile">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=1490:1543#L43">BuildHostnameFile</a>
+					<a class="permalink" href="index.html#Container.BuildHostnameFile">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#BuildHostnameFile">BuildHostnameFile</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+BuildHostnameFile writes the container&#39;s hostname file.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.CancelAttachContext">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=19561:19610#L590">CancelAttachContext</a>
+					<a class="permalink" href="index.html#Container.CancelAttachContext">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#CancelAttachContext">CancelAttachContext</a>()</pre>
+				<p>
+CancelAttachContext cancels attach context. All attach calls should detach
+after this call.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.CheckpointDir">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=11402:11452#L344">CheckpointDir</a>
+					<a class="permalink" href="index.html#Container.CheckpointDir">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#CheckpointDir">CheckpointDir</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+CheckpointDir returns the directory checkpoints are stored in
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.CheckpointTo">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=5604:5664#L181">CheckpointTo</a>
+					<a class="permalink" href="index.html#Container.CheckpointTo">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#CheckpointTo">CheckpointTo</a>(store <a href="index.html#ViewDB">ViewDB</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CheckpointTo makes the Container&#39;s current state visible to queries, and persists state.
+Callers must hold a Container lock.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.CloseStreams">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=20810:20858#L633">CloseStreams</a>
+					<a class="permalink" href="index.html#Container.CloseStreams">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#CloseStreams">CloseStreams</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CloseStreams closes the container&#39;s stdio streams
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.ConfigFilePath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=14154:14250#L456">ConfigFilePath</a>
+					<a class="permalink" href="index.html#Container.ConfigFilePath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#ConfigFilePath">ConfigFilePath</a>(configRef <a href="../api/types/swarm/index.html">swarmtypes</a>.<a href="../api/types/swarm/index.html#ConfigReference">ConfigReference</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConfigFilePath returns the path to the on-disk location of a config.
+On unix, configs are always considered secret
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.ConfigPath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=11221:11277#L339">ConfigPath</a>
+					<a class="permalink" href="index.html#Container.ConfigPath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#ConfigPath">ConfigPath</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ConfigPath returns the path to the container&#39;s JSON config
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.CopyImagePathContent">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=4087:4178#L115">CopyImagePathContent</a>
+					<a class="permalink" href="index.html#Container.CopyImagePathContent">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#CopyImagePathContent">CopyImagePathContent</a>(v <a href="../volume/index.html">volume</a>.<a href="../volume/index.html#Volume">Volume</a>, destination <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CopyImagePathContent copies files in destination to the volume.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.CreateDaemonEnvironment">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=22472:22562#L685">CreateDaemonEnvironment</a>
+					<a class="permalink" href="index.html#Container.CreateDaemonEnvironment">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#CreateDaemonEnvironment">CreateDaemonEnvironment</a>(tty <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, linkedEnv []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+CreateDaemonEnvironment creates a new environment variable slice for this container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.DetachAndUnmount">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=10868:10990#L352">DetachAndUnmount</a>
+					<a class="permalink" href="index.html#Container.DetachAndUnmount">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#DetachAndUnmount">DetachAndUnmount</a>(volumeEventLog func(name, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DetachAndUnmount uses a detached mount on all mount destinations, then
+unmounts each volume normally.
+This is used from daemon/archive for `docker cp`
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.ExitOnNext">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=10883:10923#L329">ExitOnNext</a>
+					<a class="permalink" href="index.html#Container.ExitOnNext">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#ExitOnNext">ExitOnNext</a>()</pre>
+				<p>
+ExitOnNext signals to the monitor that it should not restart the container
+after we send the kill signal.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.FromDisk">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=4147:4191#L116">FromDisk</a>
+					<a class="permalink" href="index.html#Container.FromDisk">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#FromDisk">FromDisk</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+FromDisk loads the container configuration stored in the host.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.FullHostname">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=18021:18070#L544">FullHostname</a>
+					<a class="permalink" href="index.html#Container.FullHostname">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#FullHostname">FullHostname</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+FullHostname returns hostname and optional domain appended to it.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.GetExecIDs">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=14117:14166#L428">GetExecIDs</a>
+					<a class="permalink" href="index.html#Container.GetExecIDs">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#GetExecIDs">GetExecIDs</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetExecIDs returns the list of exec commands running on the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.GetMountLabel">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=13958:14008#L423">GetMountLabel</a>
+					<a class="permalink" href="index.html#Container.GetMountLabel">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#GetMountLabel">GetMountLabel</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetMountLabel returns the mounting label for the container.
+This label is empty if the container is privileged.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.GetMountPoints">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=13559:13622#L437">GetMountPoints</a>
+					<a class="permalink" href="index.html#Container.GetMountPoints">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#GetMountPoints">GetMountPoints</a>() []<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#MountPoint">MountPoint</a></pre>
+				<p>
+GetMountPoints gives a platform specific transformation to types.MountPoint. Callers must hold a Container lock.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.GetProcessLabel">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=13611:13663#L412">GetProcessLabel</a>
+					<a class="permalink" href="index.html#Container.GetProcessLabel">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#GetProcessLabel">GetProcessLabel</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetProcessLabel returns the process label for the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.GetResourcePath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=8854:8926#L291">GetResourcePath</a>
+					<a class="permalink" href="index.html#Container.GetResourcePath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#GetResourcePath">GetResourcePath</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetResourcePath evaluates `path` in the scope of the container&#39;s BaseFS, with proper path
+sanitisation. Symlinks are all scoped to the BaseFS of the container, as
+though the container&#39;s BaseFS was `/`.
+</p>
+<p>
+The BaseFS of a container is the host-facing path which is bind-mounted as
+`/` inside the container. This method is essentially used to access a
+particular path inside the container as though you were a process in that
+container.
+</p>
+<p>
+NOTE: The returned path is *only* safely scoped inside the container&#39;s BaseFS
+</p>
+<pre>if no component of the returned path changes (such as a component
+symlinking to a different path) between using this method and using the
+path. See symlink.FollowSymlinkInScope for more details.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.GetRootResourcePath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=10393:10469#L320">GetRootResourcePath</a>
+					<a class="permalink" href="index.html#Container.GetRootResourcePath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#GetRootResourcePath">GetRootResourcePath</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRootResourcePath evaluates `path` in the scope of the container&#39;s root, with proper path
+sanitisation. Symlinks are all scoped to the root of the container, as
+though the container&#39;s root was `/`.
+</p>
+<p>
+The root of a container is the host-facing configuration metadata directory.
+Only use this method to safely access the container&#39;s `container.json` or
+other metadata files. If in doubt, use container.GetResourcePath.
+</p>
+<p>
+NOTE: The returned path is *only* safely scoped inside the container&#39;s root
+</p>
+<pre>if no component of the returned path changes (such as a component
+symlinking to a different path) between using this method and using the
+path. See symlink.FollowSymlinkInScope for more details.
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.HasMountFor">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=4973:5030#L151">HasMountFor</a>
+					<a class="permalink" href="index.html#Container.HasMountFor">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#HasMountFor">HasMountFor</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+HasMountFor checks if path is a mountpoint
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.HostConfigPath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=11036:11096#L334">HostConfigPath</a>
+					<a class="permalink" href="index.html#Container.HostConfigPath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#HostConfigPath">HostConfigPath</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+HostConfigPath returns the path to the container&#39;s JSON hostconfig
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.InitAttachContext">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=19131:19194#L579">InitAttachContext</a>
+					<a class="permalink" href="index.html#Container.InitAttachContext">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#InitAttachContext">InitAttachContext</a>() <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a></pre>
+				<p>
+InitAttachContext initializes or returns existing context for attach calls to
+track container liveness.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.InitDNSHostConfig">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=17235:17282#L516">InitDNSHostConfig</a>
+					<a class="permalink" href="index.html#Container.InitDNSHostConfig">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#InitDNSHostConfig">InitDNSHostConfig</a>()</pre>
+				<p>
+InitDNSHostConfig ensures that the dns fields are never nil.
+New containers don&#39;t ever have those fields nil,
+but pre created containers can still have those nil values.
+The non-recommended host configuration in the start api can
+make these fields nil again, this corrects that issue until
+we remove that behavior for good.
+See <a href="https://github.com/docker/docker/pull/17779">https://github.com/docker/docker/pull/17779</a>
+for a more detailed explanation on why we don&#39;t want that.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.InitializeStdio">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=20978:21056#L638">InitializeStdio</a>
+					<a class="permalink" href="index.html#Container.InitializeStdio">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#InitializeStdio">InitializeStdio</a>(iop *<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/">cio</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/#DirectIO">DirectIO</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/">cio</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/#IO">IO</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+InitializeStdio is called by libcontainerd to connect the stdio.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.IpcMounts">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=5797:5844#L189">IpcMounts</a>
+					<a class="permalink" href="index.html#Container.IpcMounts">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#IpcMounts">IpcMounts</a>() []<a href="index.html#Mount">Mount</a></pre>
+				<p>
+IpcMounts returns the list of IPC mounts
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.IsDestinationMounted">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=16044:16117#L483">IsDestinationMounted</a>
+					<a class="permalink" href="index.html#Container.IsDestinationMounted">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#IsDestinationMounted">IsDestinationMounted</a>(destination <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsDestinationMounted checks whether a path is mounted on the container or not.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.MountsResourcePath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=21539:21615#L658">MountsResourcePath</a>
+					<a class="permalink" href="index.html#Container.MountsResourcePath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#MountsResourcePath">MountsResourcePath</a>(mount <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MountsResourcePath returns the path where mounts are stored for the given mount
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.NetworkMounts">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=1833:1884#L53">NetworkMounts</a>
+					<a class="permalink" href="index.html#Container.NetworkMounts">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#NetworkMounts">NetworkMounts</a>() []<a href="index.html#Mount">Mount</a></pre>
+				<p>
+NetworkMounts returns the list of network mounts.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.Reset">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/monitor.go?s=239:283#L4">Reset</a>
+					<a class="permalink" href="index.html#Container.Reset">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#Reset">Reset</a>(lock <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+Reset puts a container into a state where it can be restarted again.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.ResetRestartManager">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=18692:18756#L561">ResetRestartManager</a>
+					<a class="permalink" href="index.html#Container.ResetRestartManager">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#ResetRestartManager">ResetRestartManager</a>(resetCount <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+ResetRestartManager initializes new restartmanager based on container config
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.ResolvePath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/archive.go?s=525:619#L6">ResolvePath</a>
+					<a class="permalink" href="index.html#Container.ResolvePath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#ResolvePath">ResolvePath</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (resolvedPath, absPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ResolvePath resolves the given path in the container to a resource on the
+host. Returns a resolved path (absolute path to the resource on the host),
+the absolute path to the resource relative to the container&#39;s rootfs, and
+an error if the path points to outside the container&#39;s rootfs.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.RestartManager">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=18350:18424#L553">RestartManager</a>
+					<a class="permalink" href="index.html#Container.RestartManager">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#RestartManager">RestartManager</a>() <a href="../restartmanager/index.html">restartmanager</a>.<a href="../restartmanager/index.html#RestartManager">RestartManager</a></pre>
+				<p>
+RestartManager returns the current restartmanager instance connected to container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.SecretFilePath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=21956:22052#L668">SecretFilePath</a>
+					<a class="permalink" href="index.html#Container.SecretFilePath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#SecretFilePath">SecretFilePath</a>(secretRef <a href="../api/types/swarm/index.html">swarmtypes</a>.<a href="../api/types/swarm/index.html#SecretReference">SecretReference</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SecretFilePath returns the path to the location of a secret on the host.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.SecretMountPath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=21765:21826#L663">SecretMountPath</a>
+					<a class="permalink" href="index.html#Container.SecretMountPath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#SecretMountPath">SecretMountPath</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SecretMountPath returns the path of the secret mount for the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.SecretMounts">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=6335:6394#L212">SecretMounts</a>
+					<a class="permalink" href="index.html#Container.SecretMounts">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#SecretMounts">SecretMounts</a>() ([]<a href="index.html#Mount">Mount</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SecretMounts returns the mounts for the secret path.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.SetupWorkingDirectory">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=7289:7375#L249">SetupWorkingDirectory</a>
+					<a class="permalink" href="index.html#Container.SetupWorkingDirectory">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#SetupWorkingDirectory">SetupWorkingDirectory</a>(rootIdentity <a href="../pkg/idtools/index.html">idtools</a>.<a href="../pkg/idtools/index.html#Identity">Identity</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+SetupWorkingDirectory sets up the container&#39;s working directory as set in container.Config.WorkingDir
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.ShmResourcePath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=4816:4877#L146">ShmResourcePath</a>
+					<a class="permalink" href="index.html#Container.ShmResourcePath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#ShmResourcePath">ShmResourcePath</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ShmResourcePath returns path to shm
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.ShouldRestart">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=14343:14391#L434">ShouldRestart</a>
+					<a class="permalink" href="index.html#Container.ShouldRestart">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#ShouldRestart">ShouldRestart</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+ShouldRestart decides whether the daemon should restart the container or not.
+This is based on the container&#39;s restart policy.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.StartLogger">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=11572:11636#L349">StartLogger</a>
+					<a class="permalink" href="index.html#Container.StartLogger">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#StartLogger">StartLogger</a>() (<a href="../daemon/logger/index.html">logger</a>.<a href="../daemon/logger/index.html#Logger">Logger</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+StartLogger starts a new logger driver for the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.StatPath">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/archive.go?s=2004:2113#L41">StatPath</a>
+					<a class="permalink" href="index.html#Container.StatPath">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#StatPath">StatPath</a>(resolvedPath, absPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (stat *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerPathStat">ContainerPathStat</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+StatPath is the unexported version of StatPath. Locks and mounts should
+be acquired before calling this method and the given path should be fully
+resolved to a path on the host corresponding to the given absolute path
+inside the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.StderrPipe">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=20653:20707#L628">StderrPipe</a>
+					<a class="permalink" href="index.html#Container.StderrPipe">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#StderrPipe">StderrPipe</a>() <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a></pre>
+				<p>
+StderrPipe gets the stderr stream of the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.StdinPipe">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=20338:20392#L618">StdinPipe</a>
+					<a class="permalink" href="index.html#Container.StdinPipe">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#StdinPipe">StdinPipe</a>() <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a></pre>
+				<p>
+StdinPipe gets the stdin stream of the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.StdoutPipe">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=20495:20549#L623">StdoutPipe</a>
+					<a class="permalink" href="index.html#Container.StdoutPipe">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#StdoutPipe">StdoutPipe</a>() <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a></pre>
+				<p>
+StdoutPipe gets the stdout stream of the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.StopSignal">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=16234:16278#L488">StopSignal</a>
+					<a class="permalink" href="index.html#Container.StopSignal">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#StopSignal">StopSignal</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+StopSignal returns the signal used to stop the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.StopTimeout">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=16618:16663#L501">StopTimeout</a>
+					<a class="permalink" href="index.html#Container.StopTimeout">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#StopTimeout">StopTimeout</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+StopTimeout returns the timeout (in seconds) used to stop the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.TmpfsMounts">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=12791:12849#L410">TmpfsMounts</a>
+					<a class="permalink" href="index.html#Container.TmpfsMounts">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#TmpfsMounts">TmpfsMounts</a>() ([]<a href="index.html#Mount">Mount</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+TmpfsMounts returns the list of tmpfs mounts
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.TrySetNetworkMount">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=1069:1153#L25">TrySetNetworkMount</a>
+					<a class="permalink" href="index.html#Container.TrySetNetworkMount">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#TrySetNetworkMount">TrySetNetworkMount</a>(destination <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+TrySetNetworkMount attempts to set the network mounts given a provided destination and
+the path to use for it; return true if the given destination was a network mount file
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.UnmountIpcMount">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=5303:5354#L168">UnmountIpcMount</a>
+					<a class="permalink" href="index.html#Container.UnmountIpcMount">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#UnmountIpcMount">UnmountIpcMount</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmountIpcMount unmounts shm if it was mounted
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.UnmountSecrets">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=7040:7090#L244">UnmountSecrets</a>
+					<a class="permalink" href="index.html#Container.UnmountSecrets">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#UnmountSecrets">UnmountSecrets</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmountSecrets unmounts the local tmpfs for secrets
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.UnmountVolumes">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=15265:15385#L458">UnmountVolumes</a>
+					<a class="permalink" href="index.html#Container.UnmountVolumes">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#UnmountVolumes">UnmountVolumes</a>(volumeEventLog func(name, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmountVolumes unmounts all volumes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.UpdateContainer">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container_unix.go?s=7561:7649#L268">UpdateContainer</a>
+					<a class="permalink" href="index.html#Container.UpdateContainer">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#UpdateContainer">UpdateContainer</a>(hostConfig *<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#HostConfig">HostConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UpdateContainer updates configuration of a container. Callers must hold a Lock on the Container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.UpdateMonitor">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=17689:17774#L533">UpdateMonitor</a>
+					<a class="permalink" href="index.html#Container.UpdateMonitor">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#UpdateMonitor">UpdateMonitor</a>(restartPolicy <a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#RestartPolicy">RestartPolicy</a>)</pre>
+				<p>
+UpdateMonitor updates monitor configure for running container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Container.WriteHostConfig">func (*Container) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=6605:6686#L220">WriteHostConfig</a>
+					<a class="permalink" href="index.html#Container.WriteHostConfig">&#xb6;</a>
+				</h3>
+				<pre>func (container *<a href="index.html#Container">Container</a>) <a href="index.html#WriteHostConfig">WriteHostConfig</a>() (*<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#HostConfig">HostConfig</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+WriteHostConfig saves the host configuration on disk for the container,
+and returns a deep copy of the saved object. Callers must hold a Container lock.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ExitStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/container.go?s=1395:1607#L38">ExitStatus</a>
+				<a class="permalink" href="index.html#ExitStatus">&#xb6;</a>
+			</h2>
+			<p>
+ExitStatus provides exit reasons for a container.
+</p>
+
+			<pre>type ExitStatus struct {
+    <span class="comment">// The exit code with which the container exited.</span>
+<span id="ExitStatus.ExitCode"></span>    ExitCode <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Whether the container encountered an OOM.</span>
+<span id="ExitStatus.OOMKilled"></span>    OOMKilled <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// Time at which the container died</span>
+<span id="ExitStatus.ExitedAt"></span>    ExitedAt <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Health">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/health.go?s=212:323#L1">Health</a>
+				<a class="permalink" href="index.html#Health">&#xb6;</a>
+			</h2>
+			<p>
+Health holds the current container health-check state
+</p>
+
+			<pre>type Health struct {
+    <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Health">Health</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Health.CloseMonitorChannel">func (*Health) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/health.go?s=1583:1621#L60">CloseMonitorChannel</a>
+					<a class="permalink" href="index.html#Health.CloseMonitorChannel">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#Health">Health</a>) <a href="index.html#CloseMonitorChannel">CloseMonitorChannel</a>()</pre>
+				<p>
+CloseMonitorChannel closes any existing monitor channel.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Health.OpenMonitorChannel">func (*Health) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/health.go?s=1312:1363#L47">OpenMonitorChannel</a>
+					<a class="permalink" href="index.html#Health.OpenMonitorChannel">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#Health">Health</a>) <a href="index.html#OpenMonitorChannel">OpenMonitorChannel</a>() chan struct{}</pre>
+				<p>
+OpenMonitorChannel creates and returns a new monitor channel. If there
+already is one, it returns nil.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Health.SetStatus">func (*Health) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/health.go?s=1101:1139#L38">SetStatus</a>
+					<a class="permalink" href="index.html#Health.SetStatus">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#Health">Health</a>) <a href="index.html#SetStatus">SetStatus</a>(new <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+SetStatus writes the current status to the underlying health structure,
+obeying the locking semantics.
+</p>
+<p>
+Status may be set directly if another lock is used.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Health.Status">func (*Health) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/health.go?s=725:757#L22">Status</a>
+					<a class="permalink" href="index.html#Health.Status">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#Health">Health</a>) <a href="index.html#Status">Status</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Status returns the current health status.
+</p>
+<p>
+Note that this takes a lock and the value may change after being read.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Health.String">func (*Health) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/health.go?s=398:430#L8">String</a>
+					<a class="permalink" href="index.html#Health.String">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#Health">Health</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns a human-readable description of the health-check state
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="History">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/history.go?s=196:221#L1">History</a>
+				<a class="permalink" href="index.html#History">&#xb6;</a>
+			</h2>
+			<p>
+History is a convenience type for storing a list of containers,
+sorted by creation date in descendant order.
+</p>
+
+			<pre>type History []*<a href="index.html#Container">Container</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="History.Len">func (*History) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/history.go?s=279:312#L1">Len</a>
+					<a class="permalink" href="index.html#History.Len">&#xb6;</a>
+				</h3>
+				<pre>func (history *<a href="index.html#History">History</a>) <a href="index.html#Len">Len</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+Len returns the number of containers in the history.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="History.Less">func (*History) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/history.go?s=444:487#L6">Less</a>
+					<a class="permalink" href="index.html#History.Less">&#xb6;</a>
+				</h3>
+				<pre>func (history *<a href="index.html#History">History</a>) <a href="index.html#Less">Less</a>(i, j <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Less compares two containers and returns true if the second one
+was created before the first one.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="History.Swap">func (*History) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/history.go?s=639:677#L12">Swap</a>
+					<a class="permalink" href="index.html#History.Swap">&#xb6;</a>
+				</h3>
+				<pre>func (history *<a href="index.html#History">History</a>) <a href="index.html#Swap">Swap</a>(i, j <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+Swap switches containers i and j positions in the history.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Mount">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/mounts_unix.go?s=139:403#L1">Mount</a>
+				<a class="permalink" href="index.html#Mount">&#xb6;</a>
+			</h2>
+			<p>
+Mount contains information for a mount operation.
+</p>
+
+			<pre>type Mount struct {
+<span id="Mount.Source"></span>    Source       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;source&#34;`
+<span id="Mount.Destination"></span>    Destination  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;destination&#34;`
+<span id="Mount.Writable"></span>    Writable     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;writable&#34;`
+<span id="Mount.Data"></span>    Data         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;data&#34;`
+<span id="Mount.Propagation"></span>    Propagation  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;mountpropagation&#34;`
+<span id="Mount.NonRecursive"></span>    NonRecursive <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;nonrecursive&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NoSuchContainerError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/view.go?s=2844:2891#L106">NoSuchContainerError</a>
+				<a class="permalink" href="index.html#NoSuchContainerError">&#xb6;</a>
+			</h2>
+			<p>
+NoSuchContainerError indicates that the container wasn&#39;t found in the
+database.
+</p>
+
+			<pre>type NoSuchContainerError struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NoSuchContainerError.Error">func (NoSuchContainerError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/view.go?s=2933:2977#L111">Error</a>
+					<a class="permalink" href="index.html#NoSuchContainerError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#NoSuchContainerError">NoSuchContainerError</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Error satisfies the error interface.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Snapshot">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/view.go?s=935:1347#L22">Snapshot</a>
+				<a class="permalink" href="index.html#Snapshot">&#xb6;</a>
+			</h2>
+			<p>
+Snapshot is a read only view for Containers. It holds all information necessary to serve container queries in a
+versioned ACID in-memory store.
+</p>
+
+			<pre>type Snapshot struct {
+    <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Container">Container</a>
+
+    <span class="comment">// additional info queries need to filter on</span>
+    <span class="comment">// preserve nanosec resolution for queries</span>
+<span id="Snapshot.CreatedAt"></span>    CreatedAt    <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="Snapshot.StartedAt"></span>    StartedAt    <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="Snapshot.Name"></span>    Name         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Snapshot.Pid"></span>    Pid          <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Snapshot.ExitCode"></span>    ExitCode     <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Snapshot.Running"></span>    Running      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Snapshot.Paused"></span>    Paused       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Snapshot.Managed"></span>    Managed      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Snapshot.ExposedPorts"></span>    ExposedPorts <a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/">nat</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/#PortSet">PortSet</a>
+<span id="Snapshot.PortBindings"></span>    PortBindings <a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/">nat</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/#PortSet">PortSet</a>
+<span id="Snapshot.Health"></span>    Health       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Snapshot.HostConfig"></span>    HostConfig   struct {
+        Isolation <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    }
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="State">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=389:1235#L7">State</a>
+				<a class="permalink" href="index.html#State">&#xb6;</a>
+			</h2>
+			<p>
+State holds the current container state, and has methods to get and
+set the state. Container has an embed, which allows all of the
+functions defined against State to run against Container.
+</p>
+
+			<pre>type State struct {
+    <a href="http://127.0.0.1:8080/pkg/sync/">sync</a>.<a href="http://127.0.0.1:8080/pkg/sync/#Mutex">Mutex</a>
+    <span class="comment">// Note that `Running` and `Paused` are not mutually exclusive:</span>
+    <span class="comment">// When pausing a container (on Linux), the freezer cgroup is used to suspend</span>
+    <span class="comment">// all processes in the container. Freezing the process requires the process to</span>
+    <span class="comment">// be running. As a result, paused containers are both `Running` _and_ `Paused`.</span>
+<span id="State.Running"></span>    Running           <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="State.Paused"></span>    Paused            <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="State.Restarting"></span>    Restarting        <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="State.OOMKilled"></span>    OOMKilled         <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="State.RemovalInProgress"></span>    RemovalInProgress <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> <span class="comment">// Not need for this to be persistent on disk.</span>
+<span id="State.Dead"></span>    Dead              <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="State.Pid"></span>    Pid               <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="State.ExitCodeValue"></span>    ExitCodeValue     <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>    `json:&#34;ExitCode&#34;`
+<span id="State.ErrorMsg"></span>    ErrorMsg          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Error&#34;` <span class="comment">// contains last known error during container start, stop, or remove</span>
+<span id="State.StartedAt"></span>    StartedAt         <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="State.FinishedAt"></span>    FinishedAt        <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="State.Health"></span>    Health            *<a href="index.html#Health">Health</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewState">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=1830:1852#L51">NewState</a>
+					<a class="permalink" href="index.html#NewState">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewState">NewState</a>() *<a href="index.html#State">State</a></pre>
+				<p>
+NewState creates a default state object with a fresh channel for state changes.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="State.Err">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=10521:10548#L394">Err</a>
+					<a class="permalink" href="index.html#State.Err">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#Err">Err</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Err returns an error if there is one.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.ExitCode">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=6662:6692#L246">ExitCode</a>
+					<a class="permalink" href="index.html#State.ExitCode">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#ExitCode">ExitCode</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+ExitCode returns current exitcode for the state. Take lock before if state
+may be shared.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.GetPID">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=6484:6512#L237">GetPID</a>
+					<a class="permalink" href="index.html#State.GetPID">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#GetPID">GetPID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+GetPID holds the process id of a container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.IsDead">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=9730:9759#L367">IsDead</a>
+					<a class="permalink" href="index.html#State.IsDead">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#IsDead">IsDead</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsDead returns whether the Dead flag is set. Used by Container to check whether a container is dead.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.IsPaused">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=8549:8580#L316">IsPaused</a>
+					<a class="permalink" href="index.html#State.IsPaused">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#IsPaused">IsPaused</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsPaused returns whether the container is paused or not.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.IsRemovalInProgress">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=9402:9444#L352">IsRemovalInProgress</a>
+					<a class="permalink" href="index.html#State.IsRemovalInProgress">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#IsRemovalInProgress">IsRemovalInProgress</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsRemovalInProgress returns whether the RemovalInProgress flag is set.
+Used by Container to check whether a container is being removed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.IsRestarting">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=8705:8740#L324">IsRestarting</a>
+					<a class="permalink" href="index.html#State.IsRestarting">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#IsRestarting">IsRestarting</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsRestarting returns whether the container is restarting or not.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.IsRunning">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=6347:6379#L229">IsRunning</a>
+					<a class="permalink" href="index.html#State.IsRunning">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#IsRunning">IsRunning</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsRunning returns whether the running flag is set. Used by Container to check whether a container is running.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.ResetRemovalInProgress">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=9163:9203#L344">ResetRemovalInProgress</a>
+					<a class="permalink" href="index.html#State.ResetRemovalInProgress">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#ResetRemovalInProgress">ResetRemovalInProgress</a>()</pre>
+				<p>
+ResetRemovalInProgress makes the RemovalInProgress state to false.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetDead">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=9558:9583#L360">SetDead</a>
+					<a class="permalink" href="index.html#State.SetDead">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetDead">SetDead</a>()</pre>
+				<p>
+SetDead sets the container state to &#34;dead&#34;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetError">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=8384:8419#L308">SetError</a>
+					<a class="permalink" href="index.html#State.SetError">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetError">SetError</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SetError sets the container&#39;s error state. This is useful when we want to
+know the error that occurred when container transits to another state
+when inspecting it
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetExitCode">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=6818:6853#L252">SetExitCode</a>
+					<a class="permalink" href="index.html#State.SetExitCode">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetExitCode">SetExitCode</a>(ec <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+SetExitCode sets current exitcode for the state. Take lock before if state
+may be shared.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetRemovalError">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=10243:10285#L384">SetRemovalError</a>
+					<a class="permalink" href="index.html#State.SetRemovalError">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetRemovalError">SetRemovalError</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SetRemovalError is to be called in case a container remove failed.
+It sets an error and closes the internal waitRemove channel to unblock
+callers waiting for the container to be removed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetRemovalInProgress">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=8931:8974#L333">SetRemovalInProgress</a>
+					<a class="permalink" href="index.html#State.SetRemovalInProgress">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetRemovalInProgress">SetRemovalInProgress</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+SetRemovalInProgress sets the container state as being removed.
+It returns true if the container was already in that state.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetRemoved">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=9989:10017#L377">SetRemoved</a>
+					<a class="permalink" href="index.html#State.SetRemoved">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetRemoved">SetRemoved</a>()</pre>
+				<p>
+SetRemoved assumes this container is already in the &#34;dead&#34; state and
+closes the internal waitRemove channel to unblock callers waiting for a
+container to be removed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetRestarting">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=7773:7826#L291">SetRestarting</a>
+					<a class="permalink" href="index.html#State.SetRestarting">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetRestarting">SetRestarting</a>(exitStatus *<a href="index.html#ExitStatus">ExitStatus</a>)</pre>
+				<p>
+SetRestarting sets the container state to &#34;restarting&#34; without locking.
+It also sets the container PID to 0.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetRunning">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=6941:6990#L257">SetRunning</a>
+					<a class="permalink" href="index.html#State.SetRunning">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetRunning">SetRunning</a>(pid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, initial <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+				<p>
+SetRunning sets the state of the container to &#34;running&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.SetStopped">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=7260:7310#L273">SetStopped</a>
+					<a class="permalink" href="index.html#State.SetStopped">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#SetStopped">SetStopped</a>(exitStatus *<a href="index.html#ExitStatus">ExitStatus</a>)</pre>
+				<p>
+SetStopped sets the container state to &#34;stopped&#34; without locking.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.StateString">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=3163:3199#L103">StateString</a>
+					<a class="permalink" href="index.html#State.StateString">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#StateString">StateString</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+StateString returns a single string to describe state
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.String">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=2007:2038#L59">String</a>
+					<a class="permalink" href="index.html#State.String">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns a human-readable description of the state
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="State.Wait">func (*State) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=5055:5140#L171">Wait</a>
+					<a class="permalink" href="index.html#State.Wait">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#State">State</a>) <a href="index.html#Wait">Wait</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, condition <a href="index.html#WaitCondition">WaitCondition</a>) &lt;-chan <a href="index.html#StateStatus">StateStatus</a></pre>
+				<p>
+Wait waits until the container is in a certain state indicated by the given
+condition. A context must be used for cancelling the request, controlling
+timeouts, and avoiding goroutine leaks. Wait must be called without holding
+the state lock. Returns a channel from which the caller will receive the
+result. If the container exited on its own, the result&#39;s Err() method will
+be nil and its ExitCode() method will return the container&#39;s exit code,
+otherwise, the results Err() method will return an error indicating why the
+wait operation failed.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="StateStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=1425:1482#L34">StateStatus</a>
+				<a class="permalink" href="index.html#StateStatus">&#xb6;</a>
+			</h2>
+			<p>
+StateStatus is used to return container wait results.
+Implements exec.ExitCode interface.
+This type is needed as State include a sync.Mutex field which make
+copying it unsafe.
+</p>
+
+			<pre>type StateStatus struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="StateStatus.Err">func (StateStatus) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=1695:1727#L46">Err</a>
+					<a class="permalink" href="index.html#StateStatus.Err">&#xb6;</a>
+				</h3>
+				<pre>func (s <a href="index.html#StateStatus">StateStatus</a>) <a href="index.html#Err">Err</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Err returns current error for the state. Returns nil if the container had
+exited on its own.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="StateStatus.ExitCode">func (StateStatus) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=1536:1571#L40">ExitCode</a>
+					<a class="permalink" href="index.html#StateStatus.ExitCode">&#xb6;</a>
+				</h3>
+				<pre>func (s <a href="index.html#StateStatus">StateStatus</a>) <a href="index.html#ExitCode">ExitCode</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+ExitCode returns current exitcode for the state.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Store">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/store.go?s=363:1012#L3">Store</a>
+				<a class="permalink" href="index.html#Store">&#xb6;</a>
+			</h2>
+			<p>
+Store defines an interface that
+any container store must implement.
+</p>
+
+			<pre>type Store interface {
+    <span class="comment">// Add appends a new container to the store.</span>
+    Add(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, *<a href="index.html#Container">Container</a>)
+    <span class="comment">// Get returns a container from the store by the identifier it was stored with.</span>
+    Get(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#Container">Container</a>
+    <span class="comment">// Delete removes a container from the store by the identifier it was stored with.</span>
+    Delete(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)
+    <span class="comment">// List returns a list of containers from the store.</span>
+    List() []*<a href="index.html#Container">Container</a>
+    <span class="comment">// Size returns the number of containers in the store.</span>
+    Size() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+    <span class="comment">// First returns the first container found in the store by a given filter.</span>
+    First(<a href="index.html#StoreFilter">StoreFilter</a>) *<a href="index.html#Container">Container</a>
+    <span class="comment">// ApplyAll calls the reducer function with every container in the store.</span>
+    ApplyAll(<a href="index.html#StoreReducer">StoreReducer</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMemoryStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/memory_store.go?s=249:276#L4">NewMemoryStore</a>
+					<a class="permalink" href="index.html#NewMemoryStore">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewMemoryStore">NewMemoryStore</a>() <a href="index.html#Store">Store</a></pre>
+				<p>
+NewMemoryStore initializes a new memory store.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="StoreFilter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/store.go?s=137:175#L1">StoreFilter</a>
+				<a class="permalink" href="index.html#StoreFilter">&#xb6;</a>
+			</h2>
+			<p>
+StoreFilter defines a function to filter
+container in the store.
+</p>
+
+			<pre>type StoreFilter func(*<a href="index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="StoreReducer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/store.go?s=253:287#L1">StoreReducer</a>
+				<a class="permalink" href="index.html#StoreReducer">&#xb6;</a>
+			</h2>
+			<p>
+StoreReducer defines a function to
+manipulate containers in the store
+</p>
+
+			<pre>type StoreReducer func(*<a href="index.html#Container">Container</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="View">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/view.go?s=1859:2016#L62">View</a>
+				<a class="permalink" href="index.html#View">&#xb6;</a>
+			</h2>
+			<p>
+View can be used by readers to avoid locking
+</p>
+
+			<pre>type View interface {
+    All() ([]<a href="index.html#Snapshot">Snapshot</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Get(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Snapshot">Snapshot</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    GetID(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    GetAllNames() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ViewDB">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/view.go?s=1639:1809#L52">ViewDB</a>
+				<a class="permalink" href="index.html#ViewDB">&#xb6;</a>
+			</h2>
+			<p>
+ViewDB provides an in-memory transactional (ACID) container Store
+</p>
+
+			<pre>type ViewDB interface {
+    Snapshot() <a href="index.html#View">View</a>
+    Save(*<a href="index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Delete(*<a href="index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+
+    ReserveName(name, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    ReleaseName(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewViewDB">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/view.go?s=3093:3125#L116">NewViewDB</a>
+					<a class="permalink" href="index.html#NewViewDB">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewViewDB">NewViewDB</a>() (<a href="index.html#ViewDB">ViewDB</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewViewDB provides the default implementation, with the default schema
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="WaitCondition">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/state.go?s=3849:3871#L144">WaitCondition</a>
+				<a class="permalink" href="index.html#WaitCondition">&#xb6;</a>
+			</h2>
+			<p>
+WaitCondition is an enum type for different states to wait for.
+</p>
+
+			<pre>type WaitCondition <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+
+			
+				<p>
+Possible WaitCondition Values.
+</p>
+<p>
+WaitConditionNotRunning (default) is used to wait for any of the non-running
+states: &#34;created&#34;, &#34;exited&#34;, &#34;dead&#34;, &#34;removing&#34;, or &#34;removed&#34;.
+</p>
+<p>
+WaitConditionNextExit is used to wait for the next time the state changes
+to a non-running state. If the state is currently &#34;created&#34; or &#34;exited&#34;,
+this would cause Wait() to block until either the container runs and exits
+or is removed.
+</p>
+<p>
+WaitConditionRemoved is used to wait for the container to be removed.
+</p>
+
+				<pre>const (
+    <span id="WaitConditionNotRunning">WaitConditionNotRunning</span> <a href="index.html#WaitCondition">WaitCondition</a> = <a href="http://127.0.0.1:8080/pkg/builtin/#iota">iota</a>
+    <span id="WaitConditionNextExit">WaitConditionNextExit</span>
+    <span id="WaitConditionRemoved">WaitConditionRemoved</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="stream/index.html">stream</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

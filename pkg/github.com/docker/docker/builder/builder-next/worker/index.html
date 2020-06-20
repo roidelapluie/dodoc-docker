@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>worker - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package worker</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/builder/builder-next/worker"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#DefaultGCPolicy">func DefaultGCPolicy(p string, defaultKeepBytes int64) []client.PruneInfo</a></dd>
+			
+			
+				
+				<dd><a href="index.html#LayerAccess">type LayerAccess</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Opt">type Opt</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Worker">type Worker</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewWorker">func NewWorker(opt Opt) (*Worker, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.DiskUsage">func (w *Worker) DiskUsage(ctx context.Context, opt client.DiskUsageInfo) ([]*client.UsageInfo, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.Exec">func (w *Worker) Exec(ctx context.Context, meta executor.Meta, rootFS cache.ImmutableRef, stdin io.ReadCloser, stdout, stderr io.WriteCloser) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.Exporter">func (w *Worker) Exporter(name string, sm *session.Manager) (exporter.Exporter, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.FromRemote">func (w *Worker) FromRemote(ctx context.Context, remote *solver.Remote) (cache.ImmutableRef, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.GCPolicy">func (w *Worker) GCPolicy() []client.PruneInfo</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.GetRemote">func (w *Worker) GetRemote(ctx context.Context, ref cache.ImmutableRef, createIfNeeded bool) (*solver.Remote, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.ID">func (w *Worker) ID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.Labels">func (w *Worker) Labels() map[string]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.LoadRef">func (w *Worker) LoadRef(id string, hidden bool) (cache.ImmutableRef, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.Platforms">func (w *Worker) Platforms() []ocispec.Platform</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.Prune">func (w *Worker) Prune(ctx context.Context, ch chan client.UsageInfo, info ...client.PruneInfo) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.PruneCacheMounts">func (w *Worker) PruneCacheMounts(ctx context.Context, ids []string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.ResolveImageConfig">func (w *Worker) ResolveImageConfig(ctx context.Context, ref string, opt gw.ResolveImageConfigOpt, sm *session.Manager) (digest.Digest, []byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Worker.ResolveOp">func (w *Worker) ResolveOp(v solver.Vertex, s frontend.FrontendLLBBridge, sm *session.Manager) (solver.Op, error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/gc.go">gc.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/gc_unix.go">gc_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go">worker.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="DefaultGCPolicy">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/gc.go?s=512:585#L7">DefaultGCPolicy</a>
+				<a class="permalink" href="index.html#DefaultGCPolicy">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DefaultGCPolicy">DefaultGCPolicy</a>(p <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, defaultKeepBytes <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>) []<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/">client</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/#PruneInfo">PruneInfo</a></pre>
+			<p>
+DefaultGCPolicy returns a default builder GC policy
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="LayerAccess">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=1682:1851#L43">LayerAccess</a>
+				<a class="permalink" href="index.html#LayerAccess">&#xb6;</a>
+			</h2>
+			<p>
+LayerAccess provides access to a moby layer from a snapshot
+</p>
+
+			<pre>type LayerAccess interface {
+    GetDiffIDs(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../../../layer/index.html">layer</a>.<a href="../../../layer/index.html#DiffID">DiffID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    EnsureLayer(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../../../layer/index.html">layer</a>.<a href="../../../layer/index.html#DiffID">DiffID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Opt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=1903:2484#L49">Opt</a>
+				<a class="permalink" href="index.html#Opt">&#xb6;</a>
+			</h2>
+			<p>
+Opt defines a structure for creating a worker.
+</p>
+
+			<pre>type Opt struct {
+<span id="Opt.ID"></span>    ID                <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Opt.Labels"></span>    Labels            map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Opt.GCPolicy"></span>    GCPolicy          []<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/">client</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/#PruneInfo">PruneInfo</a>
+<span id="Opt.MetadataStore"></span>    MetadataStore     *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/metadata/">metadata</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/metadata/#Store">Store</a>
+<span id="Opt.Executor"></span>    Executor          <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/executor/">executor</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/executor/#Executor">Executor</a>
+<span id="Opt.Snapshotter"></span>    Snapshotter       <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/snapshot/">snapshot</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/snapshot/#Snapshotter">Snapshotter</a>
+<span id="Opt.ContentStore"></span>    ContentStore      <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/content/">content</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/content/#Store">Store</a>
+<span id="Opt.CacheManager"></span>    CacheManager      <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/">cache</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/#Manager">Manager</a>
+<span id="Opt.ImageSource"></span>    ImageSource       <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/source/">source</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/source/#Source">Source</a>
+<span id="Opt.DownloadManager"></span>    DownloadManager   <a href="../../../distribution/index.html">distribution</a>.<a href="../../../distribution/index.html#RootFSDownloadManager">RootFSDownloadManager</a>
+<span id="Opt.V2MetadataService"></span>    V2MetadataService <a href="../../../distribution/metadata/index.html">distmetadata</a>.<a href="../../../distribution/metadata/index.html#V2MetadataService">V2MetadataService</a>
+<span id="Opt.Transport"></span>    Transport         <a href="http://127.0.0.1:8080/pkg/net/http/">nethttp</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#RoundTripper">RoundTripper</a>
+<span id="Opt.Exporter"></span>    Exporter          <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/exporter/">exporter</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/exporter/#Exporter">Exporter</a>
+<span id="Opt.Layers"></span>    Layers            <a href="index.html#LayerAccess">LayerAccess</a>
+<span id="Opt.Platforms"></span>    Platforms         []<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">ocispec</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Worker">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=2600:2658#L69">Worker</a>
+				<a class="permalink" href="index.html#Worker">&#xb6;</a>
+			</h2>
+			<p>
+Worker is a local worker instance with dedicated snapshotter, cache, and so on.
+TODO: s/Worker/OpWorker/g ?
+</p>
+
+			<pre>type Worker struct {
+    <a href="index.html#Opt">Opt</a>
+<span id="Worker.SourceManager"></span>    SourceManager *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/source/">source</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/source/#Manager">Manager</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewWorker">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=2701:2741#L75">NewWorker</a>
+					<a class="permalink" href="index.html#NewWorker">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewWorker">NewWorker</a>(opt <a href="index.html#Opt">Opt</a>) (*<a href="index.html#Worker">Worker</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewWorker instantiates a local worker
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Worker.DiskUsage">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=6007:6109#L191">DiskUsage</a>
+					<a class="permalink" href="index.html#Worker.DiskUsage">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#DiskUsage">DiskUsage</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, opt <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/">client</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/#DiskUsageInfo">DiskUsageInfo</a>) ([]*<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/">client</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/#UsageInfo">UsageInfo</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+DiskUsage returns disk usage report
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.Exec">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=5625:5772#L181">Exec</a>
+					<a class="permalink" href="index.html#Worker.Exec">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#Exec">Exec</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, meta <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/executor/">executor</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/executor/#Meta">Meta</a>, rootFS <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/">cache</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/#ImmutableRef">ImmutableRef</a>, stdin <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, stdout, stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Exec executes a process directly on a worker
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.Exporter">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=6390:6476#L201">Exporter</a>
+					<a class="permalink" href="index.html#Worker.Exporter">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#Exporter">Exporter</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, sm *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/">session</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/#Manager">Manager</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/exporter/">exporter</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/exporter/#Exporter">Exporter</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Exporter returns exporter by name
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.FromRemote">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=8795:8894#L294">FromRemote</a>
+					<a class="permalink" href="index.html#Worker.FromRemote">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#FromRemote">FromRemote</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, remote *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/">solver</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/#Remote">Remote</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/">cache</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/#ImmutableRef">ImmutableRef</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+FromRemote converts a remote snapshot reference to a local one
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.GCPolicy">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=4072:4118#L140">GCPolicy</a>
+					<a class="permalink" href="index.html#Worker.GCPolicy">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#GCPolicy">GCPolicy</a>() []<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/">client</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/#PruneInfo">PruneInfo</a></pre>
+				<p>
+GCPolicy returns automatic GC Policy
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.GetRemote">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=6884:7000#L219">GetRemote</a>
+					<a class="permalink" href="index.html#Worker.GetRemote">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#GetRemote">GetRemote</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/">cache</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/#ImmutableRef">ImmutableRef</a>, createIfNeeded <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) (*<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/">solver</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/#Remote">Remote</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRemote returns a remote snapshot reference for a local one
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.ID">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=3636:3664#L122">ID</a>
+					<a class="permalink" href="index.html#Worker.ID">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#ID">ID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ID returns worker ID
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.Labels">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=3730:3773#L127">Labels</a>
+					<a class="permalink" href="index.html#Worker.Labels">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#Labels">Labels</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Labels returns map of all worker labels
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.LoadRef">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=4182:4258#L145">LoadRef</a>
+					<a class="permalink" href="index.html#Worker.LoadRef">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#LoadRef">LoadRef</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, hidden <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/">cache</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/cache/#ImmutableRef">ImmutableRef</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+LoadRef loads a reference by ID
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.Platforms">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=3867:3914#L132">Platforms</a>
+					<a class="permalink" href="index.html#Worker.Platforms">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#Platforms">Platforms</a>() []<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">ocispec</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a></pre>
+				<p>
+Platforms returns one or more platforms supported by the image.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.Prune">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=6199:6300#L196">Prune</a>
+					<a class="permalink" href="index.html#Worker.Prune">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#Prune">Prune</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ch chan <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/">client</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/#UsageInfo">UsageInfo</a>, info ...<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/">client</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/client/#PruneInfo">PruneInfo</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Prune deletes reclaimable build cache
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.PruneCacheMounts">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=7751:7825#L253">PruneCacheMounts</a>
+					<a class="permalink" href="index.html#Worker.PruneCacheMounts">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#PruneCacheMounts">PruneCacheMounts</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ids []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+PruneCacheMounts removes the current cache snapshots for specified IDs
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.ResolveImageConfig">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=5139:5289#L171">ResolveImageConfig</a>
+					<a class="permalink" href="index.html#Worker.ResolveImageConfig">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#ResolveImageConfig">ResolveImageConfig</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opt <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/frontend/gateway/client/">gw</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/frontend/gateway/client/#ResolveImageConfigOpt">ResolveImageConfigOpt</a>, sm *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/">session</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/#Manager">Manager</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/go-digest/">digest</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/go-digest/#Digest">Digest</a>, []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ResolveImageConfig returns image config for an image
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Worker.ResolveOp">func (*Worker) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/builder-next/worker/worker.go?s=4466:4579#L154">ResolveOp</a>
+					<a class="permalink" href="index.html#Worker.ResolveOp">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#Worker">Worker</a>) <a href="index.html#ResolveOp">ResolveOp</a>(v <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/">solver</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/#Vertex">Vertex</a>, s <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/frontend/">frontend</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/frontend/#FrontendLLBBridge">FrontendLLBBridge</a>, sm *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/">session</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/session/#Manager">Manager</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/">solver</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/solver/#Op">Op</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ResolveOp converts a LLB vertex into a LLB operation
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

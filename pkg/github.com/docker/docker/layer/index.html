@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>layer - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package layer</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/layer"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package layer is package for managing read-only
+and read-write mounts on the union file system
+driver. Read-only mounts are referenced using a
+content hash and are protected from mutation in
+the exposed interface. The tar format is used
+to create read-only layers and export both
+read-only and writable layers. The exported
+tar data for a read-only layer should match
+the tar used to create the layer.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#IsEmpty">func IsEmpty(diffID DiffID) bool</a></dd>
+			
+				
+				<dd><a href="index.html#LogReleaseMetadata">func LogReleaseMetadata(metadatas []Metadata)</a></dd>
+			
+				
+				<dd><a href="index.html#ReleaseAndLog">func ReleaseAndLog(ls Store, l Layer)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ChainID">type ChainID</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CreateChainID">func CreateChainID(dgsts []DiffID) ChainID</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ChainID.String">func (id ChainID) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CreateRWLayerOpts">type CreateRWLayerOpts</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DescribableStore">type DescribableStore</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DiffID">type DiffID</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DiffID.String">func (diffID DiffID) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Layer">type Layer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Metadata">type Metadata</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#MountInit">type MountInit</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RWLayer">type RWLayer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Store">type Store</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewStoreFromOptions">func NewStoreFromOptions(options StoreOptions) (Store, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StoreOptions">type StoreOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TarStreamer">type TarStreamer</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/empty.go">empty.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/filestore.go">filestore.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/filestore_unix.go">filestore_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go">layer.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer_store.go">layer_store.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer_unix.go">layer_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/migration.go">migration.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/mounted_layer.go">mounted_layer.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/ro_layer.go">ro_layer.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+DigestSHA256EmptyTar is the canonical sha256 digest of empty tar file -
+(1024 NULL bytes)
+</p>
+
+				<pre>const <span id="DigestSHA256EmptyTar">DigestSHA256EmptyTar</span> = <a href="index.html#DiffID">DiffID</a>(&#34;sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef&#34;)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrLayerDoesNotExist is used when an operation is</span>
+    <span class="comment">// attempted on a layer which does not exist.</span>
+    <span id="ErrLayerDoesNotExist">ErrLayerDoesNotExist</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;layer does not exist&#34;)
+
+    <span class="comment">// ErrLayerNotRetained is used when a release is</span>
+    <span class="comment">// attempted on a layer which is not retained.</span>
+    <span id="ErrLayerNotRetained">ErrLayerNotRetained</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;layer not retained&#34;)
+
+    <span class="comment">// ErrMountDoesNotExist is used when an operation is</span>
+    <span class="comment">// attempted on a mount layer which does not exist.</span>
+    <span id="ErrMountDoesNotExist">ErrMountDoesNotExist</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;mount does not exist&#34;)
+
+    <span class="comment">// ErrMountNameConflict is used when a mount is attempted</span>
+    <span class="comment">// to be created but there is already a mount with the name</span>
+    <span class="comment">// used for creation.</span>
+    <span id="ErrMountNameConflict">ErrMountNameConflict</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;mount already exists with name&#34;)
+
+    <span class="comment">// ErrActiveMount is used when an operation on a</span>
+    <span class="comment">// mount is attempted but the layer is still</span>
+    <span class="comment">// mounted and the operation cannot be performed.</span>
+    <span id="ErrActiveMount">ErrActiveMount</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;mount still active&#34;)
+
+    <span class="comment">// ErrNotMounted is used when requesting an active</span>
+    <span class="comment">// mount but the layer is not mounted.</span>
+    <span id="ErrNotMounted">ErrNotMounted</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;not mounted&#34;)
+
+    <span class="comment">// ErrMaxDepthExceeded is used when a layer is attempted</span>
+    <span class="comment">// to be created which would result in a layer depth</span>
+    <span class="comment">// greater than the 125 max.</span>
+    <span id="ErrMaxDepthExceeded">ErrMaxDepthExceeded</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;max depth exceeded&#34;)
+
+    <span class="comment">// ErrNotSupported is used when the action is not supported</span>
+    <span class="comment">// on the current host operating system.</span>
+    <span id="ErrNotSupported">ErrNotSupported</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;not support on this host operating system&#34;)
+)</pre>
+			
+				<p>
+EmptyLayer is a layer that corresponds to empty tar.
+</p>
+
+				<pre>var <span id="EmptyLayer">EmptyLayer</span> = &amp;emptyLayer{}</pre>
+			
+		
+		
+			
+			
+			<h2 id="IsEmpty">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/empty.go?s=1321:1353#L49">IsEmpty</a>
+				<a class="permalink" href="index.html#IsEmpty">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsEmpty">IsEmpty</a>(diffID <a href="index.html#DiffID">DiffID</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsEmpty returns true if the layer is an EmptyLayer
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LogReleaseMetadata">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=7053:7098#L223">LogReleaseMetadata</a>
+				<a class="permalink" href="index.html#LogReleaseMetadata">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#LogReleaseMetadata">LogReleaseMetadata</a>(metadatas []<a href="index.html#Metadata">Metadata</a>)</pre>
+			<p>
+LogReleaseMetadata logs a metadata array, uses this to
+ensure consistent logging for release metadata
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReleaseAndLog">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=6754:6791#L213">ReleaseAndLog</a>
+				<a class="permalink" href="index.html#ReleaseAndLog">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ReleaseAndLog">ReleaseAndLog</a>(ls <a href="index.html#Store">Store</a>, l <a href="index.html#Layer">Layer</a>)</pre>
+			<p>
+ReleaseAndLog releases the provided layer from the given layer
+store, logging any error and release metadata
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ChainID">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=2173:2199#L51">ChainID</a>
+				<a class="permalink" href="index.html#ChainID">&#xb6;</a>
+			</h2>
+			<p>
+ChainID is the content-addressable ID of a layer.
+</p>
+
+			<pre>type ChainID digest.<a href="index.html#Digest">Digest</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CreateChainID">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=6178:6220#L195">CreateChainID</a>
+					<a class="permalink" href="index.html#CreateChainID">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#CreateChainID">CreateChainID</a>(dgsts []<a href="index.html#DiffID">DiffID</a>) <a href="index.html#ChainID">ChainID</a></pre>
+				<p>
+CreateChainID returns ID for a layerDigest slice
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ChainID.String">func (ChainID) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=2252:2285#L54">String</a>
+					<a class="permalink" href="index.html#ChainID.String">&#xb6;</a>
+				</h3>
+				<pre>func (id <a href="index.html#ChainID">ChainID</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns a string rendition of a layer ID
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="CreateRWLayerOpts">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=5287:5391#L164">CreateRWLayerOpts</a>
+				<a class="permalink" href="index.html#CreateRWLayerOpts">&#xb6;</a>
+			</h2>
+			<p>
+CreateRWLayerOpts contains optional arguments to be passed to CreateRWLayer
+</p>
+
+			<pre>type CreateRWLayerOpts struct {
+<span id="CreateRWLayerOpts.MountLabel"></span>    MountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CreateRWLayerOpts.InitFunc"></span>    InitFunc   <a href="index.html#MountInit">MountInit</a>
+<span id="CreateRWLayerOpts.StorageOpt"></span>    StorageOpt map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DescribableStore">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=6005:6124#L190">DescribableStore</a>
+				<a class="permalink" href="index.html#DescribableStore">&#xb6;</a>
+			</h2>
+			<p>
+DescribableStore represents a layer store capable of storing
+descriptors for layers.
+</p>
+
+			<pre>type DescribableStore interface {
+    RegisterWithDescriptor(<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, <a href="index.html#ChainID">ChainID</a>, <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/">distribution</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/#Descriptor">Descriptor</a>) (<a href="index.html#Layer">Layer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DiffID">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=2360:2385#L59">DiffID</a>
+				<a class="permalink" href="index.html#DiffID">&#xb6;</a>
+			</h2>
+			<p>
+DiffID is the hash of an individual layer tar.
+</p>
+
+			<pre>type DiffID digest.<a href="index.html#Digest">Digest</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DiffID.String">func (DiffID) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=2442:2478#L62">String</a>
+					<a class="permalink" href="index.html#DiffID.String">&#xb6;</a>
+				</h3>
+				<pre>func (diffID <a href="index.html#DiffID">DiffID</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns a string rendition of a layer DiffID
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Layer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=2782:3685#L75">Layer</a>
+				<a class="permalink" href="index.html#Layer">&#xb6;</a>
+			</h2>
+			<p>
+Layer represents a read-only layer
+</p>
+
+			<pre>type Layer interface {
+    <a href="index.html#TarStreamer">TarStreamer</a>
+
+    <span class="comment">// TarStreamFrom returns a tar archive stream for all the layer chain with</span>
+    <span class="comment">// arbitrary depth.</span>
+    TarStreamFrom(<a href="index.html#ChainID">ChainID</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// ChainID returns the content hash of the entire layer chain. The hash</span>
+    <span class="comment">// chain is made up of DiffID of top layer and all of its parents.</span>
+    ChainID() <a href="index.html#ChainID">ChainID</a>
+
+    <span class="comment">// DiffID returns the content hash of the layer</span>
+    <span class="comment">// tar stream used to create this layer.</span>
+    DiffID() <a href="index.html#DiffID">DiffID</a>
+
+    <span class="comment">// Parent returns the next layer in the layer chain.</span>
+    Parent() <a href="index.html#Layer">Layer</a>
+
+    <span class="comment">// Size returns the size of the entire layer chain. The size</span>
+    <span class="comment">// is calculated from the total size of all files in the layers.</span>
+    Size() (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// DiffSize returns the size difference of the top layer</span>
+    <span class="comment">// from parent layer.</span>
+    DiffSize() (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Metadata returns the low level storage metadata associated</span>
+    <span class="comment">// with layer.</span>
+    Metadata() (map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Metadata">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=4716:5008#L142">Metadata</a>
+				<a class="permalink" href="index.html#Metadata">&#xb6;</a>
+			</h2>
+			<p>
+Metadata holds information about a
+read-only layer
+</p>
+
+			<pre>type Metadata struct {
+<span id="Metadata.ChainID"></span>    <span class="comment">// ChainID is the content hash of the layer</span>
+    ChainID <a href="index.html#ChainID">ChainID</a>
+
+<span id="Metadata.DiffID"></span>    <span class="comment">// DiffID is the hash of the tar data used to</span>
+    <span class="comment">// create the layer</span>
+    DiffID <a href="index.html#DiffID">DiffID</a>
+
+<span id="Metadata.Size"></span>    <span class="comment">// Size is the size of the layer and all parents</span>
+    Size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>
+
+<span id="Metadata.DiffSize"></span>    <span class="comment">// DiffSize is the size of the top layer</span>
+    DiffSize <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="MountInit">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=5151:5206#L161">MountInit</a>
+				<a class="permalink" href="index.html#MountInit">&#xb6;</a>
+			</h2>
+			<p>
+MountInit is a function to initialize a
+writable mount. Changes made here will
+not be included in the Tar stream of the
+RWLayer.
+</p>
+
+			<pre>type MountInit func(root <a href="../pkg/containerfs/index.html">containerfs</a>.<a href="../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RWLayer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=3747:4657#L108">RWLayer</a>
+				<a class="permalink" href="index.html#RWLayer">&#xb6;</a>
+			</h2>
+			<p>
+RWLayer represents a layer which is
+read and writable
+</p>
+
+			<pre>type RWLayer interface {
+    <a href="index.html#TarStreamer">TarStreamer</a>
+
+    <span class="comment">// Name of mounted layer</span>
+    Name() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Parent returns the layer which the writable</span>
+    <span class="comment">// layer was created from.</span>
+    Parent() <a href="index.html#Layer">Layer</a>
+
+    <span class="comment">// Mount mounts the RWLayer and returns the filesystem path</span>
+    <span class="comment">// the to the writable layer.</span>
+    Mount(mountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../pkg/containerfs/index.html">containerfs</a>.<a href="../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Unmount unmounts the RWLayer. This should be called</span>
+    <span class="comment">// for every mount. If there are multiple mount calls</span>
+    <span class="comment">// this operation will only decrement the internal mount counter.</span>
+    Unmount() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+
+    <span class="comment">// Size represents the size of the writable layer</span>
+    <span class="comment">// as calculated by the total size of the files</span>
+    <span class="comment">// changed in the mutable layer.</span>
+    Size() (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Changes returns the set of changes for the mutable layer</span>
+    <span class="comment">// from the base layer.</span>
+    Changes() ([]<a href="../pkg/archive/index.html">archive</a>.<a href="../pkg/archive/index.html#Change">Change</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    <span class="comment">// Metadata returns the low level metadata for the mutable layer</span>
+    Metadata() (map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Store">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=5477:5912#L172">Store</a>
+				<a class="permalink" href="index.html#Store">&#xb6;</a>
+			</h2>
+			<p>
+Store represents a backend for managing both
+read-only and read-write layers.
+</p>
+
+			<pre>type Store interface {
+    Register(<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, <a href="index.html#ChainID">ChainID</a>) (<a href="index.html#Layer">Layer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Get(<a href="index.html#ChainID">ChainID</a>) (<a href="index.html#Layer">Layer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Map() map[<a href="index.html#ChainID">ChainID</a>]<a href="index.html#Layer">Layer</a>
+    Release(<a href="index.html#Layer">Layer</a>) ([]<a href="index.html#Metadata">Metadata</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    CreateRWLayer(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, parent <a href="index.html#ChainID">ChainID</a>, opts *<a href="index.html#CreateRWLayerOpts">CreateRWLayerOpts</a>) (<a href="index.html#RWLayer">RWLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    GetRWLayer(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#RWLayer">RWLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    GetMountID(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    ReleaseRWLayer(<a href="index.html#RWLayer">RWLayer</a>) ([]<a href="index.html#Metadata">Metadata</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+
+    Cleanup() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    DriverStatus() [][2]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    DriverName() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewStoreFromOptions">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer_store.go?s=1573:1634#L50">NewStoreFromOptions</a>
+					<a class="permalink" href="index.html#NewStoreFromOptions">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewStoreFromOptions">NewStoreFromOptions</a>(options <a href="index.html#StoreOptions">StoreOptions</a>) (<a href="index.html#Store">Store</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewStoreFromOptions creates a new Store instance
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="StoreOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer_store.go?s=1182:1519#L38">StoreOptions</a>
+				<a class="permalink" href="index.html#StoreOptions">&#xb6;</a>
+			</h2>
+			<p>
+StoreOptions are the options used to create a new Store instance
+</p>
+
+			<pre>type StoreOptions struct {
+<span id="StoreOptions.Root"></span>    Root                      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="StoreOptions.MetadataStorePathTemplate"></span>    MetadataStorePathTemplate <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="StoreOptions.GraphDriver"></span>    GraphDriver               <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="StoreOptions.GraphDriverOptions"></span>    GraphDriverOptions        []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="StoreOptions.IDMapping"></span>    IDMapping                 *<a href="../pkg/idtools/index.html">idtools</a>.<a href="../pkg/idtools/index.html#IdentityMapping">IdentityMapping</a>
+<span id="StoreOptions.PluginGetter"></span>    PluginGetter              <a href="../pkg/plugingetter/index.html">plugingetter</a>.<a href="../pkg/plugingetter/index.html#PluginGetter">PluginGetter</a>
+<span id="StoreOptions.ExperimentalEnabled"></span>    ExperimentalEnabled       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="StoreOptions.OS"></span>    OS                        <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="TarStreamer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/layer/layer.go?s=2600:2742#L68">TarStreamer</a>
+				<a class="permalink" href="index.html#TarStreamer">&#xb6;</a>
+			</h2>
+			<p>
+TarStreamer represents an object which may
+have its contents exported as a tar stream.
+</p>
+
+			<pre>type TarStreamer interface {
+    <span class="comment">// TarStream returns a tar archive stream</span>
+    <span class="comment">// for the contents of a layer.</span>
+    TarStream() (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

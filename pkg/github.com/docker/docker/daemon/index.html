@@ -1,0 +1,3557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>daemon - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package daemon</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package daemon exposes the functions that occur on the host server
+that the Docker daemon is running.
+</p>
+<p>
+In implementing the various functions of the daemon, there is often
+a method-specific struct for configuring the runtime behavior.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#CreateDaemonRoot">func CreateDaemonRoot(config *config.Config) error</a></dd>
+			
+				
+				<dd><a href="index.html#ModifyRootKeyLimit">func ModifyRootKeyLimit() error</a></dd>
+			
+				
+				<dd><a href="index.html#UsingSystemd">func UsingSystemd(config *config.Config) bool</a></dd>
+			
+				
+				<dd><a href="index.html#VerifyCgroupDriver">func VerifyCgroupDriver(config *config.Config) error</a></dd>
+			
+				
+				<dd><a href="index.html#WithApparmor">func WithApparmor(c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithCapabilities">func WithCapabilities(c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithCgroups">func WithCgroups(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithCommonOptions">func WithCommonOptions(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithDevices">func WithDevices(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithLibnetwork">func WithLibnetwork(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithMounts">func WithMounts(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithNamespaces">func WithNamespaces(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithOOMScore">func WithOOMScore(score *int) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithResources">func WithResources(c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithRlimits">func WithRlimits(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithRootless">func WithRootless(ctx context.Context, _ coci.Client, _ *containers.Container, s *coci.Spec) error</a></dd>
+			
+				
+				<dd><a href="index.html#WithSeccomp">func WithSeccomp(daemon *Daemon, c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithSelinux">func WithSelinux(c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithSysctls">func WithSysctls(c *container.Container) coci.SpecOpts</a></dd>
+			
+				
+				<dd><a href="index.html#WithUser">func WithUser(c *container.Container) coci.SpecOpts</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Cluster">type Cluster</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ClusterStatus">type ClusterStatus</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Daemon">type Daemon</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDaemon">func NewDaemon(ctx context.Context, config *config.Config, pluginStore *plugin.Store) (daemon *Daemon, err error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ActivateContainerServiceBinding">func (daemon *Daemon) ActivateContainerServiceBinding(containerName string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.AuthenticateToRegistry">func (daemon *Daemon) AuthenticateToRegistry(ctx context.Context, authConfig *types.AuthConfig) (string, string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.BuilderBackend">func (daemon *Daemon) BuilderBackend() builder.Backend</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckpointCreate">func (daemon *Daemon) CheckpointCreate(name string, config types.CheckpointCreateOptions) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckpointDelete">func (daemon *Daemon) CheckpointDelete(name string, config types.CheckpointDeleteOptions) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckpointList">func (daemon *Daemon) CheckpointList(name string, config types.CheckpointListOptions) ([]types.Checkpoint, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Cleanup">func (daemon *Daemon) Cleanup(container *container.Container)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ConnectContainerToNetwork">func (daemon *Daemon) ConnectContainerToNetwork(containerName, networkName string, endpointConfig *network.EndpointSettings) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ConnectToNetwork">func (daemon *Daemon) ConnectToNetwork(container *container.Container, idOrName string, endpointConfig *networktypes.EndpointSettings) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerArchivePath">func (daemon *Daemon) ContainerArchivePath(name string, path string) (content io.ReadCloser, stat *types.ContainerPathStat, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerAttach">func (daemon *Daemon) ContainerAttach(prefixOrName string, c *backend.ContainerAttachConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerAttachRaw">func (daemon *Daemon) ContainerAttachRaw(prefixOrName string, stdin io.ReadCloser, stdout, stderr io.Writer, doStream bool, attached chan struct{}) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerChanges">func (daemon *Daemon) ContainerChanges(name string) ([]archive.Change, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerCopy">func (daemon *Daemon) ContainerCopy(name string, res string) (io.ReadCloser, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerCreate">func (daemon *Daemon) ContainerCreate(params types.ContainerCreateConfig) (containertypes.ContainerCreateCreatedBody, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerCreateIgnoreImagesArgsEscaped">func (daemon *Daemon) ContainerCreateIgnoreImagesArgsEscaped(params types.ContainerCreateConfig) (containertypes.ContainerCreateCreatedBody, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerCreateWorkdir">func (daemon *Daemon) ContainerCreateWorkdir(cID string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerExecCreate">func (d *Daemon) ContainerExecCreate(name string, config *types.ExecConfig) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerExecInspect">func (daemon *Daemon) ContainerExecInspect(id string) (*backend.ExecInspect, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerExecResize">func (daemon *Daemon) ContainerExecResize(name string, height, width int) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerExecStart">func (d *Daemon) ContainerExecStart(ctx context.Context, name string, stdin io.Reader, stdout io.Writer, stderr io.Writer) (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerExport">func (daemon *Daemon) ContainerExport(name string, out io.Writer) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerExtractToDir">func (daemon *Daemon) ContainerExtractToDir(name, path string, copyUIDGID, noOverwriteDirNonDir bool, content io.Reader) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerInspect">func (daemon *Daemon) ContainerInspect(name string, size bool, version string) (interface{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerInspectCurrent">func (daemon *Daemon) ContainerInspectCurrent(name string, size bool) (*types.ContainerJSON, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerKill">func (daemon *Daemon) ContainerKill(name string, sig uint64) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerLogs">func (daemon *Daemon) ContainerLogs(ctx context.Context, containerName string, config *types.ContainerLogsOptions) (messages &lt;-chan *backend.LogMessage, isTTY bool, retErr error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerPause">func (daemon *Daemon) ContainerPause(name string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerRename">func (daemon *Daemon) ContainerRename(oldName, newName string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerResize">func (daemon *Daemon) ContainerResize(name string, height, width int) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerRestart">func (daemon *Daemon) ContainerRestart(name string, seconds *int) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerRm">func (daemon *Daemon) ContainerRm(name string, config *types.ContainerRmConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerStart">func (daemon *Daemon) ContainerStart(name string, hostConfig *containertypes.HostConfig, checkpoint string, checkpointDir string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerStatPath">func (daemon *Daemon) ContainerStatPath(name string, path string) (stat *types.ContainerPathStat, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerStats">func (daemon *Daemon) ContainerStats(ctx context.Context, prefixOrName string, config *backend.ContainerStatsConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerStop">func (daemon *Daemon) ContainerStop(name string, timeout *int) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerTop">func (daemon *Daemon) ContainerTop(name string, psArgs string) (*container.ContainerTopOKBody, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerUnpause">func (daemon *Daemon) ContainerUnpause(name string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerUpdate">func (daemon *Daemon) ContainerUpdate(name string, hostConfig *container.HostConfig) (container.ContainerUpdateOKBody, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainerWait">func (daemon *Daemon) ContainerWait(ctx context.Context, name string, condition container.WaitCondition) (&lt;-chan container.StateStatus, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Containers">func (daemon *Daemon) Containers(config *types.ContainerListOptions) ([]*types.Container, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ContainersPrune">func (daemon *Daemon) ContainersPrune(ctx context.Context, pruneFilters filters.Args) (*types.ContainersPruneReport, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CreateImageFromContainer">func (daemon *Daemon) CreateImageFromContainer(name string, c *backend.CreateImageConfig) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CreateManagedContainer">func (daemon *Daemon) CreateManagedContainer(params types.ContainerCreateConfig) (containertypes.ContainerCreateCreatedBody, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CreateManagedNetwork">func (daemon *Daemon) CreateManagedNetwork(create clustertypes.NetworkCreateRequest) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CreateNetwork">func (daemon *Daemon) CreateNetwork(create types.NetworkCreateRequest) (*types.NetworkCreateResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DaemonJoinsCluster">func (daemon *Daemon) DaemonJoinsCluster(clusterProvider cluster.Provider)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DaemonLeavesCluster">func (daemon *Daemon) DaemonLeavesCluster()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DeactivateContainerServiceBinding">func (daemon *Daemon) DeactivateContainerServiceBinding(containerName string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DeleteManagedNetwork">func (daemon *Daemon) DeleteManagedNetwork(networkID string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DeleteNetwork">func (daemon *Daemon) DeleteNetwork(networkID string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DisconnectContainerFromNetwork">func (daemon *Daemon) DisconnectContainerFromNetwork(containerName string, networkName string, force bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DisconnectFromNetwork">func (daemon *Daemon) DisconnectFromNetwork(container *container.Container, networkName string, force bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.DistributionServices">func (daemon *Daemon) DistributionServices() images.DistributionServices</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ExecExists">func (d *Daemon) ExecExists(name string) (bool, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Exists">func (daemon *Daemon) Exists(id string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Features">func (daemon *Daemon) Features() *map[string]bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.FindNetwork">func (daemon *Daemon) FindNetwork(term string) (libnetwork.Network, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ForceEndpointDelete">func (daemon *Daemon) ForceEndpointDelete(name string, networkName string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetAttachmentStore">func (daemon *Daemon) GetAttachmentStore() *network.AttachmentStore</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetByName">func (daemon *Daemon) GetByName(name string) (*container.Container, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetCluster">func (daemon *Daemon) GetCluster() Cluster</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetContainer">func (daemon *Daemon) GetContainer(prefixOrName string) (*container.Container, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetContainerStats">func (daemon *Daemon) GetContainerStats(container *container.Container) (*types.StatsJSON, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetNetworkByID">func (daemon *Daemon) GetNetworkByID(id string) (libnetwork.Network, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetNetworkByName">func (daemon *Daemon) GetNetworkByName(name string) (libnetwork.Network, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetNetworkDriverList">func (daemon *Daemon) GetNetworkDriverList() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetNetworks">func (daemon *Daemon) GetNetworks(filter filters.Args, config types.NetworkListConfig) ([]types.NetworkResource, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetNetworksByIDPrefix">func (daemon *Daemon) GetNetworksByIDPrefix(partialID string) []libnetwork.Network</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.HasExperimental">func (daemon *Daemon) HasExperimental() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.IdentityMapping">func (daemon *Daemon) IdentityMapping() *idtools.IdentityMapping</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ImageService">func (daemon *Daemon) ImageService() *images.ImageService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.IsPaused">func (daemon *Daemon) IsPaused(id string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.IsShuttingDown">func (daemon *Daemon) IsShuttingDown() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.IsSwarmCompatible">func (daemon *Daemon) IsSwarmCompatible() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Kill">func (daemon *Daemon) Kill(container *containerpkg.Container) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.List">func (daemon *Daemon) List() []*container.Container</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogContainerEvent">func (daemon *Daemon) LogContainerEvent(container *container.Container, action string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogContainerEventWithAttributes">func (daemon *Daemon) LogContainerEventWithAttributes(container *container.Container, action string, attributes map[string]string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogDaemonEventWithAttributes">func (daemon *Daemon) LogDaemonEventWithAttributes(action string, attributes map[string]string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogNetworkEvent">func (daemon *Daemon) LogNetworkEvent(nw libnetwork.Network, action string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogNetworkEventWithAttributes">func (daemon *Daemon) LogNetworkEventWithAttributes(nw libnetwork.Network, action string, attributes map[string]string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogPluginEvent">func (daemon *Daemon) LogPluginEvent(pluginID, refName, action string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogPluginEventWithAttributes">func (daemon *Daemon) LogPluginEventWithAttributes(pluginID, refName, action string, attributes map[string]string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.LogVolumeEvent">func (daemon *Daemon) LogVolumeEvent(volumeID, action string, attributes map[string]string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Mount">func (daemon *Daemon) Mount(container *container.Container) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.NetworkController">func (daemon *Daemon) NetworkController() libnetwork.NetworkController</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.NetworkControllerEnabled">func (daemon *Daemon) NetworkControllerEnabled() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.NetworksPrune">func (daemon *Daemon) NetworksPrune(ctx context.Context, pruneFilters filters.Args) (*types.NetworksPruneReport, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.NewResolveOptionsFunc">func (daemon *Daemon) NewResolveOptionsFunc() resolver.ResolveOptionsFunc</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.PluginGetter">func (daemon *Daemon) PluginGetter() *plugin.Store</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.PluginManager">func (daemon *Daemon) PluginManager() *plugin.Manager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ProcessClusterNotifications">func (daemon *Daemon) ProcessClusterNotifications(ctx context.Context, watchStream chan *swarmapi.WatchMessage)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ProcessEvent">func (daemon *Daemon) ProcessEvent(id string, e libcontainerdtypes.EventType, ei libcontainerdtypes.EventInfo) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Register">func (daemon *Daemon) Register(c *container.Container) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ReleaseIngress">func (daemon *Daemon) ReleaseIngress() (&lt;-chan struct{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Reload">func (daemon *Daemon) Reload(conf *config.Config) (err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.RestartSwarmContainers">func (daemon *Daemon) RestartSwarmContainers()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Rootless">func (daemon *Daemon) Rootless() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SetCluster">func (daemon *Daemon) SetCluster(cluster Cluster)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SetContainerConfigReferences">func (daemon *Daemon) SetContainerConfigReferences(name string, refs []*swarmtypes.ConfigReference) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SetContainerDependencyStore">func (daemon *Daemon) SetContainerDependencyStore(name string, store exec.DependencyGetter) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SetContainerSecretReferences">func (daemon *Daemon) SetContainerSecretReferences(name string, refs []*swarmtypes.SecretReference) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SetNetworkBootstrapKeys">func (daemon *Daemon) SetNetworkBootstrapKeys(keys []*networktypes.EncryptionKey) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SetupIngress">func (daemon *Daemon) SetupIngress(create clustertypes.NetworkCreateRequest, nodeIP string) (&lt;-chan struct{}, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Shutdown">func (daemon *Daemon) Shutdown() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.ShutdownTimeout">func (daemon *Daemon) ShutdownTimeout() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.StoreHosts">func (daemon *Daemon) StoreHosts(hosts []string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Subnets">func (daemon *Daemon) Subnets() ([]net.IPNet, []net.IPNet)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SubscribeToEvents">func (daemon *Daemon) SubscribeToEvents(since, until time.Time, filter filters.Args) ([]events.Message, chan interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SystemDiskUsage">func (daemon *Daemon) SystemDiskUsage(ctx context.Context) (*types.DiskUsage, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SystemInfo">func (daemon *Daemon) SystemInfo() (*types.Info, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.SystemVersion">func (daemon *Daemon) SystemVersion() types.Version</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Unmount">func (daemon *Daemon) Unmount(container *container.Container) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UnsubscribeFromEvents">func (daemon *Daemon) UnsubscribeFromEvents(listener chan interface{})</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UpdateAttachment">func (daemon *Daemon) UpdateAttachment(networkName, networkID, containerID string, config *network.NetworkingConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.UpdateContainerServiceConfig">func (daemon *Daemon) UpdateContainerServiceConfig(containerName string, serviceConfig *clustertypes.ServiceConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.VolumesService">func (daemon *Daemon) VolumesService() *service.VolumesService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.WaitForDetachment">func (daemon *Daemon) WaitForDetachment(ctx context.Context, networkName, networkID, taskID, containerID string) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NetworkManager">type NetworkManager</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PredefinedNetworkError">type PredefinedNetworkError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PredefinedNetworkError.Error">func (pnr PredefinedNetworkError) Error() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PredefinedNetworkError.Forbidden">func (pnr PredefinedNetworkError) Forbidden()</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/apparmor_default.go">apparmor_default.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive.go">archive.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive_tarcopyoptions.go">archive_tarcopyoptions.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive_tarcopyoptions_unix.go">archive_tarcopyoptions_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive_unix.go">archive_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/attach.go">attach.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/auth.go">auth.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/changes.go">changes.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/checkpoint.go">checkpoint.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster.go">cluster.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/commit.go">commit.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/configs.go">configs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/configs_linux.go">configs_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container.go">container.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_linux.go">container_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_operations.go">container_operations.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_operations_unix.go">container_operations_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/create.go">create.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/create_unix.go">create_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go">daemon.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon_linux.go">daemon_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon_unix.go">daemon_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/debugtrap_unix.go">debugtrap_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/delete.go">delete.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/dependency.go">dependency.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/devices_linux.go">devices_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/disk_usage.go">disk_usage.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/errors.go">errors.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go">events.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec.go">exec.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec_linux.go">exec_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/export.go">export.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/health.go">health.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/info.go">info.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/info_unix.go">info_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/inspect.go">inspect.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/inspect_linux.go">inspect_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/keys.go">keys.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/kill.go">kill.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/licensing.go">licensing.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/links.go">links.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/list.go">list.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/list_unix.go">list_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logdrivers_linux.go">logdrivers_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logs.go">logs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/metrics.go">metrics.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/metrics_unix.go">metrics_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/monitor.go">monitor.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/mounts.go">mounts.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/names.go">names.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go">network.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/nvidia_linux.go">nvidia_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go">oci_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_utils.go">oci_utils.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/pause.go">pause.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/prune.go">prune.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/reload.go">reload.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/reload_unix.go">reload_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/rename.go">rename.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/resize.go">resize.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/restart.go">restart.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/seccomp_disabled.go">seccomp_disabled.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/secrets.go">secrets.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/secrets_linux.go">secrets_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/selinux_linux.go">selinux_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/start.go">start.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/start_unix.go">start_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/stats.go">stats.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/stats_collector.go">stats_collector.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/stats_unix.go">stats_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/stop.go">stop.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/top_unix.go">top_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/trustkey.go">trustkey.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/unpause.go">unpause.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/update.go">update.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/update_linux.go">update_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/volumes.go">volumes.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/volumes_linux.go">volumes_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/volumes_unix.go">volumes_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/wait.go">wait.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/workdir.go">workdir.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultShimBinary is the default shim to be used by containerd if none</span>
+    <span class="comment">// is specified</span>
+    <span id="DefaultShimBinary">DefaultShimBinary</span> = &#34;containerd-shim&#34;
+
+    <span class="comment">// DefaultRuntimeBinary is the default runtime to be used by</span>
+    <span class="comment">// containerd if none is specified</span>
+    <span id="DefaultRuntimeBinary">DefaultRuntimeBinary</span> = &#34;runc&#34;
+
+    <span class="comment">// DefaultRuntimeName is the default runtime to be used by</span>
+    <span class="comment">// containerd if none is specified</span>
+    <span id="DefaultRuntimeName">DefaultRuntimeName</span> = &#34;runc&#34;
+)</pre>
+			
+				<p>
+ContainersNamespace is the name of the namespace used for users containers
+</p>
+
+				<pre>const <span id="ContainersNamespace">ContainersNamespace</span> = &#34;moby&#34;</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+ErrExtractPointNotDirectory is used to convey that the operation to extract
+a tar archive to a directory in a container has failed because the specified
+path does not refer to a directory.
+</p>
+
+				<pre>var <span id="ErrExtractPointNotDirectory">ErrExtractPointNotDirectory</span> = <a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/#New">New</a>(&#34;extraction point is not a directory&#34;)</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrRootFSReadOnly is returned when a container</span>
+    <span class="comment">// rootfs is marked readonly.</span>
+    <span id="ErrRootFSReadOnly">ErrRootFSReadOnly</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;container rootfs is marked read-only&#34;)
+)</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrVolumeReadonly is used to signal an error when trying to copy data into</span>
+    <span class="comment">// a volume mount that is not writable.</span>
+    <span id="ErrVolumeReadonly">ErrVolumeReadonly</span> = <a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/#New">New</a>(&#34;mounted volume is marked read-only&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="CreateDaemonRoot">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=48256:48306#L1438">CreateDaemonRoot</a>
+				<a class="permalink" href="index.html#CreateDaemonRoot">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CreateDaemonRoot">CreateDaemonRoot</a>(config *<a href="config/index.html">config</a>.<a href="config/index.html#Config">Config</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CreateDaemonRoot creates the root for the daemon
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ModifyRootKeyLimit">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/keys.go?s=563:594#L14">ModifyRootKeyLimit</a>
+				<a class="permalink" href="index.html#ModifyRootKeyLimit">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ModifyRootKeyLimit">ModifyRootKeyLimit</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ModifyRootKeyLimit checks to see if the root key limit is set to
+at least 1000000 and changes it to that limit along with the maxbytes
+allocated to the keys at a 25 to 1 multiplier.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UsingSystemd">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon_unix.go?s=23835:23880#L608">UsingSystemd</a>
+				<a class="permalink" href="index.html#UsingSystemd">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#UsingSystemd">UsingSystemd</a>(config *<a href="config/index.html">config</a>.<a href="config/index.html#Config">Config</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+UsingSystemd returns true if cli option includes native.cgroupdriver=systemd
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="VerifyCgroupDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon_unix.go?s=23381:23433#L596">VerifyCgroupDriver</a>
+				<a class="permalink" href="index.html#VerifyCgroupDriver">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#VerifyCgroupDriver">VerifyCgroupDriver</a>(config *<a href="config/index.html">config</a>.<a href="config/index.html#Config">Config</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+VerifyCgroupDriver validates native.cgroupdriver
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithApparmor">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=3438:3493#L99">WithApparmor</a>
+				<a class="permalink" href="index.html#WithApparmor">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithApparmor">WithApparmor</a>(c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithApparmor sets the apparmor profile
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithCapabilities">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=4479:4538#L129">WithCapabilities</a>
+				<a class="permalink" href="index.html#WithCapabilities">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithCapabilities">WithCapabilities</a>(c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithCapabilities sets the container&#39;s capabilties
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithCgroups">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=22061:22131#L730">WithCgroups</a>
+				<a class="permalink" href="index.html#WithCgroups">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithCgroups">WithCgroups</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithCgroups sets the container&#39;s cgroups
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithCommonOptions">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=20235:20311#L674">WithCommonOptions</a>
+				<a class="permalink" href="index.html#WithCommonOptions">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithCommonOptions">WithCommonOptions</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithCommonOptions sets common docker options
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithDevices">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=23437:23507#L780">WithDevices</a>
+				<a class="permalink" href="index.html#WithDevices">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithDevices">WithDevices</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithDevices sets the container&#39;s devices
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithLibnetwork">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=1936:2009#L52">WithLibnetwork</a>
+				<a class="permalink" href="index.html#WithLibnetwork">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithLibnetwork">WithLibnetwork</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithLibnetwork sets the libnetwork hook
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithMounts">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=13666:13735#L454">WithMounts</a>
+				<a class="permalink" href="index.html#WithMounts">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithMounts">WithMounts</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithMounts sets the container&#39;s mounts
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithNamespaces">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=6529:6602#L209">WithNamespaces</a>
+				<a class="permalink" href="index.html#WithNamespaces">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithNamespaces">WithNamespaces</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithNamespaces sets the container&#39;s namespaces
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithOOMScore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=2909:2952#L82">WithOOMScore</a>
+				<a class="permalink" href="index.html#WithOOMScore">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithOOMScore">WithOOMScore</a>(score *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithOOMScore sets the oom score
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithResources">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=24900:24956#L829">WithResources</a>
+				<a class="permalink" href="index.html#WithResources">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithResources">WithResources</a>(c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithResources applies the container resources
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithRlimits">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=1264:1334#L30">WithRlimits</a>
+				<a class="permalink" href="index.html#WithRlimits">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithRlimits">WithRlimits</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithRlimits sets the container&#39;s rlimits along with merging the daemon&#39;s rlimits
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithRootless">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=2739:2837#L77">WithRootless</a>
+				<a class="permalink" href="index.html#WithRootless">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithRootless">WithRootless</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, _ <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#Client">Client</a>, _ *<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/containers/">containers</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/containers/#Container">Container</a>, s *<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#Spec">Spec</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+WithRootless sets the spec to the rootless configuration
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSeccomp">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/seccomp_disabled.go?s=316:386#L7">WithSeccomp</a>
+				<a class="permalink" href="index.html#WithSeccomp">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSeccomp">WithSeccomp</a>(daemon *<a href="index.html#Daemon">Daemon</a>, c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithSeccomp sets the seccomp profile
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSelinux">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=3141:3195#L90">WithSelinux</a>
+				<a class="permalink" href="index.html#WithSelinux">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSelinux">WithSelinux</a>(c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithSelinux sets the selinux labels
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithSysctls">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=26391:26445#L884">WithSysctls</a>
+				<a class="permalink" href="index.html#WithSysctls">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithSysctls">WithSysctls</a>(c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithSysctls sets the container&#39;s sysctls
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithUser">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/oci_linux.go?s=26802:26853#L896">WithUser</a>
+				<a class="permalink" href="index.html#WithUser">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithUser">WithUser</a>(c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/">coci</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/oci/#SpecOpts">SpecOpts</a></pre>
+			<p>
+WithUser sets the container&#39;s user
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Cluster">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster.go?s=299:407#L1">Cluster</a>
+				<a class="permalink" href="index.html#Cluster">&#xb6;</a>
+			</h2>
+			<p>
+Cluster is the interface for github.com/docker/docker/daemon/cluster.(*Cluster).
+</p>
+
+			<pre>type Cluster interface {
+    <a href="index.html#ClusterStatus">ClusterStatus</a>
+    <a href="index.html#NetworkManager">NetworkManager</a>
+    SendClusterEvent(event <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/">lncluster</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/#ConfigEventType">ConfigEventType</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ClusterStatus">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster.go?s=495:561#L7">ClusterStatus</a>
+				<a class="permalink" href="index.html#ClusterStatus">&#xb6;</a>
+			</h2>
+			<p>
+ClusterStatus interface provides information about the Swarm status of the Cluster
+</p>
+
+			<pre>type ClusterStatus interface {
+    IsAgent() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    IsManager() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Daemon">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=2742:4362#L73">Daemon</a>
+				<a class="permalink" href="index.html#Daemon">&#xb6;</a>
+			</h2>
+			<p>
+Daemon holds information about the Docker daemon.
+</p>
+
+			<pre>type Daemon struct {
+<span id="Daemon.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Daemon.RegistryService"></span>    RegistryService <a href="../registry/index.html">registry</a>.<a href="../registry/index.html#Service">Service</a>
+<span id="Daemon.EventsService"></span>    EventsService   *<a href="events/index.html">events</a>.<a href="events/index.html#Events">Events</a>
+
+<span id="Daemon.PluginStore"></span>    PluginStore *<a href="../plugin/index.html">plugin</a>.<a href="../plugin/index.html#Store">Store</a> <span class="comment">// todo: remove</span>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDaemon">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=23423:23536#L697">NewDaemon</a>
+					<a class="permalink" href="index.html#NewDaemon">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewDaemon">NewDaemon</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, config *<a href="config/index.html">config</a>.<a href="config/index.html#Config">Config</a>, pluginStore *<a href="../plugin/index.html">plugin</a>.<a href="../plugin/index.html#Store">Store</a>) (daemon *<a href="index.html#Daemon">Daemon</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewDaemon sets up everything for the daemon to be able to service
+requests from the webserver.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Daemon.ActivateContainerServiceBinding">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_operations.go?s=32220:32301#L1099">ActivateContainerServiceBinding</a>
+					<a class="permalink" href="index.html#Daemon.ActivateContainerServiceBinding">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ActivateContainerServiceBinding">ActivateContainerServiceBinding</a>(containerName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ActivateContainerServiceBinding puts this container into load balancer active rotation and DNS response
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.AuthenticateToRegistry">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/auth.go?s=239:358#L1">AuthenticateToRegistry</a>
+					<a class="permalink" href="index.html#Daemon.AuthenticateToRegistry">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#AuthenticateToRegistry">AuthenticateToRegistry</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+AuthenticateToRegistry checks the validity of credentials in authConfig
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.BuilderBackend">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=50020:50074#L1491">BuilderBackend</a>
+					<a class="permalink" href="index.html#Daemon.BuilderBackend">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#BuilderBackend">BuilderBackend</a>() <a href="../builder/index.html">builder</a>.<a href="../builder/index.html#Backend">Backend</a></pre>
+				<p>
+BuilderBackend returns the backend used by builder
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckpointCreate">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/checkpoint.go?s=1585:1680#L45">CheckpointCreate</a>
+					<a class="permalink" href="index.html#Daemon.CheckpointCreate">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckpointCreate">CheckpointCreate</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#CheckpointCreateOptions">CheckpointCreateOptions</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CheckpointCreate checkpoints the process running in a container with CRIU
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckpointDelete">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/checkpoint.go?s=2610:2705#L76">CheckpointDelete</a>
+					<a class="permalink" href="index.html#Daemon.CheckpointDelete">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckpointDelete">CheckpointDelete</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#CheckpointDeleteOptions">CheckpointDeleteOptions</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CheckpointDelete deletes the specified checkpoint
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckpointList">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/checkpoint.go?s=3062:3175#L89">CheckpointList</a>
+					<a class="permalink" href="index.html#Daemon.CheckpointList">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckpointList">CheckpointList</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#CheckpointListOptions">CheckpointListOptions</a>) ([]<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Checkpoint">Checkpoint</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CheckpointList lists all checkpoints of the specified container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Cleanup">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/start.go?s=7934:7995#L219">Cleanup</a>
+					<a class="permalink" href="index.html#Daemon.Cleanup">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Cleanup">Cleanup</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>)</pre>
+				<p>
+Cleanup releases any network resources allocated to the container along with any rules
+around how containers are linked together.  It also unmounts the container&#39;s root filesystem.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ConnectContainerToNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=14081:14211#L435">ConnectContainerToNetwork</a>
+					<a class="permalink" href="index.html#Daemon.ConnectContainerToNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ConnectContainerToNetwork">ConnectContainerToNetwork</a>(containerName, networkName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, endpointConfig *<a href="../api/types/network/index.html">network</a>.<a href="../api/types/network/index.html#EndpointSettings">EndpointSettings</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ConnectContainerToNetwork connects the given container to the given
+network. If either cannot be found, an err is returned. If the
+network cannot be set up, an err is returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ConnectToNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_operations.go?s=29878:30018#L1023">ConnectToNetwork</a>
+					<a class="permalink" href="index.html#Daemon.ConnectToNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ConnectToNetwork">ConnectToNetwork</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>, idOrName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, endpointConfig *<a href="../api/types/network/index.html">networktypes</a>.<a href="../api/types/network/index.html#EndpointSettings">EndpointSettings</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ConnectToNetwork connects a container to a network
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerArchivePath">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive.go?s=3159:3293#L90">ContainerArchivePath</a>
+					<a class="permalink" href="index.html#Daemon.ContainerArchivePath">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerArchivePath">ContainerArchivePath</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (content <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, stat *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerPathStat">ContainerPathStat</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerArchivePath creates an archive of the filesystem resource at the
+specified path in the container identified by the given name. Returns a
+tar archive of the resource and whether it was a directory or a single file.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerAttach">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/attach.go?s=534:632#L10">ContainerAttach</a>
+					<a class="permalink" href="index.html#Daemon.ContainerAttach">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerAttach">ContainerAttach</a>(prefixOrName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, c *<a href="../api/types/backend/index.html">backend</a>.<a href="../api/types/backend/index.html#ContainerAttachConfig">ContainerAttachConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerAttach attaches to logs according to the config passed in. See ContainerAttachConfig.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerAttachRaw">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/attach.go?s=2187:2340#L71">ContainerAttachRaw</a>
+					<a class="permalink" href="index.html#Daemon.ContainerAttachRaw">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerAttachRaw">ContainerAttachRaw</a>(prefixOrName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, stdin <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, stdout, stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, doStream <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, attached chan struct{}) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerAttachRaw attaches the provided streams to the container&#39;s stdio
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerChanges">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/changes.go?s=201:278#L2">ContainerChanges</a>
+					<a class="permalink" href="index.html#Daemon.ContainerChanges">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerChanges">ContainerChanges</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../pkg/archive/index.html">archive</a>.<a href="../pkg/archive/index.html#Change">Change</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerChanges returns a list of container fs changes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerCopy">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive.go?s=1690:1773#L41">ContainerCopy</a>
+					<a class="permalink" href="index.html#Daemon.ContainerCopy">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerCopy">ContainerCopy</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, res <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerCopy performs a deprecated operation of archiving the resource at
+the specified path in the container identified by the given name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerCreate">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/create.go?s=1157:1281#L29">ContainerCreate</a>
+					<a class="permalink" href="index.html#Daemon.ContainerCreate">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerCreate">ContainerCreate</a>(params <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerCreateConfig">ContainerCreateConfig</a>) (<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#ContainerCreateCreatedBody">ContainerCreateCreatedBody</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerCreate creates a regular container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerCreateIgnoreImagesArgsEscaped">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/create.go?s=1604:1751#L38">ContainerCreateIgnoreImagesArgsEscaped</a>
+					<a class="permalink" href="index.html#Daemon.ContainerCreateIgnoreImagesArgsEscaped">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerCreateIgnoreImagesArgsEscaped">ContainerCreateIgnoreImagesArgsEscaped</a>(params <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerCreateConfig">ContainerCreateConfig</a>) (<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#ContainerCreateCreatedBody">ContainerCreateCreatedBody</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerCreateIgnoreImagesArgsEscaped creates a regular container. This is called from the builder RUN case
+and ensures that we do not take the images ArgsEscaped
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerCreateWorkdir">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/workdir.go?s=521:583#L1">ContainerCreateWorkdir</a>
+					<a class="permalink" href="index.html#Daemon.ContainerCreateWorkdir">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerCreateWorkdir">ContainerCreateWorkdir</a>(cID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerCreateWorkdir creates the working directory. This solves the
+issue arising from <a href="https://github.com/docker/docker/issues/27545">https://github.com/docker/docker/issues/27545</a>,
+which was initially fixed by <a href="https://github.com/docker/docker/pull/27884">https://github.com/docker/docker/pull/27884</a>. But that fix
+was too expensive in terms of performance on Windows. Instead,
+<a href="https://github.com/docker/docker/pull/28514">https://github.com/docker/docker/pull/28514</a> introduces this new functionality
+where the builder calls into the backend here to create the working directory.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerExecCreate">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec.go?s=3083:3174#L87">ContainerExecCreate</a>
+					<a class="permalink" href="index.html#Daemon.ContainerExecCreate">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerExecCreate">ContainerExecCreate</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ExecConfig">ExecConfig</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerExecCreate sets up an exec in a running container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerExecInspect">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/inspect.go?s=7003:7086#L201">ContainerExecInspect</a>
+					<a class="permalink" href="index.html#Daemon.ContainerExecInspect">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerExecInspect">ContainerExecInspect</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../api/types/backend/index.html">backend</a>.<a href="../api/types/backend/index.html#ExecInspect">ExecInspect</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerExecInspect returns low-level information about the exec
+command. An error is returned if the exec cannot be found.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerExecResize">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/resize.go?s=1031:1110#L26">ContainerExecResize</a>
+					<a class="permalink" href="index.html#Daemon.ContainerExecResize">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerExecResize">ContainerExecResize</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, height, width <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerExecResize changes the size of the TTY of the process
+running in the exec with the given name to the given height and
+width.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerExecStart">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec.go?s=4796:4930#L143">ContainerExecStart</a>
+					<a class="permalink" href="index.html#Daemon.ContainerExecStart">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerExecStart">ContainerExecStart</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, stdin <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, stdout <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) (err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerExecStart starts a previously set up exec instance. The
+std streams are set up.
+If ctx is cancelled, the process is terminated.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerExport">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/export.go?s=425:496#L7">ContainerExport</a>
+					<a class="permalink" href="index.html#Daemon.ContainerExport">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerExport">ContainerExport</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerExport writes the contents of the container to the given
+writer. An error is returned if the container cannot be found.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerExtractToDir">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive.go?s=4247:4373#L118">ContainerExtractToDir</a>
+					<a class="permalink" href="index.html#Daemon.ContainerExtractToDir">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerExtractToDir">ContainerExtractToDir</a>(name, path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, copyUIDGID, noOverwriteDirNonDir <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, content <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerExtractToDir extracts the given archive to the specified location
+in the filesystem of the container identified by the given name. The given
+path must be of a directory in the container. If it is not, the error will
+be ErrExtractPointNotDirectory. If noOverwriteDirNonDir is true then it will
+be an error if unpacking the given content would cause an existing directory
+to be replaced with a non-directory and vice versa.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerInspect">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/inspect.go?s=666:765#L12">ContainerInspect</a>
+					<a class="permalink" href="index.html#Daemon.ContainerInspect">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerInspect">ContainerInspect</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, size <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, version <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerInspect returns low-level information about a
+container. Returns an error if the container cannot be found, or if
+there is an error getting the data.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerInspectCurrent">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/inspect.go?s=1111:1210#L24">ContainerInspectCurrent</a>
+					<a class="permalink" href="index.html#Daemon.ContainerInspectCurrent">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerInspectCurrent">ContainerInspectCurrent</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, size <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerJSON">ContainerJSON</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerInspectCurrent returns low-level information about a
+container in a most recent api version.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerKill">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/kill.go?s=1005:1071#L30">ContainerKill</a>
+					<a class="permalink" href="index.html#Daemon.ContainerKill">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerKill">ContainerKill</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, sig <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerKill sends signal to the container
+If no signal is given (sig 0), then Kill with SIGKILL and wait
+for the container to exit.
+If a signal is given, then just send it to the container and return.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerLogs">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logs.go?s=813:991#L15">ContainerLogs</a>
+					<a class="permalink" href="index.html#Daemon.ContainerLogs">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerLogs">ContainerLogs</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, containerName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerLogsOptions">ContainerLogsOptions</a>) (messages &lt;-chan *<a href="../api/types/backend/index.html">backend</a>.<a href="../api/types/backend/index.html#LogMessage">LogMessage</a>, isTTY <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, retErr <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerLogs copies the container&#39;s log channel to the channel provided in
+the config. If ContainerLogs returns an error, no messages have been copied.
+and the channel will be closed without data.
+</p>
+<p>
+if it returns nil, the config channel will be active and return log
+messages until it runs out or the context is canceled.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerPause">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/pause.go?s=196:251#L2">ContainerPause</a>
+					<a class="permalink" href="index.html#Daemon.ContainerPause">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerPause">ContainerPause</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerPause pauses a container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerRename">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/rename.go?s=413:481#L6">ContainerRename</a>
+					<a class="permalink" href="index.html#Daemon.ContainerRename">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerRename">ContainerRename</a>(oldName, newName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerRename changes the name of a container, using the oldName
+to find the container. An error is returned if newName is already
+reserved.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerResize">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/resize.go?s=307:382#L3">ContainerResize</a>
+					<a class="permalink" href="index.html#Daemon.ContainerResize">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerResize">ContainerResize</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, height, width <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerResize changes the size of the TTY of the process running
+in the container with the given name to the given height and width.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerRestart">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/restart.go?s=600:671#L7">ContainerRestart</a>
+					<a class="permalink" href="index.html#Daemon.ContainerRestart">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerRestart">ContainerRestart</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, seconds *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerRestart stops and starts a container. It attempts to
+gracefully stop the container within the given timeout, forcefully
+stopping it if the timeout is exceeded. If given a negative
+timeout, ContainerRestart will wait forever until a graceful
+stop. Returns an error if the container cannot be found, or if
+there is an underlying error at any stage of the restart.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerRm">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/delete.go?s=552:637#L12">ContainerRm</a>
+					<a class="permalink" href="index.html#Daemon.ContainerRm">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerRm">ContainerRm</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerRmConfig">ContainerRmConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerRm removes the container id from the filesystem. An error
+is returned if the container is not found, or if the remove
+fails. If the remove succeeds, the container name is released, and
+network links are removed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerStart">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/start.go?s=409:544#L8">ContainerStart</a>
+					<a class="permalink" href="index.html#Daemon.ContainerStart">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerStart">ContainerStart</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, hostConfig *<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#HostConfig">HostConfig</a>, checkpoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, checkpointDir <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerStart starts a container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerStatPath">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/archive.go?s=2355:2463#L65">ContainerStatPath</a>
+					<a class="permalink" href="index.html#Daemon.ContainerStatPath">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerStatPath">ContainerStatPath</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (stat *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerPathStat">ContainerPathStat</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerStatPath stats the filesystem resource at the specified path in the
+container identified by the given name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerStats">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/stats.go?s=494:616#L10">ContainerStats</a>
+					<a class="permalink" href="index.html#Daemon.ContainerStats">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerStats">ContainerStats</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, prefixOrName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/backend/index.html">backend</a>.<a href="../api/types/backend/index.html#ContainerStatsConfig">ContainerStatsConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerStats writes information about the container to the stream
+given in the config object.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerStop">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/stop.go?s=681:749#L11">ContainerStop</a>
+					<a class="permalink" href="index.html#Daemon.ContainerStop">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerStop">ContainerStop</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, timeout *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerStop looks for the given container and stops it.
+In case the container fails to stop gracefully within a time duration
+specified by the timeout argument, in seconds, it is forcefully
+terminated (killed).
+</p>
+<p>
+If the timeout is nil, the container&#39;s StopTimeout value is used, if set,
+otherwise the engine default. A negative timeout value can be specified,
+meaning no timeout, i.e. no forceful termination is performed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerTop">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/top_unix.go?s=3453:3554#L128">ContainerTop</a>
+					<a class="permalink" href="index.html#Daemon.ContainerTop">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerTop">ContainerTop</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, psArgs <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#ContainerTopOKBody">ContainerTopOKBody</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerTop lists the processes running inside of the given
+container by calling ps with the given args, or with the flags
+&#34;-ef&#34; if no args are given.  An error is returned if the container
+is not found, or is not running, or if there are any problems
+running ps, or parsing the output.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerUnpause">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/unpause.go?s=200:257#L2">ContainerUnpause</a>
+					<a class="permalink" href="index.html#Daemon.ContainerUnpause">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerUnpause">ContainerUnpause</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ContainerUnpause unpauses a container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerUpdate">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/update.go?s=258:383#L3">ContainerUpdate</a>
+					<a class="permalink" href="index.html#Daemon.ContainerUpdate">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerUpdate">ContainerUpdate</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, hostConfig *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#HostConfig">HostConfig</a>) (<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#ContainerUpdateOKBody">ContainerUpdateOKBody</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerUpdate updates configuration of the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainerWait">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/wait.go?s=644:786#L6">ContainerWait</a>
+					<a class="permalink" href="index.html#Daemon.ContainerWait">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainerWait">ContainerWait</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, condition <a href="../container/index.html">container</a>.<a href="../container/index.html#WaitCondition">WaitCondition</a>) (&lt;-chan <a href="../container/index.html">container</a>.<a href="../container/index.html#StateStatus">StateStatus</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainerWait waits until the given container is in a certain state
+indicated by the given condition. If the container is not found, a nil
+channel and non-nil error is returned immediately. If the container is
+found, a status result will be sent on the returned channel once the wait
+condition is met or if an error occurs waiting for the container (such as a
+context timeout or cancellation). On a successful wait, the exit code of the
+container is returned in the status with a non-nil Err() value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Containers">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/list.go?s=3571:3667#L97">Containers</a>
+					<a class="permalink" href="index.html#Daemon.Containers">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Containers">Containers</a>(config *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerListOptions">ContainerListOptions</a>) ([]*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Container">Container</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Containers returns the list of containers to show given the user&#39;s filtering.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ContainersPrune">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/prune.go?s=864:987#L29">ContainersPrune</a>
+					<a class="permalink" href="index.html#Daemon.ContainersPrune">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ContainersPrune">ContainersPrune</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, pruneFilters <a href="../api/types/filters/index.html">filters</a>.<a href="../api/types/filters/index.html#Args">Args</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainersPruneReport">ContainersPruneReport</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ContainersPrune removes unused containers
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CreateImageFromContainer">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/commit.go?s=3308:3413#L109">CreateImageFromContainer</a>
+					<a class="permalink" href="index.html#Daemon.CreateImageFromContainer">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CreateImageFromContainer">CreateImageFromContainer</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, c *<a href="../api/types/backend/index.html">backend</a>.<a href="../api/types/backend/index.html#CreateImageConfig">CreateImageConfig</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateImageFromContainer creates a new image from a container. The container
+config will be updated by applying the change set to the custom config, then
+applying that config over the existing container config.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CreateManagedContainer">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/create.go?s=827:958#L21">CreateManagedContainer</a>
+					<a class="permalink" href="index.html#Daemon.CreateManagedContainer">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CreateManagedContainer">CreateManagedContainer</a>(params <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#ContainerCreateConfig">ContainerCreateConfig</a>) (<a href="../api/types/container/index.html">containertypes</a>.<a href="../api/types/container/index.html#ContainerCreateCreatedBody">ContainerCreateCreatedBody</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateManagedContainer creates a container that is managed by a Service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CreateManagedNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=8777:8867#L269">CreateManagedNetwork</a>
+					<a class="permalink" href="index.html#Daemon.CreateManagedNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CreateManagedNetwork">CreateManagedNetwork</a>(create <a href="cluster/provider/index.html">clustertypes</a>.<a href="cluster/provider/index.html#NetworkCreateRequest">NetworkCreateRequest</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CreateManagedNetwork creates an agent network.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CreateNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=9056:9164#L275">CreateNetwork</a>
+					<a class="permalink" href="index.html#Daemon.CreateNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CreateNetwork">CreateNetwork</a>(create <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#NetworkCreateRequest">NetworkCreateRequest</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#NetworkCreateResponse">NetworkCreateResponse</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateNetwork creates a network with the given name, driver and other optional parameters
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DaemonJoinsCluster">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=21523:21597#L647">DaemonJoinsCluster</a>
+					<a class="permalink" href="index.html#Daemon.DaemonJoinsCluster">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DaemonJoinsCluster">DaemonJoinsCluster</a>(clusterProvider <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/">cluster</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/#Provider">Provider</a>)</pre>
+				<p>
+DaemonJoinsCluster informs the daemon has joined the cluster and provides
+the handler to query the cluster component
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DaemonLeavesCluster">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=21710:21753#L652">DaemonLeavesCluster</a>
+					<a class="permalink" href="index.html#Daemon.DaemonLeavesCluster">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DaemonLeavesCluster">DaemonLeavesCluster</a>()</pre>
+				<p>
+DaemonLeavesCluster informs the daemon has left the cluster
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DeactivateContainerServiceBinding">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_operations.go?s=32682:32765#L1112">DeactivateContainerServiceBinding</a>
+					<a class="permalink" href="index.html#Daemon.DeactivateContainerServiceBinding">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DeactivateContainerServiceBinding">DeactivateContainerServiceBinding</a>(containerName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DeactivateContainerServiceBinding removes this container from load balancer active rotation, and DNS response
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DeleteManagedNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=15781:15847#L492">DeleteManagedNetwork</a>
+					<a class="permalink" href="index.html#Daemon.DeleteManagedNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DeleteManagedNetwork">DeleteManagedNetwork</a>(networkID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DeleteManagedNetwork deletes an agent network.
+The requirement of networkID is enforced.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DeleteNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=16053:16112#L501">DeleteNetwork</a>
+					<a class="permalink" href="index.html#Daemon.DeleteNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DeleteNetwork">DeleteNetwork</a>(networkID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DeleteNetwork destroys a network unless it&#39;s one of docker&#39;s predefined networks.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DisconnectContainerFromNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=14516:14628#L445">DisconnectContainerFromNetwork</a>
+					<a class="permalink" href="index.html#Daemon.DisconnectContainerFromNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DisconnectContainerFromNetwork">DisconnectContainerFromNetwork</a>(containerName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, networkName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, force <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DisconnectContainerFromNetwork disconnects the given container from
+the given network. If either cannot be found, an err is returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DisconnectFromNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_operations.go?s=30840:30953#L1055">DisconnectFromNetwork</a>
+					<a class="permalink" href="index.html#Daemon.DisconnectFromNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DisconnectFromNetwork">DisconnectFromNetwork</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>, networkName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, force <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DisconnectFromNetwork disconnects container from network n.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.DistributionServices">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=37137:37209#L1098">DistributionServices</a>
+					<a class="permalink" href="index.html#Daemon.DistributionServices">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#DistributionServices">DistributionServices</a>() <a href="images/index.html">images</a>.<a href="images/index.html#DistributionServices">DistributionServices</a></pre>
+				<p>
+DistributionServices returns services controlling daemon storage
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ExecExists">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec.go?s=1168:1222#L27">ExecExists</a>
+					<a class="permalink" href="index.html#Daemon.ExecExists">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ExecExists">ExecExists</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ExecExists looks up the exec instance and returns a bool if it exists or not.
+It will also return the error produced by `getConfig`
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Exists">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container.go?s=2684:2728#L67">Exists</a>
+					<a class="permalink" href="index.html#Daemon.Exists">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Exists">Exists</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Exists returns a true if a container of the specified ID or name exists,
+false otherwise.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Features">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=4870:4919#L138">Features</a>
+					<a class="permalink" href="index.html#Daemon.Features">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Features">Features</a>() *map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Features returns the features map from configStore
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.FindNetwork">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=2009:2083#L52">FindNetwork</a>
+					<a class="permalink" href="index.html#Daemon.FindNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#FindNetwork">FindNetwork</a>(term <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#Network">Network</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+FindNetwork returns a network based on:
+1. Full ID
+2. Full Name
+3. Partial ID
+as long as there is no ambiguity
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ForceEndpointDelete">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container_operations.go?s=24872:24952#L838">ForceEndpointDelete</a>
+					<a class="permalink" href="index.html#Daemon.ForceEndpointDelete">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ForceEndpointDelete">ForceEndpointDelete</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, networkName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ForceEndpointDelete deletes an endpoint from a network forcefully
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetAttachmentStore">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=49532:49599#L1476">GetAttachmentStore</a>
+					<a class="permalink" href="index.html#Daemon.GetAttachmentStore">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetAttachmentStore">GetAttachmentStore</a>() *<a href="network/index.html">network</a>.<a href="network/index.html#AttachmentStore">AttachmentStore</a></pre>
+				<p>
+GetAttachmentStore returns current attachment store associated with the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetByName">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container.go?s=5318:5392#L159">GetByName</a>
+					<a class="permalink" href="index.html#Daemon.GetByName">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetByName">GetByName</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetByName returns a container given a name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetCluster">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=47395:47437#L1409">GetCluster</a>
+					<a class="permalink" href="index.html#Daemon.GetCluster">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetCluster">GetCluster</a>() <a href="index.html#Cluster">Cluster</a></pre>
+				<p>
+GetCluster returns the cluster
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetContainer">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container.go?s=1323:1408#L28">GetContainer</a>
+					<a class="permalink" href="index.html#Daemon.GetContainer">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetContainer">GetContainer</a>(prefixOrName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetContainer looks for a container using the provided information, which could be
+one of the following inputs from the caller:
+</p>
+<pre>- A full container ID, which will exact match a container in daemon&#39;s list
+- A container name, which will only exact match via the GetByName() function
+- A partial container ID prefix (e.g. short ID) of any length that is
+  unique enough to only return a single container object
+If none of these searches succeed, an error is returned
+</pre>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetContainerStats">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/stats.go?s=3573:3670#L131">GetContainerStats</a>
+					<a class="permalink" href="index.html#Daemon.GetContainerStats">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetContainerStats">GetContainerStats</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#StatsJSON">StatsJSON</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetContainerStats collects all the stats published by a container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetNetworkByID">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=3323:3398#L85">GetNetworkByID</a>
+					<a class="permalink" href="index.html#Daemon.GetNetworkByID">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetNetworkByID">GetNetworkByID</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#Network">Network</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNetworkByID function returns a network whose ID matches the given ID.
+It fails with an error if no matching network is found.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetNetworkByName">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=3696:3775#L95">GetNetworkByName</a>
+					<a class="permalink" href="index.html#Daemon.GetNetworkByName">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetNetworkByName">GetNetworkByName</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#Network">Network</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNetworkByName function returns a network for a given network name.
+If no network name is given, the default network is returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetNetworkDriverList">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=14958:15011#L458">GetNetworkDriverList</a>
+					<a class="permalink" href="index.html#Daemon.GetNetworkDriverList">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetNetworkDriverList">GetNetworkDriverList</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetNetworkDriverList returns the list of plugins drivers
+registered for network.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetNetworks">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=17455:17574#L542">GetNetworks</a>
+					<a class="permalink" href="index.html#Daemon.GetNetworks">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetNetworks">GetNetworks</a>(filter <a href="../api/types/filters/index.html">filters</a>.<a href="../api/types/filters/index.html#Args">Args</a>, config <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#NetworkListConfig">NetworkListConfig</a>) ([]<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#NetworkResource">NetworkResource</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNetworks returns a list of all networks
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetNetworksByIDPrefix">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=4067:4149#L107">GetNetworksByIDPrefix</a>
+					<a class="permalink" href="index.html#Daemon.GetNetworksByIDPrefix">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetNetworksByIDPrefix">GetNetworksByIDPrefix</a>(partialID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#Network">Network</a></pre>
+				<p>
+GetNetworksByIDPrefix returns a list of networks whose ID partially matches zero or more networks
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.HasExperimental">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=4697:4741#L133">HasExperimental</a>
+					<a class="permalink" href="index.html#Daemon.HasExperimental">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#HasExperimental">HasExperimental</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+HasExperimental returns whether the experimental features of the daemon are enabled or not
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.IdentityMapping">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=49730:49794#L1481">IdentityMapping</a>
+					<a class="permalink" href="index.html#Daemon.IdentityMapping">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#IdentityMapping">IdentityMapping</a>() *<a href="../pkg/idtools/index.html">idtools</a>.<a href="../pkg/idtools/index.html#IdentityMapping">IdentityMapping</a></pre>
+				<p>
+IdentityMapping returns uid/gid mapping or a SID (in the case of Windows) for the builder
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ImageService">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=49875:49932#L1486">ImageService</a>
+					<a class="permalink" href="index.html#Daemon.ImageService">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ImageService">ImageService</a>() *<a href="images/index.html">images</a>.<a href="images/index.html#ImageService">ImageService</a></pre>
+				<p>
+ImageService returns the Daemon&#39;s ImageService
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.IsPaused">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container.go?s=2860:2906#L73">IsPaused</a>
+					<a class="permalink" href="index.html#Daemon.IsPaused">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#IsPaused">IsPaused</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsPaused returns a bool indicating if the specified container is paused.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.IsShuttingDown">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=44451:44494#L1325">IsShuttingDown</a>
+					<a class="permalink" href="index.html#Daemon.IsShuttingDown">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#IsShuttingDown">IsShuttingDown</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsShuttingDown tells whether the daemon is shutting down or not
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.IsSwarmCompatible">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=23174:23221#L688">IsSwarmCompatible</a>
+					<a class="permalink" href="index.html#Daemon.IsSwarmCompatible">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#IsSwarmCompatible">IsSwarmCompatible</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+IsSwarmCompatible verifies if the current daemon
+configuration is compatible with the swarm mode
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Kill">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/kill.go?s=3669:3736#L112">Kill</a>
+					<a class="permalink" href="index.html#Daemon.Kill">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Kill">Kill</a>(container *<a href="../container/index.html">containerpkg</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Kill forcefully terminates a container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.List">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/list.go?s=1623:1674#L48">List</a>
+					<a class="permalink" href="index.html#Daemon.List">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#List">List</a>() []*<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a></pre>
+				<p>
+List returns an array of all containers registered in the daemon.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogContainerEvent">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=747:833#L18">LogContainerEvent</a>
+					<a class="permalink" href="index.html#Daemon.LogContainerEvent">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogContainerEvent">LogContainerEvent</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogContainerEvent generates an event related to a container with only the default attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogContainerEventWithAttributes">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=1028:1158#L23">LogContainerEventWithAttributes</a>
+					<a class="permalink" href="index.html#Daemon.LogContainerEventWithAttributes">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogContainerEventWithAttributes">LogContainerEventWithAttributes</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogContainerEventWithAttributes generates an event related to a container with specific given attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogDaemonEventWithAttributes">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=3249:3344#L78">LogDaemonEventWithAttributes</a>
+					<a class="permalink" href="index.html#Daemon.LogDaemonEventWithAttributes">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogDaemonEventWithAttributes">LogDaemonEventWithAttributes</a>(action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogDaemonEventWithAttributes generates an event related to the daemon itself with specific given attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogNetworkEvent">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=2549:2624#L62">LogNetworkEvent</a>
+					<a class="permalink" href="index.html#Daemon.LogNetworkEvent">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogNetworkEvent">LogNetworkEvent</a>(nw <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#Network">Network</a>, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogNetworkEvent generates an event related to a network with only the default attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogNetworkEventWithAttributes">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=2806:2925#L67">LogNetworkEventWithAttributes</a>
+					<a class="permalink" href="index.html#Daemon.LogNetworkEventWithAttributes">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogNetworkEventWithAttributes">LogNetworkEventWithAttributes</a>(nw <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#Network">Network</a>, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogNetworkEventWithAttributes generates an event related to a network with specific given attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogPluginEvent">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=1603:1673#L38">LogPluginEvent</a>
+					<a class="permalink" href="index.html#Daemon.LogPluginEvent">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogPluginEvent">LogPluginEvent</a>(pluginID, refName, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogPluginEvent generates an event related to a plugin with only the default attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogPluginEventWithAttributes">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=1867:1981#L43">LogPluginEventWithAttributes</a>
+					<a class="permalink" href="index.html#Daemon.LogPluginEventWithAttributes">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogPluginEventWithAttributes">LogPluginEventWithAttributes</a>(pluginID, refName, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogPluginEventWithAttributes generates an event related to a plugin with specific given attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.LogVolumeEvent">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=2217:2308#L53">LogVolumeEvent</a>
+					<a class="permalink" href="index.html#Daemon.LogVolumeEvent">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#LogVolumeEvent">LogVolumeEvent</a>(volumeID, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogVolumeEvent generates an event related to a volume.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Mount">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=40873:40938#L1218">Mount</a>
+					<a class="permalink" href="index.html#Daemon.Mount">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Mount">Mount</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Mount sets container.BaseFS
+(is it not set coming in? why is it unset?)
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.NetworkController">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=1778:1848#L43">NetworkController</a>
+					<a class="permalink" href="index.html#Daemon.NetworkController">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#NetworkController">NetworkController</a>() <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/">libnetwork</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/#NetworkController">NetworkController</a></pre>
+				<p>
+NetworkController returns the network controller created by the daemon.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.NetworkControllerEnabled">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=1608:1661#L38">NetworkControllerEnabled</a>
+					<a class="permalink" href="index.html#Daemon.NetworkControllerEnabled">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#NetworkControllerEnabled">NetworkControllerEnabled</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+NetworkControllerEnabled checks if the networking stack is enabled.
+This feature depends on OS primitives and it&#39;s disabled in systems like Windows.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.NetworksPrune">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/prune.go?s=4786:4905#L173">NetworksPrune</a>
+					<a class="permalink" href="index.html#Daemon.NetworksPrune">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#NetworksPrune">NetworksPrune</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, pruneFilters <a href="../api/types/filters/index.html">filters</a>.<a href="../api/types/filters/index.html#Args">Args</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#NetworksPruneReport">NetworksPruneReport</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NetworksPrune removes unused networks
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.NewResolveOptionsFunc">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=5088:5161#L144">NewResolveOptionsFunc</a>
+					<a class="permalink" href="index.html#Daemon.NewResolveOptionsFunc">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#NewResolveOptionsFunc">NewResolveOptionsFunc</a>() <a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/util/resolver/">resolver</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/util/resolver/#ResolveOptionsFunc">ResolveOptionsFunc</a></pre>
+				<p>
+NewResolveOptionsFunc returns a call back function to resolve &#34;registry-mirrors&#34; and
+&#34;insecure-registries&#34; for buildkit
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.PluginGetter">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=48121:48171#L1433">PluginGetter</a>
+					<a class="permalink" href="index.html#Daemon.PluginGetter">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#PluginGetter">PluginGetter</a>() *<a href="../plugin/index.html">plugin</a>.<a href="../plugin/index.html#Store">Store</a></pre>
+				<p>
+PluginGetter returns current pluginStore associated with the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.PluginManager">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=47917:47970#L1428">PluginManager</a>
+					<a class="permalink" href="index.html#Daemon.PluginManager">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#PluginManager">PluginManager</a>() *<a href="../plugin/index.html">plugin</a>.<a href="../plugin/index.html#Manager">Manager</a></pre>
+				<p>
+PluginManager returns current pluginManager associated with the daemon
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ProcessClusterNotifications">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=4561:4672#L114">ProcessClusterNotifications</a>
+					<a class="permalink" href="index.html#Daemon.ProcessClusterNotifications">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ProcessClusterNotifications">ProcessClusterNotifications</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, watchStream chan *<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#WatchMessage">WatchMessage</a>)</pre>
+				<p>
+ProcessClusterNotifications gets changes from store and add them to event list
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ProcessEvent">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/monitor.go?s=657:773#L19">ProcessEvent</a>
+					<a class="permalink" href="index.html#Daemon.ProcessEvent">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ProcessEvent">ProcessEvent</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, e <a href="../libcontainerd/types/index.html">libcontainerdtypes</a>.<a href="../libcontainerd/types/index.html#EventType">EventType</a>, ei <a href="../libcontainerd/types/index.html">libcontainerdtypes</a>.<a href="../libcontainerd/types/index.html#EventInfo">EventInfo</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ProcessEvent is called by libcontainerd whenever an event occurs
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Register">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/container.go?s=3648:3708#L102">Register</a>
+					<a class="permalink" href="index.html#Daemon.Register">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Register">Register</a>(c *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Register makes a container object usable by the daemon as &lt;container.ID&gt;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ReleaseIngress">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=6076:6139#L186">ReleaseIngress</a>
+					<a class="permalink" href="index.html#Daemon.ReleaseIngress">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ReleaseIngress">ReleaseIngress</a>() (&lt;-chan struct{}, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ReleaseIngress releases the ingress networking.
+The function returns a channel which will signal the caller when the programming is completed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Reload">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/reload.go?s=658:719#L15">Reload</a>
+					<a class="permalink" href="index.html#Daemon.Reload">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Reload">Reload</a>(conf *<a href="config/index.html">config</a>.<a href="config/index.html#Config">Config</a>) (err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Reload reads configuration changes and modifies the
+daemon according to those changes.
+These are the settings that Reload changes:
+- Platform runtime
+- Daemon debug log level
+- Daemon max concurrent downloads
+- Daemon max concurrent uploads
+- Daemon shutdown timeout (in seconds)
+- Cluster discovery (reconfigure and restart)
+- Daemon labels
+- Insecure registries
+- Registry mirrors
+- Daemon live restore
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.RestartSwarmContainers">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=18023:18069#L555">RestartSwarmContainers</a>
+					<a class="permalink" href="index.html#Daemon.RestartSwarmContainers">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#RestartSwarmContainers">RestartSwarmContainers</a>()</pre>
+				<p>
+RestartSwarmContainers restarts any autostart container which has a
+swarm endpoint.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Rootless">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/info_unix.go?s=8271:8308#L241">Rootless</a>
+					<a class="permalink" href="index.html#Daemon.Rootless">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Rootless">Rootless</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Rootless returns true if daemon is running in rootless mode
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SetCluster">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=47497:47546#L1414">SetCluster</a>
+					<a class="permalink" href="index.html#Daemon.SetCluster">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SetCluster">SetCluster</a>(cluster <a href="index.html#Cluster">Cluster</a>)</pre>
+				<p>
+SetCluster sets the cluster
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SetContainerConfigReferences">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/configs.go?s=233:338#L1">SetContainerConfigReferences</a>
+					<a class="permalink" href="index.html#Daemon.SetContainerConfigReferences">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SetContainerConfigReferences">SetContainerConfigReferences</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, refs []*<a href="../api/types/swarm/index.html">swarmtypes</a>.<a href="../api/types/swarm/index.html#ConfigReference">ConfigReference</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+SetContainerConfigReferences sets the container config references needed
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SetContainerDependencyStore">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/dependency.go?s=196:293#L1">SetContainerDependencyStore</a>
+					<a class="permalink" href="index.html#Daemon.SetContainerDependencyStore">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SetContainerDependencyStore">SetContainerDependencyStore</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, store <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/agent/exec/">exec</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/agent/exec/#DependencyGetter">DependencyGetter</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+SetContainerDependencyStore sets the dependency store backend for the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SetContainerSecretReferences">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/secrets.go?s=233:338#L1">SetContainerSecretReferences</a>
+					<a class="permalink" href="index.html#Daemon.SetContainerSecretReferences">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SetContainerSecretReferences">SetContainerSecretReferences</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, refs []*<a href="../api/types/swarm/index.html">swarmtypes</a>.<a href="../api/types/swarm/index.html#SecretReference">SecretReference</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+SetContainerSecretReferences sets the container secret references needed
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SetNetworkBootstrapKeys">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=7500:7587#L236">SetNetworkBootstrapKeys</a>
+					<a class="permalink" href="index.html#Daemon.SetNetworkBootstrapKeys">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SetNetworkBootstrapKeys">SetNetworkBootstrapKeys</a>(keys []*<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/types/">networktypes</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/types/#EncryptionKey">EncryptionKey</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+SetNetworkBootstrapKeys sets the bootstrap keys.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SetupIngress">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=5625:5741#L174">SetupIngress</a>
+					<a class="permalink" href="index.html#Daemon.SetupIngress">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SetupIngress">SetupIngress</a>(create <a href="cluster/provider/index.html">clustertypes</a>.<a href="cluster/provider/index.html#NetworkCreateRequest">NetworkCreateRequest</a>, nodeIP <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (&lt;-chan struct{}, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SetupIngress setups ingress networking.
+The function returns a channel which will signal the caller when the programming is completed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Shutdown">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=38786:38824#L1150">Shutdown</a>
+					<a class="permalink" href="index.html#Daemon.Shutdown">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Shutdown">Shutdown</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Shutdown stops the daemon.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.ShutdownTimeout">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=38284:38327#L1127">ShutdownTimeout</a>
+					<a class="permalink" href="index.html#Daemon.ShutdownTimeout">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#ShutdownTimeout">ShutdownTimeout</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+ShutdownTimeout returns the timeout (in seconds) before containers are forcibly
+killed during shutdown. The default timeout can be configured both on the daemon
+and per container, and the longest timeout will be used. A grace-period of
+5 seconds is added to the configured timeout.
+</p>
+<p>
+A negative (-1) timeout means &#34;indefinitely&#34;, which means that containers
+are not forcibly killed, and the daemon shuts down after all containers exit.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.StoreHosts">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=4426:4474#L123">StoreHosts</a>
+					<a class="permalink" href="index.html#Daemon.StoreHosts">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#StoreHosts">StoreHosts</a>(hosts []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+StoreHosts stores the addresses the daemon is listening on
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Subnets">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=42335:42393#L1256">Subnets</a>
+					<a class="permalink" href="index.html#Daemon.Subnets">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Subnets">Subnets</a>() ([]<a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#IPNet">IPNet</a>, []<a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#IPNet">IPNet</a>)</pre>
+				<p>
+Subnets return the IPv4 and IPv6 subnets of networks that are manager by Docker.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SubscribeToEvents">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=3789:3910#L92">SubscribeToEvents</a>
+					<a class="permalink" href="index.html#Daemon.SubscribeToEvents">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SubscribeToEvents">SubscribeToEvents</a>(since, until <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>, filter <a href="../api/types/filters/index.html">filters</a>.<a href="../api/types/filters/index.html#Args">Args</a>) ([]<a href="../api/types/events/index.html">events</a>.<a href="../api/types/events/index.html#Message">Message</a>, chan interface{})</pre>
+				<p>
+SubscribeToEvents returns the currently record of events, a channel to stream new events from, and a function to cancel the stream of events.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SystemDiskUsage">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/disk_usage.go?s=262:346#L3">SystemDiskUsage</a>
+					<a class="permalink" href="index.html#Daemon.SystemDiskUsage">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SystemDiskUsage">SystemDiskUsage</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#DiskUsage">DiskUsage</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SystemDiskUsage returns information about the daemon data disk usage
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SystemInfo">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/info.go?s=777:832#L18">SystemInfo</a>
+					<a class="permalink" href="index.html#Daemon.SystemInfo">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SystemInfo">SystemInfo</a>() (*<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Info">Info</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SystemInfo returns information about the host server the daemon is running on.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.SystemVersion">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/info.go?s=3061:3112#L74">SystemVersion</a>
+					<a class="permalink" href="index.html#Daemon.SystemVersion">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#SystemVersion">SystemVersion</a>() <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Version">Version</a></pre>
+				<p>
+SystemVersion returns version information about the daemon.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Unmount">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/daemon.go?s=41905:41972#L1243">Unmount</a>
+					<a class="permalink" href="index.html#Daemon.Unmount">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Unmount">Unmount</a>(container *<a href="../container/index.html">container</a>.<a href="../container/index.html#Container">Container</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Unmount unsets the container base filesystem
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UnsubscribeFromEvents">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/events.go?s=4143:4213#L99">UnsubscribeFromEvents</a>
+					<a class="permalink" href="index.html#Daemon.UnsubscribeFromEvents">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UnsubscribeFromEvents">UnsubscribeFromEvents</a>(listener chan interface{})</pre>
+				<p>
+UnsubscribeFromEvents stops the event subscription for a client by closing the
+channel where the daemon sends events to.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UpdateAttachment">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=7877:7999#L246">UpdateAttachment</a>
+					<a class="permalink" href="index.html#Daemon.UpdateAttachment">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UpdateAttachment">UpdateAttachment</a>(networkName, networkID, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../api/types/network/index.html">network</a>.<a href="../api/types/network/index.html#NetworkingConfig">NetworkingConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UpdateAttachment notifies the attacher about the attachment config.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.UpdateContainerServiceConfig">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=13617:13738#L422">UpdateContainerServiceConfig</a>
+					<a class="permalink" href="index.html#Daemon.UpdateContainerServiceConfig">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#UpdateContainerServiceConfig">UpdateContainerServiceConfig</a>(containerName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, serviceConfig *<a href="cluster/provider/index.html">clustertypes</a>.<a href="cluster/provider/index.html#ServiceConfig">ServiceConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UpdateContainerServiceConfig updates a service configuration.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.VolumesService">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/volumes.go?s=10800:10862#L373">VolumesService</a>
+					<a class="permalink" href="index.html#Daemon.VolumesService">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#VolumesService">VolumesService</a>() *<a href="../volume/service/index.html">service</a>.<a href="../volume/service/index.html#VolumesService">VolumesService</a></pre>
+				<p>
+VolumesService is used to perform volume operations
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.WaitForDetachment">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=8405:8523#L260">WaitForDetachment</a>
+					<a class="permalink" href="index.html#Daemon.WaitForDetachment">&#xb6;</a>
+				</h3>
+				<pre>func (daemon *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#WaitForDetachment">WaitForDetachment</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, networkName, networkID, taskID, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+WaitForDetachment makes the cluster manager wait for detachment of
+the container from the network.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NetworkManager">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster.go?s=617:808#L13">NetworkManager</a>
+				<a class="permalink" href="index.html#NetworkManager">&#xb6;</a>
+			</h2>
+			<p>
+NetworkManager provides methods to manage networks
+</p>
+
+			<pre>type NetworkManager interface {
+    GetNetwork(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../api/types/index.html">apitypes</a>.<a href="../api/types/index.html#NetworkResource">NetworkResource</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    GetNetworks(<a href="../api/types/filters/index.html">filters</a>.<a href="../api/types/filters/index.html#Args">Args</a>) ([]<a href="../api/types/index.html">apitypes</a>.<a href="../api/types/index.html#NetworkResource">NetworkResource</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    RemoveNetwork(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PredefinedNetworkError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=1180:1214#L27">PredefinedNetworkError</a>
+				<a class="permalink" href="index.html#PredefinedNetworkError">&#xb6;</a>
+			</h2>
+			<p>
+PredefinedNetworkError is returned when user tries to create predefined network that already exists.
+</p>
+
+			<pre>type PredefinedNetworkError <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PredefinedNetworkError.Error">func (PredefinedNetworkError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=1216:1264#L29">Error</a>
+					<a class="permalink" href="index.html#PredefinedNetworkError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (pnr <a href="index.html#PredefinedNetworkError">PredefinedNetworkError</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PredefinedNetworkError.Forbidden">func (PredefinedNetworkError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/network.go?s=1403:1448#L34">Forbidden</a>
+					<a class="permalink" href="index.html#PredefinedNetworkError.Forbidden">&#xb6;</a>
+				</h3>
+				<pre>func (pnr <a href="index.html#PredefinedNetworkError">PredefinedNetworkError</a>) <a href="index.html#Forbidden">Forbidden</a>()</pre>
+				<p>
+Forbidden denotes the type of this error
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="cluster/index.html">cluster</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="cluster/controllers/index.html">controllers</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 40px;">
+							<a href="cluster/controllers/plugin/index.html">plugin</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="cluster/convert/index.html">convert</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="cluster/executor/index.html">executor</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 40px;">
+							<a href="cluster/executor/container/index.html">container</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="cluster/provider/index.html">provider</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="config/index.html">config</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="discovery/index.html">discovery</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="events/index.html">events</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="events/testutils/index.html">testutils</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="exec/index.html">exec</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="graphdriver/index.html">graphdriver</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/aufs/index.html">aufs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/btrfs/index.html">btrfs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/copy/index.html">copy</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/devmapper/index.html">devmapper</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/graphtest/index.html">graphtest</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/lcow/index.html">lcow</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/overlay/index.html">overlay</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/overlay2/index.html">overlay2</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/overlayutils/index.html">overlayutils</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/quota/index.html">quota</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/register/index.html">register</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/vfs/index.html">vfs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/windows/index.html">windows</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="graphdriver/zfs/index.html">zfs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="images/index.html">images</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="initlayer/index.html">initlayer</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="links/index.html">links</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="listeners/index.html">listeners</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="logger/index.html">logger</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package logger defines interfaces that logger drivers implement to log messages.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/awslogs/index.html">awslogs</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package awslogs provides the logdriver for forwarding container logs to Amazon CloudWatch Logs
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/etwlogs/index.html">etwlogs</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package etwlogs provides a log driver for forwarding container logs as ETW events.(ETW stands for Event Tracing for Windows) A client can then create an ETW listener to listen for events that are sent by the ETW provider that we register, using the provider&#39;s GUID &#34;a3693192-9ed6-46d2-a981-f8226c8363bd&#34;.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/fluentd/index.html">fluentd</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package fluentd provides the log driver for forwarding server logs to fluentd endpoints.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/gcplogs/index.html">gcplogs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/gelf/index.html">gelf</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package gelf provides the log driver for forwarding server logs to endpoints that support the Graylog Extended Log Format.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/journald/index.html">journald</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package journald provides the log driver for forwarding server logs to endpoints that receive the systemd format.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/jsonfilelog/index.html">jsonfilelog</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package jsonfilelog provides the default Logger implementation for Docker logging.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 40px;">
+							<a href="logger/jsonfilelog/jsonlog/index.html">jsonlog</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/local/index.html">local</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package local provides a logger implementation that stores logs on disk.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/logentries/index.html">logentries</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package logentries provides the log driver for forwarding server logs to logentries endpoints.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/loggerutils/index.html">loggerutils</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/splunk/index.html">splunk</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package splunk provides the log driver for forwarding server logs to Splunk HTTP Event Collector endpoint.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/syslog/index.html">syslog</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package syslog provides the logdriver for forwarding server logs to syslog endpoints.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="logger/templates/index.html">templates</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="names/index.html">names</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="network/index.html">network</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="stats/index.html">stats</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

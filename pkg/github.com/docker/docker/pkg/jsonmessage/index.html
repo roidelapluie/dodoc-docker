@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>jsonmessage - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package jsonmessage</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/jsonmessage"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#DisplayJSONMessagesStream">func DisplayJSONMessagesStream(in io.Reader, out io.Writer, terminalFd uintptr, isTerminal bool, auxCallback func(JSONMessage)) error</a></dd>
+			
+				
+				<dd><a href="index.html#DisplayJSONMessagesToStream">func DisplayJSONMessagesToStream(in io.Reader, stream stream, auxCallback func(JSONMessage)) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#JSONError">type JSONError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#JSONError.Error">func (e *JSONError) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#JSONMessage">type JSONMessage</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#JSONMessage.Display">func (jm *JSONMessage) Display(out io.Writer, isTerminal bool) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#JSONProgress">type JSONProgress</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#JSONProgress.String">func (p *JSONProgress) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go">jsonmessage.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+RFC3339NanoFixed is time.RFC3339Nano with nanoseconds padded using zeros to
+ensure the formatted time isalways the same number of characters.
+</p>
+
+				<pre>const <span id="RFC3339NanoFixed">RFC3339NanoFixed</span> = &#34;2006-01-02T15:04:05.000000000Z07:00&#34;</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="DisplayJSONMessagesStream">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=6154:6287#L200">DisplayJSONMessagesStream</a>
+				<a class="permalink" href="index.html#DisplayJSONMessagesStream">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DisplayJSONMessagesStream">DisplayJSONMessagesStream</a>(in <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, terminalFd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>, isTerminal <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, auxCallback func(<a href="index.html#JSONMessage">JSONMessage</a>)) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+DisplayJSONMessagesStream displays a json message stream from `in` to `out`, `isTerminal`
+describes if `out` is a terminal. If this is the case, it will print `\n` at the end of
+each line and move the cursor while displaying.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DisplayJSONMessagesToStream">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=7793:7891#L271">DisplayJSONMessagesToStream</a>
+				<a class="permalink" href="index.html#DisplayJSONMessagesToStream">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DisplayJSONMessagesToStream">DisplayJSONMessagesToStream</a>(in <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, stream stream, auxCallback func(<a href="index.html#JSONMessage">JSONMessage</a>)) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+DisplayJSONMessagesToStream prints json messages to the output stream
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="JSONError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=561:669#L11">JSONError</a>
+				<a class="permalink" href="index.html#JSONError">&#xb6;</a>
+			</h2>
+			<p>
+JSONError wraps a concrete Code and Message, `Code` is
+is an integer error code, `Message` is the error message.
+</p>
+
+			<pre>type JSONError struct {
+<span id="JSONError.Code"></span>    Code    <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>    `json:&#34;code,omitempty&#34;`
+<span id="JSONError.Message"></span>    Message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;message,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="JSONError.Error">func (*JSONError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=671:705#L16">Error</a>
+					<a class="permalink" href="index.html#JSONError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#JSONError">JSONError</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="JSONMessage">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=3593:4366#L128">JSONMessage</a>
+				<a class="permalink" href="index.html#JSONMessage">&#xb6;</a>
+			</h2>
+			<p>
+JSONMessage defines a message struct. It describes
+the created time, where it from, status, ID of the
+message. It&#39;s used for docker events.
+</p>
+
+			<pre>type JSONMessage struct {
+<span id="JSONMessage.Stream"></span>    Stream          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        `json:&#34;stream,omitempty&#34;`
+<span id="JSONMessage.Status"></span>    Status          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        `json:&#34;status,omitempty&#34;`
+<span id="JSONMessage.Progress"></span>    Progress        *<a href="index.html#JSONProgress">JSONProgress</a> `json:&#34;progressDetail,omitempty&#34;`
+<span id="JSONMessage.ProgressMessage"></span>    ProgressMessage <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        `json:&#34;progress,omitempty&#34;` <span class="comment">//deprecated</span>
+<span id="JSONMessage.ID"></span>    ID              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        `json:&#34;id,omitempty&#34;`
+<span id="JSONMessage.From"></span>    From            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        `json:&#34;from,omitempty&#34;`
+<span id="JSONMessage.Time"></span>    Time            <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>         `json:&#34;time,omitempty&#34;`
+<span id="JSONMessage.TimeNano"></span>    TimeNano        <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>         `json:&#34;timeNano,omitempty&#34;`
+<span id="JSONMessage.Error"></span>    Error           *<a href="index.html#JSONError">JSONError</a>    `json:&#34;errorDetail,omitempty&#34;`
+<span id="JSONMessage.ErrorMessage"></span>    ErrorMessage    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        `json:&#34;error,omitempty&#34;` <span class="comment">//deprecated</span>
+<span id="JSONMessage.Aux"></span>    <span class="comment">// Aux contains out-of-band data, such as digests for push signing and image id after building.</span>
+    Aux *<a href="http://127.0.0.1:8080/pkg/encoding/json/">json</a>.<a href="http://127.0.0.1:8080/pkg/encoding/json/#RawMessage">RawMessage</a> `json:&#34;aux,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="JSONMessage.Display">func (*JSONMessage) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=4778:4846#L159">Display</a>
+					<a class="permalink" href="index.html#JSONMessage.Display">&#xb6;</a>
+				</h3>
+				<pre>func (jm *<a href="index.html#JSONMessage">JSONMessage</a>) <a href="index.html#Display">Display</a>(out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, isTerminal <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Display displays the JSONMessage to `out`. If `isTerminal` is true, it will erase the
+entire current line when displaying the progressbar.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="JSONProgress">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=1023:1370#L24">JSONProgress</a>
+				<a class="permalink" href="index.html#JSONProgress">&#xb6;</a>
+			</h2>
+			<p>
+JSONProgress describes a Progress. terminalFd is the fd of the current terminal,
+Start is the initial value for the operation. Current is the current status and
+value of the progress made towards Total. Total is the end value describing when
+we made 100% progress for an operation.
+</p>
+
+			<pre>type JSONProgress struct {
+<span id="JSONProgress.Current"></span>    Current <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;current,omitempty&#34;`
+<span id="JSONProgress.Total"></span>    Total   <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;total,omitempty&#34;`
+<span id="JSONProgress.Start"></span>    Start   <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;start,omitempty&#34;`
+    <span class="comment">// If true, don&#39;t show xB/yB</span>
+<span id="JSONProgress.HideCounts"></span>    HideCounts <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;hidecounts,omitempty&#34;`
+<span id="JSONProgress.Units"></span>    Units      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;units,omitempty&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="JSONProgress.String">func (*JSONProgress) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/jsonmessage/jsonmessage.go?s=1372:1410#L36">String</a>
+					<a class="permalink" href="index.html#JSONProgress.String">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#JSONProgress">JSONProgress</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

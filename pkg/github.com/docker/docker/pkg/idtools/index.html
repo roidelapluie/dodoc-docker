@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>idtools - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package idtools</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/idtools"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#AddNamespaceRangesUser">func AddNamespaceRangesUser(name string) (int, int, error)</a></dd>
+			
+				
+				<dd><a href="index.html#CanAccess">func CanAccess(path string, pair Identity) bool</a></dd>
+			
+				
+				<dd><a href="index.html#GetRootUIDGID">func GetRootUIDGID(uidMap, gidMap []IDMap) (int, int, error)</a></dd>
+			
+				
+				<dd><a href="index.html#LookupGID">func LookupGID(gid int) (user.Group, error)</a></dd>
+			
+				
+				<dd><a href="index.html#LookupGroup">func LookupGroup(groupname string) (user.Group, error)</a></dd>
+			
+				
+				<dd><a href="index.html#LookupUID">func LookupUID(uid int) (user.User, error)</a></dd>
+			
+				
+				<dd><a href="index.html#LookupUser">func LookupUser(username string) (user.User, error)</a></dd>
+			
+				
+				<dd><a href="index.html#MkdirAllAndChown">func MkdirAllAndChown(path string, mode os.FileMode, owner Identity) error</a></dd>
+			
+				
+				<dd><a href="index.html#MkdirAllAndChownNew">func MkdirAllAndChownNew(path string, mode os.FileMode, owner Identity) error</a></dd>
+			
+				
+				<dd><a href="index.html#MkdirAndChown">func MkdirAndChown(path string, mode os.FileMode, owner Identity) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#IDMap">type IDMap</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Identity">type Identity</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IdentityMapping">type IdentityMapping</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewIDMappingsFromMaps">func NewIDMappingsFromMaps(uids []IDMap, gids []IDMap) *IdentityMapping</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewIdentityMapping">func NewIdentityMapping(username, groupname string) (*IdentityMapping, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentityMapping.Empty">func (i *IdentityMapping) Empty() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentityMapping.GIDs">func (i *IdentityMapping) GIDs() []IDMap</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentityMapping.RootPair">func (i *IdentityMapping) RootPair() Identity</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentityMapping.ToContainer">func (i *IdentityMapping) ToContainer(pair Identity) (int, int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentityMapping.ToHost">func (i *IdentityMapping) ToHost(pair Identity) (Identity, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IdentityMapping.UIDs">func (i *IdentityMapping) UIDs() []IDMap</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go">idtools.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools_unix.go">idtools_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/usergroupadd_linux.go">usergroupadd_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/utils_unix.go">utils_unix.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="AddNamespaceRangesUser">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/usergroupadd_linux.go?s=1093:1151#L28">AddNamespaceRangesUser</a>
+				<a class="permalink" href="index.html#AddNamespaceRangesUser">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#AddNamespaceRangesUser">AddNamespaceRangesUser</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+AddNamespaceRangesUser takes a username and uses the standard system
+utility to create a system user/group pair used to hold the
+/etc/sub{uid,gid} ranges which will be used for user namespace
+mapping ranges in containers.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CanAccess">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools_unix.go?s=2076:2123#L72">CanAccess</a>
+				<a class="permalink" href="index.html#CanAccess">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CanAccess">CanAccess</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, pair <a href="index.html#Identity">Identity</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+CanAccess takes a valid (existing) directory and a uid, gid pair and determines
+if that uid, gid pair has access (execute bit) to the directory
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetRootUIDGID">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=2087:2147#L50">GetRootUIDGID</a>
+				<a class="permalink" href="index.html#GetRootUIDGID">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetRootUIDGID">GetRootUIDGID</a>(uidMap, gidMap []<a href="index.html#IDMap">IDMap</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetRootUIDGID retrieves the remapped root uid/gid pair from the set of maps.
+If the maps are empty, then the root uid/gid will default to &#34;real&#34; 0/0
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LookupGID">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools_unix.go?s=4860:4903#L153">LookupGID</a>
+				<a class="permalink" href="index.html#LookupGID">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#LookupGID">LookupGID</a>(gid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/">user</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/#Group">Group</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+LookupGID uses traditional local system files lookup (from libcontainer/user) on a group ID,
+followed by a call to `getent` for supporting host configured non-files passwd and group dbs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LookupGroup">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools_unix.go?s=4307:4361#L141">LookupGroup</a>
+				<a class="permalink" href="index.html#LookupGroup">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#LookupGroup">LookupGroup</a>(groupname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/">user</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/#Group">Group</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+LookupGroup uses traditional local system files lookup (from libcontainer/user) on a group name,
+followed by a call to `getent` for supporting host configured non-files passwd and group dbs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LookupUID">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools_unix.go?s=3407:3449#L114">LookupUID</a>
+				<a class="permalink" href="index.html#LookupUID">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#LookupUID">LookupUID</a>(uid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/">user</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/#User">User</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+LookupUID uses traditional local system files lookup (from libcontainer/user) on a uid,
+followed by a call to `getent` for supporting host configured non-files passwd and group dbs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LookupUser">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools_unix.go?s=2801:2852#L98">LookupUser</a>
+				<a class="permalink" href="index.html#LookupUser">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#LookupUser">LookupUser</a>(username <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/">user</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/user/#User">User</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+LookupUser uses traditional local system files lookup (from libcontainer/user) on a username,
+followed by a call to `getent` for supporting host configured non-files passwd and group dbs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MkdirAllAndChown">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=1027:1101#L29">MkdirAllAndChown</a>
+				<a class="permalink" href="index.html#MkdirAllAndChown">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MkdirAllAndChown">MkdirAllAndChown</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, mode <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>, owner <a href="index.html#Identity">Identity</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MkdirAllAndChown creates a directory (include any along the path) and then modifies
+ownership to the requested uid/gid.  If the directory already exists, this
+function will still change ownership to the requested uid/gid pair.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MkdirAllAndChownNew">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=1801:1878#L44">MkdirAllAndChownNew</a>
+				<a class="permalink" href="index.html#MkdirAllAndChownNew">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MkdirAllAndChownNew">MkdirAllAndChownNew</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, mode <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>, owner <a href="index.html#Identity">Identity</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MkdirAllAndChownNew creates a directory (include any along the path) and then modifies
+ownership ONLY of newly created directories to the requested uid/gid. If the
+directories along the path exist, no change of ownership will be performed
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MkdirAndChown">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=1428:1499#L37">MkdirAndChown</a>
+				<a class="permalink" href="index.html#MkdirAndChown">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MkdirAndChown">MkdirAndChown</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, mode <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>, owner <a href="index.html#Identity">Identity</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+MkdirAndChown creates a directory and then modifies ownership to the requested uid/gid.
+If the directory already exists, this function still changes ownership.
+Note that unlike os.Mkdir(), this function does not return IsExist error
+in case path already exists.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="IDMap">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=321:446#L4">IDMap</a>
+				<a class="permalink" href="index.html#IDMap">&#xb6;</a>
+			</h2>
+			<p>
+IDMap contains a single entry for user namespace range remapping. An array
+of IDMap entries represents the structure that will be provided to the Linux
+kernel for creating a user namespace.
+</p>
+
+			<pre>type IDMap struct {
+<span id="IDMap.ContainerID"></span>    ContainerID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;container_id&#34;`
+<span id="IDMap.HostID"></span>    HostID      <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;host_id&#34;`
+<span id="IDMap.Size"></span>    Size        <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;size&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Identity">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=3498:3552#L95">Identity</a>
+				<a class="permalink" href="index.html#Identity">&#xb6;</a>
+			</h2>
+			<p>
+Identity is either a UID and GID pair or a SID (but not both)
+</p>
+
+			<pre>type Identity struct {
+<span id="Identity.UID"></span>    UID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Identity.GID"></span>    GID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Identity.SID"></span>    SID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IdentityMapping">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=3610:3669#L102">IdentityMapping</a>
+				<a class="permalink" href="index.html#IdentityMapping">&#xb6;</a>
+			</h2>
+			<p>
+IdentityMapping contains a mappings of UIDs and GIDs
+</p>
+
+			<pre>type IdentityMapping struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewIDMappingsFromMaps">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=4561:4632#L134">NewIDMappingsFromMaps</a>
+					<a class="permalink" href="index.html#NewIDMappingsFromMaps">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewIDMappingsFromMaps">NewIDMappingsFromMaps</a>(uids []<a href="index.html#IDMap">IDMap</a>, gids []<a href="index.html#IDMap">IDMap</a>) *<a href="index.html#IdentityMapping">IdentityMapping</a></pre>
+				<p>
+NewIDMappingsFromMaps creates a new mapping from two slices
+Deprecated: this is a temporary shim while transitioning to IDMapping
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewIdentityMapping">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=3860:3937#L110">NewIdentityMapping</a>
+					<a class="permalink" href="index.html#NewIdentityMapping">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewIdentityMapping">NewIdentityMapping</a>(username, groupname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#IdentityMapping">IdentityMapping</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewIdentityMapping takes a requested user and group name and
+using the data from /etc/sub{uid,gid} ranges, creates the
+proper uid and gid remapping ranges for that user/group pair
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="IdentityMapping.Empty">func (*IdentityMapping) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=5832:5870#L176">Empty</a>
+					<a class="permalink" href="index.html#IdentityMapping.Empty">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#IdentityMapping">IdentityMapping</a>) <a href="index.html#Empty">Empty</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Empty returns true if there are no id mappings
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityMapping.GIDs">func (*IdentityMapping) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=6184:6224#L188">GIDs</a>
+					<a class="permalink" href="index.html#IdentityMapping.GIDs">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#IdentityMapping">IdentityMapping</a>) <a href="index.html#GIDs">GIDs</a>() []<a href="index.html#IDMap">IDMap</a></pre>
+				<p>
+GIDs return the UID mapping
+TODO: remove this once everything has been refactored to use pairs
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityMapping.RootPair">func (*IdentityMapping) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=4873:4918#L141">RootPair</a>
+					<a class="permalink" href="index.html#IdentityMapping.RootPair">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#IdentityMapping">IdentityMapping</a>) <a href="index.html#RootPair">RootPair</a>() <a href="index.html#Identity">Identity</a></pre>
+				<p>
+RootPair returns a uid and gid pair for the root user. The error is ignored
+because a root user always exists, and the defaults are correct when the uid
+and gid maps are empty.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityMapping.ToContainer">func (*IdentityMapping) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=5557:5627#L166">ToContainer</a>
+					<a class="permalink" href="index.html#IdentityMapping.ToContainer">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#IdentityMapping">IdentityMapping</a>) <a href="index.html#ToContainer">ToContainer</a>(pair <a href="index.html#Identity">Identity</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ToContainer returns the container UID and GID for the host uid and gid
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityMapping.ToHost">func (*IdentityMapping) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=5153:5218#L148">ToHost</a>
+					<a class="permalink" href="index.html#IdentityMapping.ToHost">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#IdentityMapping">IdentityMapping</a>) <a href="index.html#ToHost">ToHost</a>(pair <a href="index.html#Identity">Identity</a>) (<a href="index.html#Identity">Identity</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ToHost returns the host UID and GID for the container uid, gid.
+Remapping is only performed if the ids aren&#39;t already the remapped root ids
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IdentityMapping.UIDs">func (*IdentityMapping) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/idtools/idtools.go?s=6022:6062#L182">UIDs</a>
+					<a class="permalink" href="index.html#IdentityMapping.UIDs">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#IdentityMapping">IdentityMapping</a>) <a href="index.html#UIDs">UIDs</a>() []<a href="index.html#IDMap">IDMap</a></pre>
+				<p>
+UIDs return the UID mapping
+TODO: remove this once everything has been refactored to use pairs
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

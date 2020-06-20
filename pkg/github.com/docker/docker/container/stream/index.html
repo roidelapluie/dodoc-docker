@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>stream - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package stream</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/container/stream"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AttachConfig">type AttachConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewConfig">func NewConfig() *Config</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.AttachStreams">func (c *Config) AttachStreams(cfg *AttachConfig)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.CloseStreams">func (c *Config) CloseStreams() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.CopyStreams">func (c *Config) CopyStreams(ctx context.Context, cfg *AttachConfig) &lt;-chan error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.CopyToPipe">func (c *Config) CopyToPipe(iop *cio.DirectIO)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.NewInputPipes">func (c *Config) NewInputPipes()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.NewNopInputPipe">func (c *Config) NewNopInputPipe()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.Stderr">func (c *Config) Stderr() *broadcaster.Unbuffered</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.StderrPipe">func (c *Config) StderrPipe() io.ReadCloser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.Stdin">func (c *Config) Stdin() io.ReadCloser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.StdinPipe">func (c *Config) StdinPipe() io.WriteCloser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.Stdout">func (c *Config) Stdout() *broadcaster.Unbuffered</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.StdoutPipe">func (c *Config) StdoutPipe() io.ReadCloser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.Wait">func (c *Config) Wait(ctx context.Context)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/attach.go">attach.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go">streams.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AttachConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/attach.go?s=403:1406#L7">AttachConfig</a>
+				<a class="permalink" href="index.html#AttachConfig">&#xb6;</a>
+			</h2>
+			<p>
+AttachConfig is the config struct used to attach a client to a stream&#39;s stdio
+</p>
+
+			<pre>type AttachConfig struct {
+    <span class="comment">// Tells the attach copier that the stream&#39;s stdin is a TTY and to look for</span>
+    <span class="comment">// escape sequences in stdin to detach from the stream.</span>
+    <span class="comment">// When true the escape sequence is not passed to the underlying stream</span>
+<span id="AttachConfig.TTY"></span>    TTY <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    <span class="comment">// Specifies the detach keys the client will be using</span>
+    <span class="comment">// Only useful when `TTY` is true</span>
+<span id="AttachConfig.DetachKeys"></span>    DetachKeys []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>
+
+<span id="AttachConfig.CloseStdin"></span>    <span class="comment">// CloseStdin signals that once done, stdin for the attached stream should be closed</span>
+    <span class="comment">// For example, this would close the attached container&#39;s stdin.</span>
+    CloseStdin <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// UseStd* indicate whether the client has requested to be connected to the</span>
+    <span class="comment">// given stream or not.  These flags are used instead of checking Std* != nil</span>
+    <span class="comment">// at points before the client streams Std* are wired up.</span>
+<span id="AttachConfig.UseStdin"></span>    UseStdin, UseStdout, UseStderr <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+
+    <span class="comment">// CStd* are the streams directly connected to the container</span>
+<span id="AttachConfig.CStdin"></span>    CStdin           <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a>
+<span id="AttachConfig.CStdout"></span>    CStdout, CStderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>
+
+    <span class="comment">// Provide client streams to wire up to</span>
+<span id="AttachConfig.Stdin"></span>    Stdin          <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>
+<span id="AttachConfig.Stdout"></span>    Stdout, Stderr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Config">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=859:1053#L17">Config</a>
+				<a class="permalink" href="index.html#Config">&#xb6;</a>
+			</h2>
+			<p>
+Config holds information about I/O streams managed together.
+</p>
+<p>
+config.StdinPipe returns a WriteCloser which can be used to feed data
+to the standard input of the streamConfig&#39;s active process.
+config.StdoutPipe and streamConfig.StderrPipe each return a ReadCloser
+which can be used to retrieve the standard output (and error) generated
+by the container&#39;s active process. The output (and error) are actually
+copied and delivered to all StdoutPipe and StderrPipe consumers, using
+a kind of &#34;broadcaster&#34;.
+</p>
+
+			<pre>type Config struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewConfig">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=1177:1201#L28">NewConfig</a>
+					<a class="permalink" href="index.html#NewConfig">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewConfig">NewConfig</a>() *<a href="index.html#Config">Config</a></pre>
+				<p>
+NewConfig creates a stream config and initializes
+the standard err and standard out to new unbuffered broadcasters.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Config.AttachStreams">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/attach.go?s=1478:1527#L35">AttachStreams</a>
+					<a class="permalink" href="index.html#Config.AttachStreams">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#AttachStreams">AttachStreams</a>(cfg *<a href="index.html#AttachConfig">AttachConfig</a>)</pre>
+				<p>
+AttachStreams attaches the container&#39;s streams to the AttachConfig
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.CloseStreams">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=2823:2860#L84">CloseStreams</a>
+					<a class="permalink" href="index.html#Config.CloseStreams">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#CloseStreams">CloseStreams</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CloseStreams ensures that the configured streams are properly closed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.CopyStreams">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/attach.go?s=1773:1854#L50">CopyStreams</a>
+					<a class="permalink" href="index.html#Config.CopyStreams">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#CopyStreams">CopyStreams</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, cfg *<a href="index.html#AttachConfig">AttachConfig</a>) &lt;-chan <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CopyStreams starts goroutines to copy data in and out to/from the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.CopyToPipe">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=3411:3457#L109">CopyToPipe</a>
+					<a class="permalink" href="index.html#Config.CopyToPipe">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#CopyToPipe">CopyToPipe</a>(iop *<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/">cio</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/#DirectIO">DirectIO</a>)</pre>
+				<p>
+CopyToPipe connects streamconfig with a libcontainerd.IOPipe
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.NewInputPipes">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=2489:2521#L74">NewInputPipes</a>
+					<a class="permalink" href="index.html#Config.NewInputPipes">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#NewInputPipes">NewInputPipes</a>()</pre>
+				<p>
+NewInputPipes creates new pipes for both standard inputs, Stdin and StdinPipe.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.NewNopInputPipe">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=2656:2690#L79">NewNopInputPipe</a>
+					<a class="permalink" href="index.html#Config.NewNopInputPipe">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#NewNopInputPipe">NewNopInputPipe</a>()</pre>
+				<p>
+NewNopInputPipe creates a new input pipe that will silently drop all messages in the input.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.Stderr">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=1496:1545#L41">Stderr</a>
+					<a class="permalink" href="index.html#Config.Stderr">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#Stderr">Stderr</a>() *<a href="../../pkg/broadcaster/index.html">broadcaster</a>.<a href="../../pkg/broadcaster/index.html#Unbuffered">Unbuffered</a></pre>
+				<p>
+Stderr returns the standard error in the configuration.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.StderrPipe">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=2278:2321#L67">StderrPipe</a>
+					<a class="permalink" href="index.html#Config.StderrPipe">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#StderrPipe">StderrPipe</a>() <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a></pre>
+				<p>
+StderrPipe creates a new io.ReadCloser with an empty bytes pipe.
+It adds this new err pipe to the Stderr broadcaster.
+This will block stderr if unconsumed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.Stdin">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=1626:1664#L46">Stdin</a>
+					<a class="permalink" href="index.html#Config.Stdin">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#Stdin">Stdin</a>() <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a></pre>
+				<p>
+Stdin returns the standard input in the configuration.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.StdinPipe">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=1750:1793#L51">StdinPipe</a>
+					<a class="permalink" href="index.html#Config.StdinPipe">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#StdinPipe">StdinPipe</a>() <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a></pre>
+				<p>
+StdinPipe returns an input writer pipe as an io.WriteCloser.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.Stdout">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=1365:1414#L36">Stdout</a>
+					<a class="permalink" href="index.html#Config.Stdout">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#Stdout">Stdout</a>() *<a href="../../pkg/broadcaster/index.html">broadcaster</a>.<a href="../../pkg/broadcaster/index.html#Unbuffered">Unbuffered</a></pre>
+				<p>
+Stdout returns the standard output in the configuration.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.StdoutPipe">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=1984:2027#L58">StdoutPipe</a>
+					<a class="permalink" href="index.html#Config.StdoutPipe">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#StdoutPipe">StdoutPipe</a>() <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a></pre>
+				<p>
+StdoutPipe creates a new io.ReadCloser with an empty bytes pipe.
+It adds this new out pipe to the Stdout broadcaster.
+This will block stdout if unconsumed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.Wait">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/container/stream/streams.go?s=4170:4212#L144">Wait</a>
+					<a class="permalink" href="index.html#Config.Wait">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#Wait">Wait</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>)</pre>
+				<p>
+Wait for the stream to close
+Wait supports timeouts via the context to unblock and forcefully
+close the io streams
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

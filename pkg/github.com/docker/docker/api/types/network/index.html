@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>network - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package network</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/network"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#ValidateFilters">func ValidateFilters(filter filters.Args) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Address">type Address</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ConfigReference">type ConfigReference</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EndpointIPAMConfig">type EndpointIPAMConfig</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EndpointIPAMConfig.Copy">func (cfg *EndpointIPAMConfig) Copy() *EndpointIPAMConfig</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EndpointSettings">type EndpointSettings</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EndpointSettings.Copy">func (es *EndpointSettings) Copy() *EndpointSettings</a></dd>
+				
+			
+				
+				<dd><a href="index.html#IPAM">type IPAM</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IPAMConfig">type IPAMConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkingConfig">type NetworkingConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PeerInfo">type PeerInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceInfo">type ServiceInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Task">type Task</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go">network.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="ValidateFilters">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=3346:3393#L115">ValidateFilters</a>
+				<a class="permalink" href="index.html#ValidateFilters">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateFilters">ValidateFilters</a>(filter <a href="../filters/index.html">filters</a>.<a href="../filters/index.html#Args">Args</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ValidateFilters validates the list of filter args with the available filters.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Address">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=201:257#L1">Address</a>
+				<a class="permalink" href="index.html#Address">&#xb6;</a>
+			</h2>
+			<p>
+Address represents an IP address
+</p>
+
+			<pre>type Address struct {
+<span id="Address.Addr"></span>    Addr      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Address.PrefixLen"></span>    PrefixLen <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ConfigReference">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=3041:3088#L100">ConfigReference</a>
+				<a class="permalink" href="index.html#ConfigReference">&#xb6;</a>
+			</h2>
+			<p>
+ConfigReference specifies the source which provides a network&#39;s configuration
+</p>
+
+			<pre>type ConfigReference struct {
+<span id="ConfigReference.Network"></span>    Network <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EndpointIPAMConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=782:945#L19">EndpointIPAMConfig</a>
+				<a class="permalink" href="index.html#EndpointIPAMConfig">&#xb6;</a>
+			</h2>
+			<p>
+EndpointIPAMConfig represents IPAM configurations for the endpoint
+</p>
+
+			<pre>type EndpointIPAMConfig struct {
+<span id="EndpointIPAMConfig.IPv4Address"></span>    IPv4Address  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;,omitempty&#34;`
+<span id="EndpointIPAMConfig.IPv6Address"></span>    IPv6Address  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;,omitempty&#34;`
+<span id="EndpointIPAMConfig.LinkLocalIPs"></span>    LinkLocalIPs []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EndpointIPAMConfig.Copy">func (*EndpointIPAMConfig) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=996:1053#L26">Copy</a>
+					<a class="permalink" href="index.html#EndpointIPAMConfig.Copy">&#xb6;</a>
+				</h3>
+				<pre>func (cfg *<a href="index.html#EndpointIPAMConfig">EndpointIPAMConfig</a>) <a href="index.html#Copy">Copy</a>() *<a href="index.html#EndpointIPAMConfig">EndpointIPAMConfig</a></pre>
+				<p>
+Copy makes a copy of the endpoint ipam config
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EndpointSettings">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=1394:1825#L40">EndpointSettings</a>
+				<a class="permalink" href="index.html#EndpointSettings">&#xb6;</a>
+			</h2>
+			<p>
+EndpointSettings stores the network endpoint details
+</p>
+
+			<pre>type EndpointSettings struct {
+    <span class="comment">// Configurations</span>
+<span id="EndpointSettings.IPAMConfig"></span>    IPAMConfig *<a href="index.html#EndpointIPAMConfig">EndpointIPAMConfig</a>
+<span id="EndpointSettings.Links"></span>    Links      []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.Aliases"></span>    Aliases    []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// Operational data</span>
+<span id="EndpointSettings.NetworkID"></span>    NetworkID           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.EndpointID"></span>    EndpointID          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.Gateway"></span>    Gateway             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.IPAddress"></span>    IPAddress           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.IPPrefixLen"></span>    IPPrefixLen         <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="EndpointSettings.IPv6Gateway"></span>    IPv6Gateway         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.GlobalIPv6Address"></span>    GlobalIPv6Address   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.GlobalIPv6PrefixLen"></span>    GlobalIPv6PrefixLen <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="EndpointSettings.MacAddress"></span>    MacAddress          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="EndpointSettings.DriverOpts"></span>    DriverOpts          map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EndpointSettings.Copy">func (*EndpointSettings) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=2229:2281#L75">Copy</a>
+					<a class="permalink" href="index.html#EndpointSettings.Copy">&#xb6;</a>
+				</h3>
+				<pre>func (es *<a href="index.html#EndpointSettings">EndpointSettings</a>) <a href="index.html#Copy">Copy</a>() *<a href="index.html#EndpointSettings">EndpointSettings</a></pre>
+				<p>
+Copy makes a deep copy of `EndpointSettings`
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="IPAM">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=300:419#L4">IPAM</a>
+				<a class="permalink" href="index.html#IPAM">&#xb6;</a>
+			</h2>
+			<p>
+IPAM represents IP Address Management
+</p>
+
+			<pre>type IPAM struct {
+<span id="IPAM.Driver"></span>    Driver  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="IPAM.Options"></span>    Options map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">//Per network IPAM driver options</span>
+<span id="IPAM.Config"></span>    Config  []<a href="index.html#IPAMConfig">IPAMConfig</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IPAMConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=466:710#L11">IPAMConfig</a>
+				<a class="permalink" href="index.html#IPAMConfig">&#xb6;</a>
+			</h2>
+			<p>
+IPAMConfig represents IPAM configurations
+</p>
+
+			<pre>type IPAMConfig struct {
+<span id="IPAMConfig.Subnet"></span>    Subnet     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="IPAMConfig.IPRange"></span>    IPRange    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="IPAMConfig.Gateway"></span>    Gateway    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;`
+<span id="IPAMConfig.AuxAddress"></span>    AuxAddress map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;AuxiliaryAddresses,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkingConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=2832:2958#L95">NetworkingConfig</a>
+				<a class="permalink" href="index.html#NetworkingConfig">&#xb6;</a>
+			</h2>
+			<p>
+NetworkingConfig represents the container&#39;s networking configuration for each of its interfaces
+Carries the networking configs specified in the `docker run` and `docker network connect` commands
+</p>
+
+			<pre>type NetworkingConfig struct {
+<span id="NetworkingConfig.EndpointsConfig"></span>    EndpointsConfig map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="index.html#EndpointSettings">EndpointSettings</a> <span class="comment">// Endpoint configs for each connecting network</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PeerInfo">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=1286:1336#L34">PeerInfo</a>
+				<a class="permalink" href="index.html#PeerInfo">&#xb6;</a>
+			</h2>
+			<p>
+PeerInfo represents one peer of an overlay network
+</p>
+
+			<pre>type PeerInfo struct {
+<span id="PeerInfo.Name"></span>    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="PeerInfo.IP"></span>    IP   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceInfo">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=2069:2179#L67">ServiceInfo</a>
+				<a class="permalink" href="index.html#ServiceInfo">&#xb6;</a>
+			</h2>
+			<p>
+ServiceInfo represents service parameters with the list of service&#39;s tasks
+</p>
+
+			<pre>type ServiceInfo struct {
+<span id="ServiceInfo.VIP"></span>    VIP          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ServiceInfo.Ports"></span>    Ports        []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ServiceInfo.LocalLBIndex"></span>    LocalLBIndex <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="ServiceInfo.Tasks"></span>    Tasks        []<a href="index.html#Task">Task</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Task">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/network/network.go?s=1882:1989#L59">Task</a>
+				<a class="permalink" href="index.html#Task">&#xb6;</a>
+			</h2>
+			<p>
+Task carries the information about one backend task
+</p>
+
+			<pre>type Task struct {
+<span id="Task.Name"></span>    Name       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Task.EndpointID"></span>    EndpointID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Task.EndpointIP"></span>    EndpointIP <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Task.Info"></span>    Info       map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

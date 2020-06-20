@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>remotecontext - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package remotecontext</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/builder/remotecontext"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package remotecontext is a generated protocol buffer package.
+</p>
+<p>
+It is generated from these files:
+</p>
+<pre>tarsum.proto
+</pre>
+<p>
+It has these top-level messages:
+</p>
+<pre>TarsumBackup
+</pre>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Detect">func Detect(config backend.BuildConfig) (remote builder.Source, dockerfile *parser.Result, err error)</a></dd>
+			
+				
+				<dd><a href="index.html#FromArchive">func FromArchive(tarStream io.Reader) (builder.Source, error)</a></dd>
+			
+				
+				<dd><a href="index.html#FullPath">func FullPath(remote builder.Source, path string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetWithStatusError">func GetWithStatusError(address string) (resp *http.Response, err error)</a></dd>
+			
+				
+				<dd><a href="index.html#MakeGitContext">func MakeGitContext(gitURL string) (builder.Source, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewFileHash">func NewFileHash(path, name string, fi os.FileInfo) (hash.Hash, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewLazySource">func NewLazySource(root containerfs.ContainerFS) (builder.Source, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Rel">func Rel(basepath containerfs.ContainerFS, targpath string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#StatAt">func StatAt(remote builder.Source, path string) (os.FileInfo, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#CachableSource">type CachableSource</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewCachableSource">func NewCachableSource(root string) *CachableSource</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CachableSource.Close">func (cs *CachableSource) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CachableSource.HandleChange">func (cs *CachableSource) HandleChange(kind fsutil.ChangeKind, p string, fi os.FileInfo, err error) (retErr error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CachableSource.Hash">func (cs *CachableSource) Hash(path string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CachableSource.MarshalBinary">func (cs *CachableSource) MarshalBinary() ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CachableSource.Root">func (cs *CachableSource) Root() containerfs.ContainerFS</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CachableSource.Scan">func (cs *CachableSource) Scan() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CachableSource.UnmarshalBinary">func (cs *CachableSource) UnmarshalBinary(data []byte) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#TarsumBackup">type TarsumBackup</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.Descriptor">func (*TarsumBackup) Descriptor() ([]byte, []int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.Equal">func (this *TarsumBackup) Equal(that interface{}) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.GetHashes">func (m *TarsumBackup) GetHashes() map[string]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.GoString">func (this *TarsumBackup) GoString() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.Marshal">func (m *TarsumBackup) Marshal() (dAtA []byte, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.MarshalTo">func (m *TarsumBackup) MarshalTo(dAtA []byte) (int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.ProtoMessage">func (*TarsumBackup) ProtoMessage()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.Reset">func (m *TarsumBackup) Reset()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.Size">func (m *TarsumBackup) Size() (n int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.String">func (this *TarsumBackup) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TarsumBackup.Unmarshal">func (m *TarsumBackup) Unmarshal(dAtA []byte) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/archive.go">archive.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/detect.go">detect.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/filehash.go">filehash.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/generate.go">generate.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/git.go">git.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/lazycontext.go">lazycontext.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/mimetype.go">mimetype.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/remote.go">remote.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go">tarsum.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go">tarsum.pb.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+ClientSessionRemote is identifier for client-session context transport
+</p>
+
+				<pre>const <span id="ClientSessionRemote">ClientSessionRemote</span> = &#34;client-session&#34;</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span id="ErrInvalidLengthTarsum">ErrInvalidLengthTarsum</span> = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Errorf">Errorf</a>(&#34;proto: negative length found during unmarshaling&#34;)
+    <span id="ErrIntOverflowTarsum">ErrIntOverflowTarsum</span>   = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Errorf">Errorf</a>(&#34;proto: integer overflow&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="Detect">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/detect.go?s=752:853#L18">Detect</a>
+				<a class="permalink" href="index.html#Detect">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Detect">Detect</a>(config <a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#BuildConfig">BuildConfig</a>) (remote <a href="../index.html">builder</a>.<a href="../index.html#Source">Source</a>, dockerfile *<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/frontend/dockerfile/parser/">parser</a>.<a href="http://127.0.0.1:8080/pkg/github.com/moby/buildkit/frontend/dockerfile/parser/#Result">Result</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Detect returns a context and dockerfile from remote location or local
+archive.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="FromArchive">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/archive.go?s=1309:1370#L39">FromArchive</a>
+				<a class="permalink" href="index.html#FromArchive">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FromArchive">FromArchive</a>(tarStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (<a href="../index.html">builder</a>.<a href="../index.html#Source">Source</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+FromArchive returns a build source from a tar stream.
+</p>
+<p>
+It extracts the tar stream to a temporary folder that is deleted as soon as
+the Context is closed.
+As the extraction happens, a tarsum is calculated for every file, and the set of
+all those sums then becomes the source of truth for all operations on this Context.
+</p>
+<p>
+Closing tarStream has to be done by the caller.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="FullPath">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/detect.go?s=5283:5348#L172">FullPath</a>
+				<a class="permalink" href="index.html#FullPath">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FullPath">FullPath</a>(remote <a href="../index.html">builder</a>.<a href="../index.html#Source">Source</a>, path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+FullPath is a helper for getting a full path for a path from a source
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetWithStatusError">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/remote.go?s=1397:1469#L37">GetWithStatusError</a>
+				<a class="permalink" href="index.html#GetWithStatusError">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetWithStatusError">GetWithStatusError</a>(address <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (resp *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Response">Response</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetWithStatusError does an http.Get() and returns an error if the
+status code is 4xx or 5xx.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeGitContext">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/git.go?s=350:408#L3">MakeGitContext</a>
+				<a class="permalink" href="index.html#MakeGitContext">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeGitContext">MakeGitContext</a>(gitURL <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../index.html">builder</a>.<a href="../index.html#Source">Source</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+MakeGitContext returns a Context from gitURL that is cloned in a temporary directory.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewFileHash">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/filehash.go?s=292:362#L4">NewFileHash</a>
+				<a class="permalink" href="index.html#NewFileHash">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewFileHash">NewFileHash</a>(path, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, fi <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileInfo">FileInfo</a>) (<a href="http://127.0.0.1:8080/pkg/hash/">hash</a>.<a href="http://127.0.0.1:8080/pkg/hash/#Hash">Hash</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+NewFileHash returns new hash that is used for the builder cache keys
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewLazySource">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/lazycontext.go?s=506:578#L7">NewLazySource</a>
+				<a class="permalink" href="index.html#NewLazySource">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewLazySource">NewLazySource</a>(root <a href="../../pkg/containerfs/index.html">containerfs</a>.<a href="../../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>) (<a href="../index.html">builder</a>.<a href="../index.html#Source">Source</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+NewLazySource creates a new LazyContext. LazyContext defines a hashed build
+context based on a root directory. Individual files are hashed first time
+they are asked. It is not safe to call methods of LazyContext concurrently.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Rel">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/lazycontext.go?s=2234:2309#L79">Rel</a>
+				<a class="permalink" href="index.html#Rel">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Rel">Rel</a>(basepath <a href="../../pkg/containerfs/index.html">containerfs</a>.<a href="../../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>, targpath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Rel makes a path relative to base path. Same as `filepath.Rel` but can also
+handle UUID paths in windows.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="StatAt">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/detect.go?s=5020:5088#L163">StatAt</a>
+				<a class="permalink" href="index.html#StatAt">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#StatAt">StatAt</a>(remote <a href="../index.html">builder</a>.<a href="../index.html#Source">Source</a>, path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileInfo">FileInfo</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+StatAt is a helper for calling Stat on a path from a source
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="CachableSource">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=425:539#L9">CachableSource</a>
+				<a class="permalink" href="index.html#CachableSource">&#xb6;</a>
+			</h2>
+			<p>
+CachableSource is a source that contains cache records for its contents
+</p>
+
+			<pre>type CachableSource struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCachableSource">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=589:640#L17">NewCachableSource</a>
+					<a class="permalink" href="index.html#NewCachableSource">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewCachableSource">NewCachableSource</a>(root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#CachableSource">CachableSource</a></pre>
+				<p>
+NewCachableSource creates new CachableSource
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="CachableSource.Close">func (*CachableSource) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=2901:2940#L121">Close</a>
+					<a class="permalink" href="index.html#CachableSource.Close">&#xb6;</a>
+				</h3>
+				<pre>func (cs *<a href="index.html#CachableSource">CachableSource</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close closes the source
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CachableSource.HandleChange">func (*CachableSource) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=2207:2321#L84">HandleChange</a>
+					<a class="permalink" href="index.html#CachableSource.HandleChange">&#xb6;</a>
+				</h3>
+				<pre>func (cs *<a href="index.html#CachableSource">CachableSource</a>) <a href="index.html#HandleChange">HandleChange</a>(kind <a href="http://127.0.0.1:8080/pkg/github.com/tonistiigi/fsutil/">fsutil</a>.<a href="http://127.0.0.1:8080/pkg/github.com/tonistiigi/fsutil/#ChangeKind">ChangeKind</a>, p <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, fi <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileInfo">FileInfo</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) (retErr <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+HandleChange notifies the source about a modification operation
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CachableSource.Hash">func (*CachableSource) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=3013:3072#L126">Hash</a>
+					<a class="permalink" href="index.html#CachableSource.Hash">&#xb6;</a>
+				</h3>
+				<pre>func (cs *<a href="index.html#CachableSource">CachableSource</a>) <a href="index.html#Hash">Hash</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Hash returns a hash for a single file in the source
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CachableSource.MarshalBinary">func (*CachableSource) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=821:878#L26">MarshalBinary</a>
+					<a class="permalink" href="index.html#CachableSource.MarshalBinary">&#xb6;</a>
+				</h3>
+				<pre>func (cs *<a href="index.html#CachableSource">CachableSource</a>) <a href="index.html#MarshalBinary">MarshalBinary</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MarshalBinary marshals current cache information to a byte array
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CachableSource.Root">func (*CachableSource) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=3272:3328#L137">Root</a>
+					<a class="permalink" href="index.html#CachableSource.Root">&#xb6;</a>
+				</h3>
+				<pre>func (cs *<a href="index.html#CachableSource">CachableSource</a>) <a href="index.html#Root">Root</a>() <a href="../../pkg/containerfs/index.html">containerfs</a>.<a href="../../pkg/containerfs/index.html#ContainerFS">ContainerFS</a></pre>
+				<p>
+Root returns a root directory for the source
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CachableSource.Scan">func (*CachableSource) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=1536:1574#L53">Scan</a>
+					<a class="permalink" href="index.html#CachableSource.Scan">&#xb6;</a>
+				</h3>
+				<pre>func (cs *<a href="index.html#CachableSource">CachableSource</a>) <a href="index.html#Scan">Scan</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Scan rescans the cache information from the file system
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CachableSource.UnmarshalBinary">func (*CachableSource) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.go?s=1157:1217#L37">UnmarshalBinary</a>
+					<a class="permalink" href="index.html#CachableSource.UnmarshalBinary">&#xb6;</a>
+				</h3>
+				<pre>func (cs *<a href="index.html#CachableSource">CachableSource</a>) <a href="index.html#UnmarshalBinary">UnmarshalBinary</a>(data []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmarshalBinary decodes cache information for presented byte array
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="TarsumBackup">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=950:1153#L27">TarsumBackup</a>
+				<a class="permalink" href="index.html#TarsumBackup">&#xb6;</a>
+			</h2>
+			
+			<pre>type TarsumBackup struct {
+<span id="TarsumBackup.Hashes"></span>    Hashes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `protobuf:&#34;bytes,1,rep,name=Hashes&#34; json:&#34;Hashes,omitempty&#34; protobuf_key:&#34;bytes,1,opt,name=key,proto3&#34; protobuf_val:&#34;bytes,2,opt,name=value,proto3&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="TarsumBackup.Descriptor">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=1282:1331#L33">Descriptor</a>
+					<a class="permalink" href="index.html#TarsumBackup.Descriptor">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#Descriptor">Descriptor</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, []<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.Equal">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=1569:1623#L45">Equal</a>
+					<a class="permalink" href="index.html#TarsumBackup.Equal">&#xb6;</a>
+				</h3>
+				<pre>func (this *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#Equal">Equal</a>(that interface{}) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.GetHashes">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=1375:1427#L35">GetHashes</a>
+					<a class="permalink" href="index.html#TarsumBackup.GetHashes">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#GetHashes">GetHashes</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.GoString">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=2129:2172#L80">GoString</a>
+					<a class="permalink" href="index.html#TarsumBackup.GoString">&#xb6;</a>
+				</h3>
+				<pre>func (this *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#GoString">GoString</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.Marshal">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=3021:3078#L110">Marshal</a>
+					<a class="permalink" href="index.html#TarsumBackup.Marshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#Marshal">Marshal</a>() (dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.MarshalTo">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=3218:3276#L120">MarshalTo</a>
+					<a class="permalink" href="index.html#TarsumBackup.MarshalTo">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#MarshalTo">MarshalTo</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.ProtoMessage">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=1229:1264#L32">ProtoMessage</a>
+					<a class="permalink" href="index.html#TarsumBackup.ProtoMessage">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#ProtoMessage">ProtoMessage</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.Reset">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=1155:1185#L31">Reset</a>
+					<a class="permalink" href="index.html#TarsumBackup.Reset">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#Reset">Reset</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.Size">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=4527:4564#L172">Size</a>
+					<a class="permalink" href="index.html#TarsumBackup.Size">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#Size">Size</a>() (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.String">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=5036:5077#L199">String</a>
+					<a class="permalink" href="index.html#TarsumBackup.String">&#xb6;</a>
+				</h3>
+				<pre>func (this *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="TarsumBackup.Unmarshal">func (*TarsumBackup) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/builder/remotecontext/tarsum.pb.go?s=5775:5826#L227">Unmarshal</a>
+					<a class="permalink" href="index.html#TarsumBackup.Unmarshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#TarsumBackup">TarsumBackup</a>) <a href="index.html#Unmarshal">Unmarshal</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="git/index.html">git</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

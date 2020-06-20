@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>exec - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package exec</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/exec"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewConfig">func NewConfig() *Config</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.CloseStreams">func (c *Config) CloseStreams() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.InitializeStdio">func (c *Config) InitializeStdio(iop *cio.DirectIO) (cio.IO, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.SetExitCode">func (c *Config) SetExitCode(code int)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Store">type Store</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewStore">func NewStore() *Store</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Add">func (e *Store) Add(id string, Config *Config)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Commands">func (e *Store) Commands() map[string]*Config</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Delete">func (e *Store) Delete(id string, pid int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.Get">func (e *Store) Get(id string) *Config</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Store.List">func (e *Store) List() []string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go">exec.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Config">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=435:868#L7">Config</a>
+				<a class="permalink" href="index.html#Config">&#xb6;</a>
+			</h2>
+			<p>
+Config holds the configurations for execs. The Daemon keeps
+track of both running and finished execs so that they can be
+examined both during and after completion.
+</p>
+
+			<pre>type Config struct {
+    <a href="http://127.0.0.1:8080/pkg/sync/">sync</a>.<a href="http://127.0.0.1:8080/pkg/sync/#Mutex">Mutex</a>
+<span id="Config.Started"></span>    Started      chan struct{}
+<span id="Config.StreamConfig"></span>    StreamConfig *<a href="../../container/stream/index.html">stream</a>.<a href="../../container/stream/index.html#Config">Config</a>
+<span id="Config.ID"></span>    ID           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.Running"></span>    Running      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Config.ExitCode"></span>    ExitCode     *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Config.OpenStdin"></span>    OpenStdin    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Config.OpenStderr"></span>    OpenStderr   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Config.OpenStdout"></span>    OpenStdout   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Config.CanRemove"></span>    CanRemove    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Config.ContainerID"></span>    ContainerID  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.DetachKeys"></span>    DetachKeys   []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>
+<span id="Config.Entrypoint"></span>    Entrypoint   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.Args"></span>    Args         []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.Tty"></span>    Tty          <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Config.Privileged"></span>    Privileged   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="Config.User"></span>    User         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.WorkingDir"></span>    WorkingDir   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.Env"></span>    Env          []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.Pid"></span>    Pid          <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewConfig">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=924:948#L31">NewConfig</a>
+					<a class="permalink" href="index.html#NewConfig">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewConfig">NewConfig</a>() *<a href="index.html#Config">Config</a></pre>
+				<p>
+NewConfig initializes the a new exec configuration
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Config.CloseStreams">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=1778:1815#L73">CloseStreams</a>
+					<a class="permalink" href="index.html#Config.CloseStreams">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#CloseStreams">CloseStreams</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CloseStreams closes the stdio streams for the exec
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.InitializeStdio">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=1358:1425#L58">InitializeStdio</a>
+					<a class="permalink" href="index.html#Config.InitializeStdio">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#InitializeStdio">InitializeStdio</a>(iop *<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/">cio</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/#DirectIO">DirectIO</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/">cio</a>.<a href="http://127.0.0.1:8080/pkg/github.com/containerd/containerd/cio/#IO">IO</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+InitializeStdio is called by libcontainerd to connect the stdio.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.SetExitCode">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=1907:1945#L78">SetExitCode</a>
+					<a class="permalink" href="index.html#Config.SetExitCode">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Config">Config</a>) <a href="index.html#SetExitCode">SetExitCode</a>(code <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+SetExitCode sets the exec config&#39;s exit code
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Store">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=2020:2080#L83">Store</a>
+				<a class="permalink" href="index.html#Store">&#xb6;</a>
+			</h2>
+			<p>
+Store keeps track of the exec configurations.
+</p>
+
+			<pre>type Store struct {
+    <a href="http://127.0.0.1:8080/pkg/sync/">sync</a>.<a href="http://127.0.0.1:8080/pkg/sync/#RWMutex">RWMutex</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=2124:2146#L89">NewStore</a>
+					<a class="permalink" href="index.html#NewStore">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewStore">NewStore</a>() *<a href="index.html#Store">Store</a></pre>
+				<p>
+NewStore initializes a new exec store.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Store.Add">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=2506:2552#L107">Add</a>
+					<a class="permalink" href="index.html#Store.Add">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Store">Store</a>) <a href="index.html#Add">Add</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, Config *<a href="index.html#Config">Config</a>)</pre>
+				<p>
+Add adds a new exec configuration to the store.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.Commands">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=2263:2308#L96">Commands</a>
+					<a class="permalink" href="index.html#Store.Commands">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Store">Store</a>) <a href="index.html#Commands">Commands</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="index.html#Config">Config</a></pre>
+				<p>
+Commands returns the exec configurations in the store.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.Delete">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=2804:2846#L122">Delete</a>
+					<a class="permalink" href="index.html#Store.Delete">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Store">Store</a>) <a href="index.html#Delete">Delete</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, pid <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+Delete removes an exec configuration from the store.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.Get">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=2649:2687#L114">Get</a>
+					<a class="permalink" href="index.html#Store.Get">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Store">Store</a>) <a href="index.html#Get">Get</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#Config">Config</a></pre>
+				<p>
+Get returns an exec configuration by its id.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Store.List">func (*Store) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/exec/exec.go?s=2945:2976#L129">List</a>
+					<a class="permalink" href="index.html#Store.List">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Store">Store</a>) <a href="index.html#List">List</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+List returns the list of exec ids in the store.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

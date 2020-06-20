@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>metadata - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package metadata</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/distribution/metadata"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#CheckV2MetadataHMAC">func CheckV2MetadataHMAC(meta *V2Metadata, key []byte) bool</a></dd>
+			
+				
+				<dd><a href="index.html#ComputeV2MetadataHMAC">func ComputeV2MetadataHMAC(key []byte, meta *V2Metadata) string</a></dd>
+			
+				
+				<dd><a href="index.html#ComputeV2MetadataHMACKey">func ComputeV2MetadataHMACKey(authConfig *types.AuthConfig) ([]byte, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#FSMetadataStore">type FSMetadataStore</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewFSMetadataStore">func NewFSMetadataStore(basePath string) (*FSMetadataStore, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FSMetadataStore.Delete">func (store *FSMetadataStore) Delete(namespace, key string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FSMetadataStore.Get">func (store *FSMetadataStore) Get(namespace string, key string) ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FSMetadataStore.Set">func (store *FSMetadataStore) Set(namespace, key string, value []byte) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Store">type Store</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#V1IDService">type V1IDService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewV1IDService">func NewV1IDService(store Store) *V1IDService</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#V1IDService.Get">func (idserv *V1IDService) Get(v1ID, registry string) (layer.DiffID, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#V1IDService.Set">func (idserv *V1IDService) Set(v1ID, registry string, id layer.DiffID) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#V2Metadata">type V2Metadata</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#V2MetadataService">type V2MetadataService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewV2MetadataService">func NewV2MetadataService(store Store) V2MetadataService</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/metadata.go">metadata.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v1_id_service.go">v1_id_service.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v2_metadata_service.go">v2_metadata_service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="CheckV2MetadataHMAC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v2_metadata_service.go?s=1294:1353#L32">CheckV2MetadataHMAC</a>
+				<a class="permalink" href="index.html#CheckV2MetadataHMAC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CheckV2MetadataHMAC">CheckV2MetadataHMAC</a>(meta *<a href="index.html#V2Metadata">V2Metadata</a>, key []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+CheckV2MetadataHMAC returns true if the given &#34;meta&#34; is tagged with a hmac hashed by the given &#34;key&#34;.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ComputeV2MetadataHMAC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v2_metadata_service.go?s=1799:1862#L50">ComputeV2MetadataHMAC</a>
+				<a class="permalink" href="index.html#ComputeV2MetadataHMAC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ComputeV2MetadataHMAC">ComputeV2MetadataHMAC</a>(key []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, meta *<a href="index.html#V2Metadata">V2Metadata</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+ComputeV2MetadataHMAC returns a hmac for the given &#34;meta&#34; hash by the given key.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ComputeV2MetadataHMACKey">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v2_metadata_service.go?s=2185:2260#L62">ComputeV2MetadataHMACKey</a>
+				<a class="permalink" href="index.html#ComputeV2MetadataHMACKey">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ComputeV2MetadataHMACKey">ComputeV2MetadataHMACKey</a>(authConfig *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#AuthConfig">AuthConfig</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ComputeV2MetadataHMACKey returns a key for the given &#34;authConfig&#34; that can be used to hash v2 metadata
+entries.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="FSMetadataStore">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/metadata.go?s=795:857#L16">FSMetadataStore</a>
+				<a class="permalink" href="index.html#FSMetadataStore">&#xb6;</a>
+			</h2>
+			<p>
+FSMetadataStore uses the filesystem to associate metadata with layer and
+image IDs.
+</p>
+
+			<pre>type FSMetadataStore struct {
+    <a href="http://127.0.0.1:8080/pkg/sync/">sync</a>.<a href="http://127.0.0.1:8080/pkg/sync/#RWMutex">RWMutex</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewFSMetadataStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/metadata.go?s=928:994#L22">NewFSMetadataStore</a>
+					<a class="permalink" href="index.html#NewFSMetadataStore">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewFSMetadataStore">NewFSMetadataStore</a>(basePath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#FSMetadataStore">FSMetadataStore</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewFSMetadataStore creates a new filesystem-based metadata store.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="FSMetadataStore.Delete">func (*FSMetadataStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/metadata.go?s=2128:2193#L59">Delete</a>
+					<a class="permalink" href="index.html#FSMetadataStore.Delete">&#xb6;</a>
+				</h3>
+				<pre>func (store *<a href="index.html#FSMetadataStore">FSMetadataStore</a>) <a href="index.html#Delete">Delete</a>(namespace, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Delete removes data indexed by namespace and key. The data file named after
+the key, stored in the namespace&#39;s directory is deleted.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FSMetadataStore.Get">func (*FSMetadataStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/metadata.go?s=1388:1467#L37">Get</a>
+					<a class="permalink" href="index.html#FSMetadataStore.Get">&#xb6;</a>
+				</h3>
+				<pre>func (store *<a href="index.html#FSMetadataStore">FSMetadataStore</a>) <a href="index.html#Get">Get</a>(namespace <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get retrieves data by namespace and key. The data is read from a file named
+after the key, stored in the namespace&#39;s directory.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FSMetadataStore.Set">func (*FSMetadataStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/metadata.go?s=1704:1780#L46">Set</a>
+					<a class="permalink" href="index.html#FSMetadataStore.Set">&#xb6;</a>
+				</h3>
+				<pre>func (store *<a href="index.html#FSMetadataStore">FSMetadataStore</a>) <a href="index.html#Set">Set</a>(namespace, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, value []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set writes data indexed by namespace and key. The data is written to a file
+named after the key, stored in the namespace&#39;s directory.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Store">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/metadata.go?s=394:703#L5">Store</a>
+				<a class="permalink" href="index.html#Store">&#xb6;</a>
+			</h2>
+			<p>
+Store implements a K/V store for mapping distribution-related IDs
+to on-disk layer IDs and image IDs. The namespace identifies the type of
+mapping (i.e. &#34;v1ids&#34; or &#34;artifacts&#34;). MetadataStore is goroutine-safe.
+</p>
+
+			<pre>type Store interface {
+    <span class="comment">// Get retrieves data by namespace and key.</span>
+    Get(namespace <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// Set writes data indexed by namespace and key.</span>
+    Set(namespace, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, value []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// Delete removes data indexed by namespace and key.</span>
+    Delete(namespace, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="V1IDService">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v1_id_service.go?s=231:271#L1">V1IDService</a>
+				<a class="permalink" href="index.html#V1IDService">&#xb6;</a>
+			</h2>
+			<p>
+V1IDService maps v1 IDs to layers on disk.
+</p>
+
+			<pre>type V1IDService struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewV1IDService">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v1_id_service.go?s=328:373#L5">NewV1IDService</a>
+					<a class="permalink" href="index.html#NewV1IDService">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewV1IDService">NewV1IDService</a>(store <a href="index.html#Store">Store</a>) *<a href="index.html#V1IDService">V1IDService</a></pre>
+				<p>
+NewV1IDService creates a new V1 ID mapping service.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="V1IDService.Get">func (*V1IDService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v1_id_service.go?s=578:653#L17">Get</a>
+					<a class="permalink" href="index.html#V1IDService.Get">&#xb6;</a>
+				</h3>
+				<pre>func (idserv *<a href="index.html#V1IDService">V1IDService</a>) <a href="index.html#Get">Get</a>(v1ID, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get finds a layer by its V1 ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="V1IDService.Set">func (*V1IDService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v1_id_service.go?s=1018:1094#L33">Set</a>
+					<a class="permalink" href="index.html#V1IDService.Set">&#xb6;</a>
+				</h3>
+				<pre>func (idserv *<a href="index.html#V1IDService">V1IDService</a>) <a href="index.html#Set">Set</a>(v1ID, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, id <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set associates an image with a V1 ID.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="V2Metadata">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v2_metadata_service.go?s=894:1187#L23">V2Metadata</a>
+				<a class="permalink" href="index.html#V2Metadata">&#xb6;</a>
+			</h2>
+			<p>
+V2Metadata contains the digest and source repository information for a layer.
+</p>
+
+			<pre>type V2Metadata struct {
+<span id="V2Metadata.Digest"></span>    Digest           digest.<a href="index.html#Digest">Digest</a>
+<span id="V2Metadata.SourceRepository"></span>    SourceRepository <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="V2Metadata.HMAC"></span>    <span class="comment">// HMAC hashes above attributes with recent authconfig digest used as a key in order to determine matching</span>
+    <span class="comment">// metadata entries accompanied by the same credentials without actually exposing them.</span>
+    HMAC <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="V2MetadataService">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v2_metadata_service.go?s=357:665#L7">V2MetadataService</a>
+				<a class="permalink" href="index.html#V2MetadataService">&#xb6;</a>
+			</h2>
+			<p>
+V2MetadataService maps layer IDs to a set of known metadata for
+the layer.
+</p>
+
+			<pre>type V2MetadataService interface {
+    GetMetadata(diffID <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>) ([]<a href="index.html#V2Metadata">V2Metadata</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    GetDiffID(dgst digest.<a href="index.html#Digest">Digest</a>) (<a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Add(diffID <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>, metadata <a href="index.html#V2Metadata">V2Metadata</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    TagAndAdd(diffID <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>, hmacKey []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, metadata <a href="index.html#V2Metadata">V2Metadata</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Remove(metadata <a href="index.html#V2Metadata">V2Metadata</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewV2MetadataService">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/metadata/v2_metadata_service.go?s=3235:3291#L95">NewV2MetadataService</a>
+					<a class="permalink" href="index.html#NewV2MetadataService">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewV2MetadataService">NewV2MetadataService</a>(store <a href="index.html#Store">Store</a>) <a href="index.html#V2MetadataService">V2MetadataService</a></pre>
+				<p>
+NewV2MetadataService creates a new diff ID to v2 metadata mapping service.
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>term - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package term</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/term"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package term provides structures and helper functions to work with
+terminal (state, sizes).
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#DisableEcho">func DisableEcho(fd uintptr, state *State) error</a></dd>
+			
+				
+				<dd><a href="index.html#GetFdInfo">func GetFdInfo(in interface{}) (uintptr, bool)</a></dd>
+			
+				
+				<dd><a href="index.html#IsTerminal">func IsTerminal(fd uintptr) bool</a></dd>
+			
+				
+				<dd><a href="index.html#NewEscapeProxy">func NewEscapeProxy(r io.Reader, escapeKeys []byte) io.Reader</a></dd>
+			
+				
+				<dd><a href="index.html#RestoreTerminal">func RestoreTerminal(fd uintptr, state *State) error</a></dd>
+			
+				
+				<dd><a href="index.html#SetWinsize">func SetWinsize(fd uintptr, ws *Winsize) error</a></dd>
+			
+				
+				<dd><a href="index.html#StdStreams">func StdStreams() (stdIn io.ReadCloser, stdOut, stdErr io.Writer)</a></dd>
+			
+				
+				<dd><a href="index.html#ToBytes">func ToBytes(keys string) ([]byte, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#EscapeError">type EscapeError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EscapeError.Error">func (EscapeError) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#State">type State</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MakeRaw">func MakeRaw(fd uintptr) (*State, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SaveState">func SaveState(fd uintptr) (*State, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SetRawTerminal">func SetRawTerminal(fd uintptr) (*State, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SetRawTerminalOutput">func SetRawTerminalOutput(fd uintptr) (*State, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Termios">type Termios</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Winsize">type Winsize</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetWinsize">func GetWinsize(fd uintptr) (*Winsize, error)</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/ascii.go">ascii.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/proxy.go">proxy.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/tc.go">tc.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go">term.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/termios_linux.go">termios_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/winsize.go">winsize.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+ASCII list the possible supported ASCII key sequence
+</p>
+
+				<pre>var <span id="ASCII">ASCII</span> = []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>{
+    &#34;ctrl-@&#34;,
+    &#34;ctrl-a&#34;,
+    &#34;ctrl-b&#34;,
+    &#34;ctrl-c&#34;,
+    &#34;ctrl-d&#34;,
+    &#34;ctrl-e&#34;,
+    &#34;ctrl-f&#34;,
+    &#34;ctrl-g&#34;,
+    &#34;ctrl-h&#34;,
+    &#34;ctrl-i&#34;,
+    &#34;ctrl-j&#34;,
+    &#34;ctrl-k&#34;,
+    &#34;ctrl-l&#34;,
+    &#34;ctrl-m&#34;,
+    &#34;ctrl-n&#34;,
+    &#34;ctrl-o&#34;,
+    &#34;ctrl-p&#34;,
+    &#34;ctrl-q&#34;,
+    &#34;ctrl-r&#34;,
+    &#34;ctrl-s&#34;,
+    &#34;ctrl-t&#34;,
+    &#34;ctrl-u&#34;,
+    &#34;ctrl-v&#34;,
+    &#34;ctrl-w&#34;,
+    &#34;ctrl-x&#34;,
+    &#34;ctrl-y&#34;,
+    &#34;ctrl-z&#34;,
+    &#34;ctrl-[&#34;,
+    &#34;ctrl-\\&#34;,
+    &#34;ctrl-]&#34;,
+    &#34;ctrl-^&#34;,
+    &#34;ctrl-_&#34;,
+}</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrInvalidState is returned if the state of the terminal is invalid.</span>
+    <span id="ErrInvalidState">ErrInvalidState</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Invalid terminal state&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="DisableEcho">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=1938:1986#L71">DisableEcho</a>
+				<a class="permalink" href="index.html#DisableEcho">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DisableEcho">DisableEcho</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>, state *<a href="index.html#State">State</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+DisableEcho applies the specified state to the terminal connected to the file
+descriptor, with echo disabled.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetFdInfo">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=911:957#L31">GetFdInfo</a>
+				<a class="permalink" href="index.html#GetFdInfo">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetFdInfo">GetFdInfo</a>(in interface{}) (<a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+GetFdInfo returns the file descriptor for an os.File and indicates whether the file represents a terminal.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsTerminal">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=1194:1226#L42">IsTerminal</a>
+				<a class="permalink" href="index.html#IsTerminal">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsTerminal">IsTerminal</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsTerminal returns true if the given file descriptor is a terminal.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewEscapeProxy">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/proxy.go?s=798:859#L17">NewEscapeProxy</a>
+				<a class="permalink" href="index.html#NewEscapeProxy">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewEscapeProxy">NewEscapeProxy</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, escapeKeys []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a></pre>
+			<p>
+NewEscapeProxy returns a new TTY proxy reader which wraps the given reader
+and detects when the specified escape keys are read, in which case the Read
+method will return an error of type EscapeError.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RestoreTerminal">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=1390:1442#L49">RestoreTerminal</a>
+				<a class="permalink" href="index.html#RestoreTerminal">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RestoreTerminal">RestoreTerminal</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>, state *<a href="index.html#State">State</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+RestoreTerminal restores the terminal connected to the given file descriptor
+to a previous state.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetWinsize">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/winsize.go?s=489:535#L7">SetWinsize</a>
+				<a class="permalink" href="index.html#SetWinsize">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SetWinsize">SetWinsize</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>, ws *<a href="index.html#Winsize">Winsize</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+SetWinsize tries to set the specified window size for the specified file descriptor.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="StdStreams">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=691:756#L26">StdStreams</a>
+				<a class="permalink" href="index.html#StdStreams">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#StdStreams">StdStreams</a>() (stdIn <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, stdOut, stdErr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>)</pre>
+			<p>
+StdStreams returns the standard streams (stdin, stdout, stderr).
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ToBytes">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/ascii.go?s=623:664#L35">ToBytes</a>
+				<a class="permalink" href="index.html#ToBytes">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ToBytes">ToBytes</a>(keys <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ToBytes converts a string representing a suite of key-sequence to the corresponding ASCII code.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="EscapeError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/proxy.go?s=210:235#L1">EscapeError</a>
+				<a class="permalink" href="index.html#EscapeError">&#xb6;</a>
+			</h2>
+			<p>
+EscapeError is special error which returned by a TTY proxy reader&#39;s Read()
+method in case its detach escape sequence is read.
+</p>
+
+			<pre>type EscapeError struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="EscapeError.Error">func (EscapeError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/proxy.go?s=237:270#L1">Error</a>
+					<a class="permalink" href="index.html#EscapeError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#EscapeError">EscapeError</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="State">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=443:481#L13">State</a>
+				<a class="permalink" href="index.html#State">&#xb6;</a>
+			</h2>
+			<p>
+State represents the state of the terminal.
+</p>
+
+			<pre>type State struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="MakeRaw">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/termios_linux.go?s=394:434#L8">MakeRaw</a>
+					<a class="permalink" href="index.html#MakeRaw">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#MakeRaw">MakeRaw</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>) (*<a href="index.html#State">State</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MakeRaw put the terminal connected to the given file descriptor into raw
+mode and returns the previous state of the terminal so that it can be
+restored.
+</p>
+
+				
+				
+			
+				
+				<h3 id="SaveState">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=1657:1699#L60">SaveState</a>
+					<a class="permalink" href="index.html#SaveState">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#SaveState">SaveState</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>) (*<a href="index.html#State">State</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SaveState saves the state of the terminal connected to the given file descriptor.
+</p>
+
+				
+				
+			
+				
+				<h3 id="SetRawTerminal">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=2387:2434#L85">SetRawTerminal</a>
+					<a class="permalink" href="index.html#SetRawTerminal">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#SetRawTerminal">SetRawTerminal</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>) (*<a href="index.html#State">State</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SetRawTerminal puts the terminal connected to the given file descriptor into
+raw mode and returns the previous state. On UNIX, this puts both the input
+and output into raw mode. On Windows, it only puts the input into raw mode.
+</p>
+
+				
+				
+			
+				
+				<h3 id="SetRawTerminalOutput">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=2779:2832#L97">SetRawTerminalOutput</a>
+					<a class="permalink" href="index.html#SetRawTerminalOutput">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#SetRawTerminalOutput">SetRawTerminalOutput</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>) (*<a href="index.html#State">State</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SetRawTerminalOutput puts the output of terminal connected to the given file
+descriptor into raw mode. On UNIX, this does nothing and returns nil for the
+state. On Windows, it disables LF -&gt; CRLF translation.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Termios">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/termios_linux.go?s=205:230#L3">Termios</a>
+				<a class="permalink" href="index.html#Termios">&#xb6;</a>
+			</h2>
+			<p>
+Termios is the Unix API for terminal I/O.
+</p>
+
+			<pre>type Termios <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#Termios">Termios</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Winsize">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/term.go?s=538:621#L18">Winsize</a>
+				<a class="permalink" href="index.html#Winsize">&#xb6;</a>
+			</h2>
+			<p>
+Winsize represents the size of the terminal window.
+</p>
+
+			<pre>type Winsize struct {
+<span id="Winsize.Height"></span>    Height <a href="http://127.0.0.1:8080/pkg/builtin/#uint16">uint16</a>
+<span id="Winsize.Width"></span>    Width  <a href="http://127.0.0.1:8080/pkg/builtin/#uint16">uint16</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetWinsize">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/term/winsize.go?s=195:240#L1">GetWinsize</a>
+					<a class="permalink" href="index.html#GetWinsize">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetWinsize">GetWinsize</a>(fd <a href="http://127.0.0.1:8080/pkg/builtin/#uintptr">uintptr</a>) (*<a href="index.html#Winsize">Winsize</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetWinsize returns the window size based on the specified file descriptor.
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="windows/index.html">windows</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

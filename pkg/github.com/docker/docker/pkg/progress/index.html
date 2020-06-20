@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>progress - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package progress</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/progress"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#Aux">func Aux(out Output, a interface{})</a></dd>
+			
+				
+				<dd><a href="index.html#Message">func Message(out Output, id, message string)</a></dd>
+			
+				
+				<dd><a href="index.html#Messagef">func Messagef(out Output, id, format string, a ...interface{})</a></dd>
+			
+				
+				<dd><a href="index.html#Update">func Update(out Output, id, action string)</a></dd>
+			
+				
+				<dd><a href="index.html#Updatef">func Updatef(out Output, id, format string, a ...interface{})</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Output">type Output</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ChanOutput">func ChanOutput(progressChan chan&lt;- Progress) Output</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DiscardOutput">func DiscardOutput() Output</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Progress">type Progress</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Reader">type Reader</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewProgressReader">func NewProgressReader(in io.ReadCloser, out Output, size int64, id, action string) *Reader</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Reader.Close">func (p *Reader) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Reader.Read">func (p *Reader) Read(buf []byte) (n int, err error)</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go">progress.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progressreader.go">progressreader.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="Aux">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=2389:2424#L81">Aux</a>
+				<a class="permalink" href="index.html#Aux">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Aux">Aux</a>(out <a href="index.html#Output">Output</a>, a interface{})</pre>
+			<p>
+Aux sends auxiliary information over a progress interface, which will not be
+formatted for the UI. This is used for things such as push signing.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Message">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=1918:1962#L69">Message</a>
+				<a class="permalink" href="index.html#Message">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Message">Message</a>(out <a href="index.html#Output">Output</a>, id, message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+Message is a convenience function to write a progress message to the channel.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Messagef">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=2125:2187#L75">Messagef</a>
+				<a class="permalink" href="index.html#Messagef">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Messagef">Messagef</a>(out <a href="index.html#Output">Output</a>, id, format <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, a ...interface{})</pre>
+			<p>
+Messagef is a convenience function to write a printf-formatted progress
+message to the channel.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Update">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=1525:1567#L58">Update</a>
+				<a class="permalink" href="index.html#Update">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Update">Update</a>(out <a href="index.html#Output">Output</a>, id, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+Update is a convenience function to write a progress update to the channel.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Updatef">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=1726:1787#L64">Updatef</a>
+				<a class="permalink" href="index.html#Updatef">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Updatef">Updatef</a>(out <a href="index.html#Output">Output</a>, id, format <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, a ...interface{})</pre>
+			<p>
+Updatef is a convenience function to write a printf-formatted progress update
+to the channel.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Output">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=807:863#L25">Output</a>
+				<a class="permalink" href="index.html#Output">&#xb6;</a>
+			</h2>
+			<p>
+Output is an interface for writing progress information. It&#39;s
+like a writer for progress, but we don&#39;t call it Writer because
+that would be confusing next to ProgressReader (also, because it
+doesn&#39;t implement the io.Writer interface).
+</p>
+
+			<pre>type Output interface {
+    WriteProgress(<a href="index.html#Progress">Progress</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="ChanOutput">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=1143:1195#L42">ChanOutput</a>
+					<a class="permalink" href="index.html#ChanOutput">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#ChanOutput">ChanOutput</a>(progressChan chan&lt;- <a href="index.html#Progress">Progress</a>) <a href="index.html#Output">Output</a></pre>
+				<p>
+ChanOutput returns an Output that writes progress updates to the
+supplied channel.
+</p>
+
+				
+				
+			
+				
+				<h3 id="DiscardOutput">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=1389:1416#L53">DiscardOutput</a>
+					<a class="permalink" href="index.html#DiscardOutput">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#DiscardOutput">DiscardOutput</a>() <a href="index.html#Output">Output</a></pre>
+				<p>
+DiscardOutput returns an Output that discards progress
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Progress">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progress.go?s=138:558#L1">Progress</a>
+				<a class="permalink" href="index.html#Progress">&#xb6;</a>
+			</h2>
+			<p>
+Progress represents the progress of a transfer.
+</p>
+
+			<pre>type Progress struct {
+<span id="Progress.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Progress contains a Message or...</span>
+<span id="Progress.Message"></span>    Message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// ...progress of an action</span>
+<span id="Progress.Action"></span>    Action  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Progress.Current"></span>    Current <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>
+<span id="Progress.Total"></span>    Total   <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>
+
+    <span class="comment">// If true, don&#39;t show xB/yB</span>
+<span id="Progress.HideCounts"></span>    HideCounts <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    <span class="comment">// If not empty, use units instead of bytes for counts</span>
+<span id="Progress.Units"></span>    Units <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Progress.Aux"></span>    <span class="comment">// Aux contains extra information not presented to the user, such as</span>
+    <span class="comment">// digests for push signing.</span>
+    Aux interface{}
+
+<span id="Progress.LastUpdate"></span>    LastUpdate <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Reader">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progressreader.go?s=162:418#L1">Reader</a>
+				<a class="permalink" href="index.html#Reader">&#xb6;</a>
+			</h2>
+			<p>
+Reader is a Reader with progress bar.
+</p>
+
+			<pre>type Reader struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewProgressReader">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progressreader.go?s=471:562#L13">NewProgressReader</a>
+					<a class="permalink" href="index.html#NewProgressReader">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewProgressReader">NewProgressReader</a>(in <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, out <a href="index.html#Output">Output</a>, size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, id, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#Reader">Reader</a></pre>
+				<p>
+NewProgressReader creates a new ProgressReader.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Reader.Close">func (*Reader) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progressreader.go?s=1306:1336#L43">Close</a>
+					<a class="permalink" href="index.html#Reader.Close">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Reader">Reader</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close closes the progress reader and its underlying reader.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Reader.Read">func (*Reader) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/progress/progressreader.go?s=759:811#L24">Read</a>
+					<a class="permalink" href="index.html#Reader.Read">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Reader">Reader</a>) <a href="index.html#Read">Read</a>(buf []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>loopback - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package loopback</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/loopback"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AttachLoopDevice">func AttachLoopDevice(sparseName string) (loop *os.File, err error)</a></dd>
+			
+				
+				<dd><a href="index.html#FindLoopDeviceFor">func FindLoopDeviceFor(file *os.File) *os.File</a></dd>
+			
+				
+				<dd><a href="index.html#SetCapacity">func SetCapacity(file *os.File) error</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/loopback/attach_loopback.go">attach_loopback.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/loopback/ioctl.go">ioctl.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/loopback/loop_wrapper.go">loop_wrapper.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/loopback/loopback.go">loopback.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+IOCTL consts
+</p>
+
+				<pre>const (
+    <span id="LoopSetFd">LoopSetFd</span>       = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LOOP_SET_FD">LOOP_SET_FD</a>
+    <span id="LoopCtlGetFree">LoopCtlGetFree</span>  = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LOOP_CTL_GET_FREE">LOOP_CTL_GET_FREE</a>
+    <span id="LoopGetStatus64">LoopGetStatus64</span> = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LOOP_GET_STATUS64">LOOP_GET_STATUS64</a>
+    <span id="LoopSetStatus64">LoopSetStatus64</span> = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LOOP_SET_STATUS64">LOOP_SET_STATUS64</a>
+    <span id="LoopClrFd">LoopClrFd</span>       = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LOOP_CLR_FD">LOOP_CLR_FD</a>
+    <span id="LoopSetCapacity">LoopSetCapacity</span> = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LOOP_SET_CAPACITY">LOOP_SET_CAPACITY</a>
+)</pre>
+			
+				<p>
+LOOP consts.
+</p>
+
+				<pre>const (
+    <span id="LoFlagsAutoClear">LoFlagsAutoClear</span> = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LO_FLAGS_AUTOCLEAR">LO_FLAGS_AUTOCLEAR</a>
+    <span id="LoFlagsReadOnly">LoFlagsReadOnly</span>  = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LO_FLAGS_READ_ONLY">LO_FLAGS_READ_ONLY</a>
+    <span id="LoFlagsPartScan">LoFlagsPartScan</span>  = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LO_FLAGS_PARTSCAN">LO_FLAGS_PARTSCAN</a>
+    <span id="LoKeySize">LoKeySize</span>        = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LO_KEY_SIZE">LO_KEY_SIZE</a>
+    <span id="LoNameSize">LoNameSize</span>       = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#LO_NAME_SIZE">LO_NAME_SIZE</a>
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+Loopback related errors
+</p>
+
+				<pre>var (
+    <span id="ErrAttachLoopbackDevice">ErrAttachLoopbackDevice</span>   = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;loopback attach failed&#34;)
+    <span id="ErrGetLoopbackBackingFile">ErrGetLoopbackBackingFile</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Unable to get loopback backing file&#34;)
+    <span id="ErrSetCapacity">ErrSetCapacity</span>            = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Unable set loopback capacity&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="AttachLoopDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/loopback/attach_loopback.go?s=2354:2421#L85">AttachLoopDevice</a>
+				<a class="permalink" href="index.html#AttachLoopDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#AttachLoopDevice">AttachLoopDevice</a>(sparseName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (loop *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+AttachLoopDevice attaches the given sparse file to the next
+available loopback device. It returns an opened *os.File.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="FindLoopDeviceFor">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/loopback/loopback.go?s=838:884#L23">FindLoopDeviceFor</a>
+				<a class="permalink" href="index.html#FindLoopDeviceFor">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FindLoopDeviceFor">FindLoopDeviceFor</a>(file *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a>) *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a></pre>
+			<p>
+FindLoopDeviceFor returns a loopback device file for the specified file which
+is backing file of a loop back device.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetCapacity">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/loopback/loopback.go?s=519:556#L13">SetCapacity</a>
+				<a class="permalink" href="index.html#SetCapacity">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SetCapacity">SetCapacity</a>(file *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+SetCapacity reloads the size for the loopback device.
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

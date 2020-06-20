@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>httputils - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package httputils</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/server/httputils"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#BoolValue">func BoolValue(r *http.Request, k string) bool</a></dd>
+			
+				
+				<dd><a href="index.html#BoolValueOrDefault">func BoolValueOrDefault(r *http.Request, k string, d bool) bool</a></dd>
+			
+				
+				<dd><a href="index.html#CheckForJSON">func CheckForJSON(r *http.Request) error</a></dd>
+			
+				
+				<dd><a href="index.html#CloseStreams">func CloseStreams(streams ...interface{})</a></dd>
+			
+				
+				<dd><a href="index.html#GetHTTPErrorStatusCode">func GetHTTPErrorStatusCode(err error) int</a></dd>
+			
+				
+				<dd><a href="index.html#HijackConnection">func HijackConnection(w http.ResponseWriter) (io.ReadCloser, io.Writer, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Int64ValueOrDefault">func Int64ValueOrDefault(r *http.Request, field string, def int64) (int64, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Int64ValueOrZero">func Int64ValueOrZero(r *http.Request, k string) int64</a></dd>
+			
+				
+				<dd><a href="index.html#MakeErrorHandler">func MakeErrorHandler(err error) http.HandlerFunc</a></dd>
+			
+				
+				<dd><a href="index.html#ParseForm">func ParseForm(r *http.Request) error</a></dd>
+			
+				
+				<dd><a href="index.html#VersionFromContext">func VersionFromContext(ctx context.Context) string</a></dd>
+			
+				
+				<dd><a href="index.html#WriteJSON">func WriteJSON(w http.ResponseWriter, code int, v interface{}) error</a></dd>
+			
+				
+				<dd><a href="index.html#WriteLogStream">func WriteLogStream(_ context.Context, w io.Writer, msgs &lt;-chan *backend.LogMessage, config *types.ContainerLogsOptions, mux bool)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#APIFunc">type APIFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#APIVersionKey">type APIVersionKey</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ArchiveOptions">type ArchiveOptions</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ArchiveFormValues">func ArchiveFormValues(r *http.Request, vars map[string]string) (ArchiveOptions, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerDecoder">type ContainerDecoder</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/decoder.go">decoder.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/errors_deprecated.go">errors_deprecated.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/form.go">form.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go">httputils.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils_write_json.go">httputils_write_json.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/write_log_stream.go">write_log_stream.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="BoolValue">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/form.go?s=202:248#L1">BoolValue</a>
+				<a class="permalink" href="index.html#BoolValue">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#BoolValue">BoolValue</a>(r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, k <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+BoolValue transforms a form value in different formats into a boolean type.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="BoolValueOrDefault">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/form.go?s=522:585#L7">BoolValueOrDefault</a>
+				<a class="permalink" href="index.html#BoolValueOrDefault">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#BoolValueOrDefault">BoolValueOrDefault</a>(r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, k <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, d <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+BoolValueOrDefault returns the default bool passed if the query param is
+missing, otherwise it&#39;s just a proxy to boolValue above.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CheckForJSON">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=1560:1600#L42">CheckForJSON</a>
+				<a class="permalink" href="index.html#CheckForJSON">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CheckForJSON">CheckForJSON</a>(r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CheckForJSON makes sure that the request&#39;s Content-Type is application/json.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CloseStreams">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=1232:1273#L29">CloseStreams</a>
+				<a class="permalink" href="index.html#CloseStreams">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CloseStreams">CloseStreams</a>(streams ...interface{})</pre>
+			<p>
+CloseStreams ensures that a list for http streams are properly closed.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetHTTPErrorStatusCode">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/errors_deprecated.go?s=240:282#L1">GetHTTPErrorStatusCode</a>
+				<a class="permalink" href="index.html#GetHTTPErrorStatusCode">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetHTTPErrorStatusCode">GetHTTPErrorStatusCode</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+			<p>
+GetHTTPErrorStatusCode retrieves status code from error message.
+</p>
+<p>
+Deprecated: use errdefs.GetHTTPErrorStatusCode
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="HijackConnection">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=877:955#L18">HijackConnection</a>
+				<a class="permalink" href="index.html#HijackConnection">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#HijackConnection">HijackConnection</a>(w <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+HijackConnection interrupts the http response writer to get the
+underlying connection and operate with it.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Int64ValueOrDefault">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/form.go?s=1057:1138#L26">Int64ValueOrDefault</a>
+				<a class="permalink" href="index.html#Int64ValueOrDefault">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Int64ValueOrDefault">Int64ValueOrDefault</a>(r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, field <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, def <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Int64ValueOrDefault parses a form value into an int64 type. If there is an
+error, returns the error. If there is no value returns the default value.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Int64ValueOrZero">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/form.go?s=757:811#L16">Int64ValueOrZero</a>
+				<a class="permalink" href="index.html#Int64ValueOrZero">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Int64ValueOrZero">Int64ValueOrZero</a>(r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, k <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a></pre>
+			<p>
+Int64ValueOrZero parses a form value into an int64 type.
+It returns 0 if the parsing fails.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeErrorHandler">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=2812:2861#L87">MakeErrorHandler</a>
+				<a class="permalink" href="index.html#MakeErrorHandler">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeErrorHandler">MakeErrorHandler</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#HandlerFunc">HandlerFunc</a></pre>
+			<p>
+MakeErrorHandler makes an HTTP handler that decodes a Docker error and
+returns it in the response.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseForm">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=2164:2201#L61">ParseForm</a>
+				<a class="permalink" href="index.html#ParseForm">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseForm">ParseForm</a>(r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ParseForm ensures the request form is parsed even with invalid content types.
+If we don&#39;t do this, POST method without Content-type (even with empty body) will fail.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="VersionFromContext">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=2528:2579#L73">VersionFromContext</a>
+				<a class="permalink" href="index.html#VersionFromContext">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#VersionFromContext">VersionFromContext</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+VersionFromContext returns an API version from the context using APIVersionKey.
+It panics if the context value does not have version.Version type.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WriteJSON">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils_write_json.go?s=215:283#L1">WriteJSON</a>
+				<a class="permalink" href="index.html#WriteJSON">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WriteJSON">WriteJSON</a>(w <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>, code <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, v interface{}) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+WriteJSON writes the value v to the http response stream as json with standard json encoding.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WriteLogStream">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/write_log_stream.go?s=490:620#L9">WriteLogStream</a>
+				<a class="permalink" href="index.html#WriteLogStream">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WriteLogStream">WriteLogStream</a>(_ <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, w <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, msgs &lt;-chan *<a href="../../types/backend/index.html">backend</a>.<a href="../../types/backend/index.html#LogMessage">LogMessage</a>, config *<a href="../../types/index.html">types</a>.<a href="../../types/index.html#ContainerLogsOptions">ContainerLogsOptions</a>, mux <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+WriteLogStream writes an encoded byte stream of log messages from the
+messages channel, multiplexing them with a stdcopy.Writer if mux is true
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="APIFunc">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=654:762#L14">APIFunc</a>
+				<a class="permalink" href="index.html#APIFunc">&#xb6;</a>
+			</h2>
+			<p>
+APIFunc is an adapter to allow the use of ordinary functions as Docker API endpoints.
+Any function that has the appropriate signature can be registered as an API endpoint (e.g. getVersion).
+</p>
+
+			<pre>type APIFunc func(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, w <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#ResponseWriter">ResponseWriter</a>, r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, vars map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="APIVersionKey">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/httputils.go?s=429:456#L10">APIVersionKey</a>
+				<a class="permalink" href="index.html#APIVersionKey">&#xb6;</a>
+			</h2>
+			<p>
+APIVersionKey is the client&#39;s requested API version.
+</p>
+
+			<pre>type APIVersionKey struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ArchiveOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/form.go?s=1345:1401#L35">ArchiveOptions</a>
+				<a class="permalink" href="index.html#ArchiveOptions">&#xb6;</a>
+			</h2>
+			<p>
+ArchiveOptions stores archive information for different operations.
+</p>
+
+			<pre>type ArchiveOptions struct {
+<span id="ArchiveOptions.Name"></span>    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ArchiveOptions.Path"></span>    Path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="ArchiveFormValues">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/form.go?s=1746:1833#L52">ArchiveFormValues</a>
+					<a class="permalink" href="index.html#ArchiveFormValues">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#ArchiveFormValues">ArchiveFormValues</a>(r *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Request">Request</a>, vars map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#ArchiveOptions">ArchiveOptions</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ArchiveFormValues parses form values and turns them into ArchiveOptions.
+It fails if the archive name and path are not in the request.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerDecoder">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/server/httputils/decoder.go?s=286:491#L3">ContainerDecoder</a>
+				<a class="permalink" href="index.html#ContainerDecoder">&#xb6;</a>
+			</h2>
+			<p>
+ContainerDecoder specifies how
+to translate an io.Reader into
+container configuration.
+</p>
+
+			<pre>type ContainerDecoder interface {
+    DecodeConfig(src <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (*<a href="../../types/container/index.html">container</a>.<a href="../../types/container/index.html#Config">Config</a>, *<a href="../../types/container/index.html">container</a>.<a href="../../types/container/index.html#HostConfig">HostConfig</a>, *<a href="../../types/network/index.html">network</a>.<a href="../../types/network/index.html#NetworkingConfig">NetworkingConfig</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    DecodeHostConfig(src <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (*<a href="../../types/container/index.html">container</a>.<a href="../../types/container/index.html#HostConfig">HostConfig</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>service - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package service</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/volume/service"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#IsInUse">func IsInUse(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsNameConflict">func IsNameConflict(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsNotExist">func IsNotExist(err error) bool</a></dd>
+			
+			
+				
+				<dd><a href="index.html#By">type By</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#And">func And(bys ...By) By</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ByDriver">func ByDriver(drivers ...string) By</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FromList">func FromList(ls *[]volume.Volume, by By) By</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Or">func Or(bys ...By) By</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ByReferenced">type ByReferenced</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CustomFilter">type CustomFilter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#OpErr">type OpErr</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#OpErr.Cause">func (e *OpErr) Cause() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#OpErr.Error">func (e *OpErr) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#VolumeStore">type VolumeStore</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewStore">func NewStore(rootPath string, drivers *drivers.Store) (*VolumeStore, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumeStore.CountReferences">func (s *VolumeStore) CountReferences(v volume.Volume) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumeStore.Create">func (s *VolumeStore) Create(ctx context.Context, name, driverName string, createOpts ...opts.CreateOption) (volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumeStore.Find">func (s *VolumeStore) Find(ctx context.Context, by By) (vols []volume.Volume, warnings []string, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumeStore.Get">func (s *VolumeStore) Get(ctx context.Context, name string, getOptions ...opts.GetOption) (volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumeStore.Release">func (s *VolumeStore) Release(ctx context.Context, name string, ref string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumeStore.Remove">func (s *VolumeStore) Remove(ctx context.Context, v volume.Volume, rmOpts ...opts.RemoveOption) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumeStore.Shutdown">func (s *VolumeStore) Shutdown() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#VolumesService">type VolumesService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewVolumeService">func NewVolumeService(root string, pg plugingetter.PluginGetter, rootIDs idtools.Identity, logger volumeEventLogger) (*VolumesService, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Create">func (s *VolumesService) Create(ctx context.Context, name, driverName string, opts ...opts.CreateOption) (*types.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Get">func (s *VolumesService) Get(ctx context.Context, name string, getOpts ...opts.GetOption) (*types.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.GetDriverList">func (s *VolumesService) GetDriverList() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.List">func (s *VolumesService) List(ctx context.Context, filter filters.Args) (volumesOut []*types.Volume, warnings []string, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.LocalVolumesSize">func (s *VolumesService) LocalVolumesSize(ctx context.Context) ([]*types.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Mount">func (s *VolumesService) Mount(ctx context.Context, vol *types.Volume, ref string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Prune">func (s *VolumesService) Prune(ctx context.Context, filter filters.Args) (*types.VolumesPruneReport, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Release">func (s *VolumesService) Release(ctx context.Context, name string, ref string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Remove">func (s *VolumesService) Remove(ctx context.Context, name string, rmOpts ...opts.RemoveOption) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Shutdown">func (s *VolumesService) Shutdown() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#VolumesService.Unmount">func (s *VolumesService) Unmount(ctx context.Context, vol *types.Volume, ref string) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go">by.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/convert.go">convert.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/db.go">db.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/default_driver.go">default_driver.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/errors.go">errors.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/restore.go">restore.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go">service.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go">store.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store_unix.go">store_unix.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="IsInUse">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/errors.go?s=1872:1900#L59">IsInUse</a>
+				<a class="permalink" href="index.html#IsInUse">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsInUse">IsInUse</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsInUse returns a boolean indicating whether the error indicates that a
+volume is in use
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsNameConflict">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/errors.go?s=2230:2265#L70">IsNameConflict</a>
+				<a class="permalink" href="index.html#IsNameConflict">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsNameConflict">IsNameConflict</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsNameConflict returns a boolean indicating whether the error indicates that a
+volume name is already taken
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsNotExist">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/errors.go?s=2043:2074#L64">IsNotExist</a>
+				<a class="permalink" href="index.html#IsNotExist">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsNotExist">IsNotExist</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsNotExist returns a boolean indicating whether the error indicates that the volume does not exist
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="By">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go?s=233:262#L1">By</a>
+				<a class="permalink" href="index.html#By">&#xb6;</a>
+			</h2>
+			<p>
+By is an interface which is used to implement filtering on volumes.
+</p>
+
+			<pre>type By interface {
+    <span class="comment">// contains filtered or unexported methods</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="And">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go?s=663:685#L18">And</a>
+					<a class="permalink" href="index.html#And">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#And">And</a>(bys ...<a href="index.html#By">By</a>) <a href="index.html#By">By</a></pre>
+				<p>
+And creates a `By` combining all the passed in bys using AND logic.
+</p>
+
+				
+				
+			
+				
+				<h3 id="ByDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go?s=342:377#L4">ByDriver</a>
+					<a class="permalink" href="index.html#ByDriver">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#ByDriver">ByDriver</a>(drivers ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#By">By</a></pre>
+				<p>
+ByDriver is `By` that filters based on the driver names that are passed in
+</p>
+
+				
+				
+			
+				
+				<h3 id="FromList">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go?s=1326:1370#L50">FromList</a>
+					<a class="permalink" href="index.html#FromList">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#FromList">FromList</a>(ls *[]<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, by <a href="index.html#By">By</a>) <a href="index.html#By">By</a></pre>
+				<p>
+FromList returns a By which sets the initial list of volumes to use
+</p>
+
+				
+				
+			
+				
+				<h3 id="Or">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go?s=923:944#L31">Or</a>
+					<a class="permalink" href="index.html#Or">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#Or">Or</a>(bys ...<a href="index.html#By">By</a>) <a href="index.html#By">By</a></pre>
+				<p>
+Or creates a `By` combining all the passed in bys using OR logic.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ByReferenced">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go?s=537:559#L13">ByReferenced</a>
+				<a class="permalink" href="index.html#ByReferenced">&#xb6;</a>
+			</h2>
+			<p>
+ByReferenced is a `By` that filters based on if the volume has references
+</p>
+
+			<pre>type ByReferenced <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CustomFilter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/by.go?s=1194:1222#L45">CustomFilter</a>
+				<a class="permalink" href="index.html#CustomFilter">&#xb6;</a>
+			</h2>
+			<p>
+CustomFilter is a `By` that is used by callers to provide custom filtering
+logic.
+</p>
+
+			<pre>type CustomFilter filterFunc</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="OpErr">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/errors.go?s=991:1373#L24">OpErr</a>
+				<a class="permalink" href="index.html#OpErr">&#xb6;</a>
+			</h2>
+			<p>
+OpErr is the error type returned by functions in the store package. It describes
+the operation, volume name, and error.
+</p>
+
+			<pre>type OpErr struct {
+<span id="OpErr.Err"></span>    <span class="comment">// Err is the error that occurred during the operation.</span>
+    Err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+<span id="OpErr.Op"></span>    <span class="comment">// Op is the operation which caused the error, such as &#34;create&#34;, or &#34;list&#34;.</span>
+    Op <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="OpErr.Name"></span>    <span class="comment">// Name is the name of the resource being requested for this op, typically the volume name or the driver name.</span>
+    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="OpErr.Refs"></span>    <span class="comment">// Refs is the list of references associated with the resource.</span>
+    Refs []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="OpErr.Cause">func (*OpErr) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/errors.go?s=1728:1757#L53">Cause</a>
+					<a class="permalink" href="index.html#OpErr.Cause">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#OpErr">OpErr</a>) <a href="index.html#Cause">Cause</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Cause returns the error the caused this error
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OpErr.Error">func (*OpErr) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/errors.go?s=1429:1459#L36">Error</a>
+					<a class="permalink" href="index.html#OpErr.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#OpErr">OpErr</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Error satisfies the built-in error interface type.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="VolumeStore">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=4395:5292#L176">VolumeStore</a>
+				<a class="permalink" href="index.html#VolumeStore">&#xb6;</a>
+			</h2>
+			<p>
+VolumeStore is responsible for storing and reference counting volumes.
+</p>
+
+			<pre>type VolumeStore struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=1378:1454#L63">NewStore</a>
+					<a class="permalink" href="index.html#NewStore">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewStore">NewStore</a>(rootPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, drivers *<a href="../drivers/index.html">drivers</a>.<a href="../drivers/index.html#Store">Store</a>) (*<a href="index.html#VolumeStore">VolumeStore</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewStore creates a new volume store at the given path
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="VolumeStore.CountReferences">func (*VolumeStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=23145:23203#L825">CountReferences</a>
+					<a class="permalink" href="index.html#VolumeStore.CountReferences">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumeStore">VolumeStore</a>) <a href="index.html#CountReferences">CountReferences</a>(v <a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+CountReferences gives a count of all references for a given volume.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumeStore.Create">func (*VolumeStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=11690:11820#L442">Create</a>
+					<a class="permalink" href="index.html#VolumeStore.Create">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumeStore">VolumeStore</a>) <a href="index.html#Create">Create</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name, driverName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, createOpts ...<a href="opts/index.html">opts</a>.<a href="opts/index.html#CreateOption">CreateOption</a>) (<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Create creates a volume with the given name and driver
+If the volume needs to be created with a reference to prevent race conditions
+with volume cleanup, make sure to use the `CreateWithReference` option.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumeStore.Find">func (*VolumeStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=8141:8248#L311">Find</a>
+					<a class="permalink" href="index.html#VolumeStore.Find">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumeStore">VolumeStore</a>) <a href="index.html#Find">Find</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, by <a href="index.html#By">By</a>) (vols []<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, warnings []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Find lists volumes filtered by the past in filter.
+If a driver returns a volume that has name which conflicts with another volume from a different driver,
+the first volume is chosen and the conflicting volume is dropped.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumeStore.Get">func (*VolumeStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=17623:17735#L617">Get</a>
+					<a class="permalink" href="index.html#VolumeStore.Get">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumeStore">VolumeStore</a>) <a href="index.html#Get">Get</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, getOptions ...<a href="opts/index.html">opts</a>.<a href="opts/index.html#GetOption">GetOption</a>) (<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get looks if a volume with the given name exists and returns it if so
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumeStore.Release">func (*VolumeStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=22693:22774#L800">Release</a>
+					<a class="permalink" href="index.html#VolumeStore.Release">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumeStore">VolumeStore</a>) <a href="index.html#Release">Release</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, ref <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Release releases the specified reference to the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumeStore.Remove">func (*VolumeStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=21676:21777#L753">Remove</a>
+					<a class="permalink" href="index.html#VolumeStore.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumeStore">VolumeStore</a>) <a href="index.html#Remove">Remove</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, v <a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, rmOpts ...<a href="opts/index.html">opts</a>.<a href="opts/index.html#RemoveOption">RemoveOption</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Remove removes the requested volume. A volume is not removed if it has any refs
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumeStore.Shutdown">func (*VolumeStore) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/store.go?s=23619:23657#L846">Shutdown</a>
+					<a class="permalink" href="index.html#VolumeStore.Shutdown">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumeStore">VolumeStore</a>) <a href="index.html#Shutdown">Shutdown</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Shutdown releases all resources used by the volume store
+It does not make any changes to volumes, drivers, etc.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="VolumesService">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=870:996#L21">VolumesService</a>
+				<a class="permalink" href="index.html#VolumesService">&#xb6;</a>
+			</h2>
+			<p>
+VolumesService manages access to volumes
+This is used as the main access point for volumes to higher level services and the API.
+</p>
+
+			<pre>type VolumesService struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewVolumeService">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=1047:1188#L29">NewVolumeService</a>
+					<a class="permalink" href="index.html#NewVolumeService">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewVolumeService">NewVolumeService</a>(root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, pg <a href="../../pkg/plugingetter/index.html">plugingetter</a>.<a href="../../pkg/plugingetter/index.html#PluginGetter">PluginGetter</a>, rootIDs <a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#Identity">Identity</a>, logger volumeEventLogger) (*<a href="index.html#VolumesService">VolumesService</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewVolumeService creates a new volume service
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="VolumesService.Create">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=1988:2115#L54">Create</a>
+					<a class="permalink" href="index.html#VolumesService.Create">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Create">Create</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name, driverName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts ...<a href="opts/index.html">opts</a>.<a href="opts/index.html#CreateOption">CreateOption</a>) (*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Create creates a volume
+If the caller is creating this volume to be consumed immediately, it is
+expected that the caller specifies a reference ID.
+This reference ID will protect this volume from removal.
+</p>
+<p>
+A good example for a reference ID is a container&#39;s ID.
+When whatever is going to reference this volume is removed the caller should defeference the volume by calling `Release`.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.Get">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=2452:2564#L69">Get</a>
+					<a class="permalink" href="index.html#VolumesService.Get">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Get">Get</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, getOpts ...<a href="opts/index.html">opts</a>.<a href="opts/index.html#GetOption">GetOption</a>) (*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get returns details about a volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.GetDriverList">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=1502:1551#L43">GetDriverList</a>
+					<a class="permalink" href="index.html#VolumesService.GetDriverList">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#GetDriverList">GetDriverList</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetDriverList gets the list of registered volume drivers
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.List">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=7292:7422#L236">List</a>
+					<a class="permalink" href="index.html#VolumesService.List">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#List">List</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, filter <a href="../../api/types/filters/index.html">filters</a>.<a href="../../api/types/filters/index.html#Args">Args</a>) (volumesOut []*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Volume">Volume</a>, warnings []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+List gets the list of volumes which match the past in filters
+If filters is nil or empty all volumes are returned.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.LocalVolumesSize">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=5262:5349#L176">LocalVolumesSize</a>
+					<a class="permalink" href="index.html#VolumesService.LocalVolumesSize">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#LocalVolumesSize">LocalVolumesSize</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) ([]*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+LocalVolumesSize gets all local volumes and fetches their size on disk
+Note that this intentionally skips volumes which have mount options. Typically
+volumes with mount options are not really local even if they are using the
+local driver.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.Mount">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=3039:3137#L96">Mount</a>
+					<a class="permalink" href="index.html#VolumesService.Mount">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Mount">Mount</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, vol *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Volume">Volume</a>, ref <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Mount mounts the volume
+Callers should specify a uniqe reference for each Mount/Unmount pair.
+</p>
+<p>
+Example:
+&ldquo;`go
+mountID := &#34;randomString&#34;
+s.Mount(ctx, vol, mountID)
+s.Unmount(ctx, vol, mountID)
+&ldquo;`
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.Prune">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=5834:5941#L190">Prune</a>
+					<a class="permalink" href="index.html#VolumesService.Prune">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Prune">Prune</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, filter <a href="../../api/types/filters/index.html">filters</a>.<a href="../../api/types/filters/index.html#Args">Args</a>) (*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#VolumesPruneReport">VolumesPruneReport</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Prune removes (local) volumes which match the past in filter arguments.
+Note that this intentionally skips volumes with mount options as there would
+be no space reclaimed in this case.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.Release">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=3972:4056#L125">Release</a>
+					<a class="permalink" href="index.html#VolumesService.Release">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Release">Release</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, ref <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Release releases a volume reference
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.Remove">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=4185:4285#L131">Remove</a>
+					<a class="permalink" href="index.html#VolumesService.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Remove">Remove</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, rmOpts ...<a href="opts/index.html">opts</a>.<a href="opts/index.html#RemoveOption">RemoveOption</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Remove removes a volume
+An error is returned if the volume is still referenced.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.Shutdown">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=7746:7787#L251">Shutdown</a>
+					<a class="permalink" href="index.html#VolumesService.Shutdown">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Shutdown">Shutdown</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Shutdown shuts down the image service and dependencies
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="VolumesService.Unmount">func (*VolumesService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/service/service.go?s=3656:3746#L113">Unmount</a>
+					<a class="permalink" href="index.html#VolumesService.Unmount">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#VolumesService">VolumesService</a>) <a href="index.html#Unmount">Unmount</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, vol *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Volume">Volume</a>, ref <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Unmount unmounts the volume.
+Note that depending on the implementation, the volume may still be mounted due to other resources using it.
+</p>
+<p>
+The reference specified here should be the same reference specified during `Mount` and should be
+unique for each mount/unmount pair.
+See `Mount` documentation for an example.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="opts/index.html">opts</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

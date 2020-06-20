@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>devicemapper - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package devicemapper</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/devicemapper"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ActivateDevice">func ActivateDevice(poolName string, name string, deviceID int, size uint64) error</a></dd>
+			
+				
+				<dd><a href="index.html#ActivateDeviceWithExternal">func ActivateDeviceWithExternal(poolName string, name string, deviceID int, size uint64, external string) error</a></dd>
+			
+				
+				<dd><a href="index.html#BlockDeviceDiscard">func BlockDeviceDiscard(path string) error</a></dd>
+			
+				
+				<dd><a href="index.html#CancelDeferredRemove">func CancelDeferredRemove(deviceName string) error</a></dd>
+			
+				
+				<dd><a href="index.html#CookieSupported">func CookieSupported() bool</a></dd>
+			
+				
+				<dd><a href="index.html#CreateDevice">func CreateDevice(poolName string, deviceID int) error</a></dd>
+			
+				
+				<dd><a href="index.html#CreatePool">func CreatePool(poolName string, dataFile, metadataFile *os.File, poolBlockSize uint32) error</a></dd>
+			
+				
+				<dd><a href="index.html#CreateSnapDevice">func CreateSnapDevice(poolName string, deviceID int, baseName string, baseDeviceID int) error</a></dd>
+			
+				
+				<dd><a href="index.html#CreateSnapDeviceRaw">func CreateSnapDeviceRaw(poolName string, deviceID int, baseDeviceID int) error</a></dd>
+			
+				
+				<dd><a href="index.html#DeleteDevice">func DeleteDevice(poolName string, deviceID int) error</a></dd>
+			
+				
+				<dd><a href="index.html#DeviceIDExists">func DeviceIDExists(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#DevmapperLogCallback">func DevmapperLogCallback(level C.int, file *C.char, line, dmErrnoOrClass C.int, message *C.char)</a></dd>
+			
+				
+				<dd><a href="index.html#GetBlockDeviceSize">func GetBlockDeviceSize(file *os.File) (uint64, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetDriverVersion">func GetDriverVersion() (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetLibraryVersion">func GetLibraryVersion() (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetStatus">func GetStatus(name string) (uint64, uint64, string, string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#GetTable">func GetTable(name string) (uint64, uint64, string, string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#LogInit">func LogInit(logger DevmapperLogger)</a></dd>
+			
+				
+				<dd><a href="index.html#ReloadPool">func ReloadPool(poolName string, dataFile, metadataFile *os.File, poolBlockSize uint32) error</a></dd>
+			
+				
+				<dd><a href="index.html#RemoveDevice">func RemoveDevice(name string) error</a></dd>
+			
+				
+				<dd><a href="index.html#RemoveDeviceDeferred">func RemoveDeviceDeferred(name string) error</a></dd>
+			
+				
+				<dd><a href="index.html#ResumeDevice">func ResumeDevice(name string) error</a></dd>
+			
+				
+				<dd><a href="index.html#SetDevDir">func SetDevDir(dir string) error</a></dd>
+			
+				
+				<dd><a href="index.html#SetTransactionID">func SetTransactionID(poolName string, oldID uint64, newID uint64) error</a></dd>
+			
+				
+				<dd><a href="index.html#SuspendDevice">func SuspendDevice(name string) error</a></dd>
+			
+				
+				<dd><a href="index.html#UdevSetSyncSupport">func UdevSetSyncSupport(enable bool) bool</a></dd>
+			
+				
+				<dd><a href="index.html#UdevSyncSupported">func UdevSyncSupported() bool</a></dd>
+			
+				
+				<dd><a href="index.html#UdevWait">func UdevWait(cookie *uint) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AddNodeType">type AddNodeType</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DefaultLogger">type DefaultLogger</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultLogger.DMLog">func (l DefaultLogger) DMLog(level int, file string, line, dmError int, message string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Deps">type Deps</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetDeps">func GetDeps(name string) (*Deps, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DevmapperLogger">type DevmapperLogger</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Info">type Info</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetInfo">func GetInfo(name string) (*Info, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetInfoWithDeferred">func GetInfoWithDeferred(name string) (*Info, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Task">type Task</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TaskCreate">func TaskCreate(tasktype TaskType) *Task</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#TaskCreateNamed">func TaskCreateNamed(t TaskType, name string) (*Task, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TaskType">type TaskType</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go">devmapper.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_log.go">devmapper_log.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_wrapper.go">devmapper_wrapper.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_wrapper_dynamic.go">devmapper_wrapper_dynamic.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_wrapper_dynamic_deferred_remove.go">devmapper_wrapper_dynamic_deferred_remove.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/ioctl.go">ioctl.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/log.go">log.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+IOCTL consts
+</p>
+
+				<pre>const (
+    <span id="BlkGetSize64">BlkGetSize64</span> = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#BLKGETSIZE64">BLKGETSIZE64</a>
+    <span id="BlkDiscard">BlkDiscard</span>   = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#BLKDISCARD">BLKDISCARD</a>
+)</pre>
+			
+				<p>
+Devicemapper cookie flags.
+</p>
+
+				<pre>const (
+    <span id="DmUdevDisableSubsystemRulesFlag">DmUdevDisableSubsystemRulesFlag</span> = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#DM_UDEV_DISABLE_SUBSYSTEM_RULES_FLAG">DM_UDEV_DISABLE_SUBSYSTEM_RULES_FLAG</a>
+    <span id="DmUdevDisableDiskRulesFlag">DmUdevDisableDiskRulesFlag</span>      = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#DM_UDEV_DISABLE_DISK_RULES_FLAG">DM_UDEV_DISABLE_DISK_RULES_FLAG</a>
+    <span id="DmUdevDisableOtherRulesFlag">DmUdevDisableOtherRulesFlag</span>     = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#DM_UDEV_DISABLE_OTHER_RULES_FLAG">DM_UDEV_DISABLE_OTHER_RULES_FLAG</a>
+    <span id="DmUdevDisableLibraryFallback">DmUdevDisableLibraryFallback</span>    = <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#DM_UDEV_DISABLE_LIBRARY_FALLBACK">DM_UDEV_DISABLE_LIBRARY_FALLBACK</a>
+)</pre>
+			
+				<p>
+definitions from lvm2 lib/log/log.h
+</p>
+
+				<pre>const (
+    <span id="LogLevelFatal">LogLevelFatal</span>  = 2 + <a href="http://127.0.0.1:8080/pkg/builtin/#iota">iota</a> <span class="comment">// _LOG_FATAL</span>
+    <span id="LogLevelErr">LogLevelErr</span>               <span class="comment">// _LOG_ERR</span>
+    <span id="LogLevelWarn">LogLevelWarn</span>              <span class="comment">// _LOG_WARN</span>
+    <span id="LogLevelNotice">LogLevelNotice</span>            <span class="comment">// _LOG_NOTICE</span>
+    <span id="LogLevelInfo">LogLevelInfo</span>              <span class="comment">// _LOG_INFO</span>
+    <span id="LogLevelDebug">LogLevelDebug</span>             <span class="comment">// _LOG_DEBUG</span>
+)</pre>
+			
+				<p>
+LibraryDeferredRemovalSupport tells if the feature is supported by the
+current Docker invocation.
+</p>
+
+				<pre>const <span id="LibraryDeferredRemovalSupport">LibraryDeferredRemovalSupport</span> = <a href="http://127.0.0.1:8080/pkg/builtin/#true">true</a></pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+List of errors returned when using devicemapper.
+</p>
+
+				<pre>var (
+    <span id="ErrTaskRun">ErrTaskRun</span>              = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_run failed&#34;)
+    <span id="ErrTaskSetName">ErrTaskSetName</span>          = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_set_name failed&#34;)
+    <span id="ErrTaskSetMessage">ErrTaskSetMessage</span>       = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_set_message failed&#34;)
+    <span id="ErrTaskSetAddNode">ErrTaskSetAddNode</span>       = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_set_add_node failed&#34;)
+    <span id="ErrTaskSetRo">ErrTaskSetRo</span>            = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_set_ro failed&#34;)
+    <span id="ErrTaskAddTarget">ErrTaskAddTarget</span>        = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_add_target failed&#34;)
+    <span id="ErrTaskSetSector">ErrTaskSetSector</span>        = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_set_sector failed&#34;)
+    <span id="ErrTaskGetDeps">ErrTaskGetDeps</span>          = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_get_deps failed&#34;)
+    <span id="ErrTaskGetInfo">ErrTaskGetInfo</span>          = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_get_info failed&#34;)
+    <span id="ErrTaskGetDriverVersion">ErrTaskGetDriverVersion</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_get_driver_version failed&#34;)
+    <span id="ErrTaskDeferredRemove">ErrTaskDeferredRemove</span>   = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_deferred_remove failed&#34;)
+    <span id="ErrTaskSetCookie">ErrTaskSetCookie</span>        = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_task_set_cookie failed&#34;)
+    <span id="ErrNilCookie">ErrNilCookie</span>            = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;cookie ptr can&#39;t be nil&#34;)
+    <span id="ErrGetBlockSize">ErrGetBlockSize</span>         = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Can&#39;t get block size&#34;)
+    <span id="ErrUdevWait">ErrUdevWait</span>             = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;wait on udev cookie failed&#34;)
+    <span id="ErrSetDevDir">ErrSetDevDir</span>            = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_set_dev_dir failed&#34;)
+    <span id="ErrGetLibraryVersion">ErrGetLibraryVersion</span>    = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;dm_get_library_version failed&#34;)
+    <span id="ErrCreateRemoveTask">ErrCreateRemoveTask</span>     = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Can&#39;t create task of type deviceRemove&#34;)
+    <span id="ErrRunRemoveDevice">ErrRunRemoveDevice</span>      = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;running RemoveDevice failed&#34;)
+    <span id="ErrInvalidAddNode">ErrInvalidAddNode</span>       = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Invalid AddNode type&#34;)
+    <span id="ErrBusy">ErrBusy</span>                 = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Device is Busy&#34;)
+    <span id="ErrDeviceIDExists">ErrDeviceIDExists</span>       = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Device Id Exists&#34;)
+    <span id="ErrEnxio">ErrEnxio</span>                = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;No such device or address&#34;)
+    <span id="ErrEnoData">ErrEnoData</span>              = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;No data available&#34;)
+)</pre>
+			
+				<p>
+DeviceMapper mapped functions.
+</p>
+
+				<pre>var (
+    <span id="DmGetLibraryVersion">DmGetLibraryVersion</span>       = dmGetLibraryVersionFct
+    <span id="DmGetNextTarget">DmGetNextTarget</span>           = dmGetNextTargetFct
+    <span id="DmSetDevDir">DmSetDevDir</span>               = dmSetDevDirFct
+    <span id="DmTaskAddTarget">DmTaskAddTarget</span>           = dmTaskAddTargetFct
+    <span id="DmTaskCreate">DmTaskCreate</span>              = dmTaskCreateFct
+    <span id="DmTaskDestroy">DmTaskDestroy</span>             = dmTaskDestroyFct
+    <span id="DmTaskGetDeps">DmTaskGetDeps</span>             = dmTaskGetDepsFct
+    <span id="DmTaskGetInfo">DmTaskGetInfo</span>             = dmTaskGetInfoFct
+    <span id="DmTaskGetDriverVersion">DmTaskGetDriverVersion</span>    = dmTaskGetDriverVersionFct
+    <span id="DmTaskRun">DmTaskRun</span>                 = dmTaskRunFct
+    <span id="DmTaskSetAddNode">DmTaskSetAddNode</span>          = dmTaskSetAddNodeFct
+    <span id="DmTaskSetCookie">DmTaskSetCookie</span>           = dmTaskSetCookieFct
+    <span id="DmTaskSetMessage">DmTaskSetMessage</span>          = dmTaskSetMessageFct
+    <span id="DmTaskSetName">DmTaskSetName</span>             = dmTaskSetNameFct
+    <span id="DmTaskSetRo">DmTaskSetRo</span>               = dmTaskSetRoFct
+    <span id="DmTaskSetSector">DmTaskSetSector</span>           = dmTaskSetSectorFct
+    <span id="DmUdevWait">DmUdevWait</span>                = dmUdevWaitFct
+    <span id="DmUdevSetSyncSupport">DmUdevSetSyncSupport</span>      = dmUdevSetSyncSupportFct
+    <span id="DmUdevGetSyncSupport">DmUdevGetSyncSupport</span>      = dmUdevGetSyncSupportFct
+    <span id="DmCookieSupported">DmCookieSupported</span>         = dmCookieSupportedFct
+    <span id="LogWithErrnoInit">LogWithErrnoInit</span>          = logWithErrnoInitFct
+    <span id="DmTaskDeferredRemove">DmTaskDeferredRemove</span>      = dmTaskDeferredRemoveFct
+    <span id="DmTaskGetInfoWithDeferred">DmTaskGetInfoWithDeferred</span> = dmTaskGetInfoWithDeferredFct
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="ActivateDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=21215:21297#L719">ActivateDevice</a>
+				<a class="permalink" href="index.html#ActivateDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ActivateDevice">ActivateDevice</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, deviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, size <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ActivateDevice activates the device identified by the specified
+poolName, name and deviceID with the specified size.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ActivateDeviceWithExternal">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=21497:21608#L725">ActivateDeviceWithExternal</a>
+				<a class="permalink" href="index.html#ActivateDeviceWithExternal">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ActivateDeviceWithExternal">ActivateDeviceWithExternal</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, deviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, size <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, external <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ActivateDeviceWithExternal activates the device identified by the specified
+poolName, name and deviceID with the specified size.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="BlockDeviceDiscard">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=12053:12095#L417">BlockDeviceDiscard</a>
+				<a class="permalink" href="index.html#BlockDeviceDiscard">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#BlockDeviceDiscard">BlockDeviceDiscard</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+BlockDeviceDiscard runs discard for the given path.
+This is used as a workaround for the kernel not discarding block so
+on the thin pool when we remove a thinp device, so we do it
+manually
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CancelDeferredRemove">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=10811:10861#L374">CancelDeferredRemove</a>
+				<a class="permalink" href="index.html#CancelDeferredRemove">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CancelDeferredRemove">CancelDeferredRemove</a>(deviceName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CancelDeferredRemove cancels a deferred remove for a device.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CookieSupported">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=8340:8367#L297">CookieSupported</a>
+				<a class="permalink" href="index.html#CookieSupported">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CookieSupported">CookieSupported</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+CookieSupported returns whether the version of device-mapper supports the
+use of cookie&#39;s in the tasks.
+This is largely a lower level call that other functions use.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=19432:19486#L659">CreateDevice</a>
+				<a class="permalink" href="index.html#CreateDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CreateDevice">CreateDevice</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, deviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CreateDevice creates a device with the specified poolName with the specified device id.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreatePool">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=12633:12726#L442">CreatePool</a>
+				<a class="permalink" href="index.html#CreatePool">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CreatePool">CreatePool</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, dataFile, metadataFile *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a>, poolBlockSize <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CreatePool is the programmatic example of &#34;dmsetup create&#34;.
+It creates a device with the specified poolName, data and metadata file and block size.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateSnapDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=23623:23716#L790">CreateSnapDevice</a>
+				<a class="permalink" href="index.html#CreateSnapDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CreateSnapDevice">CreateSnapDevice</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, deviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, baseName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, baseDeviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CreateSnapDevice creates a snapshot based on the device identified by the baseName and baseDeviceId,
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateSnapDeviceRaw">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=22722:22801#L763">CreateSnapDeviceRaw</a>
+				<a class="permalink" href="index.html#CreateSnapDeviceRaw">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CreateSnapDeviceRaw">CreateSnapDeviceRaw</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, deviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, baseDeviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+CreateSnapDeviceRaw creates a snapshot device. Caller needs to suspend and resume the origin device if it is active.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DeleteDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=20348:20402#L688">DeleteDevice</a>
+				<a class="permalink" href="index.html#DeleteDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DeleteDevice">DeleteDevice</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, deviceID <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+DeleteDevice deletes a device with the specified poolName with the specified device id.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DeviceIDExists">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=3546:3581#L108">DeviceIDExists</a>
+				<a class="permalink" href="index.html#DeviceIDExists">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DeviceIDExists">DeviceIDExists</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+DeviceIDExists returns whether error conveys the information about device Id already
+exist or not. This will be true if device creation or snap creation
+operation fails if device or snap device already exists in pool.
+Current implementation is little crude as it scans the error string
+for exact pattern match. Replacing it with more robust implementation
+is desirable.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DevmapperLogCallback">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_log.go?s=1564:1661#L32">DevmapperLogCallback</a>
+				<a class="permalink" href="index.html#DevmapperLogCallback">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DevmapperLogCallback">DevmapperLogCallback</a>(level <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#int">int</a>, file *<a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#char">char</a>, line, dmErrnoOrClass <a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#int">int</a>, message *<a href="http://127.0.0.1:8080/pkg/C/">C</a>.<a href="http://127.0.0.1:8080/pkg/C/#char">char</a>)</pre>
+			<p>
+DevmapperLogCallback exports the devmapper log callback for cgo. Note that
+because we are using callbacks, this function will be called for *every* log
+in libdm (even debug ones because there&#39;s no way of setting the verbosity
+level for an external logging callback).
+export DevmapperLogCallback
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetBlockDeviceSize">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=11608:11662#L404">GetBlockDeviceSize</a>
+				<a class="permalink" href="index.html#GetBlockDeviceSize">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetBlockDeviceSize">GetBlockDeviceSize</a>(file *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetBlockDeviceSize returns the size of a block device identified by the specified file.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetDriverVersion">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=15645:15684#L538">GetDriverVersion</a>
+				<a class="permalink" href="index.html#GetDriverVersion">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetDriverVersion">GetDriverVersion</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetDriverVersion is the programmatic example of &#34;dmsetup version&#34;.
+It outputs version information of the driver.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetLibraryVersion">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=7402:7442#L266">GetLibraryVersion</a>
+				<a class="permalink" href="index.html#GetLibraryVersion">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetLibraryVersion">GetLibraryVersion</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetLibraryVersion returns the device mapper library version.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetStatus">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=16033:16100#L551">GetStatus</a>
+				<a class="permalink" href="index.html#GetStatus">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetStatus">GetStatus</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetStatus is the programmatic example of &#34;dmsetup status&#34;.
+It outputs status information for the specified device name.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetTable">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=16994:17060#L578">GetTable</a>
+				<a class="permalink" href="index.html#GetTable">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetTable">GetTable</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetTable is the programmatic example for &#34;dmsetup table&#34;.
+It outputs the current table for the specified device name.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="LogInit">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_log.go?s=1033:1069#L20">LogInit</a>
+				<a class="permalink" href="index.html#LogInit">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#LogInit">LogInit</a>(logger <a href="index.html#DevmapperLogger">DevmapperLogger</a>)</pre>
+			<p>
+LogInit changes the logging callback called after processing libdm logs for
+error message information. The default logger simply forwards all logs to
+logrus. Calling LogInit(nil) disables the calling of callbacks.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReloadPool">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=13772:13865#L474">ReloadPool</a>
+				<a class="permalink" href="index.html#ReloadPool">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ReloadPool">ReloadPool</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, dataFile, metadataFile *<a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#File">File</a>, poolBlockSize <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ReloadPool is the programmatic example of &#34;dmsetup reload&#34;.
+It reloads the table with the specified poolName, data and metadata file and block size.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RemoveDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=8467:8503#L302">RemoveDevice</a>
+				<a class="permalink" href="index.html#RemoveDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RemoveDevice">RemoveDevice</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+RemoveDevice is a useful helper for cleaning up a device.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RemoveDeviceDeferred">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=9116:9160#L330">RemoveDeviceDeferred</a>
+				<a class="permalink" href="index.html#RemoveDeviceDeferred">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RemoveDeviceDeferred">RemoveDeviceDeferred</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+RemoveDeviceDeferred is a useful helper for cleaning up a device, but deferred.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ResumeDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=18928:18964#L639">ResumeDevice</a>
+				<a class="permalink" href="index.html#ResumeDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ResumeDevice">ResumeDevice</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ResumeDevice is the programmatic example of &#34;dmsetup resume&#34;.
+It un-suspends the specified device.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetDevDir">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=7170:7202#L257">SetDevDir</a>
+				<a class="permalink" href="index.html#SetDevDir">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SetDevDir">SetDevDir</a>(dir <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+SetDevDir sets the dev folder for the device mapper library (usually /dev).
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetTransactionID">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=17898:17970#L604">SetTransactionID</a>
+				<a class="permalink" href="index.html#SetTransactionID">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SetTransactionID">SetTransactionID</a>(poolName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, oldID <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, newID <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+SetTransactionID sets a transaction id for the specified device name.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SuspendDevice">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=18571:18608#L626">SuspendDevice</a>
+				<a class="permalink" href="index.html#SuspendDevice">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SuspendDevice">SuspendDevice</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+SuspendDevice is the programmatic example of &#34;dmsetup suspend&#34;.
+It suspends the specified device.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UdevSetSyncSupport">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=8012:8053#L284">UdevSetSyncSupport</a>
+				<a class="permalink" href="index.html#UdevSetSyncSupport">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#UdevSetSyncSupport">UdevSetSyncSupport</a>(enable <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+UdevSetSyncSupport allows setting whether the udev sync should be enabled.
+The return bool indicates the state of whether the sync is enabled.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UdevSyncSupported">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=7792:7821#L278">UdevSyncSupported</a>
+				<a class="permalink" href="index.html#UdevSyncSupported">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#UdevSyncSupported">UdevSyncSupported</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+UdevSyncSupported returns whether device-mapper is able to sync with udev
+</p>
+<p>
+This is essential otherwise race conditions can arise where both udev and
+device-mapper attempt to create and destroy devices.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UdevWait">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=6889:6922#L248">UdevWait</a>
+				<a class="permalink" href="index.html#UdevWait">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#UdevWait">UdevWait</a>(cookie *<a href="http://127.0.0.1:8080/pkg/builtin/#uint">uint</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+UdevWait waits for any processes that are waiting for udev to complete the specified cookie.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AddNodeType">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=3139:3154#L99">AddNodeType</a>
+				<a class="permalink" href="index.html#AddNodeType">&#xb6;</a>
+			</h2>
+			<p>
+AddNodeType represents a type of node to be added
+</p>
+
+			<pre>type AddNodeType <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DefaultLogger">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_log.go?s=2386:2568#L61">DefaultLogger</a>
+				<a class="permalink" href="index.html#DefaultLogger">&#xb6;</a>
+			</h2>
+			<p>
+DefaultLogger is the default logger used by pkg/devicemapper. It forwards
+all logs that are of higher or equal priority to the given level to the
+corresponding logrus level.
+</p>
+
+			<pre>type DefaultLogger struct {
+<span id="DefaultLogger.Level"></span>    <span class="comment">// Level corresponds to the highest libdm level that will be forwarded to</span>
+    <span class="comment">// logrus. In order to change this, register a new DefaultLogger.</span>
+    Level <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DefaultLogger.DMLog">func (DefaultLogger) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_log.go?s=2714:2801#L69">DMLog</a>
+					<a class="permalink" href="index.html#DefaultLogger.DMLog">&#xb6;</a>
+				</h3>
+				<pre>func (l <a href="index.html#DefaultLogger">DefaultLogger</a>) <a href="index.html#DMLog">DMLog</a>(level <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, file <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, line, dmError <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+DMLog is the logging callback containing all of the information from
+devicemapper. The interface is identical to the C libdm counterpart.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Deps">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=2654:2720#L77">Deps</a>
+				<a class="permalink" href="index.html#Deps">&#xb6;</a>
+			</h2>
+			<p>
+Deps represents dependents (layer) of a device.
+</p>
+
+			<pre>type Deps struct {
+<span id="Deps.Count"></span>    Count  <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="Deps.Filler"></span>    Filler <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="Deps.Device"></span>    Device []<a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetDeps">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=14611:14651#L499">GetDeps</a>
+					<a class="permalink" href="index.html#GetDeps">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetDeps">GetDeps</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Deps">Deps</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetDeps is the programmatic example of &#34;dmsetup deps&#34;.
+It outputs a list of devices referenced by the live table for the specified device.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="DevmapperLogger">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper_log.go?s=449:699#L8">DevmapperLogger</a>
+				<a class="permalink" href="index.html#DevmapperLogger">&#xb6;</a>
+			</h2>
+			<p>
+DevmapperLogger defines methods required to register as a callback for
+logging events received from devicemapper. Note that devicemapper will send
+*all* logs regardless to callbacks (including debug logs) so it&#39;s
+recommended to not spam the console with the outputs.
+</p>
+
+			<pre>type DevmapperLogger interface {
+    <span class="comment">// DMLog is the logging callback containing all of the information from</span>
+    <span class="comment">// devicemapper. The interface is identical to the C libdm counterpart.</span>
+    DMLog(level <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, file <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, line <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, dmError <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Info">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=2770:3030#L83">Info</a>
+				<a class="permalink" href="index.html#Info">&#xb6;</a>
+			</h2>
+			<p>
+Info represents information about a device.
+</p>
+
+			<pre>type Info struct {
+<span id="Info.Exists"></span>    Exists         <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Info.Suspended"></span>    Suspended      <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Info.LiveTable"></span>    LiveTable      <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Info.InactiveTable"></span>    InactiveTable  <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Info.OpenCount"></span>    OpenCount      <a href="http://127.0.0.1:8080/pkg/builtin/#int32">int32</a>
+<span id="Info.EventNr"></span>    EventNr        <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="Info.Major"></span>    Major          <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="Info.Minor"></span>    Minor          <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+<span id="Info.ReadOnly"></span>    ReadOnly       <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="Info.TargetCount"></span>    TargetCount    <a href="http://127.0.0.1:8080/pkg/builtin/#int32">int32</a>
+<span id="Info.DeferredRemove"></span>    DeferredRemove <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetInfo">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=14937:14977#L512">GetInfo</a>
+					<a class="permalink" href="index.html#GetInfo">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetInfo">GetInfo</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Info">Info</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetInfo is the programmatic example of &#34;dmsetup info&#34;.
+It outputs some brief information about the device.
+</p>
+
+				
+				
+			
+				
+				<h3 id="GetInfoWithDeferred">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=15289:15341#L525">GetInfoWithDeferred</a>
+					<a class="permalink" href="index.html#GetInfoWithDeferred">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetInfoWithDeferred">GetInfoWithDeferred</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Info">Info</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetInfoWithDeferred is the programmatic example of &#34;dmsetup info&#34;, but deferred.
+It outputs some brief information about the device.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Task">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=2563:2600#L73">Task</a>
+				<a class="permalink" href="index.html#Task">&#xb6;</a>
+			</h2>
+			<p>
+Task represents a devicemapper task (like lvcreate, etc.) ; a task is needed for each ioctl
+command to execute.
+</p>
+
+			<pre>type Task struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="TaskCreate">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=4242:4282#L133">TaskCreate</a>
+					<a class="permalink" href="index.html#TaskCreate">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#TaskCreate">TaskCreate</a>(tasktype <a href="index.html#TaskType">TaskType</a>) *<a href="index.html#Task">Task</a></pre>
+				<p>
+TaskCreate initializes a devicemapper task of tasktype
+</p>
+
+				
+				
+			
+				
+				<h3 id="TaskCreateNamed">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=3859:3919#L121">TaskCreateNamed</a>
+					<a class="permalink" href="index.html#TaskCreateNamed">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#TaskCreateNamed">TaskCreateNamed</a>(t <a href="index.html#TaskType">TaskType</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Task">Task</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+TaskCreateNamed is a convenience function for TaskCreate when a name
+will be set on the task as well
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="TaskType">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/devicemapper/devmapper.go?s=3071:3083#L97">TaskType</a>
+				<a class="permalink" href="index.html#TaskType">&#xb6;</a>
+			</h2>
+			<p>
+TaskType represents a type of task
+</p>
+
+			<pre>type TaskType <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

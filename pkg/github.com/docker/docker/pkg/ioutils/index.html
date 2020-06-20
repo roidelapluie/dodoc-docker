@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>ioutils - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package ioutils</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/ioutils"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AtomicWriteFile">func AtomicWriteFile(filename string, data []byte, perm os.FileMode) error</a></dd>
+			
+				
+				<dd><a href="index.html#HashData">func HashData(src io.Reader) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewAtomicFileWriter">func NewAtomicFileWriter(filename string, perm os.FileMode) (io.WriteCloser, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewCancelReadCloser">func NewCancelReadCloser(ctx context.Context, in io.ReadCloser) io.ReadCloser</a></dd>
+			
+				
+				<dd><a href="index.html#NewReadCloserWrapper">func NewReadCloserWrapper(r io.Reader, closer func() error) io.ReadCloser</a></dd>
+			
+				
+				<dd><a href="index.html#NewReaderErrWrapper">func NewReaderErrWrapper(r io.Reader, closer func()) io.Reader</a></dd>
+			
+				
+				<dd><a href="index.html#NewWriteCloserWrapper">func NewWriteCloserWrapper(r io.Writer, closer func() error) io.WriteCloser</a></dd>
+			
+				
+				<dd><a href="index.html#NopWriteCloser">func NopWriteCloser(w io.Writer) io.WriteCloser</a></dd>
+			
+				
+				<dd><a href="index.html#TempDir">func TempDir(dir, prefix string) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AtomicWriteSet">type AtomicWriteSet</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewAtomicWriteSet">func NewAtomicWriteSet(tmpDir string) (*AtomicWriteSet, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AtomicWriteSet.Cancel">func (ws *AtomicWriteSet) Cancel() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AtomicWriteSet.Commit">func (ws *AtomicWriteSet) Commit(target string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AtomicWriteSet.FileWriter">func (ws *AtomicWriteSet) FileWriter(name string, flag int, perm os.FileMode) (io.WriteCloser, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AtomicWriteSet.String">func (ws *AtomicWriteSet) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AtomicWriteSet.WriteFile">func (ws *AtomicWriteSet) WriteFile(filename string, data []byte, perm os.FileMode) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BytesPipe">type BytesPipe</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewBytesPipe">func NewBytesPipe() *BytesPipe</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BytesPipe.Close">func (bp *BytesPipe) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BytesPipe.CloseWithError">func (bp *BytesPipe) CloseWithError(err error) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BytesPipe.Read">func (bp *BytesPipe) Read(p []byte) (n int, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BytesPipe.Write">func (bp *BytesPipe) Write(p []byte) (int, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NopFlusher">type NopFlusher</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NopFlusher.Flush">func (f *NopFlusher) Flush()</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NopWriter">type NopWriter</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NopWriter.Write">func (*NopWriter) Write(buf []byte) (int, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#OnEOFReader">type OnEOFReader</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#OnEOFReader.Close">func (r *OnEOFReader) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#OnEOFReader.Read">func (r *OnEOFReader) Read(p []byte) (n int, err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ReadCloserWrapper">type ReadCloserWrapper</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ReadCloserWrapper.Close">func (r *ReadCloserWrapper) Close() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WriteCounter">type WriteCounter</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewWriteCounter">func NewWriteCounter(w io.Writer) *WriteCounter</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#WriteCounter.Write">func (wc *WriteCounter) Write(p []byte) (count int, err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WriteFlusher">type WriteFlusher</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewWriteFlusher">func NewWriteFlusher(w io.Writer) *WriteFlusher</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#WriteFlusher.Close">func (wf *WriteFlusher) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#WriteFlusher.Flush">func (wf *WriteFlusher) Flush()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#WriteFlusher.Flushed">func (wf *WriteFlusher) Flushed() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#WriteFlusher.Write">func (wf *WriteFlusher) Write(b []byte) (n int, err error)</a></dd>
+				
+			
+			
+				
+				<dd><a href="index.html#pkg-note-BUG">Bugs</a></dd>
+				
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/buffer.go">buffer.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/bytespipe.go">bytespipe.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go">fswriters.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go">readers.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/temp_unix.go">temp_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go">writeflusher.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go">writers.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrClosed is returned when Write is called on a closed BytesPipe.</span>
+    <span id="ErrClosed">ErrClosed</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;write to closed BytesPipe&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="AtomicWriteFile">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=779:853#L21">AtomicWriteFile</a>
+				<a class="permalink" href="index.html#AtomicWriteFile">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#AtomicWriteFile">AtomicWriteFile</a>(filename <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, data []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, perm <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+AtomicWriteFile atomically writes data to a file named by filename.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="HashData">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=1105:1149#L43">HashData</a>
+				<a class="permalink" href="index.html#HashData">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#HashData">HashData</a>(src <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+HashData returns the sha256 sum of src.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewAtomicFileWriter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=341:424#L3">NewAtomicFileWriter</a>
+				<a class="permalink" href="index.html#NewAtomicFileWriter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewAtomicFileWriter">NewAtomicFileWriter</a>(filename <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, perm <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+NewAtomicFileWriter returns WriteCloser so that writing to it writes to a
+temporary file and closing it atomically changes the temporary file to
+destination path. Writing and closing concurrently is not allowed.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewCancelReadCloser">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=2206:2283#L91">NewCancelReadCloser</a>
+				<a class="permalink" href="index.html#NewCancelReadCloser">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewCancelReadCloser">NewCancelReadCloser</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, in <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a></pre>
+			<p>
+NewCancelReadCloser creates a wrapper that closes the ReadCloser when the
+context is cancelled. The returned io.ReadCloser must be closed when it is
+no longer needed.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewReadCloserWrapper">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=541:614#L14">NewReadCloserWrapper</a>
+				<a class="permalink" href="index.html#NewReadCloserWrapper">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewReadCloserWrapper">NewReadCloserWrapper</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, closer func() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a></pre>
+			<p>
+NewReadCloserWrapper returns a new io.ReadCloser.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewReaderErrWrapper">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=933:995#L35">NewReaderErrWrapper</a>
+				<a class="permalink" href="index.html#NewReaderErrWrapper">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewReaderErrWrapper">NewReaderErrWrapper</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, closer func()) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a></pre>
+			<p>
+NewReaderErrWrapper returns a new io.Reader.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewWriteCloserWrapper">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=803:878#L29">NewWriteCloserWrapper</a>
+				<a class="permalink" href="index.html#NewWriteCloserWrapper">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewWriteCloserWrapper">NewWriteCloserWrapper</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, closer func() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a></pre>
+			<p>
+NewWriteCloserWrapper returns a new io.WriteCloser.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NopWriteCloser">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=383:430#L9">NopWriteCloser</a>
+				<a class="permalink" href="index.html#NopWriteCloser">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NopWriteCloser">NopWriteCloser</a>(w <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a></pre>
+			<p>
+NopWriteCloser returns a nopWriteCloser.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="TempDir">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/temp_unix.go?s=166:214#L1">TempDir</a>
+				<a class="permalink" href="index.html#TempDir">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#TempDir">TempDir</a>(dir, prefix <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+TempDir on Unix systems is equivalent to ioutil.TempDir.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AtomicWriteSet">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=1941:1984#L77">AtomicWriteSet</a>
+				<a class="permalink" href="index.html#AtomicWriteSet">&#xb6;</a>
+			</h2>
+			<p>
+AtomicWriteSet is used to atomically write a set
+of files and ensure they are visible at the same time.
+Must be committed to a new directory.
+</p>
+
+			<pre>type AtomicWriteSet struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewAtomicWriteSet">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=2233:2295#L86">NewAtomicWriteSet</a>
+					<a class="permalink" href="index.html#NewAtomicWriteSet">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewAtomicWriteSet">NewAtomicWriteSet</a>(tmpDir <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#AtomicWriteSet">AtomicWriteSet</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewAtomicWriteSet creates a new atomic write set to
+atomically create a set of files. The given directory
+is used as the base directory for storing files before
+commit. If no temporary directory is given the system
+default is used.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="AtomicWriteSet.Cancel">func (*AtomicWriteSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=3481:3521#L138">Cancel</a>
+					<a class="permalink" href="index.html#AtomicWriteSet.Cancel">&#xb6;</a>
+				</h3>
+				<pre>func (ws *<a href="index.html#AtomicWriteSet">AtomicWriteSet</a>) <a href="index.html#Cancel">Cancel</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Cancel cancels the set and removes all temporary data
+created in the set.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AtomicWriteSet.Commit">func (*AtomicWriteSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=3709:3762#L145">Commit</a>
+					<a class="permalink" href="index.html#AtomicWriteSet.Commit">&#xb6;</a>
+				</h3>
+				<pre>func (ws *<a href="index.html#AtomicWriteSet">AtomicWriteSet</a>) <a href="index.html#Commit">Commit</a>(target <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Commit moves all created files to the target directory. The
+target directory must not exist and the parent of the target
+directory must exist.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AtomicWriteSet.FileWriter">func (*AtomicWriteSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=3160:3261#L128">FileWriter</a>
+					<a class="permalink" href="index.html#AtomicWriteSet.FileWriter">&#xb6;</a>
+				</h3>
+				<pre>func (ws *<a href="index.html#AtomicWriteSet">AtomicWriteSet</a>) <a href="index.html#FileWriter">FileWriter</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, flag <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, perm <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#WriteCloser">WriteCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+FileWriter opens a file writer inside the set. The file
+should be synced and closed before calling commit.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AtomicWriteSet.String">func (*AtomicWriteSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=3857:3898#L150">String</a>
+					<a class="permalink" href="index.html#AtomicWriteSet.String">&#xb6;</a>
+				</h3>
+				<pre>func (ws *<a href="index.html#AtomicWriteSet">AtomicWriteSet</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns the location the set is writing to.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="AtomicWriteSet.WriteFile">func (*AtomicWriteSet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/fswriters.go?s=2515:2604#L99">WriteFile</a>
+					<a class="permalink" href="index.html#AtomicWriteSet.WriteFile">&#xb6;</a>
+				</h3>
+				<pre>func (ws *<a href="index.html#AtomicWriteSet">AtomicWriteSet</a>) <a href="index.html#WriteFile">WriteFile</a>(filename <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, data []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, perm <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+WriteFile writes a file to the set, guaranteeing the file
+has been synced.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BytesPipe">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/bytespipe.go?s=915:1098#L21">BytesPipe</a>
+				<a class="permalink" href="index.html#BytesPipe">&#xb6;</a>
+			</h2>
+			<p>
+BytesPipe is io.ReadWriteCloser which works similarly to pipe(queue).
+All written data may be read at most once. Also, BytesPipe allocates
+and releases new byte slices to adjust to current needs, so the buffer
+won&#39;t be overgrown after peak loads.
+</p>
+
+			<pre>type BytesPipe struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBytesPipe">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/bytespipe.go?s=1320:1350#L32">NewBytesPipe</a>
+					<a class="permalink" href="index.html#NewBytesPipe">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewBytesPipe">NewBytesPipe</a>() *<a href="index.html#BytesPipe">BytesPipe</a></pre>
+				<p>
+NewBytesPipe creates new BytesPipe, initialized by specified slice.
+If buf is nil, then it will be initialized with slice which cap is 64.
+buf will be adjusted in a way that len(buf) == 0, cap(buf) == cap(buf).
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="BytesPipe.Close">func (*BytesPipe) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/bytespipe.go?s=2997:3031#L111">Close</a>
+					<a class="permalink" href="index.html#BytesPipe.Close">&#xb6;</a>
+				</h3>
+				<pre>func (bp *<a href="index.html#BytesPipe">BytesPipe</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close causes further reads from a BytesPipe to return immediately.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BytesPipe.CloseWithError">func (*BytesPipe) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/bytespipe.go?s=2733:2785#L98">CloseWithError</a>
+					<a class="permalink" href="index.html#BytesPipe.CloseWithError">&#xb6;</a>
+				</h3>
+				<pre>func (bp *<a href="index.html#BytesPipe">BytesPipe</a>) <a href="index.html#CloseWithError">CloseWithError</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CloseWithError causes further reads from a BytesPipe to return immediately.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BytesPipe.Read">func (*BytesPipe) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/bytespipe.go?s=3137:3191#L117">Read</a>
+					<a class="permalink" href="index.html#BytesPipe.Read">&#xb6;</a>
+				</h3>
+				<pre>func (bp *<a href="index.html#BytesPipe">BytesPipe</a>) <a href="index.html#Read">Read</a>(p []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Read reads bytes from BytesPipe.
+Data could be read only once.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BytesPipe.Write">func (*BytesPipe) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/bytespipe.go?s=1557:1606#L41">Write</a>
+					<a class="permalink" href="index.html#BytesPipe.Write">&#xb6;</a>
+				</h3>
+				<pre>func (bp *<a href="index.html#BytesPipe">BytesPipe</a>) <a href="index.html#Write">Write</a>(p []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Write writes p to BytesPipe.
+It can allocate new []byte slices in a process of writing.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NopFlusher">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=525:549#L14">NopFlusher</a>
+				<a class="permalink" href="index.html#NopFlusher">&#xb6;</a>
+			</h2>
+			<p>
+NopFlusher represents a type which flush operation is nop.
+</p>
+
+			<pre>type NopFlusher struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NopFlusher.Flush">func (*NopFlusher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=580:608#L17">Flush</a>
+					<a class="permalink" href="index.html#NopFlusher.Flush">&#xb6;</a>
+				</h3>
+				<pre>func (f *<a href="index.html#NopFlusher">NopFlusher</a>) <a href="index.html#Flush">Flush</a>()</pre>
+				<p>
+Flush is a nop operation.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NopWriter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=140:163#L1">NopWriter</a>
+				<a class="permalink" href="index.html#NopWriter">&#xb6;</a>
+			</h2>
+			<p>
+NopWriter represents a type which write operation is nop.
+</p>
+
+			<pre>type NopWriter struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NopWriter.Write">func (*NopWriter) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=165:213#L1">Write</a>
+					<a class="permalink" href="index.html#NopWriter.Write">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#NopWriter">NopWriter</a>) <a href="index.html#Write">Write</a>(buf []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="OnEOFReader">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=1410:1466#L53">OnEOFReader</a>
+				<a class="permalink" href="index.html#OnEOFReader">&#xb6;</a>
+			</h2>
+			<p>
+OnEOFReader wraps an io.ReadCloser and a function
+the function will run at the end of file or close the file.
+</p>
+
+			<pre>type OnEOFReader struct {
+<span id="OnEOFReader.Rc"></span>    Rc <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>
+<span id="OnEOFReader.Fn"></span>    Fn func()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="OnEOFReader.Close">func (*OnEOFReader) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=1644:1679#L67">Close</a>
+					<a class="permalink" href="index.html#OnEOFReader.Close">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#OnEOFReader">OnEOFReader</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close closes the file and run the function.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="OnEOFReader.Read">func (*OnEOFReader) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=1468:1523#L58">Read</a>
+					<a class="permalink" href="index.html#OnEOFReader.Read">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#OnEOFReader">OnEOFReader</a>) <a href="index.html#Read">Read</a>(p []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ReadCloserWrapper">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=308:373#L3">ReadCloserWrapper</a>
+				<a class="permalink" href="index.html#ReadCloserWrapper">&#xb6;</a>
+			</h2>
+			<p>
+ReadCloserWrapper wraps an io.Reader, and implements an io.ReadCloser
+It calls the given callback function when closed. It should be constructed
+with NewReadCloserWrapper
+</p>
+
+			<pre>type ReadCloserWrapper struct {
+    <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ReadCloserWrapper.Close">func (*ReadCloserWrapper) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/readers.go?s=422:463#L9">Close</a>
+					<a class="permalink" href="index.html#ReadCloserWrapper.Close">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#ReadCloserWrapper">ReadCloserWrapper</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close calls back the passed closer function
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WriteCounter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=1162:1222#L40">WriteCounter</a>
+				<a class="permalink" href="index.html#WriteCounter">&#xb6;</a>
+			</h2>
+			<p>
+WriteCounter wraps a concrete io.Writer and hold a count of the number
+of bytes written to the writer during a &#34;session&#34;.
+This can be convenient when write return is masked
+(e.g., json.Encoder.Encode())
+</p>
+
+			<pre>type WriteCounter struct {
+<span id="WriteCounter.Count"></span>    Count  <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>
+<span id="WriteCounter.Writer"></span>    Writer <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewWriteCounter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=1271:1318#L46">NewWriteCounter</a>
+					<a class="permalink" href="index.html#NewWriteCounter">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewWriteCounter">NewWriteCounter</a>(w <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) *<a href="index.html#WriteCounter">WriteCounter</a></pre>
+				<p>
+NewWriteCounter returns a new WriteCounter.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="WriteCounter.Write">func (*WriteCounter) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writers.go?s=1363:1425#L52">Write</a>
+					<a class="permalink" href="index.html#WriteCounter.Write">&#xb6;</a>
+				</h3>
+				<pre>func (wc *<a href="index.html#WriteCounter">WriteCounter</a>) <a href="index.html#Write">Write</a>(p []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (count <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WriteFlusher">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go?s=306:479#L1">WriteFlusher</a>
+				<a class="permalink" href="index.html#WriteFlusher">&#xb6;</a>
+			</h2>
+			<p>
+WriteFlusher wraps the Write and Flush operation ensuring that every write
+is a flush. In addition, the Close method can be called to intercept
+Read/Write calls if the targets lifecycle has already ended.
+</p>
+
+			<pre>type WriteFlusher struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewWriteFlusher">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go?s=1808:1855#L74">NewWriteFlusher</a>
+					<a class="permalink" href="index.html#NewWriteFlusher">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewWriteFlusher">NewWriteFlusher</a>(w <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) *<a href="index.html#WriteFlusher">WriteFlusher</a></pre>
+				<p>
+NewWriteFlusher returns a new WriteFlusher.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="WriteFlusher.Close">func (*WriteFlusher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go?s=1563:1600#L60">Close</a>
+					<a class="permalink" href="index.html#WriteFlusher.Close">&#xb6;</a>
+				</h3>
+				<pre>func (wf *<a href="index.html#WriteFlusher">WriteFlusher</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close closes the write flusher, disallowing any further writes to the
+target. After the flusher is closed, all calls to write or flush will
+result in an error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WriteFlusher.Flush">func (*WriteFlusher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go?s=806:837#L29">Flush</a>
+					<a class="permalink" href="index.html#WriteFlusher.Flush">&#xb6;</a>
+				</h3>
+				<pre>func (wf *<a href="index.html#WriteFlusher">WriteFlusher</a>) <a href="index.html#Flush">Flush</a>()</pre>
+				<p>
+Flush the stream immediately.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WriteFlusher.Flushed">func (*WriteFlusher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go?s=1066:1104#L44">Flushed</a>
+					<a class="permalink" href="index.html#WriteFlusher.Flushed">&#xb6;</a>
+				</h3>
+				<pre>func (wf *<a href="index.html#WriteFlusher">WriteFlusher</a>) <a href="index.html#Flushed">Flushed</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Flushed returns the state of flushed.
+If it&#39;s flushed, return true, or else it return false.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="WriteFlusher.Write">func (*WriteFlusher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go?s=554:612#L16">Write</a>
+					<a class="permalink" href="index.html#WriteFlusher.Write">&#xb6;</a>
+				</h3>
+				<pre>func (wf *<a href="index.html#WriteFlusher">WriteFlusher</a>) <a href="index.html#Write">Write</a>(b []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+		
+			<h2 id="pkg-note-BUG">Bugs</h2>
+			<ul style="list-style: none; padding: 0;">
+			
+			<li><a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/ioutils/writeflusher.go?s=1108:1296#L45" style="float: left;">&#x261e;</a> <p>
+Remove this method. Its use is inherently racy. Seems to
+be used to detect whether or a response code has been issued or not.
+Another hook should be used instead.
+</p>
+</li>
+			
+			</ul>
+		
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

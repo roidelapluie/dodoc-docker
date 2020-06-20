@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>registry - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package registry</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/registry"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#AuthenticateOKBody">type AuthenticateOKBody</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DistributionInspect">type DistributionInspect</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IndexInfo">type IndexInfo</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetIPNet">type NetIPNet</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetIPNet.MarshalJSON">func (ipnet *NetIPNet) MarshalJSON() ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetIPNet.String">func (ipnet *NetIPNet) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetIPNet.UnmarshalJSON">func (ipnet *NetIPNet) UnmarshalJSON(b []byte) (err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SearchResult">type SearchResult</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#SearchResults">type SearchResults</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceConfig">type ServiceConfig</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/authenticate.go">authenticate.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go">registry.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="AuthenticateOKBody">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/authenticate.go?s=438:698#L2">AuthenticateOKBody</a>
+				<a class="permalink" href="index.html#AuthenticateOKBody">&#xb6;</a>
+			</h2>
+			<p>
+AuthenticateOKBody authenticate o k body
+swagger:model AuthenticateOKBody
+</p>
+
+			<pre>type AuthenticateOKBody struct {
+
+    <span class="comment">// An opaque token used to authenticate a user after a successful login</span>
+    <span class="comment">// Required: true</span>
+<span id="AuthenticateOKBody.IdentityToken"></span>    IdentityToken <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;IdentityToken&#34;`
+
+    <span class="comment">// The status of the authentication</span>
+    <span class="comment">// Required: true</span>
+<span id="AuthenticateOKBody.Status"></span>    Status <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Status&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DistributionInspect">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=3577:3870#L102">DistributionInspect</a>
+				<a class="permalink" href="index.html#DistributionInspect">&#xb6;</a>
+			</h2>
+			<p>
+DistributionInspect describes the result obtained from contacting the
+registry to retrieve image metadata
+</p>
+
+			<pre>type DistributionInspect struct {
+<span id="DistributionInspect.Descriptor"></span>    <span class="comment">// Descriptor contains information about the manifest, including</span>
+    <span class="comment">// the content addressable digest</span>
+    Descriptor <a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">v1</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Descriptor">Descriptor</a>
+<span id="DistributionInspect.Platforms"></span>    <span class="comment">// Platforms contains the list of platforms supported by the image,</span>
+    <span class="comment">// obtained by parsing the manifest</span>
+    Platforms []<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">v1</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IndexInfo">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=2041:2478#L63">IndexInfo</a>
+				<a class="permalink" href="index.html#IndexInfo">&#xb6;</a>
+			</h2>
+			<p>
+IndexInfo contains information about a registry
+</p>
+<p>
+RepositoryInfo Examples:
+{
+</p>
+<pre>&#34;Index&#34; : {
+  &#34;Name&#34; : &#34;docker.io&#34;,
+  &#34;Mirrors&#34; : [&#34;<a href="https://registry-2.docker.io/v1/">https://registry-2.docker.io/v1/</a>&#34;, &#34;<a href="https://registry-3.docker.io/v1/">https://registry-3.docker.io/v1/</a>&#34;],
+  &#34;Secure&#34; : true,
+  &#34;Official&#34; : true,
+},
+&#34;RemoteName&#34; : &#34;library/debian&#34;,
+&#34;LocalName&#34; : &#34;debian&#34;,
+&#34;CanonicalName&#34; : &#34;docker.io/debian&#34;
+&#34;Official&#34; : true,
+</pre>
+<p>
+}
+</p>
+<p>
+{
+</p>
+<pre>&#34;Index&#34; : {
+  &#34;Name&#34; : &#34;127.0.0.1:5000&#34;,
+  &#34;Mirrors&#34; : [],
+  &#34;Secure&#34; : false,
+  &#34;Official&#34; : false,
+},
+&#34;RemoteName&#34; : &#34;user/repo&#34;,
+&#34;LocalName&#34; : &#34;127.0.0.1:5000/user/repo&#34;,
+&#34;CanonicalName&#34; : &#34;127.0.0.1:5000/user/repo&#34;,
+&#34;Official&#34; : false,
+</pre>
+<p>
+}
+</p>
+
+			<pre>type IndexInfo struct {
+<span id="IndexInfo.Name"></span>    <span class="comment">// Name is the name of the registry, such as &#34;docker.io&#34;</span>
+    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="IndexInfo.Mirrors"></span>    <span class="comment">// Mirrors is a list of mirrors, expressed as URIs</span>
+    Mirrors []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="IndexInfo.Secure"></span>    <span class="comment">// Secure is set to false if the registry is part of the list of</span>
+    <span class="comment">// insecure registries. Insecure registries accept HTTP and/or accept</span>
+    <span class="comment">// HTTPS with certificates from unknown CAs.</span>
+    Secure <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="IndexInfo.Official"></span>    <span class="comment">// Official indicates whether this is an official registry</span>
+    Official <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetIPNet">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=677:700#L11">NetIPNet</a>
+				<a class="permalink" href="index.html#NetIPNet">&#xb6;</a>
+			</h2>
+			<p>
+NetIPNet is the net.IPNet type, which can be marshalled and
+unmarshalled to JSON
+</p>
+
+			<pre>type NetIPNet <a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#IPNet">IPNet</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NetIPNet.MarshalJSON">func (*NetIPNet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=888:940#L19">MarshalJSON</a>
+					<a class="permalink" href="index.html#NetIPNet.MarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (ipnet *<a href="index.html#NetIPNet">NetIPNet</a>) <a href="index.html#MarshalJSON">MarshalJSON</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MarshalJSON returns the JSON representation of the IPNet
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetIPNet.String">func (*NetIPNet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=747:785#L14">String</a>
+					<a class="permalink" href="index.html#NetIPNet.String">&#xb6;</a>
+				</h3>
+				<pre>func (ipnet *<a href="index.html#NetIPNet">NetIPNet</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns the CIDR notation of ipnet
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetIPNet.UnmarshalJSON">func (*NetIPNet) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=1055:1113#L24">UnmarshalJSON</a>
+					<a class="permalink" href="index.html#NetIPNet.UnmarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (ipnet *<a href="index.html#NetIPNet">NetIPNet</a>) <a href="index.html#UnmarshalJSON">UnmarshalJSON</a>(b []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+UnmarshalJSON sets the IPNet from a byte array of JSON
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SearchResult">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=2547:3045#L77">SearchResult</a>
+				<a class="permalink" href="index.html#SearchResult">&#xb6;</a>
+			</h2>
+			<p>
+SearchResult describes a search result returned from a registry
+</p>
+
+			<pre>type SearchResult struct {
+<span id="SearchResult.StarCount"></span>    <span class="comment">// StarCount indicates the number of stars this repository has</span>
+    StarCount <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;star_count&#34;`
+<span id="SearchResult.IsOfficial"></span>    <span class="comment">// IsOfficial is true if the result is from an official repository.</span>
+    IsOfficial <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;is_official&#34;`
+<span id="SearchResult.Name"></span>    <span class="comment">// Name is the name of the repository</span>
+    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;name&#34;`
+<span id="SearchResult.IsAutomated"></span>    <span class="comment">// IsAutomated indicates whether the result is automated</span>
+    IsAutomated <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;is_automated&#34;`
+<span id="SearchResult.Description"></span>    <span class="comment">// Description is a textual description of the repository</span>
+    Description <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;description&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="SearchResults">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=3123:3463#L91">SearchResults</a>
+				<a class="permalink" href="index.html#SearchResults">&#xb6;</a>
+			</h2>
+			<p>
+SearchResults lists a collection search results returned from a registry
+</p>
+
+			<pre>type SearchResults struct {
+<span id="SearchResults.Query"></span>    <span class="comment">// Query contains the query string that generated the search results</span>
+    Query <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;query&#34;`
+<span id="SearchResults.NumResults"></span>    <span class="comment">// NumResults indicates the number of results the query returned</span>
+    NumResults <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;num_results&#34;`
+<span id="SearchResults.Results"></span>    <span class="comment">// Results is a slice containing the actual results for the search</span>
+    Results []<a href="index.html#SearchResult">SearchResult</a> `json:&#34;results&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/registry/registry.go?s=227:588#L1">ServiceConfig</a>
+				<a class="permalink" href="index.html#ServiceConfig">&#xb6;</a>
+			</h2>
+			<p>
+ServiceConfig stores daemon registry services configuration.
+</p>
+
+			<pre>type ServiceConfig struct {
+<span id="ServiceConfig.AllowNondistributableArtifactsCIDRs"></span>    AllowNondistributableArtifactsCIDRs     []*<a href="index.html#NetIPNet">NetIPNet</a>
+<span id="ServiceConfig.AllowNondistributableArtifactsHostnames"></span>    AllowNondistributableArtifactsHostnames []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ServiceConfig.InsecureRegistryCIDRs"></span>    InsecureRegistryCIDRs                   []*<a href="index.html#NetIPNet">NetIPNet</a>           `json:&#34;InsecureRegistryCIDRs&#34;`
+<span id="ServiceConfig.IndexConfigs"></span>    IndexConfigs                            map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="index.html#IndexInfo">IndexInfo</a> `json:&#34;IndexConfigs&#34;`
+<span id="ServiceConfig.Mirrors"></span>    Mirrors                                 []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>cli - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package cli</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/integration-cli/cli"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#Args">func Args(args ...string) icmd.Cmd</a></dd>
+			
+				
+				<dd><a href="index.html#Build">func Build(name string) icmd.Cmd</a></dd>
+			
+				
+				<dd><a href="index.html#BuildCmd">func BuildCmd(t testingT, name string, cmdOperators ...CmdOperator) *icmd.Result</a></dd>
+			
+				
+				<dd><a href="index.html#Daemon">func Daemon(d *daemon.Daemon) func(*icmd.Cmd) func()</a></dd>
+			
+				
+				<dd><a href="index.html#Docker">func Docker(cmd icmd.Cmd, cmdOperators ...CmdOperator) *icmd.Result</a></dd>
+			
+				
+				<dd><a href="index.html#DockerCmd">func DockerCmd(t testingT, args ...string) *icmd.Result</a></dd>
+			
+				
+				<dd><a href="index.html#Format">func Format(format string) func(*icmd.Cmd) func()</a></dd>
+			
+				
+				<dd><a href="index.html#InDir">func InDir(path string) func(*icmd.Cmd) func()</a></dd>
+			
+				
+				<dd><a href="index.html#Inspect">func Inspect(name string) icmd.Cmd</a></dd>
+			
+				
+				<dd><a href="index.html#InspectCmd">func InspectCmd(t testingT, name string, cmdOperators ...CmdOperator) *icmd.Result</a></dd>
+			
+				
+				<dd><a href="index.html#SetTestEnvironment">func SetTestEnvironment(env *environment.Execution)</a></dd>
+			
+				
+				<dd><a href="index.html#WaitExited">func WaitExited(t testingT, name string, timeout time.Duration, cmdOperators ...CmdOperator)</a></dd>
+			
+				
+				<dd><a href="index.html#WaitForInspectResult">func WaitForInspectResult(t testingT, name, expr, expected string, timeout time.Duration, cmdOperators ...CmdOperator)</a></dd>
+			
+				
+				<dd><a href="index.html#WaitRestart">func WaitRestart(t testingT, name string, timeout time.Duration, cmdOperators ...CmdOperator)</a></dd>
+			
+				
+				<dd><a href="index.html#WaitRun">func WaitRun(t testingT, name string, cmdOperators ...CmdOperator)</a></dd>
+			
+				
+				<dd><a href="index.html#WithEnvironmentVariables">func WithEnvironmentVariables(envs ...string) func(cmd *icmd.Cmd) func()</a></dd>
+			
+				
+				<dd><a href="index.html#WithFlags">func WithFlags(flags ...string) func(*icmd.Cmd) func()</a></dd>
+			
+				
+				<dd><a href="index.html#WithStdin">func WithStdin(stdin io.Reader) func(*icmd.Cmd) func()</a></dd>
+			
+				
+				<dd><a href="index.html#WithStdout">func WithStdout(writer io.Writer) func(*icmd.Cmd) func()</a></dd>
+			
+				
+				<dd><a href="index.html#WithTimeout">func WithTimeout(timeout time.Duration) func(cmd *icmd.Cmd) func()</a></dd>
+			
+			
+				
+				<dd><a href="index.html#CmdOperator">type CmdOperator</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go">cli.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="Args">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=4842:4876#L151">Args</a>
+				<a class="permalink" href="index.html#Args">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Args">Args</a>(args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a></pre>
+			<p>
+Args build an icmd.Cmd struct from the specified arguments
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Build">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=4148:4180#L126">Build</a>
+				<a class="permalink" href="index.html#Build">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Build">Build</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a></pre>
+			<p>
+Build executes the specified docker build command
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="BuildCmd">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=970:1050#L29">BuildCmd</a>
+				<a class="permalink" href="index.html#BuildCmd">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#BuildCmd">BuildCmd</a>(t testingT, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, cmdOperators ...<a href="index.html#CmdOperator">CmdOperator</a>) *<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Result">Result</a></pre>
+			<p>
+BuildCmd executes the specified docker build command and expect a success
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Daemon">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=5069:5121#L163">Daemon</a>
+				<a class="permalink" href="index.html#Daemon">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Daemon">Daemon</a>(d *<a href="../daemon/index.html">daemon</a>.<a href="../daemon/index.html#Daemon">Daemon</a>) func(*<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+Daemon points to the specified daemon
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Docker">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=3191:3258#L91">Docker</a>
+				<a class="permalink" href="index.html#Docker">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Docker">Docker</a>(cmd <a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>, cmdOperators ...<a href="index.html#CmdOperator">CmdOperator</a>) *<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Result">Result</a></pre>
+			<p>
+Docker executes the specified docker command
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DockerCmd">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=778:833#L24">DockerCmd</a>
+				<a class="permalink" href="index.html#DockerCmd">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DockerCmd">DockerCmd</a>(t testingT, args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Result">Result</a></pre>
+			<p>
+DockerCmd executes the specified docker command and expect a success
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Format">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=4418:4467#L136">Format</a>
+				<a class="permalink" href="index.html#Format">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Format">Format</a>(format <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+Format sets the specified format with --format flag
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="InDir">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=5978:6024#L195">InDir</a>
+				<a class="permalink" href="index.html#InDir">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#InDir">InDir</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+InDir sets the folder in which the command should be executed
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Inspect">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=4285:4319#L131">Inspect</a>
+				<a class="permalink" href="index.html#Inspect">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Inspect">Inspect</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a></pre>
+			<p>
+Inspect executes the specified docker inspect command
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="InspectCmd">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=1206:1288#L34">InspectCmd</a>
+				<a class="permalink" href="index.html#InspectCmd">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#InspectCmd">InspectCmd</a>(t testingT, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, cmdOperators ...<a href="index.html#CmdOperator">CmdOperator</a>) *<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Result">Result</a></pre>
+			<p>
+InspectCmd executes the specified docker inspect command and expect a success
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetTestEnvironment">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=428:479#L10">SetTestEnvironment</a>
+				<a class="permalink" href="index.html#SetTestEnvironment">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SetTestEnvironment">SetTestEnvironment</a>(env *<a href="../environment/index.html">environment</a>.<a href="../environment/index.html#Execution">Execution</a>)</pre>
+			<p>
+SetTestEnvironment sets a static test environment
+TODO: decouple this package from environment
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WaitExited">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=1749:1841#L45">WaitExited</a>
+				<a class="permalink" href="index.html#WaitExited">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WaitExited">WaitExited</a>(t testingT, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, timeout <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, cmdOperators ...<a href="index.html#CmdOperator">CmdOperator</a>)</pre>
+			<p>
+WaitExited will wait for the specified container to state exit, subject
+to a maximum time limit in seconds supplied by the caller
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WaitForInspectResult">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=2310:2428#L55">WaitForInspectResult</a>
+				<a class="permalink" href="index.html#WaitForInspectResult">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WaitForInspectResult">WaitForInspectResult</a>(t testingT, name, expr, expected <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, timeout <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, cmdOperators ...<a href="index.html#CmdOperator">CmdOperator</a>)</pre>
+			<p>
+WaitForInspectResult waits for the specified expression to be equals to the specified expected string in the given time.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WaitRestart">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=2004:2097#L50">WaitRestart</a>
+				<a class="permalink" href="index.html#WaitRestart">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WaitRestart">WaitRestart</a>(t testingT, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, timeout <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, cmdOperators ...<a href="index.html#CmdOperator">CmdOperator</a>)</pre>
+			<p>
+WaitRestart will wait for the specified container to restart once
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WaitRun">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=1448:1514#L39">WaitRun</a>
+				<a class="permalink" href="index.html#WaitRun">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WaitRun">WaitRun</a>(t testingT, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, cmdOperators ...<a href="index.html#CmdOperator">CmdOperator</a>)</pre>
+			<p>
+WaitRun will wait for the specified container to be running, maximum 5 seconds.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithEnvironmentVariables">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=5545:5617#L179">WithEnvironmentVariables</a>
+				<a class="permalink" href="index.html#WithEnvironmentVariables">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithEnvironmentVariables">WithEnvironmentVariables</a>(envs ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(cmd *<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+WithEnvironmentVariables sets the specified environment variables for the command to run
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithFlags">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=5754:5808#L187">WithFlags</a>
+				<a class="permalink" href="index.html#WithFlags">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithFlags">WithFlags</a>(flags ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+WithFlags sets the specified flags for the command to run
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithStdin">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=6358:6412#L211">WithStdin</a>
+				<a class="permalink" href="index.html#WithStdin">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithStdin">WithStdin</a>(stdin <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) func(*<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+WithStdin sets the standard input reader for the command
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithStdout">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=6161:6217#L203">WithStdout</a>
+				<a class="permalink" href="index.html#WithStdout">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithStdout">WithStdout</a>(writer <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) func(*<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+WithStdout sets the standard output writer of the command
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="WithTimeout">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=5304:5370#L171">WithTimeout</a>
+				<a class="permalink" href="index.html#WithTimeout">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WithTimeout">WithTimeout</a>(timeout <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>) func(cmd *<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+			<p>
+WithTimeout sets the timeout for the command to run
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="CmdOperator">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/cli/cli.go?s=559:598#L15">CmdOperator</a>
+				<a class="permalink" href="index.html#CmdOperator">&#xb6;</a>
+			</h2>
+			<p>
+CmdOperator defines functions that can modify a command
+</p>
+
+			<pre>type CmdOperator func(*<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a>) func()</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="build/index.html">build</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

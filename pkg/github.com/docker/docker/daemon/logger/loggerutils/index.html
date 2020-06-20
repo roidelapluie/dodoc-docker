@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>loggerutils - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package loggerutils</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/logger/loggerutils"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#ParseLogTag">func ParseLogTag(info logger.Info, defaultTemplate string) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#GetTailReaderFunc">type GetTailReaderFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogFile">type LogFile</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewLogFile">func NewLogFile(logPath string, capacity int64, maxFiles int, compress bool, marshaller logger.MarshalFunc, decodeFunc makeDecoderFunc, perms os.FileMode, getTailReader GetTailReaderFunc) (*LogFile, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogFile.Close">func (w *LogFile) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogFile.MaxFiles">func (w *LogFile) MaxFiles() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogFile.ReadLogs">func (w *LogFile) ReadLogs(config logger.ReadConfig, watcher *logger.LogWatcher)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogFile.WriteLogEntry">func (w *LogFile) WriteLogEntry(msg *logger.Message) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SizeReaderAt">type SizeReaderAt</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/file_unix.go">file_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/log_tag.go">log_tag.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go">logfile.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+DefaultTemplate defines the defaults template logger should use.
+</p>
+
+				<pre>const <span id="DefaultTemplate">DefaultTemplate</span> = &#34;{{.ID}}&#34;</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="ParseLogTag">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/log_tag.go?s=443:517#L5">ParseLogTag</a>
+				<a class="permalink" href="index.html#ParseLogTag">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseLogTag">ParseLogTag</a>(info <a href="../index.html">logger</a>.<a href="../index.html#Info">Info</a>, defaultTemplate <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseLogTag generates a context aware tag for consistency across different
+log drivers based on the context of the running container.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="GetTailReaderFunc">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=2991:3109#L100">GetTailReaderFunc</a>
+				<a class="permalink" href="index.html#GetTailReaderFunc">&#xb6;</a>
+			</h2>
+			<p>
+GetTailReaderFunc is used to truncate a reader to only read as much as is required
+in order to get the passed in number of log lines.
+It returns the sectioned reader, the number of lines that the section reader
+contains, and any error that occurs.
+</p>
+
+			<pre>type GetTailReaderFunc func(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, f <a href="index.html#SizeReaderAt">SizeReaderAt</a>, nLogLines <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) (rdr <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, nLines <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogFile">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=1684:2493#L69">LogFile</a>
+				<a class="permalink" href="index.html#LogFile">&#xb6;</a>
+			</h2>
+			<p>
+LogFile is Logger implementation for default Docker logging.
+</p>
+
+			<pre>type LogFile struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLogFile">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=3145:3350#L103">NewLogFile</a>
+					<a class="permalink" href="index.html#NewLogFile">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewLogFile">NewLogFile</a>(logPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, capacity <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, maxFiles <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, compress <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, marshaller <a href="../index.html">logger</a>.<a href="../index.html#MarshalFunc">MarshalFunc</a>, decodeFunc makeDecoderFunc, perms <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#FileMode">FileMode</a>, getTailReader <a href="index.html#GetTailReaderFunc">GetTailReaderFunc</a>) (*<a href="index.html#LogFile">LogFile</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewLogFile creates new LogFile
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="LogFile.Close">func (*LogFile) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=7624:7655#L283">Close</a>
+					<a class="permalink" href="index.html#LogFile.Close">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogFile">LogFile</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close closes underlying file and signals all readers to stop.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogFile.MaxFiles">func (*LogFile) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=7502:7534#L278">MaxFiles</a>
+					<a class="permalink" href="index.html#LogFile.MaxFiles">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogFile">LogFile</a>) <a href="index.html#MaxFiles">MaxFiles</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+MaxFiles return maximum number of files
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogFile.ReadLogs">func (*LogFile) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=8115:8195#L300">ReadLogs</a>
+					<a class="permalink" href="index.html#LogFile.ReadLogs">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogFile">LogFile</a>) <a href="index.html#ReadLogs">ReadLogs</a>(config <a href="../index.html">logger</a>.<a href="../index.html#ReadConfig">ReadConfig</a>, watcher *<a href="../index.html">logger</a>.<a href="../index.html#LogWatcher">LogWatcher</a>)</pre>
+				<p>
+ReadLogs decodes entries from log files and sends them the passed in watcher
+</p>
+<p>
+Note: Using the follow option can become inconsistent in cases with very frequent rotations and max log files is 1.
+TODO: Consider a different implementation which can effectively follow logs under frequent rotations.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogFile.WriteLogEntry">func (*LogFile) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=4092:4150#L131">WriteLogEntry</a>
+					<a class="permalink" href="index.html#LogFile.WriteLogEntry">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogFile">LogFile</a>) <a href="index.html#WriteLogEntry">WriteLogEntry</a>(msg *<a href="../index.html">logger</a>.<a href="../index.html#Message">Message</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+WriteLogEntry writes the provided log message to the current log file.
+This may trigger a rotation event if the max file/capacity limits are hit.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SizeReaderAt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loggerutils/logfile.go?s=2671:2729#L91">SizeReaderAt</a>
+				<a class="permalink" href="index.html#SizeReaderAt">&#xb6;</a>
+			</h2>
+			<p>
+SizeReaderAt defines a ReaderAt that also reports its size.
+This is used for tailing log files.
+</p>
+
+			<pre>type SizeReaderAt interface {
+    <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReaderAt">ReaderAt</a>
+    Size() <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>backend - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package backend</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/backend"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package backend includes types to send information to server backends.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#BuildConfig">type BuildConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CommitConfig">type CommitConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerAttachConfig">type ContainerAttachConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerStatsConfig">type ContainerStatsConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CreateImageConfig">type CreateImageConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExecInspect">type ExecInspect</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ExecProcessConfig">type ExecProcessConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#GetImageAndLayerOptions">type GetImageAndLayerOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogAttr">type LogAttr</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogMessage">type LogMessage</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogSelector">type LogSelector</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PartialLogMetaData">type PartialLogMetaData</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ProgressWriter">type ProgressWriter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PullOption">type PullOption</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go">backend.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/build.go">build.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="BuildConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/build.go?s=982:1111#L23">BuildConfig</a>
+				<a class="permalink" href="index.html#BuildConfig">&#xb6;</a>
+			</h2>
+			<p>
+BuildConfig is the configuration used by a BuildManager to start a build
+</p>
+
+			<pre>type BuildConfig struct {
+<span id="BuildConfig.Source"></span>    Source         <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>
+<span id="BuildConfig.ProgressWriter"></span>    ProgressWriter <a href="index.html#ProgressWriter">ProgressWriter</a>
+<span id="BuildConfig.Options"></span>    Options        *<a href="../index.html">types</a>.<a href="../index.html#ImageBuildOptions">ImageBuildOptions</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommitConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=4084:4358#L109">CommitConfig</a>
+				<a class="permalink" href="index.html#CommitConfig">&#xb6;</a>
+			</h2>
+			<p>
+CommitConfig is the configuration for creating an image as part of a build.
+</p>
+
+			<pre>type CommitConfig struct {
+<span id="CommitConfig.Author"></span>    Author              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CommitConfig.Comment"></span>    Comment             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CommitConfig.Config"></span>    Config              *<a href="../container/index.html">container</a>.<a href="../container/index.html#Config">Config</a>
+<span id="CommitConfig.ContainerConfig"></span>    ContainerConfig     *<a href="../container/index.html">container</a>.<a href="../container/index.html#Config">Config</a>
+<span id="CommitConfig.ContainerID"></span>    ContainerID         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CommitConfig.ContainerMountLabel"></span>    ContainerMountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CommitConfig.ContainerOS"></span>    ContainerOS         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CommitConfig.ParentImageID"></span>    ParentImageID       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerAttachConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=316:1156#L2">ContainerAttachConfig</a>
+				<a class="permalink" href="index.html#ContainerAttachConfig">&#xb6;</a>
+			</h2>
+			<p>
+ContainerAttachConfig holds the streams to use when connecting to a container to view logs.
+</p>
+
+			<pre>type ContainerAttachConfig struct {
+<span id="ContainerAttachConfig.GetStreams"></span>    GetStreams func() (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+<span id="ContainerAttachConfig.UseStdin"></span>    UseStdin   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ContainerAttachConfig.UseStdout"></span>    UseStdout  <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ContainerAttachConfig.UseStderr"></span>    UseStderr  <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ContainerAttachConfig.Logs"></span>    Logs       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ContainerAttachConfig.Stream"></span>    Stream     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ContainerAttachConfig.DetachKeys"></span>    DetachKeys <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Used to signify that streams are multiplexed and therefore need a StdWriter to encode stdout/stderr messages accordingly.</span>
+    <span class="comment">// TODO @cpuguy83: This shouldn&#39;t be needed. It was only added so that http and websocket endpoints can use the same function, and the websocket function was not using a stdwriter prior to this change...</span>
+    <span class="comment">// HOWEVER, the websocket endpoint is using a single stream and SHOULD be encoded with stdout/stderr as is done for HTTP since it is still just a single stream.</span>
+    <span class="comment">// Since such a change is an API change unrelated to the current changeset we&#39;ll keep it as is here and change separately.</span>
+<span id="ContainerAttachConfig.MuxStreams"></span>    MuxStreams <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerStatsConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=2983:3074#L64">ContainerStatsConfig</a>
+				<a class="permalink" href="index.html#ContainerStatsConfig">&#xb6;</a>
+			</h2>
+			<p>
+ContainerStatsConfig holds information for configuring the runtime
+behavior of a backend.ContainerStats() call.
+</p>
+
+			<pre>type ContainerStatsConfig struct {
+<span id="ContainerStatsConfig.Stream"></span>    Stream    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ContainerStatsConfig.OutStream"></span>    OutStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+<span id="ContainerStatsConfig.Version"></span>    Version   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CreateImageConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=3847:4003#L98">CreateImageConfig</a>
+				<a class="permalink" href="index.html#CreateImageConfig">&#xb6;</a>
+			</h2>
+			<p>
+CreateImageConfig is the configuration for creating an image from a
+container.
+</p>
+
+			<pre>type CreateImageConfig struct {
+<span id="CreateImageConfig.Repo"></span>    Repo    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CreateImageConfig.Tag"></span>    Tag     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CreateImageConfig.Pause"></span>    Pause   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="CreateImageConfig.Author"></span>    Author  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CreateImageConfig.Comment"></span>    Comment <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CreateImageConfig.Config"></span>    Config  *<a href="../container/index.html">container</a>.<a href="../container/index.html#Config">Config</a>
+<span id="CreateImageConfig.Changes"></span>    Changes []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ExecInspect">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=3162:3428#L72">ExecInspect</a>
+				<a class="permalink" href="index.html#ExecInspect">&#xb6;</a>
+			</h2>
+			<p>
+ExecInspect holds information about a running process started
+with docker exec.
+</p>
+
+			<pre>type ExecInspect struct {
+<span id="ExecInspect.ID"></span>    ID            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ExecInspect.Running"></span>    Running       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ExecInspect.ExitCode"></span>    ExitCode      *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="ExecInspect.ProcessConfig"></span>    ProcessConfig *<a href="index.html#ExecProcessConfig">ExecProcessConfig</a>
+<span id="ExecInspect.OpenStdin"></span>    OpenStdin     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ExecInspect.OpenStderr"></span>    OpenStderr    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ExecInspect.OpenStdout"></span>    OpenStdout    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ExecInspect.CanRemove"></span>    CanRemove     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="ExecInspect.ContainerID"></span>    ContainerID   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ExecInspect.DetachKeys"></span>    DetachKeys    []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>
+<span id="ExecInspect.Pid"></span>    Pid           <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ExecProcessConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=3516:3760#L88">ExecProcessConfig</a>
+				<a class="permalink" href="index.html#ExecProcessConfig">&#xb6;</a>
+			</h2>
+			<p>
+ExecProcessConfig holds information about the exec process
+running on the host.
+</p>
+
+			<pre>type ExecProcessConfig struct {
+<span id="ExecProcessConfig.Tty"></span>    Tty        <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>     `json:&#34;tty&#34;`
+<span id="ExecProcessConfig.Entrypoint"></span>    Entrypoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;entrypoint&#34;`
+<span id="ExecProcessConfig.Arguments"></span>    Arguments  []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;arguments&#34;`
+<span id="ExecProcessConfig.Privileged"></span>    Privileged *<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>    `json:&#34;privileged,omitempty&#34;`
+<span id="ExecProcessConfig.User"></span>    User       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;user,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="GetImageAndLayerOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/build.go?s=1196:1348#L30">GetImageAndLayerOptions</a>
+				<a class="permalink" href="index.html#GetImageAndLayerOptions">&#xb6;</a>
+			</h2>
+			<p>
+GetImageAndLayerOptions are the options supported by GetImageAndReleasableLayer
+</p>
+
+			<pre>type GetImageAndLayerOptions struct {
+<span id="GetImageAndLayerOptions.PullOption"></span>    PullOption <a href="index.html#PullOption">PullOption</a>
+<span id="GetImageAndLayerOptions.AuthConfig"></span>    AuthConfig map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../index.html">types</a>.<a href="../index.html#AuthConfig">AuthConfig</a>
+<span id="GetImageAndLayerOptions.Output"></span>    Output     <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+<span id="GetImageAndLayerOptions.Platform"></span>    Platform   *<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogAttr">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=2359:2410#L47">LogAttr</a>
+				<a class="permalink" href="index.html#LogAttr">&#xb6;</a>
+			</h2>
+			<p>
+LogAttr is used to hold the extra attributes available in the log message.
+</p>
+
+			<pre>type LogAttr struct {
+<span id="LogAttr.Key"></span>    Key   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="LogAttr.Value"></span>    Value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogMessage">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=1934:2279#L33">LogMessage</a>
+				<a class="permalink" href="index.html#LogMessage">&#xb6;</a>
+			</h2>
+			<p>
+LogMessage is datastructure that represents piece of output produced by some
+container.  The Line member is a slice of an array whose contents can be
+changed after a log driver&#39;s Log() method returns.
+changes to this struct need to be reflect in the reset method in
+daemon/logger/logger.go
+</p>
+
+			<pre>type LogMessage struct {
+<span id="LogMessage.Line"></span>    Line         []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>
+<span id="LogMessage.Source"></span>    Source       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="LogMessage.Timestamp"></span>    Timestamp    <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="LogMessage.Attrs"></span>    Attrs        []<a href="index.html#LogAttr">LogAttr</a>
+<span id="LogMessage.PLogMetaData"></span>    PLogMetaData *<a href="index.html#PartialLogMetaData">PartialLogMetaData</a>
+
+<span id="LogMessage.Err"></span>    <span class="comment">// Err is an error associated with a message. Completeness of a message</span>
+    <span class="comment">// with Err is not expected, tho it may be partially complete (fields may</span>
+    <span class="comment">// be missing, gibberish, or nil)</span>
+    Err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogSelector">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=2798:2863#L57">LogSelector</a>
+				<a class="permalink" href="index.html#LogSelector">&#xb6;</a>
+			</h2>
+			<p>
+LogSelector is a list of services and tasks that should be returned as part
+of a log stream. It is similar to swarmapi.LogSelector, with the difference
+that the names don&#39;t have to be resolved to IDs; this is mostly to avoid
+accidents later where a swarmapi LogSelector might have been incorrectly
+used verbatim (and to avoid the handler having to import swarmapi types)
+</p>
+
+			<pre>type LogSelector struct {
+<span id="LogSelector.Services"></span>    Services []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="LogSelector.Tasks"></span>    Tasks    []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PartialLogMetaData">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/backend.go?s=1402:1627#L22">PartialLogMetaData</a>
+				<a class="permalink" href="index.html#PartialLogMetaData">&#xb6;</a>
+			</h2>
+			<p>
+PartialLogMetaData provides meta data for a partial log message. Messages
+exceeding a predefined size are split into chunks with this metadata. The
+expectation is for the logger endpoints to assemble the chunks using this
+metadata.
+</p>
+
+			<pre>type PartialLogMetaData struct {
+<span id="PartialLogMetaData.Last"></span>    Last    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   <span class="comment">//true if this message is last of a partial</span>
+<span id="PartialLogMetaData.ID"></span>    ID      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">// identifies group of messages comprising a single record</span>
+<span id="PartialLogMetaData.Ordinal"></span>    Ordinal <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>    <span class="comment">// ordering of message in partial group</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ProgressWriter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/build.go?s=680:904#L14">ProgressWriter</a>
+				<a class="permalink" href="index.html#ProgressWriter">&#xb6;</a>
+			</h2>
+			<p>
+ProgressWriter is a data object to transport progress streams to the client
+</p>
+
+			<pre>type ProgressWriter struct {
+<span id="ProgressWriter.Output"></span>    Output             <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+<span id="ProgressWriter.StdoutFormatter"></span>    StdoutFormatter    <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+<span id="ProgressWriter.StderrFormatter"></span>    StderrFormatter    <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+<span id="ProgressWriter.AuxFormatter"></span>    AuxFormatter       *<a href="../../../pkg/streamformatter/index.html">streamformatter</a>.<a href="../../../pkg/streamformatter/index.html#AuxFormatter">AuxFormatter</a>
+<span id="ProgressWriter.ProgressReaderFunc"></span>    ProgressReaderFunc func(<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PullOption">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/backend/build.go?s=294:313#L2">PullOption</a>
+				<a class="permalink" href="index.html#PullOption">&#xb6;</a>
+			</h2>
+			<p>
+PullOption defines different modes for accessing images
+</p>
+
+			<pre>type PullOption <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// PullOptionNoPull only returns local images</span>
+    <span id="PullOptionNoPull">PullOptionNoPull</span> <a href="index.html#PullOption">PullOption</a> = <a href="http://127.0.0.1:8080/pkg/builtin/#iota">iota</a>
+    <span class="comment">// PullOptionForcePull always tries to pull a ref from the registry first</span>
+    <span id="PullOptionForcePull">PullOptionForcePull</span>
+    <span class="comment">// PullOptionPreferLocal uses local image if it exists, otherwise pulls</span>
+    <span id="PullOptionPreferLocal">PullOptionPreferLocal</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

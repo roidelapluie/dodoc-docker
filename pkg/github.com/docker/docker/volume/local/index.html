@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>local - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package local</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/volume/local"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package local provides the default implementation for volumes. It
+is used to mount data volume containers and directories local to
+the host server.
+</p>
+<p>
+Package local provides the default implementation for volumes. It
+is used to mount data volume containers and directories local to
+the host server.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#Root">type Root</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(scope string, rootIdentity idtools.Identity) (*Root, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Root.Create">func (r *Root) Create(name string, opts map[string]string) (volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Root.DataPath">func (r *Root) DataPath(volumeName string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Root.Get">func (r *Root) Get(name string) (volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Root.List">func (r *Root) List() ([]volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Root.Name">func (r *Root) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Root.Remove">func (r *Root) Remove(v volume.Volume) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Root.Scope">func (r *Root) Scope() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go">local.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local_unix.go">local_unix.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+VolumeDataPathName is the name of the directory where the volume data is stored.
+It uses a very distinctive name to avoid collisions migrating data between
+Docker versions.
+</p>
+
+				<pre>const (
+    <span id="VolumeDataPathName">VolumeDataPathName</span> = &#34;_data&#34;
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrNotFound is the typed error returned when the requested volume name can&#39;t be found</span>
+    <span id="ErrNotFound">ErrNotFound</span> = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Errorf">Errorf</a>(&#34;volume not found&#34;)
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="Root">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=2981:3137#L93">Root</a>
+				<a class="permalink" href="index.html#Root">&#xb6;</a>
+			</h2>
+			<p>
+Root implements the Driver interface for the volume package and
+manages the creation/removal of volumes. It uses only standard vfs
+commands to create/remove dirs within its provided scope.
+</p>
+
+			<pre>type Root struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=1455:1523#L39">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>(scope <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, rootIdentity <a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#Identity">Identity</a>) (*<a href="index.html#Root">Root</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+New instantiates a new Root instance with the provided scope. Scope
+is the base path that the Root instance uses to store its
+volumes. The base path is created here if it does not exist.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Root.Create">func (*Root) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=3830:3911#L125">Create</a>
+					<a class="permalink" href="index.html#Root.Create">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Root">Root</a>) <a href="index.html#Create">Create</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Create creates a new volume.Volume with the provided name, creating
+the underlying directory tree required for this volume in the
+process.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Root.DataPath">func (*Root) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=3399:3448#L113">DataPath</a>
+					<a class="permalink" href="index.html#Root.DataPath">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Root">Root</a>) <a href="index.html#DataPath">DataPath</a>(volumeName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+DataPath returns the constructed path of this volume.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Root.Get">func (*Root) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=6210:6264#L226">Get</a>
+					<a class="permalink" href="index.html#Root.Get">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Root">Root</a>) <a href="index.html#Get">Get</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get looks up the volume for the given name and returns it if found
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Root.List">func (*Root) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=3169:3215#L102">List</a>
+					<a class="permalink" href="index.html#Root.List">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Root">Root</a>) <a href="index.html#List">List</a>() ([]<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+List lists all the volumes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Root.Name">func (*Root) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=3615:3643#L118">Name</a>
+					<a class="permalink" href="index.html#Root.Name">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Root">Root</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the name of Root, defined in the volume package in the DefaultDriverName constant.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Root.Remove">func (*Root) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=5121:5165#L178">Remove</a>
+					<a class="permalink" href="index.html#Root.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Root">Root</a>) <a href="index.html#Remove">Remove</a>(v <a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Remove removes the specified volume and all underlying data. If the
+given volume does not belong to this driver and an error is
+returned. The volume is reference counted, if all references are
+not released then the volume is not removed.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Root.Scope">func (*Root) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/local/local.go?s=6424:6453#L237">Scope</a>
+					<a class="permalink" href="index.html#Root.Scope">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Root">Root</a>) <a href="index.html#Scope">Scope</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Scope returns the local volume scope
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

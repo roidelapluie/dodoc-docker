@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>mounts - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package mounts</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/volume/mounts"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#MountPoint">type MountPoint</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MountPoint.Cleanup">func (m *MountPoint) Cleanup() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MountPoint.Path">func (m *MountPoint) Path() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MountPoint.Setup">func (m *MountPoint) Setup(mountLabel string, rootIDs idtools.Identity, checkFun func(m *MountPoint) error) (path string, err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Parser">type Parser</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewParser">func NewParser(containerOS string) Parser</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/lcow_parser.go">lcow_parser.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/linux_parser.go">linux_parser.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/mounts.go">mounts.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/parser.go">parser.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/validate.go">validate.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/volume_copy.go">volume_copy.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/volume_unix.go">volume_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/windows_parser.go">windows_parser.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// OSLinux is the same as runtime.GOOS on linux</span>
+    <span id="OSLinux">OSLinux</span> = &#34;linux&#34;
+    <span class="comment">// OSWindows is the same as runtime.GOOS on windows</span>
+    <span id="OSWindows">OSWindows</span> = &#34;windows&#34;
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+ErrVolumeTargetIsRoot is returned when the target destination is root.
+It&#39;s used by both LCOW and Linux parsers.
+</p>
+
+				<pre>var <span id="ErrVolumeTargetIsRoot">ErrVolumeTargetIsRoot</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;invalid specification: destination can&#39;t be &#39;/&#39;&#34;)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="MountPoint">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/mounts.go?s=699:3171#L13">MountPoint</a>
+				<a class="permalink" href="index.html#MountPoint">&#xb6;</a>
+			</h2>
+			<p>
+MountPoint is the intersection point between a volume and a container. It
+specifies which volume is to be used and where inside a container it should
+be mounted.
+</p>
+<p>
+Note that this type is embedded in `container.Container` object and persisted to disk.
+Changes to this struct need to by synced with on disk state.
+</p>
+
+			<pre>type MountPoint struct {
+<span id="MountPoint.Source"></span>    <span class="comment">// Source is the source path of the mount.</span>
+    <span class="comment">// E.g. `mount --bind /foo /bar`, `/foo` is the `Source`.</span>
+    Source <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="MountPoint.Destination"></span>    <span class="comment">// Destination is the path relative to the container root (`/`) to the mount point</span>
+    <span class="comment">// It is where the `Source` is mounted to</span>
+    Destination <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="MountPoint.RW"></span>    <span class="comment">// RW is set to true when the mountpoint should be mounted as read-write</span>
+    RW <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="MountPoint.Name"></span>    <span class="comment">// Name is the name reference to the underlying data defined by `Source`</span>
+    <span class="comment">// e.g., the volume name</span>
+    Name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="MountPoint.Driver"></span>    <span class="comment">// Driver is the volume driver used to create the volume (if it is a volume)</span>
+    Driver <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="MountPoint.Type"></span>    <span class="comment">// Type of mount to use, see `Type&lt;foo&gt;` definitions in github.com/docker/docker/api/types/mount</span>
+    Type <a href="../../api/types/mount/index.html">mounttypes</a>.<a href="../../api/types/mount/index.html#Type">Type</a> `json:&#34;,omitempty&#34;`
+<span id="MountPoint.Volume"></span>    <span class="comment">// Volume is the volume providing data to this mountpoint.</span>
+    <span class="comment">// This is nil unless `Type` is set to `TypeVolume`</span>
+    Volume <a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a> `json:&#34;-&#34;`
+
+<span id="MountPoint.Mode"></span>    <span class="comment">// Mode is the comma separated list of options supplied by the user when creating</span>
+    <span class="comment">// the bind/volume mount.</span>
+    <span class="comment">// Note Mode is not used on Windows</span>
+    Mode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Relabel,omitempty&#34;` <span class="comment">// Originally field was `Relabel`&#34;</span>
+
+<span id="MountPoint.Propagation"></span>    <span class="comment">// Propagation describes how the mounts are propagated from the host into the</span>
+    <span class="comment">// mount point, and vice-versa.</span>
+    <span class="comment">// See https://www.kernel.org/doc/Documentation/filesystems/sharedsubtree.txt</span>
+    <span class="comment">// Note Propagation is not used on Windows</span>
+    Propagation <a href="../../api/types/mount/index.html">mounttypes</a>.<a href="../../api/types/mount/index.html#Propagation">Propagation</a> `json:&#34;,omitempty&#34;` <span class="comment">// Mount propagation string</span>
+
+    <span class="comment">// Specifies if data should be copied from the container before the first mount</span>
+    <span class="comment">// Use a pointer here so we can tell if the user set this value explicitly</span>
+    <span class="comment">// This allows us to error out when the user explicitly enabled copy but we can&#39;t copy due to the volume being populated</span>
+<span id="MountPoint.CopyData"></span>    CopyData <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;-&#34;`
+<span id="MountPoint.ID"></span>    <span class="comment">// ID is the opaque ID used to pass to the volume driver.</span>
+    <span class="comment">// This should be set by calls to `Mount` and unset by calls to `Unmount`</span>
+    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+
+    <span class="comment">// Sepc is a copy of the API request that created this mount.</span>
+<span id="MountPoint.Spec"></span>    Spec <a href="../../api/types/mount/index.html">mounttypes</a>.<a href="../../api/types/mount/index.html#Mount">Mount</a>
+
+    <span class="comment">// Some bind mounts should not be automatically created.</span>
+    <span class="comment">// (Some are auto-created for backwards-compatibility)</span>
+    <span class="comment">// This is checked on the API but setting this here prevents race conditions.</span>
+    <span class="comment">// where a bind dir existed during validation was removed before reaching the setup code.</span>
+<span id="MountPoint.SkipMountpointCreation"></span>    SkipMountpointCreation <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MountPoint.Cleanup">func (*MountPoint) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/mounts.go?s=3223:3259#L68">Cleanup</a>
+					<a class="permalink" href="index.html#MountPoint.Cleanup">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MountPoint">MountPoint</a>) <a href="index.html#Cleanup">Cleanup</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Cleanup frees resources used by the mountpoint
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MountPoint.Path">func (*MountPoint) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/mounts.go?s=5784:5818#L158">Path</a>
+					<a class="permalink" href="index.html#MountPoint.Path">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MountPoint">MountPoint</a>) <a href="index.html#Path">Path</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Path returns the path of a volume in a mount point.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MountPoint.Setup">func (*MountPoint) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/mounts.go?s=3757:3889#L88">Setup</a>
+					<a class="permalink" href="index.html#MountPoint.Setup">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MountPoint">MountPoint</a>) <a href="index.html#Setup">Setup</a>(mountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, rootIDs <a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#Identity">Identity</a>, checkFun func(m *<a href="index.html#MountPoint">MountPoint</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) (path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Setup sets up a mount point by either mounting the volume if it is
+configured, or creating the source directory if supplied.
+The, optional, checkFun parameter allows doing additional checking
+before creating the source directory on the host.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Parser">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/parser.go?s=580:1174#L12">Parser</a>
+				<a class="permalink" href="index.html#Parser">&#xb6;</a>
+			</h2>
+			<p>
+Parser represents a platform specific parser for mount expressions
+</p>
+
+			<pre>type Parser interface {
+    ParseMountRaw(raw, volumeDriver <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#MountPoint">MountPoint</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    ParseMountSpec(cfg <a href="../../api/types/mount/index.html">mount</a>.<a href="../../api/types/mount/index.html#Mount">Mount</a>) (*<a href="index.html#MountPoint">MountPoint</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    ParseVolumesFrom(spec <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    DefaultPropagationMode() <a href="../../api/types/mount/index.html">mount</a>.<a href="../../api/types/mount/index.html#Propagation">Propagation</a>
+    ConvertTmpfsOptions(opt *<a href="../../api/types/mount/index.html">mount</a>.<a href="../../api/types/mount/index.html#TmpfsOptions">TmpfsOptions</a>, readOnly <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    DefaultCopyMode() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    ValidateVolumeName(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    ReadWrite(mode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    IsBackwardCompatible(m *<a href="index.html#MountPoint">MountPoint</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    HasResource(m *<a href="index.html#MountPoint">MountPoint</a>, absPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    ValidateTmpfsMountDestination(dest <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    ValidateMountConfig(mt *<a href="../../api/types/mount/index.html">mount</a>.<a href="../../api/types/mount/index.html#Mount">Mount</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewParser">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/mounts/parser.go?s=1321:1362#L28">NewParser</a>
+					<a class="permalink" href="index.html#NewParser">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewParser">NewParser</a>(containerOS <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#Parser">Parser</a></pre>
+				<p>
+NewParser creates a parser for a given container OS, depending on the current host OS (linux on a windows host will resolve to an lcowParser)
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

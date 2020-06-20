@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>opts - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package opts</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/opts"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ParseHost">func ParseHost(defaultToTLS, defaultToUnixXDG bool, val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ParseLink">func ParseLink(val string) (string, string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ParseTCPAddr">func ParseTCPAddr(tryAddr string, defaultAddr string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateDNSSearch">func ValidateDNSSearch(val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateEnv">func ValidateEnv(val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateExtraHost">func ValidateExtraHost(val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateHost">func ValidateHost(val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateIPAddress">func ValidateIPAddress(val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateLabel">func ValidateLabel(val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateSingleGenericResource">func ValidateSingleGenericResource(val string) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#IPOpt">type IPOpt</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewIPOpt">func NewIPOpt(ref *net.IP, defaultVal string) *IPOpt</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IPOpt.Set">func (o *IPOpt) Set(val string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IPOpt.String">func (o *IPOpt) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IPOpt.Type">func (o *IPOpt) Type() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ListOpts">type ListOpts</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewListOpts">func NewListOpts(validator ValidatorFctType) ListOpts</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewListOptsRef">func NewListOptsRef(values *[]string, validator ValidatorFctType) *ListOpts</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.Delete">func (opts *ListOpts) Delete(key string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.Get">func (opts *ListOpts) Get(key string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.GetAll">func (opts *ListOpts) GetAll() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.GetAllOrEmpty">func (opts *ListOpts) GetAllOrEmpty() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.GetMap">func (opts *ListOpts) GetMap() map[string]struct{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.Len">func (opts *ListOpts) Len() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.Set">func (opts *ListOpts) Set(value string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.String">func (opts *ListOpts) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.Type">func (opts *ListOpts) Type() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ListOpts.WithValidator">func (opts *ListOpts) WithValidator(validator ValidatorFctType) *ListOpts</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MapOpts">type MapOpts</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMapOpts">func NewMapOpts(values map[string]string, validator ValidatorFctType) *MapOpts</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MapOpts.GetAll">func (opts *MapOpts) GetAll() map[string]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MapOpts.Set">func (opts *MapOpts) Set(value string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MapOpts.String">func (opts *MapOpts) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MapOpts.Type">func (opts *MapOpts) Type() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#MemBytes">type MemBytes</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MemBytes.Set">func (m *MemBytes) Set(value string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MemBytes.String">func (m *MemBytes) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MemBytes.Type">func (m *MemBytes) Type() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MemBytes.UnmarshalJSON">func (m *MemBytes) UnmarshalJSON(s []byte) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MemBytes.Value">func (m *MemBytes) Value() int64</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NamedListOpts">type NamedListOpts</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewNamedListOptsRef">func NewNamedListOptsRef(name string, values *[]string, validator ValidatorFctType) *NamedListOpts</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NamedListOpts.Name">func (o *NamedListOpts) Name() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NamedMapOpts">type NamedMapOpts</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewNamedMapOpts">func NewNamedMapOpts(name string, values map[string]string, validator ValidatorFctType) *NamedMapOpts</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NamedMapOpts.Name">func (o *NamedMapOpts) Name() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NamedOption">type NamedOption</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NamedUlimitOpt">type NamedUlimitOpt</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewNamedUlimitOpt">func NewNamedUlimitOpt(name string, ref *map[string]*units.Ulimit) *NamedUlimitOpt</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NamedUlimitOpt.Name">func (o *NamedUlimitOpt) Name() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PoolsOpt">type PoolsOpt</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PoolsOpt.Name">func (p *PoolsOpt) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PoolsOpt.Set">func (p *PoolsOpt) Set(value string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PoolsOpt.String">func (p *PoolsOpt) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PoolsOpt.Type">func (p *PoolsOpt) Type() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PoolsOpt.UnmarshalJSON">func (p *PoolsOpt) UnmarshalJSON(raw []byte) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PoolsOpt.Value">func (p *PoolsOpt) Value() []*types.NetworkToSplit</a></dd>
+				
+			
+				
+				<dd><a href="index.html#QuotedString">type QuotedString</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewQuotedString">func NewQuotedString(value *string) *QuotedString</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#QuotedString.Set">func (s *QuotedString) Set(val string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#QuotedString.String">func (s *QuotedString) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#QuotedString.Type">func (s *QuotedString) Type() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RuntimeOpt">type RuntimeOpt</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewNamedRuntimeOpt">func NewNamedRuntimeOpt(name string, ref *map[string]types.Runtime, stockRuntime string) *RuntimeOpt</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RuntimeOpt.GetMap">func (o *RuntimeOpt) GetMap() map[string]types.Runtime</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RuntimeOpt.Name">func (o *RuntimeOpt) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RuntimeOpt.Set">func (o *RuntimeOpt) Set(val string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RuntimeOpt.String">func (o *RuntimeOpt) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RuntimeOpt.Type">func (o *RuntimeOpt) Type() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UlimitOpt">type UlimitOpt</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewUlimitOpt">func NewUlimitOpt(ref *map[string]*units.Ulimit) *UlimitOpt</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UlimitOpt.GetList">func (o *UlimitOpt) GetList() []*units.Ulimit</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UlimitOpt.Set">func (o *UlimitOpt) Set(val string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UlimitOpt.String">func (o *UlimitOpt) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UlimitOpt.Type">func (o *UlimitOpt) Type() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ValidatorFctListType">type ValidatorFctListType</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ValidatorFctType">type ValidatorFctType</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go">address_pools.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/env.go">env.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/hosts.go">hosts.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/hosts_unix.go">hosts_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ip.go">ip.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go">opts.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts_unix.go">opts_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/quotedstring.go">quotedstring.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go">runtime.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go">ulimit.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+DefaultHTTPHost Default HTTP Host used if only port is provided to -H flag e.g. dockerd -H tcp://:8080
+</p>
+
+				<pre>const <span id="DefaultHTTPHost">DefaultHTTPHost</span> = &#34;localhost&#34;</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// DefaultHTTPPort Default HTTP Port used if only the protocol is provided to -H flag e.g. dockerd -H tcp://</span>
+    <span class="comment">// These are the IANA registered port numbers for use with Docker</span>
+    <span class="comment">// see http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=docker</span>
+    <span id="DefaultHTTPPort">DefaultHTTPPort</span> = 2375 <span class="comment">// Default HTTP Port</span>
+    <span class="comment">// DefaultTLSHTTPPort Default HTTP Port used when TLS enabled</span>
+    <span id="DefaultTLSHTTPPort">DefaultTLSHTTPPort</span> = 2376 <span class="comment">// Default TLS encrypted HTTP Port</span>
+    <span class="comment">// DefaultUnixSocket Path for the unix socket.</span>
+    <span class="comment">// Docker daemon by default always listens on the default unix socket</span>
+    <span id="DefaultUnixSocket">DefaultUnixSocket</span> = &#34;/var/run/docker.sock&#34;
+    <span class="comment">// DefaultTCPHost constant defines the default host string used by docker on Windows</span>
+    <span id="DefaultTCPHost">DefaultTCPHost</span> = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Sprintf">Sprintf</a>(&#34;tcp://%s:%d&#34;, <a href="index.html#DefaultHTTPHost">DefaultHTTPHost</a>, <a href="index.html#DefaultHTTPPort">DefaultHTTPPort</a>)
+    <span class="comment">// DefaultTLSHost constant defines the default host string used by docker for TLS sockets</span>
+    <span id="DefaultTLSHost">DefaultTLSHost</span> = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Sprintf">Sprintf</a>(&#34;tcp://%s:%d&#34;, <a href="index.html#DefaultHTTPHost">DefaultHTTPHost</a>, <a href="index.html#DefaultTLSHTTPPort">DefaultTLSHTTPPort</a>)
+    <span class="comment">// DefaultNamedPipe defines the default named pipe used by docker on Windows</span>
+    <span id="DefaultNamedPipe">DefaultNamedPipe</span> = `//./pipe/docker_engine`
+)</pre>
+			
+				<p>
+DefaultHost constant defines the default host string used by docker on other hosts than Windows
+</p>
+
+				<pre>var <span id="DefaultHost">DefaultHost</span> = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Sprintf">Sprintf</a>(&#34;unix://%s&#34;, <a href="index.html#DefaultUnixSocket">DefaultUnixSocket</a>)</pre>
+			
+		
+		
+			
+			
+			<h2 id="ParseHost">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/hosts.go?s=1895:1974#L39">ParseHost</a>
+				<a class="permalink" href="index.html#ParseHost">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseHost">ParseHost</a>(defaultToTLS, defaultToUnixXDG <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseHost and set defaults for a Daemon host string.
+defaultToTLS is preferred over defaultToUnixXDG.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseLink">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=7277:7327#L267">ParseLink</a>
+				<a class="permalink" href="index.html#ParseLink">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseLink">ParseLink</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseLink parses and validates the specified string as a link format (name:alias)
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseTCPAddr">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/hosts.go?s=4178:4247#L106">ParseTCPAddr</a>
+				<a class="permalink" href="index.html#ParseTCPAddr">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseTCPAddr">ParseTCPAddr</a>(tryAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, defaultAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseTCPAddr parses and validates that the specified address is a valid TCP
+address. It returns a formatted TCP address, either using the address parsed
+from tryAddr, or the contents of defaultAddr if tryAddr is a blank string.
+tryAddr is expected to have already been Trim()&#39;d
+defaultAddr must be in the full `tcp://host:port` form
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateDNSSearch">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=6041:6091#L229">ValidateDNSSearch</a>
+				<a class="permalink" href="index.html#ValidateDNSSearch">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateDNSSearch">ValidateDNSSearch</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateDNSSearch validates domain for resolvconf search configuration.
+A zero length domain is represented by a dot (.).
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateEnv">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/env.go?s=515:559#L10">ValidateEnv</a>
+				<a class="permalink" href="index.html#ValidateEnv">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateEnv">ValidateEnv</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateEnv validates an environment variable and returns it.
+If no value is specified, it returns the current value using os.Getenv.
+</p>
+<p>
+As on ParseEnvFile and related to #16585, environment variable names
+are not validate what so ever, it&#39;s up to application inside docker
+to validate them or not.
+</p>
+<p>
+The only validation here is to check if name is empty, per #25099
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateExtraHost">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/hosts.go?s=5701:5751#L156">ValidateExtraHost</a>
+				<a class="permalink" href="index.html#ValidateExtraHost">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateExtraHost">ValidateExtraHost</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateExtraHost validates that the specified string is a valid extrahost and returns it.
+ExtraHost is in the form of name:ip where the ip has to be a valid ip (IPv4 or IPv6).
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateHost">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/hosts.go?s=1351:1396#L23">ValidateHost</a>
+				<a class="permalink" href="index.html#ValidateHost">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateHost">ValidateHost</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateHost validates that the specified string is a valid host and returns it.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateIPAddress">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=5711:5761#L219">ValidateIPAddress</a>
+				<a class="permalink" href="index.html#ValidateIPAddress">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateIPAddress">ValidateIPAddress</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateIPAddress validates an Ip address.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateLabel">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=6644:6690#L249">ValidateLabel</a>
+				<a class="permalink" href="index.html#ValidateLabel">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateLabel">ValidateLabel</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateLabel validates that the specified string is a valid label, and returns it.
+Labels are in the form on key=value.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateSingleGenericResource">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=6974:7036#L259">ValidateSingleGenericResource</a>
+				<a class="permalink" href="index.html#ValidateSingleGenericResource">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateSingleGenericResource">ValidateSingleGenericResource</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateSingleGenericResource validates that a single entry in the
+generic resource list is valid.
+i.e &#39;GPU=UID1&#39; is valid however &#39;GPU:UID1&#39; or &#39;UID1&#39; isn&#39;t
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="IPOpt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ip.go?s=147:177#L1">IPOpt</a>
+				<a class="permalink" href="index.html#IPOpt">&#xb6;</a>
+			</h2>
+			<p>
+IPOpt holds an IP. It is used to store values from CLI flags.
+</p>
+
+			<pre>type IPOpt struct {
+    *<a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#IP">IP</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewIPOpt">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ip.go?s=356:408#L6">NewIPOpt</a>
+					<a class="permalink" href="index.html#NewIPOpt">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewIPOpt">NewIPOpt</a>(ref *<a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#IP">IP</a>, defaultVal <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#IPOpt">IPOpt</a></pre>
+				<p>
+NewIPOpt creates a new IPOpt from a reference net.IP and a
+string representation of an IP. If the string is not a valid
+IP it will fallback to the specified reference.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="IPOpt.Set">func (*IPOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ip.go?s=605:642#L16">Set</a>
+					<a class="permalink" href="index.html#IPOpt.Set">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#IPOpt">IPOpt</a>) <a href="index.html#Set">Set</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set sets an IPv4 or IPv6 address from a given string. If the given
+string is not parsable as an IP address it returns an error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IPOpt.String">func (*IPOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ip.go?s=883:914#L27">String</a>
+					<a class="permalink" href="index.html#IPOpt.String">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#IPOpt">IPOpt</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns the IP address stored in the IPOpt. If stored IP is a
+nil pointer, it returns an empty string.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IPOpt.Type">func (*IPOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ip.go?s=1015:1044#L35">Type</a>
+					<a class="permalink" href="index.html#IPOpt.Type">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#IPOpt">IPOpt</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns the type of the option
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ListOpts">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=430:503#L9">ListOpts</a>
+				<a class="permalink" href="index.html#ListOpts">&#xb6;</a>
+			</h2>
+			<p>
+ListOpts holds a list of values and a validation function.
+</p>
+
+			<pre>type ListOpts struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewListOpts">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=573:626#L15">NewListOpts</a>
+					<a class="permalink" href="index.html#NewListOpts">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewListOpts">NewListOpts</a>(validator <a href="index.html#ValidatorFctType">ValidatorFctType</a>) <a href="index.html#ListOpts">ListOpts</a></pre>
+				<p>
+NewListOpts creates a new ListOpts with the specified validator.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewListOptsRef">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=779:854#L21">NewListOptsRef</a>
+					<a class="permalink" href="index.html#NewListOptsRef">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewListOptsRef">NewListOptsRef</a>(values *[]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, validator <a href="index.html#ValidatorFctType">ValidatorFctType</a>) *<a href="index.html#ListOpts">ListOpts</a></pre>
+				<p>
+NewListOptsRef creates a new ListOpts with the specified values and validator.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ListOpts.Delete">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=1411:1451#L50">Delete</a>
+					<a class="permalink" href="index.html#ListOpts.Delete">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#Delete">Delete</a>(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+Delete removes the specified element from the slice.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.Get">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=2214:2256#L85">Get</a>
+					<a class="permalink" href="index.html#ListOpts.Get">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#Get">Get</a>(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Get checks the existence of the specified key.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.GetAll">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=1876:1915#L70">GetAll</a>
+					<a class="permalink" href="index.html#ListOpts.GetAll">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#GetAll">GetAll</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetAll returns the values of slice.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.GetAllOrEmpty">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=2038:2084#L76">GetAllOrEmpty</a>
+					<a class="permalink" href="index.html#ListOpts.GetAllOrEmpty">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#GetAllOrEmpty">GetAllOrEmpty</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetAllOrEmpty returns the values of the slice
+or an empty slice when there are no values.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.GetMap">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=1676:1726#L61">GetMap</a>
+					<a class="permalink" href="index.html#ListOpts.GetMap">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#GetMap">GetMap</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]struct{}</pre>
+				<p>
+GetMap returns the content of values in a map in order to avoid
+duplicates.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.Len">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=2399:2430#L95">Len</a>
+					<a class="permalink" href="index.html#ListOpts.Len">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#Len">Len</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+Len returns the amount of element in the slice.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.Set">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=1135:1180#L37">Set</a>
+					<a class="permalink" href="index.html#ListOpts.Set">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#Set">Set</a>(value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set validates if needed the input value and adds it to the
+internal slice.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.String">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=927:964#L28">String</a>
+					<a class="permalink" href="index.html#ListOpts.String">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.Type">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=2513:2548#L100">Type</a>
+					<a class="permalink" href="index.html#ListOpts.Type">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns a string name for this Option type
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ListOpts.WithValidator">func (*ListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=2627:2700#L105">WithValidator</a>
+					<a class="permalink" href="index.html#ListOpts.WithValidator">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#ListOpts">ListOpts</a>) <a href="index.html#WithValidator">WithValidator</a>(validator <a href="index.html#ValidatorFctType">ValidatorFctType</a>) *<a href="index.html#ListOpts">ListOpts</a></pre>
+				<p>
+WithValidator returns the ListOpts with validator set.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MapOpts">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=3594:3674#L140">MapOpts</a>
+				<a class="permalink" href="index.html#MapOpts">&#xb6;</a>
+			</h2>
+			<p>
+MapOpts holds a map of values and a validation function.
+</p>
+
+			<pre>type MapOpts struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMapOpts">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=4483:4561#L179">NewMapOpts</a>
+					<a class="permalink" href="index.html#NewMapOpts">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewMapOpts">NewMapOpts</a>(values map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, validator <a href="index.html#ValidatorFctType">ValidatorFctType</a>) *<a href="index.html#MapOpts">MapOpts</a></pre>
+				<p>
+NewMapOpts creates a new MapOpts with the specified map of values and a validator.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="MapOpts.GetAll">func (*MapOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=4138:4185#L165">GetAll</a>
+					<a class="permalink" href="index.html#MapOpts.GetAll">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#MapOpts">MapOpts</a>) <a href="index.html#GetAll">GetAll</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetAll returns the values of MapOpts as a map.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MapOpts.Set">func (*MapOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=3775:3819#L147">Set</a>
+					<a class="permalink" href="index.html#MapOpts.Set">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#MapOpts">MapOpts</a>) <a href="index.html#Set">Set</a>(value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set validates if needed the input value and add it to the
+internal map, by splitting on &#39;=&#39;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MapOpts.String">func (*MapOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=4211:4247#L169">String</a>
+					<a class="permalink" href="index.html#MapOpts.String">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#MapOpts">MapOpts</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="MapOpts.Type">func (*MapOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=4343:4377#L174">Type</a>
+					<a class="permalink" href="index.html#MapOpts.Type">&#xb6;</a>
+				</h3>
+				<pre>func (opts *<a href="index.html#MapOpts">MapOpts</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns a string name for this Option type
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="MemBytes">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=7947:7966#L289">MemBytes</a>
+				<a class="permalink" href="index.html#MemBytes">&#xb6;</a>
+			</h2>
+			<p>
+MemBytes is a type for human readable memory bytes (like 128M, 2g, etc)
+</p>
+
+			<pre>type MemBytes <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="MemBytes.Set">func (*MemBytes) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=8438:8480#L303">Set</a>
+					<a class="permalink" href="index.html#MemBytes.Set">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MemBytes">MemBytes</a>) <a href="index.html#Set">Set</a>(value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set sets the value of the MemBytes by passing a string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MemBytes.String">func (*MemBytes) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=8039:8073#L292">String</a>
+					<a class="permalink" href="index.html#MemBytes.String">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MemBytes">MemBytes</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns the string format of the human readable memory bytes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MemBytes.Type">func (*MemBytes) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=8580:8612#L310">Type</a>
+					<a class="permalink" href="index.html#MemBytes.Type">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MemBytes">MemBytes</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns the type
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MemBytes.UnmarshalJSON">func (*MemBytes) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=8786:8834#L320">UnmarshalJSON</a>
+					<a class="permalink" href="index.html#MemBytes.UnmarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MemBytes">MemBytes</a>) <a href="index.html#UnmarshalJSON">UnmarshalJSON</a>(s []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmarshalJSON is the customized unmarshaler for MemBytes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="MemBytes.Value">func (*MemBytes) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=8670:8702#L315">Value</a>
+					<a class="permalink" href="index.html#MemBytes.Value">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#MemBytes">MemBytes</a>) <a href="index.html#Value">Value</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a></pre>
+				<p>
+Value returns the value in int64
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NamedListOpts">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=3045:3097#L119">NamedListOpts</a>
+				<a class="permalink" href="index.html#NamedListOpts">&#xb6;</a>
+			</h2>
+			<p>
+NamedListOpts is a ListOpts with a configuration name.
+This struct is useful to keep reference to the assigned
+field name in the internal configuration struct.
+</p>
+
+			<pre>type NamedListOpts struct {
+    <a href="index.html#ListOpts">ListOpts</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNamedListOptsRef">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=3211:3309#L127">NewNamedListOptsRef</a>
+					<a class="permalink" href="index.html#NewNamedListOptsRef">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewNamedListOptsRef">NewNamedListOptsRef</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, values *[]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, validator <a href="index.html#ValidatorFctType">ValidatorFctType</a>) *<a href="index.html#NamedListOpts">NamedListOpts</a></pre>
+				<p>
+NewNamedListOptsRef creates a reference to a new NamedListOpts struct.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="NamedListOpts.Name">func (*NamedListOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=3476:3513#L135">Name</a>
+					<a class="permalink" href="index.html#NamedListOpts.Name">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#NamedListOpts">NamedListOpts</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the name of the NamedListOpts in the configuration.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NamedMapOpts">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=4865:4915#L192">NamedMapOpts</a>
+				<a class="permalink" href="index.html#NamedMapOpts">&#xb6;</a>
+			</h2>
+			<p>
+NamedMapOpts is a MapOpts struct with a configuration name.
+This struct is useful to keep reference to the assigned
+field name in the internal configuration struct.
+</p>
+
+			<pre>type NamedMapOpts struct {
+    <a href="index.html#MapOpts">MapOpts</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNamedMapOpts">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=5023:5124#L200">NewNamedMapOpts</a>
+					<a class="permalink" href="index.html#NewNamedMapOpts">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewNamedMapOpts">NewNamedMapOpts</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, values map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, validator <a href="index.html#ValidatorFctType">ValidatorFctType</a>) *<a href="index.html#NamedMapOpts">NamedMapOpts</a></pre>
+				<p>
+NewNamedMapOpts creates a reference to a new NamedMapOpts struct.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="NamedMapOpts.Name">func (*NamedMapOpts) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=5283:5319#L208">Name</a>
+					<a class="permalink" href="index.html#NamedMapOpts.Name">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#NamedMapOpts">NamedMapOpts</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the name of the NamedMapOpts in the configuration.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NamedOption">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=2829:2874#L112">NamedOption</a>
+				<a class="permalink" href="index.html#NamedOption">&#xb6;</a>
+			</h2>
+			<p>
+NamedOption is an interface that list and map options
+with names implement.
+</p>
+
+			<pre>type NamedOption interface {
+    Name() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NamedUlimitOpt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=1161:1215#L50">NamedUlimitOpt</a>
+				<a class="permalink" href="index.html#NamedUlimitOpt">&#xb6;</a>
+			</h2>
+			<p>
+NamedUlimitOpt defines a named map of Ulimits
+</p>
+
+			<pre>type NamedUlimitOpt struct {
+    <a href="index.html#UlimitOpt">UlimitOpt</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNamedUlimitOpt">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=1306:1388#L58">NewNamedUlimitOpt</a>
+					<a class="permalink" href="index.html#NewNamedUlimitOpt">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewNamedUlimitOpt">NewNamedUlimitOpt</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, ref *map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*units.<a href="index.html#Ulimit">Ulimit</a>) *<a href="index.html#NamedUlimitOpt">NamedUlimitOpt</a></pre>
+				<p>
+NewNamedUlimitOpt creates a new NamedUlimitOpt
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="NamedUlimitOpt.Name">func (*NamedUlimitOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=1562:1600#L69">Name</a>
+					<a class="permalink" href="index.html#NamedUlimitOpt.Name">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#NamedUlimitOpt">NamedUlimitOpt</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the option name
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PoolsOpt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go?s=215:271#L4">PoolsOpt</a>
+				<a class="permalink" href="index.html#PoolsOpt">&#xb6;</a>
+			</h2>
+			<p>
+PoolsOpt is a Value type for parsing the default address pools definitions
+</p>
+
+			<pre>type PoolsOpt struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PoolsOpt.Name">func (*PoolsOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go?s=1790:1822#L72">Name</a>
+					<a class="permalink" href="index.html#PoolsOpt.Name">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#PoolsOpt">PoolsOpt</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the flag name of this option
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PoolsOpt.Set">func (*PoolsOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go?s=456:498#L14">Set</a>
+					<a class="permalink" href="index.html#PoolsOpt.Set">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#PoolsOpt">PoolsOpt</a>) <a href="index.html#Set">Set</a>(value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set predefined pools
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PoolsOpt.String">func (*PoolsOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go?s=1431:1465#L57">String</a>
+					<a class="permalink" href="index.html#PoolsOpt.String">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#PoolsOpt">PoolsOpt</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns a string repr of this option
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PoolsOpt.Type">func (*PoolsOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go?s=1323:1355#L52">Type</a>
+					<a class="permalink" href="index.html#PoolsOpt.Type">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#PoolsOpt">PoolsOpt</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns the type of this option
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PoolsOpt.UnmarshalJSON">func (*PoolsOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go?s=335:385#L9">UnmarshalJSON</a>
+					<a class="permalink" href="index.html#PoolsOpt.UnmarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#PoolsOpt">PoolsOpt</a>) <a href="index.html#UnmarshalJSON">UnmarshalJSON</a>(raw []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmarshalJSON fills values structure  info from JSON input
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PoolsOpt.Value">func (*PoolsOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/address_pools.go?s=1672:1722#L67">Value</a>
+					<a class="permalink" href="index.html#PoolsOpt.Value">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#PoolsOpt">PoolsOpt</a>) <a href="index.html#Value">Value</a>() []*<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/ipamutils/">types</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/ipamutils/#NetworkToSplit">NetworkToSplit</a></pre>
+				<p>
+Value returns the mounts
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="QuotedString">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/quotedstring.go?s=172:215#L1">QuotedString</a>
+				<a class="permalink" href="index.html#QuotedString">&#xb6;</a>
+			</h2>
+			<p>
+QuotedString is a string that may have extra quotes around the value. The
+quotes are stripped from the value.
+</p>
+
+			<pre>type QuotedString struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewQuotedString">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/quotedstring.go?s=758:807#L25">NewQuotedString</a>
+					<a class="permalink" href="index.html#NewQuotedString">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewQuotedString">NewQuotedString</a>(value *<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#QuotedString">QuotedString</a></pre>
+				<p>
+NewQuotedString returns a new quoted string option
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="QuotedString.Set">func (*QuotedString) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/quotedstring.go?s=241:285#L1">Set</a>
+					<a class="permalink" href="index.html#QuotedString.Set">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#QuotedString">QuotedString</a>) <a href="index.html#Set">Set</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set sets a new value
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="QuotedString.String">func (*QuotedString) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/quotedstring.go?s=428:466#L10">String</a>
+					<a class="permalink" href="index.html#QuotedString.String">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#QuotedString">QuotedString</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="QuotedString.Type">func (*QuotedString) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/quotedstring.go?s=369:405#L6">Type</a>
+					<a class="permalink" href="index.html#QuotedString.Type">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#QuotedString">QuotedString</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns the type of the value
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="RuntimeOpt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go?s=165:285#L1">RuntimeOpt</a>
+				<a class="permalink" href="index.html#RuntimeOpt">&#xb6;</a>
+			</h2>
+			<p>
+RuntimeOpt defines a map of Runtimes
+</p>
+
+			<pre>type RuntimeOpt struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewNamedRuntimeOpt">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go?s=334:434#L8">NewNamedRuntimeOpt</a>
+					<a class="permalink" href="index.html#NewNamedRuntimeOpt">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewNamedRuntimeOpt">NewNamedRuntimeOpt</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, ref *map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Runtime">Runtime</a>, stockRuntime <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#RuntimeOpt">RuntimeOpt</a></pre>
+				<p>
+NewNamedRuntimeOpt creates a new RuntimeOpt
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="RuntimeOpt.GetMap">func (*RuntimeOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go?s=1667:1721#L58">GetMap</a>
+					<a class="permalink" href="index.html#RuntimeOpt.GetMap">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#RuntimeOpt">RuntimeOpt</a>) <a href="index.html#GetMap">GetMap</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#Runtime">Runtime</a></pre>
+				<p>
+GetMap returns a map of Runtimes (name: path)
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RuntimeOpt.Name">func (*RuntimeOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go?s=641:675#L16">Name</a>
+					<a class="permalink" href="index.html#RuntimeOpt.Name">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#RuntimeOpt">RuntimeOpt</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the name of the NamedListOpts in the configuration.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RuntimeOpt.Set">func (*RuntimeOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go?s=746:788#L21">Set</a>
+					<a class="permalink" href="index.html#RuntimeOpt.Set">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#RuntimeOpt">RuntimeOpt</a>) <a href="index.html#Set">Set</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set validates and updates the list of Runtimes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RuntimeOpt.String">func (*RuntimeOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go?s=1472:1508#L48">String</a>
+					<a class="permalink" href="index.html#RuntimeOpt.String">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#RuntimeOpt">RuntimeOpt</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns Runtime values as a string.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RuntimeOpt.Type">func (*RuntimeOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/runtime.go?s=1846:1880#L67">Type</a>
+					<a class="permalink" href="index.html#RuntimeOpt.Type">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#RuntimeOpt">RuntimeOpt</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns the type of the option
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UlimitOpt">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=144:203#L1">UlimitOpt</a>
+				<a class="permalink" href="index.html#UlimitOpt">&#xb6;</a>
+			</h2>
+			<p>
+UlimitOpt defines a map of Ulimits
+</p>
+
+			<pre>type UlimitOpt struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewUlimitOpt">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=245:304#L5">NewUlimitOpt</a>
+					<a class="permalink" href="index.html#NewUlimitOpt">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewUlimitOpt">NewUlimitOpt</a>(ref *map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*units.<a href="index.html#Ulimit">Ulimit</a>) *<a href="index.html#UlimitOpt">UlimitOpt</a></pre>
+				<p>
+NewUlimitOpt creates a new UlimitOpt
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="UlimitOpt.GetList">func (*UlimitOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=862:907#L35">GetList</a>
+					<a class="permalink" href="index.html#UlimitOpt.GetList">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#UlimitOpt">UlimitOpt</a>) <a href="index.html#GetList">GetList</a>() []*units.<a href="index.html#Ulimit">Ulimit</a></pre>
+				<p>
+GetList returns a slice of pointers to Ulimits.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UlimitOpt.Set">func (*UlimitOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=456:497#L13">Set</a>
+					<a class="permalink" href="index.html#UlimitOpt.Set">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#UlimitOpt">UlimitOpt</a>) <a href="index.html#Set">Set</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set validates a Ulimit and sets its name as a key in UlimitOpt
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UlimitOpt.String">func (*UlimitOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=654:689#L25">String</a>
+					<a class="permalink" href="index.html#UlimitOpt.String">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#UlimitOpt">UlimitOpt</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+String returns Ulimit values as a string.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UlimitOpt.Type">func (*UlimitOpt) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/ulimit.go?s=1056:1089#L45">Type</a>
+					<a class="permalink" href="index.html#UlimitOpt.Type">&#xb6;</a>
+				</h3>
+				<pre>func (o *<a href="index.html#UlimitOpt">UlimitOpt</a>) <a href="index.html#Type">Type</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Type returns the option type
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ValidatorFctListType">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=5603:5663#L216">ValidatorFctListType</a>
+				<a class="permalink" href="index.html#ValidatorFctListType">&#xb6;</a>
+			</h2>
+			<p>
+ValidatorFctListType defines a validator function that returns a validated list of string and/or an error
+</p>
+
+			<pre>type ValidatorFctListType func(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ValidatorFctType">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/opts/opts.go?s=5438:5492#L213">ValidatorFctType</a>
+				<a class="permalink" href="index.html#ValidatorFctType">&#xb6;</a>
+			</h2>
+			<p>
+ValidatorFctType defines a validator function that returns a validated string and/or an error.
+</p>
+
+			<pre>type ValidatorFctType func(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

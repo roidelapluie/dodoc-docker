@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>logdriver - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package logdriver</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/plugins/logdriver"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package logdriver is a generated protocol buffer package.
+</p>
+<p>
+It is generated from these files:
+</p>
+<pre>entry.proto
+</pre>
+<p>
+It has these top-level messages:
+</p>
+<pre>LogEntry
+PartialLogEntryMetadata
+</pre>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#LogEntry">type LogEntry</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.Descriptor">func (*LogEntry) Descriptor() ([]byte, []int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.GetLine">func (m *LogEntry) GetLine() []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.GetPartial">func (m *LogEntry) GetPartial() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.GetPartialLogMetadata">func (m *LogEntry) GetPartialLogMetadata() *PartialLogEntryMetadata</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.GetSource">func (m *LogEntry) GetSource() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.GetTimeNano">func (m *LogEntry) GetTimeNano() int64</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.Marshal">func (m *LogEntry) Marshal() (dAtA []byte, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.MarshalTo">func (m *LogEntry) MarshalTo(dAtA []byte) (int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.ProtoMessage">func (*LogEntry) ProtoMessage()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.Reset">func (m *LogEntry) Reset()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.Size">func (m *LogEntry) Size() (n int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.String">func (m *LogEntry) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogEntry.Unmarshal">func (m *LogEntry) Unmarshal(dAtA []byte) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LogEntryDecoder">type LogEntryDecoder</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewLogEntryDecoder">func NewLogEntryDecoder(r io.Reader) LogEntryDecoder</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogEntryEncoder">type LogEntryEncoder</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewLogEntryEncoder">func NewLogEntryEncoder(w io.Writer) LogEntryEncoder</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PartialLogEntryMetadata">type PartialLogEntryMetadata</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.Descriptor">func (*PartialLogEntryMetadata) Descriptor() ([]byte, []int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.GetId">func (m *PartialLogEntryMetadata) GetId() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.GetLast">func (m *PartialLogEntryMetadata) GetLast() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.GetOrdinal">func (m *PartialLogEntryMetadata) GetOrdinal() int32</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.Marshal">func (m *PartialLogEntryMetadata) Marshal() (dAtA []byte, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.MarshalTo">func (m *PartialLogEntryMetadata) MarshalTo(dAtA []byte) (int, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.ProtoMessage">func (*PartialLogEntryMetadata) ProtoMessage()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.Reset">func (m *PartialLogEntryMetadata) Reset()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.Size">func (m *PartialLogEntryMetadata) Size() (n int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.String">func (m *PartialLogEntryMetadata) String() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PartialLogEntryMetadata.Unmarshal">func (m *PartialLogEntryMetadata) Unmarshal(dAtA []byte) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go">entry.pb.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/gen.go">gen.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/io.go">io.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span id="ErrInvalidLengthEntry">ErrInvalidLengthEntry</span> = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Errorf">Errorf</a>(&#34;proto: negative length found during unmarshaling&#34;)
+    <span id="ErrIntOverflowEntry">ErrIntOverflowEntry</span>   = <a href="http://127.0.0.1:8080/pkg/fmt/">fmt</a>.<a href="http://127.0.0.1:8080/pkg/fmt/#Errorf">Errorf</a>(&#34;proto: integer overflow&#34;)
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="LogEntry">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=839:1493#L24">LogEntry</a>
+				<a class="permalink" href="index.html#LogEntry">&#xb6;</a>
+			</h2>
+			
+			<pre>type LogEntry struct {
+<span id="LogEntry.Source"></span>    Source             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `protobuf:&#34;bytes,1,opt,name=source,proto3&#34; json:&#34;source,omitempty&#34;`
+<span id="LogEntry.TimeNano"></span>    TimeNano           <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>                    `protobuf:&#34;varint,2,opt,name=time_nano,json=timeNano,proto3&#34; json:&#34;time_nano,omitempty&#34;`
+<span id="LogEntry.Line"></span>    Line               []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>                   `protobuf:&#34;bytes,3,opt,name=line,proto3&#34; json:&#34;line,omitempty&#34;`
+<span id="LogEntry.Partial"></span>    Partial            <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `protobuf:&#34;varint,4,opt,name=partial,proto3&#34; json:&#34;partial,omitempty&#34;`
+<span id="LogEntry.PartialLogMetadata"></span>    PartialLogMetadata *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a> `protobuf:&#34;bytes,5,opt,name=partial_log_metadata,json=partialLogMetadata&#34; json:&#34;partial_log_metadata,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="LogEntry.Descriptor">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=1694:1739#L35">Descriptor</a>
+					<a class="permalink" href="index.html#LogEntry.Descriptor">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#Descriptor">Descriptor</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, []<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.GetLine">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=1964:1999#L51">GetLine</a>
+					<a class="permalink" href="index.html#LogEntry.GetLine">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#GetLine">GetLine</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.GetPartial">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2051:2087#L58">GetPartial</a>
+					<a class="permalink" href="index.html#LogEntry.GetPartial">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#GetPartial">GetPartial</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.GetPartialLogMetadata">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2144:2211#L65">GetPartialLogMetadata</a>
+					<a class="permalink" href="index.html#LogEntry.GetPartialLogMetadata">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#GetPartialLogMetadata">GetPartialLogMetadata</a>() *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.GetSource">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=1782:1819#L37">GetSource</a>
+					<a class="permalink" href="index.html#LogEntry.GetSource">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#GetSource">GetSource</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.GetTimeNano">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=1872:1910#L44">GetTimeNano</a>
+					<a class="permalink" href="index.html#LogEntry.GetTimeNano">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#GetTimeNano">GetTimeNano</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.Marshal">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=3374:3427#L108">Marshal</a>
+					<a class="permalink" href="index.html#LogEntry.Marshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#Marshal">Marshal</a>() (dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.MarshalTo">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=3567:3621#L118">MarshalTo</a>
+					<a class="permalink" href="index.html#LogEntry.MarshalTo">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#MarshalTo">MarshalTo</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.ProtoMessage">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=1645:1676#L34">ProtoMessage</a>
+					<a class="permalink" href="index.html#LogEntry.ProtoMessage">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#ProtoMessage">ProtoMessage</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.Reset">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=1495:1521#L32">Reset</a>
+					<a class="permalink" href="index.html#LogEntry.Reset">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#Reset">Reset</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.Size">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=5792:5825#L229">Size</a>
+					<a class="permalink" href="index.html#LogEntry.Size">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#Size">Size</a>() (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.String">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=1561:1595#L33">String</a>
+					<a class="permalink" href="index.html#LogEntry.String">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LogEntry.Unmarshal">func (*LogEntry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=6626:6673#L282">Unmarshal</a>
+					<a class="permalink" href="index.html#LogEntry.Unmarshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#LogEntry">LogEntry</a>) <a href="index.html#Unmarshal">Unmarshal</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LogEntryDecoder">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/io.go?s=1258:1317#L43">LogEntryDecoder</a>
+				<a class="permalink" href="index.html#LogEntryDecoder">&#xb6;</a>
+			</h2>
+			<p>
+LogEntryDecoder decodes log entries from a stream
+It is expected that the wire format is as defined by LogEntryEncoder.
+</p>
+
+			<pre>type LogEntryDecoder interface {
+    Decode(*<a href="index.html#LogEntry">LogEntry</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLogEntryDecoder">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/io.go?s=1386:1438#L48">NewLogEntryDecoder</a>
+					<a class="permalink" href="index.html#NewLogEntryDecoder">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewLogEntryDecoder">NewLogEntryDecoder</a>(r <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) <a href="index.html#LogEntryDecoder">LogEntryDecoder</a></pre>
+				<p>
+NewLogEntryDecoder creates a new stream decoder for log entries
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="LogEntryEncoder">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/io.go?s=422:481#L7">LogEntryEncoder</a>
+				<a class="permalink" href="index.html#LogEntryEncoder">&#xb6;</a>
+			</h2>
+			<p>
+LogEntryEncoder encodes a LogEntry to a protobuf stream
+The stream should look like:
+</p>
+<p>
+[uint32 binary encoded message size][protobuf message]
+</p>
+<p>
+To decode an entry, read the first 4 bytes to get the size of the entry,
+then read `size` bytes from the stream.
+</p>
+
+			<pre>type LogEntryEncoder interface {
+    Encode(*<a href="index.html#LogEntry">LogEntry</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLogEntryEncoder">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/io.go?s=611:663#L13">NewLogEntryEncoder</a>
+					<a class="permalink" href="index.html#NewLogEntryEncoder">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewLogEntryEncoder">NewLogEntryEncoder</a>(w <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="index.html#LogEntryEncoder">LogEntryEncoder</a></pre>
+				<p>
+NewLogEntryEncoder creates a protobuf stream encoder for log entries.
+This is used to write out  log entries to a stream.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="PartialLogEntryMetadata">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2277:2560#L72">PartialLogEntryMetadata</a>
+				<a class="permalink" href="index.html#PartialLogEntryMetadata">&#xb6;</a>
+			</h2>
+			
+			<pre>type PartialLogEntryMetadata struct {
+<span id="PartialLogEntryMetadata.Last"></span>    Last    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `protobuf:&#34;varint,1,opt,name=last,proto3&#34; json:&#34;last,omitempty&#34;`
+<span id="PartialLogEntryMetadata.Id"></span>    Id      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `protobuf:&#34;bytes,2,opt,name=id,proto3&#34; json:&#34;id,omitempty&#34;`
+<span id="PartialLogEntryMetadata.Ordinal"></span>    Ordinal <a href="http://127.0.0.1:8080/pkg/builtin/#int32">int32</a>  `protobuf:&#34;varint,3,opt,name=ordinal,proto3&#34; json:&#34;ordinal,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PartialLogEntryMetadata.Descriptor">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2821:2881#L81">Descriptor</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.Descriptor">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#Descriptor">Descriptor</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, []<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.GetId">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=3026:3074#L90">GetId</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.GetId">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#GetId">GetId</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.GetLast">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2924:2972#L83">GetLast</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.GetLast">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#GetLast">GetLast</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.GetOrdinal">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=3123:3175#L97">GetOrdinal</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.GetOrdinal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#GetOrdinal">GetOrdinal</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int32">int32</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.Marshal">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=4391:4459#L163">Marshal</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.Marshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#Marshal">Marshal</a>() (dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.MarshalTo">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=4599:4668#L173">MarshalTo</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.MarshalTo">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#MarshalTo">MarshalTo</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.ProtoMessage">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2757:2803#L80">ProtoMessage</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.ProtoMessage">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#ProtoMessage">ProtoMessage</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.Reset">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2562:2603#L78">Reset</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.Reset">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#Reset">Reset</a>()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.Size">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=6194:6242#L253">Size</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.Size">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#Size">Size</a>() (n <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.String">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=2658:2707#L79">String</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.String">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="PartialLogEntryMetadata.Unmarshal">func (*PartialLogEntryMetadata) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/plugins/logdriver/entry.pb.go?s=10591:10653#L464">Unmarshal</a>
+					<a class="permalink" href="index.html#PartialLogEntryMetadata.Unmarshal">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#PartialLogEntryMetadata">PartialLogEntryMetadata</a>) <a href="index.html#Unmarshal">Unmarshal</a>(dAtA []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

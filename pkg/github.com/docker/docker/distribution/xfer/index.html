@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>xfer - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package xfer</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/distribution/xfer"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#DoFunc">type DoFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DoNotRetry">type DoNotRetry</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DoNotRetry.Error">func (e DoNotRetry) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DownloadDescriptor">type DownloadDescriptor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DownloadDescriptorWithRegistered">type DownloadDescriptorWithRegistered</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LayerDownloadManager">type LayerDownloadManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewLayerDownloadManager">func NewLayerDownloadManager(layerStores map[string]layer.Store, concurrencyLimit int, options ...func(*LayerDownloadManager)) *LayerDownloadManager</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LayerDownloadManager.Download">func (ldm *LayerDownloadManager) Download(ctx context.Context, initialRootFS image.RootFS, os string, layers []DownloadDescriptor, progressOutput progress.Output) (image.RootFS, func(), error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LayerDownloadManager.SetConcurrency">func (ldm *LayerDownloadManager) SetConcurrency(concurrency int)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LayerUploadManager">type LayerUploadManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewLayerUploadManager">func NewLayerUploadManager(concurrencyLimit int, options ...func(*LayerUploadManager)) *LayerUploadManager</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LayerUploadManager.SetConcurrency">func (lum *LayerUploadManager) SetConcurrency(concurrency int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LayerUploadManager.Upload">func (lum *LayerUploadManager) Upload(ctx context.Context, layers []UploadDescriptor, progressOutput progress.Output) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Transfer">type Transfer</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewTransfer">func NewTransfer() Transfer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#TransferManager">type TransferManager</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewTransferManager">func NewTransferManager(concurrencyLimit int) TransferManager</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UploadDescriptor">type UploadDescriptor</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Watcher">type Watcher</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/download.go">download.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go">transfer.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/upload.go">upload.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="DoFunc">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=7312:7425#L262">DoFunc</a>
+				<a class="permalink" href="index.html#DoFunc">&#xb6;</a>
+			</h2>
+			<p>
+DoFunc is a function called by the transfer manager to actually perform
+a transfer. It should be non-blocking. It should wait until the start channel
+is closed before transferring any data. If the function closes inactive, that
+signals to the transfer manager that the job is no longer actively moving
+data - for example, it may be waiting for a dependent transfer to finish.
+This prevents it from taking up a slot.
+</p>
+
+			<pre>type DoFunc func(progressChan chan&lt;- <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Progress">Progress</a>, start &lt;-chan struct{}, inactive chan&lt;- struct{}) <a href="index.html#Transfer">Transfer</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DoNotRetry">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=249:286#L3">DoNotRetry</a>
+				<a class="permalink" href="index.html#DoNotRetry">&#xb6;</a>
+			</h2>
+			<p>
+DoNotRetry is an error wrapper indicating that the error cannot be resolved
+with a retry.
+</p>
+
+			<pre>type DoNotRetry struct {
+<span id="DoNotRetry.Err"></span>    Err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DoNotRetry.Error">func (DoNotRetry) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=363:397#L8">Error</a>
+					<a class="permalink" href="index.html#DoNotRetry.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#DoNotRetry">DoNotRetry</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Error returns the stringified representation of the encapsulated error.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DownloadDescriptor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/download.go?s=1746:2401#L55">DownloadDescriptor</a>
+				<a class="permalink" href="index.html#DownloadDescriptor">&#xb6;</a>
+			</h2>
+			<p>
+A DownloadDescriptor references a layer that may need to be downloaded.
+</p>
+
+			<pre>type DownloadDescriptor interface {
+    <span class="comment">// Key returns the key used to deduplicate downloads.</span>
+    Key() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// ID returns the ID for display purposes.</span>
+    ID() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// DiffID should return the DiffID for this layer, or an error</span>
+    <span class="comment">// if it is unknown (for example, if it has not been downloaded</span>
+    <span class="comment">// before).</span>
+    DiffID() (<a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// Download is called to perform the download.</span>
+    Download(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, progressOutput <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Output">Output</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// Close is called when the download manager is finished with this</span>
+    <span class="comment">// descriptor and will not call Download again or read from the reader</span>
+    <span class="comment">// that Download returned.</span>
+    Close()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DownloadDescriptorWithRegistered">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/download.go?s=2747:2851#L77">DownloadDescriptorWithRegistered</a>
+				<a class="permalink" href="index.html#DownloadDescriptorWithRegistered">&#xb6;</a>
+			</h2>
+			<p>
+DownloadDescriptorWithRegistered is a DownloadDescriptor that has an
+additional Registered method which gets called after a downloaded layer is
+registered. This allows the user of the download manager to know the DiffID
+of each registered layer. This method is called if a cast to
+DownloadDescriptorWithRegistered is successful.
+</p>
+
+			<pre>type DownloadDescriptorWithRegistered interface {
+    <a href="index.html#DownloadDescriptor">DownloadDescriptor</a>
+    Registered(diffID <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LayerDownloadManager">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/download.go?s=621:752#L16">LayerDownloadManager</a>
+				<a class="permalink" href="index.html#LayerDownloadManager">&#xb6;</a>
+			</h2>
+			<p>
+LayerDownloadManager figures out which layers need to be downloaded, then
+registers and downloads those, taking into account dependencies between
+layers.
+</p>
+
+			<pre>type LayerDownloadManager struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLayerDownloadManager">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/download.go?s=989:1137#L28">NewLayerDownloadManager</a>
+					<a class="permalink" href="index.html#NewLayerDownloadManager">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewLayerDownloadManager">NewLayerDownloadManager</a>(layerStores map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#Store">Store</a>, concurrencyLimit <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, options ...func(*<a href="index.html#LayerDownloadManager">LayerDownloadManager</a>)) *<a href="index.html#LayerDownloadManager">LayerDownloadManager</a></pre>
+				<p>
+NewLayerDownloadManager returns a new LayerDownloadManager.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="LayerDownloadManager.Download">func (*LayerDownloadManager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/download.go?s=3377:3569#L89">Download</a>
+					<a class="permalink" href="index.html#LayerDownloadManager.Download">&#xb6;</a>
+				</h3>
+				<pre>func (ldm *<a href="index.html#LayerDownloadManager">LayerDownloadManager</a>) <a href="index.html#Download">Download</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, initialRootFS <a href="../../image/index.html">image</a>.<a href="../../image/index.html#RootFS">RootFS</a>, os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, layers []<a href="index.html#DownloadDescriptor">DownloadDescriptor</a>, progressOutput <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Output">Output</a>) (<a href="../../image/index.html">image</a>.<a href="../../image/index.html#RootFS">RootFS</a>, func(), <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Download is a blocking function which ensures the requested layers are
+present in the layer store. It uses the string returned by the Key method to
+deduplicate downloads. If a given layer is not already known to present in
+the layer store, and the key is not used by an in-progress download, the
+Download method is called to get the layer tar data. Layers are then
+registered in the appropriate order.  The caller must call the returned
+release function once it is done with the returned RootFS object.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LayerDownloadManager.SetConcurrency">func (*LayerDownloadManager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/download.go?s=820:884#L23">SetConcurrency</a>
+					<a class="permalink" href="index.html#LayerDownloadManager.SetConcurrency">&#xb6;</a>
+				</h3>
+				<pre>func (ldm *<a href="index.html#LayerDownloadManager">LayerDownloadManager</a>) <a href="index.html#SetConcurrency">SetConcurrency</a>(concurrency <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+SetConcurrency sets the max concurrent downloads for each pull
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LayerUploadManager">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/upload.go?s=365:457#L8">LayerUploadManager</a>
+				<a class="permalink" href="index.html#LayerUploadManager">&#xb6;</a>
+			</h2>
+			<p>
+LayerUploadManager provides task management and progress reporting for
+uploads.
+</p>
+
+			<pre>type LayerUploadManager struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLayerUploadManager">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/upload.go?s=686:792#L19">NewLayerUploadManager</a>
+					<a class="permalink" href="index.html#NewLayerUploadManager">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewLayerUploadManager">NewLayerUploadManager</a>(concurrencyLimit <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, options ...func(*<a href="index.html#LayerUploadManager">LayerUploadManager</a>)) *<a href="index.html#LayerUploadManager">LayerUploadManager</a></pre>
+				<p>
+NewLayerUploadManager returns a new LayerUploadManager.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="LayerUploadManager.SetConcurrency">func (*LayerUploadManager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/upload.go?s=523:585#L14">SetConcurrency</a>
+					<a class="permalink" href="index.html#LayerUploadManager.SetConcurrency">&#xb6;</a>
+				</h3>
+				<pre>func (lum *<a href="index.html#LayerUploadManager">LayerUploadManager</a>) <a href="index.html#SetConcurrency">SetConcurrency</a>(concurrency <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+SetConcurrency sets the max concurrent uploads for each push
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LayerUploadManager.Upload">func (*LayerUploadManager) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/upload.go?s=2028:2151#L57">Upload</a>
+					<a class="permalink" href="index.html#LayerUploadManager.Upload">&#xb6;</a>
+				</h3>
+				<pre>func (lum *<a href="index.html#LayerUploadManager">LayerUploadManager</a>) <a href="index.html#Upload">Upload</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, layers []<a href="index.html#UploadDescriptor">UploadDescriptor</a>, progressOutput <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Output">Output</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Upload is a blocking function which ensures the listed layers are present on
+the remote registry. It uses the string returned by the Key method to
+deduplicate uploads.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Transfer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=1038:1276#L28">Transfer</a>
+				<a class="permalink" href="index.html#Transfer">&#xb6;</a>
+			</h2>
+			<p>
+Transfer represents an in-progress transfer.
+</p>
+
+			<pre>type Transfer interface {
+    Watch(progressOutput <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Output">Output</a>) *<a href="index.html#Watcher">Watcher</a>
+    Release(*<a href="index.html#Watcher">Watcher</a>)
+    Context() <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>
+    Close()
+    Done() &lt;-chan struct{}
+    Released() &lt;-chan struct{}
+    Broadcast(masterProgressChan &lt;-chan <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Progress">Progress</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewTransfer">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=2397:2424#L71">NewTransfer</a>
+					<a class="permalink" href="index.html#NewTransfer">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewTransfer">NewTransfer</a>() <a href="index.html#Transfer">Transfer</a></pre>
+				<p>
+NewTransfer creates a new transfer.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="TransferManager">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=7643:8085#L267">TransferManager</a>
+				<a class="permalink" href="index.html#TransferManager">&#xb6;</a>
+			</h2>
+			<p>
+TransferManager is used by LayerDownloadManager and LayerUploadManager to
+schedule and deduplicate transfers. It is up to the TransferManager
+implementation to make the scheduling and concurrency decisions.
+</p>
+
+			<pre>type TransferManager interface {
+    <span class="comment">// Transfer checks if a transfer with the given key is in progress. If</span>
+    <span class="comment">// so, it returns progress and error output from that transfer.</span>
+    <span class="comment">// Otherwise, it will call xferFunc to initiate the transfer.</span>
+    Transfer(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, xferFunc <a href="index.html#DoFunc">DoFunc</a>, progressOutput <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Output">Output</a>) (<a href="index.html#Transfer">Transfer</a>, *<a href="index.html#Watcher">Watcher</a>)
+    <span class="comment">// SetConcurrency set the concurrencyLimit so that it is adjustable daemon reload</span>
+    SetConcurrency(concurrency <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewTransferManager">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=8305:8366#L286">NewTransferManager</a>
+					<a class="permalink" href="index.html#NewTransferManager">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewTransferManager">NewTransferManager</a>(concurrencyLimit <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) <a href="index.html#TransferManager">TransferManager</a></pre>
+				<p>
+NewTransferManager returns a new TransferManager.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="UploadDescriptor">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/upload.go?s=1170:1849#L38">UploadDescriptor</a>
+				<a class="permalink" href="index.html#UploadDescriptor">&#xb6;</a>
+			</h2>
+			<p>
+An UploadDescriptor references a layer that may need to be uploaded.
+</p>
+
+			<pre>type UploadDescriptor interface {
+    <span class="comment">// Key returns the key used to deduplicate uploads.</span>
+    Key() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// ID returns the ID for display purposes.</span>
+    ID() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// DiffID should return the DiffID for this layer.</span>
+    DiffID() <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#DiffID">DiffID</a>
+    <span class="comment">// Upload is called to perform the Upload.</span>
+    Upload(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, progressOutput <a href="../../pkg/progress/index.html">progress</a>.<a href="../../pkg/progress/index.html#Output">Output</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/">distribution</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/#Descriptor">Descriptor</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// SetRemoteDescriptor provides the distribution.Descriptor that was</span>
+    <span class="comment">// returned by Upload. This descriptor is not to be confused with</span>
+    <span class="comment">// the UploadDescriptor interface, which is used for internally</span>
+    <span class="comment">// identifying layers that are being uploaded.</span>
+    SetRemoteDescriptor(descriptor <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/">distribution</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/#Descriptor">Descriptor</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Watcher">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/xfer/transfer.go?s=504:988#L13">Watcher</a>
+				<a class="permalink" href="index.html#Watcher">&#xb6;</a>
+			</h2>
+			<p>
+Watcher is returned by Watch and can be passed to Release to stop watching.
+</p>
+
+			<pre>type Watcher struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

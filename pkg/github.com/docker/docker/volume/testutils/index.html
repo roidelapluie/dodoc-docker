@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>testutils - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package testutils</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/volume/testutils"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#FakeRefs">func FakeRefs(p plugingetter.CompatPlugin) int</a></dd>
+			
+				
+				<dd><a href="index.html#MakeFakePlugin">func MakeFakePlugin(d volume.Driver, l net.Listener) (plugingetter.CompatPlugin, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NewFakeDriver">func NewFakeDriver(name string) volume.Driver</a></dd>
+			
+				
+				<dd><a href="index.html#NewFakePluginGetter">func NewFakePluginGetter(pls ...plugingetter.CompatPlugin) plugingetter.PluginGetter</a></dd>
+			
+				
+				<dd><a href="index.html#NewFakeVolume">func NewFakeVolume(name string, driverName string) volume.Volume</a></dd>
+			
+			
+				
+				<dd><a href="index.html#FakeDriver">type FakeDriver</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeDriver.Create">func (d *FakeDriver) Create(name string, opts map[string]string) (volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeDriver.Get">func (d *FakeDriver) Get(name string) (volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeDriver.List">func (d *FakeDriver) List() ([]volume.Volume, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeDriver.Name">func (d *FakeDriver) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeDriver.Remove">func (d *FakeDriver) Remove(v volume.Volume) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeDriver.Scope">func (*FakeDriver) Scope() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#FakeVolume">type FakeVolume</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeVolume.CreatedAt">func (f FakeVolume) CreatedAt() (time.Time, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeVolume.DriverName">func (f FakeVolume) DriverName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeVolume.Mount">func (FakeVolume) Mount(_ string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeVolume.Name">func (f FakeVolume) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeVolume.Path">func (FakeVolume) Path() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeVolume.Status">func (FakeVolume) Status() map[string]interface{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FakeVolume.Unmount">func (FakeVolume) Unmount(_ string) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NoopVolume">type NoopVolume</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoopVolume.CreatedAt">func (NoopVolume) CreatedAt() (time.Time, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoopVolume.DriverName">func (NoopVolume) DriverName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoopVolume.Mount">func (NoopVolume) Mount(_ string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoopVolume.Name">func (NoopVolume) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoopVolume.Path">func (NoopVolume) Path() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoopVolume.Status">func (NoopVolume) Status() map[string]interface{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NoopVolume.Unmount">func (NoopVolume) Unmount(_ string) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go">testutils.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="FakeRefs">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=6349:6395#L217">FakeRefs</a>
+				<a class="permalink" href="index.html#FakeRefs">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FakeRefs">FakeRefs</a>(p <a href="../../pkg/plugingetter/index.html">plugingetter</a>.<a href="../../pkg/plugingetter/index.html#CompatPlugin">CompatPlugin</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+			<p>
+FakeRefs checks ref count on a fake plugin.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MakeFakePlugin">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=4121:4208#L136">MakeFakePlugin</a>
+				<a class="permalink" href="index.html#MakeFakePlugin">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MakeFakePlugin">MakeFakePlugin</a>(d <a href="../index.html">volume</a>.<a href="../index.html#Driver">Driver</a>, l <a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#Listener">Listener</a>) (<a href="../../pkg/plugingetter/index.html">plugingetter</a>.<a href="../../pkg/plugingetter/index.html#CompatPlugin">CompatPlugin</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+MakeFakePlugin creates a fake plugin from the passed in driver
+Note: currently only &#34;Create&#34; is implemented because that&#39;s all that&#39;s needed
+so far. If you need it to test something else, add it here, but probably you
+shouldn&#39;t need to use this except for very specific cases with v2 plugin handling.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewFakeDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=2485:2530#L74">NewFakeDriver</a>
+				<a class="permalink" href="index.html#NewFakeDriver">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewFakeDriver">NewFakeDriver</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="../index.html">volume</a>.<a href="../index.html#Driver">Driver</a></pre>
+			<p>
+NewFakeDriver creates a new FakeDriver with the specified name
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewFakePluginGetter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=5267:5351#L185">NewFakePluginGetter</a>
+				<a class="permalink" href="index.html#NewFakePluginGetter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewFakePluginGetter">NewFakePluginGetter</a>(pls ...<a href="../../pkg/plugingetter/index.html">plugingetter</a>.<a href="../../pkg/plugingetter/index.html#CompatPlugin">CompatPlugin</a>) <a href="../../pkg/plugingetter/index.html">plugingetter</a>.<a href="../../pkg/plugingetter/index.html#PluginGetter">PluginGetter</a></pre>
+			<p>
+NewFakePluginGetter returns a plugin getter for fake plugins
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewFakeVolume">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1317:1381#L38">NewFakeVolume</a>
+				<a class="permalink" href="index.html#NewFakeVolume">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewFakeVolume">NewFakeVolume</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driverName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a></pre>
+			<p>
+NewFakeVolume creates a new fake volume for testing
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="FakeDriver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=2347:2417#L68">FakeDriver</a>
+				<a class="permalink" href="index.html#FakeDriver">&#xb6;</a>
+			</h2>
+			<p>
+FakeDriver is a driver that generates fake volumes
+</p>
+
+			<pre>type FakeDriver struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FakeDriver.Create">func (*FakeDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=2815:2902#L86">Create</a>
+					<a class="permalink" href="index.html#FakeDriver.Create">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#FakeDriver">FakeDriver</a>) <a href="index.html#Create">Create</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Create initializes a fake volume.
+It returns an error if the options include an &#34;error&#34; key with a message
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeDriver.Get">func (*FakeDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=3474:3534#L114">Get</a>
+					<a class="permalink" href="index.html#FakeDriver.Get">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#FakeDriver">FakeDriver</a>) <a href="index.html#Get">Get</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get gets the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeDriver.List">func (*FakeDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=3293:3345#L105">List</a>
+					<a class="permalink" href="index.html#FakeDriver.List">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#FakeDriver">FakeDriver</a>) <a href="index.html#List">List</a>() ([]<a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+List lists the volumes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeDriver.Name">func (*FakeDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=2648:2682#L82">Name</a>
+					<a class="permalink" href="index.html#FakeDriver.Name">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#FakeDriver">FakeDriver</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name is the name of the driver
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeDriver.Remove">func (*FakeDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=3087:3137#L96">Remove</a>
+					<a class="permalink" href="index.html#FakeDriver.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#FakeDriver">FakeDriver</a>) <a href="index.html#Remove">Remove</a>(v <a href="../index.html">volume</a>.<a href="../index.html#Volume">Volume</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Remove deletes a volume.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeDriver.Scope">func (*FakeDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=3674:3707#L122">Scope</a>
+					<a class="permalink" href="index.html#FakeDriver.Scope">&#xb6;</a>
+				</h3>
+				<pre>func (*<a href="index.html#FakeDriver">FakeDriver</a>) <a href="index.html#Scope">Scope</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Scope returns the local scope
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="FakeVolume">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1174:1260#L31">FakeVolume</a>
+				<a class="permalink" href="index.html#FakeVolume">&#xb6;</a>
+			</h2>
+			<p>
+FakeVolume is a fake volume with a random name
+</p>
+
+			<pre>type FakeVolume struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="FakeVolume.CreatedAt">func (FakeVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=2212:2262#L63">CreatedAt</a>
+					<a class="permalink" href="index.html#FakeVolume.CreatedAt">&#xb6;</a>
+				</h3>
+				<pre>func (f <a href="index.html#FakeVolume">FakeVolume</a>) <a href="index.html#CreatedAt">CreatedAt</a>() (<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreatedAt provides the time the volume (directory) was created at
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeVolume.DriverName">func (FakeVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1592:1631#L46">DriverName</a>
+					<a class="permalink" href="index.html#FakeVolume.DriverName">&#xb6;</a>
+				</h3>
+				<pre>func (f <a href="index.html#FakeVolume">FakeVolume</a>) <a href="index.html#DriverName">DriverName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+DriverName is the name of the driver
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeVolume.Mount">func (FakeVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1797:1846#L52">Mount</a>
+					<a class="permalink" href="index.html#FakeVolume.Mount">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#FakeVolume">FakeVolume</a>) <a href="index.html#Mount">Mount</a>(_ <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Mount mounts the volume in the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeVolume.Name">func (FakeVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1499:1532#L43">Name</a>
+					<a class="permalink" href="index.html#FakeVolume.Name">&#xb6;</a>
+				</h3>
+				<pre>func (f <a href="index.html#FakeVolume">FakeVolume</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name is the name of the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeVolume.Path">func (FakeVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1702:1733#L49">Path</a>
+					<a class="permalink" href="index.html#FakeVolume.Path">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#FakeVolume">FakeVolume</a>) <a href="index.html#Path">Path</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Path is the filesystem path to the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeVolume.Status">func (FakeVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=2033:2082#L58">Status</a>
+					<a class="permalink" href="index.html#FakeVolume.Status">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#FakeVolume">FakeVolume</a>) <a href="index.html#Status">Status</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]interface{}</pre>
+				<p>
+Status provides low-level details about the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="FakeVolume.Unmount">func (FakeVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1921:1962#L55">Unmount</a>
+					<a class="permalink" href="index.html#FakeVolume.Unmount">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#FakeVolume">FakeVolume</a>) <a href="index.html#Unmount">Unmount</a>(_ <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Unmount unmounts the volume from the container
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NoopVolume">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=328:352#L7">NoopVolume</a>
+				<a class="permalink" href="index.html#NoopVolume">&#xb6;</a>
+			</h2>
+			<p>
+NoopVolume is a volume that doesn&#39;t perform any operation
+</p>
+
+			<pre>type NoopVolume struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NoopVolume.CreatedAt">func (NoopVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=1047:1095#L28">CreatedAt</a>
+					<a class="permalink" href="index.html#NoopVolume.CreatedAt">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#NoopVolume">NoopVolume</a>) <a href="index.html#CreatedAt">CreatedAt</a>() (<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreatedAt provides the time the volume (directory) was created at
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoopVolume.DriverName">func (NoopVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=479:516#L13">DriverName</a>
+					<a class="permalink" href="index.html#NoopVolume.DriverName">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#NoopVolume">NoopVolume</a>) <a href="index.html#DriverName">DriverName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+DriverName is the name of the driver
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoopVolume.Mount">func (NoopVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=676:725#L19">Mount</a>
+					<a class="permalink" href="index.html#NoopVolume.Mount">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#NoopVolume">NoopVolume</a>) <a href="index.html#Mount">Mount</a>(_ <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Mount mounts the volume in the container
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoopVolume.Name">func (NoopVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=388:419#L10">Name</a>
+					<a class="permalink" href="index.html#NoopVolume.Name">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#NoopVolume">NoopVolume</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name is the name of the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoopVolume.Path">func (NoopVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=581:612#L16">Path</a>
+					<a class="permalink" href="index.html#NoopVolume.Path">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#NoopVolume">NoopVolume</a>) <a href="index.html#Path">Path</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Path is the filesystem path to the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoopVolume.Status">func (NoopVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=912:961#L25">Status</a>
+					<a class="permalink" href="index.html#NoopVolume.Status">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#NoopVolume">NoopVolume</a>) <a href="index.html#Status">Status</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]interface{}</pre>
+				<p>
+Status provides low-level details about the volume
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NoopVolume.Unmount">func (NoopVolume) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/volume/testutils/testutils.go?s=800:841#L22">Unmount</a>
+					<a class="permalink" href="index.html#NoopVolume.Unmount">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#NoopVolume">NoopVolume</a>) <a href="index.html#Unmount">Unmount</a>(_ <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Unmount unmounts the volume from the container
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

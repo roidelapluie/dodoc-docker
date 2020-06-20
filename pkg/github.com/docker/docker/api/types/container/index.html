@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>container - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package container</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/container"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#CgroupSpec">type CgroupSpec</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CgroupSpec.Container">func (c CgroupSpec) Container() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CgroupSpec.IsContainer">func (c CgroupSpec) IsContainer() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CgroupSpec.Valid">func (c CgroupSpec) Valid() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerChangeResponseItem">type ContainerChangeResponseItem</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerCreateCreatedBody">type ContainerCreateCreatedBody</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerTopOKBody">type ContainerTopOKBody</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerUpdateOKBody">type ContainerUpdateOKBody</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerWaitOKBody">type ContainerWaitOKBody</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ContainerWaitOKBodyError">type ContainerWaitOKBodyError</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DeviceMapping">type DeviceMapping</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DeviceRequest">type DeviceRequest</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#HealthConfig">type HealthConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#HostConfig">type HostConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#IpcMode">type IpcMode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.Container">func (n IpcMode) Container() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.IsContainer">func (n IpcMode) IsContainer() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.IsEmpty">func (n IpcMode) IsEmpty() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.IsHost">func (n IpcMode) IsHost() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.IsNone">func (n IpcMode) IsNone() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.IsPrivate">func (n IpcMode) IsPrivate() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.IsShareable">func (n IpcMode) IsShareable() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IpcMode.Valid">func (n IpcMode) Valid() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Isolation">type Isolation</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Isolation.IsDefault">func (i Isolation) IsDefault() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Isolation.IsHyperV">func (i Isolation) IsHyperV() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Isolation.IsProcess">func (i Isolation) IsProcess() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Isolation.IsValid">func (i Isolation) IsValid() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LogConfig">type LogConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogMode">type LogMode</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkMode">type NetworkMode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.ConnectedContainer">func (n NetworkMode) ConnectedContainer() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.IsBridge">func (n NetworkMode) IsBridge() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.IsContainer">func (n NetworkMode) IsContainer() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.IsDefault">func (n NetworkMode) IsDefault() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.IsHost">func (n NetworkMode) IsHost() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.IsNone">func (n NetworkMode) IsNone() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.IsPrivate">func (n NetworkMode) IsPrivate() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.IsUserDefined">func (n NetworkMode) IsUserDefined() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.NetworkName">func (n NetworkMode) NetworkName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NetworkMode.UserDefined">func (n NetworkMode) UserDefined() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PidMode">type PidMode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PidMode.Container">func (n PidMode) Container() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PidMode.IsContainer">func (n PidMode) IsContainer() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PidMode.IsHost">func (n PidMode) IsHost() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PidMode.IsPrivate">func (n PidMode) IsPrivate() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PidMode.Valid">func (n PidMode) Valid() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Resources">type Resources</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RestartPolicy">type RestartPolicy</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestartPolicy.IsAlways">func (rp *RestartPolicy) IsAlways() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestartPolicy.IsNone">func (rp *RestartPolicy) IsNone() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestartPolicy.IsOnFailure">func (rp *RestartPolicy) IsOnFailure() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestartPolicy.IsSame">func (rp *RestartPolicy) IsSame(tp *RestartPolicy) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestartPolicy.IsUnlessStopped">func (rp *RestartPolicy) IsUnlessStopped() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UTSMode">type UTSMode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UTSMode.IsHost">func (n UTSMode) IsHost() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UTSMode.IsPrivate">func (n UTSMode) IsPrivate() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UTSMode.Valid">func (n UTSMode) Valid() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#UpdateConfig">type UpdateConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#UsernsMode">type UsernsMode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UsernsMode.IsHost">func (n UsernsMode) IsHost() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UsernsMode.IsPrivate">func (n UsernsMode) IsPrivate() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#UsernsMode.Valid">func (n UsernsMode) Valid() bool</a></dd>
+				
+			
+				
+				<dd><a href="index.html#WaitCondition">type WaitCondition</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/config.go">config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_changes.go">container_changes.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_create.go">container_create.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_top.go">container_top.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_update.go">container_update.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_wait.go">container_wait.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go">host_config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/hostconfig_unix.go">hostconfig_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/waitcondition.go">waitcondition.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// IsolationEmpty is unspecified (same behavior as default)</span>
+    <span id="IsolationEmpty">IsolationEmpty</span> = <a href="index.html#Isolation">Isolation</a>(&#34;&#34;)
+    <span class="comment">// IsolationDefault is the default isolation mode on current daemon</span>
+    <span id="IsolationDefault">IsolationDefault</span> = <a href="index.html#Isolation">Isolation</a>(&#34;default&#34;)
+    <span class="comment">// IsolationProcess is process isolation mode</span>
+    <span id="IsolationProcess">IsolationProcess</span> = <a href="index.html#Isolation">Isolation</a>(&#34;process&#34;)
+    <span class="comment">// IsolationHyperV is HyperV isolation mode</span>
+    <span id="IsolationHyperV">IsolationHyperV</span> = <a href="index.html#Isolation">Isolation</a>(&#34;hyperv&#34;)
+)</pre>
+			
+				<p>
+MinimumDuration puts a minimum on user configured duration.
+This is to prevent API error on time unit. For example, API may
+set 3 as healthcheck interval with intention of 3 seconds, but
+Docker interprets it as 3 nanoseconds.
+</p>
+
+				<pre>const <span id="MinimumDuration">MinimumDuration</span> = 1 * <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Millisecond">Millisecond</a></pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="CgroupSpec">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=4537:4559#L148">CgroupSpec</a>
+				<a class="permalink" href="index.html#CgroupSpec">&#xb6;</a>
+			</h2>
+			<p>
+CgroupSpec represents the cgroup to use for the container.
+</p>
+
+			<pre>type CgroupSpec <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="CgroupSpec.Container">func (CgroupSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=4980:5018#L162">Container</a>
+					<a class="permalink" href="index.html#CgroupSpec.Container">&#xb6;</a>
+				</h3>
+				<pre>func (c <a href="index.html#CgroupSpec">CgroupSpec</a>) <a href="index.html#Container">Container</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Container returns the name of the container whose cgroup will be used.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CgroupSpec.IsContainer">func (CgroupSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=4642:4680#L151">IsContainer</a>
+					<a class="permalink" href="index.html#CgroupSpec.IsContainer">&#xb6;</a>
+				</h3>
+				<pre>func (c <a href="index.html#CgroupSpec">CgroupSpec</a>) <a href="index.html#IsContainer">IsContainer</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsContainer indicates whether the container is using another container cgroup
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="CgroupSpec.Valid">func (CgroupSpec) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=4833:4865#L157">Valid</a>
+					<a class="permalink" href="index.html#CgroupSpec.Valid">&#xb6;</a>
+				</h3>
+				<pre>func (c <a href="index.html#CgroupSpec">CgroupSpec</a>) <a href="index.html#Valid">Valid</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Valid indicates whether the cgroup spec is valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Config">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/config.go?s=1918:4207#L33">Config</a>
+				<a class="permalink" href="index.html#Config">&#xb6;</a>
+			</h2>
+			<p>
+Config contains the configuration data about a container.
+It should hold only portable information about the container.
+Here, &#34;portable&#34; means &#34;independent from the host we are running on&#34;.
+Non-portable information *should* appear in HostConfig.
+All fields added to this struct must be marked `omitempty` to keep getting
+predictable hashes from the old `v1Compatibility` configuration.
+</p>
+
+			<pre>type Config struct {
+<span id="Config.Hostname"></span>    Hostname        <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              <span class="comment">// Hostname</span>
+<span id="Config.Domainname"></span>    Domainname      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              <span class="comment">// Domainname</span>
+<span id="Config.User"></span>    User            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              <span class="comment">// User that will run the command(s) inside the container, also support user:group</span>
+<span id="Config.AttachStdin"></span>    AttachStdin     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                <span class="comment">// Attach the standard input, makes possible user interaction</span>
+<span id="Config.AttachStdout"></span>    AttachStdout    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                <span class="comment">// Attach the standard output</span>
+<span id="Config.AttachStderr"></span>    AttachStderr    <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                <span class="comment">// Attach the standard error</span>
+<span id="Config.ExposedPorts"></span>    ExposedPorts    <a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/">nat</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/#PortSet">PortSet</a>         `json:&#34;,omitempty&#34;` <span class="comment">// List of exposed ports</span>
+<span id="Config.Tty"></span>    Tty             <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                <span class="comment">// Attach standard streams to a tty, including stdin if it is not closed.</span>
+<span id="Config.OpenStdin"></span>    OpenStdin       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                <span class="comment">// Open stdin</span>
+<span id="Config.StdinOnce"></span>    StdinOnce       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                <span class="comment">// If true, close stdin after the 1 attached client disconnects.</span>
+<span id="Config.Env"></span>    Env             []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            <span class="comment">// List of environment variable to set in the container</span>
+<span id="Config.Cmd"></span>    Cmd             <a href="../strslice/index.html">strslice</a>.<a href="../strslice/index.html#StrSlice">StrSlice</a>   <span class="comment">// Command to run when starting the container</span>
+<span id="Config.Healthcheck"></span>    Healthcheck     *<a href="index.html#HealthConfig">HealthConfig</a>       `json:&#34;,omitempty&#34;` <span class="comment">// Healthcheck describes how to check the container is healthy</span>
+<span id="Config.ArgsEscaped"></span>    ArgsEscaped     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                `json:&#34;,omitempty&#34;` <span class="comment">// True if command is already escaped (meaning treat as a command line) (Windows specific).</span>
+<span id="Config.Image"></span>    Image           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              <span class="comment">// Name of the image as it was passed by the operator (e.g. could be symbolic)</span>
+<span id="Config.Volumes"></span>    Volumes         map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]struct{} <span class="comment">// List of volumes (mounts) used for the container</span>
+<span id="Config.WorkingDir"></span>    WorkingDir      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              <span class="comment">// Current directory (PWD) in the command will be launched</span>
+<span id="Config.Entrypoint"></span>    Entrypoint      <a href="../strslice/index.html">strslice</a>.<a href="../strslice/index.html#StrSlice">StrSlice</a>   <span class="comment">// Entrypoint to run when starting the container</span>
+<span id="Config.NetworkDisabled"></span>    NetworkDisabled <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                `json:&#34;,omitempty&#34;` <span class="comment">// Is network disabled</span>
+<span id="Config.MacAddress"></span>    MacAddress      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              `json:&#34;,omitempty&#34;` <span class="comment">// Mac Address of the container</span>
+<span id="Config.OnBuild"></span>    OnBuild         []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            <span class="comment">// ONBUILD metadata that were defined on the image Dockerfile</span>
+<span id="Config.Labels"></span>    Labels          map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   <span class="comment">// List of labels set to this container</span>
+<span id="Config.StopSignal"></span>    StopSignal      <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>              `json:&#34;,omitempty&#34;` <span class="comment">// Signal to stop a container</span>
+<span id="Config.StopTimeout"></span>    StopTimeout     *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>                `json:&#34;,omitempty&#34;` <span class="comment">// Timeout (in seconds) to stop a container</span>
+<span id="Config.Shell"></span>    Shell           <a href="../strslice/index.html">strslice</a>.<a href="../strslice/index.html#StrSlice">StrSlice</a>   `json:&#34;,omitempty&#34;` <span class="comment">// Shell for shell-form of RUN, CMD, ENTRYPOINT</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerChangeResponseItem">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_changes.go?s=490:679#L2">ContainerChangeResponseItem</a>
+				<a class="permalink" href="index.html#ContainerChangeResponseItem">&#xb6;</a>
+			</h2>
+			<p>
+ContainerChangeResponseItem change item in response to ContainerChanges operation
+swagger:model ContainerChangeResponseItem
+</p>
+
+			<pre>type ContainerChangeResponseItem struct {
+
+<span id="ContainerChangeResponseItem.Kind"></span>    <span class="comment">// Kind of change</span>
+    <span class="comment">// Required: true</span>
+    Kind <a href="http://127.0.0.1:8080/pkg/builtin/#uint8">uint8</a> `json:&#34;Kind&#34;`
+
+<span id="ContainerChangeResponseItem.Path"></span>    <span class="comment">// Path to file that has changed</span>
+    <span class="comment">// Required: true</span>
+    Path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Path&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerCreateCreatedBody">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_create.go?s=475:706#L2">ContainerCreateCreatedBody</a>
+				<a class="permalink" href="index.html#ContainerCreateCreatedBody">&#xb6;</a>
+			</h2>
+			<p>
+ContainerCreateCreatedBody OK response to ContainerCreate operation
+swagger:model ContainerCreateCreatedBody
+</p>
+
+			<pre>type ContainerCreateCreatedBody struct {
+
+    <span class="comment">// The ID of the created container</span>
+    <span class="comment">// Required: true</span>
+<span id="ContainerCreateCreatedBody.ID"></span>    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Id&#34;`
+
+<span id="ContainerCreateCreatedBody.Warnings"></span>    <span class="comment">// Warnings encountered when creating the container</span>
+    <span class="comment">// Required: true</span>
+    Warnings []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Warnings&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerTopOKBody">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_top.go?s=456:744#L2">ContainerTopOKBody</a>
+				<a class="permalink" href="index.html#ContainerTopOKBody">&#xb6;</a>
+			</h2>
+			<p>
+ContainerTopOKBody OK response to ContainerTop operation
+swagger:model ContainerTopOKBody
+</p>
+
+			<pre>type ContainerTopOKBody struct {
+
+    <span class="comment">// Each process running in the container, where each is process is an array of values corresponding to the titles</span>
+    <span class="comment">// Required: true</span>
+<span id="ContainerTopOKBody.Processes"></span>    Processes [][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Processes&#34;`
+
+    <span class="comment">// The ps column titles</span>
+    <span class="comment">// Required: true</span>
+<span id="ContainerTopOKBody.Titles"></span>    Titles []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Titles&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerUpdateOKBody">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_update.go?s=465:572#L2">ContainerUpdateOKBody</a>
+				<a class="permalink" href="index.html#ContainerUpdateOKBody">&#xb6;</a>
+			</h2>
+			<p>
+ContainerUpdateOKBody OK response to ContainerUpdate operation
+swagger:model ContainerUpdateOKBody
+</p>
+
+			<pre>type ContainerUpdateOKBody struct {
+
+    <span class="comment">// warnings</span>
+    <span class="comment">// Required: true</span>
+<span id="ContainerUpdateOKBody.Warnings"></span>    Warnings []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Warnings&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerWaitOKBody">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_wait.go?s=671:873#L10">ContainerWaitOKBody</a>
+				<a class="permalink" href="index.html#ContainerWaitOKBody">&#xb6;</a>
+			</h2>
+			<p>
+ContainerWaitOKBody OK response to ContainerWait operation
+swagger:model ContainerWaitOKBody
+</p>
+
+			<pre>type ContainerWaitOKBody struct {
+
+    <span class="comment">// error</span>
+    <span class="comment">// Required: true</span>
+<span id="ContainerWaitOKBody.Error"></span>    Error *<a href="index.html#ContainerWaitOKBodyError">ContainerWaitOKBodyError</a> `json:&#34;Error&#34;`
+
+    <span class="comment">// Exit code of the container</span>
+    <span class="comment">// Required: true</span>
+<span id="ContainerWaitOKBody.StatusCode"></span>    StatusCode <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;StatusCode&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ContainerWaitOKBodyError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/container_wait.go?s=462:570#L2">ContainerWaitOKBodyError</a>
+				<a class="permalink" href="index.html#ContainerWaitOKBodyError">&#xb6;</a>
+			</h2>
+			<p>
+ContainerWaitOKBodyError container waiting error, if any
+swagger:model ContainerWaitOKBodyError
+</p>
+
+			<pre>type ContainerWaitOKBodyError struct {
+
+    <span class="comment">// Details of an error</span>
+<span id="ContainerWaitOKBodyError.Message"></span>    Message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;Message,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DeviceMapping">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=7407:7514#L248">DeviceMapping</a>
+				<a class="permalink" href="index.html#DeviceMapping">&#xb6;</a>
+			</h2>
+			<p>
+DeviceMapping represents the device mapping between the host and the container.
+</p>
+
+			<pre>type DeviceMapping struct {
+<span id="DeviceMapping.PathOnHost"></span>    PathOnHost        <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="DeviceMapping.PathInContainer"></span>    PathInContainer   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="DeviceMapping.CgroupPermissions"></span>    CgroupPermissions <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DeviceRequest">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=6901:7322#L239">DeviceRequest</a>
+				<a class="permalink" href="index.html#DeviceRequest">&#xb6;</a>
+			</h2>
+			<p>
+DeviceRequest represents a request for devices from a device driver.
+Used by GPU device drivers.
+</p>
+
+			<pre>type DeviceRequest struct {
+<span id="DeviceRequest.Driver"></span>    Driver       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            <span class="comment">// Name of device driver</span>
+<span id="DeviceRequest.Count"></span>    Count        <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>               <span class="comment">// Number of devices to request (-1 = All)</span>
+<span id="DeviceRequest.DeviceIDs"></span>    DeviceIDs    []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          <span class="comment">// List of device IDs as recognizable by the device driver</span>
+<span id="DeviceRequest.Capabilities"></span>    Capabilities [][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        <span class="comment">// An OR list of AND lists of device capabilities (e.g. &#34;gpu&#34;)</span>
+<span id="DeviceRequest.Options"></span>    Options      map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">// Options to pass onto the device driver</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="HealthConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/config.go?s=542:1512#L7">HealthConfig</a>
+				<a class="permalink" href="index.html#HealthConfig">&#xb6;</a>
+			</h2>
+			<p>
+HealthConfig holds configuration settings for the HEALTHCHECK feature.
+</p>
+
+			<pre>type HealthConfig struct {
+<span id="HealthConfig.Test"></span>    <span class="comment">// Test is the test to perform to check that the container is healthy.</span>
+    <span class="comment">// An empty slice means to inherit the default.</span>
+    <span class="comment">// The options are:</span>
+    <span class="comment">// {} : inherit healthcheck</span>
+    <span class="comment">// {&#34;NONE&#34;} : disable healthcheck</span>
+    <span class="comment">// {&#34;CMD&#34;, args...} : exec arguments directly</span>
+    <span class="comment">// {&#34;CMD-SHELL&#34;, command} : run command with system&#39;s default shell</span>
+    Test []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+
+    <span class="comment">// Zero means to inherit. Durations are expressed as integer nanoseconds.</span>
+<span id="HealthConfig.Interval"></span>    Interval    <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a> `json:&#34;,omitempty&#34;` <span class="comment">// Interval is the time to wait between checks.</span>
+<span id="HealthConfig.Timeout"></span>    Timeout     <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a> `json:&#34;,omitempty&#34;` <span class="comment">// Timeout is the time to wait before considering the check to have hung.</span>
+<span id="HealthConfig.StartPeriod"></span>    StartPeriod <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a> `json:&#34;,omitempty&#34;` <span class="comment">// The start period for the container to initialize before the retries starts to count down.</span>
+
+<span id="HealthConfig.Retries"></span>    <span class="comment">// Retries is the number of consecutive failures needed to consider a container as unhealthy.</span>
+    <span class="comment">// Zero means inherit.</span>
+    Retries <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="HostConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=12317:15994#L358">HostConfig</a>
+				<a class="permalink" href="index.html#HostConfig">&#xb6;</a>
+			</h2>
+			<p>
+HostConfig the non-portable Config structure of a container.
+Here, &#34;non-portable&#34; means &#34;dependent of the host we are running on&#34;.
+Portable information *should* appear in Config.
+</p>
+
+			<pre>type HostConfig struct {
+    <span class="comment">// Applicable to all platforms</span>
+<span id="HostConfig.Binds"></span>    Binds           []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>      <span class="comment">// List of volume bindings for this container</span>
+<span id="HostConfig.ContainerIDFile"></span>    ContainerIDFile <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        <span class="comment">// File (path) where the containerId is written</span>
+<span id="HostConfig.LogConfig"></span>    LogConfig       <a href="index.html#LogConfig">LogConfig</a>     <span class="comment">// Configuration of the logs for this container</span>
+<span id="HostConfig.NetworkMode"></span>    NetworkMode     <a href="index.html#NetworkMode">NetworkMode</a>   <span class="comment">// Network mode to use for the container</span>
+<span id="HostConfig.PortBindings"></span>    PortBindings    <a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/">nat</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/go-connections/nat/#PortMap">PortMap</a>   <span class="comment">// Port mapping between the exposed port (container) and the host</span>
+<span id="HostConfig.RestartPolicy"></span>    RestartPolicy   <a href="index.html#RestartPolicy">RestartPolicy</a> <span class="comment">// Restart policy to be used for the container</span>
+<span id="HostConfig.AutoRemove"></span>    AutoRemove      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>          <span class="comment">// Automatically remove container when it exits</span>
+<span id="HostConfig.VolumeDriver"></span>    VolumeDriver    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        <span class="comment">// Name of the volume driver used to mount volumes</span>
+<span id="HostConfig.VolumesFrom"></span>    VolumesFrom     []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>      <span class="comment">// List of volumes to take from other container</span>
+
+    <span class="comment">// Applicable to UNIX platforms</span>
+<span id="HostConfig.CapAdd"></span>    CapAdd          <a href="../strslice/index.html">strslice</a>.<a href="../strslice/index.html#StrSlice">StrSlice</a> <span class="comment">// List of kernel capabilities to add to the container</span>
+<span id="HostConfig.CapDrop"></span>    CapDrop         <a href="../strslice/index.html">strslice</a>.<a href="../strslice/index.html#StrSlice">StrSlice</a> <span class="comment">// List of kernel capabilities to remove from the container</span>
+<span id="HostConfig.Capabilities"></span>    Capabilities    []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          `json:&#34;Capabilities&#34;` <span class="comment">// List of kernel capabilities to be available for container (this overrides the default set)</span>
+<span id="HostConfig.DNS"></span>    DNS             []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          `json:&#34;Dns&#34;`          <span class="comment">// List of DNS server to lookup</span>
+<span id="HostConfig.DNSOptions"></span>    DNSOptions      []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          `json:&#34;DnsOptions&#34;`   <span class="comment">// List of DNSOption to look for</span>
+<span id="HostConfig.DNSSearch"></span>    DNSSearch       []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          `json:&#34;DnsSearch&#34;`    <span class="comment">// List of DNSSearch to look for</span>
+<span id="HostConfig.ExtraHosts"></span>    ExtraHosts      []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          <span class="comment">// List of extra hosts</span>
+<span id="HostConfig.GroupAdd"></span>    GroupAdd        []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          <span class="comment">// List of additional groups that the container process will run as</span>
+<span id="HostConfig.IpcMode"></span>    IpcMode         <a href="index.html#IpcMode">IpcMode</a>           <span class="comment">// IPC namespace to use for the container</span>
+<span id="HostConfig.Cgroup"></span>    Cgroup          <a href="index.html#CgroupSpec">CgroupSpec</a>        <span class="comment">// Cgroup to use for the container</span>
+<span id="HostConfig.Links"></span>    Links           []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          <span class="comment">// List of links (in the name:alias form)</span>
+<span id="HostConfig.OomScoreAdj"></span>    OomScoreAdj     <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>               <span class="comment">// Container preference for OOM-killing</span>
+<span id="HostConfig.PidMode"></span>    PidMode         <a href="index.html#PidMode">PidMode</a>           <span class="comment">// PID namespace to use for the container</span>
+<span id="HostConfig.Privileged"></span>    Privileged      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>              <span class="comment">// Is the container in privileged mode</span>
+<span id="HostConfig.PublishAllPorts"></span>    PublishAllPorts <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>              <span class="comment">// Should docker publish all exposed port for the container</span>
+<span id="HostConfig.ReadonlyRootfs"></span>    ReadonlyRootfs  <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>              <span class="comment">// Is the container root filesystem in read-only</span>
+<span id="HostConfig.SecurityOpt"></span>    SecurityOpt     []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          <span class="comment">// List of string values to customize labels for MLS systems, such as SELinux.</span>
+<span id="HostConfig.StorageOpt"></span>    StorageOpt      map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;` <span class="comment">// Storage driver options per container.</span>
+<span id="HostConfig.Tmpfs"></span>    Tmpfs           map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;` <span class="comment">// List of tmpfs (mounts) used for the container</span>
+<span id="HostConfig.UTSMode"></span>    UTSMode         <a href="index.html#UTSMode">UTSMode</a>           <span class="comment">// UTS namespace to use for the container</span>
+<span id="HostConfig.UsernsMode"></span>    UsernsMode      <a href="index.html#UsernsMode">UsernsMode</a>        <span class="comment">// The user namespace to use for the container</span>
+<span id="HostConfig.ShmSize"></span>    ShmSize         <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>             <span class="comment">// Total shm memory usage</span>
+<span id="HostConfig.Sysctls"></span>    Sysctls         map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;` <span class="comment">// List of Namespaced sysctls used for the container</span>
+<span id="HostConfig.Runtime"></span>    Runtime         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;,omitempty&#34;` <span class="comment">// Runtime to use with this container</span>
+
+    <span class="comment">// Applicable to Windows</span>
+<span id="HostConfig.ConsoleSize"></span>    ConsoleSize [2]<a href="http://127.0.0.1:8080/pkg/builtin/#uint">uint</a>   <span class="comment">// Initial console size (height,width)</span>
+<span id="HostConfig.Isolation"></span>    Isolation   <a href="index.html#Isolation">Isolation</a> <span class="comment">// Isolation technology of the container (e.g. default, hyperv)</span>
+
+    <span class="comment">// Contains container&#39;s resources (cgroups, ulimits)</span>
+    <a href="index.html#Resources">Resources</a>
+
+<span id="HostConfig.Mounts"></span>    <span class="comment">// Mounts specs used by the container</span>
+    Mounts []<a href="../mount/index.html">mount</a>.<a href="../mount/index.html#Mount">Mount</a> `json:&#34;,omitempty&#34;`
+
+<span id="HostConfig.MaskedPaths"></span>    <span class="comment">// MaskedPaths is the list of paths to be masked inside the container (this overrides the default set of paths)</span>
+    MaskedPaths []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="HostConfig.ReadonlyPaths"></span>    <span class="comment">// ReadonlyPaths is the list of paths to be set as read-only inside the container (this overrides the default set of paths)</span>
+    ReadonlyPaths []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// Run a custom init inside the container, if null, use the daemon&#39;s configured settings</span>
+<span id="HostConfig.Init"></span>    Init *<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="IpcMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=1437:1456#L35">IpcMode</a>
+				<a class="permalink" href="index.html#IpcMode">&#xb6;</a>
+			</h2>
+			<p>
+IpcMode represents the container ipc stack.
+</p>
+
+			<pre>type IpcMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="IpcMode.Container">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=2640:2675#L74">Container</a>
+					<a class="permalink" href="index.html#IpcMode.Container">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#Container">Container</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Container returns the name of the container ipc stack is going to be used.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IpcMode.IsContainer">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=2010:2045#L53">IsContainer</a>
+					<a class="permalink" href="index.html#IpcMode.IsContainer">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#IsContainer">IsContainer</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsContainer indicates whether the container uses another container&#39;s ipc namespace.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IpcMode.IsEmpty">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=2321:2352#L64">IsEmpty</a>
+					<a class="permalink" href="index.html#IpcMode.IsEmpty">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#IsEmpty">IsEmpty</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsEmpty indicates whether container IpcMode is empty
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IpcMode.IsHost">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=1700:1730#L43">IsHost</a>
+					<a class="permalink" href="index.html#IpcMode.IsHost">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#IsHost">IsHost</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsHost indicates whether the container shares the host&#39;s ipc namespace.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IpcMode.IsNone">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=2209:2239#L59">IsNone</a>
+					<a class="permalink" href="index.html#IpcMode.IsNone">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#IsNone">IsNone</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsNone indicates whether container IpcMode is set to &#34;none&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IpcMode.IsPrivate">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=1563:1596#L38">IsPrivate</a>
+					<a class="permalink" href="index.html#IpcMode.IsPrivate">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#IsPrivate">IsPrivate</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsPrivate indicates whether the container uses its own private ipc namespace which can not be shared.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IpcMode.IsShareable">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=1857:1892#L48">IsShareable</a>
+					<a class="permalink" href="index.html#IpcMode.IsShareable">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#IsShareable">IsShareable</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsShareable indicates whether the container&#39;s ipc namespace can be shared with another container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="IpcMode.Valid">func (IpcMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=2424:2453#L69">Valid</a>
+					<a class="permalink" href="index.html#IpcMode.Valid">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#IpcMode">IpcMode</a>) <a href="index.html#Valid">Valid</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Valid indicates whether the ipc mode is valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Isolation">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=419:440#L5">Isolation</a>
+				<a class="permalink" href="index.html#Isolation">&#xb6;</a>
+			</h2>
+			<p>
+Isolation represents the isolation technology of a container. The supported
+values are platform specific
+</p>
+
+			<pre>type Isolation <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Isolation.IsDefault">func (Isolation) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=601:636#L9">IsDefault</a>
+					<a class="permalink" href="index.html#Isolation.IsDefault">&#xb6;</a>
+				</h3>
+				<pre>func (i <a href="index.html#Isolation">Isolation</a>) <a href="index.html#IsDefault">IsDefault</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsDefault indicates the default isolation technology of a container. On Linux this
+is the native driver. On Windows, this is a Windows Server Container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Isolation.IsHyperV">func (Isolation) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=776:810#L14">IsHyperV</a>
+					<a class="permalink" href="index.html#Isolation.IsHyperV">&#xb6;</a>
+				</h3>
+				<pre>func (i <a href="index.html#Isolation">Isolation</a>) <a href="index.html#IsHyperV">IsHyperV</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsHyperV indicates the use of a Hyper-V partition for isolation
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Isolation.IsProcess">func (Isolation) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=915:950#L19">IsProcess</a>
+					<a class="permalink" href="index.html#Isolation.IsProcess">&#xb6;</a>
+				</h3>
+				<pre>func (i <a href="index.html#Isolation">Isolation</a>) <a href="index.html#IsProcess">IsProcess</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsProcess indicates the use of process isolation
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Isolation.IsValid">func (Isolation) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/hostconfig_unix.go?s=153:186#L1">IsValid</a>
+					<a class="permalink" href="index.html#Isolation.IsValid">&#xb6;</a>
+				</h3>
+				<pre>func (i <a href="index.html#Isolation">Isolation</a>) <a href="index.html#IsValid">IsValid</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsValid indicates if an isolation technology is valid
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LogConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=9248:9314#L302">LogConfig</a>
+				<a class="permalink" href="index.html#LogConfig">&#xb6;</a>
+			</h2>
+			<p>
+LogConfig represents the logging configuration of the container.
+</p>
+
+			<pre>type LogConfig struct {
+<span id="LogConfig.Type"></span>    Type   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="LogConfig.Config"></span>    Config map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=9011:9030#L292">LogMode</a>
+				<a class="permalink" href="index.html#LogMode">&#xb6;</a>
+			</h2>
+			<p>
+LogMode is a type to define the available modes for logging
+These modes affect how logs are handled when log messages start piling up.
+</p>
+
+			<pre>type LogMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				<p>
+Available logging modes
+</p>
+
+				<pre>const (
+    <span id="LogModeUnset">LogModeUnset</span>            = &#34;&#34;
+    <span id="LogModeBlocking">LogModeBlocking</span> <a href="index.html#LogMode">LogMode</a> = &#34;blocking&#34;
+    <span id="LogModeNonBlock">LogModeNonBlock</span> <a href="index.html#LogMode">LogMode</a> = &#34;non-blocking&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=2860:2883#L83">NetworkMode</a>
+				<a class="permalink" href="index.html#NetworkMode">&#xb6;</a>
+			</h2>
+			<p>
+NetworkMode represents the container network stack.
+</p>
+
+			<pre>type NetworkMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NetworkMode.ConnectedContainer">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=3617:3665#L107">ConnectedContainer</a>
+					<a class="permalink" href="index.html#NetworkMode.ConnectedContainer">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#ConnectedContainer">ConnectedContainer</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ConnectedContainer is the id of the container which network this container is connected to.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.IsBridge">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/hostconfig_unix.go?s=668:704#L19">IsBridge</a>
+					<a class="permalink" href="index.html#NetworkMode.IsBridge">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#IsBridge">IsBridge</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsBridge indicates whether container uses the bridge network stack
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.IsContainer">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=3383:3422#L101">IsContainer</a>
+					<a class="permalink" href="index.html#NetworkMode.IsContainer">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#IsContainer">IsContainer</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsContainer indicates whether container uses a container network stack.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.IsDefault">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=3085:3122#L91">IsDefault</a>
+					<a class="permalink" href="index.html#NetworkMode.IsDefault">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#IsDefault">IsDefault</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsDefault indicates whether container uses the default network stack.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.IsHost">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/hostconfig_unix.go?s=799:833#L24">IsHost</a>
+					<a class="permalink" href="index.html#NetworkMode.IsHost">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#IsHost">IsHost</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsHost indicates whether container uses the host network stack.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.IsNone">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=2952:2986#L86">IsNone</a>
+					<a class="permalink" href="index.html#NetworkMode.IsNone">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#IsNone">IsNone</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsNone indicates whether container isn&#39;t using a network stack.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.IsPrivate">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=3224:3261#L96">IsPrivate</a>
+					<a class="permalink" href="index.html#NetworkMode.IsPrivate">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#IsPrivate">IsPrivate</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsPrivate indicates whether container uses its private network stack.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.IsUserDefined">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/hostconfig_unix.go?s=907:948#L29">IsUserDefined</a>
+					<a class="permalink" href="index.html#NetworkMode.IsUserDefined">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#IsUserDefined">IsUserDefined</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsUserDefined indicates user-created network
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.NetworkName">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/hostconfig_unix.go?s=268:309#L1">NetworkName</a>
+					<a class="permalink" href="index.html#NetworkMode.NetworkName">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#NetworkName">NetworkName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+NetworkName returns the name of the network stack.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NetworkMode.UserDefined">func (NetworkMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=3813:3854#L116">UserDefined</a>
+					<a class="permalink" href="index.html#NetworkMode.UserDefined">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#NetworkMode">NetworkMode</a>) <a href="index.html#UserDefined">UserDefined</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+UserDefined indicates user-created network
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PidMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=5747:5766#L195">PidMode</a>
+				<a class="permalink" href="index.html#PidMode">&#xb6;</a>
+			</h2>
+			<p>
+PidMode represents the pid namespace of the container.
+</p>
+
+			<pre>type PidMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PidMode.Container">func (PidMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=6660:6695#L229">Container</a>
+					<a class="permalink" href="index.html#PidMode.Container">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#PidMode">PidMode</a>) <a href="index.html#Container">Container</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Container returns the name of the container whose pid namespace is going to be used.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PidMode.IsContainer">func (PidMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=6135:6170#L208">IsContainer</a>
+					<a class="permalink" href="index.html#PidMode.IsContainer">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#PidMode">PidMode</a>) <a href="index.html#IsContainer">IsContainer</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsContainer indicates whether the container uses a container&#39;s pid namespace.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PidMode.IsHost">func (PidMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=5998:6028#L203">IsHost</a>
+					<a class="permalink" href="index.html#PidMode.IsHost">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#PidMode">PidMode</a>) <a href="index.html#IsHost">IsHost</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsHost indicates whether the container uses the host&#39;s pid namespace.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PidMode.IsPrivate">func (PidMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=5845:5878#L198">IsPrivate</a>
+					<a class="permalink" href="index.html#PidMode.IsPrivate">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#PidMode">PidMode</a>) <a href="index.html#IsPrivate">IsPrivate</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsPrivate indicates whether the container uses its own new pid namespace.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="PidMode.Valid">func (PidMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=6325:6354#L214">Valid</a>
+					<a class="permalink" href="index.html#PidMode.Valid">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#PidMode">PidMode</a>) <a href="index.html#Valid">Valid</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Valid indicates whether the pid namespace is valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Resources">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=9389:11895#L308">Resources</a>
+				<a class="permalink" href="index.html#Resources">&#xb6;</a>
+			</h2>
+			<p>
+Resources contains container&#39;s resources (cgroups config, ulimits...)
+</p>
+
+			<pre>type Resources struct {
+    <span class="comment">// Applicable to all platforms</span>
+<span id="Resources.CPUShares"></span>    CPUShares <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;CpuShares&#34;` <span class="comment">// CPU shares (relative weight vs. other containers)</span>
+<span id="Resources.Memory"></span>    Memory    <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> <span class="comment">// Memory limit (in bytes)</span>
+<span id="Resources.NanoCPUs"></span>    NanoCPUs  <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;NanoCpus&#34;` <span class="comment">// CPU quota in units of 10&lt;sup&gt;-9&lt;/sup&gt; CPUs.</span>
+
+    <span class="comment">// Applicable to UNIX platforms</span>
+<span id="Resources.CgroupParent"></span>    CgroupParent         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">// Parent cgroup.</span>
+<span id="Resources.BlkioWeight"></span>    BlkioWeight          <a href="http://127.0.0.1:8080/pkg/builtin/#uint16">uint16</a> <span class="comment">// Block IO weight (relative weight vs. other containers)</span>
+<span id="Resources.BlkioWeightDevice"></span>    BlkioWeightDevice    []*<a href="../blkiodev/index.html">blkiodev</a>.<a href="../blkiodev/index.html#WeightDevice">WeightDevice</a>
+<span id="Resources.BlkioDeviceReadBps"></span>    BlkioDeviceReadBps   []*<a href="../blkiodev/index.html">blkiodev</a>.<a href="../blkiodev/index.html#ThrottleDevice">ThrottleDevice</a>
+<span id="Resources.BlkioDeviceWriteBps"></span>    BlkioDeviceWriteBps  []*<a href="../blkiodev/index.html">blkiodev</a>.<a href="../blkiodev/index.html#ThrottleDevice">ThrottleDevice</a>
+<span id="Resources.BlkioDeviceReadIOps"></span>    BlkioDeviceReadIOps  []*<a href="../blkiodev/index.html">blkiodev</a>.<a href="../blkiodev/index.html#ThrottleDevice">ThrottleDevice</a>
+<span id="Resources.BlkioDeviceWriteIOps"></span>    BlkioDeviceWriteIOps []*<a href="../blkiodev/index.html">blkiodev</a>.<a href="../blkiodev/index.html#ThrottleDevice">ThrottleDevice</a>
+<span id="Resources.CPUPeriod"></span>    CPUPeriod            <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           `json:&#34;CpuPeriod&#34;`          <span class="comment">// CPU CFS (Completely Fair Scheduler) period</span>
+<span id="Resources.CPUQuota"></span>    CPUQuota             <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           `json:&#34;CpuQuota&#34;`           <span class="comment">// CPU CFS (Completely Fair Scheduler) quota</span>
+<span id="Resources.CPURealtimePeriod"></span>    CPURealtimePeriod    <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           `json:&#34;CpuRealtimePeriod&#34;`  <span class="comment">// CPU real-time period</span>
+<span id="Resources.CPURealtimeRuntime"></span>    CPURealtimeRuntime   <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           `json:&#34;CpuRealtimeRuntime&#34;` <span class="comment">// CPU real-time runtime</span>
+<span id="Resources.CpusetCpus"></span>    CpusetCpus           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          <span class="comment">// CpusetCpus 0-2, 0,1</span>
+<span id="Resources.CpusetMems"></span>    CpusetMems           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          <span class="comment">// CpusetMems 0-2, 0,1</span>
+<span id="Resources.Devices"></span>    Devices              []<a href="index.html#DeviceMapping">DeviceMapping</a> <span class="comment">// List of devices to map inside the container</span>
+<span id="Resources.DeviceCgroupRules"></span>    DeviceCgroupRules    []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>        <span class="comment">// List of rule to be added to the device cgroup</span>
+<span id="Resources.DeviceRequests"></span>    DeviceRequests       []<a href="index.html#DeviceRequest">DeviceRequest</a> <span class="comment">// List of device requests for device drivers</span>
+<span id="Resources.KernelMemory"></span>    KernelMemory         <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           <span class="comment">// Kernel memory limit (in bytes)</span>
+<span id="Resources.KernelMemoryTCP"></span>    KernelMemoryTCP      <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           <span class="comment">// Hard limit for kernel TCP buffer memory (in bytes)</span>
+<span id="Resources.MemoryReservation"></span>    MemoryReservation    <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           <span class="comment">// Memory soft limit (in bytes)</span>
+<span id="Resources.MemorySwap"></span>    MemorySwap           <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>           <span class="comment">// Total memory usage (memory + swap); set `-1` to enable unlimited swap</span>
+<span id="Resources.MemorySwappiness"></span>    MemorySwappiness     *<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>          <span class="comment">// Tuning container memory swappiness behaviour</span>
+<span id="Resources.OomKillDisable"></span>    OomKillDisable       *<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>           <span class="comment">// Whether to disable OOM Killer or not</span>
+<span id="Resources.PidsLimit"></span>    PidsLimit            *<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>          <span class="comment">// Setting PIDs limit for a container; Set `0` or `-1` for unlimited, or `null` to not change.</span>
+<span id="Resources.Ulimits"></span>    Ulimits              []*units.<a href="index.html#Ulimit">Ulimit</a> <span class="comment">// List of ulimits to be set in the container</span>
+
+    <span class="comment">// Applicable to Windows</span>
+<span id="Resources.CPUCount"></span>    CPUCount           <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>  `json:&#34;CpuCount&#34;`   <span class="comment">// CPU count</span>
+<span id="Resources.CPUPercent"></span>    CPUPercent         <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>  `json:&#34;CpuPercent&#34;` <span class="comment">// CPU percent</span>
+<span id="Resources.IOMaximumIOps"></span>    IOMaximumIOps      <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> <span class="comment">// Maximum IOps for the container system drive</span>
+<span id="Resources.IOMaximumBandwidth"></span>    IOMaximumBandwidth <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a> <span class="comment">// Maximum IO in bytes per second for the container system drive</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RestartPolicy">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=7583:7661#L255">RestartPolicy</a>
+				<a class="permalink" href="index.html#RestartPolicy">&#xb6;</a>
+			</h2>
+			<p>
+RestartPolicy represents the restart policies of the container.
+</p>
+
+			<pre>type RestartPolicy struct {
+<span id="RestartPolicy.Name"></span>    Name              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="RestartPolicy.MaximumRetryCount"></span>    MaximumRetryCount <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RestartPolicy.IsAlways">func (*RestartPolicy) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=8055:8095#L268">IsAlways</a>
+					<a class="permalink" href="index.html#RestartPolicy.IsAlways">&#xb6;</a>
+				</h3>
+				<pre>func (rp *<a href="index.html#RestartPolicy">RestartPolicy</a>) <a href="index.html#IsAlways">IsAlways</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsAlways indicates whether the container has the &#34;always&#34; restart policy.
+This means the container will automatically restart regardless of the exit status.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RestartPolicy.IsNone">func (*RestartPolicy) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=7807:7845#L262">IsNone</a>
+					<a class="permalink" href="index.html#RestartPolicy.IsNone">&#xb6;</a>
+				</h3>
+				<pre>func (rp *<a href="index.html#RestartPolicy">RestartPolicy</a>) <a href="index.html#IsNone">IsNone</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsNone indicates whether the container has the &#34;no&#34; restart policy.
+This means the container will not automatically restart when exiting.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RestartPolicy.IsOnFailure">func (*RestartPolicy) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=8308:8351#L274">IsOnFailure</a>
+					<a class="permalink" href="index.html#RestartPolicy.IsOnFailure">&#xb6;</a>
+				</h3>
+				<pre>func (rp *<a href="index.html#RestartPolicy">RestartPolicy</a>) <a href="index.html#IsOnFailure">IsOnFailure</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsOnFailure indicates whether the container has the &#34;on-failure&#34; restart policy.
+This means the container will automatically restart of exiting with a non-zero exit status.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RestartPolicy.IsSame">func (*RestartPolicy) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=8734:8789#L286">IsSame</a>
+					<a class="permalink" href="index.html#RestartPolicy.IsSame">&#xb6;</a>
+				</h3>
+				<pre>func (rp *<a href="index.html#RestartPolicy">RestartPolicy</a>) <a href="index.html#IsSame">IsSame</a>(tp *<a href="index.html#RestartPolicy">RestartPolicy</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsSame compares two RestartPolicy to see if they are the same
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RestartPolicy.IsUnlessStopped">func (*RestartPolicy) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=8580:8627#L281">IsUnlessStopped</a>
+					<a class="permalink" href="index.html#RestartPolicy.IsUnlessStopped">&#xb6;</a>
+				</h3>
+				<pre>func (rp *<a href="index.html#RestartPolicy">RestartPolicy</a>) <a href="index.html#IsUnlessStopped">IsUnlessStopped</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsUnlessStopped indicates whether the container has the
+&#34;unless-stopped&#34; restart policy. This means the container will
+automatically restart unless user has put it to stopped state.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UTSMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=5179:5198#L171">UTSMode</a>
+				<a class="permalink" href="index.html#UTSMode">&#xb6;</a>
+			</h2>
+			<p>
+UTSMode represents the UTS namespace of the container.
+</p>
+
+			<pre>type UTSMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UTSMode.IsHost">func (UTSMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=5411:5441#L179">IsHost</a>
+					<a class="permalink" href="index.html#UTSMode.IsHost">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#UTSMode">UTSMode</a>) <a href="index.html#IsHost">IsHost</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsHost indicates whether the container uses the host&#39;s UTS namespace.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UTSMode.IsPrivate">func (UTSMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=5277:5310#L174">IsPrivate</a>
+					<a class="permalink" href="index.html#UTSMode.IsPrivate">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#UTSMode">UTSMode</a>) <a href="index.html#IsPrivate">IsPrivate</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsPrivate indicates whether the container uses its private UTS namespace.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UTSMode.Valid">func (UTSMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=5522:5551#L184">Valid</a>
+					<a class="permalink" href="index.html#UTSMode.Valid">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#UTSMode">UTSMode</a>) <a href="index.html#Valid">Valid</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Valid indicates whether the UTS namespace is valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="UpdateConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=12005:12127#L349">UpdateConfig</a>
+				<a class="permalink" href="index.html#UpdateConfig">&#xb6;</a>
+			</h2>
+			<p>
+UpdateConfig holds the mutable attributes of a Container.
+Those attributes can be updated at runtime.
+</p>
+
+			<pre>type UpdateConfig struct {
+    <span class="comment">// Contains container&#39;s resources (cgroups, ulimits)</span>
+    <a href="index.html#Resources">Resources</a>
+<span id="UpdateConfig.RestartPolicy"></span>    RestartPolicy <a href="index.html#RestartPolicy">RestartPolicy</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="UsernsMode">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=3972:3994#L124">UsernsMode</a>
+				<a class="permalink" href="index.html#UsernsMode">&#xb6;</a>
+			</h2>
+			<p>
+UsernsMode represents userns mode in the container.
+</p>
+
+			<pre>type UsernsMode <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="UsernsMode.IsHost">func (UsernsMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=4062:4095#L127">IsHost</a>
+					<a class="permalink" href="index.html#UsernsMode.IsHost">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#UsernsMode">UsernsMode</a>) <a href="index.html#IsHost">IsHost</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsHost indicates whether the container uses the host&#39;s userns.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UsernsMode.IsPrivate">func (UsernsMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=4193:4229#L132">IsPrivate</a>
+					<a class="permalink" href="index.html#UsernsMode.IsPrivate">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#UsernsMode">UsernsMode</a>) <a href="index.html#IsPrivate">IsPrivate</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsPrivate indicates whether the container uses the a private userns.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="UsernsMode.Valid">func (UsernsMode) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/host_config.go?s=4305:4337#L137">Valid</a>
+					<a class="permalink" href="index.html#UsernsMode.Valid">&#xb6;</a>
+				</h3>
+				<pre>func (n <a href="index.html#UsernsMode">UsernsMode</a>) <a href="index.html#Valid">Valid</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Valid indicates whether the userns is valid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="WaitCondition">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/container/waitcondition.go?s=159:184#L1">WaitCondition</a>
+				<a class="permalink" href="index.html#WaitCondition">&#xb6;</a>
+			</h2>
+			<p>
+WaitCondition is a type used to specify a container state for which
+to wait.
+</p>
+
+			<pre>type WaitCondition <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				<p>
+Possible WaitCondition Values.
+</p>
+<p>
+WaitConditionNotRunning (default) is used to wait for any of the non-running
+states: &#34;created&#34;, &#34;exited&#34;, &#34;dead&#34;, &#34;removing&#34;, or &#34;removed&#34;.
+</p>
+<p>
+WaitConditionNextExit is used to wait for the next time the state changes
+to a non-running state. If the state is currently &#34;created&#34; or &#34;exited&#34;,
+this would cause Wait() to block until either the container runs and exits
+or is removed.
+</p>
+<p>
+WaitConditionRemoved is used to wait for the container to be removed.
+</p>
+
+				<pre>const (
+    <span id="WaitConditionNotRunning">WaitConditionNotRunning</span> <a href="index.html#WaitCondition">WaitCondition</a> = &#34;not-running&#34;
+    <span id="WaitConditionNextExit">WaitConditionNextExit</span>   <a href="index.html#WaitCondition">WaitCondition</a> = &#34;next-exit&#34;
+    <span id="WaitConditionRemoved">WaitConditionRemoved</span>    <a href="index.html#WaitCondition">WaitCondition</a> = &#34;removed&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

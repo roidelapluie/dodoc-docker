@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>graphtest - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package graphtest</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/graphdriver/graphtest"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#DriverBenchDeepLayerDiff">func DriverBenchDeepLayerDiff(b *testing.B, layerCount int, drivername string, driveroptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverBenchDeepLayerRead">func DriverBenchDeepLayerRead(b *testing.B, layerCount int, drivername string, driveroptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverBenchDiffApplyN">func DriverBenchDiffApplyN(b *testing.B, fileCount int, drivername string, driveroptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverBenchDiffBase">func DriverBenchDiffBase(b *testing.B, drivername string, driveroptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverBenchDiffN">func DriverBenchDiffN(b *testing.B, bottom, top int, drivername string, driveroptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverBenchExists">func DriverBenchExists(b *testing.B, drivername string, driveroptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverBenchGetEmpty">func DriverBenchGetEmpty(b *testing.B, drivername string, driveroptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverTestChanges">func DriverTestChanges(t testing.TB, drivername string, driverOptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverTestCreateBase">func DriverTestCreateBase(t testing.TB, drivername string, driverOptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverTestCreateEmpty">func DriverTestCreateEmpty(t testing.TB, drivername string, driverOptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverTestCreateSnap">func DriverTestCreateSnap(t testing.TB, drivername string, driverOptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverTestDeepLayerRead">func DriverTestDeepLayerRead(t testing.TB, layerCount int, drivername string, driverOptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverTestDiffApply">func DriverTestDiffApply(t testing.TB, fileCount int, drivername string, driverOptions ...string)</a></dd>
+			
+				
+				<dd><a href="index.html#DriverTestSetQuota">func DriverTestSetQuota(t *testing.T, drivername string, required bool)</a></dd>
+			
+				
+				<dd><a href="index.html#GetDriver">func GetDriver(t testing.TB, name string, options ...string) graphdriver.Driver</a></dd>
+			
+				
+				<dd><a href="index.html#PutDriver">func PutDriver(t testing.TB)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Driver">type Driver</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go">graphbench_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go">graphtest_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/testutil.go">testutil.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/testutil_unix.go">testutil_unix.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="DriverBenchDeepLayerDiff">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go?s=4454:4557#L176">DriverBenchDeepLayerDiff</a>
+				<a class="permalink" href="index.html#DriverBenchDeepLayerDiff">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverBenchDeepLayerDiff">DriverBenchDeepLayerDiff</a>(b *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#B">B</a>, layerCount <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driveroptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverBenchDeepLayerDiff benchmarks calls to diff on top of a given number of layers.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverBenchDeepLayerRead">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go?s=5255:5358#L209">DriverBenchDeepLayerRead</a>
+				<a class="permalink" href="index.html#DriverBenchDeepLayerRead">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverBenchDeepLayerRead">DriverBenchDeepLayerRead</a>(b *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#B">B</a>, layerCount <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driveroptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverBenchDeepLayerRead benchmarks calls to read a file under a given number of layers.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverBenchDiffApplyN">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go?s=2981:3080#L114">DriverBenchDiffApplyN</a>
+				<a class="permalink" href="index.html#DriverBenchDiffApplyN">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverBenchDiffApplyN">DriverBenchDiffApplyN</a>(b *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#B">B</a>, fileCount <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driveroptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverBenchDiffApplyN benchmarks calls to diff and apply together
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverBenchDiffBase">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go?s=1390:1472#L50">DriverBenchDiffBase</a>
+				<a class="permalink" href="index.html#DriverBenchDiffBase">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverBenchDiffBase">DriverBenchDiffBase</a>(b *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#B">B</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driveroptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverBenchDiffBase benchmarks calls to diff on a root layer
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverBenchDiffN">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go?s=2104:2200#L79">DriverBenchDiffN</a>
+				<a class="permalink" href="index.html#DriverBenchDiffN">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverBenchDiffN">DriverBenchDiffN</a>(b *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#B">B</a>, bottom, top <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driveroptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverBenchDiffN benchmarks calls to diff on two layers with
+a provided number of files on the lower and upper layers.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverBenchExists">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go?s=318:398#L6">DriverBenchExists</a>
+				<a class="permalink" href="index.html#DriverBenchExists">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverBenchExists">DriverBenchExists</a>(b *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#B">B</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driveroptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverBenchExists benchmarks calls to exist
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverBenchGetEmpty">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphbench_unix.go?s=782:864#L25">DriverBenchGetEmpty</a>
+				<a class="permalink" href="index.html#DriverBenchGetEmpty">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverBenchGetEmpty">DriverBenchGetEmpty</a>(b *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#B">B</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driveroptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverBenchGetEmpty benchmarks calls to get on an empty layer
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverTestChanges">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=6508:6588#L254">DriverTestChanges</a>
+				<a class="permalink" href="index.html#DriverTestChanges">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverTestChanges">DriverTestChanges</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driverOptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverTestChanges tests computed changes on a layer matches changes made
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverTestCreateBase">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=2716:2799#L102">DriverTestCreateBase</a>
+				<a class="permalink" href="index.html#DriverTestCreateBase">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverTestCreateBase">DriverTestCreateBase</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driverOptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverTestCreateBase create a base driver and verify.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverTestCreateEmpty">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=2009:2093#L73">DriverTestCreateEmpty</a>
+				<a class="permalink" href="index.html#DriverTestCreateEmpty">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverTestCreateEmpty">DriverTestCreateEmpty</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driverOptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverTestCreateEmpty creates a new image and verifies it is empty and the right metadata
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverTestCreateSnap">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=3068:3151#L114">DriverTestCreateSnap</a>
+				<a class="permalink" href="index.html#DriverTestCreateSnap">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverTestCreateSnap">DriverTestCreateSnap</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driverOptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverTestCreateSnap Create a driver and snap and verify.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverTestDeepLayerRead">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=3584:3686#L133">DriverTestDeepLayerRead</a>
+				<a class="permalink" href="index.html#DriverTestDeepLayerRead">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverTestDeepLayerRead">DriverTestDeepLayerRead</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>, layerCount <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driverOptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverTestDeepLayerRead reads a file from a lower layer under a given number of layers
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverTestDiffApply">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=4356:4453#L163">DriverTestDiffApply</a>
+				<a class="permalink" href="index.html#DriverTestDiffApply">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverTestDiffApply">DriverTestDiffApply</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>, fileCount <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, driverOptions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+			<p>
+DriverTestDiffApply tests diffing and applying produces the same layer
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DriverTestSetQuota">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=7652:7723#L304">DriverTestSetQuota</a>
+				<a class="permalink" href="index.html#DriverTestSetQuota">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DriverTestSetQuota">DriverTestSetQuota</a>(t *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>, drivername <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, required <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>)</pre>
+			<p>
+DriverTestSetQuota Create a driver and test setting quota.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=1490:1569#L51">GetDriver</a>
+				<a class="permalink" href="index.html#GetDriver">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetDriver">GetDriver</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>, name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="../index.html">graphdriver</a>.<a href="../index.html#Driver">Driver</a></pre>
+			<p>
+GetDriver create a new driver with given name or return an existing driver with the name updating the reference count.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="PutDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=1759:1787#L61">PutDriver</a>
+				<a class="permalink" href="index.html#PutDriver">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#PutDriver">PutDriver</a>(t <a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#TB">TB</a>)</pre>
+			<p>
+PutDriver removes the driver if it is no longer used and updates the reference count.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Driver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/graphtest/graphtest_unix.go?s=681:754#L21">Driver</a>
+				<a class="permalink" href="index.html#Driver">&#xb6;</a>
+			</h2>
+			<p>
+Driver conforms to graphdriver.Driver interface and
+contains information such as root and reference count of the number of clients using it.
+This helps in testing drivers added into the framework.
+</p>
+
+			<pre>type Driver struct {
+    <a href="../index.html">graphdriver</a>.<a href="../index.html#Driver">Driver</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

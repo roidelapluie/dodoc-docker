@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>images - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package images</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/images"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#DistributionServices">type DistributionServices</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrImageDoesNotExist">type ErrImageDoesNotExist</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ErrImageDoesNotExist.Error">func (e ErrImageDoesNotExist) Error() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ErrImageDoesNotExist.NotFound">func (e ErrImageDoesNotExist) NotFound()</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImageService">type ImageService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewImageService">func NewImageService(config ImageServiceConfig) *ImageService</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.Children">func (i *ImageService) Children(id image.ID) []image.ID</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.Cleanup">func (i *ImageService) Cleanup()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.CommitBuildStep">func (i *ImageService) CommitBuildStep(c backend.CommitConfig) (image.ID, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.CommitImage">func (i *ImageService) CommitImage(c backend.CommitConfig) (image.ID, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.CountImages">func (i *ImageService) CountImages() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.CreateImage">func (i *ImageService) CreateImage(config []byte, parent string) (builder.Image, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.CreateLayer">func (i *ImageService) CreateLayer(container *container.Container, initFunc layer.MountInit) (layer.RWLayer, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.DistributionServices">func (i *ImageService) DistributionServices() DistributionServices</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.ExportImage">func (i *ImageService) ExportImage(names []string, outStream io.Writer) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.GetContainerLayerSize">func (i *ImageService) GetContainerLayerSize(containerID string) (int64, int64)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.GetImage">func (i *ImageService) GetImage(refOrID string) (*image.Image, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.GetImageAndReleasableLayer">func (i *ImageService) GetImageAndReleasableLayer(ctx context.Context, refOrID string, opts backend.GetImageAndLayerOptions) (builder.Image, builder.ROLayer, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.GetLayerByID">func (i *ImageService) GetLayerByID(cid string, os string) (layer.RWLayer, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.GetLayerMountID">func (i *ImageService) GetLayerMountID(cid string, os string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.GetRepository">func (i *ImageService) GetRepository(ctx context.Context, ref reference.Named, authConfig *types.AuthConfig) (dist.Repository, bool, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.GraphDriverForOS">func (i *ImageService) GraphDriverForOS(os string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.ImageDelete">func (i *ImageService) ImageDelete(imageRef string, force, prune bool) ([]types.ImageDeleteResponseItem, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.ImageHistory">func (i *ImageService) ImageHistory(name string) ([]*image.HistoryResponseItem, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.Images">func (i *ImageService) Images(imageFilters filters.Args, all bool, withExtraAttrs bool) ([]*types.ImageSummary, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.ImagesPrune">func (i *ImageService) ImagesPrune(ctx context.Context, pruneFilters filters.Args) (*types.ImagesPruneReport, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.ImportImage">func (i *ImageService) ImportImage(src string, repository, os string, tag string, msg string, inConfig io.ReadCloser, outStream io.Writer, changes []string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.LayerDiskUsage">func (i *ImageService) LayerDiskUsage(ctx context.Context) (int64, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.LayerStoreStatus">func (i *ImageService) LayerStoreStatus() map[string][][2]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.LoadImage">func (i *ImageService) LoadImage(inTar io.ReadCloser, outStream io.Writer, quiet bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.LogImageEvent">func (i *ImageService) LogImageEvent(imageID, refName, action string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.LogImageEventWithAttributes">func (i *ImageService) LogImageEventWithAttributes(imageID, refName, action string, attributes map[string]string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.LookupImage">func (i *ImageService) LookupImage(name string) (*types.ImageInspect, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.MakeImageCache">func (i *ImageService) MakeImageCache(sourceRefs []string) builder.ImageCache</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.Map">func (i *ImageService) Map() map[image.ID]*image.Image</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.PullImage">func (i *ImageService) PullImage(ctx context.Context, image, tag string, platform *specs.Platform, metaHeaders map[string][]string, authConfig *types.AuthConfig, outStream io.Writer) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.PushImage">func (i *ImageService) PushImage(ctx context.Context, image, tag string, metaHeaders map[string][]string, authConfig *types.AuthConfig, outStream io.Writer) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.ReleaseLayer">func (i *ImageService) ReleaseLayer(rwlayer layer.RWLayer, containerOS string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.SearchRegistryForImages">func (i *ImageService) SearchRegistryForImages(ctx context.Context, filtersArgs string, term string, limit int, authConfig *types.AuthConfig, headers map[string][]string) (*registrytypes.SearchResults, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.SquashImage">func (i *ImageService) SquashImage(id, parent string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.TagImage">func (i *ImageService) TagImage(imageName, repository, tag string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.TagImageWithReference">func (i *ImageService) TagImageWithReference(imageID image.ID, newTag reference.Named) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageService.UpdateConfig">func (i *ImageService) UpdateConfig(maxDownloads, maxUploads *int)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImageServiceConfig">type ImageServiceConfig</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/cache.go">cache.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image.go">image.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_builder.go">image_builder.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_commit.go">image_commit.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_delete.go">image_delete.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_events.go">image_events.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_exporter.go">image_exporter.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_history.go">image_history.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_import.go">image_import.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_inspect.go">image_inspect.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_prune.go">image_prune.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_pull.go">image_pull.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_push.go">image_push.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_search.go">image_search.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_tag.go">image_tag.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_unix.go">image_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/images.go">images.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/locals.go">locals.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go">service.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="DistributionServices">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=3015:3268#L70">DistributionServices</a>
+				<a class="permalink" href="index.html#DistributionServices">&#xb6;</a>
+			</h2>
+			<p>
+DistributionServices provides daemon image storage services
+</p>
+
+			<pre>type DistributionServices struct {
+<span id="DistributionServices.DownloadManager"></span>    DownloadManager   <a href="../../distribution/index.html">distribution</a>.<a href="../../distribution/index.html#RootFSDownloadManager">RootFSDownloadManager</a>
+<span id="DistributionServices.V2MetadataService"></span>    V2MetadataService <a href="../../distribution/metadata/index.html">metadata</a>.<a href="../../distribution/metadata/index.html#V2MetadataService">V2MetadataService</a>
+<span id="DistributionServices.LayerStore"></span>    LayerStore        <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#Store">Store</a> <span class="comment">// TODO: lcow</span>
+<span id="DistributionServices.ImageStore"></span>    ImageStore        <a href="../../image/index.html">image</a>.<a href="../../image/index.html#Store">Store</a>
+<span id="DistributionServices.ReferenceStore"></span>    ReferenceStore    <a href="../../reference/index.html">dockerreference</a>.<a href="../../reference/index.html#Store">Store</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrImageDoesNotExist">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image.go?s=287:348#L2">ErrImageDoesNotExist</a>
+				<a class="permalink" href="index.html#ErrImageDoesNotExist">&#xb6;</a>
+			</h2>
+			<p>
+ErrImageDoesNotExist is error returned when no image can be found for a reference.
+</p>
+
+			<pre>type ErrImageDoesNotExist struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ErrImageDoesNotExist.Error">func (ErrImageDoesNotExist) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image.go?s=350:394#L6">Error</a>
+					<a class="permalink" href="index.html#ErrImageDoesNotExist.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#ErrImageDoesNotExist">ErrImageDoesNotExist</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ErrImageDoesNotExist.NotFound">func (ErrImageDoesNotExist) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image.go?s=617:657#L15">NotFound</a>
+					<a class="permalink" href="index.html#ErrImageDoesNotExist.NotFound">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#ErrImageDoesNotExist">ErrImageDoesNotExist</a>) <a href="index.html#NotFound">NotFound</a>()</pre>
+				<p>
+NotFound implements the NotFound interface
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImageService">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=2399:2950#L55">ImageService</a>
+				<a class="permalink" href="index.html#ImageService">&#xb6;</a>
+			</h2>
+			<p>
+ImageService provides a backend for image management
+</p>
+
+			<pre>type ImageService struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewImageService">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=1488:1549#L37">NewImageService</a>
+					<a class="permalink" href="index.html#NewImageService">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewImageService">NewImageService</a>(config <a href="index.html#ImageServiceConfig">ImageServiceConfig</a>) *<a href="index.html#ImageService">ImageService</a></pre>
+				<p>
+NewImageService returns a new ImageService from a configuration
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ImageService.Children">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=4017:4072#L98">Children</a>
+					<a class="permalink" href="index.html#ImageService.Children">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#Children">Children</a>(id <a href="../../image/index.html">image</a>.<a href="../../image/index.html#ID">ID</a>) []<a href="../../image/index.html">image</a>.<a href="../../image/index.html#ID">ID</a></pre>
+				<p>
+Children returns the children image.IDs for a parent image.
+called from list.go to filter containers
+TODO: refactor to expose an ancestry for image.ID?
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.Cleanup">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=5956:5988#L152">Cleanup</a>
+					<a class="permalink" href="index.html#ImageService.Cleanup">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#Cleanup">Cleanup</a>()</pre>
+				<p>
+Cleanup resources before the process is shutdown.
+called from daemon.go Daemon.Shutdown()
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.CommitBuildStep">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_commit.go?s=2996:3076#L107">CommitBuildStep</a>
+					<a class="permalink" href="index.html#ImageService.CommitBuildStep">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#CommitBuildStep">CommitBuildStep</a>(c <a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#CommitConfig">CommitConfig</a>) (<a href="../../image/index.html">image</a>.<a href="../../image/index.html#ID">ID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CommitBuildStep is used by the builder to create an image for each step in
+the build.
+</p>
+<p>
+This method is different from CreateImageFromContainer:
+</p>
+<pre>* it doesn&#39;t attempt to validate container state
+* it doesn&#39;t send a commit action to metrics
+* it doesn&#39;t log a container commit event
+</pre>
+<p>
+This is a temporary shim. Should be removed when builder stops using commit.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.CommitImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_commit.go?s=377:453#L6">CommitImage</a>
+					<a class="permalink" href="index.html#ImageService.CommitImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#CommitImage">CommitImage</a>(c <a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#CommitConfig">CommitConfig</a>) (<a href="../../image/index.html">image</a>.<a href="../../image/index.html#ID">ID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CommitImage creates a new image from a commit config
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.CountImages">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=3783:3823#L91">CountImages</a>
+					<a class="permalink" href="index.html#ImageService.CountImages">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#CountImages">CountImages</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+CountImages returns the number of images stored by ImageService
+called from info.go
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.CreateImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_builder.go?s=5912:5999#L205">CreateImage</a>
+					<a class="permalink" href="index.html#ImageService.CreateImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#CreateImage">CreateImage</a>(config []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../builder/index.html">builder</a>.<a href="../../builder/index.html#Image">Image</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateImage creates a new image by adding a config and ID to the image store.
+This is similar to LoadImage() except that it receives JSON encoded bytes of
+an image instead of a tar archive.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.CreateLayer">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=4248:4363#L105">CreateLayer</a>
+					<a class="permalink" href="index.html#ImageService.CreateLayer">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#CreateLayer">CreateLayer</a>(container *<a href="../../container/index.html">container</a>.<a href="../../container/index.html#Container">Container</a>, initFunc <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#MountInit">MountInit</a>) (<a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#RWLayer">RWLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateLayer creates a filesystem layer for a container.
+called from create.go
+TODO: accept an opt struct instead of container?
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.DistributionServices">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=3343:3409#L79">DistributionServices</a>
+					<a class="permalink" href="index.html#ImageService.DistributionServices">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#DistributionServices">DistributionServices</a>() <a href="index.html#DistributionServices">DistributionServices</a></pre>
+				<p>
+DistributionServices return services controlling daemon image storage
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.ExportImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_exporter.go?s=471:548#L4">ExportImage</a>
+					<a class="permalink" href="index.html#ImageService.ExportImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#ExportImage">ExportImage</a>(names []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ExportImage exports a list of images to the given output stream. The
+exported images are archived into a tar when written to the output
+stream. All images with the given tag and all versions containing
+the same tag are exported. names is the set of tags to export, and
+outStream is the writer which the images are written to.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.GetContainerLayerSize">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_unix.go?s=226:305#L2">GetContainerLayerSize</a>
+					<a class="permalink" href="index.html#ImageService.GetContainerLayerSize">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#GetContainerLayerSize">GetContainerLayerSize</a>(containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>)</pre>
+				<p>
+GetContainerLayerSize returns the real size &amp; virtual size of the container.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.GetImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image.go?s=742:811#L18">GetImage</a>
+					<a class="permalink" href="index.html#ImageService.GetImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#GetImage">GetImage</a>(refOrID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../../image/index.html">image</a>.<a href="../../image/index.html#Image">Image</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetImage returns an image corresponding to the image referred to by refOrID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.GetImageAndReleasableLayer">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_builder.go?s=4321:4485#L160">GetImageAndReleasableLayer</a>
+					<a class="permalink" href="index.html#ImageService.GetImageAndReleasableLayer">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#GetImageAndReleasableLayer">GetImageAndReleasableLayer</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, refOrID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts <a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#GetImageAndLayerOptions">GetImageAndLayerOptions</a>) (<a href="../../builder/index.html">builder</a>.<a href="../../builder/index.html#Image">Image</a>, <a href="../../builder/index.html">builder</a>.<a href="../../builder/index.html#ROLayer">ROLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetImageAndReleasableLayer returns an image and releaseable layer for a reference or ID.
+Every call to GetImageAndReleasableLayer MUST call releasableLayer.Release() to prevent
+leaking of layers.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.GetLayerByID">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=5061:5142#L128">GetLayerByID</a>
+					<a class="permalink" href="index.html#ImageService.GetLayerByID">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#GetLayerByID">GetLayerByID</a>(cid <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#RWLayer">RWLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetLayerByID returns a layer by ID and operating system
+called from daemon.go Daemon.restore(), and Daemon.containerExport()
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.GetLayerMountID">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=5735:5812#L146">GetLayerMountID</a>
+					<a class="permalink" href="index.html#ImageService.GetLayerMountID">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#GetLayerMountID">GetLayerMountID</a>(cid <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetLayerMountID returns the mount ID for a layer
+called from daemon.go Daemon.Shutdown(), and Daemon.Cleanup() (cleanup is actually continerCleanup)
+TODO: needs to be refactored to Unmount (see callers), or removed and replaced
+with GetLayerByID
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.GetRepository">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_pull.go?s=2950:3089#L81">GetRepository</a>
+					<a class="permalink" href="index.html#ImageService.GetRepository">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#GetRepository">GetRepository</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, authConfig *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#AuthConfig">AuthConfig</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/">dist</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/#Repository">Repository</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRepository returns a repository from the registry.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.GraphDriverForOS">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=6345:6402#L166">GraphDriverForOS</a>
+					<a class="permalink" href="index.html#ImageService.GraphDriverForOS">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#GraphDriverForOS">GraphDriverForOS</a>(os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GraphDriverForOS returns the name of the graph drvier
+moved from Daemon.GraphDriverName, used by:
+- newContainer
+- to report an error in Daemon.Mount(container)
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.ImageDelete">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_delete.go?s=2373:2484#L53">ImageDelete</a>
+					<a class="permalink" href="index.html#ImageService.ImageDelete">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#ImageDelete">ImageDelete</a>(imageRef <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, force, prune <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) ([]<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ImageDeleteResponseItem">ImageDeleteResponseItem</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ImageDelete deletes the image referenced by the given imageRef from this
+daemon. The given imageRef can be an image ID, ID prefix, or a repository
+reference (with an optional tag or digest, defaulting to the tag name
+&#34;latest&#34;). There is differing behavior depending on whether the given
+imageRef is a repository reference or not.
+</p>
+<p>
+If the given imageRef is a repository reference then that repository
+reference will be removed. However, if there exists any containers which
+were created using the same image reference then the repository reference
+cannot be removed unless either there are other repository references to the
+same image or force is true. Following removal of the repository reference,
+the referenced image itself will attempt to be deleted as described below
+but quietly, meaning any image delete conflicts will cause the image to not
+be deleted and the conflict will not be reported.
+</p>
+<p>
+There may be conflicts preventing deletion of an image and these conflicts
+are divided into two categories grouped by their severity:
+</p>
+<p>
+Hard Conflict:
+</p>
+<pre>- a pull or build using the image.
+- any descendant image.
+- any running container using the image.
+</pre>
+<p>
+Soft Conflict:
+</p>
+<pre>- any stopped container using the image.
+- any repository tag or digest references to the image.
+</pre>
+<p>
+The image cannot be removed if there are any hard conflicts and can be
+removed if there are soft conflicts only if force is true.
+</p>
+<p>
+If prune is true, ancestor images will each attempt to be deleted quietly,
+meaning any delete conflicts will cause the image to not be deleted and the
+conflict will not be reported.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.ImageHistory">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_history.go?s=377:463#L5">ImageHistory</a>
+					<a class="permalink" href="index.html#ImageService.ImageHistory">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#ImageHistory">ImageHistory</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]*<a href="../../api/types/image/index.html">image</a>.<a href="../../api/types/image/index.html#HistoryResponseItem">HistoryResponseItem</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ImageHistory returns a slice of ImageHistory structures for the specified image
+name by walking the image lineage.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.Images">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/images.go?s=1348:1466#L36">Images</a>
+					<a class="permalink" href="index.html#ImageService.Images">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#Images">Images</a>(imageFilters <a href="../../api/types/filters/index.html">filters</a>.<a href="../../api/types/filters/index.html#Args">Args</a>, all <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, withExtraAttrs <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) ([]*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ImageSummary">ImageSummary</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Images returns a filtered list of images. filterArgs is a JSON-encoded set
+of filter arguments which will be interpreted by api/types/filters.
+filter is a shell glob string applied to repository names. The argument
+named all controls whether all images in the graph are filtered, or just
+the heads.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.ImagesPrune">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_prune.go?s=845:961#L23">ImagesPrune</a>
+					<a class="permalink" href="index.html#ImageService.ImagesPrune">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#ImagesPrune">ImagesPrune</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, pruneFilters <a href="../../api/types/filters/index.html">filters</a>.<a href="../../api/types/filters/index.html#Args">Args</a>) (*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ImagesPruneReport">ImagesPruneReport</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ImagesPrune removes unused images
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.ImportImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_import.go?s=924:1086#L20">ImportImage</a>
+					<a class="permalink" href="index.html#ImageService.ImportImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#ImportImage">ImportImage</a>(src <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, repository, os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, tag <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, msg <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, inConfig <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, changes []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ImportImage imports an image, getting the archived layer data either from
+inConfig (if src is &#34;-&#34;), or from a URI specified in src. Progress output is
+written to outStream. Repository and tag names can optionally be given in
+the repo and tag arguments, respectively.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.LayerDiskUsage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=7101:7174#L184">LayerDiskUsage</a>
+					<a class="permalink" href="index.html#ImageService.LayerDiskUsage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#LayerDiskUsage">LayerDiskUsage</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+LayerDiskUsage returns the number of bytes used by layer stores
+called from disk_usage.go
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.LayerStoreStatus">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=5273:5337#L134">LayerStoreStatus</a>
+					<a class="permalink" href="index.html#ImageService.LayerStoreStatus">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#LayerStoreStatus">LayerStoreStatus</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][][2]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+LayerStoreStatus returns the status for each layer store
+called from info.go
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.LoadImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_exporter.go?s=873:965#L12">LoadImage</a>
+					<a class="permalink" href="index.html#ImageService.LoadImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#LoadImage">LoadImage</a>(inTar <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, quiet <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+LoadImage uploads a set of images into the repository. This is the
+complement of ImageExport.  The input stream is an uncompressed tar
+ball containing images and metadata.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.LogImageEvent">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_events.go?s=214:283#L1">LogImageEvent</a>
+					<a class="permalink" href="index.html#ImageService.LogImageEvent">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#LogImageEvent">LogImageEvent</a>(imageID, refName, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogImageEvent generates an event related to an image with only the default attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.LogImageEventWithAttributes">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_events.go?s=469:582#L3">LogImageEventWithAttributes</a>
+					<a class="permalink" href="index.html#ImageService.LogImageEventWithAttributes">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#LogImageEventWithAttributes">LogImageEventWithAttributes</a>(imageID, refName, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, attributes map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+LogImageEventWithAttributes generates an event related to an image with specific given attributes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.LookupImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_inspect.go?s=391:467#L6">LookupImage</a>
+					<a class="permalink" href="index.html#ImageService.LookupImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#LookupImage">LookupImage</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#ImageInspect">ImageInspect</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+LookupImage looks up an image by name and returns it as an ImageInspect
+structure.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.MakeImageCache">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/cache.go?s=235:312#L1">MakeImageCache</a>
+					<a class="permalink" href="index.html#ImageService.MakeImageCache">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#MakeImageCache">MakeImageCache</a>(sourceRefs []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="../../builder/index.html">builder</a>.<a href="../../builder/index.html#ImageCache">ImageCache</a></pre>
+				<p>
+MakeImageCache creates a stateful image cache.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.Map">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/images.go?s=947:1001#L27">Map</a>
+					<a class="permalink" href="index.html#ImageService.Map">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#Map">Map</a>() map[<a href="../../image/index.html">image</a>.<a href="../../image/index.html#ID">ID</a>]*<a href="../../image/index.html">image</a>.<a href="../../image/index.html#Image">Image</a></pre>
+				<p>
+Map returns a map of all images in the ImageStore
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.PullImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_pull.go?s=697:885#L13">PullImage</a>
+					<a class="permalink" href="index.html#ImageService.PullImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#PullImage">PullImage</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, image, tag <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, platform *<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a>, metaHeaders map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, authConfig *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#AuthConfig">AuthConfig</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+PullImage initiates a pull operation. image is the repository name to pull, and
+tag may be either empty, or indicate a specific tag to pull.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.PushImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_push.go?s=456:618#L7">PushImage</a>
+					<a class="permalink" href="index.html#ImageService.PushImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#PushImage">PushImage</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, image, tag <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, metaHeaders map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, authConfig *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#AuthConfig">AuthConfig</a>, outStream <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+PushImage initiates a push operation on the repository named localName.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.ReleaseLayer">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=6587:6671#L172">ReleaseLayer</a>
+					<a class="permalink" href="index.html#ImageService.ReleaseLayer">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#ReleaseLayer">ReleaseLayer</a>(rwlayer <a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#RWLayer">RWLayer</a>, containerOS <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ReleaseLayer releases a layer allowing it to be removed
+called from delete.go Daemon.cleanupContainer(), and Daemon.containerExport()
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.SearchRegistryForImages">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_search.go?s=608:818#L14">SearchRegistryForImages</a>
+					<a class="permalink" href="index.html#ImageService.SearchRegistryForImages">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#SearchRegistryForImages">SearchRegistryForImages</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, filtersArgs <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, term <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, limit <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>,
+    authConfig *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#AuthConfig">AuthConfig</a>,
+    headers map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../../api/types/registry/index.html">registrytypes</a>.<a href="../../api/types/registry/index.html#SearchResults">SearchResults</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SearchRegistryForImages queries the registry for images matching
+term. authConfig is used to login.
+</p>
+<p>
+TODO: this could be implemented in a registry service instead of the image
+service.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.SquashImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/images.go?s=7255:7324#L253">SquashImage</a>
+					<a class="permalink" href="index.html#ImageService.SquashImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#SquashImage">SquashImage</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SquashImage creates a new image with the diff of the specified image and the specified parent.
+This new image contains only the layers from it&#39;s parent + 1 extra layer which contains the diff of all the layers in between.
+The existing image(s) is not destroyed.
+If no parent is specified, a new image with the diff of all the specified image&#39;s layers merged into a new layer that has no parents.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.TagImage">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_tag.go?s=299:381#L1">TagImage</a>
+					<a class="permalink" href="index.html#ImageService.TagImage">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#TagImage">TagImage</a>(imageName, repository, tag <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+TagImage creates the tag specified by newTag, pointing to the image named
+imageName (alternatively, imageName can also be an image ID).
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.TagImageWithReference">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/image_tag.go?s=854:946#L21">TagImageWithReference</a>
+					<a class="permalink" href="index.html#ImageService.TagImageWithReference">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#TagImageWithReference">TagImageWithReference</a>(imageID <a href="../../image/index.html">image</a>.<a href="../../image/index.html#ID">ID</a>, newTag <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+TagImageWithReference adds the given reference to the image ID provided.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ImageService.UpdateConfig">func (*ImageService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=8211:8277#L232">UpdateConfig</a>
+					<a class="permalink" href="index.html#ImageService.UpdateConfig">&#xb6;</a>
+				</h3>
+				<pre>func (i *<a href="index.html#ImageService">ImageService</a>) <a href="index.html#UpdateConfig">UpdateConfig</a>(maxDownloads, maxUploads *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+UpdateConfig values
+</p>
+<p>
+called from reload.go
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImageServiceConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/images/service.go?s=962:1419#L23">ImageServiceConfig</a>
+				<a class="permalink" href="index.html#ImageServiceConfig">&#xb6;</a>
+			</h2>
+			<p>
+ImageServiceConfig is the configuration used to create a new ImageService
+</p>
+
+			<pre>type ImageServiceConfig struct {
+<span id="ImageServiceConfig.ContainerStore"></span>    ContainerStore            containerStore
+<span id="ImageServiceConfig.DistributionMetadataStore"></span>    DistributionMetadataStore <a href="../../distribution/metadata/index.html">metadata</a>.<a href="../../distribution/metadata/index.html#Store">Store</a>
+<span id="ImageServiceConfig.EventsService"></span>    EventsService             *<a href="../events/index.html">daemonevents</a>.<a href="../events/index.html#Events">Events</a>
+<span id="ImageServiceConfig.ImageStore"></span>    ImageStore                <a href="../../image/index.html">image</a>.<a href="../../image/index.html#Store">Store</a>
+<span id="ImageServiceConfig.LayerStores"></span>    LayerStores               map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../../layer/index.html">layer</a>.<a href="../../layer/index.html#Store">Store</a>
+<span id="ImageServiceConfig.MaxConcurrentDownloads"></span>    MaxConcurrentDownloads    <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="ImageServiceConfig.MaxConcurrentUploads"></span>    MaxConcurrentUploads      <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="ImageServiceConfig.ReferenceStore"></span>    ReferenceStore            <a href="../../reference/index.html">dockerreference</a>.<a href="../../reference/index.html#Store">Store</a>
+<span id="ImageServiceConfig.RegistryService"></span>    RegistryService           <a href="../../registry/index.html">registry</a>.<a href="../../registry/index.html#Service">Service</a>
+<span id="ImageServiceConfig.TrustKey"></span>    TrustKey                  <a href="http://127.0.0.1:8080/pkg/github.com/docker/libtrust/">libtrust</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libtrust/#PrivateKey">PrivateKey</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

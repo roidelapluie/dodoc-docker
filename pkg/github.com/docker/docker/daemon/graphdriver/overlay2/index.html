@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>overlay2 - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package overlay2</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/graphdriver/overlay2"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#Init">func Init(home string, options []string, uidMaps, gidMaps []idtools.IDMap) (graphdriver.Driver, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Driver">type Driver</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.ApplyDiff">func (d *Driver) ApplyDiff(id string, parent string, diff io.Reader) (size int64, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Changes">func (d *Driver) Changes(id, parent string) ([]archive.Change, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Cleanup">func (d *Driver) Cleanup() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Create">func (d *Driver) Create(id, parent string, opts *graphdriver.CreateOpts) (retErr error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.CreateReadWrite">func (d *Driver) CreateReadWrite(id, parent string, opts *graphdriver.CreateOpts) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Diff">func (d *Driver) Diff(id, parent string) (io.ReadCloser, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.DiffSize">func (d *Driver) DiffSize(id, parent string) (size int64, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Exists">func (d *Driver) Exists(id string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Get">func (d *Driver) Get(id, mountLabel string) (_ containerfs.ContainerFS, retErr error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.GetMetadata">func (d *Driver) GetMetadata(id string) (map[string]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Put">func (d *Driver) Put(id string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Remove">func (d *Driver) Remove(id string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.Status">func (d *Driver) Status() [][2]string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Driver.String">func (d *Driver) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/check.go">check.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/mount.go">mount.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go">overlay.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/randomid.go">randomid.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="Init">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=4292:4394#L118">Init</a>
+				<a class="permalink" href="index.html#Init">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Init">Init</a>(home <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, uidMaps, gidMaps []<a href="../../../pkg/idtools/index.html">idtools</a>.<a href="../../../pkg/idtools/index.html#IDMap">IDMap</a>) (<a href="../index.html">graphdriver</a>.<a href="../index.html#Driver">Driver</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Init returns the native diff driver for overlay filesystem.
+If overlay filesystem is not supported on the host, the error
+graphdriver.ErrNotSupported is returned.
+If an overlay filesystem is not supported over an existing filesystem then
+the error graphdriver.ErrIncompatibleFS is returned.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Driver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=3415:3708#L86">Driver</a>
+				<a class="permalink" href="index.html#Driver">&#xb6;</a>
+			</h2>
+			<p>
+Driver contains information about the home directory and the list of active
+mounts that are created using this driver.
+</p>
+
+			<pre>type Driver struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Driver.ApplyDiff">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=20487:20579#L663">ApplyDiff</a>
+					<a class="permalink" href="index.html#Driver.ApplyDiff">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#ApplyDiff">ApplyDiff</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, diff <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ApplyDiff applies the new layer into a root
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Changes">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=22322:22391#L719">Changes</a>
+					<a class="permalink" href="index.html#Driver.Changes">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Changes">Changes</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../../../pkg/archive/index.html">archive</a>.<a href="../../../pkg/archive/index.html#Change">Change</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Changes produces a list of changes between the specified layer and its
+parent layer. If parent is &#34;&#34;, then all changes will be ADD changes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Cleanup">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=9436:9468#L286">Cleanup</a>
+					<a class="permalink" href="index.html#Driver.Cleanup">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Cleanup">Cleanup</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Cleanup any state created by overlay which should be cleaned when daemon
+is being shutdown. For now, we just have to unmount the bind mounted
+we had created.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Create">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=10393:10480#L315">Create</a>
+					<a class="permalink" href="index.html#Driver.Create">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Create">Create</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts *<a href="../index.html">graphdriver</a>.<a href="../index.html#CreateOpts">CreateOpts</a>) (retErr <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Create is used to create the upper, lower, and merge directories required for overlay fs for a given id.
+The parent filesystem is used to configure these directories for the overlay.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.CreateReadWrite">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=9604:9691#L292">CreateReadWrite</a>
+					<a class="permalink" href="index.html#Driver.CreateReadWrite">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#CreateReadWrite">CreateReadWrite</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts *<a href="../index.html">graphdriver</a>.<a href="../index.html#CreateOpts">CreateOpts</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+CreateReadWrite creates a layer that is writable for use as a container
+file system.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Diff">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=21716:21779#L702">Diff</a>
+					<a class="permalink" href="index.html#Driver.Diff">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Diff">Diff</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Diff produces an archive of the changes between the specified
+layer and its parent layer which may be &#34;&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.DiffSize">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=21373:21441#L693">DiffSize</a>
+					<a class="permalink" href="index.html#Driver.DiffSize">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#DiffSize">DiffSize</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+DiffSize calculates the changes between the specified id
+and its parent and returns the size in bytes of the changes
+relative to its base filesystem directory.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Exists">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=19899:19938#L635">Exists</a>
+					<a class="permalink" href="index.html#Driver.Exists">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Exists">Exists</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Exists checks to see if the id is already mounted.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Get">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=14940:15025#L492">Get</a>
+					<a class="permalink" href="index.html#Driver.Get">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Get">Get</a>(id, mountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (_ <a href="../../../pkg/containerfs/index.html">containerfs</a>.<a href="../../../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>, retErr <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Get creates and mounts the required file system for the given id and returns the mount path.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.GetMetadata">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=8765:8831#L260">GetMetadata</a>
+					<a class="permalink" href="index.html#Driver.GetMetadata">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#GetMetadata">GetMetadata</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetMetadata returns metadata about the overlay driver such as the LowerDir,
+UpperDir, WorkDir, and MergeDir used to store data.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Put">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=18648:18685#L601">Put</a>
+					<a class="permalink" href="index.html#Driver.Put">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Put">Put</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Put unmounts the mount path created for the give id.
+It also removes the &#39;merged&#39; directory to force the kernel to unmount the
+overlay mount in other namespaces.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Remove">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=14237:14277#L469">Remove</a>
+					<a class="permalink" href="index.html#Driver.Remove">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Remove">Remove</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Remove cleans the directories that are created for this id.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.Status">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=8397:8434#L250">Status</a>
+					<a class="permalink" href="index.html#Driver.Status">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#Status">Status</a>() [][2]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Status returns current driver information in a two dimensional string array.
+Output contains &#34;Backing Filesystem&#34; used in this implementation.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Driver.String">func (*Driver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/overlay2/overlay.go?s=8191:8223#L244">String</a>
+					<a class="permalink" href="index.html#Driver.String">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Driver">Driver</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

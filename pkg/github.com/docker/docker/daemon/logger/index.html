@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>logger - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package logger</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/logger"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package logger defines interfaces that logger drivers implement to
+log messages.
+</p>
+<p>
+The other half of a logger driver is the implementation of the
+factory, which holds the contextual instance information that
+allows multiple loggers of the same type to perform different
+actions, such as logging to different locations.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#ListDrivers">func ListDrivers() []string</a></dd>
+			
+				
+				<dd><a href="index.html#PutMessage">func PutMessage(msg *Message)</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterLogDriver">func RegisterLogDriver(name string, c Creator) error</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterLogOptValidator">func RegisterLogOptValidator(name string, l LogOptValidator) error</a></dd>
+			
+				
+				<dd><a href="index.html#RegisterPluginGetter">func RegisterPluginGetter(plugingetter getter.PluginGetter)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateLogOpts">func ValidateLogOpts(name string, cfg map[string]string) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Capability">type Capability</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Copier">type Copier</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewCopier">func NewCopier(srcs map[string]io.Reader, dst Logger) *Copier</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Copier.Close">func (c *Copier) Close()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Copier.Run">func (c *Copier) Run()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Copier.Wait">func (c *Copier) Wait()</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Creator">type Creator</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetLogDriver">func GetLogDriver(name string) (Creator, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrReadLogsNotSupported">type ErrReadLogsNotSupported</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ErrReadLogsNotSupported.Error">func (ErrReadLogsNotSupported) Error() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ErrReadLogsNotSupported.NotImplemented">func (ErrReadLogsNotSupported) NotImplemented()</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Info">type Info</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.Command">func (info *Info) Command() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.ExtraAttributes">func (info *Info) ExtraAttributes(keyMod func(string) string) (map[string]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.FullID">func (info *Info) FullID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.Hostname">func (info *Info) Hostname() (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.ID">func (info *Info) ID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.ImageFullID">func (info *Info) ImageFullID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.ImageID">func (info *Info) ImageID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.ImageName">func (info *Info) ImageName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Info.Name">func (info *Info) Name() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LogOptValidator">type LogOptValidator</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogReader">type LogReader</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogWatcher">type LogWatcher</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewLogWatcher">func NewLogWatcher() *LogWatcher</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogWatcher.ConsumerGone">func (w *LogWatcher) ConsumerGone()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogWatcher.ProducerGone">func (w *LogWatcher) ProducerGone()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogWatcher.WatchConsumerGone">func (w *LogWatcher) WatchConsumerGone() &lt;-chan struct{}</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#LogWatcher.WatchProducerGone">func (w *LogWatcher) WatchProducerGone() &lt;-chan struct{}</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Logger">type Logger</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewRingLogger">func NewRingLogger(driver Logger, logInfo Info, maxSize int64) Logger</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#MarshalFunc">type MarshalFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Message">type Message</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewMessage">func NewMessage() *Message</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Message.AsLogMessage">func (m *Message) AsLogMessage() *backend.LogMessage</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ReadConfig">type ReadConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RingLogger">type RingLogger</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RingLogger.Close">func (r *RingLogger) Close() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RingLogger.Log">func (r *RingLogger) Log(msg *Message) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RingLogger.Name">func (r *RingLogger) Name() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#SizedLogger">type SizedLogger</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/adapter.go">adapter.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/copier.go">copier.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go">factory.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go">logger.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go">loginfo.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/metrics.go">metrics.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/plugin.go">plugin.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/plugin_unix.go">plugin_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/proxy.go">proxy.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/ring.go">ring.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="ListDrivers">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go?s=921:948#L29">ListDrivers</a>
+				<a class="permalink" href="index.html#ListDrivers">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ListDrivers">ListDrivers</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+ListDrivers gets the list of registered log driver names
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="PutMessage">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=1274:1303#L30">PutMessage</a>
+				<a class="permalink" href="index.html#PutMessage">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#PutMessage">PutMessage</a>(msg *<a href="index.html#Message">Message</a>)</pre>
+			<p>
+PutMessage puts the specified message back n the message pool.
+The message fields are reset before putting into the pool.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterLogDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go?s=2534:2586#L94">RegisterLogDriver</a>
+				<a class="permalink" href="index.html#RegisterLogDriver">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RegisterLogDriver">RegisterLogDriver</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, c <a href="index.html#Creator">Creator</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+RegisterLogDriver registers the given logging driver builder with given logging
+driver name.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterLogOptValidator">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go?s=2731:2797#L100">RegisterLogOptValidator</a>
+				<a class="permalink" href="index.html#RegisterLogOptValidator">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RegisterLogOptValidator">RegisterLogOptValidator</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, l <a href="index.html#LogOptValidator">LogOptValidator</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+RegisterLogOptValidator registers the logging option validator with
+the given logging driver name.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RegisterPluginGetter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/plugin.go?s=809:868#L20">RegisterPluginGetter</a>
+				<a class="permalink" href="index.html#RegisterPluginGetter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RegisterPluginGetter">RegisterPluginGetter</a>(plugingetter <a href="../../pkg/plugingetter/index.html">getter</a>.<a href="../../pkg/plugingetter/index.html#PluginGetter">PluginGetter</a>)</pre>
+			<p>
+RegisterPluginGetter sets the plugingetter
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateLogOpts">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go?s=3238:3300#L116">ValidateLogOpts</a>
+				<a class="permalink" href="index.html#ValidateLogOpts">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateLogOpts">ValidateLogOpts</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, cfg map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ValidateLogOpts checks the options for the given log driver. The
+options supported are specific to the LogDriver implementation.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Capability">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=4720:4811#L146">Capability</a>
+				<a class="permalink" href="index.html#Capability">&#xb6;</a>
+			</h2>
+			<p>
+Capability defines the list of capabilities that a driver can implement
+These capabilities are not required to be a logging driver, however do
+determine how a logging driver can be used
+</p>
+
+			<pre>type Capability struct {
+    <span class="comment">// Determines if a log driver can read back logs</span>
+<span id="Capability.ReadLogs"></span>    ReadLogs <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Copier">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/copier.go?s=651:867#L16">Copier</a>
+				<a class="permalink" href="index.html#Copier">&#xb6;</a>
+			</h2>
+			<p>
+Copier can copy logs from specified sources to Logger and attach Timestamp.
+Writes are concurrent, so you need implement some sync in your logger.
+</p>
+
+			<pre>type Copier struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewCopier">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/copier.go?s=903:964#L26">NewCopier</a>
+					<a class="permalink" href="index.html#NewCopier">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewCopier">NewCopier</a>(srcs map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, dst <a href="index.html#Logger">Logger</a>) *<a href="index.html#Copier">Copier</a></pre>
+				<p>
+NewCopier creates a new Copier
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Copier.Close">func (*Copier) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/copier.go?s=4511:4535#L172">Close</a>
+					<a class="permalink" href="index.html#Copier.Close">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Copier">Copier</a>) <a href="index.html#Close">Close</a>()</pre>
+				<p>
+Close closes the copier
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Copier.Run">func (*Copier) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/copier.go?s=1079:1101#L35">Run</a>
+					<a class="permalink" href="index.html#Copier.Run">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Copier">Copier</a>) <a href="index.html#Run">Run</a>()</pre>
+				<p>
+Run starts logs copying
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Copier.Wait">func (*Copier) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/copier.go?s=4436:4459#L167">Wait</a>
+					<a class="permalink" href="index.html#Copier.Wait">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Copier">Copier</a>) <a href="index.html#Wait">Wait</a>()</pre>
+				<p>
+Wait waits until all copying is done
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Creator">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go?s=330:369#L5">Creator</a>
+				<a class="permalink" href="index.html#Creator">&#xb6;</a>
+			</h2>
+			<p>
+Creator builds a logging driver instance with given context.
+</p>
+
+			<pre>type Creator func(<a href="index.html#Info">Info</a>) (<a href="index.html#Logger">Logger</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetLogDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go?s=2931:2978#L105">GetLogDriver</a>
+					<a class="permalink" href="index.html#GetLogDriver">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetLogDriver">GetLogDriver</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#Creator">Creator</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetLogDriver provides the logging driver builder for a logging driver name.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ErrReadLogsNotSupported">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=575:612#L8">ErrReadLogsNotSupported</a>
+				<a class="permalink" href="index.html#ErrReadLogsNotSupported">&#xb6;</a>
+			</h2>
+			<p>
+ErrReadLogsNotSupported is returned when the underlying log driver does not support reading
+</p>
+
+			<pre>type ErrReadLogsNotSupported struct{}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ErrReadLogsNotSupported.Error">func (ErrReadLogsNotSupported) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=614:659#L10">Error</a>
+					<a class="permalink" href="index.html#ErrReadLogsNotSupported.Error">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#ErrReadLogsNotSupported">ErrReadLogsNotSupported</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="ErrReadLogsNotSupported.NotImplemented">func (ErrReadLogsNotSupported) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=819:866#L15">NotImplemented</a>
+					<a class="permalink" href="index.html#ErrReadLogsNotSupported.NotImplemented">&#xb6;</a>
+				</h3>
+				<pre>func (<a href="index.html#ErrReadLogsNotSupported">ErrReadLogsNotSupported</a>) <a href="index.html#NotImplemented">NotImplemented</a>()</pre>
+				<p>
+NotImplemented makes this error implement the `NotImplemented` interface from api/errdefs
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Info">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=198:583#L2">Info</a>
+				<a class="permalink" href="index.html#Info">&#xb6;</a>
+			</h2>
+			<p>
+Info provides enough information for a logging driver to do its function.
+</p>
+
+			<pre>type Info struct {
+<span id="Info.Config"></span>    Config              map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerID"></span>    ContainerID         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerName"></span>    ContainerName       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerEntrypoint"></span>    ContainerEntrypoint <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerArgs"></span>    ContainerArgs       []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerImageID"></span>    ContainerImageID    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerImageName"></span>    ContainerImageName  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerCreated"></span>    ContainerCreated    <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="Info.ContainerEnv"></span>    ContainerEnv        []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.ContainerLabels"></span>    ContainerLabels     map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.LogPath"></span>    LogPath             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Info.DaemonName"></span>    DaemonName          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Info.Command">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=2237:2271#L84">Command</a>
+					<a class="permalink" href="index.html#Info.Command">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#Command">Command</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Command returns the command that the container being logged was
+started with. The Entrypoint is prepended to the container
+arguments.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.ExtraAttributes">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=789:877#L20">ExtraAttributes</a>
+					<a class="permalink" href="index.html#Info.ExtraAttributes">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#ExtraAttributes">ExtraAttributes</a>(keyMod func(<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ExtraAttributes returns the user-defined extra attributes (labels,
+environment variables) in key-value format. This can be used by log drivers
+that support metadata to add more context to a log.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.FullID">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=2583:2616#L97">FullID</a>
+					<a class="permalink" href="index.html#Info.FullID">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#FullID">FullID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+FullID is an alias of ContainerID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.Hostname">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=1901:1945#L73">Hostname</a>
+					<a class="permalink" href="index.html#Info.Hostname">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#Hostname">Hostname</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Hostname returns the hostname from the underlying OS.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.ID">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=2480:2509#L92">ID</a>
+					<a class="permalink" href="index.html#Info.ID">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#ID">ID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ID Returns the Container ID shortened to 12 characters.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.ImageFullID">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=2986:3024#L112">ImageFullID</a>
+					<a class="permalink" href="index.html#Info.ImageFullID">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#ImageFullID">ImageFullID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ImageFullID is an alias of ContainerImageID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.ImageID">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=2863:2897#L107">ImageID</a>
+					<a class="permalink" href="index.html#Info.ImageID">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#ImageID">ImageID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ImageID returns the ContainerImageID shortened to 12 characters.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.ImageName">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=3107:3143#L117">ImageName</a>
+					<a class="permalink" href="index.html#Info.ImageName">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#ImageName">ImageName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ImageName is an alias of ContainerImageName
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Info.Name">func (*Info) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/loginfo.go?s=2706:2737#L102">Name</a>
+					<a class="permalink" href="index.html#Info.Name">&#xb6;</a>
+				</h3>
+				<pre>func (info *<a href="index.html#Info">Info</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the ContainerName without a preceding &#39;/&#39;.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LogOptValidator">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/factory.go?s=463:517#L9">LogOptValidator</a>
+				<a class="permalink" href="index.html#LogOptValidator">&#xb6;</a>
+			</h2>
+			<p>
+LogOptValidator checks the options specific to the underlying
+logging implementation.
+</p>
+
+			<pre>type LogOptValidator func(cfg map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogReader">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=2947:3055#L87">LogReader</a>
+				<a class="permalink" href="index.html#LogReader">&#xb6;</a>
+			</h2>
+			<p>
+LogReader is the interface for reading log messages for loggers that support reading.
+</p>
+
+			<pre>type LogReader interface {
+    <span class="comment">// Read logs from underlying logging backend</span>
+    ReadLogs(<a href="index.html#ReadConfig">ReadConfig</a>) *<a href="index.html#LogWatcher">LogWatcher</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogWatcher">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=3134:3412#L93">LogWatcher</a>
+				<a class="permalink" href="index.html#LogWatcher">&#xb6;</a>
+			</h2>
+			<p>
+LogWatcher is used when consuming logs read from the LogReader interface.
+</p>
+
+			<pre>type LogWatcher struct {
+    <span class="comment">// For sending log messages to a reader.</span>
+<span id="LogWatcher.Msg"></span>    Msg chan *<a href="index.html#Message">Message</a>
+    <span class="comment">// For sending error messages that occur while reading logs.</span>
+<span id="LogWatcher.Err"></span>    Err chan <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLogWatcher">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=3457:3489#L105">NewLogWatcher</a>
+					<a class="permalink" href="index.html#NewLogWatcher">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewLogWatcher">NewLogWatcher</a>() *<a href="index.html#LogWatcher">LogWatcher</a></pre>
+				<p>
+NewLogWatcher returns a new LogWatcher.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="LogWatcher.ConsumerGone">func (*LogWatcher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=4189:4224#L130">ConsumerGone</a>
+					<a class="permalink" href="index.html#LogWatcher.ConsumerGone">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogWatcher">LogWatcher</a>) <a href="index.html#ConsumerGone">ConsumerGone</a>()</pre>
+				<p>
+ConsumerGone notifies that the logs consumer is gone.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogWatcher.ProducerGone">func (*LogWatcher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=3789:3824#L116">ProducerGone</a>
+					<a class="permalink" href="index.html#LogWatcher.ProducerGone">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogWatcher">LogWatcher</a>) <a href="index.html#ProducerGone">ProducerGone</a>()</pre>
+				<p>
+ProducerGone notifies the underlying log reader that
+the logs producer (a container) is gone.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogWatcher.WatchConsumerGone">func (*LogWatcher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=4440:4496#L139">WatchConsumerGone</a>
+					<a class="permalink" href="index.html#LogWatcher.WatchConsumerGone">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogWatcher">LogWatcher</a>) <a href="index.html#WatchConsumerGone">WatchConsumerGone</a>() &lt;-chan struct{}</pre>
+				<p>
+WatchConsumerGone returns a channel receiver that receives notification
+when the log watcher consumer is gone.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="LogWatcher.WatchProducerGone">func (*LogWatcher) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=4047:4103#L125">WatchProducerGone</a>
+					<a class="permalink" href="index.html#LogWatcher.WatchProducerGone">&#xb6;</a>
+				</h3>
+				<pre>func (w *<a href="index.html#LogWatcher">LogWatcher</a>) <a href="index.html#WatchProducerGone">WatchProducerGone</a>() &lt;-chan struct{}</pre>
+				<p>
+WatchProducerGone returns a channel receiver that receives notification
+once the logs producer (a container) is gone.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Logger">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=2463:2539#L65">Logger</a>
+				<a class="permalink" href="index.html#Logger">&#xb6;</a>
+			</h2>
+			<p>
+Logger is the interface for docker logging drivers.
+</p>
+
+			<pre>type Logger interface {
+    Log(*<a href="index.html#Message">Message</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Name() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    Close() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRingLogger">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/ring.go?s=956:1025#L39">NewRingLogger</a>
+					<a class="permalink" href="index.html#NewRingLogger">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewRingLogger">NewRingLogger</a>(driver <a href="index.html#Logger">Logger</a>, logInfo <a href="index.html#Info">Info</a>, maxSize <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>) <a href="index.html#Logger">Logger</a></pre>
+				<p>
+NewRingLogger creates a new Logger that is implemented as a RingBuffer wrapping
+the passed in logger.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="MarshalFunc">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=4887:4934#L152">MarshalFunc</a>
+				<a class="permalink" href="index.html#MarshalFunc">&#xb6;</a>
+			</h2>
+			<p>
+MarshalFunc is a func that marshals a message into an arbitrary format
+</p>
+
+			<pre>type MarshalFunc func(*<a href="index.html#Message">Message</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Message">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=1845:1876#L44">Message</a>
+				<a class="permalink" href="index.html#Message">&#xb6;</a>
+			</h2>
+			<p>
+Message is data structure that represents piece of output produced by some
+container.  The Line member is a slice of an array whose contents can be
+changed after a log driver&#39;s Log() method returns.
+</p>
+<p>
+Message is subtyped from backend.LogMessage because there is a lot of
+internal complexity around the Message type that should not be exposed
+to any package not explicitly importing the logger type.
+</p>
+<p>
+Any changes made to this struct must also be updated in the `reset` function
+</p>
+
+			<pre>type Message <a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#LogMessage">LogMessage</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewMessage">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=1077:1103#L24">NewMessage</a>
+					<a class="permalink" href="index.html#NewMessage">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewMessage">NewMessage</a>() *<a href="index.html#Message">Message</a></pre>
+				<p>
+NewMessage returns a new message from the message sync.Pool
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Message.AsLogMessage">func (*Message) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=2317:2369#L60">AsLogMessage</a>
+					<a class="permalink" href="index.html#Message.AsLogMessage">&#xb6;</a>
+				</h3>
+				<pre>func (m *<a href="index.html#Message">Message</a>) <a href="index.html#AsLogMessage">AsLogMessage</a>() *<a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#LogMessage">LogMessage</a></pre>
+				<p>
+AsLogMessage returns a pointer to the message as a pointer to
+backend.LogMessage, which is an identical type with a different purpose
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ReadConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=2769:2856#L79">ReadConfig</a>
+				<a class="permalink" href="index.html#ReadConfig">&#xb6;</a>
+			</h2>
+			<p>
+ReadConfig is the configuration passed into ReadLogs.
+</p>
+
+			<pre>type ReadConfig struct {
+<span id="ReadConfig.Since"></span>    Since  <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="ReadConfig.Until"></span>    Until  <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>
+<span id="ReadConfig.Tail"></span>    Tail   <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+<span id="ReadConfig.Follow"></span>    Follow <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RingLogger">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/ring.go?s=298:399#L7">RingLogger</a>
+				<a class="permalink" href="index.html#RingLogger">&#xb6;</a>
+			</h2>
+			<p>
+RingLogger is a ring buffer that implements the Logger interface.
+This is used when lossy logging is OK.
+</p>
+
+			<pre>type RingLogger struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RingLogger.Close">func (*RingLogger) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/ring.go?s=1665:1699#L72">Close</a>
+					<a class="permalink" href="index.html#RingLogger.Close">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#RingLogger">RingLogger</a>) <a href="index.html#Close">Close</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Close closes the logger
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RingLogger.Log">func (*RingLogger) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/ring.go?s=1252:1296#L51">Log</a>
+					<a class="permalink" href="index.html#RingLogger.Log">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#RingLogger">RingLogger</a>) <a href="index.html#Log">Log</a>(msg *<a href="index.html#Message">Message</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Log queues messages into the ring buffer
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RingLogger.Name">func (*RingLogger) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/ring.go?s=1421:1455#L59">Name</a>
+					<a class="permalink" href="index.html#RingLogger.Name">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#RingLogger">RingLogger</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the name of the underlying logger
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="SizedLogger">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/logger/logger.go?s=2657:2710#L73">SizedLogger</a>
+				<a class="permalink" href="index.html#SizedLogger">&#xb6;</a>
+			</h2>
+			<p>
+SizedLogger is the interface for logging drivers that can control
+the size of buffer used for their messages.
+</p>
+
+			<pre>type SizedLogger interface {
+    <a href="index.html#Logger">Logger</a>
+    BufSize() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="awslogs/index.html">awslogs</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package awslogs provides the logdriver for forwarding container logs to Amazon CloudWatch Logs
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="etwlogs/index.html">etwlogs</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package etwlogs provides a log driver for forwarding container logs as ETW events.(ETW stands for Event Tracing for Windows) A client can then create an ETW listener to listen for events that are sent by the ETW provider that we register, using the provider&#39;s GUID &#34;a3693192-9ed6-46d2-a981-f8226c8363bd&#34;.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="fluentd/index.html">fluentd</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package fluentd provides the log driver for forwarding server logs to fluentd endpoints.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="gcplogs/index.html">gcplogs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="gelf/index.html">gelf</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package gelf provides the log driver for forwarding server logs to endpoints that support the Graylog Extended Log Format.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="journald/index.html">journald</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package journald provides the log driver for forwarding server logs to endpoints that receive the systemd format.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="jsonfilelog/index.html">jsonfilelog</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package jsonfilelog provides the default Logger implementation for Docker logging.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="jsonfilelog/jsonlog/index.html">jsonlog</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="local/index.html">local</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package local provides a logger implementation that stores logs on disk.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="logentries/index.html">logentries</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package logentries provides the log driver for forwarding server logs to logentries endpoints.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="loggerutils/index.html">loggerutils</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="splunk/index.html">splunk</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package splunk provides the log driver for forwarding server logs to Splunk HTTP Event Collector endpoint.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="syslog/index.html">syslog</a>
+						</td>
+						<td class="pkg-synopsis">
+							Package syslog provides the logdriver for forwarding server logs to syslog endpoints.
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="templates/index.html">templates</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

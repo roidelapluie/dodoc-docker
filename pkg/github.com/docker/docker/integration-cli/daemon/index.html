@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>daemon - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package daemon</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/integration-cli/daemon"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#WaitInspectWithArgs">func WaitInspectWithArgs(dockerBinary, name, expr, expected string, timeout time.Duration, arg ...string) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Daemon">type Daemon</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(t testingT, dockerBinary string, dockerdBinary string, ops ...func(*daemon.Daemon)) *Daemon</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckActiveContainerCount">func (d *Daemon) CheckActiveContainerCount(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckControlAvailable">func (d *Daemon) CheckControlAvailable(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckLeader">func (d *Daemon) CheckLeader(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckLocalNodeState">func (d *Daemon) CheckLocalNodeState(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckNodeReadyCount">func (d *Daemon) CheckNodeReadyCount(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckPluginImage">func (d *Daemon) CheckPluginImage(plugin string) func(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckPluginRunning">func (d *Daemon) CheckPluginRunning(plugin string) func(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckRunningTaskImages">func (d *Daemon) CheckRunningTaskImages(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckRunningTaskNetworks">func (d *Daemon) CheckRunningTaskNetworks(c *testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckServiceRunningTasks">func (d *Daemon) CheckServiceRunningTasks(service string) func(*testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckServiceTasks">func (d *Daemon) CheckServiceTasks(service string) func(*testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckServiceTasksInState">func (d *Daemon) CheckServiceTasksInState(service string, state swarm.TaskState, message string) func(*testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckServiceTasksInStateWithError">func (d *Daemon) CheckServiceTasksInStateWithError(service string, state swarm.TaskState, errorMessage string) func(*testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CheckServiceUpdateState">func (d *Daemon) CheckServiceUpdateState(service string) func(*testing.T) (interface{}, string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Cmd">func (d *Daemon) Cmd(args ...string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.CmdRetryOutOfSequence">func (d *Daemon) CmdRetryOutOfSequence(args ...string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.Command">func (d *Daemon) Command(args ...string) icmd.Cmd</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.GetIDByName">func (d *Daemon) GetIDByName(name string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.InspectField">func (d *Daemon) InspectField(name, filter string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.PrependHostArg">func (d *Daemon) PrependHostArg(args []string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Daemon.WaitRun">func (d *Daemon) WaitRun(contID string) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go">daemon.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go">daemon_swarm.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="WaitInspectWithArgs">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=3465:3576#L98">WaitInspectWithArgs</a>
+				<a class="permalink" href="index.html#WaitInspectWithArgs">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#WaitInspectWithArgs">WaitInspectWithArgs</a>(dockerBinary, name, expr, expected <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, timeout <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>, arg ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+WaitInspectWithArgs waits for the specified expression to be equals to the specified expected string in the given time.
+Deprecated: use cli.WaitCmd instead
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Daemon">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=447:506#L16">Daemon</a>
+				<a class="permalink" href="index.html#Daemon">&#xb6;</a>
+			</h2>
+			<p>
+Daemon represents a Docker daemon for the testing framework.
+</p>
+
+			<pre>type Daemon struct {
+    *<a href="../../internal/test/daemon/index.html">daemon</a>.<a href="../../internal/test/daemon/index.html#Daemon">Daemon</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=729:829#L24">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>(t testingT, dockerBinary <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, dockerdBinary <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, ops ...func(*<a href="../../internal/test/daemon/index.html">daemon</a>.<a href="../../internal/test/daemon/index.html#Daemon">Daemon</a>)) *<a href="index.html#Daemon">Daemon</a></pre>
+				<p>
+New returns a Daemon instance to be used for testing.
+This will create a directory such as d123456789 in the folder specified by $DOCKER_INTEGRATION_DAEMON_DEST or $DEST.
+The daemon will not automatically start.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Daemon.CheckActiveContainerCount">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=2766:2844#L81">CheckActiveContainerCount</a>
+					<a class="permalink" href="index.html#Daemon.CheckActiveContainerCount">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckActiveContainerCount">CheckActiveContainerCount</a>(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckActiveContainerCount returns the number of active containers
+FIXME(vdemeester) should re-use ActivateContainers in some way
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckControlAvailable">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=5162:5236#L157">CheckControlAvailable</a>
+					<a class="permalink" href="index.html#Daemon.CheckControlAvailable">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckControlAvailable">CheckControlAvailable</a>(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckControlAvailable returns the current swarm control available
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckLeader">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=5435:5499#L164">CheckLeader</a>
+					<a class="permalink" href="index.html#Daemon.CheckLeader">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckLeader">CheckLeader</a>(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckLeader returns whether there is a leader on the swarm or not
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckLocalNodeState">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=4959:5031#L151">CheckLocalNodeState</a>
+					<a class="permalink" href="index.html#Daemon.CheckLocalNodeState">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckLocalNodeState">CheckLocalNodeState</a>(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckLocalNodeState returns the current swarm node state
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckNodeReadyCount">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=4651:4723#L139">CheckNodeReadyCount</a>
+					<a class="permalink" href="index.html#Daemon.CheckNodeReadyCount">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckNodeReadyCount">CheckNodeReadyCount</a>(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckNodeReadyCount returns the number of ready node on the swarm
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckPluginImage">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=2621:2710#L70">CheckPluginImage</a>
+					<a class="permalink" href="index.html#Daemon.CheckPluginImage">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckPluginImage">CheckPluginImage</a>(plugin <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckPluginImage returns the runtime state of the plugin
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckPluginRunning">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=2149:2240#L57">CheckPluginRunning</a>
+					<a class="permalink" href="index.html#Daemon.CheckPluginRunning">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckPluginRunning">CheckPluginRunning</a>(plugin <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckPluginRunning returns the runtime state of the plugin
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckRunningTaskImages">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=4016:4091#L115">CheckRunningTaskImages</a>
+					<a class="permalink" href="index.html#Daemon.CheckRunningTaskImages">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckRunningTaskImages">CheckRunningTaskImages</a>(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckRunningTaskImages returns the times each image is running as a task.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckRunningTaskNetworks">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=3424:3501#L91">CheckRunningTaskNetworks</a>
+					<a class="permalink" href="index.html#Daemon.CheckRunningTaskNetworks">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckRunningTaskNetworks">CheckRunningTaskNetworks</a>(c *<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckRunningTaskNetworks returns the number of times each network is referenced from a task.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckServiceRunningTasks">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=1538:1634#L41">CheckServiceRunningTasks</a>
+					<a class="permalink" href="index.html#Daemon.CheckServiceRunningTasks">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckServiceRunningTasks">CheckServiceRunningTasks</a>(service <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckServiceRunningTasks returns the number of running tasks for the specified service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckServiceTasks">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=3114:3203#L83">CheckServiceTasks</a>
+					<a class="permalink" href="index.html#Daemon.CheckServiceTasks">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckServiceTasks">CheckServiceTasks</a>(service <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckServiceTasks returns the number of tasks for the specified service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckServiceTasksInState">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=429:564#L8">CheckServiceTasksInState</a>
+					<a class="permalink" href="index.html#Daemon.CheckServiceTasksInState">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckServiceTasksInState">CheckServiceTasksInState</a>(service <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, state <a href="../../api/types/swarm/index.html">swarm</a>.<a href="../../api/types/swarm/index.html#TaskState">TaskState</a>, message <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckServiceTasksInState returns the number of tasks with a matching state,
+and optional message substring.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckServiceTasksInStateWithError">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=990:1139#L25">CheckServiceTasksInStateWithError</a>
+					<a class="permalink" href="index.html#Daemon.CheckServiceTasksInStateWithError">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckServiceTasksInStateWithError">CheckServiceTasksInStateWithError</a>(service <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, state <a href="../../api/types/swarm/index.html">swarm</a>.<a href="../../api/types/swarm/index.html#TaskState">TaskState</a>, errorMessage <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckServiceTasksInStateWithError returns the number of tasks with a matching state,
+and optional message substring.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CheckServiceUpdateState">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=1798:1893#L46">CheckServiceUpdateState</a>
+					<a class="permalink" href="index.html#Daemon.CheckServiceUpdateState">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CheckServiceUpdateState">CheckServiceUpdateState</a>(service <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) func(*<a href="http://127.0.0.1:8080/pkg/testing/">testing</a>.<a href="http://127.0.0.1:8080/pkg/testing/#T">T</a>) (interface{}, <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+CheckServiceUpdateState returns the current update state for the specified service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Cmd">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=1131:1183#L35">Cmd</a>
+					<a class="permalink" href="index.html#Daemon.Cmd">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Cmd">Cmd</a>(args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Cmd executes a docker CLI command against this daemon.
+Example: d.Cmd(&#34;version&#34;) will run docker -H unix://path/to/unix.sock version
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.CmdRetryOutOfSequence">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon_swarm.go?s=6034:6104#L185">CmdRetryOutOfSequence</a>
+					<a class="permalink" href="index.html#Daemon.CmdRetryOutOfSequence">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#CmdRetryOutOfSequence">CmdRetryOutOfSequence</a>(args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CmdRetryOutOfSequence tries the specified command against the current daemon
+up to 10 times, retrying if it encounters an &#34;update out of sequence&#34; error.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.Command">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=1458:1507#L42">Command</a>
+					<a class="permalink" href="index.html#Daemon.Command">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#Command">Command</a>(args ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/">icmd</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/icmd/#Cmd">Cmd</a></pre>
+				<p>
+Command creates a docker CLI command against this daemon, to be executed later.
+Example: d.Command(&#34;version&#34;) creates a command to run &#34;docker -H unix://path/to/unix.sock version&#34;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.GetIDByName">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=1938:1995#L57">GetIDByName</a>
+					<a class="permalink" href="index.html#Daemon.GetIDByName">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#GetIDByName">GetIDByName</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetIDByName returns the ID of an object (container, volume, …) given its name
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.InspectField">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=2098:2164#L62">InspectField</a>
+					<a class="permalink" href="index.html#Daemon.InspectField">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#InspectField">InspectField</a>(name, filter <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+InspectField returns the field filter by &#39;filter&#39;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.PrependHostArg">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=1652:1707#L47">PrependHostArg</a>
+					<a class="permalink" href="index.html#Daemon.PrependHostArg">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#PrependHostArg">PrependHostArg</a>(args []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+PrependHostArg prepend the specified arguments by the daemon host flags
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Daemon.WaitRun">func (*Daemon) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/integration-cli/daemon/daemon.go?s=3107:3152#L91">WaitRun</a>
+					<a class="permalink" href="index.html#Daemon.WaitRun">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="index.html#Daemon">Daemon</a>) <a href="index.html#WaitRun">WaitRun</a>(contID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+WaitRun waits for a container to be running for 10s
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

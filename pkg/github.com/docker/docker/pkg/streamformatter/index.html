@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>streamformatter - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package streamformatter</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/streamformatter"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package streamformatter provides helper functions to format a stream.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#FormatError">func FormatError(err error) []byte</a></dd>
+			
+				
+				<dd><a href="index.html#FormatStatus">func FormatStatus(id, format string, a ...interface{}) []byte</a></dd>
+			
+				
+				<dd><a href="index.html#NewJSONProgressOutput">func NewJSONProgressOutput(out io.Writer, newLines bool) progress.Output</a></dd>
+			
+				
+				<dd><a href="index.html#NewProgressOutput">func NewProgressOutput(out io.Writer) progress.Output</a></dd>
+			
+				
+				<dd><a href="index.html#NewStderrWriter">func NewStderrWriter(out io.Writer) io.Writer</a></dd>
+			
+				
+				<dd><a href="index.html#NewStdoutWriter">func NewStdoutWriter(out io.Writer) io.Writer</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AuxFormatter">type AuxFormatter</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#AuxFormatter.Emit">func (sf *AuxFormatter) Emit(id string, aux interface{}) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamformatter.go">streamformatter.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamwriter.go">streamwriter.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="FormatError">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamformatter.go?s=828:862#L22">FormatError</a>
+				<a class="permalink" href="index.html#FormatError">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FormatError">FormatError</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a></pre>
+			<p>
+FormatError formats the error as a JSON object
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="FormatStatus">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamformatter.go?s=535:596#L12">FormatStatus</a>
+				<a class="permalink" href="index.html#FormatStatus">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#FormatStatus">FormatStatus</a>(id, format <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, a ...interface{}) []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a></pre>
+			<p>
+FormatStatus formats the specified objects according to the specified format (and id).
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewJSONProgressOutput">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamformatter.go?s=2878:2950#L89">NewJSONProgressOutput</a>
+				<a class="permalink" href="index.html#NewJSONProgressOutput">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewJSONProgressOutput">NewJSONProgressOutput</a>(out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, newLines <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="../progress/index.html">progress</a>.<a href="../progress/index.html#Output">Output</a></pre>
+			<p>
+NewJSONProgressOutput returns a progress.Output that formats output
+using JSON objects
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewProgressOutput">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamformatter.go?s=2647:2700#L83">NewProgressOutput</a>
+				<a class="permalink" href="index.html#NewProgressOutput">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewProgressOutput">NewProgressOutput</a>(out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="../progress/index.html">progress</a>.<a href="../progress/index.html#Output">Output</a></pre>
+			<p>
+NewProgressOutput returns a progress.Output object that can be passed to
+progress.NewProgressReader.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewStderrWriter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamwriter.go?s=1028:1073#L33">NewStderrWriter</a>
+				<a class="permalink" href="index.html#NewStderrWriter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewStderrWriter">NewStderrWriter</a>(out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a></pre>
+			<p>
+NewStderrWriter returns a writer which formats the output as json message
+representing stderr lines
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewStdoutWriter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamwriter.go?s=773:818#L25">NewStdoutWriter</a>
+				<a class="permalink" href="index.html#NewStdoutWriter">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewStdoutWriter">NewStdoutWriter</a>(out <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a></pre>
+			<p>
+NewStdoutWriter returns a writer which formats the output as json message
+representing stdout lines
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="AuxFormatter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamformatter.go?s=4060:4099#L127">AuxFormatter</a>
+				<a class="permalink" href="index.html#AuxFormatter">&#xb6;</a>
+			</h2>
+			<p>
+AuxFormatter is a streamFormatter that writes aux progress messages
+</p>
+
+			<pre>type AuxFormatter struct {
+    <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="AuxFormatter.Emit">func (*AuxFormatter) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/streamformatter/streamformatter.go?s=4162:4224#L132">Emit</a>
+					<a class="permalink" href="index.html#AuxFormatter.Emit">&#xb6;</a>
+				</h3>
+				<pre>func (sf *<a href="index.html#AuxFormatter">AuxFormatter</a>) <a href="index.html#Emit">Emit</a>(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, aux interface{}) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Emit emits the given interface as an aux progress message
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

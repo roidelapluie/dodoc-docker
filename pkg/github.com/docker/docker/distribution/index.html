@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>distribution - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package distribution</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/distribution"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#NewLayerProvidersFromStores">func NewLayerProvidersFromStores(lss map[string]layer.Store) map[string]PushLayerProvider</a></dd>
+			
+				
+				<dd><a href="index.html#NewV2Repository">func NewV2Repository(ctx context.Context, repoInfo *registry.RepositoryInfo, endpoint registry.APIEndpoint, metaHeaders http.Header, authConfig *types.AuthConfig, actions ...string) (repo distribution.Repository, foundVersion bool, err error)</a></dd>
+			
+				
+				<dd><a href="index.html#Pull">func Pull(ctx context.Context, ref reference.Named, imagePullConfig *ImagePullConfig) error</a></dd>
+			
+				
+				<dd><a href="index.html#Push">func Push(ctx context.Context, ref reference.Named, imagePushConfig *ImagePushConfig) error</a></dd>
+			
+				
+				<dd><a href="index.html#TranslatePullError">func TranslatePullError(err error, ref reference.Named) error</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateRepoName">func ValidateRepoName(name reference.Named) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrNoSupport">type ErrNoSupport</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ErrNoSupport.Error">func (e ErrNoSupport) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImageConfigPullError">type ImageConfigPullError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ImageConfigPullError.Error">func (e ImageConfigPullError) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImageConfigStore">type ImageConfigStore</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewImageConfigStoreFromStore">func NewImageConfigStoreFromStore(is image.Store) ImageConfigStore</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ImagePullConfig">type ImagePullConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ImagePushConfig">type ImagePushConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Puller">type Puller</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PushLayer">type PushLayer</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PushLayerProvider">type PushLayerProvider</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Pusher">type Pusher</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewPusher">func NewPusher(ref reference.Named, endpoint registry.APIEndpoint, repoInfo *registry.RepositoryInfo, imagePushConfig *ImagePushConfig) (Pusher, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RootFSDownloadManager">type RootFSDownloadManager</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go">config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/errors.go">errors.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull.go">pull.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull_v2.go">pull_v2.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull_v2_unix.go">pull_v2_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/push.go">push.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/push_v2.go">push_v2.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/registry.go">registry.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+ImageTypes represents the schema2 config types for images
+</p>
+
+				<pre>var <span id="ImageTypes">ImageTypes</span> = []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>{
+    <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/manifest/schema2/">schema2</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/manifest/schema2/#MediaTypeImageConfig">MediaTypeImageConfig</a>,
+    <a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">ocispec</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#MediaTypeImageConfig">MediaTypeImageConfig</a>,
+
+    &#34;application/octet-stream&#34;,
+    &#34;application/json&#34;,
+    &#34;text/html&#34;,
+
+    &#34;&#34;,
+}</pre>
+			
+				<p>
+PluginTypes represents the schema2 config types for plugins
+</p>
+
+				<pre>var <span id="PluginTypes">PluginTypes</span> = []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>{
+    <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/manifest/schema2/">schema2</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/manifest/schema2/#MediaTypePluginConfig">MediaTypePluginConfig</a>,
+}</pre>
+			
+		
+		
+			
+			
+			<h2 id="NewLayerProvidersFromStores">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=6010:6099#L173">NewLayerProvidersFromStores</a>
+				<a class="permalink" href="index.html#NewLayerProvidersFromStores">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewLayerProvidersFromStores">NewLayerProvidersFromStores</a>(lss map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#Store">Store</a>) map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="index.html#PushLayerProvider">PushLayerProvider</a></pre>
+			<p>
+NewLayerProvidersFromStores returns layer providers backed by
+an instance of LayerStore. Only getting layers as gzipped
+tars is supported.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewV2Repository">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/registry.go?s=1743:1985#L49">NewV2Repository</a>
+				<a class="permalink" href="index.html#NewV2Repository">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewV2Repository">NewV2Repository</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, repoInfo *<a href="../registry/index.html">registry</a>.<a href="../registry/index.html#RepositoryInfo">RepositoryInfo</a>, endpoint <a href="../registry/index.html">registry</a>.<a href="../registry/index.html#APIEndpoint">APIEndpoint</a>, metaHeaders <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, actions ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (repo <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/">distribution</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/#Repository">Repository</a>, foundVersion <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+NewV2Repository returns a repository (v2 only). It creates an HTTP transport
+providing timeout settings and authentication support, and also verifies the
+remote API version.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Pull">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull.go?s=2013:2104#L39">Pull</a>
+				<a class="permalink" href="index.html#Pull">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Pull">Pull</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, imagePullConfig *<a href="index.html#ImagePullConfig">ImagePullConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Pull initiates a pull operation. image is the repository name to pull, and
+tag may be either empty, or indicate a specific tag to pull.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Push">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/push.go?s=2030:2121#L42">Push</a>
+				<a class="permalink" href="index.html#Push">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Push">Push</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, imagePushConfig *<a href="index.html#ImagePushConfig">ImagePushConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Push initiates a push operation on ref.
+ref is the specific variant of the image to be pushed.
+If no tag is provided, all tags will be pushed.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="TranslatePullError">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/errors.go?s=2901:2962#L84">TranslatePullError</a>
+				<a class="permalink" href="index.html#TranslatePullError">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#TranslatePullError">TranslatePullError</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+TranslatePullError is used to convert an error from a registry pull
+operation to an error representing the entire pull operation. Any error
+information which is not used by the returned error gets output to
+log at info level.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateRepoName">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull.go?s=6520:6569#L162">ValidateRepoName</a>
+				<a class="permalink" href="index.html#ValidateRepoName">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateRepoName">ValidateRepoName</a>(name <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ValidateRepoName validates the name of a repository.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Config">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=784:1769#L18">Config</a>
+				<a class="permalink" href="index.html#Config">&#xb6;</a>
+			</h2>
+			<p>
+Config stores configuration for communicating
+with a registry.
+</p>
+
+			<pre>type Config struct {
+<span id="Config.MetaHeaders"></span>    <span class="comment">// MetaHeaders stores HTTP headers with metadata about the image</span>
+    MetaHeaders map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.AuthConfig"></span>    <span class="comment">// AuthConfig holds authentication credentials for authenticating with</span>
+    <span class="comment">// the registry.</span>
+    AuthConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>
+<span id="Config.ProgressOutput"></span>    <span class="comment">// ProgressOutput is the interface for showing the status of the pull</span>
+    <span class="comment">// operation.</span>
+    ProgressOutput <a href="../pkg/progress/index.html">progress</a>.<a href="../pkg/progress/index.html#Output">Output</a>
+<span id="Config.RegistryService"></span>    <span class="comment">// RegistryService is the registry service to use for TLS configuration</span>
+    <span class="comment">// and endpoint lookup.</span>
+    RegistryService <a href="../registry/index.html">registry</a>.<a href="../registry/index.html#Service">Service</a>
+<span id="Config.ImageEventLogger"></span>    <span class="comment">// ImageEventLogger notifies events for a given image</span>
+    ImageEventLogger func(id, name, action <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)
+<span id="Config.MetadataStore"></span>    <span class="comment">// MetadataStore is the storage backend for distribution-specific</span>
+    <span class="comment">// metadata.</span>
+    MetadataStore <a href="metadata/index.html">metadata</a>.<a href="metadata/index.html#Store">Store</a>
+<span id="Config.ImageStore"></span>    <span class="comment">// ImageStore manages images.</span>
+    ImageStore <a href="index.html#ImageConfigStore">ImageConfigStore</a>
+<span id="Config.ReferenceStore"></span>    <span class="comment">// ReferenceStore manages tags. This value is optional, when excluded</span>
+    <span class="comment">// content will not be tagged.</span>
+    ReferenceStore <a href="../reference/index.html">refstore</a>.<a href="../reference/index.html#Store">Store</a>
+<span id="Config.RequireSchema2"></span>    <span class="comment">// RequireSchema2 ensures that only schema2 manifests are used.</span>
+    RequireSchema2 <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ErrNoSupport">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/errors.go?s=688:725#L13">ErrNoSupport</a>
+				<a class="permalink" href="index.html#ErrNoSupport">&#xb6;</a>
+			</h2>
+			<p>
+ErrNoSupport is an error type used for errors indicating that an operation
+is not supported. It encapsulates a more specific error.
+</p>
+
+			<pre>type ErrNoSupport struct{ Err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a> }</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ErrNoSupport.Error">func (ErrNoSupport) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/errors.go?s=727:763#L15">Error</a>
+					<a class="permalink" href="index.html#ErrNoSupport.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#ErrNoSupport">ErrNoSupport</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImageConfigPullError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull_v2.go?s=1550:1597#L38">ImageConfigPullError</a>
+				<a class="permalink" href="index.html#ImageConfigPullError">&#xb6;</a>
+			</h2>
+			<p>
+ImageConfigPullError is an error pulling the image config blob
+(only applies to schema2).
+</p>
+
+			<pre>type ImageConfigPullError struct {
+<span id="ImageConfigPullError.Err"></span>    Err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ImageConfigPullError.Error">func (ImageConfigPullError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull_v2.go?s=1659:1703#L43">Error</a>
+					<a class="permalink" href="index.html#ImageConfigPullError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#ImageConfigPullError">ImageConfigPullError</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Error returns the error string for ImageConfigPullError.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImageConfigStore">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=2852:3061#L76">ImageConfigStore</a>
+				<a class="permalink" href="index.html#ImageConfigStore">&#xb6;</a>
+			</h2>
+			<p>
+ImageConfigStore handles storing and getting image configurations
+by digest. Allows getting an image configurations rootfs from the
+configuration.
+</p>
+
+			<pre>type ImageConfigStore interface {
+    Put([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (digest.<a href="index.html#Digest">Digest</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Get(digest.<a href="index.html#Digest">Digest</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    RootFSFromConfig([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (*<a href="../image/index.html">image</a>.<a href="../image/index.html#RootFS">RootFS</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    PlatformFromConfig([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (*<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewImageConfigStoreFromStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=4117:4183#L115">NewImageConfigStoreFromStore</a>
+					<a class="permalink" href="index.html#NewImageConfigStoreFromStore">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewImageConfigStoreFromStore">NewImageConfigStoreFromStore</a>(is <a href="../image/index.html">image</a>.<a href="../image/index.html#Store">Store</a>) <a href="index.html#ImageConfigStore">ImageConfigStore</a></pre>
+				<p>
+NewImageConfigStoreFromStore returns an ImageConfigStore backed
+by an image.Store for container images.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ImagePullConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=1817:2149#L45">ImagePullConfig</a>
+				<a class="permalink" href="index.html#ImagePullConfig">&#xb6;</a>
+			</h2>
+			<p>
+ImagePullConfig stores pull configuration.
+</p>
+
+			<pre>type ImagePullConfig struct {
+    <a href="index.html#Config">Config</a>
+
+<span id="ImagePullConfig.DownloadManager"></span>    <span class="comment">// DownloadManager manages concurrent pulls.</span>
+    DownloadManager <a href="index.html#RootFSDownloadManager">RootFSDownloadManager</a>
+<span id="ImagePullConfig.Schema2Types"></span>    <span class="comment">// Schema2Types is the valid schema2 configuration types allowed</span>
+    <span class="comment">// by the pull operation.</span>
+    Schema2Types []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ImagePullConfig.Platform"></span>    <span class="comment">// Platform is the requested platform of the image being pulled</span>
+    Platform *<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ImagePushConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=2197:2694#L58">ImagePushConfig</a>
+				<a class="permalink" href="index.html#ImagePushConfig">&#xb6;</a>
+			</h2>
+			<p>
+ImagePushConfig stores push configuration.
+</p>
+
+			<pre>type ImagePushConfig struct {
+    <a href="index.html#Config">Config</a>
+
+<span id="ImagePushConfig.ConfigMediaType"></span>    <span class="comment">// ConfigMediaType is the configuration media type for</span>
+    <span class="comment">// schema2 manifests.</span>
+    ConfigMediaType <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ImagePushConfig.LayerStores"></span>    <span class="comment">// LayerStores (indexed by operating system) manages layers.</span>
+    LayerStores map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="index.html#PushLayerProvider">PushLayerProvider</a>
+<span id="ImagePushConfig.TrustKey"></span>    <span class="comment">// TrustKey is the private key for legacy signatures. This is typically</span>
+    <span class="comment">// an ephemeral key, since these signatures are no longer verified.</span>
+    TrustKey <a href="http://127.0.0.1:8080/pkg/github.com/docker/libtrust/">libtrust</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libtrust/#PrivateKey">PrivateKey</a>
+<span id="ImagePushConfig.UploadManager"></span>    <span class="comment">// UploadManager dispatches uploads.</span>
+    UploadManager *<a href="xfer/index.html">xfer</a>.<a href="xfer/index.html#LayerUploadManager">LayerUploadManager</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Puller">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/pull.go?s=583:871#L10">Puller</a>
+				<a class="permalink" href="index.html#Puller">&#xb6;</a>
+			</h2>
+			<p>
+Puller is an interface that abstracts pulling for different API versions.
+</p>
+
+			<pre>type Puller interface {
+    <span class="comment">// Pull tries to pull the image referenced by `tag`</span>
+    <span class="comment">// Pull returns an error if any, as well as a boolean that determines whether to retry Pull on the next configured endpoint.</span>
+    <span class="comment">//</span>
+    Pull(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, platform *<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/image-spec/specs-go/v1/#Platform">Platform</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PushLayer">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=3308:3489#L90">PushLayer</a>
+				<a class="permalink" href="index.html#PushLayer">&#xb6;</a>
+			</h2>
+			<p>
+PushLayer is a pushable layer with metadata about the layer
+and access to the content of the layer.
+</p>
+
+			<pre>type PushLayer interface {
+    ChainID() <a href="../layer/index.html">layer</a>.<a href="../layer/index.html#ChainID">ChainID</a>
+    DiffID() <a href="../layer/index.html">layer</a>.<a href="../layer/index.html#DiffID">DiffID</a>
+    Parent() <a href="index.html#PushLayer">PushLayer</a>
+    Open() (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Size() (<a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    MediaType() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    Release()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PushLayerProvider">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=3125:3200#L84">PushLayerProvider</a>
+				<a class="permalink" href="index.html#PushLayerProvider">&#xb6;</a>
+			</h2>
+			<p>
+PushLayerProvider provides layers to be pushed by ChainID.
+</p>
+
+			<pre>type PushLayerProvider interface {
+    Get(<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#ChainID">ChainID</a>) (<a href="index.html#PushLayer">PushLayer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Pusher">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/push.go?s=414:794#L8">Pusher</a>
+				<a class="permalink" href="index.html#Pusher">&#xb6;</a>
+			</h2>
+			<p>
+Pusher is an interface that abstracts pushing for different API versions.
+</p>
+
+			<pre>type Pusher interface {
+    <span class="comment">// Push tries to push the image configured at the creation of Pusher.</span>
+    <span class="comment">// Push returns an error if any, as well as a boolean that determines whether to retry Push on the next configured endpoint.</span>
+    <span class="comment">//</span>
+    <span class="comment">// TODO(tiborvass): have Push() take a reference to repository + tag, so that the pusher itself is repository-agnostic.</span>
+    Push(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewPusher">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/push.go?s=1160:1311#L23">NewPusher</a>
+					<a class="permalink" href="index.html#NewPusher">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewPusher">NewPusher</a>(ref <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, endpoint <a href="../registry/index.html">registry</a>.<a href="../registry/index.html#APIEndpoint">APIEndpoint</a>, repoInfo *<a href="../registry/index.html">registry</a>.<a href="../registry/index.html#RepositoryInfo">RepositoryInfo</a>, imagePushConfig *<a href="index.html#ImagePushConfig">ImagePushConfig</a>) (<a href="index.html#Pusher">Pusher</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewPusher creates a new Pusher interface that will push to either a v1 or v2
+registry. The endpoint argument contains a Version field that determines
+whether a v1 or v2 pusher will be created. The other parameters are passed
+through to the underlying pusher implementation for use during the actual
+push operation.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="RootFSDownloadManager">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/distribution/config.go?s=3550:3958#L101">RootFSDownloadManager</a>
+				<a class="permalink" href="index.html#RootFSDownloadManager">&#xb6;</a>
+			</h2>
+			<p>
+RootFSDownloadManager handles downloading of the rootfs
+</p>
+
+			<pre>type RootFSDownloadManager interface {
+    <span class="comment">// Download downloads the layers into the given initial rootfs and</span>
+    <span class="comment">// returns the final rootfs.</span>
+    <span class="comment">// Given progress output to track download progress</span>
+    <span class="comment">// Returns function to release download resources</span>
+    Download(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, initialRootFS <a href="../image/index.html">image</a>.<a href="../image/index.html#RootFS">RootFS</a>, os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, layers []<a href="xfer/index.html">xfer</a>.<a href="xfer/index.html#DownloadDescriptor">DownloadDescriptor</a>, progressOutput <a href="../pkg/progress/index.html">progress</a>.<a href="../pkg/progress/index.html#Output">Output</a>) (<a href="../image/index.html">image</a>.<a href="../image/index.html#RootFS">RootFS</a>, func(), <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="metadata/index.html">metadata</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="utils/index.html">utils</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="xfer/index.html">xfer</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

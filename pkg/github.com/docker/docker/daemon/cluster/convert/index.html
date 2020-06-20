@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>convert - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package convert</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/cluster/convert"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BasicNetworkCreateToGRPC">func BasicNetworkCreateToGRPC(create basictypes.NetworkCreateRequest) swarmapi.NetworkSpec</a></dd>
+			
+				
+				<dd><a href="index.html#BasicNetworkFromGRPC">func BasicNetworkFromGRPC(n swarmapi.Network) basictypes.NetworkResource</a></dd>
+			
+				
+				<dd><a href="index.html#ConfigFromGRPC">func ConfigFromGRPC(s *swarmapi.Config) swarmtypes.Config</a></dd>
+			
+				
+				<dd><a href="index.html#ConfigReferencesFromGRPC">func ConfigReferencesFromGRPC(s []*swarmapi.ConfigReference) []*swarmtypes.ConfigReference</a></dd>
+			
+				
+				<dd><a href="index.html#ConfigSpecToGRPC">func ConfigSpecToGRPC(s swarmtypes.ConfigSpec) swarmapi.ConfigSpec</a></dd>
+			
+				
+				<dd><a href="index.html#GenericResourcesFromGRPC">func GenericResourcesFromGRPC(genericRes []*swarmapi.GenericResource) []types.GenericResource</a></dd>
+			
+				
+				<dd><a href="index.html#GenericResourcesToGRPC">func GenericResourcesToGRPC(genericRes []types.GenericResource) []*swarmapi.GenericResource</a></dd>
+			
+				
+				<dd><a href="index.html#IsIngressNetwork">func IsIngressNetwork(n *swarmapi.Network) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsolationFromGRPC">func IsolationFromGRPC(i swarmapi.ContainerSpec_Isolation) container.Isolation</a></dd>
+			
+				
+				<dd><a href="index.html#MergeSwarmSpecToGRPC">func MergeSwarmSpecToGRPC(s types.Spec, spec swarmapi.ClusterSpec) (swarmapi.ClusterSpec, error)</a></dd>
+			
+				
+				<dd><a href="index.html#NodeFromGRPC">func NodeFromGRPC(n swarmapi.Node) types.Node</a></dd>
+			
+				
+				<dd><a href="index.html#NodeSpecToGRPC">func NodeSpecToGRPC(s types.NodeSpec) (swarmapi.NodeSpec, error)</a></dd>
+			
+				
+				<dd><a href="index.html#SecretFromGRPC">func SecretFromGRPC(s *swarmapi.Secret) swarmtypes.Secret</a></dd>
+			
+				
+				<dd><a href="index.html#SecretReferencesFromGRPC">func SecretReferencesFromGRPC(s []*swarmapi.SecretReference) []*swarmtypes.SecretReference</a></dd>
+			
+				
+				<dd><a href="index.html#SecretSpecToGRPC">func SecretSpecToGRPC(s swarmtypes.SecretSpec) swarmapi.SecretSpec</a></dd>
+			
+				
+				<dd><a href="index.html#ServiceFromGRPC">func ServiceFromGRPC(s swarmapi.Service) (types.Service, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ServiceSpecToGRPC">func ServiceSpecToGRPC(s types.ServiceSpec) (swarmapi.ServiceSpec, error)</a></dd>
+			
+				
+				<dd><a href="index.html#SwarmFromGRPC">func SwarmFromGRPC(c swarmapi.Cluster) types.Swarm</a></dd>
+			
+				
+				<dd><a href="index.html#SwarmSpecToGRPC">func SwarmSpecToGRPC(s types.Spec) (swarmapi.ClusterSpec, error)</a></dd>
+			
+				
+				<dd><a href="index.html#TaskFromGRPC">func TaskFromGRPC(t swarmapi.Task) (types.Task, error)</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/config.go">config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/container.go">container.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/network.go">network.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/node.go">node.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/secret.go">secret.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/service.go">service.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/swarm.go">swarm.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/task.go">task.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrUnsupportedRuntime returns an error if the runtime is not supported by the daemon</span>
+    <span id="ErrUnsupportedRuntime">ErrUnsupportedRuntime</span> = <a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/#New">New</a>(&#34;unsupported runtime&#34;)
+    <span class="comment">// ErrMismatchedRuntime returns an error if the runtime does not match the provided spec</span>
+    <span id="ErrMismatchedRuntime">ErrMismatchedRuntime</span> = <a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/#New">New</a>(&#34;mismatched Runtime and *Spec fields&#34;)
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="BasicNetworkCreateToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/network.go?s=5124:5214#L178">BasicNetworkCreateToGRPC</a>
+				<a class="permalink" href="index.html#BasicNetworkCreateToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#BasicNetworkCreateToGRPC">BasicNetworkCreateToGRPC</a>(create <a href="../../../api/types/index.html">basictypes</a>.<a href="../../../api/types/index.html#NetworkCreateRequest">NetworkCreateRequest</a>) <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#NetworkSpec">NetworkSpec</a></pre>
+			<p>
+BasicNetworkCreateToGRPC converts a NetworkCreateRequest to a grpc NetworkSpec.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="BasicNetworkFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/network.go?s=3848:3920#L130">BasicNetworkFromGRPC</a>
+				<a class="permalink" href="index.html#BasicNetworkFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#BasicNetworkFromGRPC">BasicNetworkFromGRPC</a>(n <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Network">Network</a>) <a href="../../../api/types/index.html">basictypes</a>.<a href="../../../api/types/index.html#NetworkResource">NetworkResource</a></pre>
+			<p>
+BasicNetworkFromGRPC converts a grpc Network to a NetworkResource.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ConfigFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/config.go?s=335:392#L1">ConfigFromGRPC</a>
+				<a class="permalink" href="index.html#ConfigFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ConfigFromGRPC">ConfigFromGRPC</a>(s *<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Config">Config</a>) <a href="../../../api/types/swarm/index.html">swarmtypes</a>.<a href="../../../api/types/swarm/index.html#Config">Config</a></pre>
+			<p>
+ConfigFromGRPC converts a grpc Config to a Config.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ConfigReferencesFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/config.go?s=1428:1518#L46">ConfigReferencesFromGRPC</a>
+				<a class="permalink" href="index.html#ConfigReferencesFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ConfigReferencesFromGRPC">ConfigReferencesFromGRPC</a>(s []*<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#ConfigReference">ConfigReference</a>) []*<a href="../../../api/types/swarm/index.html">swarmtypes</a>.<a href="../../../api/types/swarm/index.html#ConfigReference">ConfigReference</a></pre>
+			<p>
+ConfigReferencesFromGRPC converts a slice of grpc ConfigReference to ConfigReference
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ConfigSpecToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/config.go?s=986:1052#L26">ConfigSpecToGRPC</a>
+				<a class="permalink" href="index.html#ConfigSpecToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ConfigSpecToGRPC">ConfigSpecToGRPC</a>(s <a href="../../../api/types/swarm/index.html">swarmtypes</a>.<a href="../../../api/types/swarm/index.html#ConfigSpec">ConfigSpec</a>) <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#ConfigSpec">ConfigSpec</a></pre>
+			<p>
+ConfigSpecToGRPC converts Config to a grpc Config.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GenericResourcesFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/service.go?s=10433:10526#L311">GenericResourcesFromGRPC</a>
+				<a class="permalink" href="index.html#GenericResourcesFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GenericResourcesFromGRPC">GenericResourcesFromGRPC</a>(genericRes []*<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#GenericResource">GenericResource</a>) []<a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#GenericResource">GenericResource</a></pre>
+			<p>
+GenericResourcesFromGRPC converts a GRPC GenericResource to a GenericResource
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GenericResourcesToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/service.go?s=11848:11939#L358">GenericResourcesToGRPC</a>
+				<a class="permalink" href="index.html#GenericResourcesToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GenericResourcesToGRPC">GenericResourcesToGRPC</a>(genericRes []<a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#GenericResource">GenericResource</a>) []*<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#GenericResource">GenericResource</a></pre>
+			<p>
+GenericResourcesToGRPC converts a GenericResource to a GRPC GenericResource
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsIngressNetwork">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/network.go?s=6320:6367#L223">IsIngressNetwork</a>
+				<a class="permalink" href="index.html#IsIngressNetwork">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsIngressNetwork">IsIngressNetwork</a>(n *<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Network">Network</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsIngressNetwork check if the swarm network is an ingress network
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsolationFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/container.go?s=12386:12464#L436">IsolationFromGRPC</a>
+				<a class="permalink" href="index.html#IsolationFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsolationFromGRPC">IsolationFromGRPC</a>(i <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#ContainerSpec_Isolation">ContainerSpec_Isolation</a>) <a href="../../../api/types/container/index.html">container</a>.<a href="../../../api/types/container/index.html#Isolation">Isolation</a></pre>
+			<p>
+IsolationFromGRPC converts a swarm api container isolation to a moby isolation representation
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MergeSwarmSpecToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/swarm.go?s=3168:3264#L80">MergeSwarmSpecToGRPC</a>
+				<a class="permalink" href="index.html#MergeSwarmSpecToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#MergeSwarmSpecToGRPC">MergeSwarmSpecToGRPC</a>(s <a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#Spec">Spec</a>, spec <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#ClusterSpec">ClusterSpec</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#ClusterSpec">ClusterSpec</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+MergeSwarmSpecToGRPC merges a Spec with an initial grpc ClusterSpec
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NodeFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/node.go?s=293:338#L3">NodeFromGRPC</a>
+				<a class="permalink" href="index.html#NodeFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NodeFromGRPC">NodeFromGRPC</a>(n <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Node">Node</a>) <a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#Node">Node</a></pre>
+			<p>
+NodeFromGRPC converts a grpc Node to a Node.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NodeSpecToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/node.go?s=2612:2676#L64">NodeSpecToGRPC</a>
+				<a class="permalink" href="index.html#NodeSpecToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NodeSpecToGRPC">NodeSpecToGRPC</a>(s <a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#NodeSpec">NodeSpec</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#NodeSpec">NodeSpec</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+NodeSpecToGRPC converts a NodeSpec to a grpc NodeSpec.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SecretFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/secret.go?s=335:392#L1">SecretFromGRPC</a>
+				<a class="permalink" href="index.html#SecretFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SecretFromGRPC">SecretFromGRPC</a>(s *<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Secret">Secret</a>) <a href="../../../api/types/swarm/index.html">swarmtypes</a>.<a href="../../../api/types/swarm/index.html#Secret">Secret</a></pre>
+			<p>
+SecretFromGRPC converts a grpc Secret to a Secret.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SecretReferencesFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/secret.go?s=1511:1601#L48">SecretReferencesFromGRPC</a>
+				<a class="permalink" href="index.html#SecretReferencesFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SecretReferencesFromGRPC">SecretReferencesFromGRPC</a>(s []*<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#SecretReference">SecretReference</a>) []*<a href="../../../api/types/swarm/index.html">swarmtypes</a>.<a href="../../../api/types/swarm/index.html#SecretReference">SecretReference</a></pre>
+			<p>
+SecretReferencesFromGRPC converts a slice of grpc SecretReference to SecretReference
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SecretSpecToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/secret.go?s=1033:1099#L27">SecretSpecToGRPC</a>
+				<a class="permalink" href="index.html#SecretSpecToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SecretSpecToGRPC">SecretSpecToGRPC</a>(s <a href="../../../api/types/swarm/index.html">swarmtypes</a>.<a href="../../../api/types/swarm/index.html#SecretSpec">SecretSpec</a>) <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#SecretSpec">SecretSpec</a></pre>
+			<p>
+SecretSpecToGRPC converts Secret to a grpc Secret.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ServiceFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/service.go?s=831:894#L15">ServiceFromGRPC</a>
+				<a class="permalink" href="index.html#ServiceFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ServiceFromGRPC">ServiceFromGRPC</a>(s <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Service">Service</a>) (<a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#Service">Service</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ServiceFromGRPC converts a grpc Service to a Service.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ServiceSpecToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/service.go?s=4464:4537#L130">ServiceSpecToGRPC</a>
+				<a class="permalink" href="index.html#ServiceSpecToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ServiceSpecToGRPC">ServiceSpecToGRPC</a>(s <a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#ServiceSpec">ServiceSpec</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#ServiceSpec">ServiceSpec</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ServiceSpecToGRPC converts a ServiceSpec to a grpc ServiceSpec.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SwarmFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/swarm.go?s=331:381#L4">SwarmFromGRPC</a>
+				<a class="permalink" href="index.html#SwarmFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SwarmFromGRPC">SwarmFromGRPC</a>(c <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Cluster">Cluster</a>) <a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#Swarm">Swarm</a></pre>
+			<p>
+SwarmFromGRPC converts a grpc Cluster to a Swarm.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SwarmSpecToGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/swarm.go?s=2971:3035#L75">SwarmSpecToGRPC</a>
+				<a class="permalink" href="index.html#SwarmSpecToGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SwarmSpecToGRPC">SwarmSpecToGRPC</a>(s <a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#Spec">Spec</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#ClusterSpec">ClusterSpec</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+SwarmSpecToGRPC converts a Spec to a grpc ClusterSpec.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="TaskFromGRPC">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/convert/task.go?s=286:340#L2">TaskFromGRPC</a>
+				<a class="permalink" href="index.html#TaskFromGRPC">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#TaskFromGRPC">TaskFromGRPC</a>(t <a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#Task">Task</a>) (<a href="../../../api/types/swarm/index.html">types</a>.<a href="../../../api/types/swarm/index.html#Task">Task</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+TaskFromGRPC converts a grpc Task to a Task.
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

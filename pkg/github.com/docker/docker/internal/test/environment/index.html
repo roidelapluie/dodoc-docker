@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>environment - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package environment</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/internal/test/environment"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#EnsureFrozenImagesLinux">func EnsureFrozenImagesLinux(testEnv *Execution) error</a></dd>
+			
+				
+				<dd><a href="index.html#ProtectAll">func ProtectAll(t assert.TestingT, testEnv *Execution)</a></dd>
+			
+				
+				<dd><a href="index.html#ProtectContainers">func ProtectContainers(t assert.TestingT, testEnv *Execution)</a></dd>
+			
+				
+				<dd><a href="index.html#ProtectImages">func ProtectImages(t assert.TestingT, testEnv *Execution)</a></dd>
+			
+				
+				<dd><a href="index.html#ProtectNetworks">func ProtectNetworks(t assert.TestingT, testEnv *Execution)</a></dd>
+			
+				
+				<dd><a href="index.html#ProtectPlugins">func ProtectPlugins(t assert.TestingT, testEnv *Execution)</a></dd>
+			
+				
+				<dd><a href="index.html#ProtectVolumes">func ProtectVolumes(t assert.TestingT, testEnv *Execution)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Execution">type Execution</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FromClient">func FromClient(c *client.Client) (*Execution, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New() (*Execution, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.APIClient">func (e *Execution) APIClient() client.APIClient</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.Clean">func (e *Execution) Clean(t assert.TestingT)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.DaemonAPIVersion">func (e *Execution) DaemonAPIVersion() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.HasExistingImage">func (e *Execution) HasExistingImage(t assert.TestingT, reference string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.IsLocalDaemon">func (e *Execution) IsLocalDaemon() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.IsRemoteDaemon">func (e *Execution) IsRemoteDaemon() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.IsUserNamespace">func (e *Execution) IsUserNamespace() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.Print">func (e *Execution) Print()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.ProtectContainer">func (e *Execution) ProtectContainer(t assert.TestingT, containers ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.ProtectImage">func (e *Execution) ProtectImage(t assert.TestingT, images ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.ProtectNetwork">func (e *Execution) ProtectNetwork(t assert.TestingT, networks ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.ProtectPlugin">func (e *Execution) ProtectPlugin(t assert.TestingT, plugins ...string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Execution.ProtectVolume">func (e *Execution) ProtectVolume(t assert.TestingT, volumes ...string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PlatformDefaults">type PlatformDefaults</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/clean.go">clean.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go">environment.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go">protect.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="EnsureFrozenImagesLinux">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=5777:5831#L177">EnsureFrozenImagesLinux</a>
+				<a class="permalink" href="index.html#EnsureFrozenImagesLinux">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#EnsureFrozenImagesLinux">EnsureFrozenImagesLinux</a>(testEnv *<a href="index.html#Execution">Execution</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+EnsureFrozenImagesLinux loads frozen test images into the daemon
+if they aren&#39;t already loaded
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ProtectAll">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=1028:1082#L26">ProtectAll</a>
+				<a class="permalink" href="index.html#ProtectAll">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ProtectAll">ProtectAll</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, testEnv *<a href="index.html#Execution">Execution</a>)</pre>
+			<p>
+ProtectAll protects the existing environment (containers, images, networks,
+volumes, and, on Linux, plugins) from being cleaned up at the end of test
+runs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ProtectContainers">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=1745:1806#L52">ProtectContainers</a>
+				<a class="permalink" href="index.html#ProtectContainers">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ProtectContainers">ProtectContainers</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, testEnv *<a href="index.html#Execution">Execution</a>)</pre>
+			<p>
+ProtectContainers protects existing containers from being cleaned up at the
+end of test runs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ProtectImages">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=2836:2893#L89">ProtectImages</a>
+				<a class="permalink" href="index.html#ProtectImages">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ProtectImages">ProtectImages</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, testEnv *<a href="index.html#Execution">Execution</a>)</pre>
+			<p>
+ProtectImages protects existing images and on linux frozen images from being
+cleaned up at the end of test runs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ProtectNetworks">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=4369:4428#L149">ProtectNetworks</a>
+				<a class="permalink" href="index.html#ProtectNetworks">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ProtectNetworks">ProtectNetworks</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, testEnv *<a href="index.html#Execution">Execution</a>)</pre>
+			<p>
+ProtectNetworks protects existing networks from being cleaned up at the end
+of test runs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ProtectPlugins">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=5394:5452#L184">ProtectPlugins</a>
+				<a class="permalink" href="index.html#ProtectPlugins">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ProtectPlugins">ProtectPlugins</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, testEnv *<a href="index.html#Execution">Execution</a>)</pre>
+			<p>
+ProtectPlugins protects existing plugins from being cleaned up at the end of
+test runs
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ProtectVolumes">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=6516:6574#L223">ProtectVolumes</a>
+				<a class="permalink" href="index.html#ProtectVolumes">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ProtectVolumes">ProtectVolumes</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, testEnv *<a href="index.html#Execution">Execution</a>)</pre>
+			<p>
+ProtectVolumes protects existing volumes from being cleaned up at the end of
+test runs
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Execution">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=506:696#L11">Execution</a>
+				<a class="permalink" href="index.html#Execution">&#xb6;</a>
+			</h2>
+			<p>
+Execution contains information about the current test execution and daemon
+under test
+</p>
+
+			<pre>type Execution struct {
+<span id="Execution.DaemonInfo"></span>    DaemonInfo       <a href="../../../api/types/index.html">types</a>.<a href="../../../api/types/index.html#Info">Info</a>
+<span id="Execution.OSType"></span>    OSType           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Execution.PlatformDefaults"></span>    PlatformDefaults <a href="index.html#PlatformDefaults">PlatformDefaults</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="FromClient">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=1269:1322#L37">FromClient</a>
+					<a class="permalink" href="index.html#FromClient">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#FromClient">FromClient</a>(c *<a href="../../../client/index.html">client</a>.<a href="../../../client/index.html#Client">Client</a>) (*<a href="index.html#Execution">Execution</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+FromClient creates a new Execution environment from the passed in client
+</p>
+
+				
+				
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=1004:1034#L28">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>() (*<a href="index.html#Execution">Execution</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+New creates a new Execution struct
+This is configured useing the env client (see client.FromEnv)
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Execution.APIClient">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=4732:4780#L145">APIClient</a>
+					<a class="permalink" href="index.html#Execution.APIClient">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#APIClient">APIClient</a>() <a href="../../../client/index.html">client</a>.<a href="../../../client/index.html#APIClient">APIClient</a></pre>
+				<p>
+APIClient returns an APIClient connected to the daemon under test
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.Clean">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/clean.go?s=506:550#L8">Clean</a>
+					<a class="permalink" href="index.html#Execution.Clean">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#Clean">Clean</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>)</pre>
+				<p>
+Clean the environment, preserving protected objects (images, containers, ...)
+and removing everything else. It&#39;s meant to run after any tests so that they don&#39;t
+depend on each others.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.DaemonAPIVersion">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=4246:4291#L126">DaemonAPIVersion</a>
+					<a class="permalink" href="index.html#Execution.DaemonAPIVersion">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#DaemonAPIVersion">DaemonAPIVersion</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+DaemonAPIVersion returns the negotiated daemon api version
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.HasExistingImage">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=5215:5293#L158">HasExistingImage</a>
+					<a class="permalink" href="index.html#Execution.HasExistingImage">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#HasExistingImage">HasExistingImage</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, reference <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+HasExistingImage checks whether there is an image with the given reference.
+Note that this is done by filtering and then checking whether there were any
+results -- so ambiguous references might result in false-positives.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.IsLocalDaemon">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=3920:3960#L115">IsLocalDaemon</a>
+					<a class="permalink" href="index.html#Execution.IsLocalDaemon">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#IsLocalDaemon">IsLocalDaemon</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsLocalDaemon is true if the daemon under test is on the same
+host as the test process.
+</p>
+<p>
+Deterministically working out the environment in which CI is running
+to evaluate whether the daemon is local or remote is not possible through
+a build tag.
+</p>
+<p>
+For example Windows to Linux CI under Jenkins tests the 64-bit
+Windows binary build with the daemon build tag, but calls a remote
+Linux daemon.
+</p>
+<p>
+We can&#39;t just say if Windows then assume the daemon is local as at
+some point, we will be testing the Windows CLI against a Windows daemon.
+</p>
+<p>
+Similarly, it will be perfectly valid to also run CLI tests from
+a Linux CLI (built with the daemon tag) against a Windows daemon.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.IsRemoteDaemon">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=4110:4151#L121">IsRemoteDaemon</a>
+					<a class="permalink" href="index.html#Execution.IsRemoteDaemon">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#IsRemoteDaemon">IsRemoteDaemon</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsRemoteDaemon is true if the daemon under test is on different host
+as the test process.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.IsUserNamespace">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=4878:4920#L150">IsUserNamespace</a>
+					<a class="permalink" href="index.html#Execution.IsUserNamespace">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#IsUserNamespace">IsUserNamespace</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsUserNamespace returns whether the user namespace remapping is enabled
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.Print">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=4484:4511#L136">Print</a>
+					<a class="permalink" href="index.html#Execution.Print">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#Print">Print</a>()</pre>
+				<p>
+Print the execution details to stdout
+TODO: print everything
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.ProtectContainer">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=1409:1486#L41">ProtectContainer</a>
+					<a class="permalink" href="index.html#Execution.ProtectContainer">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#ProtectContainer">ProtectContainer</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, containers ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+ProtectContainer adds the specified container(s) to be protected in case of
+clean
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.ProtectImage">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=2505:2574#L78">ProtectImage</a>
+					<a class="permalink" href="index.html#Execution.ProtectImage">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#ProtectImage">ProtectImage</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, images ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+ProtectImage adds the specified image(s) to be protected in case of clean
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.ProtectNetwork">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=4049:4122#L138">ProtectNetwork</a>
+					<a class="permalink" href="index.html#Execution.ProtectNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#ProtectNetwork">ProtectNetwork</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, networks ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+ProtectNetwork adds the specified network(s) to be protected in case of
+clean
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.ProtectPlugin">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=5082:5153#L173">ProtectPlugin</a>
+					<a class="permalink" href="index.html#Execution.ProtectPlugin">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#ProtectPlugin">ProtectPlugin</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, plugins ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+ProtectPlugin adds the specified plugin(s) to be protected in case of clean
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Execution.ProtectVolume">func (*Execution) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/protect.go?s=6204:6275#L212">ProtectVolume</a>
+					<a class="permalink" href="index.html#Execution.ProtectVolume">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#Execution">Execution</a>) <a href="index.html#ProtectVolume">ProtectVolume</a>(t <a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/">assert</a>.<a href="http://127.0.0.1:8080/pkg/gotest.tools/assert/#TestingT">TestingT</a>, volumes ...<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+ProtectVolume adds the specified volume(s) to be protected in case of clean
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PlatformDefaults">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/internal/test/environment/environment.go?s=780:899#L20">PlatformDefaults</a>
+				<a class="permalink" href="index.html#PlatformDefaults">&#xb6;</a>
+			</h2>
+			<p>
+PlatformDefaults are defaults values for the platform of the daemon under test
+</p>
+
+			<pre>type PlatformDefaults struct {
+<span id="PlatformDefaults.BaseImage"></span>    BaseImage            <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="PlatformDefaults.VolumesConfigPath"></span>    VolumesConfigPath    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="PlatformDefaults.ContainerStoragePath"></span>    ContainerStoragePath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

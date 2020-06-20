@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>cluster - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package cluster</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/cluster"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#Cluster">type Cluster</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(config Config) (*Cluster, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.AttachNetwork">func (c *Cluster) AttachNetwork(target string, containerID string, addresses []string) (*network.NetworkingConfig, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Cleanup">func (c *Cluster) Cleanup()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.CreateConfig">func (c *Cluster) CreateConfig(s types.ConfigSpec) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.CreateNetwork">func (c *Cluster) CreateNetwork(s apitypes.NetworkCreateRequest) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.CreateSecret">func (c *Cluster) CreateSecret(s types.SecretSpec) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.CreateService">func (c *Cluster) CreateService(s types.ServiceSpec, encodedAuth string, queryRegistry bool) (*apitypes.ServiceCreateResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.DetachNetwork">func (c *Cluster) DetachNetwork(target string, containerID string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetAdvertiseAddress">func (c *Cluster) GetAdvertiseAddress() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetConfig">func (c *Cluster) GetConfig(input string) (types.Config, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetConfigs">func (c *Cluster) GetConfigs(options apitypes.ConfigListOptions) ([]types.Config, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetDataPathAddress">func (c *Cluster) GetDataPathAddress() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetListenAddress">func (c *Cluster) GetListenAddress() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetLocalAddress">func (c *Cluster) GetLocalAddress() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetNetwork">func (c *Cluster) GetNetwork(input string) (apitypes.NetworkResource, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetNetworks">func (c *Cluster) GetNetworks(filter filters.Args) ([]apitypes.NetworkResource, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetNetworksByName">func (c *Cluster) GetNetworksByName(name string) ([]apitypes.NetworkResource, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetNode">func (c *Cluster) GetNode(input string) (types.Node, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetNodes">func (c *Cluster) GetNodes(options apitypes.NodeListOptions) ([]types.Node, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetRemoteAddressList">func (c *Cluster) GetRemoteAddressList() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetSecret">func (c *Cluster) GetSecret(input string) (types.Secret, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetSecrets">func (c *Cluster) GetSecrets(options apitypes.SecretListOptions) ([]types.Secret, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetService">func (c *Cluster) GetService(input string, insertDefaults bool) (types.Service, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetServices">func (c *Cluster) GetServices(options apitypes.ServiceListOptions) ([]types.Service, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetTask">func (c *Cluster) GetTask(input string) (types.Task, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetTasks">func (c *Cluster) GetTasks(options apitypes.TaskListOptions) ([]types.Task, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetUnlockKey">func (c *Cluster) GetUnlockKey() (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.GetWatchStream">func (c *Cluster) GetWatchStream() chan *swarmapi.WatchMessage</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Info">func (c *Cluster) Info() types.Info</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Init">func (c *Cluster) Init(req types.InitRequest) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Inspect">func (c *Cluster) Inspect() (types.Swarm, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.IsAgent">func (c *Cluster) IsAgent() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.IsManager">func (c *Cluster) IsManager() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Join">func (c *Cluster) Join(req types.JoinRequest) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Leave">func (c *Cluster) Leave(force bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.ListenClusterEvents">func (c *Cluster) ListenClusterEvents() &lt;-chan lncluster.ConfigEventType</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.RemoveConfig">func (c *Cluster) RemoveConfig(input string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.RemoveNetwork">func (c *Cluster) RemoveNetwork(input string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.RemoveNode">func (c *Cluster) RemoveNode(input string, force bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.RemoveSecret">func (c *Cluster) RemoveSecret(input string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.RemoveService">func (c *Cluster) RemoveService(input string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.SendClusterEvent">func (c *Cluster) SendClusterEvent(event lncluster.ConfigEventType)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.ServiceLogs">func (c *Cluster) ServiceLogs(ctx context.Context, selector *backend.LogSelector, config *apitypes.ContainerLogsOptions) (&lt;-chan *backend.LogMessage, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Start">func (c *Cluster) Start() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.UnlockSwarm">func (c *Cluster) UnlockSwarm(req types.UnlockRequest) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.Update">func (c *Cluster) Update(version uint64, spec types.Spec, flags types.UpdateFlags) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.UpdateAttachment">func (c *Cluster) UpdateAttachment(target, containerID string, config *network.NetworkingConfig) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.UpdateConfig">func (c *Cluster) UpdateConfig(input string, version uint64, spec types.ConfigSpec) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.UpdateNode">func (c *Cluster) UpdateNode(input string, version uint64, spec types.NodeSpec) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.UpdateSecret">func (c *Cluster) UpdateSecret(input string, version uint64, spec types.SecretSpec) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.UpdateService">func (c *Cluster) UpdateService(serviceIDOrName string, version uint64, spec types.ServiceSpec, flags apitypes.ServiceUpdateOptions, queryRegistry bool) (*apitypes.ServiceUpdateResponse, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Cluster.WaitForDetachment">func (c *Cluster) WaitForDetachment(ctx context.Context, networkName, networkID, taskID, containerID string) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkSubnetsProvider">type NetworkSubnetsProvider</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go">cluster.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/configs.go">configs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/errors.go">errors.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/filters.go">filters.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/helpers.go">helpers.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/listen_addr.go">listen_addr.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/listen_addr_linux.go">listen_addr_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go">networks.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/noderunner.go">noderunner.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/nodes.go">nodes.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/secrets.go">secrets.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/services.go">services.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go">swarm.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/tasks.go">tasks.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/utils.go">utils.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="Cluster">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=4305:4680#L104">Cluster</a>
+				<a class="permalink" href="index.html#Cluster">&#xb6;</a>
+			</h2>
+			<p>
+Cluster provides capabilities to participate in a cluster as a worker or a
+manager.
+</p>
+
+			<pre>type Cluster struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=5243:5284#L130">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>(config <a href="index.html#Config">Config</a>) (*<a href="index.html#Cluster">Cluster</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+New creates a new Cluster instance using provided config.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Cluster.AttachNetwork">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=5065:5186#L172">AttachNetwork</a>
+					<a class="permalink" href="index.html#Cluster.AttachNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#AttachNetwork">AttachNetwork</a>(target <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, addresses []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../../api/types/network/index.html">network</a>.<a href="../../api/types/network/index.html#NetworkingConfig">NetworkingConfig</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+AttachNetwork generates an attachment request towards the manager.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Cleanup">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=11886:11913#L357">Cleanup</a>
+					<a class="permalink" href="index.html#Cluster.Cleanup">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Cleanup">Cleanup</a>()</pre>
+				<p>
+Cleanup stops active swarm node. This is run before daemon shutdown.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.CreateConfig">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/configs.go?s=1619:1685#L54">CreateConfig</a>
+					<a class="permalink" href="index.html#Cluster.CreateConfig">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#CreateConfig">CreateConfig</a>(s <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#ConfigSpec">ConfigSpec</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateConfig creates a new config in a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.CreateNetwork">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=7620:7700#L259">CreateNetwork</a>
+					<a class="permalink" href="index.html#Cluster.CreateNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#CreateNetwork">CreateNetwork</a>(s <a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#NetworkCreateRequest">NetworkCreateRequest</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateNetwork creates a new cluster managed network.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.CreateSecret">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/secrets.go?s=1645:1711#L55">CreateSecret</a>
+					<a class="permalink" href="index.html#Cluster.CreateSecret">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#CreateSecret">CreateSecret</a>(s <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#SecretSpec">SecretSpec</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateSecret creates a new secret in a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.CreateService">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/services.go?s=3351:3484#L115">CreateService</a>
+					<a class="permalink" href="index.html#Cluster.CreateService">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#CreateService">CreateService</a>(s <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#ServiceSpec">ServiceSpec</a>, encodedAuth <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, queryRegistry <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) (*<a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#ServiceCreateResponse">ServiceCreateResponse</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+CreateService creates a new service in a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.DetachNetwork">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=7187:7259#L242">DetachNetwork</a>
+					<a class="permalink" href="index.html#Cluster.DetachNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#DetachNetwork">DetachNetwork</a>(target <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+DetachNetwork unblocks the waiters waiting on WaitForDetachment so
+that a request to detach can be generated towards the manager.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetAdvertiseAddress">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=9134:9180#L274">GetAdvertiseAddress</a>
+					<a class="permalink" href="index.html#Cluster.GetAdvertiseAddress">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetAdvertiseAddress">GetAdvertiseAddress</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetAdvertiseAddress returns the remotely reachable address of this node.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetConfig">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/configs.go?s=369:432#L4">GetConfig</a>
+					<a class="permalink" href="index.html#Cluster.GetConfig">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetConfig">GetConfig</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Config">Config</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetConfig returns a config from a managed swarm cluster
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetConfigs">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/configs.go?s=825:913#L21">GetConfigs</a>
+					<a class="permalink" href="index.html#Cluster.GetConfigs">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetConfigs">GetConfigs</a>(options <a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#ConfigListOptions">ConfigListOptions</a>) ([]<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Config">Config</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetConfigs returns all configs of a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetDataPathAddress">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=9510:9555#L285">GetDataPathAddress</a>
+					<a class="permalink" href="index.html#Cluster.GetDataPathAddress">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetDataPathAddress">GetDataPathAddress</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetDataPathAddress returns the address to be used for the data path traffic, if specified.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetListenAddress">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=8909:8952#L264">GetListenAddress</a>
+					<a class="permalink" href="index.html#Cluster.GetListenAddress">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetListenAddress">GetListenAddress</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetListenAddress returns the listen address.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetLocalAddress">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=8732:8774#L257">GetLocalAddress</a>
+					<a class="permalink" href="index.html#Cluster.GetLocalAddress">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetLocalAddress">GetLocalAddress</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetLocalAddress returns the local address.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetNetwork">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=2243:2319#L79">GetNetwork</a>
+					<a class="permalink" href="index.html#Cluster.GetNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetNetwork">GetNetwork</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#NetworkResource">NetworkResource</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNetwork returns a cluster network by an ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetNetworks">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=632:718#L11">GetNetworks</a>
+					<a class="permalink" href="index.html#Cluster.GetNetworks">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetNetworks">GetNetworks</a>(filter <a href="../../api/types/filters/index.html">filters</a>.<a href="../../api/types/filters/index.html#Args">Args</a>) ([]<a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#NetworkResource">NetworkResource</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNetworks returns all current cluster managed networks.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetNetworksByName">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=2788:2872#L97">GetNetworksByName</a>
+					<a class="permalink" href="index.html#Cluster.GetNetworksByName">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetNetworksByName">GetNetworksByName</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#NetworkResource">NetworkResource</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNetworksByName returns cluster managed networks by name.
+It is ok to have multiple networks here. #18864
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetNode">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/nodes.go?s=1175:1234#L40">GetNode</a>
+					<a class="permalink" href="index.html#Cluster.GetNode">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetNode">GetNode</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Node">Node</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNode returns a node based on an ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetNodes">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/nodes.go?s=406:488#L5">GetNodes</a>
+					<a class="permalink" href="index.html#Cluster.GetNodes">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetNodes">GetNodes</a>(options <a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#NodeListOptions">NodeListOptions</a>) ([]<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Node">Node</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetNodes returns a list of all nodes known to a cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetRemoteAddressList">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=9766:9815#L296">GetRemoteAddressList</a>
+					<a class="permalink" href="index.html#Cluster.GetRemoteAddressList">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetRemoteAddressList">GetRemoteAddressList</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetRemoteAddressList returns the advertise address for each of the remote managers if
+available.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetSecret">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/secrets.go?s=369:432#L4">GetSecret</a>
+					<a class="permalink" href="index.html#Cluster.GetSecret">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetSecret">GetSecret</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Secret">Secret</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetSecret returns a secret from a managed swarm cluster
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetSecrets">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/secrets.go?s=825:913#L21">GetSecrets</a>
+					<a class="permalink" href="index.html#Cluster.GetSecrets">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetSecrets">GetSecrets</a>(options <a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#SecretListOptions">SecretListOptions</a>) ([]<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Secret">Secret</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetSecrets returns all secrets of a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetService">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/services.go?s=2777:2863#L95">GetService</a>
+					<a class="permalink" href="index.html#Cluster.GetService">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetService">GetService</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, insertDefaults <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) (<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Service">Service</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetService returns a service based on an ID or name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetServices">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/services.go?s=794:885#L20">GetServices</a>
+					<a class="permalink" href="index.html#Cluster.GetServices">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetServices">GetServices</a>(options <a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#ServiceListOptions">ServiceListOptions</a>) ([]<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Service">Service</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetServices returns all services of a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetTask">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/tasks.go?s=2080:2139#L67">GetTask</a>
+					<a class="permalink" href="index.html#Cluster.GetTask">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetTask">GetTask</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Task">Task</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetTask returns a task by an ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetTasks">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/tasks.go?s=421:503#L5">GetTasks</a>
+					<a class="permalink" href="index.html#Cluster.GetTasks">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetTasks">GetTasks</a>(options <a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#TaskListOptions">TaskListOptions</a>) ([]<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Task">Task</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetTasks returns a list of tasks matching the filter options.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetUnlockKey">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=7394:7442#L272">GetUnlockKey</a>
+					<a class="permalink" href="index.html#Cluster.GetUnlockKey">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetUnlockKey">GetUnlockKey</a>() (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetUnlockKey returns the unlock key for the swarm.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.GetWatchStream">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=9965:10027#L303">GetWatchStream</a>
+					<a class="permalink" href="index.html#Cluster.GetWatchStream">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#GetWatchStream">GetWatchStream</a>() chan *<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#WatchMessage">WatchMessage</a></pre>
+				<p>
+GetWatchStream returns the channel to pass changes from store watch API
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Info">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=11464:11499#L419">Info</a>
+					<a class="permalink" href="index.html#Cluster.Info">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Info">Info</a>() <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Info">Info</a></pre>
+				<p>
+Info returns information about the current cluster state.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Init">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=706:767#L16">Init</a>
+					<a class="permalink" href="index.html#Cluster.Init">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Init">Init</a>(req <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#InitRequest">InitRequest</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Init initializes new cluster from user provided request.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Inspect">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=5494:5542#L206">Inspect</a>
+					<a class="permalink" href="index.html#Cluster.Inspect">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Inspect">Inspect</a>() (<a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Swarm">Swarm</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Inspect retrieves the configuration properties of a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.IsAgent">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=8546:8578#L250">IsAgent</a>
+					<a class="permalink" href="index.html#Cluster.IsAgent">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#IsAgent">IsAgent</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsAgent returns true if Cluster is participating as a worker/agent.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.IsManager">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=8352:8386#L243">IsManager</a>
+					<a class="permalink" href="index.html#Cluster.IsManager">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#IsManager">IsManager</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsManager returns true if Cluster is participating as a manager.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Join">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=3890:3941#L138">Join</a>
+					<a class="permalink" href="index.html#Cluster.Join">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Join">Join</a>(req <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#JoinRequest">JoinRequest</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Join makes current Cluster part of an existing swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Leave">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=9144:9185#L347">Leave</a>
+					<a class="permalink" href="index.html#Cluster.Leave">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Leave">Leave</a>(force <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Leave shuts down Cluster and removes current state.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.ListenClusterEvents">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=10640:10712#L329">ListenClusterEvents</a>
+					<a class="permalink" href="index.html#Cluster.ListenClusterEvents">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#ListenClusterEvents">ListenClusterEvents</a>() &lt;-chan <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/">lncluster</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/#ConfigEventType">ConfigEventType</a></pre>
+				<p>
+ListenClusterEvents returns a channel that receives messages on cluster
+participation changes.
+todo: make cancelable and accessible to multiple callers
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.RemoveConfig">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/configs.go?s=2153:2203#L73">RemoveConfig</a>
+					<a class="permalink" href="index.html#Cluster.RemoveConfig">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#RemoveConfig">RemoveConfig</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+RemoveConfig removes a config from a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.RemoveNetwork">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=8342:8393#L282">RemoveNetwork</a>
+					<a class="permalink" href="index.html#Cluster.RemoveNetwork">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#RemoveNetwork">RemoveNetwork</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+RemoveNetwork removes a cluster network.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.RemoveNode">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/nodes.go?s=2311:2371#L88">RemoveNode</a>
+					<a class="permalink" href="index.html#Cluster.RemoveNode">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#RemoveNode">RemoveNode</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, force <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+RemoveNode removes a node from a cluster
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.RemoveSecret">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/secrets.go?s=2179:2229#L74">RemoveSecret</a>
+					<a class="permalink" href="index.html#Cluster.RemoveSecret">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#RemoveSecret">RemoveSecret</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+RemoveSecret removes a secret from a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.RemoveService">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/services.go?s=11632:11683#L348">RemoveService</a>
+					<a class="permalink" href="index.html#Cluster.RemoveService">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#RemoveService">RemoveService</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+RemoveService removes a service from a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.SendClusterEvent">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=14101:14168#L442">SendClusterEvent</a>
+					<a class="permalink" href="index.html#Cluster.SendClusterEvent">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#SendClusterEvent">SendClusterEvent</a>(event <a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/">lncluster</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/libnetwork/cluster/#ConfigEventType">ConfigEventType</a>)</pre>
+				<p>
+SendClusterEvent allows to send cluster events on the configEvent channel
+TODO This method should not be exposed.
+Currently it is used to notify the network controller that the keys are
+available
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.ServiceLogs">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/services.go?s=12078:12234#L361">ServiceLogs</a>
+					<a class="permalink" href="index.html#Cluster.ServiceLogs">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#ServiceLogs">ServiceLogs</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, selector *<a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#LogSelector">LogSelector</a>, config *<a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#ContainerLogsOptions">ContainerLogsOptions</a>) (&lt;-chan *<a href="../../api/types/backend/index.html">backend</a>.<a href="../../api/types/backend/index.html#LogMessage">LogMessage</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ServiceLogs collects service logs and writes them back to `config.OutStream`
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Start">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=6190:6221#L163">Start</a>
+					<a class="permalink" href="index.html#Cluster.Start">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Start">Start</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Start the Cluster instance
+TODO The split between New and Start can be join again when the SendClusterEvent
+method is no longer required
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.UnlockSwarm">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=7984:8044#L294">UnlockSwarm</a>
+					<a class="permalink" href="index.html#Cluster.UnlockSwarm">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#UnlockSwarm">UnlockSwarm</a>(req <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#UnlockRequest">UnlockRequest</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnlockSwarm provides a key to decrypt data that is encrypted at rest.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.Update">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/swarm.go?s=6101:6189#L230">Update</a>
+					<a class="permalink" href="index.html#Cluster.Update">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#Update">Update</a>(version <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, spec <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#Spec">Spec</a>, flags <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#UpdateFlags">UpdateFlags</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Update updates configuration of a managed swarm cluster.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.UpdateAttachment">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=3319:3421#L112">UpdateAttachment</a>
+					<a class="permalink" href="index.html#Cluster.UpdateAttachment">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#UpdateAttachment">UpdateAttachment</a>(target, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, config *<a href="../../api/types/network/index.html">network</a>.<a href="../../api/types/network/index.html#NetworkingConfig">NetworkingConfig</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UpdateAttachment signals the attachment config to the attachment
+waiter who is trying to start or attach the container to the
+network.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.UpdateConfig">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/configs.go?s=2663:2752#L91">UpdateConfig</a>
+					<a class="permalink" href="index.html#Cluster.UpdateConfig">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#UpdateConfig">UpdateConfig</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, version <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, spec <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#ConfigSpec">ConfigSpec</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UpdateConfig updates a config in a managed swarm cluster.
+Note: this is not exposed to the CLI but is available from the API only
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.UpdateNode">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/nodes.go?s=1602:1687#L58">UpdateNode</a>
+					<a class="permalink" href="index.html#Cluster.UpdateNode">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#UpdateNode">UpdateNode</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, version <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, spec <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#NodeSpec">NodeSpec</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UpdateNode updates existing nodes properties.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.UpdateSecret">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/secrets.go?s=2689:2778#L92">UpdateSecret</a>
+					<a class="permalink" href="index.html#Cluster.UpdateSecret">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#UpdateSecret">UpdateSecret</a>(input <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, version <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, spec <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#SecretSpec">SecretSpec</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UpdateSecret updates a secret in a managed swarm cluster.
+Note: this is not exposed to the CLI but is available from the API only
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.UpdateService">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/services.go?s=6947:7140#L218">UpdateService</a>
+					<a class="permalink" href="index.html#Cluster.UpdateService">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#UpdateService">UpdateService</a>(serviceIDOrName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, version <a href="http://127.0.0.1:8080/pkg/builtin/#uint64">uint64</a>, spec <a href="../../api/types/swarm/index.html">types</a>.<a href="../../api/types/swarm/index.html#ServiceSpec">ServiceSpec</a>, flags <a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#ServiceUpdateOptions">ServiceUpdateOptions</a>, queryRegistry <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) (*<a href="../../api/types/index.html">apitypes</a>.<a href="../../api/types/index.html#ServiceUpdateResponse">ServiceUpdateResponse</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+UpdateService updates existing service to match new properties.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Cluster.WaitForDetachment">func (*Cluster) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/networks.go?s=4006:4120#L134">WaitForDetachment</a>
+					<a class="permalink" href="index.html#Cluster.WaitForDetachment">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#Cluster">Cluster</a>) <a href="index.html#WaitForDetachment">WaitForDetachment</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, networkName, networkID, taskID, containerID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+WaitForDetachment waits for the container to stop or detach from
+the network.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Config">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=3255:4213#L75">Config</a>
+				<a class="permalink" href="index.html#Config">&#xb6;</a>
+			</h2>
+			<p>
+Config provides values for Cluster.
+</p>
+
+			<pre>type Config struct {
+<span id="Config.Root"></span>    Root                   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.Name"></span>    Name                   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Config.Backend"></span>    Backend                <a href="executor/index.html">executorpkg</a>.<a href="executor/index.html#Backend">Backend</a>
+<span id="Config.ImageBackend"></span>    ImageBackend           <a href="executor/index.html">executorpkg</a>.<a href="executor/index.html#ImageBackend">ImageBackend</a>
+<span id="Config.PluginBackend"></span>    PluginBackend          <a href="controllers/plugin/index.html">plugin</a>.<a href="controllers/plugin/index.html#Backend">Backend</a>
+<span id="Config.VolumeBackend"></span>    VolumeBackend          <a href="executor/index.html">executorpkg</a>.<a href="executor/index.html#VolumeBackend">VolumeBackend</a>
+<span id="Config.NetworkSubnetsProvider"></span>    NetworkSubnetsProvider <a href="index.html#NetworkSubnetsProvider">NetworkSubnetsProvider</a>
+
+<span id="Config.DefaultAdvertiseAddr"></span>    <span class="comment">// DefaultAdvertiseAddr is the default host/IP or network interface to use</span>
+    <span class="comment">// if no AdvertiseAddr value is specified.</span>
+    DefaultAdvertiseAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+    <span class="comment">// path to store runtime state, such as the swarm control socket</span>
+<span id="Config.RuntimeRoot"></span>    RuntimeRoot <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+
+<span id="Config.WatchStream"></span>    <span class="comment">// WatchStream is a channel to pass watch API notifications to daemon</span>
+    WatchStream chan *<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/">swarmapi</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/swarmkit/api/#WatchMessage">WatchMessage</a>
+
+<span id="Config.RaftHeartbeatTick"></span>    <span class="comment">// RaftHeartbeatTick is the number of ticks for heartbeat of quorum members</span>
+    RaftHeartbeatTick <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+
+<span id="Config.RaftElectionTick"></span>    <span class="comment">// RaftElectionTick is the number of ticks to elapse before followers propose a new round of leader election</span>
+    <span class="comment">// This value should be 10x that of RaftHeartbeatTick</span>
+    RaftElectionTick <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkSubnetsProvider">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/cluster/cluster.go?s=3135:3214#L70">NetworkSubnetsProvider</a>
+				<a class="permalink" href="index.html#NetworkSubnetsProvider">&#xb6;</a>
+			</h2>
+			<p>
+NetworkSubnetsProvider exposes functions for retrieving the subnets
+of networks managed by Docker, so they can be filtered.
+</p>
+
+			<pre>type NetworkSubnetsProvider interface {
+    Subnets() ([]<a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#IPNet">IPNet</a>, []<a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#IPNet">IPNet</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="controllers/index.html">controllers</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="controllers/plugin/index.html">plugin</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="convert/index.html">convert</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="executor/index.html">executor</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 20px;">
+							<a href="executor/container/index.html">container</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="provider/index.html">provider</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

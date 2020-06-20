@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>oci - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package oci</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/oci"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#AppendDevicePermissionsFromCgroupRules">func AppendDevicePermissionsFromCgroupRules(devPermissions []specs.LinuxDeviceCgroup, rules []string) ([]specs.LinuxDeviceCgroup, error)</a></dd>
+			
+				
+				<dd><a href="index.html#DefaultCapabilities">func DefaultCapabilities() []string</a></dd>
+			
+				
+				<dd><a href="index.html#DefaultLinuxSpec">func DefaultLinuxSpec() specs.Spec</a></dd>
+			
+				
+				<dd><a href="index.html#DefaultOSSpec">func DefaultOSSpec(osName string) specs.Spec</a></dd>
+			
+				
+				<dd><a href="index.html#DefaultSpec">func DefaultSpec() specs.Spec</a></dd>
+			
+				
+				<dd><a href="index.html#DefaultWindowsSpec">func DefaultWindowsSpec() specs.Spec</a></dd>
+			
+				
+				<dd><a href="index.html#Device">func Device(d *configs.Device) specs.LinuxDevice</a></dd>
+			
+				
+				<dd><a href="index.html#DevicesFromPath">func DevicesFromPath(pathOnHost, pathInContainer, cgroupPermissions string) (devs []specs.LinuxDevice, devPermissions []specs.LinuxDeviceCgroup, err error)</a></dd>
+			
+				
+				<dd><a href="index.html#RemoveNamespace">func RemoveNamespace(s *specs.Spec, nsType specs.LinuxNamespaceType)</a></dd>
+			
+				
+				<dd><a href="index.html#SetCapabilities">func SetCapabilities(s *specs.Spec, caplist []string) error</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/defaults.go">defaults.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/devices_linux.go">devices_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/namespaces.go">namespaces.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/oci.go">oci.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="AppendDevicePermissionsFromCgroupRules">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/oci.go?s=975:1111#L21">AppendDevicePermissionsFromCgroupRules</a>
+				<a class="permalink" href="index.html#AppendDevicePermissionsFromCgroupRules">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#AppendDevicePermissionsFromCgroupRules">AppendDevicePermissionsFromCgroupRules</a>(devPermissions []<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/#LinuxDeviceCgroup">LinuxDeviceCgroup</a>, rules []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/#LinuxDeviceCgroup">LinuxDeviceCgroup</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+AppendDevicePermissionsFromCgroupRules takes rules for the devices cgroup to append to the default set
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DefaultCapabilities">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/defaults.go?s=383:418#L5">DefaultCapabilities</a>
+				<a class="permalink" href="index.html#DefaultCapabilities">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DefaultCapabilities">DefaultCapabilities</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+DefaultCapabilities returns a Linux kernel default capabilities
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DefaultLinuxSpec">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/defaults.go?s=1350:1384#L48">DefaultLinuxSpec</a>
+				<a class="permalink" href="index.html#DefaultLinuxSpec">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DefaultLinuxSpec">DefaultLinuxSpec</a>() specs.<a href="index.html#Spec">Spec</a></pre>
+			<p>
+DefaultLinuxSpec create a default spec for running Linux containers
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DefaultOSSpec">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/defaults.go?s=893:937#L30">DefaultOSSpec</a>
+				<a class="permalink" href="index.html#DefaultOSSpec">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DefaultOSSpec">DefaultOSSpec</a>(osName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) specs.<a href="index.html#Spec">Spec</a></pre>
+			<p>
+DefaultOSSpec returns the spec for a given OS
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DefaultSpec">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/defaults.go?s=773:802#L25">DefaultSpec</a>
+				<a class="permalink" href="index.html#DefaultSpec">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DefaultSpec">DefaultSpec</a>() specs.<a href="index.html#Spec">Spec</a></pre>
+			<p>
+DefaultSpec returns the default spec used by docker for the current Platform
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DefaultWindowsSpec">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/defaults.go?s=1104:1140#L38">DefaultWindowsSpec</a>
+				<a class="permalink" href="index.html#DefaultWindowsSpec">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DefaultWindowsSpec">DefaultWindowsSpec</a>() specs.<a href="index.html#Spec">Spec</a></pre>
+			<p>
+DefaultWindowsSpec create a default spec for running Windows containers
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Device">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/devices_linux.go?s=351:399#L5">Device</a>
+				<a class="permalink" href="index.html#Device">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Device">Device</a>(d *<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/configs/">configs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runc/libcontainer/configs/#Device">Device</a>) specs.<a href="index.html#LinuxDevice">LinuxDevice</a></pre>
+			<p>
+Device transforms a libcontainer configs.Device to a specs.LinuxDevice object.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DevicesFromPath">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/devices_linux.go?s=985:1140#L29">DevicesFromPath</a>
+				<a class="permalink" href="index.html#DevicesFromPath">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DevicesFromPath">DevicesFromPath</a>(pathOnHost, pathInContainer, cgroupPermissions <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (devs []specs.<a href="index.html#LinuxDevice">LinuxDevice</a>, devPermissions []specs.<a href="index.html#LinuxDeviceCgroup">LinuxDeviceCgroup</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+DevicesFromPath computes a list of devices and device permissions from paths (pathOnHost and pathInContainer) and cgroup permissions.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RemoveNamespace">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/namespaces.go?s=180:248#L1">RemoveNamespace</a>
+				<a class="permalink" href="index.html#RemoveNamespace">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#RemoveNamespace">RemoveNamespace</a>(s *specs.<a href="index.html#Spec">Spec</a>, nsType specs.<a href="index.html#LinuxNamespaceType">LinuxNamespaceType</a>)</pre>
+			<p>
+RemoveNamespace removes the `nsType` namespace from OCI spec `s`
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="SetCapabilities">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/oci/oci.go?s=386:445#L6">SetCapabilities</a>
+				<a class="permalink" href="index.html#SetCapabilities">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#SetCapabilities">SetCapabilities</a>(s *<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/">specs</a>.<a href="http://127.0.0.1:8080/pkg/github.com/opencontainers/runtime-spec/specs-go/#Spec">Spec</a>, caplist []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+SetCapabilities sets the provided capabilities on the spec
+All capabilities are added if privileged is true
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="caps/index.html">caps</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

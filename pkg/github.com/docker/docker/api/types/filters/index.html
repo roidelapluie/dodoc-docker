@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>filters - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package filters</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/api/types/filters"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+				<dd><a href="index.html#pkg-examples" class="examplesLink">Examples</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package filters provides tools for encoding a mapping of keys to a set of
+multiple values.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#ToJSON">func ToJSON(a Args) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ToParamWithVersion">func ToParamWithVersion(version string, a Args) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Args">type Args</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#FromJSON">func FromJSON(p string) (Args, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewArgs">func NewArgs(initialArgs ...KeyValuePair) Args</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Add">func (args Args) Add(key, value string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Clone">func (args Args) Clone() (newArgs Args)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Contains">func (args Args) Contains(field string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Del">func (args Args) Del(key, value string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.ExactMatch">func (args Args) ExactMatch(key, source string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.FuzzyMatch">func (args Args) FuzzyMatch(key, source string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Get">func (args Args) Get(key string) []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Keys">func (args Args) Keys() []string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Len">func (args Args) Len() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.MarshalJSON">func (args Args) MarshalJSON() ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Match">func (args Args) Match(field, source string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.MatchKVList">func (args Args) MatchKVList(key string, sources map[string]string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.UniqueExactMatch">func (args Args) UniqueExactMatch(key, source string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.UnmarshalJSON">func (args Args) UnmarshalJSON(raw []byte) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.Validate">func (args Args) Validate(accepted map[string]bool) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Args.WalkValues">func (args Args) WalkValues(field string, op func(value string) error) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#KeyValuePair">type KeyValuePair</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Arg">func Arg(key, value string) KeyValuePair</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+		<div id="pkg-examples">
+			<h4>Examples</h4>
+			<dl>
+			
+			<dd><a class="exampleLink" href="index.html#example_Args_MatchKVList">Args.MatchKVList</a></dd>
+			
+			</dl>
+		</div>
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go">parse.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="ToJSON">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=1341:1376#L47">ToJSON</a>
+				<a class="permalink" href="index.html#ToJSON">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ToJSON">ToJSON</a>(a <a href="index.html#Args">Args</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ToJSON returns the Args as a JSON encoded string
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ToParamWithVersion">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=1706:1769#L60">ToParamWithVersion</a>
+				<a class="permalink" href="index.html#ToParamWithVersion">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ToParamWithVersion">ToParamWithVersion</a>(version <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, a <a href="index.html#Args">Args</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ToParamWithVersion encodes Args as a JSON string. If version is less than 1.22
+then the encoded format will use an older legacy format where the values are a
+list of strings, instead of a set.
+</p>
+<p>
+Deprecated: Use ToJSON
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Args">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=328:383#L5">Args</a>
+				<a class="permalink" href="index.html#Args">&#xb6;</a>
+			</h2>
+			<p>
+Args stores a mapping of keys to a set of multiple values.
+</p>
+
+			<pre>type Args struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="FromJSON">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=2030:2067#L74">FromJSON</a>
+					<a class="permalink" href="index.html#FromJSON">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#FromJSON">FromJSON</a>(p <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#Args">Args</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+FromJSON decodes a JSON encoded string into Args
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewArgs">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=702:748#L21">NewArgs</a>
+					<a class="permalink" href="index.html#NewArgs">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewArgs">NewArgs</a>(initialArgs ...<a href="index.html#KeyValuePair">KeyValuePair</a>) <a href="index.html#Args">Args</a></pre>
+				<p>
+NewArgs returns a new Args populated with the initial args
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Args.Add">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=3002:3041#L119">Add</a>
+					<a class="permalink" href="index.html#Args.Add">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Add">Add</a>(key, value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+Add a new value to the set of values
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Clone">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=6854:6893#L275">Clone</a>
+					<a class="permalink" href="index.html#Args.Clone">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Clone">Clone</a>() (newArgs <a href="index.html#Args">Args</a>)</pre>
+				<p>
+Clone returns a copy of args.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Contains">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=5834:5878#L235">Contains</a>
+					<a class="permalink" href="index.html#Args.Contains">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Contains">Contains</a>(field <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Contains returns true if the key exists in the mapping
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Del">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=3215:3254#L128">Del</a>
+					<a class="permalink" href="index.html#Args.Del">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Del">Del</a>(key, value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>)</pre>
+				<p>
+Del removes a value from the set
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.ExactMatch">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=4606:4658#L191">ExactMatch</a>
+					<a class="permalink" href="index.html#Args.ExactMatch">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#ExactMatch">ExactMatch</a>(key, source <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+ExactMatch returns true if the source matches exactly one of the values.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.FuzzyMatch">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=5520:5572#L220">FuzzyMatch</a>
+					<a class="permalink" href="index.html#Args.FuzzyMatch">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#FuzzyMatch">FuzzyMatch</a>(key, source <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+FuzzyMatch returns true if the source matches exactly one value,  or the
+source has one of the values as a prefix.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Get">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=2723:2764#L106">Get</a>
+					<a class="permalink" href="index.html#Args.Get">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Get">Get</a>(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Get returns the list of values associated with the key
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Keys">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=933:965#L30">Keys</a>
+					<a class="permalink" href="index.html#Args.Keys">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Keys">Keys</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Keys returns all the keys in list of Args
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Len">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=3448:3474#L138">Len</a>
+					<a class="permalink" href="index.html#Args.Len">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Len">Len</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+Len returns the number of keys in the mapping
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.MarshalJSON">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=1149:1195#L39">MarshalJSON</a>
+					<a class="permalink" href="index.html#Args.MarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#MarshalJSON">MarshalJSON</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MarshalJSON returns a JSON byte representation of the Args
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Match">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=4208:4257#L172">Match</a>
+					<a class="permalink" href="index.html#Args.Match">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Match">Match</a>(field, source <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+Match returns true if any of the values at key match the source string
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.MatchKVList">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=3646:3718#L144">MatchKVList</a>
+					<a class="permalink" href="index.html#Args.MatchKVList">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#MatchKVList">MatchKVList</a>(key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, sources map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+MatchKVList returns true if all the pairs in sources exist as key=value
+pairs in the mapping at key, or if there are no values at key.
+</p>
+
+				
+				<div id="example_Args_MatchKVList" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">
+args := NewArgs(
+    Arg(&#34;label&#34;, &#34;image=foo&#34;),
+    Arg(&#34;label&#34;, &#34;state=running&#34;))
+
+<span class="comment">// returns true because there are no values for bogus</span>
+args.MatchKVList(&#34;bogus&#34;, nil)
+
+<span class="comment">// returns false because there are no sources</span>
+args.MatchKVList(&#34;label&#34;, nil)
+
+<span class="comment">// returns true because all sources are matched</span>
+args.MatchKVList(&#34;label&#34;, map[string]string{
+    &#34;image&#34;: &#34;foo&#34;,
+    &#34;state&#34;: &#34;running&#34;,
+})
+
+<span class="comment">// returns false because the values do not match</span>
+args.MatchKVList(&#34;label&#34;, map[string]string{
+    &#34;image&#34;: &#34;other&#34;,
+})
+</pre>
+			
+		
+	</div>
+</div>
+
+				
+			
+				
+				<h3 id="Args.UniqueExactMatch">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=5032:5090#L204">UniqueExactMatch</a>
+					<a class="permalink" href="index.html#Args.UniqueExactMatch">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#UniqueExactMatch">UniqueExactMatch</a>(key, source <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+UniqueExactMatch returns true if there is only one value and the source
+matches exactly the value.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.UnmarshalJSON">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=2533:2581#L98">UnmarshalJSON</a>
+					<a class="permalink" href="index.html#Args.UnmarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#UnmarshalJSON">UnmarshalJSON</a>(raw []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmarshalJSON populates the Args from JSON encode bytes
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.Validate">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=6235:6292#L250">Validate</a>
+					<a class="permalink" href="index.html#Args.Validate">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#Validate">Validate</a>(accepted map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Validate compared the set of accepted keys against the keys in the mapping.
+An error is returned if any mapping keys are not in the accepted set.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Args.WalkValues">func (Args) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=6582:6658#L262">WalkValues</a>
+					<a class="permalink" href="index.html#Args.WalkValues">&#xb6;</a>
+				</h3>
+				<pre>func (args <a href="index.html#Args">Args</a>) <a href="index.html#WalkValues">WalkValues</a>(field <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, op func(value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+WalkValues iterates over the list of values for a key in the mapping and calls
+op() for each value. If op returns an error the iteration stops and the
+error is returned.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="KeyValuePair">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=435:491#L10">KeyValuePair</a>
+				<a class="permalink" href="index.html#KeyValuePair">&#xb6;</a>
+			</h2>
+			<p>
+KeyValuePair are used to initialize a new Args
+</p>
+
+			<pre>type KeyValuePair struct {
+<span id="KeyValuePair.Key"></span>    Key   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="KeyValuePair.Value"></span>    Value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="Arg">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/api/types/filters/parse.go?s=549:589#L16">Arg</a>
+					<a class="permalink" href="index.html#Arg">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#Arg">Arg</a>(key, value <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="index.html#KeyValuePair">KeyValuePair</a></pre>
+				<p>
+Arg creates a new KeyValuePair for initializing Args
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>graphdriver - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package graphdriver</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/graphdriver"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#IsDriverNotSupported">func IsDriverNotSupported(err error) bool</a></dd>
+			
+				
+				<dd><a href="index.html#IsInitialized">func IsInitialized(driverHome string) bool</a></dd>
+			
+				
+				<dd><a href="index.html#Mounted">func Mounted(fsType FsMagic, mountPath string) (bool, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Register">func Register(name string, initFunc InitFunc) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Capabilities">type Capabilities</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CapabilityDriver">type CapabilityDriver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Checker">type Checker</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewDefaultChecker">func NewDefaultChecker() Checker</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewFsChecker">func NewFsChecker(t FsMagic) Checker</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CreateOpts">type CreateOpts</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DiffDriver">type DiffDriver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DiffGetterDriver">type DiffGetterDriver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Driver">type Driver</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetDriver">func GetDriver(name string, pg plugingetter.PluginGetter, config Options) (Driver, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New(name string, pg plugingetter.PluginGetter, config Options) (Driver, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewNaiveDiffDriver">func NewNaiveDiffDriver(driver ProtoDriver, uidMaps, gidMaps []idtools.IDMap) Driver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ErrUnSupported">type ErrUnSupported</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#FileGetCloser">type FileGetCloser</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#FsMagic">type FsMagic</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetFSMagic">func GetFSMagic(rootpath string) (FsMagic, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#InitFunc">type InitFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NaiveDiffDriver">type NaiveDiffDriver</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NaiveDiffDriver.ApplyDiff">func (gdw *NaiveDiffDriver) ApplyDiff(id, parent string, diff io.Reader) (size int64, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NaiveDiffDriver.Changes">func (gdw *NaiveDiffDriver) Changes(id, parent string) ([]archive.Change, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NaiveDiffDriver.Diff">func (gdw *NaiveDiffDriver) Diff(id, parent string) (arch io.ReadCloser, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NaiveDiffDriver.DiffSize">func (gdw *NaiveDiffDriver) DiffSize(id, parent string) (size int64, err error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#NotSupportedError">type NotSupportedError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NotSupportedError.Error">func (e NotSupportedError) Error() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NotSupportedError.NotSupported">func (e NotSupportedError) NotSupported()</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Options">type Options</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ProtoDriver">type ProtoDriver</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RefCounter">type RefCounter</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewRefCounter">func NewRefCounter(c Checker) *RefCounter</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RefCounter.Decrement">func (c *RefCounter) Decrement(path string) int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RefCounter.Increment">func (c *RefCounter) Increment(path string) int</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/counter.go">counter.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go">driver.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver_linux.go">driver_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/errors.go">errors.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/fsdiff.go">fsdiff.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/plugin.go">plugin.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/proxy.go">proxy.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// FsMagicAufs filesystem id for Aufs</span>
+    <span id="FsMagicAufs">FsMagicAufs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x61756673)
+    <span class="comment">// FsMagicBtrfs filesystem id for Btrfs</span>
+    <span id="FsMagicBtrfs">FsMagicBtrfs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x9123683E)
+    <span class="comment">// FsMagicCramfs filesystem id for Cramfs</span>
+    <span id="FsMagicCramfs">FsMagicCramfs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x28cd3d45)
+    <span class="comment">// FsMagicEcryptfs filesystem id for eCryptfs</span>
+    <span id="FsMagicEcryptfs">FsMagicEcryptfs</span> = <a href="index.html#FsMagic">FsMagic</a>(0xf15f)
+    <span class="comment">// FsMagicExtfs filesystem id for Extfs</span>
+    <span id="FsMagicExtfs">FsMagicExtfs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x0000EF53)
+    <span class="comment">// FsMagicF2fs filesystem id for F2fs</span>
+    <span id="FsMagicF2fs">FsMagicF2fs</span> = <a href="index.html#FsMagic">FsMagic</a>(0xF2F52010)
+    <span class="comment">// FsMagicGPFS filesystem id for GPFS</span>
+    <span id="FsMagicGPFS">FsMagicGPFS</span> = <a href="index.html#FsMagic">FsMagic</a>(0x47504653)
+    <span class="comment">// FsMagicJffs2Fs filesystem if for Jffs2Fs</span>
+    <span id="FsMagicJffs2Fs">FsMagicJffs2Fs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x000072b6)
+    <span class="comment">// FsMagicJfs filesystem id for Jfs</span>
+    <span id="FsMagicJfs">FsMagicJfs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x3153464a)
+    <span class="comment">// FsMagicNfsFs filesystem id for NfsFs</span>
+    <span id="FsMagicNfsFs">FsMagicNfsFs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x00006969)
+    <span class="comment">// FsMagicRAMFs filesystem id for RamFs</span>
+    <span id="FsMagicRAMFs">FsMagicRAMFs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x858458f6)
+    <span class="comment">// FsMagicReiserFs filesystem id for ReiserFs</span>
+    <span id="FsMagicReiserFs">FsMagicReiserFs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x52654973)
+    <span class="comment">// FsMagicSmbFs filesystem id for SmbFs</span>
+    <span id="FsMagicSmbFs">FsMagicSmbFs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x0000517B)
+    <span class="comment">// FsMagicSquashFs filesystem id for SquashFs</span>
+    <span id="FsMagicSquashFs">FsMagicSquashFs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x73717368)
+    <span class="comment">// FsMagicTmpFs filesystem id for TmpFs</span>
+    <span id="FsMagicTmpFs">FsMagicTmpFs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x01021994)
+    <span class="comment">// FsMagicVxFS filesystem id for VxFs</span>
+    <span id="FsMagicVxFS">FsMagicVxFS</span> = <a href="index.html#FsMagic">FsMagic</a>(0xa501fcf5)
+    <span class="comment">// FsMagicXfs filesystem id for Xfs</span>
+    <span id="FsMagicXfs">FsMagicXfs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x58465342)
+    <span class="comment">// FsMagicZfs filesystem id for Zfs</span>
+    <span id="FsMagicZfs">FsMagicZfs</span> = <a href="index.html#FsMagic">FsMagic</a>(0x2fc12fc1)
+    <span class="comment">// FsMagicOverlay filesystem id for overlay</span>
+    <span id="FsMagicOverlay">FsMagicOverlay</span> = <a href="index.html#FsMagic">FsMagic</a>(0x794C7630)
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// FsMagicUnsupported is a predefined constant value other than a valid filesystem id.</span>
+    <span id="FsMagicUnsupported">FsMagicUnsupported</span> = <a href="index.html#FsMagic">FsMagic</a>(0x00000000)
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// ApplyUncompressedLayer defines the unpack method used by the graph</span>
+    <span class="comment">// driver.</span>
+    <span id="ApplyUncompressedLayer">ApplyUncompressedLayer</span> = <a href="../../pkg/chrootarchive/index.html">chrootarchive</a>.<a href="../../pkg/chrootarchive/index.html#ApplyUncompressedLayer">ApplyUncompressedLayer</a>
+)</pre>
+			
+				
+				<pre>var (
+
+    <span class="comment">// FsNames maps filesystem id to name of the filesystem.</span>
+    <span id="FsNames">FsNames</span> = map[<a href="index.html#FsMagic">FsMagic</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>{
+        <a href="index.html#FsMagicAufs">FsMagicAufs</a>:        &#34;aufs&#34;,
+        <a href="index.html#FsMagicBtrfs">FsMagicBtrfs</a>:       &#34;btrfs&#34;,
+        <a href="index.html#FsMagicCramfs">FsMagicCramfs</a>:      &#34;cramfs&#34;,
+        <a href="index.html#FsMagicEcryptfs">FsMagicEcryptfs</a>:    &#34;ecryptfs&#34;,
+        <a href="index.html#FsMagicExtfs">FsMagicExtfs</a>:       &#34;extfs&#34;,
+        <a href="index.html#FsMagicF2fs">FsMagicF2fs</a>:        &#34;f2fs&#34;,
+        <a href="index.html#FsMagicGPFS">FsMagicGPFS</a>:        &#34;gpfs&#34;,
+        <a href="index.html#FsMagicJffs2Fs">FsMagicJffs2Fs</a>:     &#34;jffs2&#34;,
+        <a href="index.html#FsMagicJfs">FsMagicJfs</a>:         &#34;jfs&#34;,
+        <a href="index.html#FsMagicNfsFs">FsMagicNfsFs</a>:       &#34;nfs&#34;,
+        <a href="index.html#FsMagicOverlay">FsMagicOverlay</a>:     &#34;overlayfs&#34;,
+        <a href="index.html#FsMagicRAMFs">FsMagicRAMFs</a>:       &#34;ramfs&#34;,
+        <a href="index.html#FsMagicReiserFs">FsMagicReiserFs</a>:    &#34;reiserfs&#34;,
+        <a href="index.html#FsMagicSmbFs">FsMagicSmbFs</a>:       &#34;smb&#34;,
+        <a href="index.html#FsMagicSquashFs">FsMagicSquashFs</a>:    &#34;squashfs&#34;,
+        <a href="index.html#FsMagicTmpFs">FsMagicTmpFs</a>:       &#34;tmpfs&#34;,
+        <a href="index.html#FsMagicUnsupported">FsMagicUnsupported</a>: &#34;unsupported&#34;,
+        <a href="index.html#FsMagicVxFS">FsMagicVxFS</a>:        &#34;vxfs&#34;,
+        <a href="index.html#FsMagicXfs">FsMagicXfs</a>:         &#34;xfs&#34;,
+        <a href="index.html#FsMagicZfs">FsMagicZfs</a>:         &#34;zfs&#34;,
+    }
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="IsDriverNotSupported">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/errors.go?s=1096:1137#L19">IsDriverNotSupported</a>
+				<a class="permalink" href="index.html#IsDriverNotSupported">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsDriverNotSupported">IsDriverNotSupported</a>(err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsDriverNotSupported returns true if the error initializing
+the graph driver is a non-supported error.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="IsInitialized">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=10240:10282#L280">IsInitialized</a>
+				<a class="permalink" href="index.html#IsInitialized">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#IsInitialized">IsInitialized</a>(driverHome <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+IsInitialized checks if the driver&#39;s home-directory exists and is non-empty.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Mounted">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver_linux.go?s=3352:3412#L108">Mounted</a>
+				<a class="permalink" href="index.html#Mounted">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Mounted">Mounted</a>(fsType <a href="index.html#FsMagic">FsMagic</a>, mountPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+Mounted checks if the given path is mounted as the fs type
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Register">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=5576:5627#L143">Register</a>
+				<a class="permalink" href="index.html#Register">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Register">Register</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, initFunc <a href="index.html#InitFunc">InitFunc</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Register registers an InitFunc for the driver.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Capabilities">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=4188:4528#L101">Capabilities</a>
+				<a class="permalink" href="index.html#Capabilities">&#xb6;</a>
+			</h2>
+			<p>
+Capabilities defines a list of capabilities a driver may implement.
+These capabilities are not required; however, they do determine how a
+graphdriver can be used.
+</p>
+
+			<pre>type Capabilities struct {
+    <span class="comment">// Flags that this driver is capable of reproducing exactly equivalent</span>
+    <span class="comment">// diffs for read-only layers. If set, clients can rely on the driver</span>
+    <span class="comment">// for consistent tar streams, and avoid extra processing to account</span>
+    <span class="comment">// for potential differences (eg: the layer store&#39;s use of tar-split).</span>
+<span id="Capabilities.ReproducesExactDiffs"></span>    ReproducesExactDiffs <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CapabilityDriver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=4641:4705#L111">CapabilityDriver</a>
+				<a class="permalink" href="index.html#CapabilityDriver">&#xb6;</a>
+			</h2>
+			<p>
+CapabilityDriver is the interface for layered file system drivers that
+can report on their Capabilities.
+</p>
+
+			<pre>type CapabilityDriver interface {
+    Capabilities() <a href="index.html#Capabilities">Capabilities</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Checker">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=5331:5470#L133">Checker</a>
+				<a class="permalink" href="index.html#Checker">&#xb6;</a>
+			</h2>
+			<p>
+Checker makes checks on specified filesystems.
+</p>
+
+			<pre>type Checker interface {
+    <span class="comment">// IsMounted returns true if the provided path is mounted for the specific checker</span>
+    IsMounted(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewDefaultChecker">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver_linux.go?s=3097:3129#L95">NewDefaultChecker</a>
+					<a class="permalink" href="index.html#NewDefaultChecker">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewDefaultChecker">NewDefaultChecker</a>() <a href="index.html#Checker">Checker</a></pre>
+				<p>
+NewDefaultChecker returns a check that parses /proc/mountinfo to check
+if the specified path is mounted.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewFsChecker">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver_linux.go?s=2784:2820#L78">NewFsChecker</a>
+					<a class="permalink" href="index.html#NewFsChecker">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewFsChecker">NewFsChecker</a>(t <a href="index.html#FsMagic">FsMagic</a>) <a href="index.html#Checker">Checker</a></pre>
+				<p>
+NewFsChecker returns a checker configured for the provided FsMagic
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="CreateOpts">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=744:819#L24">CreateOpts</a>
+				<a class="permalink" href="index.html#CreateOpts">&#xb6;</a>
+			</h2>
+			<p>
+CreateOpts contains optional arguments for Create() and CreateReadWrite()
+methods.
+</p>
+
+			<pre>type CreateOpts struct {
+<span id="CreateOpts.MountLabel"></span>    MountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="CreateOpts.StorageOpt"></span>    StorageOpt map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DiffDriver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=2990:3893#L74">DiffDriver</a>
+				<a class="permalink" href="index.html#DiffDriver">&#xb6;</a>
+			</h2>
+			<p>
+DiffDriver is the interface to use to implement graph diffs
+</p>
+
+			<pre>type DiffDriver interface {
+    <span class="comment">// Diff produces an archive of the changes between the specified</span>
+    <span class="comment">// layer and its parent layer which may be &#34;&#34;.</span>
+    Diff(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// Changes produces a list of changes between the specified layer</span>
+    <span class="comment">// and its parent layer. If parent is &#34;&#34;, then all changes will be ADD changes.</span>
+    Changes(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../../pkg/archive/index.html">archive</a>.<a href="../../pkg/archive/index.html#Change">Change</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// ApplyDiff extracts the changeset from the given diff into the</span>
+    <span class="comment">// layer with the specified id and parent, returning the size of the</span>
+    <span class="comment">// new layer in bytes.</span>
+    <span class="comment">// The archive.Reader must be an uncompressed stream.</span>
+    ApplyDiff(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, diff <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// DiffSize calculates the changes between the specified id</span>
+    <span class="comment">// and its parent and returns the size in bytes of the changes</span>
+    <span class="comment">// relative to its base filesystem directory.</span>
+    DiffSize(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DiffGetterDriver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=4856:5043#L117">DiffGetterDriver</a>
+				<a class="permalink" href="index.html#DiffGetterDriver">&#xb6;</a>
+			</h2>
+			<p>
+DiffGetterDriver is the interface for layered file system drivers that
+provide a specialized function for getting file contents for tar-split.
+</p>
+
+			<pre>type DiffGetterDriver interface {
+    <a href="index.html#Driver">Driver</a>
+    <span class="comment">// DiffGetter returns an interface to efficiently retrieve the contents</span>
+    <span class="comment">// of files in a layer.</span>
+    DiffGetter(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#FileGetCloser">FileGetCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Driver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=3964:4014#L93">Driver</a>
+				<a class="permalink" href="index.html#Driver">&#xb6;</a>
+			</h2>
+			<p>
+Driver is the interface for layered/snapshot file system drivers.
+</p>
+
+			<pre>type Driver interface {
+    <a href="index.html#ProtoDriver">ProtoDriver</a>
+    <a href="index.html#DiffDriver">DiffDriver</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=5831:5920#L153">GetDriver</a>
+					<a class="permalink" href="index.html#GetDriver">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetDriver">GetDriver</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, pg <a href="../../pkg/plugingetter/index.html">plugingetter</a>.<a href="../../pkg/plugingetter/index.html#PluginGetter">PluginGetter</a>, config <a href="index.html#Options">Options</a>) (<a href="index.html#Driver">Driver</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetDriver initializes and returns the registered driver
+</p>
+
+				
+				
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=7072:7155#L185">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, pg <a href="../../pkg/plugingetter/index.html">plugingetter</a>.<a href="../../pkg/plugingetter/index.html#PluginGetter">PluginGetter</a>, config <a href="index.html#Options">Options</a>) (<a href="index.html#Driver">Driver</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+New creates the driver and initializes it at the specified root.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewNaiveDiffDriver">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/fsdiff.go?s=1293:1377#L28">NewNaiveDiffDriver</a>
+					<a class="permalink" href="index.html#NewNaiveDiffDriver">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewNaiveDiffDriver">NewNaiveDiffDriver</a>(driver <a href="index.html#ProtoDriver">ProtoDriver</a>, uidMaps, gidMaps []<a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#IDMap">IDMap</a>) <a href="index.html#Driver">Driver</a></pre>
+				<p>
+NewNaiveDiffDriver returns a fully functional driver that wraps the
+given ProtoDriver and adds the capability of the following methods which
+it may or may not support on its own:
+</p>
+<pre>Diff(id, parent string) (archive.Archive, error)
+Changes(id, parent string) ([]archive.Change, error)
+ApplyDiff(id, parent string, diff archive.Reader) (size int64, err error)
+DiffSize(id, parent string) (size int64, err error)
+</pre>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ErrUnSupported">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/errors.go?s=635:684#L3">ErrUnSupported</a>
+				<a class="permalink" href="index.html#ErrUnSupported">&#xb6;</a>
+			</h2>
+			<p>
+ErrUnSupported signals that the graph-driver is not supported on the current configuration
+</p>
+
+			<pre>type ErrUnSupported interface {
+    NotSupported()
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="FileGetCloser">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=5143:5279#L126">FileGetCloser</a>
+				<a class="permalink" href="index.html#FileGetCloser">&#xb6;</a>
+			</h2>
+			<p>
+FileGetCloser extends the storage.FileGetter interface with a Close method
+for cleaning up.
+</p>
+
+			<pre>type FileGetCloser interface {
+    <a href="http://127.0.0.1:8080/pkg/github.com/vbatts/tar-split/tar/storage/">storage</a>.<a href="http://127.0.0.1:8080/pkg/github.com/vbatts/tar-split/tar/storage/#FileGetter">FileGetter</a>
+    <span class="comment">// Close cleans up any resources associated with the FileGetCloser.</span>
+    Close() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="FsMagic">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=429:448#L10">FsMagic</a>
+				<a class="permalink" href="index.html#FsMagic">&#xb6;</a>
+			</h2>
+			<p>
+FsMagic unsigned id of the filesystem in use.
+</p>
+
+			<pre>type FsMagic <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="GetFSMagic">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver_linux.go?s=2533:2582#L69">GetFSMagic</a>
+					<a class="permalink" href="index.html#GetFSMagic">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#GetFSMagic">GetFSMagic</a>(rootpath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#FsMagic">FsMagic</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetFSMagic returns the filesystem id given the path.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="InitFunc">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=865:964#L30">InitFunc</a>
+				<a class="permalink" href="index.html#InitFunc">&#xb6;</a>
+			</h2>
+			<p>
+InitFunc initializes the storage driver.
+</p>
+
+			<pre>type InitFunc func(root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, options []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, uidMaps, gidMaps []<a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#IDMap">IDMap</a>) (<a href="index.html#Driver">Driver</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NaiveDiffDriver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/fsdiff.go?s=753:847#L15">NaiveDiffDriver</a>
+				<a class="permalink" href="index.html#NaiveDiffDriver">&#xb6;</a>
+			</h2>
+			<p>
+NaiveDiffDriver takes a ProtoDriver and adds the
+capability of the Diffing methods on the local file system,
+which it may or may not support on its own. See the comment
+on the exported NewNaiveDiffDriver function below.
+Notably, the AUFS driver doesn&#39;t need to be wrapped like this.
+</p>
+
+			<pre>type NaiveDiffDriver struct {
+    <a href="index.html#ProtoDriver">ProtoDriver</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NaiveDiffDriver.ApplyDiff">func (*NaiveDiffDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/fsdiff.go?s=3743:3839#L124">ApplyDiff</a>
+					<a class="permalink" href="index.html#NaiveDiffDriver.ApplyDiff">&#xb6;</a>
+				</h3>
+				<pre>func (gdw *<a href="index.html#NaiveDiffDriver">NaiveDiffDriver</a>) <a href="index.html#ApplyDiff">ApplyDiff</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, diff <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>) (size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ApplyDiff extracts the changeset from the given diff into the
+layer with the specified id and parent, returning the size of the
+new layer in bytes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NaiveDiffDriver.Changes">func (*NaiveDiffDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/fsdiff.go?s=3106:3186#L97">Changes</a>
+					<a class="permalink" href="index.html#NaiveDiffDriver.Changes">&#xb6;</a>
+				</h3>
+				<pre>func (gdw *<a href="index.html#NaiveDiffDriver">NaiveDiffDriver</a>) <a href="index.html#Changes">Changes</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../../pkg/archive/index.html">archive</a>.<a href="../../pkg/archive/index.html#Change">Change</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Changes produces a list of changes between the specified layer
+and its parent layer. If parent is &#34;&#34;, then all changes will be ADD changes.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NaiveDiffDriver.Diff">func (*NaiveDiffDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/fsdiff.go?s=1581:1664#L36">Diff</a>
+					<a class="permalink" href="index.html#NaiveDiffDriver.Diff">&#xb6;</a>
+				</h3>
+				<pre>func (gdw *<a href="index.html#NaiveDiffDriver">NaiveDiffDriver</a>) <a href="index.html#Diff">Diff</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (arch <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Diff produces an archive of the changes between the specified
+layer and its parent layer which may be &#34;&#34;.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="NaiveDiffDriver.DiffSize">func (*NaiveDiffDriver) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/fsdiff.go?s=4581:4660#L150">DiffSize</a>
+					<a class="permalink" href="index.html#NaiveDiffDriver.DiffSize">&#xb6;</a>
+				</h3>
+				<pre>func (gdw *<a href="index.html#NaiveDiffDriver">NaiveDiffDriver</a>) <a href="index.html#DiffSize">DiffSize</a>(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+DiffSize calculates the changes between the specified layer
+and its parent and returns the size in bytes of the changes
+relative to its base filesystem directory.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="NotSupportedError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/errors.go?s=783:812#L8">NotSupportedError</a>
+				<a class="permalink" href="index.html#NotSupportedError">&#xb6;</a>
+			</h2>
+			<p>
+NotSupportedError signals that the graph-driver is not supported on the current configuration
+</p>
+
+			<pre>type NotSupportedError <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+
+			
+				
+				<pre>const (
+    <span class="comment">// ErrNotSupported returned when driver is not supported.</span>
+    <span id="ErrNotSupported">ErrNotSupported</span> <a href="index.html#NotSupportedError">NotSupportedError</a> = &#34;driver not supported&#34;
+    <span class="comment">// ErrPrerequisites returned when driver does not meet prerequisites.</span>
+    <span id="ErrPrerequisites">ErrPrerequisites</span> <a href="index.html#NotSupportedError">NotSupportedError</a> = &#34;prerequisites for driver not satisfied (wrong filesystem?)&#34;
+    <span class="comment">// ErrIncompatibleFS returned when file system is not supported.</span>
+    <span id="ErrIncompatibleFS">ErrIncompatibleFS</span> <a href="index.html#NotSupportedError">NotSupportedError</a> = &#34;backing file system is unsupported for this graph driver&#34;
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="NotSupportedError.Error">func (NotSupportedError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/errors.go?s=814:855#L10">Error</a>
+					<a class="permalink" href="index.html#NotSupportedError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#NotSupportedError">NotSupportedError</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="NotSupportedError.NotSupported">func (NotSupportedError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/errors.go?s=941:982#L15">NotSupported</a>
+					<a class="permalink" href="index.html#NotSupportedError.NotSupported">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#NotSupportedError">NotSupportedError</a>) <a href="index.html#NotSupported">NotSupported</a>()</pre>
+				<p>
+NotSupported signals that a graph-driver is not supported.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Options">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=6821:7002#L176">Options</a>
+				<a class="permalink" href="index.html#Options">&#xb6;</a>
+			</h2>
+			<p>
+Options is used to initialize a graphdriver
+</p>
+
+			<pre>type Options struct {
+<span id="Options.Root"></span>    Root                <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Options.DriverOptions"></span>    DriverOptions       []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="Options.UIDMaps"></span>    UIDMaps             []<a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#IDMap">IDMap</a>
+<span id="Options.GIDMaps"></span>    GIDMaps             []<a href="../../pkg/idtools/index.html">idtools</a>.<a href="../../pkg/idtools/index.html#IDMap">IDMap</a>
+<span id="Options.ExperimentalEnabled"></span>    ExperimentalEnabled <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ProtoDriver">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/driver.go?s=1286:2925#L38">ProtoDriver</a>
+				<a class="permalink" href="index.html#ProtoDriver">&#xb6;</a>
+			</h2>
+			<p>
+ProtoDriver defines the basic capabilities of a driver.
+This interface exists solely to be a minimum set of methods
+for client code which choose not to implement the entire Driver
+interface and use the NaiveDiffDriver wrapper constructor.
+</p>
+<p>
+Use of ProtoDriver directly by client code is not recommended.
+</p>
+
+			<pre>type ProtoDriver interface {
+    <span class="comment">// String returns a string representation of this driver.</span>
+    String() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// CreateReadWrite creates a new, empty filesystem layer that is ready</span>
+    <span class="comment">// to be used as the storage for a container. Additional options can</span>
+    <span class="comment">// be passed in opts. parent may be &#34;&#34; and opts may be nil.</span>
+    CreateReadWrite(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts *<a href="index.html#CreateOpts">CreateOpts</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// Create creates a new, empty, filesystem layer with the</span>
+    <span class="comment">// specified id and parent and options passed in opts. Parent</span>
+    <span class="comment">// may be &#34;&#34; and opts may be nil.</span>
+    Create(id, parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, opts *<a href="index.html#CreateOpts">CreateOpts</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// Remove attempts to remove the filesystem layer with this id.</span>
+    Remove(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// Get returns the mountpoint for the layered filesystem referred</span>
+    <span class="comment">// to by this id. You can optionally specify a mountLabel or &#34;&#34;.</span>
+    <span class="comment">// Returns the absolute path to the mounted layered filesystem.</span>
+    Get(id, mountLabel <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (fs <a href="../../pkg/containerfs/index.html">containerfs</a>.<a href="../../pkg/containerfs/index.html#ContainerFS">ContainerFS</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// Put releases the system resources for the specified id,</span>
+    <span class="comment">// e.g, unmounting layered filesystem.</span>
+    Put(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// Exists returns whether a filesystem layer with the specified</span>
+    <span class="comment">// ID exists on this driver.</span>
+    Exists(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    <span class="comment">// Status returns a set of key-value pairs which give low</span>
+    <span class="comment">// level diagnostic status about this driver.</span>
+    Status() [][2]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// Returns a set of key-value pairs which give low level information</span>
+    <span class="comment">// about the image/container driver is managing.</span>
+    GetMetadata(id <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    <span class="comment">// Cleanup performs necessary tasks to release resources</span>
+    <span class="comment">// held by the driver, e.g., unmounting all layered filesystems</span>
+    <span class="comment">// known to this driver.</span>
+    Cleanup() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RefCounter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/counter.go?s=210:300#L1">RefCounter</a>
+				<a class="permalink" href="index.html#RefCounter">&#xb6;</a>
+			</h2>
+			<p>
+RefCounter is a generic counter for use by graphdriver Get/Put calls
+</p>
+
+			<pre>type RefCounter struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRefCounter">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/counter.go?s=344:385#L8">NewRefCounter</a>
+					<a class="permalink" href="index.html#NewRefCounter">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewRefCounter">NewRefCounter</a>(c <a href="index.html#Checker">Checker</a>) *<a href="index.html#RefCounter">RefCounter</a></pre>
+				<p>
+NewRefCounter returns a new RefCounter
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="RefCounter.Decrement">func (*RefCounter) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/counter.go?s=750:797#L23">Decrement</a>
+					<a class="permalink" href="index.html#RefCounter.Decrement">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#RefCounter">RefCounter</a>) <a href="index.html#Decrement">Decrement</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+Decrement decreases the ref count for the given id and returns the current count
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RefCounter.Increment">func (*RefCounter) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/graphdriver/counter.go?s=549:596#L16">Increment</a>
+					<a class="permalink" href="index.html#RefCounter.Increment">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="index.html#RefCounter">RefCounter</a>) <a href="index.html#Increment">Increment</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+Increment increases the ref count for the given id and returns the current count
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="aufs/index.html">aufs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="btrfs/index.html">btrfs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="copy/index.html">copy</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="devmapper/index.html">devmapper</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="graphtest/index.html">graphtest</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="lcow/index.html">lcow</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="overlay/index.html">overlay</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="overlay2/index.html">overlay2</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="overlayutils/index.html">overlayutils</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="quota/index.html">quota</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="register/index.html">register</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="vfs/index.html">vfs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="windows/index.html">windows</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="zfs/index.html">zfs</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

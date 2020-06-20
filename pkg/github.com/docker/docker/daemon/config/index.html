@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>config - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package config</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/daemon/config"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#GetConflictFreeLabels">func GetConflictFreeLabels(labels []string) ([]string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ModifiedDiscoverySettings">func ModifiedDiscoverySettings(config *Config, backendType, advertise string, clusterOpts map[string]string) bool</a></dd>
+			
+				
+				<dd><a href="index.html#ParseClusterAdvertiseSettings">func ParseClusterAdvertiseSettings(clusterStore, clusterAdvertise string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ParseGenericResources">func ParseGenericResources(value []string) ([]swarm.GenericResource, error)</a></dd>
+			
+				
+				<dd><a href="index.html#Reload">func Reload(configFile string, flags *pflag.FlagSet, reload func(*Config)) error</a></dd>
+			
+				
+				<dd><a href="index.html#Validate">func Validate(config *Config) error</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateReservedNamespaceLabels">func ValidateReservedNamespaceLabels(labels []string) error</a></dd>
+			
+			
+				
+				<dd><a href="index.html#BridgeConfig">type BridgeConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BuilderConfig">type BuilderConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BuilderEntitlements">type BuilderEntitlements</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BuilderGCConfig">type BuilderGCConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#BuilderGCFilter">type BuilderGCFilter</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuilderGCFilter.MarshalJSON">func (x *BuilderGCFilter) MarshalJSON() ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#BuilderGCFilter.UnmarshalJSON">func (x *BuilderGCFilter) UnmarshalJSON(data []byte) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#BuilderGCRule">type BuilderGCRule</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CommonConfig">type CommonConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CommonTLSOptions">type CommonTLSOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CommonUnixConfig">type CommonUnixConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Config">type Config</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#MergeDaemonConfigurations">func MergeDaemonConfigurations(flagsConfig *Config, flags *pflag.FlagSet, configFile string) (*Config, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#New">func New() *Config</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.GetAllRuntimes">func (conf *Config) GetAllRuntimes() map[string]types.Runtime</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.GetDefaultRuntimeName">func (conf *Config) GetDefaultRuntimeName() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.GetExecRoot">func (conf *Config) GetExecRoot() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.GetInitPath">func (conf *Config) GetInitPath() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.GetResolvConf">func (conf *Config) GetResolvConf() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.GetRuntime">func (conf *Config) GetRuntime(name string) *types.Runtime</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.IsRootless">func (conf *Config) IsRootless() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.IsSwarmCompatible">func (conf *Config) IsSwarmCompatible() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.IsValueSet">func (conf *Config) IsValueSet(name string) bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Config.ValidatePlatformConfig">func (conf *Config) ValidatePlatformConfig() error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DNSConfig">type DNSConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#LogConfig">type LogConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#NetworkConfig">type NetworkConfig</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go">builder.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go">config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go">config_common_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_unix.go">config_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/opts.go">opts.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultMaxConcurrentDownloads is the default value for</span>
+    <span class="comment">// maximum number of downloads that</span>
+    <span class="comment">// may take place at a time for each pull.</span>
+    <span id="DefaultMaxConcurrentDownloads">DefaultMaxConcurrentDownloads</span> = 3
+    <span class="comment">// DefaultMaxConcurrentUploads is the default value for</span>
+    <span class="comment">// maximum number of uploads that</span>
+    <span class="comment">// may take place at a time for each push.</span>
+    <span id="DefaultMaxConcurrentUploads">DefaultMaxConcurrentUploads</span> = 5
+    <span class="comment">// StockRuntimeName is the reserved name/alias used to represent the</span>
+    <span class="comment">// OCI runtime being shipped with the docker daemon package.</span>
+    <span id="StockRuntimeName">StockRuntimeName</span> = &#34;runc&#34;
+    <span class="comment">// DefaultShmSize is the default value for container&#39;s shm size</span>
+    <span id="DefaultShmSize">DefaultShmSize</span> = <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>(67108864)
+    <span class="comment">// DefaultNetworkMtu is the default value for network MTU</span>
+    <span id="DefaultNetworkMtu">DefaultNetworkMtu</span> = 1500
+    <span class="comment">// DisableNetworkBridge is the default value of the option to disable network bridge</span>
+    <span id="DisableNetworkBridge">DisableNetworkBridge</span> = &#34;none&#34;
+    <span class="comment">// DefaultInitBinary is the name of the default init binary</span>
+    <span id="DefaultInitBinary">DefaultInitBinary</span> = &#34;docker-init&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultIpcMode is default for container&#39;s IpcMode, if not set otherwise</span>
+    <span id="DefaultIpcMode">DefaultIpcMode</span> = &#34;private&#34;
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="GetConflictFreeLabels">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=11622:11683#L271">GetConflictFreeLabels</a>
+				<a class="permalink" href="index.html#GetConflictFreeLabels">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetConflictFreeLabels">GetConflictFreeLabels</a>(labels []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+GetConflictFreeLabels validates Labels for conflict
+In swarm the duplicates for labels are removed
+so we only take same values here, no conflict values
+If the key-value is the same we will only take the last label
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ModifiedDiscoverySettings">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=22012:22125#L581">ModifiedDiscoverySettings</a>
+				<a class="permalink" href="index.html#ModifiedDiscoverySettings">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ModifiedDiscoverySettings">ModifiedDiscoverySettings</a>(config *<a href="index.html#Config">Config</a>, backendType, advertise <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, clusterOpts map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+ModifiedDiscoverySettings returns whether the discovery configuration has been modified or not.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseClusterAdvertiseSettings">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=10886:10975#L252">ParseClusterAdvertiseSettings</a>
+				<a class="permalink" href="index.html#ParseClusterAdvertiseSettings">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseClusterAdvertiseSettings">ParseClusterAdvertiseSettings</a>(clusterStore, clusterAdvertise <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseClusterAdvertiseSettings parses the specified advertise settings
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseGenericResources">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/opts.go?s=320:395#L1">ParseGenericResources</a>
+				<a class="permalink" href="index.html#ParseGenericResources">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseGenericResources">ParseGenericResources</a>(value []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="../../api/types/swarm/index.html">swarm</a>.<a href="../../api/types/swarm/index.html#GenericResource">GenericResource</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseGenericResources parses and validates the specified string as a list of GenericResource
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Reload">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=13185:13265#L311">Reload</a>
+				<a class="permalink" href="index.html#Reload">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Reload">Reload</a>(configFile <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, flags *<a href="http://127.0.0.1:8080/pkg/github.com/spf13/pflag/">pflag</a>.<a href="http://127.0.0.1:8080/pkg/github.com/spf13/pflag/#FlagSet">FlagSet</a>, reload func(*<a href="index.html#Config">Config</a>)) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Reload reads the configuration in the host and reloads the daemon and server.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Validate">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=20332:20367#L528">Validate</a>
+				<a class="permalink" href="index.html#Validate">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Validate">Validate</a>(config *<a href="index.html#Config">Config</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+Validate validates some specific configs.
+such as config.DNS, config.Labels, config.DNSSearch,
+as well as config.MaxConcurrentDownloads, config.MaxConcurrentUploads.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateReservedNamespaceLabels">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=12637:12696#L297">ValidateReservedNamespaceLabels</a>
+				<a class="permalink" href="index.html#ValidateReservedNamespaceLabels">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateReservedNamespaceLabels">ValidateReservedNamespaceLabels</a>(labels []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ValidateReservedNamespaceLabels errors if the reserved namespaces com.docker.*,
+io.docker.*, org.dockerproject.* are used in a configured engine label.
+</p>
+<p>
+TODO: This is a separate function because we need to warn users first of the
+deprecation.  When we return an error, this logic can be added to Validate
+or GetConflictFreeLabels instead of being here.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="BridgeConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_unix.go?s=1977:2558#L37">BridgeConfig</a>
+				<a class="permalink" href="index.html#BridgeConfig">&#xb6;</a>
+			</h2>
+			<p>
+BridgeConfig stores all the bridge driver specific
+configuration.
+</p>
+
+			<pre>type BridgeConfig struct {
+
+    <span class="comment">// Fields below here are platform specific.</span>
+<span id="BridgeConfig.EnableIPv6"></span>    EnableIPv6          <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;ipv6,omitempty&#34;`
+<span id="BridgeConfig.EnableIPTables"></span>    EnableIPTables      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;iptables,omitempty&#34;`
+<span id="BridgeConfig.EnableIPForward"></span>    EnableIPForward     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;ip-forward,omitempty&#34;`
+<span id="BridgeConfig.EnableIPMasq"></span>    EnableIPMasq        <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;ip-masq,omitempty&#34;`
+<span id="BridgeConfig.EnableUserlandProxy"></span>    EnableUserlandProxy <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;userland-proxy,omitempty&#34;`
+<span id="BridgeConfig.UserlandProxyPath"></span>    UserlandProxyPath   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;userland-proxy-path,omitempty&#34;`
+<span id="BridgeConfig.FixedCIDRv6"></span>    FixedCIDRv6         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;fixed-cidr-v6,omitempty&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BuilderConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go?s=1976:2113#L61">BuilderConfig</a>
+				<a class="permalink" href="index.html#BuilderConfig">&#xb6;</a>
+			</h2>
+			<p>
+BuilderConfig contains config for the builder
+</p>
+
+			<pre>type BuilderConfig struct {
+<span id="BuilderConfig.GC"></span>    GC           <a href="index.html#BuilderGCConfig">BuilderGCConfig</a>     `json:&#34;,omitempty&#34;`
+<span id="BuilderConfig.Entitlements"></span>    Entitlements <a href="index.html#BuilderEntitlements">BuilderEntitlements</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BuilderEntitlements">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go?s=1773:1925#L55">BuilderEntitlements</a>
+				<a class="permalink" href="index.html#BuilderEntitlements">&#xb6;</a>
+			</h2>
+			<p>
+BuilderEntitlements contains settings to enable/disable entitlements
+</p>
+
+			<pre>type BuilderEntitlements struct {
+<span id="BuilderEntitlements.NetworkHost"></span>    NetworkHost      *<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;network-host,omitempty&#34;`
+<span id="BuilderEntitlements.SecurityInsecure"></span>    SecurityInsecure *<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;security-insecure,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BuilderGCConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go?s=1500:1699#L48">BuilderGCConfig</a>
+				<a class="permalink" href="index.html#BuilderGCConfig">&#xb6;</a>
+			</h2>
+			<p>
+BuilderGCConfig contains GC config for a buildkit builder
+</p>
+
+			<pre>type BuilderGCConfig struct {
+<span id="BuilderGCConfig.Enabled"></span>    Enabled            <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>            `json:&#34;,omitempty&#34;`
+<span id="BuilderGCConfig.Policy"></span>    Policy             []<a href="index.html#BuilderGCRule">BuilderGCRule</a> `json:&#34;,omitempty&#34;`
+<span id="BuilderGCConfig.DefaultKeepStorage"></span>    DefaultKeepStorage <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="BuilderGCFilter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go?s=436:469#L10">BuilderGCFilter</a>
+				<a class="permalink" href="index.html#BuilderGCFilter">&#xb6;</a>
+			</h2>
+			<p>
+BuilderGCFilter contains garbage-collection filter rules for a BuildKit builder
+</p>
+
+			<pre>type BuilderGCFilter <a href="../../api/types/filters/index.html">filters</a>.<a href="../../api/types/filters/index.html#Args">Args</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="BuilderGCFilter.MarshalJSON">func (*BuilderGCFilter) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go?s=544:599#L13">MarshalJSON</a>
+					<a class="permalink" href="index.html#BuilderGCFilter.MarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (x *<a href="index.html#BuilderGCFilter">BuilderGCFilter</a>) <a href="index.html#MarshalJSON">MarshalJSON</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MarshalJSON returns a JSON byte representation of the BuilderGCFilter
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="BuilderGCFilter.UnmarshalJSON">func (*BuilderGCFilter) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go?s=937:995#L28">UnmarshalJSON</a>
+					<a class="permalink" href="index.html#BuilderGCFilter.UnmarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (x *<a href="index.html#BuilderGCFilter">BuilderGCFilter</a>) <a href="index.html#UnmarshalJSON">UnmarshalJSON</a>(data []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+UnmarshalJSON fills the BuilderGCFilter values structure from JSON input
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="BuilderGCRule">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/builder.go?s=175:351#L3">BuilderGCRule</a>
+				<a class="permalink" href="index.html#BuilderGCRule">&#xb6;</a>
+			</h2>
+			<p>
+BuilderGCRule represents a GC rule for buildkit cache
+</p>
+
+			<pre>type BuilderGCRule struct {
+<span id="BuilderGCRule.All"></span>    All         <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>            `json:&#34;,omitempty&#34;`
+<span id="BuilderGCRule.Filter"></span>    Filter      <a href="index.html#BuilderGCFilter">BuilderGCFilter</a> `json:&#34;,omitempty&#34;`
+<span id="BuilderGCRule.KeepStorage"></span>    KeepStorage <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>          `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommonConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=4219:10358#L113">CommonConfig</a>
+				<a class="permalink" href="index.html#CommonConfig">&#xb6;</a>
+			</h2>
+			<p>
+CommonConfig defines the configuration of a docker daemon which is
+common across platforms.
+It includes json tags to deserialize configuration from a file
+using the same names that the flags in the command line use.
+</p>
+
+			<pre>type CommonConfig struct {
+<span id="CommonConfig.AuthzMiddleware"></span>    AuthzMiddleware       *<a href="../../pkg/authorization/index.html">authorization</a>.<a href="../../pkg/authorization/index.html#Middleware">Middleware</a> `json:&#34;-&#34;`
+<span id="CommonConfig.AuthorizationPlugins"></span>    AuthorizationPlugins  []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;authorization-plugins,omitempty&#34;` <span class="comment">// AuthorizationPlugins holds list of authorization plugins</span>
+<span id="CommonConfig.AutoRestart"></span>    AutoRestart           <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                      `json:&#34;-&#34;`
+<span id="CommonConfig.Context"></span>    Context               map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>       `json:&#34;-&#34;`
+<span id="CommonConfig.DisableBridge"></span>    DisableBridge         <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                      `json:&#34;-&#34;`
+<span id="CommonConfig.ExecOptions"></span>    ExecOptions           []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;exec-opts,omitempty&#34;`
+<span id="CommonConfig.GraphDriver"></span>    GraphDriver           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                    `json:&#34;storage-driver,omitempty&#34;`
+<span id="CommonConfig.GraphOptions"></span>    GraphOptions          []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;storage-opts,omitempty&#34;`
+<span id="CommonConfig.Labels"></span>    Labels                []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                  `json:&#34;labels,omitempty&#34;`
+<span id="CommonConfig.Mtu"></span>    Mtu                   <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>                       `json:&#34;mtu,omitempty&#34;`
+<span id="CommonConfig.NetworkDiagnosticPort"></span>    NetworkDiagnosticPort <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>                       `json:&#34;network-diagnostic-port,omitempty&#34;`
+<span id="CommonConfig.Pidfile"></span>    Pidfile               <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                    `json:&#34;pidfile,omitempty&#34;`
+<span id="CommonConfig.RawLogs"></span>    RawLogs               <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                      `json:&#34;raw-logs,omitempty&#34;`
+<span id="CommonConfig.RootDeprecated"></span>    RootDeprecated        <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                    `json:&#34;graph,omitempty&#34;`
+<span id="CommonConfig.Root"></span>    Root                  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                    `json:&#34;data-root,omitempty&#34;`
+<span id="CommonConfig.ExecRoot"></span>    ExecRoot              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                    `json:&#34;exec-root,omitempty&#34;`
+<span id="CommonConfig.SocketGroup"></span>    SocketGroup           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                    `json:&#34;group,omitempty&#34;`
+<span id="CommonConfig.CorsHeaders"></span>    CorsHeaders           <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                    `json:&#34;api-cors-header,omitempty&#34;`
+
+<span id="CommonConfig.TrustKeyPath"></span>    <span class="comment">// TrustKeyPath is used to generate the daemon ID and for signing schema 1 manifests</span>
+    <span class="comment">// when pushing to a registry which does not support schema 2. This field is marked as</span>
+    <span class="comment">// deprecated because schema 1 manifests are deprecated in favor of schema 2 and the</span>
+    <span class="comment">// daemon ID will use a dedicated identifier not shared with exported signatures.</span>
+    TrustKeyPath <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;deprecated-key-path,omitempty&#34;`
+
+<span id="CommonConfig.LiveRestoreEnabled"></span>    <span class="comment">// LiveRestoreEnabled determines whether we should keep containers</span>
+    <span class="comment">// alive upon daemon shutdown/start</span>
+    LiveRestoreEnabled <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;live-restore,omitempty&#34;`
+
+<span id="CommonConfig.ClusterStore"></span>    <span class="comment">// ClusterStore is the storage backend used for the cluster information. It is used by both</span>
+    <span class="comment">// multihost networking (to store networks and endpoints information) and by the node discovery</span>
+    <span class="comment">// mechanism.</span>
+    ClusterStore <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;cluster-store,omitempty&#34;`
+
+<span id="CommonConfig.ClusterOpts"></span>    <span class="comment">// ClusterOpts is used to pass options to the discovery package for tuning libkv settings, such</span>
+    <span class="comment">// as TLS configuration settings.</span>
+    ClusterOpts map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;cluster-store-opts,omitempty&#34;`
+
+<span id="CommonConfig.ClusterAdvertise"></span>    <span class="comment">// ClusterAdvertise is the network endpoint that the Engine advertises for the purpose of node</span>
+    <span class="comment">// discovery. This should be a &#39;host:port&#39; combination on which that daemon instance is</span>
+    <span class="comment">// reachable by other hosts.</span>
+    ClusterAdvertise <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;cluster-advertise,omitempty&#34;`
+
+<span id="CommonConfig.MaxConcurrentDownloads"></span>    <span class="comment">// MaxConcurrentDownloads is the maximum number of downloads that</span>
+    <span class="comment">// may take place at a time for each pull.</span>
+    MaxConcurrentDownloads *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;max-concurrent-downloads,omitempty&#34;`
+
+<span id="CommonConfig.MaxConcurrentUploads"></span>    <span class="comment">// MaxConcurrentUploads is the maximum number of uploads that</span>
+    <span class="comment">// may take place at a time for each push.</span>
+    MaxConcurrentUploads *<a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;max-concurrent-uploads,omitempty&#34;`
+
+<span id="CommonConfig.ShutdownTimeout"></span>    <span class="comment">// ShutdownTimeout is the timeout value (in seconds) the daemon will wait for the container</span>
+    <span class="comment">// to stop when daemon is being shutdown</span>
+    ShutdownTimeout <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;shutdown-timeout,omitempty&#34;`
+
+<span id="CommonConfig.Debug"></span>    Debug     <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>     `json:&#34;debug,omitempty&#34;`
+<span id="CommonConfig.Hosts"></span>    Hosts     []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;hosts,omitempty&#34;`
+<span id="CommonConfig.LogLevel"></span>    LogLevel  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>   `json:&#34;log-level,omitempty&#34;`
+<span id="CommonConfig.TLS"></span>    TLS       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>     `json:&#34;tls,omitempty&#34;`
+<span id="CommonConfig.TLSVerify"></span>    TLSVerify <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>     `json:&#34;tlsverify,omitempty&#34;`
+
+    <span class="comment">// Embedded structs that allow config</span>
+    <span class="comment">// deserialization without the full struct.</span>
+    <a href="index.html#CommonTLSOptions">CommonTLSOptions</a>
+
+<span id="CommonConfig.SwarmDefaultAdvertiseAddr"></span>    <span class="comment">// SwarmDefaultAdvertiseAddr is the default host/IP or network interface</span>
+    <span class="comment">// to use if a wildcard address is specified in the ListenAddr value</span>
+    <span class="comment">// given to the /swarm/init endpoint and no advertise address is</span>
+    <span class="comment">// specified.</span>
+    SwarmDefaultAdvertiseAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;swarm-default-advertise-addr&#34;`
+
+<span id="CommonConfig.SwarmRaftHeartbeatTick"></span>    <span class="comment">// SwarmRaftHeartbeatTick is the number of ticks in time for swarm mode raft quorum heartbeat</span>
+    <span class="comment">// Typical value is 1</span>
+    SwarmRaftHeartbeatTick <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;swarm-raft-heartbeat-tick&#34;`
+
+<span id="CommonConfig.SwarmRaftElectionTick"></span>    <span class="comment">// SwarmRaftElectionTick is the number of ticks to elapse before followers in the quorum can propose</span>
+    <span class="comment">// a new round of leader election.  Default, recommended value is at least 10X that of Heartbeat tick.</span>
+    <span class="comment">// Higher values can make the quorum less sensitive to transient faults in the environment, but this also</span>
+    <span class="comment">// means it takes longer for the managers to detect a down leader.</span>
+    SwarmRaftElectionTick <a href="http://127.0.0.1:8080/pkg/builtin/#uint32">uint32</a> `json:&#34;swarm-raft-election-tick&#34;`
+
+<span id="CommonConfig.MetricsAddress"></span>    MetricsAddress <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;metrics-addr&#34;`
+
+    <a href="index.html#DNSConfig">DNSConfig</a>
+    <a href="index.html#LogConfig">LogConfig</a>
+    <a href="index.html#BridgeConfig">BridgeConfig</a> <span class="comment">// bridgeConfig holds bridge network specific configuration.</span>
+    <a href="index.html#NetworkConfig">NetworkConfig</a>
+    <a href="../../registry/index.html">registry</a>.<a href="../../registry/index.html#ServiceOptions">ServiceOptions</a>
+
+    <a href="http://127.0.0.1:8080/pkg/sync/">sync</a>.<a href="http://127.0.0.1:8080/pkg/sync/#Mutex">Mutex</a>
+    <span class="comment">// FIXME(vdemeester) This part is not that clear and is mainly dependent on cli flags</span>
+    <span class="comment">// It should probably be handled outside this package.</span>
+<span id="CommonConfig.ValuesSet"></span>    ValuesSet map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]interface{} `json:&#34;-&#34;`
+
+<span id="CommonConfig.Experimental"></span>    Experimental <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;experimental&#34;` <span class="comment">// Experimental indicates whether experimental features should be exposed or not</span>
+
+    <span class="comment">// Exposed node Generic Resources</span>
+    <span class="comment">// e.g: [&#34;orange=red&#34;, &#34;orange=green&#34;, &#34;orange=blue&#34;, &#34;apple=3&#34;]</span>
+<span id="CommonConfig.NodeGenericResources"></span>    NodeGenericResources []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;node-generic-resources,omitempty&#34;`
+
+    <span class="comment">// ContainerAddr is the address used to connect to containerd if we&#39;re</span>
+    <span class="comment">// not starting it ourselves</span>
+<span id="CommonConfig.ContainerdAddr"></span>    ContainerdAddr <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;containerd,omitempty&#34;`
+
+<span id="CommonConfig.CriContainerd"></span>    <span class="comment">// CriContainerd determines whether a supervised containerd instance</span>
+    <span class="comment">// should be configured with the CRI plugin enabled. This allows using</span>
+    <span class="comment">// Docker&#39;s containerd instance directly with a Kubernetes kubelet.</span>
+    CriContainerd <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;cri-containerd,omitempty&#34;`
+
+<span id="CommonConfig.Features"></span>    <span class="comment">// Features contains a list of feature key value pairs indicating what features are enabled or disabled.</span>
+    <span class="comment">// If a certain feature doesn&#39;t appear in this list then it&#39;s unset (i.e. neither true nor false).</span>
+    Features map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;features,omitempty&#34;`
+
+<span id="CommonConfig.Builder"></span>    Builder <a href="index.html#BuilderConfig">BuilderConfig</a> `json:&#34;builder,omitempty&#34;`
+
+<span id="CommonConfig.ContainerdNamespace"></span>    ContainerdNamespace       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;containerd-namespace,omitempty&#34;`
+<span id="CommonConfig.ContainerdPluginNamespace"></span>    ContainerdPluginNamespace <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;containerd-plugin-namespace,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommonTLSOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=3608:3773#L96">CommonTLSOptions</a>
+				<a class="permalink" href="index.html#CommonTLSOptions">&#xb6;</a>
+			</h2>
+			<p>
+CommonTLSOptions defines TLS configuration for the daemon server.
+It includes json tags to deserialize configuration from a file
+using the same names that the flags in the command line use.
+</p>
+
+			<pre>type CommonTLSOptions struct {
+<span id="CommonTLSOptions.CAFile"></span>    CAFile   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;tlscacert,omitempty&#34;`
+<span id="CommonTLSOptions.CertFile"></span>    CertFile <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;tlscert,omitempty&#34;`
+<span id="CommonTLSOptions.KeyFile"></span>    KeyFile  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;tlskey,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CommonUnixConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go?s=252:511#L3">CommonUnixConfig</a>
+				<a class="permalink" href="index.html#CommonUnixConfig">&#xb6;</a>
+			</h2>
+			<p>
+CommonUnixConfig defines configuration of a docker daemon that is
+common across Unix platforms.
+</p>
+
+			<pre>type CommonUnixConfig struct {
+<span id="CommonUnixConfig.Runtimes"></span>    Runtimes          map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Runtime">Runtime</a> `json:&#34;runtimes,omitempty&#34;`
+<span id="CommonUnixConfig.DefaultRuntime"></span>    DefaultRuntime    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;default-runtime,omitempty&#34;`
+<span id="CommonUnixConfig.DefaultInitBinary"></span>    DefaultInitBinary <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;default-init,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Config">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_unix.go?s=540:1903#L11">Config</a>
+				<a class="permalink" href="index.html#Config">&#xb6;</a>
+			</h2>
+			<p>
+Config defines the configuration of a docker daemon.
+It includes json tags to deserialize configuration from a file
+using the same names that the flags in the command line uses.
+</p>
+
+			<pre>type Config struct {
+    <a href="index.html#CommonConfig">CommonConfig</a>
+
+    <span class="comment">// These fields are common to all unix platforms.</span>
+    <a href="index.html#CommonUnixConfig">CommonUnixConfig</a>
+    <span class="comment">// Fields below here are platform specific.</span>
+<span id="Config.CgroupParent"></span>    CgroupParent         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;cgroup-parent,omitempty&#34;`
+<span id="Config.EnableSelinuxSupport"></span>    EnableSelinuxSupport <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `json:&#34;selinux-enabled,omitempty&#34;`
+<span id="Config.RemappedRoot"></span>    RemappedRoot         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;userns-remap,omitempty&#34;`
+<span id="Config.Ulimits"></span>    Ulimits              map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*units.<a href="index.html#Ulimit">Ulimit</a> `json:&#34;default-ulimits,omitempty&#34;`
+<span id="Config.CPURealtimePeriod"></span>    CPURealtimePeriod    <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>                    `json:&#34;cpu-rt-period,omitempty&#34;`
+<span id="Config.CPURealtimeRuntime"></span>    CPURealtimeRuntime   <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>                    `json:&#34;cpu-rt-runtime,omitempty&#34;`
+<span id="Config.OOMScoreAdjust"></span>    OOMScoreAdjust       <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>                      `json:&#34;oom-score-adjust,omitempty&#34;`
+<span id="Config.Init"></span>    Init                 <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `json:&#34;init,omitempty&#34;`
+<span id="Config.InitPath"></span>    InitPath             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;init-path,omitempty&#34;`
+<span id="Config.SeccompProfile"></span>    SeccompProfile       <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;seccomp-profile,omitempty&#34;`
+<span id="Config.ShmSize"></span>    ShmSize              <a href="../../opts/index.html">opts</a>.<a href="../../opts/index.html#MemBytes">MemBytes</a>            `json:&#34;default-shm-size,omitempty&#34;`
+<span id="Config.NoNewPrivileges"></span>    NoNewPrivileges      <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>                     `json:&#34;no-new-privileges,omitempty&#34;`
+<span id="Config.IpcMode"></span>    IpcMode              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>                   `json:&#34;default-ipc-mode,omitempty&#34;`
+<span id="Config.ResolvConf"></span>    <span class="comment">// ResolvConf is the path to the configuration of the host resolver</span>
+    ResolvConf <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;resolv-conf,omitempty&#34;`
+<span id="Config.Rootless"></span>    Rootless   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>   `json:&#34;rootless,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="MergeDaemonConfigurations">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=14344:14453#L346">MergeDaemonConfigurations</a>
+					<a class="permalink" href="index.html#MergeDaemonConfigurations">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#MergeDaemonConfigurations">MergeDaemonConfigurations</a>(flagsConfig *<a href="index.html#Config">Config</a>, flags *<a href="http://127.0.0.1:8080/pkg/github.com/spf13/pflag/">pflag</a>.<a href="http://127.0.0.1:8080/pkg/github.com/spf13/pflag/#FlagSet">FlagSet</a>, configFile <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Config">Config</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MergeDaemonConfigurations reads a configuration file,
+loads the file configuration in an isolated structure,
+and merges the configuration provided from flags on top
+if there are no conflicts.
+</p>
+
+				
+				
+			
+				
+				<h3 id="New">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=10656:10674#L244">New</a>
+					<a class="permalink" href="index.html#New">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#New">New</a>() *<a href="index.html#Config">Config</a></pre>
+				<p>
+New returns a new fully initialized Config struct
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Config.GetAllRuntimes">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go?s=1358:1419#L38">GetAllRuntimes</a>
+					<a class="permalink" href="index.html#Config.GetAllRuntimes">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#GetAllRuntimes">GetAllRuntimes</a>() map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Runtime">Runtime</a></pre>
+				<p>
+GetAllRuntimes returns a copy of the runtimes map
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.GetDefaultRuntimeName">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go?s=1182:1232#L29">GetDefaultRuntimeName</a>
+					<a class="permalink" href="index.html#Config.GetDefaultRuntimeName">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#GetDefaultRuntimeName">GetDefaultRuntimeName</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetDefaultRuntimeName returns the current default runtime
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.GetExecRoot">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go?s=1540:1580#L46">GetExecRoot</a>
+					<a class="permalink" href="index.html#Config.GetExecRoot">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#GetExecRoot">GetExecRoot</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetExecRoot returns the user configured Exec-root
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.GetInitPath">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go?s=1663:1703#L51">GetInitPath</a>
+					<a class="permalink" href="index.html#Config.GetInitPath">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#GetInitPath">GetInitPath</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetInitPath returns the configured docker-init path
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.GetResolvConf">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go?s=1993:2035#L65">GetResolvConf</a>
+					<a class="permalink" href="index.html#Config.GetResolvConf">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#GetResolvConf">GetResolvConf</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetResolvConf returns the appropriate resolv.conf
+Check setupResolvConf on how this is selected
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.GetRuntime">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_common_unix.go?s=955:1013#L19">GetRuntime</a>
+					<a class="permalink" href="index.html#Config.GetRuntime">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#GetRuntime">GetRuntime</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Runtime">Runtime</a></pre>
+				<p>
+GetRuntime returns the runtime path and arguments for a given
+runtime name
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.IsRootless">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_unix.go?s=3618:3655#L83">IsRootless</a>
+					<a class="permalink" href="index.html#Config.IsRootless">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#IsRootless">IsRootless</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsRootless returns conf.Rootless
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.IsSwarmCompatible">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_unix.go?s=2633:2678#L54">IsSwarmCompatible</a>
+					<a class="permalink" href="index.html#Config.IsSwarmCompatible">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#IsSwarmCompatible">IsSwarmCompatible</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+IsSwarmCompatible defines if swarm mode can be enabled in this config
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.IsValueSet">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=10461:10509#L235">IsValueSet</a>
+					<a class="permalink" href="index.html#Config.IsValueSet">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#IsValueSet">IsValueSet</a>(name <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsValueSet returns true if a configuration value
+was explicitly set in the configuration file.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Config.ValidatePlatformConfig">func (*Config) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config_unix.go?s=3483:3533#L78">ValidatePlatformConfig</a>
+					<a class="permalink" href="index.html#Config.ValidatePlatformConfig">&#xb6;</a>
+				</h3>
+				<pre>func (conf *<a href="index.html#Config">Config</a>) <a href="index.html#ValidatePlatformConfig">ValidatePlatformConfig</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+ValidatePlatformConfig checks if any platform-specific configuration settings are invalid.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DNSConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=3820:3989#L103">DNSConfig</a>
+				<a class="permalink" href="index.html#DNSConfig">&#xb6;</a>
+			</h2>
+			<p>
+DNSConfig defines the DNS configurations.
+</p>
+
+			<pre>type DNSConfig struct {
+<span id="DNSConfig.DNS"></span>    DNS        []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;dns,omitempty&#34;`
+<span id="DNSConfig.DNSOptions"></span>    DNSOptions []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;dns-opts,omitempty&#34;`
+<span id="DNSConfig.DNSSearch"></span>    DNSSearch  []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;dns-search,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="LogConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=2627:2762#L73">LogConfig</a>
+				<a class="permalink" href="index.html#LogConfig">&#xb6;</a>
+			</h2>
+			<p>
+LogConfig represents the default log configuration.
+It includes json tags to deserialize configuration from a file
+using the same names that the flags in the command line use.
+</p>
+
+			<pre>type LogConfig struct {
+<span id="LogConfig.Type"></span>    Type   <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>            `json:&#34;log-driver,omitempty&#34;`
+<span id="LogConfig.Config"></span>    Config map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;log-opts,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="NetworkConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/daemon/config/config.go?s=3052:3407#L86">NetworkConfig</a>
+				<a class="permalink" href="index.html#NetworkConfig">&#xb6;</a>
+			</h2>
+			<p>
+NetworkConfig stores the daemon-wide networking configurations
+</p>
+
+			<pre>type NetworkConfig struct {
+    <span class="comment">// Default address pools for docker networks</span>
+<span id="NetworkConfig.DefaultAddressPools"></span>    DefaultAddressPools <a href="../../opts/index.html">opts</a>.<a href="../../opts/index.html#PoolsOpt">PoolsOpt</a> `json:&#34;default-address-pools,omitempty&#34;`
+<span id="NetworkConfig.NetworkControlPlaneMTU"></span>    <span class="comment">// NetworkControlPlaneMTU allows to specify the control plane MTU, this will allow to optimize the network use in some components</span>
+    NetworkControlPlaneMTU <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a> `json:&#34;network-control-plane-mtu,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

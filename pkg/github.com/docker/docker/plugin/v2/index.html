@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>v2 - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package v2</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/plugin/v2"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ErrInadequateCapability">type ErrInadequateCapability</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ErrInadequateCapability.Error">func (e ErrInadequateCapability) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Plugin">type Plugin</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Acquire">func (p *Plugin) Acquire()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.AddRefCount">func (p *Plugin) AddRefCount(count int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Addr">func (p *Plugin) Addr() net.Addr</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Client">func (p *Plugin) Client() *plugins.Client</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.FilterByCap">func (p *Plugin) FilterByCap(capability string) (*Plugin, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.GetID">func (p *Plugin) GetID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.GetRefCount">func (p *Plugin) GetRefCount() int</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.GetSocket">func (p *Plugin) GetSocket() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.GetTypes">func (p *Plugin) GetTypes() []types.PluginInterfaceType</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.InitEmptySettings">func (p *Plugin) InitEmptySettings()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.InitSpec">func (p *Plugin) InitSpec(execRoot string) (*specs.Spec, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.IsEnabled">func (p *Plugin) IsEnabled() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.IsV1">func (p *Plugin) IsV1() bool</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Name">func (p *Plugin) Name() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Protocol">func (p *Plugin) Protocol() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Release">func (p *Plugin) Release()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.ScopedPath">func (p *Plugin) ScopedPath(s string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Set">func (p *Plugin) Set(args []string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.SetAddr">func (p *Plugin) SetAddr(addr net.Addr)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.SetPClient">func (p *Plugin) SetPClient(client *plugins.Client)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.SetSpecOptModifier">func (p *Plugin) SetSpecOptModifier(f func(*specs.Spec))</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.SetTimeout">func (p *Plugin) SetTimeout(t time.Duration)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Plugin.Timeout">func (p *Plugin) Timeout() time.Duration</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go">plugin.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin_linux.go">plugin_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/settable.go">settable.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+		
+			
+			
+			<h2 id="ErrInadequateCapability">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=901:952#L29">ErrInadequateCapability</a>
+				<a class="permalink" href="index.html#ErrInadequateCapability">&#xb6;</a>
+			</h2>
+			<p>
+ErrInadequateCapability indicates that the plugin did not have the requested capability.
+</p>
+
+			<pre>type ErrInadequateCapability struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="ErrInadequateCapability.Error">func (ErrInadequateCapability) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=954:1001#L33">Error</a>
+					<a class="permalink" href="index.html#ErrInadequateCapability.Error">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#ErrInadequateCapability">ErrInadequateCapability</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Plugin">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=386:744#L9">Plugin</a>
+				<a class="permalink" href="index.html#Plugin">&#xb6;</a>
+			</h2>
+			<p>
+Plugin represents an individual plugin.
+</p>
+
+			<pre>type Plugin struct {
+<span id="Plugin.PluginObj"></span>    PluginObj <a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#Plugin">Plugin</a> `json:&#34;plugin&#34;` <span class="comment">// todo: embed struct</span>
+
+<span id="Plugin.Rootfs"></span>    Rootfs <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> <span class="comment">// TODO: make private</span>
+
+<span id="Plugin.Config"></span>    Config   digest.<a href="index.html#Digest">Digest</a>
+<span id="Plugin.Blobsums"></span>    Blobsums []digest.<a href="index.html#Digest">Digest</a>
+
+<span id="Plugin.SwarmServiceID"></span>    SwarmServiceID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Plugin.Acquire">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=6979:7005#L245">Acquire</a>
+					<a class="permalink" href="index.html#Plugin.Acquire">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Acquire">Acquire</a>()</pre>
+				<p>
+Acquire increments the plugin&#39;s reference count
+This should be followed up by `Release()` when the plugin is no longer in use.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.AddRefCount">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=6745:6784#L236">AddRefCount</a>
+					<a class="permalink" href="index.html#Plugin.AddRefCount">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#AddRefCount">AddRefCount</a>(count <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>)</pre>
+				<p>
+AddRefCount adds to reference count.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.Addr">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=7942:7974#L281">Addr</a>
+					<a class="permalink" href="index.html#Plugin.Addr">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Addr">Addr</a>() <a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#Addr">Addr</a></pre>
+				<p>
+Addr returns the net.Addr to use to connect to the plugin socket
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.Client">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=1606:1647#L48">Client</a>
+					<a class="permalink" href="index.html#Plugin.Client">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Client">Client</a>() *<a href="../../pkg/plugins/index.html">plugins</a>.<a href="../../pkg/plugins/index.html#Client">Client</a></pre>
+				<p>
+Client returns the plugin client.
+Deprecated: use p.Addr() and manually create the client
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.FilterByCap">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=2165:2229#L75">FilterByCap</a>
+					<a class="permalink" href="index.html#Plugin.FilterByCap">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#FilterByCap">FilterByCap</a>(capability <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#Plugin">Plugin</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+FilterByCap query the plugin for a given capability.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.GetID">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=6112:6143#L204">GetID</a>
+					<a class="permalink" href="index.html#Plugin.GetID">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#GetID">GetID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetID returns the plugin&#39;s ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.GetRefCount">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=6609:6643#L228">GetRefCount</a>
+					<a class="permalink" href="index.html#Plugin.GetRefCount">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#GetRefCount">GetRefCount</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+				<p>
+GetRefCount returns the reference count.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.GetSocket">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=6249:6284#L212">GetSocket</a>
+					<a class="permalink" href="index.html#Plugin.GetSocket">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#GetSocket">GetSocket</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+GetSocket returns the plugin socket.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.GetTypes">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=6424:6479#L220">GetTypes</a>
+					<a class="permalink" href="index.html#Plugin.GetTypes">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#GetTypes">GetTypes</a>() []<a href="../../api/types/index.html">types</a>.<a href="../../api/types/index.html#PluginInterfaceType">PluginInterfaceType</a></pre>
+				<p>
+GetTypes returns the interface types of a plugin.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.InitEmptySettings">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=2532:2568#L86">InitEmptySettings</a>
+					<a class="permalink" href="index.html#Plugin.InitEmptySettings">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#InitEmptySettings">InitEmptySettings</a>()</pre>
+				<p>
+InitEmptySettings initializes empty settings for a plugin.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.InitSpec">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin_linux.go?s=360:423#L7">InitSpec</a>
+					<a class="permalink" href="index.html#Plugin.InitSpec">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#InitSpec">InitSpec</a>(execRoot <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*specs.<a href="index.html#Spec">Spec</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+InitSpec creates an OCI spec from the plugin&#39;s config.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.IsEnabled">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=5974:6007#L196">IsEnabled</a>
+					<a class="permalink" href="index.html#Plugin.IsEnabled">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#IsEnabled">IsEnabled</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsEnabled returns the active state of the plugin.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.IsV1">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=1967:1995#L65">IsV1</a>
+					<a class="permalink" href="index.html#Plugin.IsV1">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#IsV1">IsV1</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+				<p>
+IsV1 returns true for V1 plugins and false otherwise.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.Name">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=2048:2078#L70">Name</a>
+					<a class="permalink" href="index.html#Plugin.Name">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Name">Name</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Name returns the plugin name.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.Protocol">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=8285:8319#L296">Protocol</a>
+					<a class="permalink" href="index.html#Plugin.Protocol">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Protocol">Protocol</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Protocol is the protocol that should be used for interacting with the plugin.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.Release">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=7247:7273#L252">Release</a>
+					<a class="permalink" href="index.html#Plugin.Release">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Release">Release</a>()</pre>
+				<p>
+Release decrements the plugin&#39;s reference count
+This should only be called when the plugin is no longer in use, e.g. with
+via `Acquire()` or getter.Get(&#34;name&#34;, &#34;type&#34;, plugingetter.Acquire)
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.ScopedPath">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=1134:1178#L38">ScopedPath</a>
+					<a class="permalink" href="index.html#Plugin.ScopedPath">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#ScopedPath">ScopedPath</a>(s <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ScopedPath returns the path scoped to the plugin rootfs
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.Set">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=3344:3385#L102">Set</a>
+					<a class="permalink" href="index.html#Plugin.Set">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Set">Set</a>(args []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+Set is used to pass arguments to the plugin.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.SetAddr">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=8116:8155#L289">SetAddr</a>
+					<a class="permalink" href="index.html#Plugin.SetAddr">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#SetAddr">SetAddr</a>(addr <a href="http://127.0.0.1:8080/pkg/net/">net</a>.<a href="http://127.0.0.1:8080/pkg/net/#Addr">Addr</a>)</pre>
+				<p>
+SetAddr sets the plugin address which can be used for dialing the plugin.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.SetPClient">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=1798:1849#L57">SetPClient</a>
+					<a class="permalink" href="index.html#Plugin.SetPClient">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#SetPClient">SetPClient</a>(client *<a href="../../pkg/plugins/index.html">plugins</a>.<a href="../../pkg/plugins/index.html#Client">Client</a>)</pre>
+				<p>
+SetPClient set the plugin client.
+Deprecated: Hardcoded plugin client is deprecated
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.SetSpecOptModifier">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=7404:7460#L258">SetSpecOptModifier</a>
+					<a class="permalink" href="index.html#Plugin.SetSpecOptModifier">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#SetSpecOptModifier">SetSpecOptModifier</a>(f func(*specs.<a href="index.html#Spec">Spec</a>))</pre>
+				<p>
+SetSpecOptModifier sets the function to use to modify the generated
+runtime spec.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.SetTimeout">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=7781:7825#L274">SetTimeout</a>
+					<a class="permalink" href="index.html#Plugin.SetTimeout">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#SetTimeout">SetTimeout</a>(t <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a>)</pre>
+				<p>
+SetTimeout sets the timeout to use for dialing.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Plugin.Timeout">func (*Plugin) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/plugin/v2/plugin.go?s=7628:7668#L266">Timeout</a>
+					<a class="permalink" href="index.html#Plugin.Timeout">&#xb6;</a>
+				</h3>
+				<pre>func (p *<a href="index.html#Plugin">Plugin</a>) <a href="index.html#Timeout">Timeout</a>() <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Duration">Duration</a></pre>
+				<p>
+Timeout gets the currently configured connection timeout.
+This should be used when dialing the plugin.
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

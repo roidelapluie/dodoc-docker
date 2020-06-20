@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>image - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package image</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/image"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+			
+				
+				<dd><a href="index.html#ChildConfig">type ChildConfig</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#DigestWalkFunc">type DigestWalkFunc</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Exporter">type Exporter</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#History">type History</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewHistory">func NewHistory(author, comment, createdBy string, isEmptyLayer bool) History</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ID">type ID</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#IDFromDigest">func IDFromDigest(digest digest.Digest) ID</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ID.Digest">func (id ID) Digest() digest.Digest</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ID.String">func (id ID) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Image">type Image</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewChildImage">func NewChildImage(img *Image, child ChildConfig, os string) *Image</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewFromJSON">func NewFromJSON(src []byte) (*Image, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Image.BaseImgArch">func (img *Image) BaseImgArch() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Image.ID">func (img *Image) ID() ID</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Image.ImageID">func (img *Image) ImageID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Image.MarshalJSON">func (img *Image) MarshalJSON() ([]byte, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Image.OperatingSystem">func (img *Image) OperatingSystem() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Image.RawJSON">func (img *Image) RawJSON() []byte</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Image.RunConfig">func (img *Image) RunConfig() *container.Config</a></dd>
+				
+			
+				
+				<dd><a href="index.html#LayerGetReleaser">type LayerGetReleaser</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RootFS">type RootFS</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewRootFS">func NewRootFS() *RootFS</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RootFS.Append">func (r *RootFS) Append(id layer.DiffID)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RootFS.ChainID">func (r *RootFS) ChainID() layer.ChainID</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RootFS.Clone">func (r *RootFS) Clone() *RootFS</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Store">type Store</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewImageStore">func NewImageStore(fs StoreBackend, lss map[string]LayerGetReleaser) (Store, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#StoreBackend">type StoreBackend</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewFSStoreBackend">func NewFSStoreBackend(root string) (StoreBackend, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#V1Image">type V1Image</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/fs.go">fs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go">image.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/rootfs.go">rootfs.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/store.go">store.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+TypeLayers is used for RootFS.Type for filesystems organized into layers.
+</p>
+
+				<pre>const <span id="TypeLayers">TypeLayers</span> = &#34;layers&#34;</pre>
+			
+		
+		
+		
+		
+			
+			
+			<h2 id="ChildConfig">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=4166:4365#L127">ChildConfig</a>
+				<a class="permalink" href="index.html#ChildConfig">&#xb6;</a>
+			</h2>
+			<p>
+ChildConfig is the configuration to apply to an Image to create a new
+Child image. Other properties of the image are copied from the parent.
+</p>
+
+			<pre>type ChildConfig struct {
+<span id="ChildConfig.ContainerID"></span>    ContainerID     <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ChildConfig.Author"></span>    Author          <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ChildConfig.Comment"></span>    Comment         <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+<span id="ChildConfig.DiffID"></span>    DiffID          <a href="../layer/index.html">layer</a>.<a href="../layer/index.html#DiffID">DiffID</a>
+<span id="ChildConfig.ContainerConfig"></span>    ContainerConfig *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#Config">Config</a>
+<span id="ChildConfig.Config"></span>    Config          *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#Config">Config</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DigestWalkFunc">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/fs.go?s=314:362#L7">DigestWalkFunc</a>
+				<a class="permalink" href="index.html#DigestWalkFunc">&#xb6;</a>
+			</h2>
+			<p>
+DigestWalkFunc is function called by StoreBackend.Walk
+</p>
+
+			<pre>type DigestWalkFunc func(id digest.<a href="index.html#Digest">Digest</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Exporter">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=6481:6657#L202">Exporter</a>
+				<a class="permalink" href="index.html#Exporter">&#xb6;</a>
+			</h2>
+			<p>
+Exporter provides interface for loading and saving images
+</p>
+
+			<pre>type Exporter interface {
+    Load(<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    <span class="comment">// TODO: Load(net.Context, io.ReadCloser, &lt;- chan StatusMessage) error</span>
+    Save([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Writer">Writer</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="History">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=5373:6070#L174">History</a>
+				<a class="permalink" href="index.html#History">&#xb6;</a>
+			</h2>
+			<p>
+History stores build commands that were used to create an image
+</p>
+
+			<pre>type History struct {
+<span id="History.Created"></span>    <span class="comment">// Created is the timestamp at which the image was created</span>
+    Created <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a> `json:&#34;created&#34;`
+<span id="History.Author"></span>    <span class="comment">// Author is the name of the author that was specified when committing the image</span>
+    Author <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;author,omitempty&#34;`
+<span id="History.CreatedBy"></span>    <span class="comment">// CreatedBy keeps the Dockerfile command used while building the image</span>
+    CreatedBy <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;created_by,omitempty&#34;`
+<span id="History.Comment"></span>    <span class="comment">// Comment is the commit message that was set when committing the image</span>
+    Comment <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;comment,omitempty&#34;`
+<span id="History.EmptyLayer"></span>    <span class="comment">// EmptyLayer is set to true if this history item did not generate a</span>
+    <span class="comment">// layer. Otherwise, the history item is associated with the next</span>
+    <span class="comment">// layer in the RootFS section.</span>
+    EmptyLayer <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;empty_layer,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewHistory">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=6187:6264#L191">NewHistory</a>
+					<a class="permalink" href="index.html#NewHistory">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewHistory">NewHistory</a>(author, comment, createdBy <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, isEmptyLayer <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="index.html#History">History</a></pre>
+				<p>
+NewHistory creates a new history struct from arguments, and sets the created
+time to the current time in UTC
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="ID">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=346:367#L8">ID</a>
+				<a class="permalink" href="index.html#ID">&#xb6;</a>
+			</h2>
+			<p>
+ID is the content-addressable ID of an image.
+</p>
+
+			<pre>type ID digest.<a href="index.html#Digest">Digest</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="IDFromDigest">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=579:621#L20">IDFromDigest</a>
+					<a class="permalink" href="index.html#IDFromDigest">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#IDFromDigest">IDFromDigest</a>(digest digest.<a href="index.html#Digest">Digest</a>) <a href="index.html#ID">ID</a></pre>
+				<p>
+IDFromDigest creates an ID from a digest
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="ID.Digest">func (ID) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=468:503#L15">Digest</a>
+					<a class="permalink" href="index.html#ID.Digest">&#xb6;</a>
+				</h3>
+				<pre>func (id <a href="index.html#ID">ID</a>) <a href="index.html#Digest">Digest</a>() digest.<a href="index.html#Digest">Digest</a></pre>
+				<p>
+Digest converts ID into a digest
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="ID.String">func (ID) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=369:397#L10">String</a>
+					<a class="permalink" href="index.html#ID.String">&#xb6;</a>
+				</h3>
+				<pre>func (id <a href="index.html#ID">ID</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Image">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=2121:2626#L53">Image</a>
+				<a class="permalink" href="index.html#Image">&#xb6;</a>
+			</h2>
+			<p>
+Image stores the image configuration
+</p>
+
+			<pre>type Image struct {
+    <a href="index.html#V1Image">V1Image</a>
+<span id="Image.Parent"></span>    Parent     <a href="index.html#ID">ID</a>        `json:&#34;parent,omitempty&#34;`
+<span id="Image.RootFS"></span>    RootFS     *<a href="index.html#RootFS">RootFS</a>   `json:&#34;rootfs,omitempty&#34;`
+<span id="Image.History"></span>    History    []<a href="index.html#History">History</a> `json:&#34;history,omitempty&#34;`
+<span id="Image.OSVersion"></span>    OSVersion  <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>    `json:&#34;os.version,omitempty&#34;`
+<span id="Image.OSFeatures"></span>    OSFeatures []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>  `json:&#34;os.features,omitempty&#34;`
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewChildImage">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=4430:4497#L137">NewChildImage</a>
+					<a class="permalink" href="index.html#NewChildImage">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewChildImage">NewChildImage</a>(img *<a href="index.html#Image">Image</a>, child <a href="index.html#ChildConfig">ChildConfig</a>, os <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) *<a href="index.html#Image">Image</a></pre>
+				<p>
+NewChildImage creates a new Image as a child of this image.
+</p>
+
+				
+				
+			
+				
+				<h3 id="NewFromJSON">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=6716:6760#L209">NewFromJSON</a>
+					<a class="permalink" href="index.html#NewFromJSON">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewFromJSON">NewFromJSON</a>(src []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (*<a href="index.html#Image">Image</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewFromJSON creates an Image configuration from json.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Image.BaseImgArch">func (*Image) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=3175:3213#L90">BaseImgArch</a>
+					<a class="permalink" href="index.html#Image.BaseImgArch">&#xb6;</a>
+				</h3>
+				<pre>func (img *<a href="index.html#Image">Image</a>) <a href="index.html#BaseImgArch">BaseImgArch</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+BaseImgArch returns the image&#39;s architecture. If not populated, defaults to the host runtime arch.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Image.ID">func (*Image) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=2803:2828#L75">ID</a>
+					<a class="permalink" href="index.html#Image.ID">&#xb6;</a>
+				</h3>
+				<pre>func (img *<a href="index.html#Image">Image</a>) <a href="index.html#ID">ID</a>() <a href="index.html#ID">ID</a></pre>
+				<p>
+ID returns the image&#39;s content-addressable ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Image.ImageID">func (*Image) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=2884:2918#L80">ImageID</a>
+					<a class="permalink" href="index.html#Image.ImageID">&#xb6;</a>
+				</h3>
+				<pre>func (img *<a href="index.html#Image">Image</a>) <a href="index.html#ImageID">ImageID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ImageID stringifies ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Image.MarshalJSON">func (*Image) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=3722:3769#L110">MarshalJSON</a>
+					<a class="permalink" href="index.html#Image.MarshalJSON">&#xb6;</a>
+				</h3>
+				<pre>func (img *<a href="index.html#Image">Image</a>) <a href="index.html#MarshalJSON">MarshalJSON</a>() ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+MarshalJSON serializes the image to JSON. It sorts the top-level keys so
+that JSON that&#39;s been manipulated by a push/pull cycle with a legacy
+registry won&#39;t end up with a different key order.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Image.OperatingSystem">func (*Image) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=3410:3452#L99">OperatingSystem</a>
+					<a class="permalink" href="index.html#Image.OperatingSystem">&#xb6;</a>
+				</h3>
+				<pre>func (img *<a href="index.html#Image">Image</a>) <a href="index.html#OperatingSystem">OperatingSystem</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+OperatingSystem returns the image&#39;s operating system. If not populated, defaults to the host runtime OS.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Image.RawJSON">func (*Image) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=2693:2727#L70">RawJSON</a>
+					<a class="permalink" href="index.html#Image.RawJSON">&#xb6;</a>
+				</h3>
+				<pre>func (img *<a href="index.html#Image">Image</a>) <a href="index.html#RawJSON">RawJSON</a>() []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a></pre>
+				<p>
+RawJSON returns the immutable JSON associated with the image.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Image.RunConfig">func (*Image) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=3001:3048#L85">RunConfig</a>
+					<a class="permalink" href="index.html#Image.RunConfig">&#xb6;</a>
+				</h3>
+				<pre>func (img *<a href="index.html#Image">Image</a>) <a href="index.html#RunConfig">RunConfig</a>() *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#Config">Config</a></pre>
+				<p>
+RunConfig returns the image&#39;s container config.
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LayerGetReleaser">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/store.go?s=839:963#L24">LayerGetReleaser</a>
+				<a class="permalink" href="index.html#LayerGetReleaser">&#xb6;</a>
+			</h2>
+			<p>
+LayerGetReleaser is a minimal interface for getting and releasing images.
+</p>
+
+			<pre>type LayerGetReleaser interface {
+    Get(<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#ChainID">ChainID</a>) (<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#Layer">Layer</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Release(<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#Layer">Layer</a>) ([]<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#Metadata">Metadata</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RootFS">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/rootfs.go?s=797:909#L12">RootFS</a>
+				<a class="permalink" href="index.html#RootFS">&#xb6;</a>
+			</h2>
+			<p>
+RootFS describes images root filesystem
+This is currently a placeholder that only supports layers. In the future
+this can be made into an interface that supports different implementations.
+</p>
+
+			<pre>type RootFS struct {
+<span id="RootFS.Type"></span>    Type    <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>         `json:&#34;type&#34;`
+<span id="RootFS.DiffIDs"></span>    DiffIDs []<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#DiffID">DiffID</a> `json:&#34;diff_ids,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewRootFS">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/rootfs.go?s=952:976#L18">NewRootFS</a>
+					<a class="permalink" href="index.html#NewRootFS">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewRootFS">NewRootFS</a>() *<a href="index.html#RootFS">RootFS</a></pre>
+				<p>
+NewRootFS returns empty RootFS struct
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="RootFS.Append">func (*RootFS) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/rootfs.go?s=1057:1097#L23">Append</a>
+					<a class="permalink" href="index.html#RootFS.Append">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#RootFS">RootFS</a>) <a href="index.html#Append">Append</a>(id <a href="../layer/index.html">layer</a>.<a href="../layer/index.html#DiffID">DiffID</a>)</pre>
+				<p>
+Append appends a new diffID to rootfs
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RootFS.ChainID">func (*RootFS) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/rootfs.go?s=1427:1467#L37">ChainID</a>
+					<a class="permalink" href="index.html#RootFS.ChainID">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#RootFS">RootFS</a>) <a href="index.html#ChainID">ChainID</a>() <a href="../layer/index.html">layer</a>.<a href="../layer/index.html#ChainID">ChainID</a></pre>
+				<p>
+ChainID returns the ChainID for the top layer in RootFS.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="RootFS.Clone">func (*RootFS) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/rootfs.go?s=1176:1208#L28">Clone</a>
+					<a class="permalink" href="index.html#RootFS.Clone">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#RootFS">RootFS</a>) <a href="index.html#Clone">Clone</a>() *<a href="index.html#RootFS">RootFS</a></pre>
+				<p>
+Clone returns a copy of the RootFS
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Store">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/store.go?s=381:760#L8">Store</a>
+				<a class="permalink" href="index.html#Store">&#xb6;</a>
+			</h2>
+			<p>
+Store is an interface for creating and accessing images
+</p>
+
+			<pre>type Store interface {
+    Create(config []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (<a href="index.html#ID">ID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Get(id <a href="index.html#ID">ID</a>) (*<a href="index.html#Image">Image</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Delete(id <a href="index.html#ID">ID</a>) ([]<a href="../layer/index.html">layer</a>.<a href="../layer/index.html#Metadata">Metadata</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Search(partialID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#ID">ID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    SetParent(id <a href="index.html#ID">ID</a>, parent <a href="index.html#ID">ID</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    GetParent(id <a href="index.html#ID">ID</a>) (<a href="index.html#ID">ID</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    SetLastUpdated(id <a href="index.html#ID">ID</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    GetLastUpdated(id <a href="index.html#ID">ID</a>) (<a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Children(id <a href="index.html#ID">ID</a>) []<a href="index.html#ID">ID</a>
+    Map() map[<a href="index.html#ID">ID</a>]*<a href="index.html#Image">Image</a>
+    Heads() map[<a href="index.html#ID">ID</a>]*<a href="index.html#Image">Image</a>
+    Len() <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewImageStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/store.go?s=1267:1350#L43">NewImageStore</a>
+					<a class="permalink" href="index.html#NewImageStore">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewImageStore">NewImageStore</a>(fs <a href="index.html#StoreBackend">StoreBackend</a>, lss map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="index.html#LayerGetReleaser">LayerGetReleaser</a>) (<a href="index.html#Store">Store</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewImageStore returns new store object for given set of layer stores
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="StoreBackend">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/fs.go?s=427:773#L10">StoreBackend</a>
+				<a class="permalink" href="index.html#StoreBackend">&#xb6;</a>
+			</h2>
+			<p>
+StoreBackend provides interface for image.Store persistence
+</p>
+
+			<pre>type StoreBackend interface {
+    Walk(f <a href="index.html#DigestWalkFunc">DigestWalkFunc</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    Get(id digest.<a href="index.html#Digest">Digest</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Set(data []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (digest.<a href="index.html#Digest">Digest</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Delete(id digest.<a href="index.html#Digest">Digest</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    SetMetadata(id digest.<a href="index.html#Digest">Digest</a>, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, data []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    GetMetadata(id digest.<a href="index.html#Digest">Digest</a>, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    DeleteMetadata(id digest.<a href="index.html#Digest">Digest</a>, key <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewFSStoreBackend">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/fs.go?s=1018:1075#L32">NewFSStoreBackend</a>
+					<a class="permalink" href="index.html#NewFSStoreBackend">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewFSStoreBackend">NewFSStoreBackend</a>(root <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="index.html#StoreBackend">StoreBackend</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewFSStoreBackend returns new filesystem based backend for image.Store
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="V1Image">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/image/image.go?s=692:2079#L25">V1Image</a>
+				<a class="permalink" href="index.html#V1Image">&#xb6;</a>
+			</h2>
+			<p>
+V1Image stores the V1 image configuration.
+</p>
+
+			<pre>type V1Image struct {
+<span id="V1Image.ID"></span>    <span class="comment">// ID is a unique 64 character identifier of the image</span>
+    ID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;id,omitempty&#34;`
+<span id="V1Image.Parent"></span>    <span class="comment">// Parent is the ID of the parent image</span>
+    Parent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;parent,omitempty&#34;`
+<span id="V1Image.Comment"></span>    <span class="comment">// Comment is the commit message that was set when committing the image</span>
+    Comment <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;comment,omitempty&#34;`
+<span id="V1Image.Created"></span>    <span class="comment">// Created is the timestamp at which the image was created</span>
+    Created <a href="http://127.0.0.1:8080/pkg/time/">time</a>.<a href="http://127.0.0.1:8080/pkg/time/#Time">Time</a> `json:&#34;created&#34;`
+<span id="V1Image.Container"></span>    <span class="comment">// Container is the id of the container used to commit</span>
+    Container <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;container,omitempty&#34;`
+<span id="V1Image.ContainerConfig"></span>    <span class="comment">// ContainerConfig is the configuration of the container that is committed into the image</span>
+    ContainerConfig <a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#Config">Config</a> `json:&#34;container_config,omitempty&#34;`
+<span id="V1Image.DockerVersion"></span>    <span class="comment">// DockerVersion specifies the version of Docker that was used to build the image</span>
+    DockerVersion <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;docker_version,omitempty&#34;`
+<span id="V1Image.Author"></span>    <span class="comment">// Author is the name of the author that was specified when committing the image</span>
+    Author <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;author,omitempty&#34;`
+<span id="V1Image.Config"></span>    <span class="comment">// Config is the configuration of the container received from the client</span>
+    Config *<a href="../api/types/container/index.html">container</a>.<a href="../api/types/container/index.html#Config">Config</a> `json:&#34;config,omitempty&#34;`
+<span id="V1Image.Architecture"></span>    <span class="comment">// Architecture is the hardware that the image is built and runs on</span>
+    Architecture <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;architecture,omitempty&#34;`
+<span id="V1Image.OS"></span>    <span class="comment">// OS is the operating system used to build and run the image</span>
+    OS <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;os,omitempty&#34;`
+<span id="V1Image.Size"></span>    <span class="comment">// Size is the total size of the image including all layers it is composed of</span>
+    Size <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="cache/index.html">cache</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="tarexport/index.html">tarexport</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="v1/index.html">v1</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

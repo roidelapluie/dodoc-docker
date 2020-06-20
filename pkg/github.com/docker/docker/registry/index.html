@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>registry - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package registry</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/registry"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package registry contains client primitives to interact with a remote Docker registry.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#AuthTransport">func AuthTransport(base http.RoundTripper, authConfig *types.AuthConfig, alwaysSetBasicAuth bool) http.RoundTripper</a></dd>
+			
+				
+				<dd><a href="index.html#ConvertToHostname">func ConvertToHostname(url string) string</a></dd>
+			
+				
+				<dd><a href="index.html#GetAuthConfigKey">func GetAuthConfigKey(index *registrytypes.IndexInfo) string</a></dd>
+			
+				
+				<dd><a href="index.html#HTTPClient">func HTTPClient(transport http.RoundTripper) *http.Client</a></dd>
+			
+				
+				<dd><a href="index.html#Headers">func Headers(userAgent string, metaHeaders http.Header) []transport.RequestModifier</a></dd>
+			
+				
+				<dd><a href="index.html#NewStaticCredentialStore">func NewStaticCredentialStore(auth *types.AuthConfig) auth.CredentialStore</a></dd>
+			
+				
+				<dd><a href="index.html#NewTransport">func NewTransport(tlsConfig *tls.Config) *http.Transport</a></dd>
+			
+				
+				<dd><a href="index.html#ParseSearchIndexInfo">func ParseSearchIndexInfo(reposName string) (*registrytypes.IndexInfo, error)</a></dd>
+			
+				
+				<dd><a href="index.html#PingV2Registry">func PingV2Registry(endpoint *url.URL, transport http.RoundTripper) (challenge.Manager, bool, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ReadCertsDirectory">func ReadCertsDirectory(tlsConfig *tls.Config, directory string) error</a></dd>
+			
+				
+				<dd><a href="index.html#ResolveAuthConfig">func ResolveAuthConfig(authConfigs map[string]types.AuthConfig, index *registrytypes.IndexInfo) types.AuthConfig</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateIndexName">func ValidateIndexName(val string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ValidateMirror">func ValidateMirror(val string) (string, error)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#APIEndpoint">type APIEndpoint</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#APIEndpoint.ToV1Endpoint">func (e APIEndpoint) ToV1Endpoint(userAgent string, metaHeaders http.Header) *V1Endpoint</a></dd>
+				
+			
+				
+				<dd><a href="index.html#APIVersion">type APIVersion</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#APIVersion.String">func (av APIVersion) String() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#DefaultService">type DefaultService</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewService">func NewService(options ServiceOptions) (*DefaultService, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.Auth">func (s *DefaultService) Auth(ctx context.Context, authConfig *types.AuthConfig, userAgent string) (status, token string, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.LoadAllowNondistributableArtifacts">func (s *DefaultService) LoadAllowNondistributableArtifacts(registries []string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.LoadInsecureRegistries">func (s *DefaultService) LoadInsecureRegistries(registries []string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.LoadMirrors">func (s *DefaultService) LoadMirrors(mirrors []string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.LookupPullEndpoints">func (s *DefaultService) LookupPullEndpoints(hostname string) (endpoints []APIEndpoint, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.LookupPushEndpoints">func (s *DefaultService) LookupPushEndpoints(hostname string) (endpoints []APIEndpoint, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.ResolveRepository">func (s *DefaultService) ResolveRepository(name reference.Named) (*RepositoryInfo, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.Search">func (s *DefaultService) Search(ctx context.Context, term string, limit int, authConfig *types.AuthConfig, userAgent string, headers map[string][]string) (*registrytypes.SearchResults, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.ServiceConfig">func (s *DefaultService) ServiceConfig() *registrytypes.ServiceConfig</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#DefaultService.TLSConfig">func (s *DefaultService) TLSConfig(hostname string) (*tls.Config, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ImgData">type ImgData</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#PingResponseError">type PingResponseError</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#PingResponseError.Error">func (err PingResponseError) Error() string</a></dd>
+				
+			
+				
+				<dd><a href="index.html#PingResult">type PingResult</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RepositoryData">type RepositoryData</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RepositoryInfo">type RepositoryInfo</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#ParseRepositoryInfo">func ParseRepositoryInfo(reposName reference.Named) (*RepositoryInfo, error)</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Service">type Service</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ServiceOptions">type ServiceOptions</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Session">type Session</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewSession">func NewSession(client *http.Client, authConfig *types.AuthConfig, endpoint *V1Endpoint) (*Session, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.GetRemoteHistory">func (r *Session) GetRemoteHistory(imgID, registry string) ([]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.GetRemoteImageJSON">func (r *Session) GetRemoteImageJSON(imgID, registry string) ([]byte, int64, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.GetRemoteImageLayer">func (r *Session) GetRemoteImageLayer(imgID, registry string, imgSize int64) (io.ReadCloser, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.GetRemoteTag">func (r *Session) GetRemoteTag(registries []string, repositoryRef reference.Named, askedTag string) (string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.GetRemoteTags">func (r *Session) GetRemoteTags(registries []string, repositoryRef reference.Named) (map[string]string, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.GetRepositoryData">func (r *Session) GetRepositoryData(name reference.Named) (*RepositoryData, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.ID">func (r *Session) ID() string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.LookupRemoteImage">func (r *Session) LookupRemoteImage(imgID, registry string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.PushImageChecksumRegistry">func (r *Session) PushImageChecksumRegistry(imgData *ImgData, registry string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.PushImageJSONIndex">func (r *Session) PushImageJSONIndex(remote reference.Named, imgList []*ImgData, validate bool, regs []string) (*RepositoryData, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.PushImageJSONRegistry">func (r *Session) PushImageJSONRegistry(imgData *ImgData, jsonRaw []byte, registry string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.PushImageLayerRegistry">func (r *Session) PushImageLayerRegistry(imgID string, layer io.Reader, registry string, jsonRaw []byte) (checksum string, checksumPayload string, err error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.PushRegistryTag">func (r *Session) PushRegistryTag(remote reference.Named, revision, tag, registry string) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Session.SearchRepositories">func (r *Session) SearchRepositories(term string, limit int) (*registrytypes.SearchResults, error)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#V1Endpoint">type V1Endpoint</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewV1Endpoint">func NewV1Endpoint(index *registrytypes.IndexInfo, userAgent string, metaHeaders http.Header) (*V1Endpoint, error)</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#V1Endpoint.Path">func (e *V1Endpoint) Path(path string) string</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#V1Endpoint.Ping">func (e *V1Endpoint) Ping() (PingResult, error)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#V1Endpoint.String">func (e *V1Endpoint) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/auth.go">auth.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config.go">config.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config_unix.go">config_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/endpoint_v1.go">endpoint_v1.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/errors.go">errors.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/registry.go">registry.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go">service.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service_v2.go">service_v2.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go">session.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/types.go">types.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// AuthClientID is used the ClientID used for the token server</span>
+    <span id="AuthClientID">AuthClientID</span> = &#34;docker&#34;
+)</pre>
+			
+				
+				<pre>const (
+    <span class="comment">// DefaultSearchLimit is the default value for maximum number of returned search results.</span>
+    <span id="DefaultSearchLimit">DefaultSearchLimit</span> = 25
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var (
+    <span class="comment">// DefaultNamespace is the default namespace</span>
+    <span id="DefaultNamespace">DefaultNamespace</span> = &#34;docker.io&#34;
+    <span class="comment">// DefaultRegistryVersionHeader is the name of the default HTTP header</span>
+    <span class="comment">// that carries Registry version info</span>
+    <span id="DefaultRegistryVersionHeader">DefaultRegistryVersionHeader</span> = &#34;Docker-Distribution-Api-Version&#34;
+
+    <span class="comment">// IndexHostname is the index hostname</span>
+    <span id="IndexHostname">IndexHostname</span> = &#34;index.docker.io&#34;
+    <span class="comment">// IndexServer is used for user auth and image search</span>
+    <span id="IndexServer">IndexServer</span> = &#34;https://&#34; + <a href="index.html#IndexHostname">IndexHostname</a> + &#34;/v1/&#34;
+    <span class="comment">// IndexName is the name of the index</span>
+    <span id="IndexName">IndexName</span> = &#34;docker.io&#34;
+
+    <span class="comment">// DefaultV2Registry is the URI of the default v2 registry</span>
+    <span id="DefaultV2Registry">DefaultV2Registry</span> = &amp;<a href="http://127.0.0.1:8080/pkg/net/url/">url</a>.<a href="http://127.0.0.1:8080/pkg/net/url/#URL">URL</a>{
+        <a href="http://127.0.0.1:8080/pkg/net/url/#URL.Scheme">Scheme</a>: &#34;https&#34;,
+        <a href="http://127.0.0.1:8080/pkg/net/url/#URL.Host">Host</a>:   &#34;registry-1.docker.io&#34;,
+    }
+)</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// CertsDir is the directory where certificates are stored</span>
+    <span id="CertsDir">CertsDir</span> = &#34;/etc/docker/certs.d&#34;
+)</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrAlreadyExists is an error returned if an image being pushed</span>
+    <span class="comment">// already exists on the remote side</span>
+    <span id="ErrAlreadyExists">ErrAlreadyExists</span> = <a href="http://127.0.0.1:8080/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/errors/#New">New</a>(&#34;Image already exists&#34;)
+)</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrInvalidRepositoryName is an error returned if the repository name did</span>
+    <span class="comment">// not have the correct form</span>
+    <span id="ErrInvalidRepositoryName">ErrInvalidRepositoryName</span> = <a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/">errors</a>.<a href="http://127.0.0.1:8080/pkg/github.com/pkg/errors/#New">New</a>(&#34;Invalid repository name (ex: \&#34;registry.domain.tld/myrepos\&#34;)&#34;)
+)</pre>
+			
+				
+				<pre>var (
+    <span class="comment">// ErrRepoNotFound is returned if the repository didn&#39;t exist on the</span>
+    <span class="comment">// remote side</span>
+    <span id="ErrRepoNotFound">ErrRepoNotFound</span> notFoundError = &#34;Repository not found&#34;
+)</pre>
+			
+		
+		
+			
+			
+			<h2 id="AuthTransport">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=2225:2340#L63">AuthTransport</a>
+				<a class="permalink" href="index.html#AuthTransport">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#AuthTransport">AuthTransport</a>(base <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#RoundTripper">RoundTripper</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, alwaysSetBasicAuth <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>) <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#RoundTripper">RoundTripper</a></pre>
+			<p>
+AuthTransport handles the auth layer when communicating with a v1 registry (private or official)
+</p>
+<p>
+For private v1 registries, set alwaysSetBasicAuth to true.
+</p>
+<p>
+For the official v1 registry, if there isn&#39;t already an Authorization header in the request,
+but there is an X-Docker-Token header set to true, then Basic Auth will be used to set the Authorization header.
+After sending the request with the provided base http.RoundTripper, if an X-Docker-Token header, representing
+a token, is present in the response, then it gets cached and sent in the Authorization header of all subsequent
+requests.
+</p>
+<p>
+If the server sends a token without the client having requested it, it is ignored.
+</p>
+<p>
+This RoundTripper also has a CancelRequest method important for correct timeout handling.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ConvertToHostname">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/auth.go?s=6261:6302#L194">ConvertToHostname</a>
+				<a class="permalink" href="index.html#ConvertToHostname">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ConvertToHostname">ConvertToHostname</a>(url <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+ConvertToHostname converts a registry url which has http|https prepended
+to just an hostname.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetAuthConfigKey">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config.go?s=13854:13914#L389">GetAuthConfigKey</a>
+				<a class="permalink" href="index.html#GetAuthConfigKey">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#GetAuthConfigKey">GetAuthConfigKey</a>(index *<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#IndexInfo">IndexInfo</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+			<p>
+GetAuthConfigKey special-cases using the full index address of the official
+index as the AuthConfig key, and uses the (host)name[:port] for private indexes.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="HTTPClient">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/registry.go?s=3864:3921#L126">HTTPClient</a>
+				<a class="permalink" href="index.html#HTTPClient">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#HTTPClient">HTTPClient</a>(transport <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#RoundTripper">RoundTripper</a>) *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Client">Client</a></pre>
+			<p>
+HTTPClient returns an HTTP client structure which uses the given transport
+and contains the necessary headers for redirected requests
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Headers">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/registry.go?s=3315:3398#L111">Headers</a>
+				<a class="permalink" href="index.html#Headers">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Headers">Headers</a>(userAgent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, metaHeaders <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>) []<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/registry/client/transport/">transport</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/registry/client/transport/#RequestModifier">RequestModifier</a></pre>
+			<p>
+Headers returns request modifiers with a User-Agent and metaHeaders
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewStaticCredentialStore">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/auth.go?s=2972:3046#L82">NewStaticCredentialStore</a>
+				<a class="permalink" href="index.html#NewStaticCredentialStore">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewStaticCredentialStore">NewStaticCredentialStore</a>(auth *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>) <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/registry/client/auth/">auth</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/registry/client/auth/#CredentialStore">CredentialStore</a></pre>
+			<p>
+NewStaticCredentialStore returns a credential store
+which always returns the same credential values.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="NewTransport">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/registry.go?s=4990:5046#L171">NewTransport</a>
+				<a class="permalink" href="index.html#NewTransport">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#NewTransport">NewTransport</a>(tlsConfig *<a href="http://127.0.0.1:8080/pkg/crypto/tls/">tls</a>.<a href="http://127.0.0.1:8080/pkg/crypto/tls/#Config">Config</a>) *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Transport">Transport</a></pre>
+			<p>
+NewTransport returns a new HTTP transport. If tlsConfig is nil, it uses the
+default TLS configuration.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseSearchIndexInfo">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config.go?s=14792:14869#L418">ParseSearchIndexInfo</a>
+				<a class="permalink" href="index.html#ParseSearchIndexInfo">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseSearchIndexInfo">ParseSearchIndexInfo</a>(reposName <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#IndexInfo">IndexInfo</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseSearchIndexInfo will use repository name to get back an indexInfo.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="PingV2Registry">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/auth.go?s=7718:7818#L241">PingV2Registry</a>
+				<a class="permalink" href="index.html#PingV2Registry">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#PingV2Registry">PingV2Registry</a>(endpoint *<a href="http://127.0.0.1:8080/pkg/net/url/">url</a>.<a href="http://127.0.0.1:8080/pkg/net/url/#URL">URL</a>, transport <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#RoundTripper">RoundTripper</a>) (<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/registry/client/auth/challenge/">challenge</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/registry/client/auth/challenge/#Manager">Manager</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+PingV2Registry attempts to ping a v2 registry and on success return a
+challenge manager for the supported authentication types and
+whether v2 was confirmed by the response. If a response is received but
+cannot be interpreted a PingResponseError will be returned.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ReadCertsDirectory">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/registry.go?s=1674:1744#L62">ReadCertsDirectory</a>
+				<a class="permalink" href="index.html#ReadCertsDirectory">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ReadCertsDirectory">ReadCertsDirectory</a>(tlsConfig *<a href="http://127.0.0.1:8080/pkg/crypto/tls/">tls</a>.<a href="http://127.0.0.1:8080/pkg/crypto/tls/#Config">Config</a>, directory <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+			<p>
+ReadCertsDirectory reads the directory for TLS certificates
+including roots and certificate pairs and updates the
+provided TLS configuration.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ResolveAuthConfig">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/auth.go?s=6663:6775#L208">ResolveAuthConfig</a>
+				<a class="permalink" href="index.html#ResolveAuthConfig">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ResolveAuthConfig">ResolveAuthConfig</a>(authConfigs map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, index *<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#IndexInfo">IndexInfo</a>) <a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a></pre>
+			<p>
+ResolveAuthConfig matches an auth configuration to a server address or a URL
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateIndexName">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config.go?s=11948:11998#L321">ValidateIndexName</a>
+				<a class="permalink" href="index.html#ValidateIndexName">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateIndexName">ValidateIndexName</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateIndexName validates an index name.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidateMirror">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config.go?s=11152:11199#L301">ValidateMirror</a>
+				<a class="permalink" href="index.html#ValidateMirror">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidateMirror">ValidateMirror</a>(val <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ValidateMirror validates an HTTP(S) registry mirror
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="APIEndpoint">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=8462:8765#L241">APIEndpoint</a>
+				<a class="permalink" href="index.html#APIEndpoint">&#xb6;</a>
+			</h2>
+			<p>
+APIEndpoint represents a remote API endpoint
+</p>
+
+			<pre>type APIEndpoint struct {
+<span id="APIEndpoint.Mirror"></span>    Mirror                         <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="APIEndpoint.URL"></span>    URL                            *<a href="http://127.0.0.1:8080/pkg/net/url/">url</a>.<a href="http://127.0.0.1:8080/pkg/net/url/#URL">URL</a>
+<span id="APIEndpoint.Version"></span>    Version                        <a href="index.html#APIVersion">APIVersion</a>
+<span id="APIEndpoint.AllowNondistributableArtifacts"></span>    AllowNondistributableArtifacts <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="APIEndpoint.Official"></span>    Official                       <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="APIEndpoint.TrimHostname"></span>    TrimHostname                   <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="APIEndpoint.TLSConfig"></span>    TLSConfig                      *<a href="http://127.0.0.1:8080/pkg/crypto/tls/">tls</a>.<a href="http://127.0.0.1:8080/pkg/crypto/tls/#Config">Config</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="APIEndpoint.ToV1Endpoint">func (APIEndpoint) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=8834:8922#L252">ToV1Endpoint</a>
+					<a class="permalink" href="index.html#APIEndpoint.ToV1Endpoint">&#xb6;</a>
+				</h3>
+				<pre>func (e <a href="index.html#APIEndpoint">APIEndpoint</a>) <a href="index.html#ToV1Endpoint">ToV1Endpoint</a>(userAgent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, metaHeaders <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>) *<a href="index.html#V1Endpoint">V1Endpoint</a></pre>
+				<p>
+ToV1Endpoint returns a V1 API endpoint based on the APIEndpoint
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="APIVersion">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/types.go?s=1356:1375#L30">APIVersion</a>
+				<a class="permalink" href="index.html#APIVersion">&#xb6;</a>
+			</h2>
+			<p>
+APIVersion is an integral representation of an API version (presently
+either 1 or 2)
+</p>
+
+			<pre>type APIVersion <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a></pre>
+
+			
+				<p>
+API Version identifiers.
+</p>
+
+				<pre>const (
+    <span id="APIVersion1">APIVersion1</span> <a href="index.html#APIVersion">APIVersion</a> = <a href="http://127.0.0.1:8080/pkg/builtin/#iota">iota</a>
+    <span id="APIVersion2">APIVersion2</span>
+)</pre>
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="APIVersion.String">func (APIVersion) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/types.go?s=1377:1413#L32">String</a>
+					<a class="permalink" href="index.html#APIVersion.String">&#xb6;</a>
+				</h3>
+				<pre>func (av <a href="index.html#APIVersion">APIVersion</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="DefaultService">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=1476:1548#L31">DefaultService</a>
+				<a class="permalink" href="index.html#DefaultService">&#xb6;</a>
+			</h2>
+			<p>
+DefaultService is a registry service. It tracks configuration data such as a list
+of mirrors.
+</p>
+
+			<pre>type DefaultService struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewService">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=1646:1710#L38">NewService</a>
+					<a class="permalink" href="index.html#NewService">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewService">NewService</a>(options <a href="index.html#ServiceOptions">ServiceOptions</a>) (*<a href="index.html#DefaultService">DefaultService</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewService returns a new instance of DefaultService ready to be
+installed into an engine.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="DefaultService.Auth">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=4116:4248#L99">Auth</a>
+					<a class="permalink" href="index.html#DefaultService.Auth">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#Auth">Auth</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, userAgent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (status, token <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Auth contacts the public registry with the provided credentials,
+and returns OK if authentication was successful.
+It can be used to verify the validity of a client&#39;s credentials.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.LoadAllowNondistributableArtifacts">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=3317:3403#L73">LoadAllowNondistributableArtifacts</a>
+					<a class="permalink" href="index.html#DefaultService.LoadAllowNondistributableArtifacts">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#LoadAllowNondistributableArtifacts">LoadAllowNondistributableArtifacts</a>(registries []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+LoadAllowNondistributableArtifacts loads allow-nondistributable-artifacts registries for Service.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.LoadInsecureRegistries">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=3761:3835#L89">LoadInsecureRegistries</a>
+					<a class="permalink" href="index.html#DefaultService.LoadInsecureRegistries">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#LoadInsecureRegistries">LoadInsecureRegistries</a>(registries []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+LoadInsecureRegistries loads insecure registries for Service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.LoadMirrors">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=3558:3618#L81">LoadMirrors</a>
+					<a class="permalink" href="index.html#DefaultService.LoadMirrors">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#LoadMirrors">LoadMirrors</a>(mirrors []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+LoadMirrors loads registry mirrors for Service
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.LookupPullEndpoints">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=9804:9902#L276">LookupPullEndpoints</a>
+					<a class="permalink" href="index.html#DefaultService.LookupPullEndpoints">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#LookupPullEndpoints">LookupPullEndpoints</a>(hostname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (endpoints []<a href="index.html#APIEndpoint">APIEndpoint</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+LookupPullEndpoints creates a list of endpoints to try to pull from, in order of preference.
+It gives preference to v2 endpoints over v1, mirrors over the actual
+registry, and HTTPS over plain HTTP.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.LookupPushEndpoints">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=10177:10275#L286">LookupPushEndpoints</a>
+					<a class="permalink" href="index.html#DefaultService.LookupPushEndpoints">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#LookupPushEndpoints">LookupPushEndpoints</a>(hostname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (endpoints []<a href="index.html#APIEndpoint">APIEndpoint</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+LookupPushEndpoints creates a list of endpoints to try to push to, in order of preference.
+It gives preference to v2 endpoints over v1, and HTTPS over plain HTTP.
+Mirrors are not included.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.ResolveRepository">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=8243:8332#L234">ResolveRepository</a>
+					<a class="permalink" href="index.html#DefaultService.ResolveRepository">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#ResolveRepository">ResolveRepository</a>(name <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) (*<a href="index.html#RepositoryInfo">RepositoryInfo</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ResolveRepository splits a repository name into its components
+and configuration of the associated registry.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.Search">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=5977:6168#L159">Search</a>
+					<a class="permalink" href="index.html#DefaultService.Search">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#Search">Search</a>(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, term <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, limit <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, userAgent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, headers map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#SearchResults">SearchResults</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Search queries the public registry for images matching the specified
+search terms, and returns the results.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.ServiceConfig">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=1872:1941#L45">ServiceConfig</a>
+					<a class="permalink" href="index.html#DefaultService.ServiceConfig">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#ServiceConfig">ServiceConfig</a>() *<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#ServiceConfig">ServiceConfig</a></pre>
+				<p>
+ServiceConfig returns the public registry service configuration.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="DefaultService.TLSConfig">func (*DefaultService) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=9071:9143#L257">TLSConfig</a>
+					<a class="permalink" href="index.html#DefaultService.TLSConfig">&#xb6;</a>
+				</h3>
+				<pre>func (s *<a href="index.html#DefaultService">DefaultService</a>) <a href="index.html#TLSConfig">TLSConfig</a>(hostname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="http://127.0.0.1:8080/pkg/crypto/tls/">tls</a>.<a href="http://127.0.0.1:8080/pkg/crypto/tls/#Config">Config</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+TLSConfig constructs a client TLS configuration based on server defaults
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="ImgData">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/types.go?s=528:771#L7">ImgData</a>
+				<a class="permalink" href="index.html#ImgData">&#xb6;</a>
+			</h2>
+			<p>
+ImgData is used to transfer image checksums to and from the registry
+</p>
+
+			<pre>type ImgData struct {
+<span id="ImgData.ID"></span>    <span class="comment">// ID is an opaque string that identifies the image</span>
+    ID              <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;id&#34;`
+<span id="ImgData.Checksum"></span>    Checksum        <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;checksum,omitempty&#34;`
+<span id="ImgData.ChecksumPayload"></span>    ChecksumPayload <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;-&#34;`
+<span id="ImgData.Tag"></span>    Tag             <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="PingResponseError">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/auth.go?s=7324:7368#L229">PingResponseError</a>
+				<a class="permalink" href="index.html#PingResponseError">&#xb6;</a>
+			</h2>
+			<p>
+PingResponseError is used when the response from a ping
+was received but invalid.
+</p>
+
+			<pre>type PingResponseError struct {
+<span id="PingResponseError.Err"></span>    Err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="PingResponseError.Error">func (PingResponseError) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/auth.go?s=7370:7413#L233">Error</a>
+					<a class="permalink" href="index.html#PingResponseError.Error">&#xb6;</a>
+				</h3>
+				<pre>func (err <a href="index.html#PingResponseError">PingResponseError</a>) <a href="index.html#Error">Error</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="PingResult">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/types.go?s=949:1263#L18">PingResult</a>
+				<a class="permalink" href="index.html#PingResult">&#xb6;</a>
+			</h2>
+			<p>
+PingResult contains the information returned when pinging a registry. It
+indicates the registry&#39;s version and whether the registry claims to be a
+standalone registry.
+</p>
+
+			<pre>type PingResult struct {
+<span id="PingResult.Version"></span>    <span class="comment">// Version is the registry version supplied by the registry in an HTTP</span>
+    <span class="comment">// header</span>
+    Version <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;version&#34;`
+<span id="PingResult.Standalone"></span>    <span class="comment">// Standalone is set to true if the registry indicates it is a</span>
+    <span class="comment">// standalone registry in the X-Docker-Registry-Standalone</span>
+    <span class="comment">// header</span>
+    Standalone <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a> `json:&#34;standalone&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RepositoryData">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/types.go?s=257:454#L1">RepositoryData</a>
+				<a class="permalink" href="index.html#RepositoryData">&#xb6;</a>
+			</h2>
+			<p>
+RepositoryData tracks the image list, list of endpoints for a repository
+</p>
+
+			<pre>type RepositoryData struct {
+<span id="RepositoryData.ImgList"></span>    <span class="comment">// ImgList is a list of images in the repository</span>
+    ImgList map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]*<a href="index.html#ImgData">ImgData</a>
+<span id="RepositoryData.Endpoints"></span>    <span class="comment">// Endpoints is a list of endpoints returned in X-Docker-Endpoints</span>
+    Endpoints []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RepositoryInfo">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/types.go?s=1682:2127#L49">RepositoryInfo</a>
+				<a class="permalink" href="index.html#RepositoryInfo">&#xb6;</a>
+			</h2>
+			<p>
+RepositoryInfo describes a repository
+</p>
+
+			<pre>type RepositoryInfo struct {
+<span id="RepositoryInfo.Name"></span>    Name <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>
+<span id="RepositoryInfo.Index"></span>    <span class="comment">// Index points to registry information</span>
+    Index *<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#IndexInfo">IndexInfo</a>
+<span id="RepositoryInfo.Official"></span>    <span class="comment">// Official indicates whether the repository is considered official.</span>
+    <span class="comment">// If the registry is official, and the normalized name does not</span>
+    <span class="comment">// contain a &#39;/&#39; (e.g. &#34;foo&#34;), then it is considered an official repo.</span>
+    Official <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+<span id="RepositoryInfo.Class"></span>    <span class="comment">// Class represents the class of the repository, such as &#34;plugin&#34;</span>
+    <span class="comment">// or &#34;image&#34;.</span>
+    Class <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="ParseRepositoryInfo">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config.go?s=14578:14654#L413">ParseRepositoryInfo</a>
+					<a class="permalink" href="index.html#ParseRepositoryInfo">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#ParseRepositoryInfo">ParseRepositoryInfo</a>(reposName <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) (*<a href="index.html#RepositoryInfo">RepositoryInfo</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+ParseRepositoryInfo performs the breakdown of a repository name into a RepositoryInfo, but
+lacks registry configuration.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Service">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/service.go?s=639:1374#L16">Service</a>
+				<a class="permalink" href="index.html#Service">&#xb6;</a>
+			</h2>
+			<p>
+Service is the interface defining what a registry service should implement.
+</p>
+
+			<pre>type Service interface {
+    Auth(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, userAgent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (status, token <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    LookupPullEndpoints(hostname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (endpoints []<a href="index.html#APIEndpoint">APIEndpoint</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    LookupPushEndpoints(hostname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (endpoints []<a href="index.html#APIEndpoint">APIEndpoint</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    ResolveRepository(name <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) (*<a href="index.html#RepositoryInfo">RepositoryInfo</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    Search(ctx <a href="http://127.0.0.1:8080/pkg/context/">context</a>.<a href="http://127.0.0.1:8080/pkg/context/#Context">Context</a>, term <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, limit <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, userAgent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, headers map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>][]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#SearchResults">SearchResults</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    ServiceConfig() *<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#ServiceConfig">ServiceConfig</a>
+    TLSConfig(hostname <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="http://127.0.0.1:8080/pkg/crypto/tls/">tls</a>.<a href="http://127.0.0.1:8080/pkg/crypto/tls/#Config">Config</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)
+    LoadAllowNondistributableArtifacts([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    LoadMirrors([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+    LoadInsecureRegistries([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ServiceOptions">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/config.go?s=340:620#L8">ServiceOptions</a>
+				<a class="permalink" href="index.html#ServiceOptions">&#xb6;</a>
+			</h2>
+			<p>
+ServiceOptions holds command line options.
+</p>
+
+			<pre>type ServiceOptions struct {
+<span id="ServiceOptions.AllowNondistributableArtifacts"></span>    AllowNondistributableArtifacts []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;allow-nondistributable-artifacts,omitempty&#34;`
+<span id="ServiceOptions.Mirrors"></span>    Mirrors                        []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;registry-mirrors,omitempty&#34;`
+<span id="ServiceOptions.InsecureRegistries"></span>    InsecureRegistries             []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a> `json:&#34;insecure-registries,omitempty&#34;`
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Session">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=1005:1171#L31">Session</a>
+				<a class="permalink" href="index.html#Session">&#xb6;</a>
+			</h2>
+			<p>
+A Session is used to communicate with a V1 registry
+</p>
+
+			<pre>type Session struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewSession">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=6326:6432#L196">NewSession</a>
+					<a class="permalink" href="index.html#NewSession">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewSession">NewSession</a>(client *<a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Client">Client</a>, authConfig *<a href="../api/types/index.html">types</a>.<a href="../api/types/index.html#AuthConfig">AuthConfig</a>, endpoint *<a href="index.html#V1Endpoint">V1Endpoint</a>) (*<a href="index.html#Session">Session</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewSession creates a new session
+TODO(tiborvass): remove authConfig param once registry client v2 is vendored
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Session.GetRemoteHistory">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=6834:6910#L211">GetRemoteHistory</a>
+					<a class="permalink" href="index.html#Session.GetRemoteHistory">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#GetRemoteHistory">GetRemoteHistory</a>(imgID, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRemoteHistory retrieves the history of a given image from the registry.
+It returns a list of the parent&#39;s JSON files (including the requested image).
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.GetRemoteImageJSON">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=7967:8050#L247">GetRemoteImageJSON</a>
+					<a class="permalink" href="index.html#Session.GetRemoteImageJSON">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#GetRemoteImageJSON">GetRemoteImageJSON</a>(imgID, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) ([]<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRemoteImageJSON retrieves an image&#39;s JSON metadata from the registry.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.GetRemoteImageLayer">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=8836:8935#L273">GetRemoteImageLayer</a>
+					<a class="permalink" href="index.html#Session.GetRemoteImageLayer">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#GetRemoteImageLayer">GetRemoteImageLayer</a>(imgID, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, imgSize <a href="http://127.0.0.1:8080/pkg/builtin/#int64">int64</a>) (<a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#ReadCloser">ReadCloser</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRemoteImageLayer retrieves an image layer from the registry
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.GetRemoteTag">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=10321:10436#L318">GetRemoteTag</a>
+					<a class="permalink" href="index.html#Session.GetRemoteTag">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#GetRemoteTag">GetRemoteTag</a>(registries []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, repositoryRef <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, askedTag <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRemoteTag retrieves the tag named in the askedTag argument from the given
+repository. It queries each of the registries supplied in the registries
+argument, and returns data from the first one that answers the query
+successfully.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.GetRemoteTags">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=11560:11670#L356">GetRemoteTags</a>
+					<a class="permalink" href="index.html#Session.GetRemoteTags">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#GetRemoteTags">GetRemoteTags</a>(registries []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, repositoryRef <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) (map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRemoteTags retrieves all tags from the given repository. It queries each
+of the registries supplied in the registries argument, and returns data from
+the first one that answers the query successfully. It returns a map with
+tag names as the keys and image IDs as the values.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.GetRepositoryData">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=13113:13195#L410">GetRepositoryData</a>
+					<a class="permalink" href="index.html#Session.GetRepositoryData">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#GetRepositoryData">GetRepositoryData</a>(name <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>) (*<a href="index.html#RepositoryData">RepositoryData</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+GetRepositoryData returns lists of images and endpoints for the repository
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.ID">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=6627:6656#L205">ID</a>
+					<a class="permalink" href="index.html#Session.ID">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#ID">ID</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+ID returns this registry session&#39;s ID.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.LookupRemoteImage">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=7588:7653#L234">LookupRemoteImage</a>
+					<a class="permalink" href="index.html#Session.LookupRemoteImage">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#LookupRemoteImage">LookupRemoteImage</a>(imgID, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+LookupRemoteImage checks if an image exists in the registry
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.PushImageChecksumRegistry">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=15658:15742#L477">PushImageChecksumRegistry</a>
+					<a class="permalink" href="index.html#Session.PushImageChecksumRegistry">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#PushImageChecksumRegistry">PushImageChecksumRegistry</a>(imgData *<a href="index.html#ImgData">ImgData</a>, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+PushImageChecksumRegistry uploads checksums for an image
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.PushImageJSONIndex">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=20534:20669#L620">PushImageJSONIndex</a>
+					<a class="permalink" href="index.html#Session.PushImageJSONIndex">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#PushImageJSONIndex">PushImageJSONIndex</a>(remote <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, imgList []*<a href="index.html#ImgData">ImgData</a>, validate <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>, regs []<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (*<a href="index.html#RepositoryData">RepositoryData</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+PushImageJSONIndex uploads an image list to the repository
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.PushImageJSONRegistry">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=16894:16990#L514">PushImageJSONRegistry</a>
+					<a class="permalink" href="index.html#Session.PushImageJSONRegistry">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#PushImageJSONRegistry">PushImageJSONRegistry</a>(imgData *<a href="index.html#ImgData">ImgData</a>, jsonRaw []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+PushImageJSONRegistry pushes JSON metadata for a local image to the registry
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.PushImageLayerRegistry">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=18207:18364#L551">PushImageLayerRegistry</a>
+					<a class="permalink" href="index.html#Session.PushImageLayerRegistry">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#PushImageLayerRegistry">PushImageLayerRegistry</a>(imgID <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, layer <a href="http://127.0.0.1:8080/pkg/io/">io</a>.<a href="http://127.0.0.1:8080/pkg/io/#Reader">Reader</a>, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, jsonRaw []<a href="http://127.0.0.1:8080/pkg/builtin/#byte">byte</a>) (checksum <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, checksumPayload <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, err <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+PushImageLayerRegistry sends the checksum of an image layer to the registry
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.PushRegistryTag">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=19735:19830#L597">PushRegistryTag</a>
+					<a class="permalink" href="index.html#Session.PushRegistryTag">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#PushRegistryTag">PushRegistryTag</a>(remote <a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/">reference</a>.<a href="http://127.0.0.1:8080/pkg/github.com/docker/distribution/reference/#Named">Named</a>, revision, tag, registry <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a></pre>
+				<p>
+PushRegistryTag pushes a tag on the registry.
+Remote has the format &#39;&lt;user&gt;/&lt;repo&gt;
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Session.SearchRepositories">func (*Session) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/session.go?s=23598:23696#L726">SearchRepositories</a>
+					<a class="permalink" href="index.html#Session.SearchRepositories">&#xb6;</a>
+				</h3>
+				<pre>func (r *<a href="index.html#Session">Session</a>) <a href="index.html#SearchRepositories">SearchRepositories</a>(term <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, limit <a href="http://127.0.0.1:8080/pkg/builtin/#int">int</a>) (*<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#SearchResults">SearchResults</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+SearchRepositories performs a search against the remote repository
+</p>
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="V1Endpoint">type <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/endpoint_v1.go?s=382:465#L8">V1Endpoint</a>
+				<a class="permalink" href="index.html#V1Endpoint">&#xb6;</a>
+			</h2>
+			<p>
+V1Endpoint stores basic information about a V1 registry endpoint.
+</p>
+
+			<pre>type V1Endpoint struct {
+<span id="V1Endpoint.URL"></span>    URL      *<a href="http://127.0.0.1:8080/pkg/net/url/">url</a>.<a href="http://127.0.0.1:8080/pkg/net/url/#URL">URL</a>
+<span id="V1Endpoint.IsSecure"></span>    IsSecure <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewV1Endpoint">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/endpoint_v1.go?s=540:654#L15">NewV1Endpoint</a>
+					<a class="permalink" href="index.html#NewV1Endpoint">&#xb6;</a>
+				</h3>
+				<pre>func <a href="index.html#NewV1Endpoint">NewV1Endpoint</a>(index *<a href="../api/types/registry/index.html">registrytypes</a>.<a href="../api/types/registry/index.html#IndexInfo">IndexInfo</a>, userAgent <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, metaHeaders <a href="http://127.0.0.1:8080/pkg/net/http/">http</a>.<a href="http://127.0.0.1:8080/pkg/net/http/#Header">Header</a>) (*<a href="index.html#V1Endpoint">V1Endpoint</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+NewV1Endpoint parses the given address to return a registry endpoint.
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="V1Endpoint.Path">func (*V1Endpoint) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/endpoint_v1.go?s=4206:4251#L131">Path</a>
+					<a class="permalink" href="index.html#V1Endpoint.Path">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#V1Endpoint">V1Endpoint</a>) <a href="index.html#Path">Path</a>(path <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Path returns a formatted string for the URL
+of this endpoint with the given path appended.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="V1Endpoint.Ping">func (*V1Endpoint) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/endpoint_v1.go?s=4384:4431#L136">Ping</a>
+					<a class="permalink" href="index.html#V1Endpoint.Ping">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#V1Endpoint">V1Endpoint</a>) <a href="index.html#Ping">Ping</a>() (<a href="index.html#PingResult">PingResult</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+				<p>
+Ping returns a PingResult which indicates whether the registry is standalone or not.
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="V1Endpoint.String">func (*V1Endpoint) <a href="http://127.0.0.1:8080/src/github.com/docker/docker/registry/endpoint_v1.go?s=4035:4071#L125">String</a>
+					<a class="permalink" href="index.html#V1Endpoint.String">&#xb6;</a>
+				</h3>
+				<pre>func (e *<a href="index.html#V1Endpoint">V1Endpoint</a>) <a href="index.html#String">String</a>() <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a></pre>
+				<p>
+Get the formatted URL for the root of this registry Endpoint
+</p>
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="resumable/index.html">resumable</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+

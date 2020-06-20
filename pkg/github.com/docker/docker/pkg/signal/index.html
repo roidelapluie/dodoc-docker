@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>signal - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://127.0.0.1:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://127.0.0.1:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://127.0.0.1:8080/search">
+<div id="menu">
+<a href="http://127.0.0.1:8080/doc/">Documents</a>
+<a href="http://127.0.0.1:8080/pkg/">Packages</a>
+<a href="http://127.0.0.1:8080/project/">The Project</a>
+<a href="http://127.0.0.1:8080/help/">Help</a>
+<a href="http://127.0.0.1:8080/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>Package signal</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/docker/docker/pkg/signal"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Package signal provides helper functions for dealing with signals across
+various operating systems.
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#CatchAll">func CatchAll(sigc chan os.Signal)</a></dd>
+			
+				
+				<dd><a href="index.html#DumpStacks">func DumpStacks(dir string) (string, error)</a></dd>
+			
+				
+				<dd><a href="index.html#ParseSignal">func ParseSignal(rawSignal string) (syscall.Signal, error)</a></dd>
+			
+				
+				<dd><a href="index.html#StopCatch">func StopCatch(sigc chan os.Signal)</a></dd>
+			
+				
+				<dd><a href="index.html#Trap">func Trap(cleanup func(), logger interface {Info(args ...interface{})})</a></dd>
+			
+				
+				<dd><a href="index.html#ValidSignalForPlatform">func ValidSignalForPlatform(sig syscall.Signal) bool</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/signal.go">signal.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/signal_linux.go">signal_linux.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/signal_unix.go">signal_unix.go</a>
+			
+				<a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/trap.go">trap.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span class="comment">// SIGCHLD is a signal sent to a process when a child process terminates, is interrupted, or resumes after being interrupted.</span>
+    <span id="SIGCHLD">SIGCHLD</span> = <a href="http://127.0.0.1:8080/pkg/syscall/">syscall</a>.<a href="http://127.0.0.1:8080/pkg/syscall/#SIGCHLD">SIGCHLD</a>
+    <span class="comment">// SIGWINCH is a signal sent to a process when its controlling terminal changes its size</span>
+    <span id="SIGWINCH">SIGWINCH</span> = <a href="http://127.0.0.1:8080/pkg/syscall/">syscall</a>.<a href="http://127.0.0.1:8080/pkg/syscall/#SIGWINCH">SIGWINCH</a>
+    <span class="comment">// SIGPIPE is a signal sent to a process when a pipe is written to before the other end is open for reading</span>
+    <span id="SIGPIPE">SIGPIPE</span> = <a href="http://127.0.0.1:8080/pkg/syscall/">syscall</a>.<a href="http://127.0.0.1:8080/pkg/syscall/#SIGPIPE">SIGPIPE</a>
+    <span class="comment">// DefaultStopSignal is the syscall signal used to stop a container in unix systems.</span>
+    <span id="DefaultStopSignal">DefaultStopSignal</span> = &#34;SIGTERM&#34;
+)</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>
+SignalMap is a map of Linux signals.
+</p>
+
+				<pre>var <span id="SignalMap">SignalMap</span> = map[<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>]<a href="http://127.0.0.1:8080/pkg/syscall/">syscall</a>.<a href="http://127.0.0.1:8080/pkg/syscall/#Signal">Signal</a>{
+    &#34;ABRT&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGABRT">SIGABRT</a>,
+    &#34;ALRM&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGALRM">SIGALRM</a>,
+    &#34;BUS&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGBUS">SIGBUS</a>,
+    &#34;CHLD&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGCHLD">SIGCHLD</a>,
+    &#34;CLD&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGCLD">SIGCLD</a>,
+    &#34;CONT&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGCONT">SIGCONT</a>,
+    &#34;FPE&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGFPE">SIGFPE</a>,
+    &#34;HUP&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGHUP">SIGHUP</a>,
+    &#34;ILL&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGILL">SIGILL</a>,
+    &#34;INT&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGINT">SIGINT</a>,
+    &#34;IO&#34;:       <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGIO">SIGIO</a>,
+    &#34;IOT&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGIOT">SIGIOT</a>,
+    &#34;KILL&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGKILL">SIGKILL</a>,
+    &#34;PIPE&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGPIPE">SIGPIPE</a>,
+    &#34;POLL&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGPOLL">SIGPOLL</a>,
+    &#34;PROF&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGPROF">SIGPROF</a>,
+    &#34;PWR&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGPWR">SIGPWR</a>,
+    &#34;QUIT&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGQUIT">SIGQUIT</a>,
+    &#34;SEGV&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGSEGV">SIGSEGV</a>,
+    &#34;STKFLT&#34;:   <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGSTKFLT">SIGSTKFLT</a>,
+    &#34;STOP&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGSTOP">SIGSTOP</a>,
+    &#34;SYS&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGSYS">SIGSYS</a>,
+    &#34;TERM&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGTERM">SIGTERM</a>,
+    &#34;TRAP&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGTRAP">SIGTRAP</a>,
+    &#34;TSTP&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGTSTP">SIGTSTP</a>,
+    &#34;TTIN&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGTTIN">SIGTTIN</a>,
+    &#34;TTOU&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGTTOU">SIGTTOU</a>,
+    &#34;URG&#34;:      <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGURG">SIGURG</a>,
+    &#34;USR1&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGUSR1">SIGUSR1</a>,
+    &#34;USR2&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGUSR2">SIGUSR2</a>,
+    &#34;VTALRM&#34;:   <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGVTALRM">SIGVTALRM</a>,
+    &#34;WINCH&#34;:    <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGWINCH">SIGWINCH</a>,
+    &#34;XCPU&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGXCPU">SIGXCPU</a>,
+    &#34;XFSZ&#34;:     <a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/">unix</a>.<a href="http://127.0.0.1:8080/pkg/golang.org/x/sys/unix/#SIGXFSZ">SIGXFSZ</a>,
+    &#34;RTMIN&#34;:    sigrtmin,
+    &#34;RTMIN+1&#34;:  sigrtmin + 1,
+    &#34;RTMIN+2&#34;:  sigrtmin + 2,
+    &#34;RTMIN+3&#34;:  sigrtmin + 3,
+    &#34;RTMIN+4&#34;:  sigrtmin + 4,
+    &#34;RTMIN+5&#34;:  sigrtmin + 5,
+    &#34;RTMIN+6&#34;:  sigrtmin + 6,
+    &#34;RTMIN+7&#34;:  sigrtmin + 7,
+    &#34;RTMIN+8&#34;:  sigrtmin + 8,
+    &#34;RTMIN+9&#34;:  sigrtmin + 9,
+    &#34;RTMIN+10&#34;: sigrtmin + 10,
+    &#34;RTMIN+11&#34;: sigrtmin + 11,
+    &#34;RTMIN+12&#34;: sigrtmin + 12,
+    &#34;RTMIN+13&#34;: sigrtmin + 13,
+    &#34;RTMIN+14&#34;: sigrtmin + 14,
+    &#34;RTMIN+15&#34;: sigrtmin + 15,
+    &#34;RTMAX-14&#34;: sigrtmax - 14,
+    &#34;RTMAX-13&#34;: sigrtmax - 13,
+    &#34;RTMAX-12&#34;: sigrtmax - 12,
+    &#34;RTMAX-11&#34;: sigrtmax - 11,
+    &#34;RTMAX-10&#34;: sigrtmax - 10,
+    &#34;RTMAX-9&#34;:  sigrtmax - 9,
+    &#34;RTMAX-8&#34;:  sigrtmax - 8,
+    &#34;RTMAX-7&#34;:  sigrtmax - 7,
+    &#34;RTMAX-6&#34;:  sigrtmax - 6,
+    &#34;RTMAX-5&#34;:  sigrtmax - 5,
+    &#34;RTMAX-4&#34;:  sigrtmax - 4,
+    &#34;RTMAX-3&#34;:  sigrtmax - 3,
+    &#34;RTMAX-2&#34;:  sigrtmax - 2,
+    &#34;RTMAX-1&#34;:  sigrtmax - 1,
+    &#34;RTMAX&#34;:    sigrtmax,
+}</pre>
+			
+		
+		
+			
+			
+			<h2 id="CatchAll">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/signal.go?s=315:349#L5">CatchAll</a>
+				<a class="permalink" href="index.html#CatchAll">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#CatchAll">CatchAll</a>(sigc chan <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#Signal">Signal</a>)</pre>
+			<p>
+CatchAll catches all signals and relays them to the specified channel.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="DumpStacks">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/trap.go?s=2398:2441#L65">DumpStacks</a>
+				<a class="permalink" href="index.html#DumpStacks">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#DumpStacks">DumpStacks</a>(dir <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+DumpStacks appends the runtime stack into file in dir and returns full path
+to that file.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ParseSignal">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/signal.go?s=778:836#L21">ParseSignal</a>
+				<a class="permalink" href="index.html#ParseSignal">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ParseSignal">ParseSignal</a>(rawSignal <a href="http://127.0.0.1:8080/pkg/builtin/#string">string</a>) (<a href="http://127.0.0.1:8080/pkg/syscall/">syscall</a>.<a href="http://127.0.0.1:8080/pkg/syscall/#Signal">Signal</a>, <a href="http://127.0.0.1:8080/pkg/builtin/#error">error</a>)</pre>
+			<p>
+ParseSignal translates a string to a valid syscall signal.
+It returns an error if the signal map doesn&#39;t include the given signal.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="StopCatch">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/signal.go?s=568:603#L14">StopCatch</a>
+				<a class="permalink" href="index.html#StopCatch">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#StopCatch">StopCatch</a>(sigc chan <a href="http://127.0.0.1:8080/pkg/os/">os</a>.<a href="http://127.0.0.1:8080/pkg/os/#Signal">Signal</a>)</pre>
+			<p>
+StopCatch stops catching the signals and closes the specified channel.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Trap">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/trap.go?s=983:1057#L19">Trap</a>
+				<a class="permalink" href="index.html#Trap">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#Trap">Trap</a>(cleanup func(), logger interface {
+    Info(args ...interface{})
+})</pre>
+			<p>
+Trap sets up a simplified signal &#34;trap&#34;, appropriate for common
+behavior expected from a vanilla unix command-line tool in general
+(and the Docker engine in particular).
+</p>
+<p>
+* If SIGINT or SIGTERM are received, `cleanup` is called, then the process is terminated.
+* If SIGINT or SIGTERM are received 3 times before cleanup is complete, then cleanup is
+</p>
+<pre>skipped and the process is terminated immediately (allows force quit of stuck daemon)
+</pre>
+<p>
+* A SIGQUIT always causes an exit without cleanup, with a goroutine dump preceding exit.
+* Ignore SIGPIPE events. These are generated by systemd when journald is restarted while
+</p>
+<pre>the docker daemon is not restarted and also running under systemd.
+Fixes <a href="https://github.com/docker/docker/issues/19728">https://github.com/docker/docker/issues/19728</a>
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="ValidSignalForPlatform">func <a href="http://127.0.0.1:8080/src/github.com/docker/docker/pkg/signal/signal.go?s=1251:1303#L37">ValidSignalForPlatform</a>
+				<a class="permalink" href="index.html#ValidSignalForPlatform">&#xb6;</a>
+			</h2>
+			<pre>func <a href="index.html#ValidSignalForPlatform">ValidSignalForPlatform</a>(sig <a href="http://127.0.0.1:8080/pkg/syscall/">syscall</a>.<a href="http://127.0.0.1:8080/pkg/syscall/#Signal">Signal</a>) <a href="http://127.0.0.1:8080/pkg/builtin/#bool">bool</a></pre>
+			<p>
+ValidSignalForPlatform returns true if a signal is valid on the platform
+</p>
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="../index.html">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="testfiles/index.html">testfiles</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+
+
+
+<div id="footer">
+Build version go1.8.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://127.0.0.1:8080/LICENSE">BSD license</a>.<br>
+<a href="http://127.0.0.1:8080/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script>var goVersion = "go1.8";</script>
+<script type="text/javascript" src="../../../../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+
